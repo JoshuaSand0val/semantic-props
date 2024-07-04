@@ -1,0 +1,28 @@
+/* Space: Responsive custom property values for padding, margin, ect. */
+/* Size Calculator: https://utopia.fyi/space/calculator?c=180,16,1.125,1600,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-2xl&g=s,l,xl,12 */
+
+:root {
+	/* Base Values: */
+	--3xs-space: clamp(0.25rem, 0.2421rem + 0.0704cqi, 0.3125rem);
+	--2xs-space: clamp(0.5rem, 0.4842rem + 0.1408cqi, 0.625rem);
+	--xs-space: clamp(0.75rem, 0.7262rem + 0.2113cqi, 0.9375rem);
+	--sm-space: clamp(1rem, 0.9683rem + 0.2817cqi, 1.25rem);
+	--md-space: clamp(1.5rem, 1.4525rem + 0.4225cqi, 1.875rem);
+	--lg-space: clamp(2rem, 1.9366rem + 0.5634cqi, 2.5rem);
+	--xl-space: clamp(3rem, 2.9049rem + 0.8451cqi, 3.75rem);
+	--2xl-space: clamp(4rem, 3.8732rem + 1.1268cqi, 5rem);
+	--3xl-space: clamp(6rem, 5.8099rem + 1.6901cqi, 7.5rem);
+
+	/* One-Up Values: */
+	--3xs-2xs-space: clamp(0.25rem, 0.2025rem + 0.4225cqi, 0.625rem);
+	--2xs-xs-space: clamp(0.5rem, 0.4445rem + 0.493cqi, 0.9375rem);
+	--xs-sm-space: clamp(0.75rem, 0.6866rem + 0.5634cqi, 1.25rem);
+	--sm-md-space: clamp(1rem, 0.8891rem + 0.9859cqi, 1.875rem);
+	--md-lg-space: clamp(1.5rem, 1.3732rem + 1.1268cqi, 2.5rem);
+	--lg-xl-space: clamp(2rem, 1.7782rem + 1.9718cqi, 3.75rem);
+	--xl-2xl-space: clamp(3rem, 2.7465rem + 2.2535cqi, 5rem);
+	--2xl-3xl-space: clamp(4rem, 3.5563rem + 3.9437cqi, 7.5rem);
+
+	/* Custom Values: */
+	--body-space: clamp(1rem, 0.493rem + 4.507cqi, 5rem);
+}
