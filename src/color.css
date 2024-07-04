@@ -1,0 +1,45 @@
+/* Color: Palette of custom property colors. */
+
+:root {
+	/* Color Palette: */
+	--theme: 0.01 248;
+	--primary: 0.15 240;
+	--secondary: 0.02 240;
+	--success: 0.15 148;
+	--danger: 0.15 24;
+	--warning: 0.15 86;
+	--info: 0.15 216;
+	--color-scheme: var(--theme);
+}
+
+* {
+	/* Colors: */
+	--bg-color-1: oklch(var(--bg-color-1-lch));
+	--bg-color-2: oklch(var(--bg-color-2-lch));
+	--bg-color-3: oklch(var(--bg-color-3-lch));
+	--bg-color-4: oklch(var(--bg-color-4-lch));
+	--bg-color-5: oklch(var(--bg-color-5-lch));
+	--outline-color: oklch(var(--outline-color-lch));
+	--body-color: oklch(var(--body-color-lch));
+	--color: oklch(var(--color-lch));
+
+	--bg-color-1-lch: 95% var(--color-scheme);
+	--bg-color-2-lch: 90% var(--color-scheme);
+	--bg-color-3-lch: 85% var(--color-scheme);
+	--bg-color-4-lch: 80% var(--color-scheme);
+	--bg-color-5-lch: 75% var(--color-scheme);
+	--outline-color-lch: 45% var(--color-scheme);
+	--body-color-lch: 10% var(--color-scheme);
+	--color-lch: 35% var(--color-scheme);
+
+	@media (prefers-color-scheme: dark) {
+		--bg-color-1-lch: 30% var(--color-scheme);
+		--bg-color-2-lch: 25% var(--color-scheme);
+		--bg-color-3-lch: 20% var(--color-scheme);
+		--bg-color-4-lch: 15% var(--color-scheme);
+		--bg-color-5-lch: 10% var(--color-scheme);
+		--outline-color-lch: 60% var(--color-scheme);
+		--body-color-lch: 90% var(--color-scheme);
+		--color-lch: 70% var(--color-scheme);
+	}
+}
