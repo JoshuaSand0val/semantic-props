@@ -1,0 +1,13 @@
+/* Breakpoint: Custom property breakpoints for use in containers. */
+
+:root {
+	/* Container Breakpoints: */
+	--2xs: 180px;
+	--xs: 240px;
+	--sm: 360px;
+	--md: 480px;
+	--lg: 768px;
+	--xl: 1024px;
+	--2xl: 1440px;
+	--3xl: 1600px;
+}
