@@ -1,0 +1,15 @@
+/* Z-Index: Custom properties for z-index positions. */
+
+:root {
+	/* Z-Index Positions: */
+	--z-underlay: -1000;
+	--z-overlay: 1000;
+	--z-dropdown: 2000;
+	--z-sticky: 3000;
+	--z-fixed: 4000;
+	--z-backdrop: 5000;
+	--z-modal: 6000;
+	--z-popup: 7000;
+	--z-tooltip: 8000;
+	--z-important: 9000;
+}
