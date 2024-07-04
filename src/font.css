@@ -1,0 +1,32 @@
+/* Font: Custom properties for styling fonts. */
+/* Size Calculator: https://utopia.fyi/type/calculator?c=180,16,1.125,1600,20,1.333,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+	/* Font Families: */
+	--font: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
+	helvetica neue, helvetica, Cantarell, Ubuntu, roboto,
+	noto, arial, sans-serif;
+	--monospace-font: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	--display-font: var(--font);
+	--brand-font: var(--font);
+
+	/* Line Heights: */
+	--line-height: 1.6;
+	--display-line-height: 1.2;
+
+	/* Font Weights: */
+	--normal-weight: 400;
+	--thin-weight: 200;
+	--bold-weight: 600;
+	--heavy-weight: 800;
+
+	/* Font Sizes */
+	--xs-font: clamp(0.7035rem, 0.8011rem + -0.0976cqi, 0.7901rem);
+	--sm-font: clamp(0.8889rem, 0.8827rem + 0.055cqi, 0.9377rem);
+	--md-font: clamp(1rem, 0.9683rem + 0.2817cqi, 1.25rem);
+	--lg-font: clamp(1.125rem, 1.0564rem + 0.6099cqi, 1.6663rem);
+	--xl-font: clamp(1.2656rem, 1.1445rem + 1.0766cqi, 2.2211rem);
+	--2xl-font: clamp(1.4238rem, 1.229rem + 1.7317cqi, 2.9607rem);
+	--3xl-font: clamp(1.6018rem, 1.3046rem + 2.6421cqi, 3.9467rem);
+	--4xl-font: clamp(1.802rem, 1.3636rem + 3.8973cqi, 5.2609rem);
+}
