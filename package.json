@@ -1,0 +1,40 @@
+{
+	"private": true,
+	"name": "semantic-props",
+	"version": "0.1.0",
+	"description": "A collection of semantic CSS custom properties and default styles.",
+	"keywords": [
+		"Semantic Props",
+		"CSS custom properties",
+		"CSS starter",
+		"CSS"
+	],
+	"homepage": "https://github.com/JoshuaSand0val/semantic-props#readme",
+	"license": "MIT",
+	"author": "Joshua Elijah Sandoval",
+	"files": [
+		"dist",
+		"src",
+		"CHANGELOG.md",
+		"LICENSE",
+		"README.md"
+	],
+	"main": "dist/import.css",
+	"style": "dist/import.css",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
+	},
+	"type": "module",
+	"scripts": {
+		"build": "postcss src/import.css -o dist/import.css",
+		"build:watch": "postcss src/import.css -o dist/import.css -w"
+	},
+	"devDependencies": {
+		"cssnano": "^7.0.4",
+		"postcss": "^8.4.39",
+		"postcss-cli": "^11.0.0",
+		"postcss-import": "^16.1.0",
+		"postcss-preset-env": "^9.5.15"
+	}
+}
