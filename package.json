@@ -2,11 +2,10 @@
 	"private": true,
 	"name": "semantic-props",
 	"version": "0.1.0",
-	"description": "A collection of semantic CSS custom properties and default styles.",
+	"description": "A collection of semantic CSS custom properties.",
 	"keywords": [
 		"Semantic Props",
 		"CSS custom properties",
-		"CSS starter",
 		"CSS"
 	],
 	"homepage": "https://github.com/JoshuaSand0val/semantic-props#readme",
