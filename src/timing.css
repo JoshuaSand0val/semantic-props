@@ -1,0 +1,10 @@
+/* Timing: Custom properties for timing animations. */
+
+:root {
+	/* Timing Lengths: */
+	--swift-timing: 75ms;
+	--fast-timing: 150ms;
+	--normal-timing: 300ms;
+	--steady-timing: 500ms;
+	--slow-timing: 750ms;
+}
