@@ -1,5 +1,4 @@
 {
-	"private": true,
 	"name": "semantic-props",
 	"version": "0.1.0",
 	"description": "A collection of semantic CSS custom properties.",
