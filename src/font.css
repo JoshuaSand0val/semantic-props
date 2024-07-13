@@ -4,13 +4,11 @@
 
 :root {
 	/* Font Families: */
-	--font: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui,
-	helvetica neue, helvetica, Cantarell, Ubuntu, roboto,
-	noto, arial, sans-serif;
-	--monospace-font: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-	--display-font: var(--font);
-	--brand-font: var(--font);
-
+	--font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+	--monospace-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	--display-font: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
+	--brand-font: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+ 
 	/* Line Heights: */
 	--font-leading: 1.6;
 	--display-font-leading: 1.2;
@@ -19,7 +17,7 @@
 	--regular-font: 400;
 	--thin-font: 200;
 	--bold-font: 600;
-	--heavy-font: 800;
+	--heavy-font: 900;
 
 	/* Font Scaling Ratio: */
 	--font-scale-ratio: 1.200;
