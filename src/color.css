@@ -3,7 +3,7 @@
 @custom-media --prefers-light-color (prefers-color-scheme: light);
 @custom-media --prefers-dark-color (prefers-color-scheme: dark);
 
-:root {
+:root, .--scope {
 	/* Color Palette: */
 	--theme-color: oklch(95% 0.01 248);
 	--primary-color: oklch(70% 0.1 240);

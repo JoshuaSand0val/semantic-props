@@ -2,7 +2,7 @@
 
 @import "breakpoint.css";
 
-:root {
+:root, .--scope {
 	/* Size Scaling Ratio: */
 	--size-scale-ratio: 1.618;
 

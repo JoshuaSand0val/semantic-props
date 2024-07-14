@@ -9,7 +9,7 @@
 @custom-media --2xl-breakpoint (min-width: 1440px);
 @custom-media --3xl-breakpoint (min-width: 1600px);
 
-:root {
+:root, .--scope {
 	/* Breakpoint Widths: */
 	--2xs-breakpoint: 180px;
 	--xs-breakpoint: 240px;

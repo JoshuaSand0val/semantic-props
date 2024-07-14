@@ -1,6 +1,6 @@
 /* Timing: Custom properties for timing animations. */
 
-:root {
+:root, .--scope {
 	/* Timing Lengths: */
 	--swift-timing: 75ms;
 	--fast-timing: 150ms;

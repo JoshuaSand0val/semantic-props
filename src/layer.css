@@ -1,6 +1,6 @@
 /* Layer: Custom properties for z-index positions. */
 
-:root {
+:root, .--scope {
 	/* Layer Positions: */
 	--bottom-layer: -1000;
 	--relative-layer: 1000;
