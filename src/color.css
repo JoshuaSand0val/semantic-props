@@ -149,9 +149,9 @@
 	--info-ui-color-3: var(--info-color-700);
 
 	@media (--prefers-dark-color) {
-		--theme-bg-color-1: var(--theme-color-600);
-		--theme-bg-color-2: var(--theme-color-700);
-		--theme-bg-color-3: var(--theme-color-800);
+		--theme-bg-color-1: var(--theme-color-800);
+		--theme-bg-color-2: var(--theme-color-900);
+		--theme-bg-color-3: var(--theme-color-950);
 		--theme-ui-color-1: var(--theme-color-100);
 		--theme-ui-color-2: var(--theme-color-200);
 		--theme-ui-color-3: var(--theme-color-300);
