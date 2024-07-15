@@ -31,9 +31,9 @@
 	}
 
 	/* Absolute Font Sizes: */
-	--2xs-font: calc(var(--xs-font) / var(--font-scale-ratio));
-	--xs-font: calc(var(--sm-font) / var(--font-scale-ratio));
-	--sm-font: calc(var(--md-font) / var(--font-scale-ratio));
+	--2xs-font: max(var(--xs-font) / var(--font-scale-ratio), 0.5625rem /* 9px */);
+	--xs-font: max(var(--sm-font) / var(--font-scale-ratio), 0.6875rem /* 11px */);
+	--sm-font: max(var(--md-font) / var(--font-scale-ratio), 0.8125rem /* 13px */);
 	--md-font: 0.875rem;
 	--lg-font: calc(var(--md-font) * var(--font-scale-ratio));
 	--xl-font: calc(var(--lg-font) * var(--font-scale-ratio));
