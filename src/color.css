@@ -49,7 +49,7 @@
 	}
 
 	/* Theme Colors: */
-	--theme-color-chroma: 0.05;
+	--theme-color-chroma: 0.0175;
 	--theme-color-shift: var(--bg-color-shift);
 	--theme-color-contrast: 70%;
 
