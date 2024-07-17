@@ -2,6 +2,7 @@
 
 @custom-media --prefers-light-color (prefers-color-scheme: light);
 @custom-media --prefers-dark-color (prefers-color-scheme: dark);
+@custom-media --prefers-color-contrast (prefers-contrast: more);
 
 .--semantic {
 	/* Color Hue Palette: */
@@ -13,63 +14,123 @@
 	--warning-color: 86;
 	--info-color: 216;
 
-	/* UI Background Colors: */
-	--ui-color: var(--primary-color);
-	--ui-color-chroma: 0.1;
+	/* Background Colors: */
+	--bg-color-chroma: 0.05;
+	--bg-color-shift: 7.5%;
 
-	--1st-ui-color-lightness: 80%;
-	--2nd-ui-color-lightness: calc(var(--1st-ui-color-lightness) - 5%);
-	--3rd-ui-color-lightness: calc(var(--2nd-ui-color-lightness) - 5%);
-
-	--1st-ui-color: oklch(var(--1st-ui-color-lightness) var(--ui-color-chroma) var(--ui-color));
-	--2nd-ui-color: oklch(var(--2nd-ui-color-lightness) var(--ui-color-chroma) var(--ui-color));
-	--3rd-ui-color: oklch(var(--3rd-ui-color-lightness) var(--ui-color-chroma) var(--ui-color));
-
-	@media (--prefers-dark-color) {
-		--1st-ui-color-lightness: 40%;
+	@media (--prefers-color-contrast) {
+		--bg-color-shift: 10%;
 	}
 
-	/* App Background Colors: */
-	--bg-color: var(--theme-color);
-	--bg-color-chroma: 0.0175;
-
-	--1st-bg-color-lightness: 95%;
-	--2nd-bg-color-lightness: calc(var(--1st-bg-color-lightness) - 5%);
-	--3rd-bg-color-lightness: calc(var(--2nd-bg-color-lightness) - 5%);
-
-	--1st-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--bg-color));
-	--2nd-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--bg-color));
-	--3rd-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--bg-color));
+	--1st-bg-color-lightness: 80%;
+	--2nd-bg-color-lightness: calc(var(--1st-bg-color-lightness) - var(--bg-color-shift));
+	--3rd-bg-color-lightness: calc(var(--2nd-bg-color-lightness) - var(--bg-color-shift));
 
 	@media (--prefers-dark-color) {
-		--1st-bg-color-lightness: 30%;
+		--1st-bg-color-lightness: 40%;
 	}
 
-	/* UI Text Colors: */
-	--color: var(--ui-color);
-	--color-chroma: var(--ui-color-chroma);
+	/* Text Colors: */
+	--color-chroma: 0.1;
+	--color-contrast: 40%;
 
-	--1st-color-lightness: calc(var(--1st-ui-color-lightness) - 40%);
-	--2nd-color-lightness: calc(var(--2nd-ui-color-lightness) - 40%);
-	--3rd-color-lightness: calc(var(--3rd-ui-color-lightness) - 40%);
+	@media (--prefers-color-contrast) {
+		--color-contrast: 50%;
+	}
 
-	--1st-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--color));
-	--2nd-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--color));
-	--3rd-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--color));
+	--1st-color-lightness: calc(var(--1st-bg-color-lightness) - var(--color-contrast));
+	--2nd-color-lightness: calc(var(--2nd-bg-color-lightness) - var(--color-contrast));
+	--3rd-color-lightness: calc(var(--3rd-bg-color-lightness) - var(--color-contrast));
 
 	@media (--prefers-dark-color) {
-		--1st-color-lightness: calc(var(--1st-ui-color-lightness) + 40%);
-		--2nd-color-lightness: calc(var(--2nd-ui-color-lightness) + 40%);
-		--3rd-color-lightness: calc(var(--3rd-ui-color-lightness) + 40%);
+		--1st-color-lightness: calc(var(--1st-bg-color-lightness) + var(--color-contrast));
+		--2nd-color-lightness: calc(var(--2nd-bg-color-lightness) + var(--color-contrast));
+		--3rd-color-lightness: calc(var(--3rd-bg-color-lightness) + var(--color-contrast));
 	}
 
-	/* App Text Color: */
-	--text-color-chroma: 0;
-	--text-color-lightness: 10%;
+	/* Theme Colors: */
+	--theme-color-chroma: 0.05;
+	--theme-color-shift: var(--bg-color-shift);
+	--theme-color-contrast: 70%;
 
-	--text-color: oklch(var(--text-color-lightness) var(--text-color-chroma) var(--color));
+	@media (--prefers-color-contrast) {
+		--theme-color-contrast: 80%;
+	}
+
+	--1st-theme-bg-color-lightness: 95%;
+	--2nd-theme-bg-color-lightness: calc(var(--1st-theme-bg-color-lightness) - var(--theme-color-shift));
+	--3rd-theme-bg-color-lightness: calc(var(--2nd-theme-bg-color-lightness) - var(--theme-color-shift));
+
+	--1st-theme-color-lightness: calc(var(--1st-theme-bg-color-lightness) - var(--theme-color-contrast));
+	--2nd-theme-color-lightness: calc(var(--2nd-theme-bg-color-lightness) - var(--theme-color-contrast));
+	--3rd-theme-color-lightness: calc(var(--3rd-theme-bg-color-lightness) - var(--theme-color-contrast));
 
 	@media (--prefers-dark-color) {
-		--text-color-lightness: 90%;
+		--1st-theme-bg-color-lightness: 30%;
+		--1st-theme-color-lightness: calc(var(--1st-theme-bg-color-lightness) + var(--theme-color-contrast));
+		--2nd-theme-color-lightness: calc(var(--2nd-theme-bg-color-lightness) + var(--theme-color-contrast));
+		--3rd-theme-color-lightness: calc(var(--3rd-theme-bg-color-lightness) + var(--theme-color-contrast));
 	}
+
+	--1st-theme-bg-color: oklch(var(--1st-theme-bg-color-lightness) var(--theme-color-chroma) var(--theme-color));
+	--2nd-theme-bg-color: oklch(var(--2nd-theme-bg-color-lightness) var(--theme-color-chroma) var(--theme-color));
+	--3rd-theme-bg-color: oklch(var(--3rd-theme-bg-color-lightness) var(--theme-color-chroma) var(--theme-color));
+
+	--1st-theme-color: oklch(var(--1st-theme-color-lightness) var(--theme-color-chroma) var(--theme-color));
+	--2nd-theme-color: oklch(var(--2nd-theme-color-lightness) var(--theme-color-chroma) var(--theme-color));
+	--3rd-theme-color: oklch(var(--3rd-theme-color-lightness) var(--theme-color-chroma) var(--theme-color));
+
+	/* Primary Colors: */
+	--1st-primary-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--primary-color));
+	--2nd-primary-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--primary-color));
+	--3rd-primary-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--primary-color));
+
+	--1st-primary-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--primary-color));
+	--2nd-primary-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--primary-color));
+	--3rd-primary-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--primary-color));
+
+	/* Secondary Colors: */
+	--1st-secondary-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--secondary-color));
+	--2nd-secondary-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--secondary-color));
+	--3rd-secondary-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--secondary-color));
+
+	--1st-secondary-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--secondary-color));
+	--2nd-secondary-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--secondary-color));
+	--3rd-secondary-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--secondary-color));
+
+	/* Success Colors: */
+	--1st-success-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--success-color));
+	--2nd-success-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--success-color));
+	--3rd-success-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--success-color));
+
+	--1st-success-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--success-color));
+	--2nd-success-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--success-color));
+	--3rd-success-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--success-color));
+
+	/* Danger Colors: */
+	--1st-danger-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--danger-color));
+	--2nd-danger-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--danger-color));
+	--3rd-danger-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--danger-color));
+
+	--1st-danger-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--danger-color));
+	--2nd-danger-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--danger-color));
+	--3rd-danger-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--danger-color));
+
+	/* Warning Colors: */
+	--1st-warning-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--warning-color));
+	--2nd-warning-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--warning-color));
+	--3rd-warning-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--warning-color));
+
+	--1st-warning-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--warning-color));
+	--2nd-warning-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--warning-color));
+	--3rd-warning-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--warning-color));
+
+	/* Info Colors: */
+	--1st-info-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--info-color));
+	--2nd-info-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--info-color));
+	--3rd-info-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--info-color));
+
+	--1st-info-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--info-color));
+	--2nd-info-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--info-color));
+	--3rd-info-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--info-color));
 }
