@@ -17,6 +17,7 @@
 	/* Background Colors: */
 	--bg-color-chroma: 0.05;
 	--bg-color-shift: 7.5%;
+	--bg-color-alpha: 1;
 
 	@media (--prefers-color-contrast) {
 		--bg-color-shift: 10%;
@@ -33,6 +34,7 @@
 	/* Text Colors: */
 	--color-chroma: 0.1;
 	--color-contrast: 40%;
+	--color-alpha: 1;
 
 	@media (--prefers-color-contrast) {
 		--color-contrast: 50%;
@@ -72,65 +74,65 @@
 		--3rd-theme-color-lightness: calc(var(--3rd-theme-bg-color-lightness) + var(--theme-color-contrast));
 	}
 
-	--1st-theme-bg-color: oklch(var(--1st-theme-bg-color-lightness) var(--theme-color-chroma) var(--theme-color));
-	--2nd-theme-bg-color: oklch(var(--2nd-theme-bg-color-lightness) var(--theme-color-chroma) var(--theme-color));
-	--3rd-theme-bg-color: oklch(var(--3rd-theme-bg-color-lightness) var(--theme-color-chroma) var(--theme-color));
+	--1st-theme-bg-color: oklch(var(--1st-theme-bg-color-lightness) var(--theme-color-chroma) var(--theme-color) / var(--bg-color-alpha));
+	--2nd-theme-bg-color: oklch(var(--2nd-theme-bg-color-lightness) var(--theme-color-chroma) var(--theme-color) / var(--bg-color-alpha));
+	--3rd-theme-bg-color: oklch(var(--3rd-theme-bg-color-lightness) var(--theme-color-chroma) var(--theme-color) / var(--bg-color-alpha));
 
-	--1st-theme-color: oklch(var(--1st-theme-color-lightness) var(--theme-color-chroma) var(--theme-color));
-	--2nd-theme-color: oklch(var(--2nd-theme-color-lightness) var(--theme-color-chroma) var(--theme-color));
-	--3rd-theme-color: oklch(var(--3rd-theme-color-lightness) var(--theme-color-chroma) var(--theme-color));
+	--1st-theme-color: oklch(var(--1st-theme-color-lightness) var(--theme-color-chroma) var(--theme-color) / var(--color-alpha));
+	--2nd-theme-color: oklch(var(--2nd-theme-color-lightness) var(--theme-color-chroma) var(--theme-color) / var(--color-alpha));
+	--3rd-theme-color: oklch(var(--3rd-theme-color-lightness) var(--theme-color-chroma) var(--theme-color) / var(--color-alpha));
 
 	/* Primary Colors: */
-	--1st-primary-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--primary-color));
-	--2nd-primary-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--primary-color));
-	--3rd-primary-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--primary-color));
+	--1st-primary-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--primary-color) / var(--bg-color-alpha));
+	--2nd-primary-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--primary-color) / var(--bg-color-alpha));
+	--3rd-primary-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--primary-color) / var(--bg-color-alpha));
 
-	--1st-primary-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--primary-color));
-	--2nd-primary-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--primary-color));
-	--3rd-primary-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--primary-color));
+	--1st-primary-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--primary-color) / var(--color-alpha));
+	--2nd-primary-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--primary-color) / var(--color-alpha));
+	--3rd-primary-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--primary-color) / var(--color-alpha));
 
 	/* Secondary Colors: */
-	--1st-secondary-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--secondary-color));
-	--2nd-secondary-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--secondary-color));
-	--3rd-secondary-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--secondary-color));
+	--1st-secondary-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--secondary-color) / var(--bg-color-alpha));
+	--2nd-secondary-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--secondary-color) / var(--bg-color-alpha));
+	--3rd-secondary-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--secondary-color) / var(--bg-color-alpha));
 
-	--1st-secondary-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--secondary-color));
-	--2nd-secondary-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--secondary-color));
-	--3rd-secondary-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--secondary-color));
+	--1st-secondary-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--secondary-color) / var(--color-alpha));
+	--2nd-secondary-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--secondary-color) / var(--color-alpha));
+	--3rd-secondary-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--secondary-color) / var(--color-alpha));
 
 	/* Success Colors: */
-	--1st-success-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--success-color));
-	--2nd-success-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--success-color));
-	--3rd-success-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--success-color));
+	--1st-success-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--success-color) / var(--bg-color-alpha));
+	--2nd-success-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--success-color) / var(--bg-color-alpha));
+	--3rd-success-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--success-color) / var(--bg-color-alpha));
 
-	--1st-success-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--success-color));
-	--2nd-success-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--success-color));
-	--3rd-success-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--success-color));
+	--1st-success-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--success-color) / var(--color-alpha));
+	--2nd-success-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--success-color) / var(--color-alpha));
+	--3rd-success-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--success-color) / var(--color-alpha));
 
 	/* Danger Colors: */
-	--1st-danger-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--danger-color));
-	--2nd-danger-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--danger-color));
-	--3rd-danger-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--danger-color));
+	--1st-danger-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--danger-color) / var(--bg-color-alpha));
+	--2nd-danger-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--danger-color) / var(--bg-color-alpha));
+	--3rd-danger-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--danger-color) / var(--bg-color-alpha));
 
-	--1st-danger-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--danger-color));
-	--2nd-danger-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--danger-color));
-	--3rd-danger-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--danger-color));
+	--1st-danger-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--danger-color) / var(--color-alpha));
+	--2nd-danger-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--danger-color) / var(--color-alpha));
+	--3rd-danger-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--danger-color) / var(--color-alpha));
 
 	/* Warning Colors: */
-	--1st-warning-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--warning-color));
-	--2nd-warning-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--warning-color));
-	--3rd-warning-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--warning-color));
+	--1st-warning-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--warning-color) / var(--bg-color-alpha));
+	--2nd-warning-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--warning-color) / var(--bg-color-alpha));
+	--3rd-warning-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--warning-color) / var(--bg-color-alpha));
 
-	--1st-warning-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--warning-color));
-	--2nd-warning-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--warning-color));
-	--3rd-warning-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--warning-color));
+	--1st-warning-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--warning-color) / var(--color-alpha));
+	--2nd-warning-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--warning-color) / var(--color-alpha));
+	--3rd-warning-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--warning-color) / var(--color-alpha));
 
 	/* Info Colors: */
-	--1st-info-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--info-color));
-	--2nd-info-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--info-color));
-	--3rd-info-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--info-color));
+	--1st-info-bg-color: oklch(var(--1st-bg-color-lightness) var(--bg-color-chroma) var(--info-color) / var(--bg-color-alpha));
+	--2nd-info-bg-color: oklch(var(--2nd-bg-color-lightness) var(--bg-color-chroma) var(--info-color) / var(--bg-color-alpha));
+	--3rd-info-bg-color: oklch(var(--3rd-bg-color-lightness) var(--bg-color-chroma) var(--info-color) / var(--bg-color-alpha));
 
-	--1st-info-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--info-color));
-	--2nd-info-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--info-color));
-	--3rd-info-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--info-color));
+	--1st-info-color: oklch(var(--1st-color-lightness) var(--color-chroma) var(--info-color) / var(--color-alpha));
+	--2nd-info-color: oklch(var(--2nd-color-lightness) var(--color-chroma) var(--info-color) / var(--color-alpha));
+	--3rd-info-color: oklch(var(--3rd-color-lightness) var(--color-chroma) var(--info-color) / var(--color-alpha));
 }
