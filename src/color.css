@@ -4,7 +4,7 @@
 @custom-media --prefers-dark-color (prefers-color-scheme: dark);
 @custom-media --prefers-color-contrast (prefers-contrast: more);
 
-.--semantic {
+:root, .--semantic {
 	/* Color Palette: */
 	--theme-color: oklch(95% 0.01 248);
 	--primary-color: oklch(70% 0.15 240);
