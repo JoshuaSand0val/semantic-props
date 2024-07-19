@@ -1,9 +1,5 @@
 /* Color: Palette of custom property colors. */
 
-@custom-media --prefers-light-color (prefers-color-scheme: light);
-@custom-media --prefers-dark-color (prefers-color-scheme: dark);
-@custom-media --prefers-color-contrast (prefers-contrast: more);
-
 :root, .--semantic {
 	/* Color Palette: */
 	--theme-color: oklch(95% 0.01 248);
@@ -19,7 +15,7 @@
 	--2nd-bg-color-lightness: 0.95;
 	--3rd-bg-color-lightness: 0.90;
 
-	@media (--prefers-dark-color) {
+	&:where(.--dark-color) {
 		--1st-bg-color-lightness: 0.25;
 		--2nd-bg-color-lightness: 0.20;
 		--3rd-bg-color-lightness: 0.15;
@@ -30,7 +26,7 @@
 	--2nd-color-lightness: 0.50;
 	--3rd-color-lightness: 0.40;
 
-	@media (--prefers-dark-color) {
+	&:where(.--dark-color) {
 		--1st-color-lightness: 0.85;
 		--2nd-color-lightness: 0.75;
 		--3rd-color-lightness: 0.65;
@@ -39,7 +35,7 @@
 	/* Text Color: */
 	--text-color: var(--theme-color-900);
 
-	@media (--prefers-dark-color) {
+	&:where(.--dark-color) {
 		--text-color: var(--theme-color-100);
 	}
 

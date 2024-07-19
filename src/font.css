@@ -1,7 +1,5 @@
 /* Font: Custom properties for styling fonts. */
 
-@import "breakpoint.css";
-
 :root, .--semantic {
 	/* Font Families: */
 	--font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
@@ -20,13 +18,17 @@
 	--heavy-font: 900;
 
 	/* Font Scaling Ratio: */
-	--font-scale-ratio: 1.200;
+	--font-scale-ratio: 1.125;
 
-	@media (--lg-breakpoint) {
+	&:where(.--sm-breakpoint) {
+		--font-scale-ratio: 1.200;
+	}
+
+	&:where(.--lg-breakpoint) {
 		--font-scale-ratio: 1.250;
 	}
 
-	@media (--xl-breakpoint) {
+	&:where(.--xl-breakpoint) {
 		--font-scale-ratio: 1.333;
 	}
 
@@ -41,11 +43,11 @@
 	--3xl-font: calc(var(--2xl-font) * var(--font-scale-ratio));
 	--4xl-font: calc(var(--3xl-font) * var(--font-scale-ratio));
 
-	@media (--sm-breakpoint) {
+	&:where(.--sm-breakpoint) {
 		--md-font: 1rem;
 	}
 
-	@media (--2xl-breakpoint) {
+	&:where(.--2xl-breakpoint) {
 		--md-font: 1.125rem;
 	}
 

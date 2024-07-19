@@ -1,7 +1,5 @@
 /* Size: Responsive custom property sizes for padding, margin, ect. */
 
-@import "breakpoint.css";
-
 :root, .--semantic {
 	/* Size Scaling Ratio: */
 	--size-scale-ratio: 1.618;
@@ -20,11 +18,11 @@
 	/* Responsive Size: */
 	--responsive-size: var(--md-size);
 
-	@media (--lg-breakpoint) {
+	&:where(.--lg-breakpoint) {
 		--responsive-size: var(--lg-size);
 	}
 
-	@media (--xl-breakpoint) {
+	&:where(.--xl-breakpoint) {
 		--responsive-size: var(--xl-size);
 	}
 }

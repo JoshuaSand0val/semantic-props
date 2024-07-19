@@ -17,22 +17,19 @@
 		"LICENSE",
 		"README.md"
 	],
-	"main": "dist/import.css",
-	"style": "dist/import.css",
+	"browser": "dist/import.js",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
 	},
 	"type": "module",
 	"scripts": {
-		"build": "postcss src/import.css -o dist/import.css",
-		"build:watch": "postcss src/import.css -o dist/import.css -w"
+		"build": "rollup -c",
+		"watch:build": "rollup -c -w"
 	},
 	"devDependencies": {
-		"cssnano": "^7.0.4",
-		"postcss": "^8.4.39",
-		"postcss-cli": "^11.0.0",
-		"postcss-import": "^16.1.0",
-		"postcss-preset-env": "^9.5.15"
+		"@rollup/plugin-terser": "^0.4.4",
+		"rollup": "^4.18.1",
+		"rollup-plugin-import-css": "^3.5.0"
 	}
 }
