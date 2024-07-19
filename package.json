@@ -26,10 +26,7 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "rollup -c",
-		"postbuild": "postcss dist/import.css -o dist/import.css",
-		"watch:build": "rollup -c -w",
-		"postwatch:build": "postcss dist/import.css -o dist/import.css -w"
+		"build": "rollup -c && postcss dist/import.css -o dist/import.css"
 	},
 	"devDependencies": {
 		"@rollup/plugin-terser": "^0.4.4",
