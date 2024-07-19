@@ -13,7 +13,7 @@ export default {
 		terser(),
 		css({
 			minify: true,
-			inject: true
+			output: "import.css"
 		})
 	]
 };
