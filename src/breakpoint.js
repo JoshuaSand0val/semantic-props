@@ -1,7 +1,7 @@
 // Breakpoint: Dynamically applies breakpoint classes to --semantic class.
 
 // Only attempt to execute client-side:
-if (typeof window !== undefined) {
+if (typeof window !== "undefined") {
 	/** Names of custom property breakpoint classes. @type {string[]} */
 	const breakpoints = [
 		"--2xs-breakpoint",

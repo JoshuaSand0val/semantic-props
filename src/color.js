@@ -1,7 +1,7 @@
 // Color: Dynamically applies color classes to --semantic class.
 
 // Only attempt to execute client-side:
-if (typeof window !== undefined) {
+if (typeof window !== "undefined") {
 	/** Event listener for color scheme matchMedia() event. */
 	const listener = () => {
 		/** Whether user has selected to prefer dark color scheme. @type {boolean} */
