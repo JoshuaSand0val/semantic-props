@@ -3,7 +3,6 @@ import "./breakpoint.css";
 import "./breakpoint.js";
 import "./color.css";
 import "./color.js";
-import "./deprecated.css";
 import "./font.css";
 import "./layer.css";
 import "./safe.css";
