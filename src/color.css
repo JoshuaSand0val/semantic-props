@@ -15,7 +15,7 @@ semantic-props {
 	--2nd-bg-color-lightness: 0.95;
 	--3rd-bg-color-lightness: 0.90;
 
-	&:where(.--dark-color) {
+	&:where([is-dark-color]) {
 		--1st-bg-color-lightness: 0.25;
 		--2nd-bg-color-lightness: 0.20;
 		--3rd-bg-color-lightness: 0.15;
@@ -26,7 +26,7 @@ semantic-props {
 	--2nd-color-lightness: 0.50;
 	--3rd-color-lightness: 0.40;
 
-	&:where(.--dark-color) {
+	&:where([is-dark-color]) {
 		--1st-color-lightness: 0.85;
 		--2nd-color-lightness: 0.75;
 		--3rd-color-lightness: 0.65;
@@ -35,7 +35,7 @@ semantic-props {
 	/* Text Color: */
 	--text-color: var(--theme-color-900);
 
-	&:where(.--dark-color) {
+	&:where([is-dark-color]) {
 		--text-color: var(--theme-color-100);
 	}
 

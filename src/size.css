@@ -18,11 +18,11 @@ semantic-props {
 	/* Responsive Size: */
 	--responsive-size: var(--md-size);
 
-	&:where(.--lg-breakpoint) {
+	&:where([is-lg-breakpoint]) {
 		--responsive-size: var(--lg-size);
 	}
 
-	&:where(.--xl-breakpoint) {
+	&:where([is-xl-breakpoint]) {
 		--responsive-size: var(--xl-size);
 	}
 }

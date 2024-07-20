@@ -20,15 +20,15 @@ semantic-props {
 	/* Font Scaling Ratio: */
 	--font-scale-ratio: 1.125;
 
-	&:where(.--sm-breakpoint) {
+	&:where([is-sm-breakpoint]) {
 		--font-scale-ratio: 1.200;
 	}
 
-	&:where(.--lg-breakpoint) {
+	&:where([is-lg-breakpoint]) {
 		--font-scale-ratio: 1.250;
 	}
 
-	&:where(.--xl-breakpoint) {
+	&:where([is-xl-breakpoint]) {
 		--font-scale-ratio: 1.333;
 	}
 
@@ -43,11 +43,11 @@ semantic-props {
 	--3xl-font: calc(var(--2xl-font) * var(--font-scale-ratio));
 	--4xl-font: calc(var(--3xl-font) * var(--font-scale-ratio));
 
-	&:where(.--sm-breakpoint) {
+	&:where([is-sm-breakpoint]) {
 		--md-font: 1rem;
 	}
 
-	&:where(.--2xl-breakpoint) {
+	&:where([is-2xl-breakpoint]) {
 		--md-font: 1.125rem;
 	}
 
