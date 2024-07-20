@@ -1,6 +1,6 @@
 /* Timing: Custom properties for timing animations. */
 
-.--semantic {
+semantic-props {
 	/* Timing Lengths: */
 	--swift-timing: 75ms;
 	--fast-timing: 150ms;

@@ -1,6 +1,6 @@
 /* Color: Palette of custom property colors. */
 
-.--semantic {
+semantic-props {
 	/* Color Palette: */
 	--theme-color: oklch(95% 0.01 248);
 	--primary-color: oklch(70% 0.15 240);
