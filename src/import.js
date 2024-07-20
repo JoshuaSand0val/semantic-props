@@ -1,2 +1,3 @@
 // Import: All JavaScript files imported.
-import "./semantic-props.js";
+import "./breakpoint.js";
+import "./color.js";

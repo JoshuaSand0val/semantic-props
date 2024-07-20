@@ -1,6 +1,6 @@
 /* Breakpoint: Custom property breakpoint widths. */
 
-semantic-props {
+:root, .--semantic {
 	/* Breakpoint Widths: */
 	--2xs-breakpoint: 180px;
 	--xs-breakpoint: 240px;

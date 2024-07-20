@@ -1,6 +1,6 @@
 /* Size: Responsive custom property sizes for padding, margin, ect. */
 
-semantic-props {
+:root, .--semantic {
 	/* Size Scaling Ratio: */
 	--size-scale-ratio: 1.618;
 
