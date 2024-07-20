@@ -6,27 +6,25 @@ import color from "./color.js";
 if (typeof window !== "undefined") {
 	/** Semantic Props Web Component. @type {HTMLElement} */
 	class SemanticProps extends HTMLElement {
-		/** Executes when web component has connected. */
-		connectedCallback() {
-			// Create element shadow DOM:
-			const shadow = this.attachShadow({ mode: "open" });
-
-			// Create content slot element:
-			const slot = document.createElement("slot");
-
-			// Add slot to component:
-			shadow.appendChild(slot);
+		constructor() {
+			super();
 
 			/** MutationObserver for ensuring classes get added to component. */
 			const semanticObserver = new MutationObserver(() => {
+				// Add classes to element:
 				breakpoint(this);
 				color(this);
+
+				// Disconnect observer once used:
+				semanticObserver.disconnect();
 			});
 
 			// Start observing this element:
 			semanticObserver.observe(this, {
 				subtree: true,
-				childList: true
+				childList: true,
+				attributes: true,
+				characterData: true
 			});
 		}
 	}
