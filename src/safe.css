@@ -1,6 +1,6 @@
 /* Safe: Custom properties for display safe areas. */
 
-:root, .--semantic {
+:root, semantic-props {
 	/* Safe Areas: */
 	--safe-top: env(safe-area-inset-top);
 	--safe-right: env(safe-area-inset-right);

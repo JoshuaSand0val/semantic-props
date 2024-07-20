@@ -1,7 +1,6 @@
 // Breakpoint: Adds semantic breakpoint classes based on container inline size.
 
-// Prevent ReferenceError in Node.js:
-if (typeof window !== "undefined") {
+export default function breakpoint(element) {
 	/** Names of custom property or class breakpoints. @type {string[]} */
 	const breakpoints = [
 		"--2xs-breakpoint", "--xs-breakpoint",
@@ -28,13 +27,9 @@ if (typeof window !== "undefined") {
 					element.classList.add(prop);
 				}
 			}
-		}
+		} 
 	});
 
 	// Observe resize of all Semantic Props elements:
-	addEventListener("DOMContentLoaded", () => {
-		for (const element of document.querySelectorAll(".--semantic")) {
-			breakpointObserver.observe(element);
-		}
-	});
+	breakpointObserver.observe(element);
 }

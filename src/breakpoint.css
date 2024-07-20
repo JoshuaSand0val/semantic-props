@@ -1,6 +1,6 @@
 /* Breakpoint: Custom property breakpoint widths. */
 
-:root, .--semantic {
+:root, semantic-props {
 	/* Breakpoint Widths: */
 	--2xs-breakpoint: 180px;
 	--xs-breakpoint: 240px;
@@ -10,4 +10,9 @@
 	--xl-breakpoint: 1024px;
 	--2xl-breakpoint: 1440px;
 	--3xl-breakpoint: 1600px;
+}
+
+/* Needed for JavaScript add-on to function! */
+semantic-props {
+	display: block;
 }
