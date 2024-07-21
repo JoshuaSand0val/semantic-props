@@ -1,6 +1,6 @@
 /**
  * Adds semantic color classes based on current preferred color scheme.
- * @param {HTMLElement} element HTML element to add color classes to.
+ * @param {Element} element Element to add color classes to.
  */
 export default function color(element) {
 	/** Names of custom property or class colors. @type {string[]} */
@@ -11,8 +11,19 @@ export default function color(element) {
 
 	/** Event listener for color scheme matchMedia() event. */
 	const listener = () => {
-		/** Whether user has selected to prefer dark color scheme. @type {boolean} */
-		const isDarkMode = darkModeQuery.matches;
+		/** Whether user or developer has selected to prefer dark color scheme. @type {boolean} */
+		const isDarkMode = (() => {
+			/** Potential element to inherit color scheme from. @type {Element | null} */
+			const inherited = element.closest(".--light-color, .--dark-color");
+
+			// If inherited element exists use its color class:
+			if (null !== inherited) {
+				return inherited.classList.contains("--dark-color");
+			}
+
+			// Else default to user color scheme:
+			return darkModeQuery.matches;
+		})();
 
 		// Reset all color classes on element:
 		element.classList.remove(...colors);

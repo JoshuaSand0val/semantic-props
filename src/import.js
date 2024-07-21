@@ -10,7 +10,7 @@ import color from "./color.js";
 export default function semantic() {
 	/**
 	 * Adds Semantic Props classes to element.
-	 * @param {HTMLElement} element Element to add Semantic Props classes to.
+	 * @param {Element} element Element to add Semantic Props classes to.
 	 */
 	const initialize = (element) => {
 		breakpoint(element);
@@ -20,7 +20,7 @@ export default function semantic() {
 	/** MutationObserver for adding classes to Semantic Props elements. */
 	const semanticObserver = new MutationObserver(records => {
 		for (const record of records) {
-			/** Potential Semantic Props element. @type {HTMLElement} */
+			/** Potential Semantic Props element. @type {Element} */
 			const element = record.target;
 
 			// Continue if class attribute was not mutated:
