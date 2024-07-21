@@ -25,7 +25,8 @@ export default function semantic() {
 	// Observe document for any mutations to elements:
 	semanticObserver.observe(document.documentElement, {
 		subtree: true,
-		childList: true
+		childList: true,
+		attributeFilter: ["class"]
 	});
 }
 

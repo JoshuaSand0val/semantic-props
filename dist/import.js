@@ -3,4 +3,4 @@ function t(t){const e=["--2xs-breakpoint","--xs-breakpoint","--sm-breakpoint","-
  * Adds custom property classes to all Semantic Props elements.
  * @type {Function}
  * @preserve
- */function o(){const o=()=>{for(const o of document.querySelectorAll(".--semantic"))t(o),e(o)};o();new MutationObserver(o).observe(document.documentElement,{subtree:!0,childList:!0})}"undefined"!=typeof window&&addEventListener("DOMContentLoaded",o);export{o as default};
+ */function o(){const o=()=>{for(const o of document.querySelectorAll(".--semantic"))t(o),e(o)};o();new MutationObserver(o).observe(document.documentElement,{subtree:!0,childList:!0,attributeFilter:["class"]})}"undefined"!=typeof window&&addEventListener("DOMContentLoaded",o);export{o as default};
