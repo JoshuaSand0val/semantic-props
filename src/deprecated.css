@@ -1,6 +1,32 @@
 /* Deprecated: Deprecated custom properties to be removed in final release. */
 
-:where(:root) {
+:root:where(:not(.--semantic)) {
+	/* Absolute Font Sizes: */
+	--2xs-font: clamp(0.475rem, 0.7312rem + -0.2562cqi, 0.7023rem);
+	--xs-font: clamp(0.6331rem, 0.81rem + -0.1769cqi, 0.7901rem);
+	--sm-font: clamp(0.844rem, 0.8946rem + -0.0506cqi, 0.8889rem);
+	--md-font: clamp(1rem, 0.9842rem + 0.1408cqi, 1.125rem);
+	--lg-font: clamp(1.125rem, 1.0775rem + 0.4221cqi, 1.4996rem);
+	--xl-font: clamp(1.2656rem, 1.1727rem + 0.8263cqi, 1.999rem);
+	--2xl-font: clamp(1.4238rem, 1.2665rem + 1.3981cqi, 2.6647rem);
+	--3xl-font: clamp(1.6018rem, 1.3546rem + 2.1974cqi, 3.552rem);
+	--4xl-font: clamp(1.802rem, 1.4303rem + 3.3045cqi, 4.7348rem);
+
+	/* Relative Font Sizes: */
+	--smaller-font: calc(1em / 1.333);
+	--larger-font: calc(1em * 1.333);
+
+	/* Base Sizes: */
+	--3xs-size: clamp(0.25rem, 0.2421rem + 0.0704cqi, 0.3125rem);
+	--2xs-size: clamp(0.5rem, 0.4921rem + 0.0704cqi, 0.5625rem);
+	--xs-size: clamp(0.75rem, 0.7342rem + 0.1408cqi, 0.875rem);
+	--sm-size: clamp(1rem, 0.9842rem + 0.1408cqi, 1.125rem);
+	--md-size: clamp(1.5rem, 1.4762rem + 0.2113cqi, 1.6875rem);
+	--lg-size: clamp(2rem, 1.9683rem + 0.2817cqi, 2.25rem);
+	--xl-size: clamp(3rem, 2.9525rem + 0.4225cqi, 3.375rem);
+	--2xl-size: clamp(4rem, 3.9366rem + 0.5634cqi, 4.5rem);
+	--3xl-size: clamp(6rem, 5.9049rem + 0.8451cqi, 6.75rem);
+
 	/* One-Up Sizes: */
 	--3xs-2xs-size: clamp(0.25rem, 0.2104rem + 0.3521cqi, 0.5625rem);
 	--2xs-xs-size: clamp(0.5rem, 0.4525rem + 0.4225cqi, 0.875rem);
