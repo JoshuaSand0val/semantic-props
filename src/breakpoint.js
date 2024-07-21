@@ -1,5 +1,4 @@
-// Breakpoint: Adds semantic breakpoint classes based on container inline size.
-
+/** Adds semantic breakpoint classes based on container inline size. */
 export default function breakpoint(element) {
 	/** Names of custom property or class breakpoints. @type {string[]} */
 	const breakpoints = [
@@ -11,7 +10,7 @@ export default function breakpoint(element) {
 	/** Adds appropriate breakpoint class for current container width. @type {ResizeObserver} */
 	const breakpointObserver = new ResizeObserver(entries => {
 		for (const entry of entries) {
-			/** Resized semantic-props element. @type {Element} */
+			/** Resized Semantic Props element. @type {Element} */
 			const element = entry.target;
 
 			// Reset all breakpoint classes on element:

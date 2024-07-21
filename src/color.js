@@ -1,6 +1,4 @@
-// Color: Adds semantic color classes based on current preferred color scheme.
-
-// Prevent ReferenceError in Node.js:
+/** Adds semantic color classes based on current preferred color scheme. */
 export default function color(element) {
 	/** Media Query for if user prefers dark color scheme. @type {MediaQueryList}  */
 	const darkModeQuery = matchMedia("(prefers-color-scheme: dark)");
