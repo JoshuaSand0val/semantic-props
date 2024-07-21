@@ -8,23 +8,28 @@ import color from "./color.js";
  * @preserve
  */
 export default function semantic() {
-	/** Adds Semantic Props classes to elements. */
-	const initialize = () => {
-		for (const element of document.querySelectorAll(".--semantic")) {
-			breakpoint(element);
-			color(element);
+	/**
+	 * Adds classes to Semantic Props elements in container.
+	 * @param {Element} container Container element to add classes to itself and children.
+	 */
+	const initialize = container => {
+		for (const element of [container, ...container.getElementsByTagName("*")]) {
+			if (element.classList.contains("--semantic")) {
+				breakpoint(element);
+				color(element);
+			}
 		}
 	};
 
 	// Initialize Semantic Props:
-	initialize();
+	initialize(document.documentElement);
 
 	/** MutationObserver for adding classes to Semantic Props elements. */
 	const semanticObserver = new MutationObserver(records => {
 		for (const record of records) {
 			// Add classes only to new Semantic Props elements:
 			if (!record.oldValue || !record.oldValue.includes("--semantic")) {
-				initialize();
+				initialize(record.target);
 			}
 		}
 	});
