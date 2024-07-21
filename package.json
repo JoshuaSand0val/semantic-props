@@ -20,6 +20,7 @@
 	"main": "dist/import.js",
 	"style": "dist/import.css",
 	"browser": "dist/import.js",
+	"types": "dist/import.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
