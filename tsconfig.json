@@ -5,6 +5,7 @@
 		"declaration": true,
 		"emitDeclarationOnly": true,
 		"outFile": "dist/import.d.ts",
-		"declarationMap": true
+		"declarationMap": true,
+		"module": "ESNext"
 	}
 }
