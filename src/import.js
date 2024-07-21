@@ -20,13 +20,21 @@ export default function semantic() {
 	initialize();
 
 	/** MutationObserver for adding classes to Semantic Props elements. */
-	const semanticObserver = new MutationObserver(initialize);
+	const semanticObserver = new MutationObserver(records => {
+		for (const record of records) {
+			// Add classes only to new Semantic Props elements:
+			if (!record.oldValue || !record.oldValue.includes("--semantic")) {
+				initialize();
+			}
+		}
+	});
 
 	// Observe document for any mutations to elements:
 	semanticObserver.observe(document.documentElement, {
 		subtree: true,
 		childList: true,
-		attributeFilter: ["class"]
+		attributeFilter: ["class"],
+		attributeOldValue: true
 	});
 }
 
