@@ -1,4 +1,7 @@
-/** Adds semantic color classes based on current preferred color scheme. */
+/**
+ * Adds semantic color classes based on current preferred color scheme.
+ * @param {HTMLElement} element HTML element to add color classes to.
+ */
 export default function color(element) {
 	/** Names of custom property or class colors. @type {string[]} */
 	const colors = ["--light-color", "--dark-color"];

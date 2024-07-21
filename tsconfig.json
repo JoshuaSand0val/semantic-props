@@ -1,0 +1,10 @@
+{
+	"files": ["dist/import.js"],
+	"compilerOptions": {
+		"allowJs": true,
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"outFile": "dist/import.d.ts",
+		"declarationMap": true
+	}
+}

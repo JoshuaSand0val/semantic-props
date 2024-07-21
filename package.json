@@ -26,7 +26,7 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "postcss src/import.css -o dist/import.css && rollup -c",
+		"build": "postcss src/import.css -o dist/import.css && rollup -c && tsc",
 		"watch:build": "watch 'npm run build' ./src/"
 	},
 	"devDependencies": {
@@ -37,6 +37,7 @@
 		"postcss-import": "^16.1.0",
 		"postcss-preset-env": "^9.6.0",
 		"rollup": "^4.18.1",
+		"typescript": "^5.5.3",
 		"watch": "^1.0.2"
 	}
 }

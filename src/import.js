@@ -2,7 +2,11 @@
 import breakpoint from "./breakpoint.js";
 import color from "./color.js";
 
-/** Adds classes to all Semantic Props elements. */
+/**
+ * Adds classes to all Semantic Props elements.
+ * @type {Function}
+ * @preserve
+ */
 export default function semantic() {
 	/**
 	 * Adds Semantic Props classes to element.

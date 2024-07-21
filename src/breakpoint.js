@@ -1,4 +1,7 @@
-/** Adds semantic breakpoint classes based on container inline size. */
+/**
+ * Adds semantic breakpoint classes based on container inline size.
+ * @param {HTMLElement} element HTML element to add breakpoint classes to.
+ */
 export default function breakpoint(element) {
 	/** Names of custom property or class breakpoints. @type {string[]} */
 	const breakpoints = [
