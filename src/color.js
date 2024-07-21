@@ -17,7 +17,10 @@ export default function color(element) {
 		/** Whether user or developer has selected to prefer dark color scheme. @type {boolean} */
 		const isDarkMode = (() => {
 			/** Potential element to inherit color scheme from. @type {Element | null} */
-			const inherited = element.closest(".--light-color, .--dark-color");
+			const inherited = element.closest(`
+				.--semantic.--light-color,
+				.--semantic.--dark-color
+			`);
 
 			// If inherited element exists use its color class:
 			if (null !== inherited) {
