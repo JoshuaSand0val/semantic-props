@@ -11,6 +11,9 @@ export default function color(element) {
 
 	/** Event listener for color scheme matchMedia() event. */
 	const listener = () => {
+		// Reset all color classes on element:
+		element.classList.remove(...colors);
+
 		/** Whether user or developer has selected to prefer dark color scheme. @type {boolean} */
 		const isDarkMode = (() => {
 			/** Potential element to inherit color scheme from. @type {Element | null} */
@@ -24,9 +27,6 @@ export default function color(element) {
 			// Else default to user color scheme:
 			return darkModeQuery.matches;
 		})();
-
-		// Reset all color classes on element:
-		element.classList.remove(...colors);
 
 		// Set appropriate color class based on preferred colors:
 		element.classList.add(isDarkMode ? "--dark-color" : "--light-color");
