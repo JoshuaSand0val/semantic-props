@@ -1,28 +1,28 @@
 /* Size: Responsive custom property sizes for padding, margin, ect. */
-/* Size Calculator: https://utopia.fyi/space/calculator?c=180,16,1.125,1600,18,1.333,5,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-2xl&g=s,l,xl,12 */
 
-:root {
+:where(:root, .--semantic) {
+	/* Size Scaling Ratio: */
+	--size-scale-ratio: 1.618;
+
 	/* Base Sizes: */
-	--3xs-size: clamp(0.25rem, 0.2421rem + 0.0704cqi, 0.3125rem);
-	--2xs-size: clamp(0.5rem, 0.4921rem + 0.0704cqi, 0.5625rem);
-	--xs-size: clamp(0.75rem, 0.7342rem + 0.1408cqi, 0.875rem);
-	--sm-size: clamp(1rem, 0.9842rem + 0.1408cqi, 1.125rem);
-	--md-size: clamp(1.5rem, 1.4762rem + 0.2113cqi, 1.6875rem);
-	--lg-size: clamp(2rem, 1.9683rem + 0.2817cqi, 2.25rem);
-	--xl-size: clamp(3rem, 2.9525rem + 0.4225cqi, 3.375rem);
-	--2xl-size: clamp(4rem, 3.9366rem + 0.5634cqi, 4.5rem);
-	--3xl-size: clamp(6rem, 5.9049rem + 0.8451cqi, 6.75rem);
+	--3xs-size: calc(var(--2xs-size) / var(--size-scale-ratio));
+	--2xs-size: calc(var(--xs-size) / var(--size-scale-ratio));
+	--xs-size: calc(var(--sm-size) / var(--size-scale-ratio));
+	--sm-size: calc(var(--md-size) / var(--size-scale-ratio));
+	--md-size: 1.618rem;
+	--lg-size: calc(var(--md-size) * var(--size-scale-ratio));
+	--xl-size: calc(var(--lg-size) * var(--size-scale-ratio));
+	--2xl-size: calc(var(--xl-size) * var(--size-scale-ratio));
+	--3xl-size: calc(var(--2xl-size) * var(--size-scale-ratio));
 
-	/* One-Up Sizes: */
-	--3xs-2xs-size: clamp(0.25rem, 0.2104rem + 0.3521cqi, 0.5625rem);
-	--2xs-xs-size: clamp(0.5rem, 0.4525rem + 0.4225cqi, 0.875rem);
-	--xs-sm-size: clamp(0.75rem, 0.7025rem + 0.4225cqi, 1.125rem);
-	--sm-md-size: clamp(1rem, 0.9129rem + 0.7746cqi, 1.6875rem);
-	--md-lg-size: clamp(1.5rem, 1.4049rem + 0.8451cqi, 2.25rem);
-	--lg-xl-size: clamp(2rem, 1.8257rem + 1.5493cqi, 3.375rem);
-	--xl-2xl-size: clamp(3rem, 2.8099rem + 1.6901cqi, 4.5rem);
-	--2xl-3xl-size: clamp(4rem, 3.6514rem + 3.0986cqi, 6.75rem);
+	/* Responsive Size: */
+	--responsive-size: var(--md-size);
 
-	/* Custom Sizes: */
-	--content-margin-size: clamp(1rem, 0.5563rem + 3.9437cqi, 4.5rem);
+	&:where(.--lg-breakpoint) {
+		--responsive-size: var(--lg-size);
+	}
+
+	&:where(.--xl-breakpoint) {
+		--responsive-size: var(--xl-size);
+	}
 }

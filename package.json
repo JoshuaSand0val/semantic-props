@@ -1,10 +1,11 @@
 {
 	"name": "semantic-props",
-	"version": "0.1.0",
-	"description": "A collection of semantic CSS custom properties.",
+	"version": "0.2.0",
+	"description": "A collection of semantic CSS custom properties and classes.",
 	"keywords": [
 		"Semantic Props",
 		"CSS custom properties",
+		"CSS framework",
 		"CSS"
 	],
 	"homepage": "https://github.com/JoshuaSand0val/semantic-props#readme",
@@ -17,22 +18,27 @@
 		"LICENSE",
 		"README.md"
 	],
-	"main": "dist/import.css",
+	"main": "dist/import.js",
 	"style": "dist/import.css",
+	"types": "dist/import.d.ts",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
 	},
 	"type": "module",
 	"scripts": {
-		"build": "postcss src/import.css -o dist/import.css",
-		"build:watch": "postcss src/import.css -o dist/import.css -w"
+		"build": "postcss src/import.css -o dist/import.css && rollup -c && tsc",
+		"watch:build": "watch 'npm run build' ./src/"
 	},
 	"devDependencies": {
+		"@rollup/plugin-terser": "^0.4.4",
 		"cssnano": "^7.0.4",
 		"postcss": "^8.4.39",
 		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.1.0",
-		"postcss-preset-env": "^9.5.15"
+		"postcss-preset-env": "^9.6.0",
+		"rollup": "^4.18.1",
+		"typescript": "^5.5.3",
+		"watch": "^1.0.2"
 	}
 }

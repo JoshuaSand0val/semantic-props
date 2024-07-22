@@ -1,15 +1,6 @@
 /* Breakpoint: Custom property breakpoint widths. */
 
-@custom-media --2xs-breakpoint (min-width: 180px);
-@custom-media --xs-breakpoint (min-width: 240px);
-@custom-media --sm-breakpoint (min-width: 360px);
-@custom-media --md-breakpoint (min-width: 480px);
-@custom-media --lg-breakpoint (min-width: 768px);
-@custom-media --xl-breakpoint (min-width: 1024px);
-@custom-media --2xl-breakpoint (min-width: 1440px);
-@custom-media --3xl-breakpoint (min-width: 1600px);
-
-:root {
+:where(:root, .--semantic) {
 	/* Breakpoint Widths: */
 	--2xs-breakpoint: 180px;
 	--xs-breakpoint: 240px;
