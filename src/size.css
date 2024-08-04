@@ -16,7 +16,11 @@
 	--3xl-size: calc(var(--2xl-size) * var(--size-scale-ratio));
 
 	/* Responsive Size: */
-	--responsive-size: var(--md-size);
+	--responsive-size: var(--sm-size);
+
+	&:where(.--sm-breakpoint) {
+		--responsive-size: var(--md-size);
+	}
 
 	&:where(.--lg-breakpoint) {
 		--responsive-size: var(--lg-size);

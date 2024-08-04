@@ -21,7 +21,7 @@ export default function breakpoint(element) {
 
 			// Reset all breakpoint classes on element:
 			element.classList.remove(...breakpoints);
-	
+
 			/** Element CSS inline-size. @type {string} */
 			const inlineSize = getComputedStyle(element).getPropertyValue("inline-size");
 
@@ -32,7 +32,7 @@ export default function breakpoint(element) {
 			for (const prop of breakpoints) {
 				// Set element CSS min-inline-size to calculate remainder from breakpoint:
 				element.style.minInlineSize = `calc(${inlineSize} - var(${prop}))`;
-	
+
 				// Add class when element is at least breakpoint size:
 				if (getComputedStyle(element).getPropertyValue("min-inline-size") !== "0px") {
 					element.classList.add(prop);
