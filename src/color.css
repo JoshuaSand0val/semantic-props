@@ -22,9 +22,9 @@
 	}
 
 	/* Text Color Lightness: */
-	--1st-color-lightness: 0.60;
-	--2nd-color-lightness: 0.50;
-	--3rd-color-lightness: 0.40;
+	--1st-color-lightness: 0.55;
+	--2nd-color-lightness: 0.45;
+	--3rd-color-lightness: 0.35;
 
 	&:where(.--dark-color) {
 		--1st-color-lightness: 0.85;
