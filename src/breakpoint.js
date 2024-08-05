@@ -10,24 +10,21 @@ export default function breakpoint(element) {
 		"--xl-breakpoint", "--2xl-breakpoint", "--3xl-breakpoint"
 	];
 
-	/** Element inline CSS min-inline-size state. @type {string|null} */
-	let minInlineSize = null;
-
-	/** Adds appropriate breakpoint class for current container width. @type {ResizeObserver} */
+	/** Adds appropriate breakpoint class for current container inline-size. @type {ResizeObserver} */
 	const breakpointObserver = new ResizeObserver(() => {
+		/** Element inline CSS min-inline-size. @type {string} */
+		const minInlineSize = element.style.minInlineSize;
+
 		/** Element CSS inline-size. @type {string} */
 		const inlineSize = getComputedStyle(element).getPropertyValue("inline-size");
-
-		// Set element inline CSS min-inline-size state:
-		minInlineSize ??= element.style.minInlineSize;
 
 		// Loop through all breakpoints and add appropriate classes:
 		for (const prop of breakpoints) {
 			// Set element CSS min-inline-size to calculate remainder from breakpoint:
-			element.style.minInlineSize = `calc(${inlineSize} - var(${prop}))`;
+			element.style.minInlineSize = `min(var(${prop}) - ${inlineSize}, ${inlineSize})`;
 
-			// Only add class when element exceeds breakpoint size:
-			if (getComputedStyle(element).getPropertyValue("min-inline-size") === "0px") {
+			// Only add class when element meets breakpoint size:
+			if (getComputedStyle(element).getPropertyValue("min-inline-size") !== "0px") {
 				element.classList.remove(prop);
 			}
 			else {
@@ -37,9 +34,6 @@ export default function breakpoint(element) {
 
 		// Reset element inline CSS min-inline-size:
 		element.style.minInlineSize = minInlineSize;
-
-		// Nullify min-inline-size inline CSS state:
-		minInlineSize = null;
 	});
 
 	// Observe resize of all Semantic Props elements:
