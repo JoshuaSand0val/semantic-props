@@ -3,44 +3,25 @@
  * @param {Element} element Element to add color classes to.
  */
 export default function color(element) {
-	/** Names of custom property or class colors. @type {string[]} */
-	const colors = ["--light-color", "--dark-color"];
-
 	/** Media Query for if user prefers dark color scheme. @type {MediaQueryList}  */
-	const darkModeQuery = matchMedia("(prefers-color-scheme: dark)");
+	const prefersDarkQuery = matchMedia("(prefers-color-scheme: dark)");
+
+	/** Potential element to inherit color scheme from. @type {Element|null} */
+	const inherit = element.closest(".--semantic:is(.--light-color, .--dark-color)");
 
 	/** Event listener for color scheme matchMedia() event. */
 	const listener = () => {
-		// Reset all color classes on element:
-		element.classList.remove(...colors);
-
-		/** Whether user or developer has selected to prefer dark color scheme. @type {boolean} */
-		const isDarkMode = (() => {
-			/** Potential element to inherit color scheme from. @type {Element | null} */
-			const inherited = element.closest(`
-				.--semantic.--light-color,
-				.--semantic.--dark-color
-			`);
-
-			// If inherited element exists use its color class:
-			if (null !== inherited) {
-				return inherited.classList.contains("--dark-color");
-			}
-
-			// Else default to user color scheme:
-			return darkModeQuery.matches;
-		})();
+		/** Whether to prefer dark color scheme. @type {boolean} */
+		const prefersDark = inherit ? inherit.classList.contains("--dark-color") : prefersDarkQuery.matches;
 
 		// Set appropriate color class based on preferred colors:
-		element.classList.add(isDarkMode ? "--dark-color" : "--light-color");
+		element.classList.remove(prefersDark ? "--light-color" : "--dark-color");
+		element.classList.add(!prefersDark ? "--light-color" : "--dark-color");
 	};
 
-	// Only add color classes if one is not already used:
-	if (!colors.some(prop => element.classList.contains(prop))) {
-		// Listen for preferred color scheme changes:
-		darkModeQuery.addEventListener("change", listener);
+	// Listen for preferred color scheme changes:
+	prefersDarkQuery.addEventListener("change", listener);
 
-		// Initially call event listener:
-		listener();
-	}
+	// Initially call event listener:
+	listener();
 }
