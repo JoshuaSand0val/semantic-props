@@ -7,7 +7,10 @@ export default function color(element) {
 	const prefersDarkQuery = matchMedia("(prefers-color-scheme: dark)");
 
 	/** Potential element to inherit color scheme from. @type {Element|null} */
-	const inherit = element.closest(".--semantic:is(.--light-color, .--dark-color)");
+	const inherit = (() => {
+		const parent = element.parentElement || document.documentElement;
+		return parent.closest(".--semantic:is(.--light-color, .--dark-color)");
+	})();
 
 	/** Event listener for color scheme matchMedia() event. */
 	const listener = () => {
