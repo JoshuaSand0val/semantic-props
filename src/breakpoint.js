@@ -40,7 +40,7 @@ export default function breakpoint(element) {
 
 			// Reset element inline CSS min-inline-size:
 			element.style.minInlineSize = minInlineSize;
-		}, 10);
+		}, 3);
 	});
 
 	// Observe resize of all Semantic Props elements:
