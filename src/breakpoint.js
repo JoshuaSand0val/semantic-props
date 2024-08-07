@@ -10,30 +10,37 @@ export default function breakpoint(element) {
 		"--xl-breakpoint", "--2xl-breakpoint", "--3xl-breakpoint"
 	];
 
+	/** Delay for ResizeObserver to complete. @type {number|undefined} */
+	let observerDelay;
+
 	/** Adds appropriate breakpoint class for current container inline-size. @type {ResizeObserver} */
 	const breakpointObserver = new ResizeObserver(() => {
-		/** Element inline CSS min-inline-size. @type {string} */
-		const minInlineSize = element.style.minInlineSize;
+		// Reset ResizeObserver completion delay:
+		clearTimeout(observerDelay);
+		observerDelay = setTimeout(() => {
+			/** Element inline CSS min-inline-size. @type {string} */
+			const minInlineSize = element.style.minInlineSize;
 
-		/** Element CSS inline-size. @type {string} */
-		const inlineSize = getComputedStyle(element).getPropertyValue("inline-size");
+			/** Element CSS inline-size. @type {string} */
+			const inlineSize = getComputedStyle(element).getPropertyValue("inline-size");
 
-		// Loop through all breakpoints and add appropriate classes:
-		for (const prop of breakpoints) {
-			// Set element CSS min-inline-size to calculate remainder from breakpoint:
-			element.style.minInlineSize = `min(var(${prop}) - ${inlineSize}, ${inlineSize})`;
+			// Loop through all breakpoints and add appropriate classes:
+			for (const prop of breakpoints) {
+				// Set element CSS min-inline-size to calculate remainder from breakpoint:
+				element.style.minInlineSize = `min(var(${prop}) - ${inlineSize}, ${inlineSize})`;
 
-			// Only add class when element meets breakpoint size:
-			if (getComputedStyle(element).getPropertyValue("min-inline-size") !== "0px") {
-				element.classList.remove(prop);
+				// Only add class when element meets breakpoint size:
+				if (getComputedStyle(element).getPropertyValue("min-inline-size") !== "0px") {
+					element.classList.remove(prop);
+				}
+				else {
+					element.classList.add(prop);
+				}
 			}
-			else {
-				element.classList.add(prop);
-			}
-		}
 
-		// Reset element inline CSS min-inline-size:
-		element.style.minInlineSize = minInlineSize;
+			// Reset element inline CSS min-inline-size:
+			element.style.minInlineSize = minInlineSize;
+		}, 10);
 	});
 
 	// Observe resize of all Semantic Props elements:
