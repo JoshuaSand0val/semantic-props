@@ -12,30 +12,42 @@ export default function semantic() {
 	 * Adds classes to Semantic Props elements in container.
 	 * @param {Element} container Container element to add classes to itself and children.
 	 */
-	const initialize = container => {
+	const activate = container => {
 		for (const element of [container, ...container.getElementsByTagName("*")]) {
-			if (element.classList.contains("--semantic")) {
+			if (element.matches(".--semantic")) {
 				breakpoint(element);
 				color(element);
 			}
 		}
 	};
 
-	// Initialize Semantic Props:
-	initialize(document.documentElement);
+	// Activate existing Semantic Props elements:
+	activate(document.documentElement);
 
-	/** MutationObserver for adding classes to Semantic Props elements. */
-	const semanticObserver = new MutationObserver(records => {
-		for (const record of records) {
-			// Add classes only to new Semantic Props elements:
-			if (!record.oldValue || !record.oldValue.includes("--semantic")) {
-				initialize(record.target);
+	/** Delay for MutationObserver to complete. @type {number|undefined} */
+	let observerDelay;
+
+	/** Activates new or mutated Semantic Props elements. */
+	const observer = new MutationObserver(records => {
+		// Reset MutationObserver completion delay:
+		clearTimeout(observerDelay);
+		observerDelay = setTimeout(() => {
+			for (const record of records) {
+				// Only activate parent of new elements:
+				if (!record.oldValue || !record.oldValue.includes("--semantic")) {
+					activate(record.target);
+					continue;
+				}
+				// Else activate children of existing elements:
+				for (const child of record.target.children) {
+					activate(child);
+				}
 			}
-		}
+		}, 10);
 	});
 
 	// Observe document for any mutations to elements:
-	semanticObserver.observe(document.documentElement, {
+	observer.observe(document.documentElement, {
 		subtree: true,
 		childList: true,
 		attributeFilter: ["class"],
