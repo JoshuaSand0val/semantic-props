@@ -6,25 +6,25 @@ export default function color(element) {
 	/** Media Query for if user prefers dark color scheme. @type {MediaQueryList}  */
 	const prefersDarkQuery = matchMedia("(prefers-color-scheme: dark)");
 
-	/** Potential element to inherit color scheme from. @type {Element|null} */
-	const inherit = (() => {
-		const parent = element.parentElement || document.documentElement;
-		return parent.closest(".--semantic:is(.--light-color, .--dark-color)");
-	})();
+	/** Returns whether to prefer dark color scheme. @returns {boolean} */
+	const prefersDark = () => {
+		/** Enabled color schemes for element. @type {string} */
+		const colorScheme = getComputedStyle(element).getPropertyValue("color-scheme");
 
-	/** Event listener for color scheme matchMedia() event. */
-	const listener = () => {
-		/** Whether to prefer dark color scheme. @type {boolean} */
-		const prefersDark = inherit ? inherit.classList.contains("--dark-color") : prefersDarkQuery.matches;
+		// Return boolean for and if preferred color scheme is enabled:
+		if (/normal|(?=.*light)(?=.*dark)/.test(colorScheme)) {
+			return prefersDarkQuery.matches;
+		}
 
-		// Set appropriate color class based on preferred colors:
-		element.classList.remove(prefersDark ? "--light-color" : "--dark-color");
-		element.classList.add(!prefersDark ? "--light-color" : "--dark-color");
+		// Return boolean for forced color scheme:
+		return /dark/.test(colorScheme);
 	};
 
-	// Listen for preferred color scheme changes:
-	prefersDarkQuery.addEventListener("change", listener);
+	// Set appropriate color class based on preferred colors:
+	requestAnimationFrame(function callback() {
+		element.classList.remove(prefersDark() ? "--light-color" : "--dark-color");
+		element.classList.add(!prefersDark() ? "--light-color" : "--dark-color");
 
-	// Initially call event listener:
-	listener();
+		requestAnimationFrame(callback);
+	});
 }
