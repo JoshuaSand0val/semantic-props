@@ -10,39 +10,39 @@ export default function breakpoint(element) {
 		"--xl-breakpoint", "--2xl-breakpoint", "--3xl-breakpoint"
 	];
 
-	/** Delay for ResizeObserver to complete. @type {number|undefined} */
-	let observerDelay;
+	/** CSS pixel sizes of breakpoint custom properties. @type {number[]} */
+	const sizes = (() => {
+		/** Element inline CSS. @type {string} */
+		const style = element.style;
+
+		// Set element CSS background-size to calculate breakpoint:
+		element.style.backgroundImage = breakpoints.map(() => "linear-gradient(#0000, #0000)").join(",");
+		element.style.backgroundSize = breakpoints.map(prop => `var(${prop})`).join(",");
+
+		/** Get breakpoint CSS pixel values. @type {string[]} */
+		const values = getComputedStyle(element).getPropertyValue("background-size").split(",");
+
+		// Reset element inline CSS:
+		element.style = style;
+
+		// Return breakpoint sizes as numbers:
+		return values.map(value => parseInt(value));
+	})();
 
 	/** Adds appropriate breakpoint class for current container inline-size. @type {ResizeObserver} */
-	const breakpointObserver = new ResizeObserver(() => {
-		// Reset ResizeObserver completion delay:
-		clearTimeout(observerDelay);
-		observerDelay = setTimeout(() => {
-			/** Element inline CSS min-inline-size. @type {string} */
-			const minInlineSize = element.style.minInlineSize;
-
-			/** Element CSS inline-size. @type {string} */
-			const inlineSize = getComputedStyle(element).getPropertyValue("inline-size");
+	const breakpointObserver = new ResizeObserver(entries => {
+		for (const entry of entries) {
+			/** Element border-box inline-size in CSS pixels. @type {number} */
+			const inlineSize = entry.borderBoxSize[0].inlineSize;
 
 			// Loop through all breakpoints and add appropriate classes:
-			for (const prop of breakpoints) {
-				// Set element CSS min-inline-size to calculate remainder from breakpoint:
-				element.style.minInlineSize = `min(var(${prop}) - ${inlineSize}, ${inlineSize})`;
-
+			for (let i = 0; i < breakpoints.length; i++) {
 				// Only add class when element meets breakpoint size:
-				if (getComputedStyle(element).getPropertyValue("min-inline-size") !== "0px") {
-					element.classList.remove(prop);
-				}
-				else {
-					element.classList.add(prop);
-				}
+				element.classList.toggle(breakpoints[i], inlineSize >= sizes[i]);
 			}
-
-			// Reset element inline CSS min-inline-size:
-			element.style.minInlineSize = minInlineSize;
-		}, 3);
+		}
 	});
 
-	// Observe resize of all Semantic Props elements:
+	// Observe resize of element:
 	breakpointObserver.observe(element);
 }
