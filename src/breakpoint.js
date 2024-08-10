@@ -13,7 +13,7 @@ export default function breakpoint(element) {
 	/** CSS pixel sizes of breakpoint custom properties. @type {number[]} */
 	const sizes = (() => {
 		/** Element inline CSS. @type {string} */
-		const style = element.style;
+		const style = element.getAttribute("style");
 
 		// Set element CSS background-size to calculate breakpoint:
 		element.style.backgroundImage = breakpoints.map(() => "linear-gradient(#0000, #0000)").join(",");
@@ -23,7 +23,7 @@ export default function breakpoint(element) {
 		const values = getComputedStyle(element).getPropertyValue("background-size").split(",");
 
 		// Reset element inline CSS:
-		element.style = style;
+		element.setAttribute("style", style);
 
 		// Return breakpoint sizes as numbers:
 		return values.map(value => parseInt(value));
