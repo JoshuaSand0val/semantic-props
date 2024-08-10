@@ -24,19 +24,21 @@ export default function semantic() {
 	// Activate existing Semantic Props elements:
 	activate(document.documentElement);
 
+	/** Delay for MutationObserver to complete. @type {number|undefined} */
+	let observerDelay;
+
 	/** Activates new Semantic Props elements. */
 	const observer = new MutationObserver(records => {
-		/** Animation request for MutationObserver. @type {number} */
-		const request = requestAnimationFrame(() => {
+		// Reset MutationObserver completion delay:
+		clearTimeout(observerDelay);
+		// Allow mutations to complete:
+		observerDelay = setTimeout(() => {
 			for (const { target, oldValue } of records) {
 				if (!oldValue || !oldValue.includes("--semantic")) {
 					activate(target);
 				}
 			}
-
-			// Cancel animation request timeout:
-			cancelAnimationFrame(request);
-		});
+		}, 10);
 	});
 
 	// Observe document for any mutations to elements:
