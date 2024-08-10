@@ -26,11 +26,17 @@ export default function semantic() {
 
 	/** Activates new Semantic Props elements. */
 	const observer = new MutationObserver(records => {
-		for (const { target, oldValue } of records) {
-			if (!oldValue || !oldValue.includes("--semantic")) {
-				activate(target);
+		/** Animation request for MutationObserver. @type {number} */
+		const request = requestAnimationFrame(() => {
+			for (const { target, oldValue } of records) {
+				if (!oldValue || !oldValue.includes("--semantic")) {
+					activate(target);
+				}
 			}
-		}
+
+			// Cancel animation request timeout:
+			cancelAnimationFrame(request);
+		});
 	});
 
 	// Observe document for any mutations to elements:
