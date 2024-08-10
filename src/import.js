@@ -3,7 +3,7 @@ import breakpoint from "./breakpoint.js";
 import color from "./color.js";
 
 /**
- * Adds custom property classes to all Semantic Props elements.
+ * Activates Semantic Props elements, adding custom property classes.
  * @type {Function}
  * @preserve
  */
@@ -12,30 +12,29 @@ export default function semantic() {
 	 * Adds classes to Semantic Props elements in container.
 	 * @param {Element} container Container element to add classes to itself and children.
 	 */
-	const initialize = container => {
+	const activate = container => {
 		for (const element of [container, ...container.getElementsByTagName("*")]) {
-			if (element.classList.contains("--semantic")) {
+			if (element.matches(".--semantic")) {
 				breakpoint(element);
 				color(element);
 			}
 		}
 	};
 
-	// Initialize Semantic Props:
-	initialize(document.documentElement);
+	// Activate existing Semantic Props elements:
+	activate(document.documentElement);
 
-	/** MutationObserver for adding classes to Semantic Props elements. */
-	const semanticObserver = new MutationObserver(records => {
-		for (const record of records) {
-			// Add classes only to new Semantic Props elements:
-			if (!record.oldValue || !record.oldValue.includes("--semantic")) {
-				initialize(record.target);
+	/** Activates new Semantic Props elements. */
+	const observer = new MutationObserver(records => {
+		for (const { target, oldValue } of records) {
+			if (!oldValue || !oldValue.includes("--semantic")) {
+				activate(target);
 			}
 		}
 	});
 
 	// Observe document for any mutations to elements:
-	semanticObserver.observe(document.documentElement, {
+	observer.observe(document.documentElement, {
 		subtree: true,
 		childList: true,
 		attributeFilter: ["class"],
