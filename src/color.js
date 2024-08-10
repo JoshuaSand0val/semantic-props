@@ -20,20 +20,15 @@ export default function color(element) {
 		return /dark/.test(colorScheme);
 	};
 
-	// Set appropriate color class based on preferred colors:
-	requestAnimationFrame(function callback() {
-		// Set color class to --light-color:
-		if (!prefersDark() && !element.matches(".--light-color")) {
-			element.classList.remove("--dark-color");
-			element.classList.add("--light-color");
-		}
+	/** Sets appropriate color class based on preferred colors. */
+	const listener = () => {
+		element.classList.remove(prefersDark() ? "--light-color" : "--dark-color");
+		element.classList.add(!prefersDark() ? "--light-color" : "--dark-color");
+	};
 
-		// Set color class to --dark-color:
-		if (prefersDark() && !element.matches(".--dark-color")) {
-			element.classList.remove("--light-color");
-			element.classList.add("--dark-color");
-		}
+	// Listen for preferred color scheme changes:
+	prefersDarkQuery.addEventListener("change", listener);
 
-		requestAnimationFrame(callback);
-	});
+	// Initially call event listener:
+	listener();
 }
