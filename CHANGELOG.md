@@ -2,6 +2,22 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [0.2.1] - 2024-08-10
+
+### Added
+
+- Added configurations for [editorconfig](https://editorconfig.org/) and [prettier](https://prettier.io/).
+
+### Changed
+
+- Changed text color lightness custom properties for light colors, reduced by `0.05` to meet WCAG color contrast requirements.
+- Changed color classes to be forced via CSS `color-scheme` property values.
+- Changed "responsive-size" custom property to be smaller on extra small breakpoints.
+
+### Fixed
+
+- Fixed breakpoint classes from not taking non-pixel CSS values into account.
+
 ## [0.2.0] - 2024-07-21
 
 ### Added
@@ -36,3 +52,4 @@ All relevant changes to Semantic Props will be documented here.
 
 [0.1.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.1.0
 [0.2.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.0
+[0.2.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.1
