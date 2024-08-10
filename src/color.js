@@ -22,8 +22,17 @@ export default function color(element) {
 
 	// Set appropriate color class based on preferred colors:
 	requestAnimationFrame(function callback() {
-		element.classList.remove(prefersDark() ? "--light-color" : "--dark-color");
-		element.classList.add(!prefersDark() ? "--light-color" : "--dark-color");
+		// Set color class to --light-color:
+		if (!prefersDark() && !element.matches(".--light-color")) {
+			element.classList.remove("--dark-color");
+			element.classList.add("--light-color");
+		}
+
+		// Set color class to --dark-color:
+		if (prefersDark() && !element.matches(".--dark-color")) {
+			element.classList.remove("--light-color");
+			element.classList.add("--dark-color");
+		}
 
 		requestAnimationFrame(callback);
 	});
