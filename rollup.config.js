@@ -1,5 +1,10 @@
 // Rollup Config: Configuration file for rollup bundling of source code.
 
+import postcss from "rollup-plugin-postcss";
+import postcssImport from "postcss-import";
+import postcssPresetEnv from "postcss-preset-env";
+import cssnano from "cssnano";
+
 import terser from "@rollup/plugin-terser";
 
 export default {
@@ -8,5 +13,16 @@ export default {
 		file: "dist/import.js",
 		format: "es"
 	},
-	plugins: [terser()]
+	plugins: [
+		postcss({
+			plugins: [
+				postcssImport,
+				postcssPresetEnv,
+				cssnano({
+					preset: "default"
+				})
+			]
+		}),
+		terser()
+	]
 };

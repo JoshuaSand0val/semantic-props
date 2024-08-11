@@ -19,7 +19,6 @@
 		"README.md"
 	],
 	"main": "dist/import.js",
-	"style": "dist/import.css",
 	"types": "dist/import.d.ts",
 	"repository": {
 		"type": "git",
@@ -27,17 +26,16 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "postcss src/import.css -o dist/import.css && rollup -c && tsc",
+		"build": "rollup -c && tsc",
 		"watch:build": "watch 'npm run build' ./src/"
 	},
 	"devDependencies": {
 		"@rollup/plugin-terser": "^0.4.4",
 		"cssnano": "^7.0.4",
-		"postcss": "^8.4.39",
-		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.1.0",
 		"postcss-preset-env": "^9.6.0",
 		"rollup": "^4.18.1",
+		"rollup-plugin-postcss": "^4.0.2",
 		"typescript": "^5.5.3",
 		"watch": "^1.0.2"
 	}

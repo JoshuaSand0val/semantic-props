@@ -2,6 +2,8 @@
 import breakpoint from "./breakpoint.js";
 import color from "./color.js";
 
+import "./import.css";
+
 /**
  * Activates Semantic Props elements, adding custom property classes.
  * @type {Function}
