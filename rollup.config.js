@@ -21,7 +21,9 @@ export default {
 				cssnano({
 					preset: "default"
 				})
-			]
+			],
+			inject: true,
+			extract: "import.css"
 		}),
 		terser()
 	]
