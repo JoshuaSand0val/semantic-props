@@ -1,8 +1,8 @@
-export { c as default };
+export { l as default };
 /**
- * Activates Semantic Props elements, adding custom property classes.
+ * Initializes and reevaluates Semantic Props element styles.
  * @type {Function}
  * @preserve
  */
-declare function c(): void;
+declare function l(): void;
 //# sourceMappingURL=import.d.ts.map
