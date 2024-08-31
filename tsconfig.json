@@ -6,6 +6,7 @@
 		"emitDeclarationOnly": true,
 		"outDir": "dist",
 		"declarationMap": true,
-		"module": "ESNext"
+		"module": "ESNext",
+		"noImplicitAny": true
 	}
 }
