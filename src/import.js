@@ -43,23 +43,20 @@ export default function semantic() {
 	/** Initialize/Deactivate mutated Semantic Props elements. */
 	const observer = new MutationObserver(records => {
 		for (const { type, target, oldValue } of records) {
-			// Initialize or deactivate existing Semantic Props elements:
-			if (type === "attributes") {
-				/** If target is currently a Semantic Props element. @type {boolean} */
-				const currSemantic = target.classList.contains("--semantic");
+			/** If target is currently a Semantic Props element. @type {boolean} */
+			const currSemantic = target.classList.contains("--semantic");
 
-				/** If target previously was a Semantic Props element. @type {boolean} */
-				const prevSemantic = oldValue?.includes("--semantic");
+			/** If target previously was a Semantic Props element. @type {boolean} */
+			const prevSemantic = oldValue?.includes("--semantic");
 
-				// Initialize if a current and new Semantic Props element:
-				if (currSemantic && !prevSemantic) {
-					initialize(target);
-				}
+			// Initialize if a current and new Semantic Props element:
+			if (currSemantic && !prevSemantic) {
+				initialize(target);
+			}
 
-				// Deactivate if no longer Semantic Props element:
-				if (!currSemantic && prevSemantic) {
-					deactivate(target);
-				}
+			// Deactivate if no longer Semantic Props element:
+			if (!currSemantic && prevSemantic) {
+				deactivate(target);
 			}
 
 			// Initialize added child Semantic Props elements of target:

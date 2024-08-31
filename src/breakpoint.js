@@ -27,7 +27,7 @@ export default {
 		const sizes = values.map(value => parseInt(value));
 
 		/** Toggles breakpoint class for container inline-size. @type {ResizeObserver} */
-		const breakpointObserver = new ResizeObserver((entries) => {
+		const breakpointObserver = new ResizeObserver(entries => {
 			// Toggle classes for all resized elements:
 			for (const { target, borderBoxSize } of entries) {
 				/** Element border-box inline-size in CSS pixels. @type {number} */
