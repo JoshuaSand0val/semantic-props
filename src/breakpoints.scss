@@ -27,16 +27,14 @@ $breakpoints: (
 	@return map.get($breakpoints, $name);
 }
 
-/// Nests CSS within Semantic Props breakpoint query.
+/// Nests CSS within breakpoint container query.
 /// @see $breakpoints
 /// @requires breakpoint
 /// @parameter {string} $name Name of breakpoint.
 /// @content CSS to nest within query.
-/// @outputs Semantic Props container nested in breakpoint min-width media-query.
+/// @outputs CSS nested in breakpoint container query.
 @mixin breakpoint($name) {
-	@media (min-width: breakpoint($name)) {
-		:where(.semantic-props:is(.\@#{$name}, .\@all)) & {
-			@content;
-		}
+	@container (inline-size: #{breakpoint($name)}) {
+		@content;
 	}
 }
