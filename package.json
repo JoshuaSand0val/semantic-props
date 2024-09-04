@@ -1,6 +1,7 @@
 {
+	"private": true,
 	"name": "semantic-props",
-	"version": "0.2.1",
+	"version": "0.3.0",
 	"description": "A collection of semantic CSS custom properties and classes.",
 	"keywords": [
 		"Semantic Props",
@@ -20,7 +21,7 @@
 	],
 	"main": "dist/import.js",
 	"types": "dist/import.d.ts",
-	"style": "dist/import.css",
+	"style": "src/import.scss",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
@@ -39,5 +40,8 @@
 		"rollup-plugin-postcss": "^4.0.2",
 		"typescript": "^5.5.3",
 		"watch": "^1.0.2"
+	},
+	"dependencies": {
+		"sass": "^1.78.0"
 	}
 }

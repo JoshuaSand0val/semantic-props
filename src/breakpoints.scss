@@ -1,0 +1,42 @@
+////
+/// Semantic Props used for layout breakpoints.
+/// @group breakpoints
+/// @since 0.3.0
+////
+
+@use "sass:map" as map;
+
+/// Mapped Semantic Props breakpoints to lengths.
+/// @type map
+$breakpoints: (
+	xxs: 180px,
+	xs: 240px,
+	sm: 360px,
+	md: 480px,
+	lg: 768px,
+	xl: 1024px,
+	xxl: 1440px,
+	xxxl: 1600px
+) !default;
+
+/// Gets Semantic Props breakpoint length value.
+/// @see $breakpoints
+/// @parameter {string} $name Name of breakpoint.
+/// @returns {number} Value of breakpoint.
+@function breakpoint($name) {
+	@return map.get($breakpoints, $name);
+}
+
+/// Nests CSS within Semantic Props breakpoint query.
+/// @see $breakpoints
+/// @requires breakpoint
+/// @parameter {string} $name Name of breakpoint.
+/// @content CSS to nest within query.
+/// @outputs Semantic Props container nested in breakpoint min-width media-query.
+@mixin breakpoint($name) {
+	@media (min-width: breakpoint($name)) {
+		.semantic-props.#{$name} & {
+			@content;
+		}
+	}
+}
