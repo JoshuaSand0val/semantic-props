@@ -35,7 +35,7 @@ $breakpoints: (
 /// @outputs Semantic Props container nested in breakpoint min-width media-query.
 @mixin breakpoint($name) {
 	@media (min-width: breakpoint($name)) {
-		.semantic-props.#{$name} & {
+		:where(.semantic-props:is(.\@#{$name}, .\@all)) & {
 			@content;
 		}
 	}
