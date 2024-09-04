@@ -34,7 +34,7 @@ $breakpoints: (
 /// @content CSS to nest within query.
 /// @outputs CSS nested in breakpoint container query.
 @mixin breakpoint($name) {
-	@container (inline-size: #{breakpoint($name)}) {
+	@container (min-inline-size: #{breakpoint($name)}) {
 		@content;
 	}
 }
