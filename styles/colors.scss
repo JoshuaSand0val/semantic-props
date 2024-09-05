@@ -33,8 +33,8 @@ $colors: map.merge((
 		@for $l from 0 through 12 {
 			@for $d from 0 through 12 {
 				// Calculate color light/dark lightness:
-				$light: 100% * Math.div($l, 12);
-				$dark: 100% * Math.div($d, 12);
+				$light: 100% * math.div($l, 12);
+				$dark: 100% * math.div($d, 12);
 
 				// Create color custom property name:
 				$custom-property: --#{$prop}-color-#{$l}-#{$d};
