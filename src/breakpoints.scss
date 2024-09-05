@@ -11,14 +11,14 @@
 /// @type map
 $breakpoints: () !default;
 $breakpoints: map.merge((
-	xxs: 180px,
-	xs: 240px,
-	sm: 360px,
-	md: 480px,
-	lg: 768px,
-	xl: 1024px,
-	xxl: 1440px,
-	xxxl: 1600px
+	"2xs": 180px,
+	"xs": 240px,
+	"sm": 360px,
+	"md": 480px,
+	"lg": 768px,
+	"xl": 1024px,
+	"2xl": 1440px,
+	"3xl": 1600px
 ), $breakpoints);
 
 :root {
