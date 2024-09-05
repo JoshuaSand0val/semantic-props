@@ -6,11 +6,10 @@
 
 @use "sass:color" as color;
 @use "sass:map" as map;
-@use "sass:string" as string;
 
 /// Mapped Semantic Props colors to values.
-/// Generates (0 through 10) colors (black to white).
-/// Uses color-light-dark syntax.
+/// Generates (0 through 10) custom property colors (black to white).
+/// Custom property uses --[prop]-color-[light]-[dark] syntax.
 /// @type map
 $colors: () !default;
 $colors: map.merge((
@@ -25,32 +24,27 @@ $colors: map.merge((
 
 :root {
 	@each $prop, $color in $colors {
-		// Create weighted color props:
-		@for $l from 0 through 10 {
-			$colors: map.set($colors, #{$prop}-#{$l}, color.change($color, $lightness: $l * 10%)) !global;
-		}
+		// Create reference color prop:
+		#{--#{$prop}-color}: $color;
 
-		// Create light-dark weighted color props:
+		// Create weighted light-dark color props:
 		@for $l from 0 through 10 {
 			@for $d from 0 through 10 {
-				// Create a unique custom property name:
-				$custom-property: --#{string.unique-id()}-#{$prop}-#{$l}-#{$d};
+				// Create color custom property name:
+				$custom-property: --#{$prop}-color-#{$l}-#{$d};
 
-				// Map $colors to use custom property:
-				$colors: map.set($colors, #{$prop}-#{$l}-#{$d}, var($custom-property)) !global;
-
-				// Define custom property using light-dark color (alongside fallback):
-				#{$custom-property}: map.get($colors, #{$prop}-#{$l});
+				// Define color custom property using light-dark (alongside fallback):
+				#{$custom-property}: color.change($color, $lightness: $l * 10%);
 				#{$custom-property}: light-dark(
-					map.get($colors, #{$prop}-#{$l}),
-					map.get($colors, #{$prop}-#{$d})
+					color.change($color, $lightness: $l * 10%),
+					color.change($color, $lightness: $d * 10%)
 				);
 			}
 		}
 	}
 }
 
-/// Gets Semantic Props color value.
+/// Gets Semantic Props mapped color value.
 /// @see $colors
 /// @parameter {string} $prop Name of color prop.
 /// @returns {color} Value of color prop.

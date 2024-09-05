@@ -7,6 +7,7 @@
 @use "sass:map" as map;
 
 /// Mapped Semantic Props breakpoints to lengths.
+/// Custom property uses --[prop]-breakpoint syntax.
 /// @type map
 $breakpoints: () !default;
 $breakpoints: map.merge((
@@ -19,6 +20,12 @@ $breakpoints: map.merge((
 	xxl: 1440px,
 	xxxl: 1600px
 ), $breakpoints);
+
+:root {
+	@each $prop, $length in $breakpoints {
+		#{--#{prop}-breakpoint}: $length;
+	}
+}
 
 /// Gets Semantic Props breakpoint length value.
 /// @see $breakpoints
