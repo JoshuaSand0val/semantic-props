@@ -8,7 +8,8 @@
 
 /// Mapped Semantic Props breakpoints to lengths.
 /// @type map
-$breakpoints: (
+$breakpoints: () !default;
+$breakpoints: map.merge((
 	xxs: 180px,
 	xs: 240px,
 	sm: 360px,
@@ -17,7 +18,7 @@ $breakpoints: (
 	xl: 1024px,
 	xxl: 1440px,
 	xxxl: 1600px
-) !default;
+), $breakpoints);
 
 /// Gets Semantic Props breakpoint length value.
 /// @see $breakpoints
