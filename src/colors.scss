@@ -12,7 +12,8 @@
 /// Generates (0 through 10) colors (black to white).
 /// Uses color-light-dark syntax.
 /// @type map
-$colors: (
+$colors: () !default;
+$colors: map.merge((
 	theme: rgb(233, 239, 245),
 	primary: rgb(38, 169, 241),
 	secondary: rgb(118, 130, 139),
@@ -20,7 +21,7 @@ $colors: (
 	danger: rgb(202, 85, 83),
 	warning: rgb(255, 214, 90),
 	info: rgb(0, 212, 251)
-) !default;
+), $colors);
 
 :root {
 	@each $prop, $color in $colors {
