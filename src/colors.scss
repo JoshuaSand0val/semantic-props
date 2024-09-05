@@ -10,6 +10,7 @@
 /// Mapped Semantic Props colors to values.
 /// Generates (0 through 10) custom property colors (black to white).
 /// Custom property uses --[prop]-color-[light]-[dark] syntax.
+/// Uses CSS Relative Colors and light-dark function.
 /// @type map
 $colors: () !default;
 $colors: map.merge((
@@ -36,8 +37,8 @@ $colors: map.merge((
 				// Define color custom property using light-dark (alongside fallback):
 				#{$custom-property}: color.change($color, $lightness: $l * 10%);
 				#{$custom-property}: light-dark(
-					color.change($color, $lightness: $l * 10%),
-					color.change($color, $lightness: $d * 10%)
+					oklch(from var(#{--#{$prop}-color}) #{$l * 10%} c h),
+					oklch(from var(#{--#{$prop}-color}) #{$d * 10%} c h)
 				);
 			}
 		}
