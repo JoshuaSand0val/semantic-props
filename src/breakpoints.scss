@@ -21,20 +21,20 @@ $breakpoints: (
 
 /// Gets Semantic Props breakpoint length value.
 /// @see $breakpoints
-/// @parameter {string} $name Name of breakpoint.
-/// @returns {number} Value of breakpoint.
-@function breakpoint($name) {
-	@return map.get($breakpoints, $name);
+/// @parameter {string} $prop Name of breakpoint prop.
+/// @returns {number} Value of breakpoint prop.
+@function breakpoint($prop) {
+	@return map.get($breakpoints, $prop);
 }
 
 /// Nests CSS within breakpoint container query.
 /// @see $breakpoints
 /// @requires breakpoint
-/// @parameter {string} $name Name of breakpoint.
+/// @parameter {string} $prop Name of breakpoint prop.
 /// @content CSS to nest within query.
 /// @outputs CSS nested in breakpoint container query.
-@mixin breakpoint($name) {
-	@container (min-inline-size: #{breakpoint($name)}) {
+@mixin breakpoint($prop) {
+	@container (min-inline-size: #{breakpoint($prop)}) {
 		@content;
 	}
 }
