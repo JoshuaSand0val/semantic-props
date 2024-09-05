@@ -8,7 +8,7 @@
 @use "sass:map" as map;
 
 /// Mapped Semantic Props colors to values.
-/// Generates (0 through 10) custom property colors (black to white).
+/// Generates (0 through 10) custom property colors (0% to 100% lightness).
 /// Custom property uses --[prop]-color-[light]-[dark] syntax.
 /// Uses CSS Relative Colors and light-dark function.
 /// @type map
