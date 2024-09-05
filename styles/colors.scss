@@ -6,9 +6,10 @@
 
 @use "sass:color" as color;
 @use "sass:map" as map;
+@use "sass:math" as math;
 
 /// Mapped Semantic Props colors to values.
-/// Generates (0 through 10) custom property colors (0% to 100% lightness).
+/// Generates (0 through 12) custom property colors (0% to 100% lightness).
 /// Custom property uses --[prop]-color-[light]-[dark] syntax.
 /// Uses CSS Relative Colors and light-dark function.
 /// @type map
@@ -29,16 +30,20 @@ $colors: map.merge((
 		#{--#{$prop}-color}: $color;
 
 		// Create weighted light-dark color props:
-		@for $l from 0 through 10 {
-			@for $d from 0 through 10 {
+		@for $l from 0 through 12 {
+			@for $d from 0 through 12 {
+				// Calculate color light/dark lightness:
+				$light: 100% * Math.div($l, 12);
+				$dark: 100% * Math.div($d, 12);
+
 				// Create color custom property name:
 				$custom-property: --#{$prop}-color-#{$l}-#{$d};
 
 				// Define color custom property using light-dark (alongside fallback):
-				#{$custom-property}: color.change($color, $lightness: $l * 10%);
+				#{$custom-property}: color.change($color, $lightness: $light);
 				#{$custom-property}: light-dark(
-					oklch(from var(#{--#{$prop}-color}) #{$l * 10%} c h),
-					oklch(from var(#{--#{$prop}-color}) #{$d * 10%} c h)
+					oklch(from var(#{--#{$prop}-color}) #{$light} c h),
+					oklch(from var(#{--#{$prop}-color}) #{$dark} c h)
 				);
 			}
 		}
