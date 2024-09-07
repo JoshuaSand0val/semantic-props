@@ -1,5 +1,202 @@
 /* Deprecated: Deprecated custom properties to be removed in final release. */
 
+:where(:root, .--semantic) {
+	/* Breakpoint Widths: */
+	--2xs-breakpoint: 180px;
+	--xs-breakpoint: 240px;
+	--sm-breakpoint: 360px;
+	--md-breakpoint: 480px;
+	--lg-breakpoint: 768px;
+	--xl-breakpoint: 1024px;
+	--2xl-breakpoint: 1440px;
+	--3xl-breakpoint: 1600px;
+
+	/* Color Palette: */
+	--theme-color: oklch(95% 0.01 248);
+	--primary-color: oklch(70% 0.15 240);
+	--secondary-color: oklch(60% 0.02 240);
+	--success-color: oklch(70% 0.15 148);
+	--danger-color: oklch(60% 0.15 24);
+	--warning-color: oklch(90% 0.15 86);
+	--info-color: oklch(80% 0.15 216);
+
+	/* Background Color Lightness: */
+	--1st-bg-color-lightness: 1.00;
+	--2nd-bg-color-lightness: 0.95;
+	--3rd-bg-color-lightness: 0.90;
+
+	&:where(.--dark-color) {
+		--1st-bg-color-lightness: 0.25;
+		--2nd-bg-color-lightness: 0.20;
+		--3rd-bg-color-lightness: 0.15;
+	}
+
+	/* Text Color Lightness: */
+	--1st-color-lightness: 0.55;
+	--2nd-color-lightness: 0.45;
+	--3rd-color-lightness: 0.35;
+
+	&:where(.--dark-color) {
+		--1st-color-lightness: 0.85;
+		--2nd-color-lightness: 0.75;
+		--3rd-color-lightness: 0.65;
+	}
+
+	/* Text Color: */
+	--text-color: var(--theme-color-900);
+
+	&:where(.--dark-color) {
+		--text-color: var(--theme-color-100);
+	}
+
+	/* Theme Colors: */
+	--theme-color-50: oklch(from var(--theme-color) 95% c h);
+	--theme-color-100: oklch(from var(--theme-color) 90% c h);
+	--theme-color-200: oklch(from var(--theme-color) 80% c h);
+	--theme-color-300: oklch(from var(--theme-color) 70% c h);
+	--theme-color-400: oklch(from var(--theme-color) 60% c h);
+	--theme-color-500: oklch(from var(--theme-color) 50% c h);
+	--theme-color-600: oklch(from var(--theme-color) 40% c h);
+	--theme-color-700: oklch(from var(--theme-color) 30% c h);
+	--theme-color-800: oklch(from var(--theme-color) 20% c h);
+	--theme-color-900: oklch(from var(--theme-color) 10% c h);
+	--theme-color-950: oklch(from var(--theme-color) 5% c h);
+
+	--1st-theme-bg-color: oklch(from var(--theme-color) var(--1st-bg-color-lightness) c h);
+	--2nd-theme-bg-color: oklch(from var(--theme-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-theme-bg-color: oklch(from var(--theme-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-theme-color: oklch(from var(--theme-color) var(--1st-color-lightness) c h);
+	--2nd-theme-color: oklch(from var(--theme-color) var(--2nd-color-lightness) c h);
+	--3rd-theme-color: oklch(from var(--theme-color) var(--3rd-color-lightness) c h);
+
+	/* Primary Colors: */
+	--primary-color-50: oklch(from var(--primary-color) 95% c h);
+	--primary-color-100: oklch(from var(--primary-color) 90% c h);
+	--primary-color-200: oklch(from var(--primary-color) 80% c h);
+	--primary-color-300: oklch(from var(--primary-color) 70% c h);
+	--primary-color-400: oklch(from var(--primary-color) 60% c h);
+	--primary-color-500: oklch(from var(--primary-color) 50% c h);
+	--primary-color-600: oklch(from var(--primary-color) 40% c h);
+	--primary-color-700: oklch(from var(--primary-color) 30% c h);
+	--primary-color-800: oklch(from var(--primary-color) 20% c h);
+	--primary-color-900: oklch(from var(--primary-color) 10% c h);
+	--primary-color-950: oklch(from var(--primary-color) 5% c h);
+
+	--1st-primary-bg-color: oklch(from var(--primary-color) var(--1st-bg-color-lightness) c h);
+	--2nd-primary-bg-color: oklch(from var(--primary-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-primary-bg-color: oklch(from var(--primary-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-primary-color: oklch(from var(--primary-color) var(--1st-color-lightness) c h);
+	--2nd-primary-color: oklch(from var(--primary-color) var(--2nd-color-lightness) c h);
+	--3rd-primary-color: oklch(from var(--primary-color) var(--3rd-color-lightness) c h);
+
+	/* Secondary Colors: */
+	--secondary-color-50: oklch(from var(--secondary-color) 95% c h);
+	--secondary-color-100: oklch(from var(--secondary-color) 90% c h);
+	--secondary-color-200: oklch(from var(--secondary-color) 80% c h);
+	--secondary-color-300: oklch(from var(--secondary-color) 70% c h);
+	--secondary-color-400: oklch(from var(--secondary-color) 60% c h);
+	--secondary-color-500: oklch(from var(--secondary-color) 50% c h);
+	--secondary-color-600: oklch(from var(--secondary-color) 40% c h);
+	--secondary-color-700: oklch(from var(--secondary-color) 30% c h);
+	--secondary-color-800: oklch(from var(--secondary-color) 20% c h);
+	--secondary-color-900: oklch(from var(--secondary-color) 10% c h);
+	--secondary-color-950: oklch(from var(--secondary-color) 5% c h);
+
+	--1st-secondary-bg-color: oklch(from var(--secondary-color) var(--1st-bg-color-lightness) c h);
+	--2nd-secondary-bg-color: oklch(from var(--secondary-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-secondary-bg-color: oklch(from var(--secondary-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-secondary-color: oklch(from var(--secondary-color) var(--1st-color-lightness) c h);
+	--2nd-secondary-color: oklch(from var(--secondary-color) var(--2nd-color-lightness) c h);
+	--3rd-secondary-color: oklch(from var(--secondary-color) var(--3rd-color-lightness) c h);
+
+	/* Success Colors: */
+	--success-color-50: oklch(from var(--success-color) 95% c h);
+	--success-color-100: oklch(from var(--success-color) 90% c h);
+	--success-color-200: oklch(from var(--success-color) 80% c h);
+	--success-color-300: oklch(from var(--success-color) 70% c h);
+	--success-color-400: oklch(from var(--success-color) 60% c h);
+	--success-color-500: oklch(from var(--success-color) 50% c h);
+	--success-color-600: oklch(from var(--success-color) 40% c h);
+	--success-color-700: oklch(from var(--success-color) 30% c h);
+	--success-color-800: oklch(from var(--success-color) 20% c h);
+	--success-color-900: oklch(from var(--success-color) 10% c h);
+	--success-color-950: oklch(from var(--success-color) 5% c h);
+
+	--1st-success-bg-color: oklch(from var(--success-color) var(--1st-bg-color-lightness) c h);
+	--2nd-success-bg-color: oklch(from var(--success-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-success-bg-color: oklch(from var(--success-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-success-color: oklch(from var(--success-color) var(--1st-color-lightness) c h);
+	--2nd-success-color: oklch(from var(--success-color) var(--2nd-color-lightness) c h);
+	--3rd-success-color: oklch(from var(--success-color) var(--3rd-color-lightness) c h);
+
+	/* Danger Colors: */
+	--danger-color-50: oklch(from var(--danger-color) 95% c h);
+	--danger-color-100: oklch(from var(--danger-color) 90% c h);
+	--danger-color-200: oklch(from var(--danger-color) 80% c h);
+	--danger-color-300: oklch(from var(--danger-color) 70% c h);
+	--danger-color-400: oklch(from var(--danger-color) 60% c h);
+	--danger-color-500: oklch(from var(--danger-color) 50% c h);
+	--danger-color-600: oklch(from var(--danger-color) 40% c h);
+	--danger-color-700: oklch(from var(--danger-color) 30% c h);
+	--danger-color-800: oklch(from var(--danger-color) 20% c h);
+	--danger-color-900: oklch(from var(--danger-color) 10% c h);
+	--danger-color-950: oklch(from var(--danger-color) 5% c h);
+
+	--1st-danger-bg-color: oklch(from var(--danger-color) var(--1st-bg-color-lightness) c h);
+	--2nd-danger-bg-color: oklch(from var(--danger-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-danger-bg-color: oklch(from var(--danger-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-danger-color: oklch(from var(--danger-color) var(--1st-color-lightness) c h);
+	--2nd-danger-color: oklch(from var(--danger-color) var(--2nd-color-lightness) c h);
+	--3rd-danger-color: oklch(from var(--danger-color) var(--3rd-color-lightness) c h);
+
+	/* Warning Colors: */
+	--warning-color-50: oklch(from var(--warning-color) 95% c h);
+	--warning-color-100: oklch(from var(--warning-color) 90% c h);
+	--warning-color-200: oklch(from var(--warning-color) 80% c h);
+	--warning-color-300: oklch(from var(--warning-color) 70% c h);
+	--warning-color-400: oklch(from var(--warning-color) 60% c h);
+	--warning-color-500: oklch(from var(--warning-color) 50% c h);
+	--warning-color-600: oklch(from var(--warning-color) 40% c h);
+	--warning-color-700: oklch(from var(--warning-color) 30% c h);
+	--warning-color-800: oklch(from var(--warning-color) 20% c h);
+	--warning-color-900: oklch(from var(--warning-color) 10% c h);
+	--warning-color-950: oklch(from var(--warning-color) 5% c h);
+
+	--1st-warning-bg-color: oklch(from var(--warning-color) var(--1st-bg-color-lightness) c h);
+	--2nd-warning-bg-color: oklch(from var(--warning-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-warning-bg-color: oklch(from var(--warning-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-warning-color: oklch(from var(--warning-color) var(--1st-color-lightness) c h);
+	--2nd-warning-color: oklch(from var(--warning-color) var(--2nd-color-lightness) c h);
+	--3rd-warning-color: oklch(from var(--warning-color) var(--3rd-color-lightness) c h);
+
+	/* Info Colors: */
+	--info-color-50: oklch(from var(--info-color) 95% c h);
+	--info-color-100: oklch(from var(--info-color) 90% c h);
+	--info-color-200: oklch(from var(--info-color) 80% c h);
+	--info-color-300: oklch(from var(--info-color) 70% c h);
+	--info-color-400: oklch(from var(--info-color) 60% c h);
+	--info-color-500: oklch(from var(--info-color) 50% c h);
+	--info-color-600: oklch(from var(--info-color) 40% c h);
+	--info-color-700: oklch(from var(--info-color) 30% c h);
+	--info-color-800: oklch(from var(--info-color) 20% c h);
+	--info-color-900: oklch(from var(--info-color) 10% c h);
+	--info-color-950: oklch(from var(--info-color) 5% c h);
+
+	--1st-info-bg-color: oklch(from var(--info-color) var(--1st-bg-color-lightness) c h);
+	--2nd-info-bg-color: oklch(from var(--info-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-info-bg-color: oklch(from var(--info-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-info-color: oklch(from var(--info-color) var(--1st-color-lightness) c h);
+	--2nd-info-color: oklch(from var(--info-color) var(--2nd-color-lightness) c h);
+	--3rd-info-color: oklch(from var(--info-color) var(--3rd-color-lightness) c h);
+}
+
 :root:where(:not(.--semantic)) {
 	/* Absolute Font Sizes: */
 	--2xs-font: clamp(0.475rem, 0.7312rem + -0.2562cqi, 0.7023rem);

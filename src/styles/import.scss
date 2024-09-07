@@ -2,12 +2,7 @@
 @forward "breakpoints.scss";
 @forward "colors.scss";
 
-// Deprecated:
-@import "breakpoint.css";
-@import "color.css";
 @import "deprecated.css";
-
-// Supported:
 @import "font.css";
 @import "layer.css";
 @import "safe.css";
