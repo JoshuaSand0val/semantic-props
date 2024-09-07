@@ -1,8 +1,8 @@
-export { l as default };
+export { a as default };
 /**
  * Initializes and reevaluates Semantic Props element styles.
  * @type {Function}
  * @preserve
  */
-declare function l(): void;
+declare function a(): void;
 //# sourceMappingURL=import.d.ts.map

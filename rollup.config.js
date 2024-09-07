@@ -17,7 +17,11 @@ export default {
 		postcss({
 			plugins: [
 				postcssImport,
-				postcssPresetEnv,
+				postcssPresetEnv({
+					features: {
+						"light-dark-function": false
+					}
+				}),
 				cssnano({
 					preset: "default"
 				})

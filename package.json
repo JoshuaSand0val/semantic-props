@@ -2,7 +2,7 @@
 	"private": true,
 	"name": "semantic-props",
 	"version": "0.3.0",
-	"description": "A collection of semantic CSS custom properties and classes.",
+	"description": "A collection of semantic CSS custom properties.",
 	"keywords": [
 		"Semantic Props",
 		"CSS custom properties",
@@ -15,14 +15,13 @@
 	"files": [
 		"dist",
 		"src",
-		"styles",
 		"CHANGELOG.md",
 		"LICENSE",
 		"README.md"
 	],
 	"main": "dist/import.js",
 	"types": "dist/import.d.ts",
-	"style": "styles/import.scss",
+	"style": "src/styles/import.scss",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
