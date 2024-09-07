@@ -26,25 +26,29 @@ $colors: map.merge((
 
 :root {
 	@each $prop, $color in $colors {
-		// Create reference color prop:
-		#{--#{$prop}-color}: $color;
+		// Define color Semantic Props name:
+		$prop: --#{$prop}-color;
 
-		// Create weighted light-dark color props:
+		// Define reference color prop:
+		#{$prop}: $color;
+
+		// Define weighted color props:
 		@for $l from 0 through 12 {
+			// Calculate color lightness channel:
+			$light: 100% * math.div($l, 12);
+
+			// Define weighted relative color prop alongside fallback:
+			#{$prop}-#{$l}: color.change($color, $lightness: $light);
+			#{$prop}-#{$l}: oklch(from var($prop) #{$light} c h);
+
+			// Define light-dark color prop alongside fallback:
 			@for $d from 0 through 12 {
-				// Calculate color light/dark lightness:
-				$light: 100% * math.div($l, 12);
-				$dark: 100% * math.div($d, 12);
-
-				// Create color custom property name:
-				$custom-property: --#{$prop}-color-#{$l}-#{$d};
-
-				// Define color custom property using light-dark (alongside fallback):
-				#{$custom-property}: color.change($color, $lightness: $light);
-				#{$custom-property}: light-dark(
-					oklch(from var(#{--#{$prop}-color}) #{$light} c h),
-					oklch(from var(#{--#{$prop}-color}) #{$dark} c h)
-				);
+				#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
+				@if ($l != $d) {
+					#{$prop}-#{$l}-#{$d}: light-dark(
+						var(#{$prop}-#{$l}), var(#{$prop}-#{$d})
+					);
+				}
 			}
 		}
 	}
