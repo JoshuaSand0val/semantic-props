@@ -1,59 +1,34 @@
+// Import: Activates Semantic Props JavaScript imports.
 import breakpoint from "./breakpoint.js";
 import color from "./color.js";
 
 /**
- * Initializes and reevaluates Semantic Props element styles.
+ * Activates Semantic Props elements, adding custom property classes.
  * @type {Function}
  * @preserve
  */
 export default function semantic() {
 	/**
-	 * Toggles Semantic Props classes to element.
-	 * @param {Element} element Element to toggle classes on.
+	 * Adds classes to Semantic Props elements in container.
+	 * @param {Element} container Container element to add classes to itself and children.
 	 */
-	const initialize = element => {
-		breakpoint.initialize(element);
-		color.initialize(element);
+	const activate = container => {
+		for (const element of [container, ...container.getElementsByTagName("*")]) {
+			if (element.matches(".--semantic")) {
+				breakpoint(element);
+				color(element);
+			}
+		}
 	};
 
-	/**
-	 * Removes Semantic Props classes on element.
-	 * @param {Element} element Element to remove classes off of.
-	 */
-	const deactivate = element => {
-		breakpoint.deactivate(element);
-		color.deactivate(element);
-	};
+	// Activate existing Semantic Props elements:
+	activate(document.documentElement);
 
-	// Initialize existing Semantic Props elements:
-	for (const element of document.getElementsByClassName("--semantic")) {
-		initialize(element);
-	}
-
-	/** Initialize/Deactivate mutated Semantic Props elements. */
+	/** Activates new Semantic Props elements. */
 	const observer = new MutationObserver(records => {
-		for (const { type, target, oldValue } of records) {
-			/** If target is currently a Semantic Props element. @type {boolean} */
-			const currSemantic = target.classList.contains("--semantic");
-
-			/** If target previously was a Semantic Props element. @type {boolean} */
-			const prevSemantic = oldValue?.includes("--semantic");
-
-			// Initialize if a current and new Semantic Props element:
-			if (currSemantic && !prevSemantic) {
-				initialize(target);
-			}
-
-			// Deactivate if no longer Semantic Props element:
-			if (!currSemantic && prevSemantic) {
-				deactivate(target);
-			}
-
-			// Initialize added child Semantic Props elements of target:
-			if (type === "childList") {
-				for (const element of target.getElementsByClassName("--semantic")) {
-					initialize(element);
-				}
+		for (const { target, oldValue } of records) {
+			if (!oldValue || !oldValue.includes("--semantic")) {
+				activate(target);
 			}
 		}
 	});
@@ -67,5 +42,7 @@ export default function semantic() {
 	});
 }
 
-// Initialize Semantic Props elements:
-if (typeof window !== "undefined") semantic();
+// Attempt to initialize Semantic Props on DOM content load:
+if (typeof window !== "undefined") {
+	addEventListener("DOMContentLoaded", semantic);
+}
