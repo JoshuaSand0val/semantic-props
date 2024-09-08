@@ -9,8 +9,7 @@
 /// Mapped Semantic Props breakpoints to lengths.
 /// Custom property uses --[prop]-breakpoint syntax.
 /// @type map
-$breakpoints: () !default;
-$breakpoints: map.merge((
+$breakpoints: (
 	"2xs": 180px,
 	"xs": 240px,
 	"sm": 360px,
@@ -19,13 +18,7 @@ $breakpoints: map.merge((
 	"xl": 1024px,
 	"2xl": 1440px,
 	"3xl": 1600px
-), $breakpoints);
-
-:where(.--semantic) {
-	@each $prop, $length in $breakpoints {
-		#{--#{prop}-breakpoint}: $length;
-	}
-}
+);
 
 /// Gets Semantic Props breakpoint length value.
 /// @see $breakpoints
@@ -42,7 +35,7 @@ $breakpoints: map.merge((
 /// @content CSS to nest within query.
 /// @outputs CSS nested in breakpoint media query.
 @mixin breakpoint($prop) {
-	&:where(.--#{$prop}, .--#{$prop}-breakpoint) {
+	&:where(.\@#{$prop}, .\@breakpoints, .--#{$prop}-breakpoint) {
 		@media (min-width: breakpoint($prop)) {
 			@content;
 		}

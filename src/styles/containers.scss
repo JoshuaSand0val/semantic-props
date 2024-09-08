@@ -1,0 +1,9 @@
+/* Semantic Props used for container inline-size. */
+
+@use "breakpoints.scss" as *;
+
+:where(.--semantic) {
+	@each $prop, $length in $breakpoints {
+		#{--#{prop}-container}: $length;
+	}
+}
