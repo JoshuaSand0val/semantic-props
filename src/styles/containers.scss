@@ -4,6 +4,6 @@
 
 :where(.--semantic) {
 	@each $prop, $length in $breakpoints {
-		#{--#{prop}-container}: $length;
+		#{--#{$prop}-container}: $length;
 	}
 }
