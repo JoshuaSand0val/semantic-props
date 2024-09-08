@@ -24,7 +24,7 @@ $colors: map.merge((
 	info: rgb(0, 212, 251)
 ), $colors);
 
-:root {
+:where(.--semantic) {
 	@each $prop, $color in $colors {
 		// Define color Semantic Props name:
 		$prop: --#{$prop}-color;

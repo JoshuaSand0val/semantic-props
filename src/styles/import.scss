@@ -1,10 +1,9 @@
 // Import: All Semantic Props forwarded or imported.
 @forward "breakpoints.scss";
 @forward "colors.scss";
-
-@import "deprecated.css";
-@import "font.css";
-@import "layer.css";
-@import "safe.css";
-@import "size.css";
-@import "timing.css";
+@forward "deprecated.css";
+@forward "font.scss";
+@forward "layer.css";
+@forward "safe.css";
+@forward "size.scss";
+@forward "timing.css";

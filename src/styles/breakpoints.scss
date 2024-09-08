@@ -21,7 +21,7 @@ $breakpoints: map.merge((
 	"3xl": 1600px
 ), $breakpoints);
 
-:root {
+:where(.--semantic) {
 	@each $prop, $length in $breakpoints {
 		#{--#{prop}-breakpoint}: $length;
 	}
@@ -35,14 +35,16 @@ $breakpoints: map.merge((
 	@return map.get($breakpoints, $prop);
 }
 
-/// Nests CSS within breakpoint container query.
+/// Nests CSS within breakpoint media query.
 /// @see $breakpoints
 /// @requires breakpoint
 /// @parameter {string} $prop Name of breakpoint prop.
 /// @content CSS to nest within query.
-/// @outputs CSS nested in breakpoint container query.
+/// @outputs CSS nested in breakpoint media query.
 @mixin breakpoint($prop) {
-	@container (min-inline-size: #{breakpoint($prop)}) {
-		@content;
+	&:where(.--#{$prop}, .--#{$prop}-breakpoint) {
+		@media (min-width: breakpoint($prop)) {
+			@content;
+		}
 	}
 }

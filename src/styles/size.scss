@@ -1,5 +1,7 @@
 /* Size: Responsive custom property sizes for padding, margin, ect. */
 
+@use "breakpoints.scss" as *;
+
 :where(:root, .--semantic) {
 	/* Size Scaling Ratio: */
 	--size-scale-ratio: 1.618;
@@ -18,15 +20,15 @@
 	/* Responsive Size: */
 	--responsive-size: var(--sm-size);
 
-	&:where(.--sm-breakpoint) {
+	@include breakpoint(sm) {
 		--responsive-size: var(--md-size);
 	}
 
-	&:where(.--lg-breakpoint) {
+	@include breakpoint(lg) {
 		--responsive-size: var(--lg-size);
 	}
 
-	&:where(.--xl-breakpoint) {
+	@include breakpoint(xl) {
 		--responsive-size: var(--xl-size);
 	}
 }
