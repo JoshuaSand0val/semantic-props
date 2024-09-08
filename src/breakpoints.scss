@@ -7,7 +7,6 @@
 @use "sass:map" as map;
 
 /// Mapped Semantic Props breakpoints to lengths.
-/// Custom property uses --[prop]-breakpoint syntax.
 /// @type map
 $breakpoints: (
 	"2xs": 180px,
