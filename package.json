@@ -21,7 +21,7 @@
 	],
 	"main": "dist/import.js",
 	"types": "dist/import.d.ts",
-	"style": "src/styles/import.scss",
+	"style": "dist/import.css",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
@@ -38,10 +38,8 @@
 		"postcss-preset-env": "^9.6.0",
 		"rollup": "^4.18.1",
 		"rollup-plugin-postcss": "^4.0.2",
+		"sass": "^1.78.0",
 		"typescript": "^5.5.3",
 		"watch": "^1.0.2"
-	},
-	"dependencies": {
-		"sass": "^1.78.0"
 	}
 }
