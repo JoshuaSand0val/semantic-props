@@ -4,6 +4,7 @@
 /// @since 0.3.0
 ////
 
+@use "sass:list" as list;
 @use "sass:map" as map;
 
 /// Mapped Semantic Props breakpoints to lengths.
@@ -34,7 +35,12 @@ $breakpoints: (
 /// @content CSS to nest within query.
 /// @outputs CSS nested in breakpoint media query.
 @mixin breakpoint($prop) {
-	&:where(.\@#{$prop}, .\@breakpoints, .--#{$prop}-breakpoint) {
+	$all: ();
+	@each $key in map.keys($breakpoints) {
+		$all: list.append($all, ".--#{$key}", comma);
+	}
+
+	&:where(.--#{$prop}, :not(#{$all}), .--#{$prop}-breakpoint) {
 		@media (min-width: breakpoint($prop)) {
 			@content;
 		}
