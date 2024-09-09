@@ -14,7 +14,6 @@
 	"author": "Joshua Elijah Sandoval",
 	"files": [
 		"dist",
-		"src",
 		"CHANGELOG.md",
 		"LICENSE",
 		"README.md"
