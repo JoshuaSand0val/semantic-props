@@ -1,5 +1,6 @@
 /* Size: Custom property sizes for padding, margin, ect. */
 
+@use "sass:map" as map;
 @use "breakpoints.scss" as *;
 
 :where(:root, .--semantic) {
@@ -18,17 +19,11 @@
 	--3xl-size: calc(var(--2xl-size) * var(--size-scale-ratio));
 
 	/* Responsive Size: */
-	--responsive-size: var(--sm-size);
+	--responsive-size: var(--3xs-size);
 
-	@include breakpoint(sm) {
-		--responsive-size: var(--md-size);
-	}
-
-	@include breakpoint(lg) {
-		--responsive-size: var(--lg-size);
-	}
-
-	@include breakpoint(xl) {
-		--responsive-size: var(--xl-size);
+	@each $prop in map.keys($breakpoints) {
+		@include breakpoint($prop) {
+			--responsive-size: var(--#{$prop}-size);
+		}
 	}
 }
