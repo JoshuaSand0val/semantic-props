@@ -1,9 +1,19 @@
 /* Semantic Props used for container inline-size. */
 
+@use "sass:map" as map;
 @use "breakpoints.scss" as *;
 
 :where(.--semantic) {
+	/** Base Containers: */
 	@each $prop, $length in $breakpoints {
 		#{--#{$prop}-container}: $length;
+	}
+
+	/** Responsive Container: */
+	--responsive-container: 100%;
+	@each $prop in map.keys($breakpoints) {
+		@include breakpoint($prop) {
+			#{--responsive-container}: var(#{--#{$prop}-container});
+		}
 	}
 }
