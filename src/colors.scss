@@ -52,11 +52,3 @@ $colors: (
 		}
 	}
 }
-
-/// Gets Semantic Props mapped color value.
-/// @see $colors
-/// @parameter {string} $prop Name of color prop.
-/// @returns {color} Value of color prop.
-@function color($prop) {
-	@return map.get($colors, $prop);
-}

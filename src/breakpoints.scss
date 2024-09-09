@@ -40,7 +40,7 @@ $breakpoints: (
 		$all: list.append($all, ".--#{$key}", comma);
 	}
 
-	&:where(.--#{$prop}, :not(#{$all}), .--#{$prop}-breakpoint) {
+	&:where(.--#{$prop}, :not(#{$all})) {
 		@media (min-width: breakpoint($prop)) {
 			@content;
 		}

@@ -2,7 +2,7 @@
 
 @use "breakpoints.scss" as *;
 
-:where(:root, .--semantic) {
+:where(.--semantic) {
 	/* Font Families: */
 	--font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
 	--monospace-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;

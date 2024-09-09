@@ -3,7 +3,7 @@
 @use "sass:map" as map;
 @use "breakpoints.scss" as *;
 
-:where(:root, .--semantic) {
+:where(.--semantic) {
 	/* Size Scaling Ratio: */
 	--size-scale-ratio: 1.618;
 

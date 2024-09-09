@@ -1,6 +1,6 @@
 /* Timing: Custom properties for timing animations. */
 
-:where(:root, .--semantic) {
+:where(.--semantic) {
 	/* Timing Lengths: */
 	--swift-timing: 75ms;
 	--fast-timing: 150ms;
