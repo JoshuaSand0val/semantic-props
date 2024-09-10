@@ -9,7 +9,7 @@ import "./colors.scss";
 import "./containers.scss";
 import "./font.scss";
 import "./layer.css";
-import "./pointer.ts";
+import "./pointer.js";
 import "./safe.css";
 import "./size.scss";
 import "./timing.css";

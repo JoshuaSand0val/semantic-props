@@ -1,16 +1,11 @@
-(() => {
-	// Return if not in a client environment:
-	if (typeof window === "undefined") return;
+import stylesheet from "./stylesheet.js";
 
-	// Create stylesheet to use for pointer-event:
-	const stylesheet = document.createElement("style");
-	document.head.prepend(stylesheet);
-
-	// Add pointermove event to update Semantic Props:
+// Add pointermove event to update Semantic Props:
+stylesheet((sheet: HTMLStyleElement) => {
 	document.addEventListener("pointermove", event => {
-		stylesheet.textContent = `:where(.--semantic) {
+		sheet.textContent = `:where(.--semantic) {
 			--pointer-x: ${event.clientX}px;
 			--pointer-y: ${event.clientY}px;
-		}`
+		}`;
 	});
-})();
+});
