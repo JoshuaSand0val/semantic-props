@@ -19,7 +19,6 @@
 		"README.md"
 	],
 	"main": "dist/import.js",
-	"types": "dist/import.d.ts",
 	"style": "dist/import.css",
 	"repository": {
 		"type": "git",
@@ -27,18 +26,21 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "rollup -c && tsc",
-		"watch:build": "watch 'npm run build' ./src/"
+		"build": "rollup -c",
+		"watch:build": "rollup -c -w"
 	},
 	"devDependencies": {
+		"@rollup/plugin-commonjs": "^26.0.1",
+		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^11.1.6",
 		"cssnano": "^7.0.4",
 		"postcss-import": "^16.1.0",
 		"postcss-preset-env": "^9.6.0",
 		"rollup": "^4.18.1",
 		"rollup-plugin-postcss": "^4.0.2",
 		"sass": "^1.78.0",
-		"typescript": "^5.5.3",
-		"watch": "^1.0.2"
+		"tslib": "^2.7.0",
+		"typescript": "^5.6.2"
 	}
 }

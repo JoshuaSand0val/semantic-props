@@ -5,15 +5,22 @@ import postcssImport from "postcss-import";
 import postcssPresetEnv from "postcss-preset-env";
 import cssnano from "cssnano";
 
+import commonjs from "@rollup/plugin-commonjs";
+import nodeResolve from "@rollup/plugin-node-resolve";
+import typescript from "@rollup/plugin-typescript";
+
 import terser from "@rollup/plugin-terser";
 
 export default {
-	input: "src/import.js",
+	input: "src/import.ts",
 	output: {
 		file: "dist/import.js",
 		format: "es"
 	},
 	plugins: [
+		nodeResolve(),
+		commonjs(),
+		typescript(),
 		postcss({
 			plugins: [
 				postcssImport,
