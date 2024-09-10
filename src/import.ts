@@ -11,5 +11,6 @@ import "./font.scss";
 import "./layer.css";
 import "./pointer.js";
 import "./safe.css";
+import "./scroll.js";
 import "./size.scss";
 import "./timing.css";

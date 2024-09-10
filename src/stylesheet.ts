@@ -1,5 +1,5 @@
 /** Runs callback passing in stylesheet for Semantic Props. */
-export default (props: string[], callback: Function | undefined): boolean => {
+export default (props: string[], callback: Function | void): boolean => {
 	// Return false if not in a client environment:
 	if (typeof window === "undefined") return false;
 
