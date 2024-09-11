@@ -5,7 +5,7 @@ export { default } from "./deprecated/import.js";
 
 // Supported:
 import "./breakpoints.scss";
-import "./colors.scss";
+import "./colors.js";
 import "./containers.scss";
 import "./font.scss";
 import "./layer.css";

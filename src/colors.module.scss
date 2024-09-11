@@ -1,17 +1,13 @@
 ////
-/// Semantic Props used for color.
-/// @group colors
-/// @since 0.3.0
+/// Exported Semantic Props used for color.
 ////
 
 @use "sass:color" as color;
-@use "sass:map" as map;
 @use "sass:math" as math;
 
 /// Mapped Semantic Props colors to values.
-/// Generates (0 through 12) custom property colors (0% to 100% lightness).
-/// Custom property uses --[prop]-color-[light]-[dark] syntax.
-/// Uses CSS Relative Colors and light-dark function.
+/// Exports (0 through 12) property colors (0% to 100% lightness).
+/// Property uses --[prop]-color-[lightness] syntax.
 /// @type map
 $colors: (
 	theme: rgb(233, 239, 245),
@@ -23,7 +19,7 @@ $colors: (
 	info: rgb(0, 212, 251)
 );
 
-:where(.--semantic) {
+:export {
 	@each $prop, $color in $colors {
 		// Define color Semantic Props name:
 		$prop: --#{$prop}-color;
@@ -36,19 +32,8 @@ $colors: (
 			// Calculate color lightness channel:
 			$light: 100% * math.div($l, 12);
 
-			// Define weighted relative color prop alongside fallback:
+			// Define weighted color prop fallback:
 			#{$prop}-#{$l}: color.change($color, $lightness: $light);
-			#{$prop}-#{$l}: oklch(from var($prop) #{$light} c h);
-
-			// Define light-dark color prop alongside fallback:
-			@for $d from 0 through 12 {
-				#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
-				@if ($l != $d) {
-					#{$prop}-#{$l}-#{$d}: light-dark(
-						var(#{$prop}-#{$l}), var(#{$prop}-#{$d})
-					);
-				}
-			}
 		}
 	}
 }
