@@ -1,11 +1,11 @@
 import stylesheet from "./stylesheet.js";
 
-// Add pointermove event to update Semantic Props:
-stylesheet(["--pointer-x", "--pointer-y"], (sheet: HTMLStyleElement) => {
-	document.addEventListener("pointermove", event => {
-		sheet.textContent = `:where(.--semantic) {
-			--pointer-x: ${event.clientX}px;
-			--pointer-y: ${event.clientY}px;
-		}`;
-	});
+// Use pointermove events to update Semantic Props:
+stylesheet({
+	"--pointer-x"(update: Function) {
+		addEventListener("pointermove", e => update(`${e.clientX}px`));
+	},
+	"--pointer-y"(update: Function) {
+		addEventListener("pointermove", e => update(`${e.clientY}px`));
+	}
 });

@@ -1,7 +1,7 @@
 import stylesheet from "./stylesheet.js";
 
 // Add scroll event that activates Semantic Props on elements:
-if (stylesheet(["--scroll-x-percentage", "--scroll-y-percentage"])) {
+if (stylesheet({ "--scroll-x-percentage": "0", "--scroll-y-percentage": "0" })) {
 	document.addEventListener("scroll", () => {
 		// Get all Semantic Props elements:
 		const elements: NodeListOf<HTMLElement> = document.querySelectorAll(".--semantic");

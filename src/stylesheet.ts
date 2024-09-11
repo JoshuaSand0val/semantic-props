@@ -1,26 +1,55 @@
-/** Runs callback passing in stylesheet for Semantic Props. */
-export default (props: string[], callback: Function | void): boolean => {
-	// Return false if not in a client environment:
-	if (typeof window === "undefined") return false;
+/**
+ * (Client) Defines given Semantic Props if found inside document stylesheets.
+ * @returns (Client) If Semantic Props are found inside document stylesheets.
+ */
+export default (() => {
+	// Return undefined function if not in a client environment:
+	if (typeof window === "undefined") return () => undefined;
 
-	/** CSS text of all stylesheets in document without whitespace: */
+	/** Style element for Semantic Props. */
+	const style: HTMLStyleElement = document.createElement("style");
+	document.head.prepend(style);
+
+	/** Stylesheet for Semantic Props. */
+	const stylesheet: CSSStyleSheet = style.sheet!;
+
+	/** Semantic Props CSS style rule. */
+	const rule = stylesheet.cssRules[
+		stylesheet.insertRule(":where(.--semantic) {}")
+	] as CSSStyleRule;
+
+	/** CSS text of all stylesheets in document (without whitespace). */
 	const cssText: string = [...document.styleSheets].map(({ cssRules }) => (
 		[...cssRules].map(({ cssText }) => cssText))
 	).toString().replace(/\s/g, "");
 
-	// Return false if Semantic Props are not found in stylesheets:
-	if (props.every(prop => !cssText.includes(`var(${prop}`))) return false;
+	// Return stylesheet function:
+	return (props: { [key: string]: string | ((update: Function) => void) }): boolean => {
+		/** All passed Semantic Props found in document stylesheets. */
+		const cssTextProps: string[] = Object.keys(props).filter(prop => {
+			return cssText.includes(`var(${prop})`);
+		});
 
-	// Only run callback if provided:
-	if (typeof callback !== "undefined") {
-		// Create stylesheet to use for Semantic Props:
-		const stylesheet = document.createElement("style");
-		document.head.prepend(stylesheet);
+		// Return false if no passed Semantic Props were found:
+		if (cssTextProps.length === 0) return false;
 
-		// Run callback with stylesheet:
-		callback(stylesheet);
-	}
+		// Define styles for found Semantic Props:
+		for (const prop of cssTextProps) {
+			/** Value of Semantic Props prop. */
+			const value = props[prop];
 
-	// Return true that stylesheet was created:
-	return true;
-};
+			// Insert CSS rule for static Semantic Props:
+			if (typeof value === "string") {
+				rule.style.setProperty(prop, value);
+			}
+
+			// Update CSS rule for live Semantic Props:
+			if (typeof value === "function") {
+				value((newValue: string) => rule.style.setProperty(prop, newValue));
+			}
+		}
+
+		// Return true that Semantic Props were found:
+		return true;
+	};
+})();
