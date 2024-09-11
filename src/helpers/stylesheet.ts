@@ -1,7 +1,4 @@
-/**
- * Defines input Semantic Props in document.styleSheets.
- * @returns If Semantic Props are found in document.styleSheets.
- */
+/** Defines input Semantic Props into stylesheet. */
 export default (() => {
 	// Return undefined function if not in a client environment:
 	if (typeof window === "undefined") return () => undefined;
@@ -18,23 +15,10 @@ export default (() => {
 		stylesheet.insertRule(":where(.--semantic) {}")
 	] as CSSStyleRule;
 
-	/** CSS text of all stylesheets in document (without whitespace). */
-	const cssText: string = [...document.styleSheets].map(({ cssRules }) => (
-		[...cssRules].map(({ cssText }) => cssText))
-	).toString().replace(/\s/g, "");
-
 	// Return stylesheet function:
-	return (props: { [key: string]: string | ((update: Function) => void) }): boolean => {
-		/** All passed Semantic Props found in document stylesheets. */
-		const cssTextProps: string[] = Object.keys(props).filter(prop => {
-			return cssText.includes(`var(${prop})`);
-		});
-
-		// Return false if no passed Semantic Props were found:
-		if (cssTextProps.length === 0) return false;
-
-		// Define styles for found Semantic Props:
-		for (const prop of cssTextProps) {
+	return (props: { [key: string]: string | ((update: Function) => void) }) => {
+		// Define styles for Semantic Props:
+		for (const prop of Object.keys(props)) {
 			/** Value of Semantic Props prop. */
 			const value = props[prop];
 
@@ -48,8 +32,5 @@ export default (() => {
 				value((newValue: string) => rule.style.setProperty(prop, newValue));
 			}
 		}
-
-		// Return true that Semantic Props were found:
-		return true;
 	};
 })();
