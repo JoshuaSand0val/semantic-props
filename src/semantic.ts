@@ -1,4 +1,8 @@
-/** Defines input Semantic Props into stylesheet. */
+/**
+ * Represents Semantic Props CSS ruleset.
+ * @param props CSS properties to set by string or update function.
+ * @preserve
+ */
 export default (() => {
 	// Return undefined function if not in a client environment:
 	if (typeof window === "undefined") return () => undefined;
@@ -18,10 +22,7 @@ export default (() => {
 	// Return stylesheet function:
 	return (props: { [key: string]: string | ((update: Function) => void) }) => {
 		// Define styles for Semantic Props:
-		for (const prop of Object.keys(props)) {
-			/** Value of Semantic Props prop. */
-			const value = props[prop];
-
+		for (const [prop, value] of Object.entries(props)) {
 			// Insert CSS rule for static Semantic Props:
 			if (typeof value === "string") {
 				rule.style.setProperty(prop, value);

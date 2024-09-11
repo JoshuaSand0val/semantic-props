@@ -1,7 +1,7 @@
-import stylesheet from "./helpers/stylesheet.js";
+import semantic from "./semantic.js";
 
 // Use pointermove events to update Semantic Props:
-stylesheet({
+semantic({
 	"--pointer-x"(update: Function) {
 		addEventListener("pointermove", e => update(`${e.clientX}px`));
 	},

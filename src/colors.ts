@@ -1,10 +1,10 @@
 /* Semantic Props used for color. */
 
 import fallback from "./colors.module.scss";
-import stylesheet from "./helpers/stylesheet";
+import semantic from "./semantic.js";
 
 // Define color Semantic Props.
-stylesheet((() => {
+semantic((() => {
 	/** Output color Semantic Props. */
 	const props: { [key: string]: string } = fallback;
 
