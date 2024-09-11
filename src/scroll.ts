@@ -1,4 +1,4 @@
-import stylesheet from "./stylesheet.js";
+import stylesheet from "./helpers/stylesheet.js";
 
 // Add scroll event that activates Semantic Props on elements:
 if (stylesheet({ "--scroll-x-percentage": "0", "--scroll-y-percentage": "0" })) {

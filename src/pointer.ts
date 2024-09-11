@@ -1,4 +1,4 @@
-import stylesheet from "./stylesheet.js";
+import stylesheet from "./helpers/stylesheet.js";
 
 // Use pointermove events to update Semantic Props:
 stylesheet({

@@ -1,6 +1,6 @@
 /**
- * (Client) Defines given Semantic Props if found inside document stylesheets.
- * @returns (Client) If Semantic Props are found inside document stylesheets.
+ * Defines input Semantic Props in document.styleSheets.
+ * @returns If Semantic Props are found in document.styleSheets.
  */
 export default (() => {
 	// Return undefined function if not in a client environment:
