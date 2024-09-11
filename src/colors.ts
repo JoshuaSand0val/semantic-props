@@ -9,7 +9,7 @@ stylesheet((() => {
 	const props: { [key: string]: string } = fallback;
 
 	// Return empty if not in a client environment:
-	if (typeof window === undefined) return {};
+	if (typeof window === "undefined") return {};
 
 	/** Reference color Semantic Props. */
 	const colorProps: string[] = [
