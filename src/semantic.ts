@@ -17,19 +17,19 @@ export default (() => {
 
 	/** Semantic Props CSS style rule. */
 	const rule = stylesheet.cssRules[
-		stylesheet.insertRule(":where(.--semantic) {}")
+		stylesheet.insertRule(".--semantic {}")
 	] as CSSStyleRule;
 
 	// Return stylesheet function:
 	return (props: { [key: string]: string | ((update: Function) => void) }): CSSStyleRule => {
 		// Define styles for Semantic Props:
 		for (const [prop, value] of Object.entries(props)) {
-			// Insert CSS rule for static Semantic Props:
+			// Insert CSS declaration for static Semantic Props:
 			if (typeof value === "string") {
 				rule.style.setProperty(prop, value);
 			}
 
-			// Update CSS rule for live Semantic Props:
+			// Update CSS declaration for live Semantic Props:
 			if (typeof value === "function") {
 				value((newValue: string) => rule.style.setProperty(prop, newValue));
 			}
