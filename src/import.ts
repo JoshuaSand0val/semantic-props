@@ -1,7 +1,7 @@
 // Import: All Semantic Props imported.
 
 // Deprecated:
-import deprecated from "./deprecated/import.js";
+export { default } from "./deprecated/import.js";
 
 // Supported:
 import "./breakpoints.scss";
@@ -16,6 +16,4 @@ import semantic from "./semantic.js";
 import "./size.scss";
 import "./timing.css";
 
-export default (props: Parameters<typeof semantic>[0]) => {
-	return (deprecated(), semantic(props));
-};
+export { semantic };
