@@ -1,11 +1,12 @@
 /**
  * Represents Semantic Props CSS ruleset.
  * @param props CSS properties to set by string or update function.
+ * @returns Semantic Props CSS style rule.
  * @preserve
  */
 export default (() => {
 	// Return undefined function if not in a client environment:
-	if (typeof window === "undefined") return () => undefined;
+	if (typeof window === "undefined") return () => undefined!;
 
 	/** Style element for Semantic Props. */
 	const style: HTMLStyleElement = document.createElement("style");
@@ -20,7 +21,7 @@ export default (() => {
 	] as CSSStyleRule;
 
 	// Return stylesheet function:
-	return (props: { [key: string]: string | ((update: Function) => void) }) => {
+	return (props: { [key: string]: string | ((update: Function) => void) }): CSSStyleRule => {
 		// Define styles for Semantic Props:
 		for (const [prop, value] of Object.entries(props)) {
 			// Insert CSS rule for static Semantic Props:
@@ -33,5 +34,8 @@ export default (() => {
 				value((newValue: string) => rule.style.setProperty(prop, newValue));
 			}
 		}
+
+		// Return Semantic Props:
+		return rule;
 	};
 })();
