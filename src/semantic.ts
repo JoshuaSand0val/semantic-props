@@ -1,3 +1,8 @@
+/** Type for Semantic Props object keys. */
+export type props = {
+	[key: string]: string | ((update: Function) => void)
+};
+
 /**
  * Represents Semantic Props CSS ruleset.
  * @param props CSS properties to set by string or update function.
@@ -21,7 +26,7 @@ export default (() => {
 	] as CSSStyleRule;
 
 	// Return stylesheet function:
-	return (props: { [key: string]: string | ((update: Function) => void) }): CSSStyleRule => {
+	return (props: props): CSSStyleRule => {
 		// Define styles for Semantic Props:
 		for (const [prop, value] of Object.entries(props)) {
 			// Insert CSS declaration for static Semantic Props:
