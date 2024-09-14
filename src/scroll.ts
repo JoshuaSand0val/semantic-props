@@ -7,8 +7,8 @@ if (typeof window !== "undefined") {
 		// Set scroll Semantic Props styles:
 		for (const el of elements) {
 			// Calculate element scroll X and Y percentages:
-			const scrollXPercentage = el.scrollLeft / (el.scrollWidth - el.offsetWidth) || 0;
-			const scrollYPercentage = el.scrollTop / (el.scrollHeight - el.offsetHeight) || 0;
+			const scrollXPercentage = el.scrollLeft / (el.scrollWidth - el.clientWidth) || 0;
+			const scrollYPercentage = el.scrollTop / (el.scrollHeight - el.clientHeight) || 0;
 
 			// Set element Semantic Props styles:
 			el.style.setProperty("--scroll-x-percentage", scrollXPercentage.toFixed(2));
