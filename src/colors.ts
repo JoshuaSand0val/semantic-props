@@ -1,47 +1,46 @@
-/* Semantic Props used for color. */
+// Semantic Props defined for color.
 
 import fallback from "./colors.module.scss";
 import semantic from "./semantic.js";
 
-// Define color Semantic Props.
-semantic((() => {
-	/** Output color Semantic Props. */
-	const props: { [key: string]: string } = fallback;
+// Define fallback colors (also reference colors):
+semantic(fallback);
 
-	// Return empty if not in a client environment:
-	if (typeof window === "undefined") return {};
+/** Reference color Semantic Props names. */
+const colors: string[] = [
+	"--theme-color",
+	"--primary-color",
+	"--secondary-color",
+	"--success-color",
+	"--danger-color",
+	"--warning-color",
+	"--info-color",
+];
 
-	/** Reference color Semantic Props. */
-	const colorProps: string[] = [
-		"--theme-color",
-		"--primary-color",
-		"--secondary-color",
-		"--success-color",
-		"--danger-color",
-		"--warning-color",
-		"--info-color",
-	];
+// Define color Semantic Props:
+for (const prop of colors) {
+	// Break if not in a client environment:
+	if (typeof window === "undefined") break;
 
-	// Extend fallback color props:
-	for (const prop of colorProps) {
-		for (let l: number = 0; l <= 12; l++) {
-			// Redefine weighted color props in CSS relative colors if supported:
-			if (CSS.supports("color", "oklch(from white l c h)")) {
-				props[`${prop}-${l}`] = `oklch(from var(${prop}) ${Math.round(100 * (l / 12))}% c h)`;
-			}
+	// Define 0 through 12 lightness and light-dark props:
+	for (let l: number = 0; l <= 12; l++) {
+		// Redefine props in CSS relative colors if supported:
+		if (CSS.supports("color", "oklch(from white l c h)")) {
+			semantic({
+				[`${prop}-${l}`]: `oklch(from var(${prop}) ${(l / 12).toFixed(2)} c h)`
+			});
+		}
 
-			// Define light-dark color props with fallback:
-			for (let d = 0; d <= 12; d++) {
-				props[`${prop}-${l}-${d}`] = `var(${prop}-${l})`;
-				if (CSS.supports("color", "light-dark(white, black)")) {
-					props[`${prop}-${l}-${d}`] = (
-						`light-dark(var(${prop}-${l}), var(${prop}-${d}))`
-					);
+		// Define light-dark props:
+		for (let d = 0; d <= 12; d++) {
+			semantic({
+				get [`${prop}-${l}-${d}`]() {
+					if (CSS.supports("color", "light-dark(white, black)")) {
+						return `light-dark(var(${prop}-${l}), var(${prop}-${d}))`;
+					}
+					return `var(${prop}-${l})`;
 				}
-			}
+			});
 		}
 	}
-
-	// Return color Semantic Props:
-	return props;
-})());
+}

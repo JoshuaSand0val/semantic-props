@@ -10,20 +10,17 @@
 /// Property uses --[prop]-color-[lightness] syntax.
 /// @type map
 $colors: (
-	theme: rgb(233, 239, 245),
-	primary: rgb(38, 169, 241),
-	secondary: rgb(118, 130, 139),
-	success: rgb(82, 183, 102),
-	danger: rgb(202, 85, 83),
-	warning: rgb(255, 214, 90),
-	info: rgb(0, 212, 251)
+	"--theme-color": rgb(233, 239, 245),
+	"--primary-color": rgb(38, 169, 241),
+	"--secondary-color": rgb(118, 130, 139),
+	"--success-color": rgb(82, 183, 102),
+	"--danger-color": rgb(202, 85, 83),
+	"--warning-color": rgb(255, 214, 90),
+	"--info-color": rgb(0, 212, 251)
 );
 
 :export {
 	@each $prop, $color in $colors {
-		// Define color Semantic Props name:
-		$prop: --#{$prop}-color;
-
 		// Define reference color prop:
 		#{$prop}: $color;
 
