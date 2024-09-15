@@ -1,6 +1,6 @@
 /**
  * Represents Semantic Props CSS ruleset.
- * @param props CSS properties to set by string or update function.
+ * @param props CSS properties to set by string.
  * @returns Semantic Props CSS style rule.
  * @preserve
  */
