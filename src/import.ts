@@ -14,5 +14,5 @@ import "./range.js";
 import "./safe.css";
 import "./scroll.js";
 import "./semantic.js";
-import "./size.scss";
+import "./size.js";
 import "./timing.css";

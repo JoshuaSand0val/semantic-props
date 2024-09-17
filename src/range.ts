@@ -3,7 +3,7 @@
 import semantic from "./semantic.js";
 
 /** Semantic Props breakpoints to lengths. */
-const breakpoints: { [key: string]: number } = {
+export const breakpoints: { [key: string]: number } = {
 	"3xs": 0,
 	"2xs": 180,
 	"xs": 240,
@@ -15,9 +15,14 @@ const breakpoints: { [key: string]: number } = {
 	"3xl": 1600
 };
 
-/** Calculates range from value, min and max. */
-const range = (min: number, value: number, max: number): string => {
+/** Calculates percentage from value, min and max. */
+export const percentage = (min: number, value: number, max: number): string => {
 	return Math.min(Math.max((value - min) / (max - min), 0), 1).toFixed(2);
+};
+
+/** Calculates CSS range from percentage, min and max. */
+export const range = (min: string, max: string, percentage: string) => {
+	return `calc(${min} + (${max} - ${min}) * ${percentage})`;
 };
 
 // Define breakpoint range Semantic Props:
@@ -28,8 +33,8 @@ for (const [start, min] of Object.entries(breakpoints)) {
 
 		/** Updates Semantic Props breakpoint range. */
 		const update = () => semantic({
-			[`--${start}-to-${end}-vw`]: range(min, innerWidth, max),
-			[`--${start}-to-${end}-vh`]: range(min, innerHeight, max)
+			[`--${start}-to-${end}-vw`]: percentage(min, innerWidth, max),
+			[`--${start}-to-${end}-vh`]: percentage(min, innerHeight, max)
 		});
 
 		// Begin listening for Semantic Props:
