@@ -21,7 +21,7 @@ semantic({
 	"--heavy-font": 900,
 
 	/* Font Scaling Ratio: */
-	"--font-scale-ratio": range("1.125", "1.333", "var(--3xs-to-xl-vw)"),
+	"--font-scale-ratio": range("1.125", "1.333", "var(--3xs-to-2xl-vw)"),
 
 	/* Absolute Font Sizes: */
 	"--2xs-font": "max(var(--xs-font) / var(--font-scale-ratio), 0.5625rem)", /* 9px */
