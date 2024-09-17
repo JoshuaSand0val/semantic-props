@@ -4,9 +4,8 @@
 export { default } from "./deprecated/import.js";
 
 // Supported:
-import "./breakpoints.scss";
 import "./colors.js";
-import "./containers.scss";
+import "./containers.js";
 import "./font.js";
 import "./layer.css";
 import "./pointer.js";
