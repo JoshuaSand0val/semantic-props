@@ -7,7 +7,7 @@ export { default } from "./deprecated/import.js";
 import "./colors.js";
 import "./containers.js";
 import "./font.js";
-import "./layer.css";
+import "./layer.js";
 import "./pointer.js";
 import "./range.js";
 import "./safe.css";
