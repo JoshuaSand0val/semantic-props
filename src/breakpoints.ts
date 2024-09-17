@@ -15,14 +15,14 @@ export const breakpoints: { [key: string]: number } = {
 	"3xl": 1600
 };
 
-/** Calculates percentage from value, min and max. */
-export const percentage = (min: number, value: number, max: number): string => {
-	return Math.min(Math.max((value - min) / (max - min), 0), 1).toFixed(2);
-};
-
 /** Calculates CSS range from percentage, min and max. */
 export const range = (min: string, max: string, percentage: string) => {
 	return `calc(${min} + (${max} - ${min}) * ${percentage})`;
+};
+
+/** Calculates percentage from value, min and max. */
+const percentage = (min: number, value: number, max: number): string => {
+	return Math.min(Math.max((value - min) / (max - min), 0), 1).toFixed(2);
 };
 
 // Define breakpoint range Semantic Props:

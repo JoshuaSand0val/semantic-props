@@ -1,6 +1,6 @@
 // Semantic Props used for container inline-size.
 
-import { breakpoints } from "./range.js";
+import { breakpoints } from "./breakpoints.js";
 import semantic from "./semantic.js";
 
 /** Container Semantic Props. */

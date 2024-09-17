@@ -1,6 +1,6 @@
 // Semantic Props for styling fonts.
 
-import { range } from "./range.js";
+import { range } from "./breakpoints.js";
 import semantic from "./semantic.js";
 
 semantic({
