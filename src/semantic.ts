@@ -17,7 +17,7 @@ export default (() => {
 
 	/** Semantic Props CSS style rule. */
 	const rule = stylesheet.cssRules[
-		stylesheet.insertRule(".--semantic {}")
+		stylesheet.insertRule(":where(.--semantic) {}")
 	] as CSSStyleRule;
 
 	// Return stylesheet function:
