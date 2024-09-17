@@ -14,4 +14,4 @@ import "./safe.js";
 import "./scroll.js";
 import "./semantic.js";
 import "./size.js";
-import "./timing.css";
+import "./timing.js";
