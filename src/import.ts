@@ -10,7 +10,7 @@ import "./containers.js";
 import "./font.js";
 import "./layer.js";
 import "./pointer.js";
-import "./safe.css";
+import "./safe.js";
 import "./scroll.js";
 import "./semantic.js";
 import "./size.js";
