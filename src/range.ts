@@ -33,7 +33,9 @@ for (const [start, min] of Object.entries(breakpoints)) {
 		});
 
 		// Begin listening for Semantic Props:
-		addEventListener("resize", update);
-		update();
+		if (typeof window !== "undefined") {
+			addEventListener("resize", update);
+			update();
+		}
 	}
 }
