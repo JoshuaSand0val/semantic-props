@@ -11,14 +11,14 @@ semantic({
 	"--brand-font": "Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif",
 
 	/* Line Heights: */
-	"--font-leading": "1.6",
-	"--display-font-leading": "1.2",
+	"--font-leading": 1.6,
+	"--display-font-leading": 1.2,
 
 	/* Font Weights: */
-	"--regular-font": "400",
-	"--thin-font": "200",
-	"--bold-font": "600",
-	"--heavy-font": "900",
+	"--regular-font": 400,
+	"--thin-font": 200,
+	"--bold-font": 600,
+	"--heavy-font": 900,
 
 	/* Font Scaling Ratio: */
 	"--font-scale-ratio": range("1.125", "1.333", "var(--3xs-to-xl-vw)"),

@@ -21,10 +21,10 @@ export default (() => {
 	] as CSSStyleRule;
 
 	// Return stylesheet function:
-	return (props: { [key: string]: string }): CSSStyleRule => {
+	return (props: { [key: string]: string | number }): CSSStyleRule => {
 		// Insert CSS declarations for Semantic Props:
 		for (const [prop, value] of Object.entries(props)) {
-			rule.style.setProperty(prop, value);
+			rule.style.setProperty(prop, `${value}`);
 		}
 
 		// Return Semantic Props:

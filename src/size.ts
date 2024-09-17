@@ -5,7 +5,7 @@ import semantic from "./semantic.js"
 
 semantic({
 	/* Size Scaling Ratio: */
-	"--size-scale-ratio": "1.618",
+	"--size-scale-ratio": 1.618,
 
 	/* Base Sizes: */
 	"--3xs-size": "calc(var(--2xs-size) / var(--size-scale-ratio))",
