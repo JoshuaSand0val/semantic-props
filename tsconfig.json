@@ -18,7 +18,7 @@
 		"sourceMap": false,
 		"inlineSourceMap": false,
 		"outDir": "./dist/",
-		"removeComments": true,
+		"removeComments": false,
 		"noEmit": true,
 		"inlineSources": false,
 		"noEmitOnError": true,
