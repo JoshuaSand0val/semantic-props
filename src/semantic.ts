@@ -62,20 +62,21 @@ export const prop = (prop: prop): string => {
 
 	// Insert Semantic Props CSS declarations:
 	for (const prop of dependencyProps) {
-		if (Object.hasOwn(semantic, prop)) {
-			/** Semantic Props value. */
-			const value: value = semantic[prop]!;
+		// Continue if invalid Semantic Props:
+		if (!Object.hasOwn(semantic, prop)) continue;
 
-			// Update CSS declaration for live Semantic Props:
-			if (typeof value === "function") {
-				value((newValue: Exclude<value, updater>) => {
-					rule.style.setProperty(prop, newValue.toString());
-				});
-			}
-			// Insert CSS declaration for static Semantic Props:
-			else {
-				rule.style.setProperty(prop, value.toString());
-			}
+		/** Semantic Props value. */
+		const value: value = semantic[prop]!;
+
+		// Update CSS declaration for live Semantic Props:
+		if (typeof value === "function") {
+			value((newValue: Exclude<value, updater>) => {
+				rule.style.setProperty(prop, newValue.toString());
+			});
+		}
+		// Insert CSS declaration for static Semantic Props:
+		else {
+			rule.style.setProperty(prop, value.toString());
 		}
 	}
 
