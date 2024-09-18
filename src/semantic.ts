@@ -27,14 +27,9 @@ export const define = (props: declarations): void => {
  * @return Semantic Props value.
  * @preserve
  */
-export const prop = (prop: prop): string => {
-	// Log error if invalid Semantic Props:
-	if (!Object.hasOwn(semantic, prop)) {
-		console.error(`Semantic Props "${prop}" is invalid.`);
-	}
-
-	// Skip to return reference if not in a client environment:
-	if (typeof window === "undefined") return `var(${prop})`;
+export const prop = (() => {
+	// Return undefined function if not in a client environment:
+	if (typeof window === "undefined") return () => undefined!;
 
 	/** Style element for Semantic Props. */
 	const style: HTMLStyleElement = document.createElement("style");
@@ -48,40 +43,48 @@ export const prop = (prop: prop): string => {
 		stylesheet.insertRule(".--semantic {}")
 	] as CSSStyleRule;
 
-	/** Semantic Props dependencies. */
-	const dependencyProps: prop[] = [prop];
-
-	// Loop through Semantic Props matching dependencies:
-	for (const prop of dependencyProps) {
-		/** Matched Semantic Props dependencies. */
-		const matchedProps = `${semantic[prop]}`.match(/--[a-zA-Z0-9-_]+/g) ?? [];
-
-		// Push any new Semantic Props:
-		dependencyProps.push(...matchedProps as prop[]);
-	}
-
-	// Insert Semantic Props CSS declarations:
-	for (const prop of dependencyProps) {
-		// Continue if invalid Semantic Props:
-		if (!Object.hasOwn(semantic, prop)) continue;
-
-		/** Semantic Props value. */
-		const value: value = semantic[prop]!;
-
-		// Update CSS declaration for live Semantic Props:
-		if (typeof value === "function") {
-			value((newValue: Exclude<value, updater>) => {
-				rule.style.setProperty(prop, newValue.toString());
-			});
+	// Return Semantic Props function:
+	return (prop: prop): string => {
+		// Log error if invalid Semantic Props:
+		if (!Object.hasOwn(semantic, prop)) {
+			console.error(`Semantic Props "${prop}" is invalid.`);
 		}
-		// Insert CSS declaration for static Semantic Props:
-		else {
-			rule.style.setProperty(prop, value.toString());
-		}
-	}
 
-	// Return Semantic Props reference:
-	return `var(${prop})`;
-};
+		/** Semantic Props dependencies. */
+		const dependencyProps: prop[] = [prop];
+
+		// Loop through Semantic Props matching dependencies:
+		for (const prop of dependencyProps) {
+			/** Matched Semantic Props dependencies. */
+			const matchedProps = `${semantic[prop]}`.match(/--[a-zA-Z0-9-_]+/g) ?? [];
+
+			// Push any new Semantic Props:
+			dependencyProps.push(...matchedProps as prop[]);
+		}
+
+		// Insert Semantic Props CSS declarations:
+		for (const prop of dependencyProps) {
+			// Continue if invalid Semantic Props:
+			if (!Object.hasOwn(semantic, prop)) continue;
+
+			/** Semantic Props value. */
+			const value: value = semantic[prop]!;
+
+			// Update CSS declaration for live Semantic Props:
+			if (typeof value === "function") {
+				value((newValue: Exclude<value, updater>) => {
+					rule.style.setProperty(prop, newValue.toString());
+				});
+			}
+			// Insert CSS declaration for static Semantic Props:
+			else {
+				rule.style.setProperty(prop, value.toString());
+			}
+		}
+
+		// Return Semantic Props reference:
+		return `var(${prop})`;
+	};
+})();
 
 export default define;
