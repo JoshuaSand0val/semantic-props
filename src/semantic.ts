@@ -21,7 +21,12 @@ export const define = (props: declarations): void => {
 	Object.assign(semantic, props);
 };
 
-/** Returns Semantic Props value. */
+/**
+ * Returns Semantic Props value.
+ * @param prop Semantic Props value to use.
+ * @return Semantic Props value.
+ * @preserve
+ */
 export const prop = (prop: prop): string | undefined | Error => {
 	// Return undefined if not in a client environment:
 	if (typeof window === "undefined") return;
