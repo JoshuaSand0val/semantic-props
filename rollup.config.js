@@ -8,10 +8,11 @@ import cssnano from "cssnano";
 import commonjs from "@rollup/plugin-commonjs";
 import nodeResolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
+import { dts } from "rollup-plugin-dts";
 
 import terser from "@rollup/plugin-terser";
 
-export default {
+export default [{
 	input: "src/import.ts",
 	output: {
 		file: "dist/import.js",
@@ -36,4 +37,11 @@ export default {
 		}),
 		terser()
 	]
-};
+}, {
+	input: "src/import.ts",
+	output: {
+		file: "dist/import.d.ts",
+		format: "es"
+	},
+	plugins: [dts()]
+}];
