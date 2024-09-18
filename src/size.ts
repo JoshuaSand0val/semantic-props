@@ -1,6 +1,6 @@
 // Semantic Props for sizing padding, margin, ect.
 
-import { range } from "./breakpoints.js";
+import range from "./helpers/range.js";
 import semantic from "./semantic.js"
 
 semantic({

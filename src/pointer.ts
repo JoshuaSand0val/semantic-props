@@ -3,9 +3,11 @@
 import semantic from "./semantic.js";
 
 // Use pointermove events to update Semantic Props:
-if (typeof window !== "undefined") {
-	addEventListener("pointermove", event => semantic({
-		"--pointer-x": `${event.clientX}px`,
-		"--pointer-y": `${event.clientY}px`
-	}));
-}
+semantic({
+	"--pointer-x"(update: Function) {
+		addEventListener("pointermove", e => update(`${e.clientX}px`));
+	},
+	"--pointer-y"(update: Function) {
+		addEventListener("pointermove", e => update(`${e.clientY}px`));
+	}
+});

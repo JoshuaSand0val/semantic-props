@@ -12,6 +12,7 @@ import "./layer.js";
 import "./pointer.js";
 import "./safe.js";
 import "./scroll.js";
-import "./semantic.js";
 import "./size.js";
 import "./timing.js";
+
+export { prop } from "./semantic.js";
