@@ -1,3 +1,5 @@
+// Stylesheet functions to define Semantic Props.
+
 /** Type for Semantic Props name. */
 type prop = `--${string}`;
 
