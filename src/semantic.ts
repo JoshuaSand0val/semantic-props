@@ -27,14 +27,14 @@ export const define = (props: declarations): void => {
  * @return Semantic Props value.
  * @preserve
  */
-export const prop = (prop: prop): string | undefined | Error => {
-	// Return undefined if not in a client environment:
-	if (typeof window === "undefined") return;
-
+export const prop = (prop: prop): string | Error => {
 	// Return error if invalid Semantic Props:
 	if (!Object.hasOwn(semantic, prop)) {
 		return new Error(`Semantic Props "${prop}" is invalid.`);
 	}
+
+	// Skip to return reference if not in a client environment:
+	if (typeof window === "undefined") return `var(${prop})`;
 
 	/** Style element for Semantic Props. */
 	const style: HTMLStyleElement = document.createElement("style");

@@ -12,6 +12,6 @@ type prop = `--${string}`;
  * @return Semantic Props value.
  * @preserve
  */
-declare const prop: (prop: prop) => string | undefined | Error;
+declare const prop: (prop: prop) => string | Error;
 
 export { o as default, prop };
