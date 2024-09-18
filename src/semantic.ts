@@ -27,10 +27,10 @@ export const define = (props: declarations): void => {
  * @return Semantic Props value.
  * @preserve
  */
-export const prop = (prop: prop): string | Error => {
-	// Return error if invalid Semantic Props:
+export const prop = (prop: prop): string => {
+	// Log error if invalid Semantic Props:
 	if (!Object.hasOwn(semantic, prop)) {
-		return new Error(`Semantic Props "${prop}" is invalid.`);
+		console.error(`Semantic Props "${prop}" is invalid.`);
 	}
 
 	// Skip to return reference if not in a client environment:
