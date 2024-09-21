@@ -4,14 +4,13 @@
  * @preserve
  */ declare function o(): void;
 
-/** Type for Semantic Props name. */
-type prop = `--${string}`;
 /**
- * Returns Semantic Props value.
- * @param prop Semantic Props value to use.
- * @return Semantic Props value.
- * @preserve
+ * Creates scoped CSS styles. Defines referenced Semantic Props.
+ * @param styles CSS styles object to create.
+ * @returns Scoped CSS class name.
  */
-declare const prop: (prop: prop) => string;
+declare const style: (styles: {
+    [key: string]: string;
+}) => string;
 
-export { o as default, prop };
+export { o as default, style };

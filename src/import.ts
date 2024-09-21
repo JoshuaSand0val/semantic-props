@@ -15,4 +15,4 @@ import "./scroll.js";
 import "./size.js";
 import "./timing.js";
 
-export { prop } from "./semantic.js";
+export { style } from "./semantic.js";
