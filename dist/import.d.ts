@@ -1,3 +1,5 @@
+import { Properties } from 'csstype';
+
 /**
  * Activates Semantic Props elements, adding custom property classes.
  * @type {Function}
@@ -9,8 +11,6 @@
  * @param styles CSS styles object to create.
  * @returns Scoped CSS class name.
  */
-declare const style: (styles: {
-    [key: string]: string;
-}) => string;
+declare const style: (styles: Properties) => string;
 
 export { o as default, style };

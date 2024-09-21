@@ -44,5 +44,8 @@
 		"sass": "^1.78.0",
 		"tslib": "^2.7.0",
 		"typescript": "^5.6.2"
+	},
+	"dependencies": {
+		"csstype": "^3.1.3"
 	}
 }

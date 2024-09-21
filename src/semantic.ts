@@ -1,3 +1,5 @@
+import type { Properties } from "csstype";
+
 /** Type for Semantic Props value name. */
 type prop = `--${string}`;
 
@@ -49,7 +51,7 @@ export const style = (() => {
 	const classes: string[] = [];
 
 	// Return Semantic Props style function:
-	return (styles: { [key: string]: string }) => {
+	return (styles: Properties) => {
 		/** CSS styles object stringified.  */
 		const cssText = JSON.stringify(styles);
 
