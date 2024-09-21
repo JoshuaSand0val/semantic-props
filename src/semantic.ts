@@ -79,6 +79,9 @@ export const style = (() => {
 			// Continue if Semantic Props already declared:
 			if (declaredProps.includes(prop)) continue;
 
+			// Push new Semantic Props into array:
+			declaredProps.push(prop);
+
 			/** Semantic Props value. */
 			const value: value = semantic[prop]!;
 
@@ -94,9 +97,6 @@ export const style = (() => {
 				rule.style.setProperty(prop, `${newValue}`);
 				props.push(...matchedProps(`${newValue}`));
 			});
-
-			// Push new Semantic Props into array:
-			declaredProps.push(prop);
 		}
 
 		/** Scoped CSS style rule. */
