@@ -26,10 +26,10 @@ $colors: (
 		// Define reference color:
 		#{$prop}: $color;
 
-		// Define fallback weighted props (0 through 12) (100% to 0% lightness):
-		@for $l from 0 through 12 {
+		// Define fallback weighted props (0 through 16) (100% to 0% lightness):
+		@for $l from 0 through 16 {
 			// Calculate color lightness channel:
-			$light: 100% * (1 - math.div($l, 12));
+			$light: 100% * (1 - math.div($l, 16));
 
 			// Define weighted fallback prop:
 			#{$prop}-#{$l}: color.change($color, $lightness: $light);
