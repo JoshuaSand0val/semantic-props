@@ -47,13 +47,13 @@
 	}
 
 	/* Contrast Colors: */
-	--low-contrast-color: oklch(from var(--rich-color) max(l - 0.4, 0) c h);
-	--medium-contrast-color: oklch(from var(--rich-color) max(l - 0.6, 0) c h);
+	--low-contrast-color: oklch(from var(--rich-color) max(l - 0.2, 0) c h);
+	--medium-contrast-color: oklch(from var(--rich-color) max(l - 0.4, 0) c h);
 	--high-contrast-color: oklch(from var(--rich-color) max(l - 0.8, 0) c h);
 
 	@media (prefers-color-scheme: dark) {
-		--low-contrast-color: oklch(from var(--rich-color) min(l + 0.4, 1) c h);
-		--medium-contrast-color: oklch(from var(--rich-color) min(l + 0.6, 1) c h);
+		--low-contrast-color: oklch(from var(--rich-color) min(l + 0.2, 1) c h);
+		--medium-contrast-color: oklch(from var(--rich-color) min(l + 0.4, 1) c h);
 		--high-contrast-color: oklch(from var(--rich-color) min(l + 0.8, 1) c h);
 	}
 }
