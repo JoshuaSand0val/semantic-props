@@ -1,7 +1,8 @@
 {
+	"private": true,
 	"name": "semantic-props",
-	"version": "0.2.1",
-	"description": "A collection of semantic CSS custom properties and classes.",
+	"version": "0.3.0",
+	"description": "A collection of semantic CSS custom properties.",
 	"keywords": [
 		"Semantic Props",
 		"CSS custom properties",
@@ -13,7 +14,6 @@
 	"author": "Joshua Elijah Sandoval",
 	"files": [
 		"dist",
-		"src",
 		"CHANGELOG.md",
 		"LICENSE",
 		"README.md"
@@ -27,18 +27,21 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "postcss src/import.css -o dist/import.css && rollup -c && tsc",
-		"watch:build": "watch 'npm run build' ./src/"
+		"build": "rollup -c",
+		"watch:build": "rollup -c -w"
 	},
 	"devDependencies": {
+		"@rollup/plugin-commonjs": "^26.0.1",
+		"@rollup/plugin-node-resolve": "^15.2.3",
 		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^11.1.6",
 		"cssnano": "^7.0.4",
-		"postcss": "^8.4.39",
-		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.1.0",
 		"postcss-preset-env": "^9.6.0",
 		"rollup": "^4.18.1",
-		"typescript": "^5.5.3",
-		"watch": "^1.0.2"
+		"rollup-plugin-dts": "^6.1.1",
+		"rollup-plugin-postcss": "^4.0.2",
+		"tslib": "^2.7.0",
+		"typescript": "^5.6.2"
 	}
 }

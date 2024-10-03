@@ -1,4 +1,7 @@
 // Import: Main Semantic Props JavaScript import.
+
+import "./import.css";
+
 import breakpoint from "./breakpoint.js";
 import color from "./color.js";
 
