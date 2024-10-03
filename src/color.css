@@ -14,14 +14,14 @@
 	--color: var(--theme-color);
 
 	/* Light Colors: */
-	--lightest-color: oklch(from var(--color) 95% c h);
-	--lighter-color: oklch(from var(--color) 90% c h);
-	--light-color: oklch(from var(--color) 85% c h);
+	--lightest-color: oklch(from var(--color) 100% c h);
+	--lighter-color: oklch(from var(--color) 95% c h);
+	--light-color: oklch(from var(--color) 90% c h);
 
 	/* Rich Colors: */
-	--rich-color: oklch(from var(--color) 80% c h);
-	--richer-color: oklch(from var(--color) 75% c h);
-	--richest-color: oklch(from var(--color) 70% c h);
+	--rich-color: oklch(from var(--color) 85% c h);
+	--richer-color: oklch(from var(--color) 80% c h);
+	--richest-color: oklch(from var(--color) 75% c h);
 
 	@media (prefers-color-scheme: dark) {
 		--rich-color: oklch(from var(--color) 40% c h);
