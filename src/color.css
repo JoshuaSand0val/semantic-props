@@ -14,19 +14,25 @@
 	--color: var(--theme-color);
 
 	/* Light Colors: */
-	--lightest-color: hsl(from var(--color) h s 95%);
-	--lighter-color: hsl(from var(--color) h s 90%);
-	--light-color: hsl(from var(--color) h s 85%);
+	--lightest-color: oklch(from var(--color) 95% c h);
+	--lighter-color: oklch(from var(--color) 90% c h);
+	--light-color: oklch(from var(--color) 85% c h);
 
 	/* Rich Colors: */
-	--rich-color: hsl(from var(--color) h s 55%);
-	--richer-color: hsl(from var(--color) h s 50%);
-	--richest-color: hsl(from var(--color) h s 45%);
+	--rich-color: oklch(from var(--color) 80% c h);
+	--richer-color: oklch(from var(--color) 75% c h);
+	--richest-color: oklch(from var(--color) 70% c h);
+
+	@media (prefers-color-scheme: dark) {
+		--rich-color: oklch(from var(--color) 40% c h);
+		--richer-color: oklch(from var(--color) 35% c h);
+		--richest-color: oklch(from var(--color) 30% c h);
+	}
 
 	/* Dark Colors: */
-	--dark-color: hsl(from var(--color) h s 15%);
-	--darker-color: hsl(from var(--color) h s 10%);
-	--darkest-color: hsl(from var(--color) h s 5%);
+	--dark-color: oklch(from var(--color) 20% c h);
+	--darker-color: oklch(from var(--color) 15% c h);
+	--darkest-color: oklch(from var(--color) 10% c h);
 
 	/* Scheme Colors (Light): */
 	--first-color: var(--lightest-color);
@@ -40,13 +46,14 @@
 		--third-color: var(--darkest-color);
 	}
 
-	/* Font Color: */
-	--font-color: oklch(from var(--second-color) calc(1 - l) c h);
-
-	/* Vivid Color: */
-	--vivid-color: oklch(from var(--second-color) calc(l - 0.5) 0.15 h);
+	/* Contrast Colors: */
+	--low-contrast-color: oklch(from var(--rich-color) max(l - 0.4, 0) c h);
+	--medium-contrast-color: oklch(from var(--rich-color) max(l - 0.6, 0) c h);
+	--high-contrast-color: oklch(from var(--rich-color) max(l - 0.8, 0) c h);
 
 	@media (prefers-color-scheme: dark) {
-		--vivid-color: oklch(from var(--second-color) calc(l + 0.5) 0.15 h);
+		--low-contrast-color: oklch(from var(--rich-color) min(l + 0.4, 1) c h);
+		--medium-contrast-color: oklch(from var(--rich-color) min(l + 0.6, 1) c h);
+		--high-contrast-color: oklch(from var(--rich-color) min(l + 0.8, 1) c h);
 	}
 }
