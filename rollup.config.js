@@ -33,8 +33,7 @@ export default [{
 				cssnano({
 					preset: "default"
 				})
-			],
-			extract: true
+			]
 		}),
 		terser()
 	]
