@@ -1,7 +1,6 @@
-/* Layer: Custom properties for z-index positions. */
+/* Semantic Props for z-index positions. */
 
 :where(.--semantic) {
-	/* Layer Positions: */
 	--bottom-layer: -1000;
 	--relative-layer: 1000;
 	--absolute-layer: 2000;
