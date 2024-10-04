@@ -24,9 +24,9 @@
 	--richest-color: oklch(from var(--color) 75% c h);
 
 	@media (prefers-color-scheme: dark) {
-		--rich-color: oklch(from var(--color) 40% c h);
-		--richer-color: oklch(from var(--color) 35% c h);
-		--richest-color: oklch(from var(--color) 30% c h);
+		--rich-color: oklch(from var(--color) 50% c h);
+		--richer-color: oklch(from var(--color) 45% c h);
+		--richest-color: oklch(from var(--color) 40% c h);
 	}
 
 	/* Dark Colors: */
