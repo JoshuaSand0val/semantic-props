@@ -1,5 +1,6 @@
 // Import: All CSS/JS imported.
-import "./deprecated/import.js";
+export { default } from "./deprecated/import.js";
+
 import "./color.css";
 import "./container.css";
 import "./font.js";
