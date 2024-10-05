@@ -2,7 +2,7 @@
 import "./deprecated/import.js";
 import "./breakpoint.css";
 import "./color.css";
-import "./font.css";
+import "./font.js";
 import "./layer.css";
 import "./pointer.js";
 import "./safe.css";
