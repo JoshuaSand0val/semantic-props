@@ -1,0 +1,13 @@
+/* Semantic Props for container widths. */
+
+:where(.--semantic) {
+	--2xs-container: 180px;
+	--xs-container: 240px;
+	--sm-container: 360px;
+	--md-container: 480px;
+	--lg-container: 768px;
+	--xl-container: 1024px;
+	--2xl-container: 1440px;
+	--3xl-container: 1600px;
+	--4xl-container: 1920px;
+}
