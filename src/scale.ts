@@ -2,6 +2,9 @@
 
 import stylesheet from "./stylesheet.js";
 
+/** Responsive scaling Semantic Props. */
+const props: Parameters<typeof stylesheet>[0] = {};
+
 /** Semantic Props breakpoints to lengths. */
 const breakpoints: { [key: string]: number } = {
 	"3xs": 0,
@@ -27,8 +30,8 @@ for (const [start, min] of Object.entries(breakpoints)) {
 		// Continue if breakpoints are incompatible:
 		if (min >= max) continue;
 
-		// Update Semantic Props breakpoint ranges:
-		stylesheet({
+		// Assign Semantic Props breakpoint ranges:
+		Object.assign(props, {
 			[`--inline-${start}-to-${end}`](update: Function) {
 				addEventListener("resize", () => update(percentage(min, innerWidth, max)));
 				dispatchEvent(new Event("resize"));
@@ -40,3 +43,6 @@ for (const [start, min] of Object.entries(breakpoints)) {
 		});
 	}
 }
+
+// Define Semantic Props:
+stylesheet(props);

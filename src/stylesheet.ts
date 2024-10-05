@@ -15,23 +15,23 @@ export default (() => {
 	// Return undefined function if not in a client environment:
 	if (typeof window === "undefined") return () => undefined!;
 
-	/** Stylesheet for Semantic Props. */
-	const stylesheet: CSSStyleSheet = (() => {
-		/** Style element for Semantic Props. */
-		const style: HTMLStyleElement = document.createElement("style");
-		document.head.prepend(style);
-
-		// Return stylesheet:
-		return style.sheet!;
-	})();
-
-	/** CSS style rule for Semantic Props. */
-	const rule = stylesheet.cssRules[
-		stylesheet.insertRule(":where(.--semantic) {}")
-	] as CSSStyleRule;
-
 	// Return Semantic Props style function:
 	return (props: declarations) => {
+		/** Stylesheet for Semantic Props. */
+		const stylesheet: CSSStyleSheet = (() => {
+			/** Style element for Semantic Props. */
+			const style: HTMLStyleElement = document.createElement("style");
+			document.head.append(style);
+
+			// Return stylesheet:
+			return style.sheet!;
+		})();
+
+		/** CSS style rule for Semantic Props. */
+		const rule = stylesheet.cssRules[
+			stylesheet.insertRule(":where(.--semantic) {}")
+		] as CSSStyleRule;
+
 		// Insert Semantic Props CSS declarations:
 		for (const [prop, value] of Object.entries(props)) {
 			// Insert CSS declaration for static Semantic Props:
