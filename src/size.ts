@@ -19,5 +19,5 @@ stylesheet({
 	"--3xl-size": "calc(var(--2xl-size) * var(--size-scale-ratio))",
 
 	/* Responsive Size: */
-	"--responsive-size": range("var(--sm-size)", "var(--xl-size)", "var(--inline-3xs-to-xl)")
+	"--responsive-size": range("var(--3xs-size)", "var(--xl-size)", "var(--inline-3xs-to-xl)")
 });
