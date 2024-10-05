@@ -6,6 +6,7 @@ import "./font.css";
 import "./layer.css";
 import "./pointer.js";
 import "./safe.css";
+import "./scale.js";
 import "./size.css";
 import "./stylesheet.js";
 import "./time.css";
