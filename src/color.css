@@ -2,7 +2,7 @@
 
 :where(.--semantic) {
 	/* Color Palette: */
-	--theme-color: oklch(95% 0.007 248);
+	--theme-color: oklch(80% 0.01 248);
 	--primary-color: oklch(70% 0.15 240);
 	--secondary-color: oklch(60% 0.02 240);
 	--success-color: oklch(70% 0.15 148);
@@ -10,50 +10,95 @@
 	--warning-color: oklch(90% 0.15 86);
 	--info-color: oklch(80% 0.15 216);
 
-	/* Relative Color: */
-	--color: var(--theme-color);
+	/* Color Lightness Values: */
+	--1st-bg-color-lightness: 1.00;
+	--2nd-bg-color-lightness: calc(var(--1st-bg-color-lightness) - 0.05);
+	--3rd-bg-color-lightness: calc(var(--2nd-bg-color-lightness) - 0.05);
 
-	/* Light Colors: */
-	--lightest-color: oklch(from var(--color) 100% c h);
-	--lighter-color: oklch(from var(--color) 95% c h);
-	--light-color: oklch(from var(--color) 90% c h);
-
-	/* Rich Colors: */
-	--rich-color: oklch(from var(--color) 85% c h);
-	--richer-color: oklch(from var(--color) 80% c h);
-	--richest-color: oklch(from var(--color) 75% c h);
-
-	@media (prefers-color-scheme: dark) {
-		--rich-color: oklch(from var(--color) 50% c h);
-		--richer-color: oklch(from var(--color) 45% c h);
-		--richest-color: oklch(from var(--color) 40% c h);
+	& & {
+		--1st-bg-color-lightness: 0.75;
 	}
 
-	/* Dark Colors: */
-	--dark-color: oklch(from var(--color) 20% c h);
-	--darker-color: oklch(from var(--color) 15% c h);
-	--darkest-color: oklch(from var(--color) 10% c h);
-
-	/* Scheme Colors (Light): */
-	--first-color: var(--lightest-color);
-	--second-color: var(--lighter-color);
-	--third-color: var(--light-color);
-
-	/* Scheme Colors (Dark): */
-	@media (prefers-color-scheme: dark) {
-		--first-color: var(--dark-color);
-		--second-color: var(--darker-color);
-		--third-color: var(--darkest-color);
-	}
-
-	/* Contrast Colors: */
-	--low-contrast-color: oklch(from var(--rich-color) max(l - 0.2, 0) c h);
-	--medium-contrast-color: oklch(from var(--rich-color) max(l - 0.4, 0) c h);
-	--high-contrast-color: oklch(from var(--rich-color) max(l - 0.8, 0) c h);
+	--1st-color-lightness: calc(var(--1st-bg-color-lightness) - 0.4);
+	--2nd-color-lightness: calc(var(--1st-color-lightness) - 0.05);
+	--3rd-color-lightness: calc(var(--2nd-color-lightness) - 0.05);
 
 	@media (prefers-color-scheme: dark) {
-		--low-contrast-color: oklch(from var(--rich-color) min(l + 0.2, 1) c h);
-		--medium-contrast-color: oklch(from var(--rich-color) min(l + 0.4, 1) c h);
-		--high-contrast-color: oklch(from var(--rich-color) min(l + 0.8, 1) c h);
+		--1st-bg-color-lightness: 0.25;
+		--1st-color-lightness: calc(var(--1st-bg-color-lightness) + 0.4);
+
+		& & {
+			--1st-bg-color-lightness: 0.50;
+		}
 	}
+
+	/* Text Color: */
+	--text-color: oklch(from var(--theme-color) 10% c h);
+
+	@media (prefers-color-scheme: dark) {
+		--text-color: oklch(from var(--theme-color) 90% c h);
+	}
+
+	/* Theme Colors: */
+	--1st-theme-bg-color: oklch(from var(--theme-color) var(--1st-bg-color-lightness) c h);
+	--2nd-theme-bg-color: oklch(from var(--theme-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-theme-bg-color: oklch(from var(--theme-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-theme-color: oklch(from var(--theme-color) var(--1st-color-lightness) c h);
+	--2nd-theme-color: oklch(from var(--theme-color) var(--2nd-color-lightness) c h);
+	--3rd-theme-color: oklch(from var(--theme-color) var(--3rd-color-lightness) c h);
+
+	/* Primary Colors: */
+	--1st-primary-bg-color: oklch(from var(--primary-color) var(--1st-bg-color-lightness) c h);
+	--2nd-primary-bg-color: oklch(from var(--primary-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-primary-bg-color: oklch(from var(--primary-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-primary-color: oklch(from var(--primary-color) var(--1st-color-lightness) c h);
+	--2nd-primary-color: oklch(from var(--primary-color) var(--2nd-color-lightness) c h);
+	--3rd-primary-color: oklch(from var(--primary-color) var(--3rd-color-lightness) c h);
+
+	/* Secondary Colors: */
+	--1st-secondary-bg-color: oklch(from var(--secondary-color) var(--1st-bg-color-lightness) c h);
+	--2nd-secondary-bg-color: oklch(from var(--secondary-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-secondary-bg-color: oklch(from var(--secondary-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-secondary-color: oklch(from var(--secondary-color) var(--1st-color-lightness) c h);
+	--2nd-secondary-color: oklch(from var(--secondary-color) var(--2nd-color-lightness) c h);
+	--3rd-secondary-color: oklch(from var(--secondary-color) var(--3rd-color-lightness) c h);
+
+	/* Success Colors: */
+	--1st-success-bg-color: oklch(from var(--success-color) var(--1st-bg-color-lightness) c h);
+	--2nd-success-bg-color: oklch(from var(--success-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-success-bg-color: oklch(from var(--success-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-success-color: oklch(from var(--success-color) var(--1st-color-lightness) c h);
+	--2nd-success-color: oklch(from var(--success-color) var(--2nd-color-lightness) c h);
+	--3rd-success-color: oklch(from var(--success-color) var(--3rd-color-lightness) c h);
+
+	/* Danger Colors: */
+	--1st-danger-bg-color: oklch(from var(--danger-color) var(--1st-bg-color-lightness) c h);
+	--2nd-danger-bg-color: oklch(from var(--danger-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-danger-bg-color: oklch(from var(--danger-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-danger-color: oklch(from var(--danger-color) var(--1st-color-lightness) c h);
+	--2nd-danger-color: oklch(from var(--danger-color) var(--2nd-color-lightness) c h);
+	--3rd-danger-color: oklch(from var(--danger-color) var(--3rd-color-lightness) c h);
+
+	/* Warning Colors: */
+	--1st-warning-bg-color: oklch(from var(--warning-color) var(--1st-bg-color-lightness) c h);
+	--2nd-warning-bg-color: oklch(from var(--warning-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-warning-bg-color: oklch(from var(--warning-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-warning-color: oklch(from var(--warning-color) var(--1st-color-lightness) c h);
+	--2nd-warning-color: oklch(from var(--warning-color) var(--2nd-color-lightness) c h);
+	--3rd-warning-color: oklch(from var(--warning-color) var(--3rd-color-lightness) c h);
+
+	/* Info Colors: */
+	--1st-info-bg-color: oklch(from var(--info-color) var(--1st-bg-color-lightness) c h);
+	--2nd-info-bg-color: oklch(from var(--info-color) var(--2nd-bg-color-lightness) c h);
+	--3rd-info-bg-color: oklch(from var(--info-color) var(--3rd-bg-color-lightness) c h);
+
+	--1st-info-color: oklch(from var(--info-color) var(--1st-color-lightness) c h);
+	--2nd-info-color: oklch(from var(--info-color) var(--2nd-color-lightness) c h);
+	--3rd-info-color: oklch(from var(--info-color) var(--3rd-color-lightness) c h);
 }

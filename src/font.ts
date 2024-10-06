@@ -38,5 +38,5 @@ stylesheet({
 
 	/* Relative Font Sizes: */
 	"--smaller-font": "calc(1em / var(--font-scale-ratio))",
-	"--larger-font": "calc(1em * var(--font-scale-ratio))",
+	"--larger-font": "calc(1em * var(--font-scale-ratio))"
 });
