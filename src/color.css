@@ -20,8 +20,8 @@
 	}
 
 	--1st-color-lightness: calc(var(--1st-bg-color-lightness) - 0.4);
-	--2nd-color-lightness: calc(var(--1st-color-lightness) - 0.05);
-	--3rd-color-lightness: calc(var(--2nd-color-lightness) - 0.05);
+	--2nd-color-lightness: calc(var(--1st-color-lightness) - 0.1);
+	--3rd-color-lightness: calc(var(--2nd-color-lightness) - 0.1);
 
 	@media (prefers-color-scheme: dark) {
 		--1st-bg-color-lightness: 0.25;
