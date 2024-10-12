@@ -32,12 +32,26 @@ for (const prop of Object.keys(props)) {
 
 		// Assign light-dark color values:
 		for (let d = 0; d <= count; d++) {
-			props[`${prop}-${l}-${d}`] = `var(${prop}-${l})`;
-			if (d !== l && CSS.supports("color: light-dark(white, black)")) {
-				props[`${prop}-${l}-${d}`] = (
-					`light-dark(var(${prop}-${l}), var(${prop}-${d}))`
-				);
-			}
+			props[`${prop}-${l}-${d}`] = (update: Function) => {
+				/** Media Query for if user prefers dark color scheme.  */
+				const prefersDarkQuery = matchMedia("(prefers-color-scheme: dark)");
+
+				/** Updates appropriate color based on preferred colors. */
+				const listener = () => {
+					if (prefersDarkQuery.matches) {
+						update(`var(${prop}-${d})`);
+					}
+					else {
+						update(`var(${prop}-${l})`);
+					}
+				};
+
+				// Listen for preferred color scheme changes:
+				prefersDarkQuery.addEventListener("change", listener);
+
+				// Initially call event listener:
+				listener();
+			};
 		}
 	}
 }
