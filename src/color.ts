@@ -14,7 +14,7 @@ const props: Parameters<typeof stylesheet>[0] = {
 };
 
 /** Count of color weights (minus 0). */
-const count: number = 12;
+const count: number = 16;
 
 // Assign color weights:
 for (const prop of Object.keys(props)) {
