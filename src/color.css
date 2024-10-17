@@ -34,40 +34,40 @@
 	}
 
 	/* Light Colors: */
-	--lightest-color: var(--color-50);
-	--lighter-color: var(--color-100);
-	--light-color: var(--color-200);
+	--1st-light-color: var(--color-50);
+	--2nd-light-color: var(--color-100);
+	--3rd-light-color: var(--color-200);
 
-	--lightest-ui-color: var(--color-500);
-	--lighter-ui-color: var(--color-600);
-	--light-ui-color: var(--color-700);
+	--1st-light-ui-color: var(--color-500);
+	--2nd-light-ui-color: var(--color-600);
+	--3rd-light-ui-color: var(--color-700);
 
 	/* Dark Colors: */
-	--dark-color: var(--color-800);
-	--darker-color: var(--color-900);
-	--darkest-color: var(--color-950);
+	--1st-dark-color: var(--color-800);
+	--2nd-dark-color: var(--color-900);
+	--3rd-dark-color: var(--color-950);
 
-	--dark-ui-color: var(--color-300);
-	--darker-ui-color: var(--color-400);
-	--darkest-ui-color: var(--color-500);
+	--1st-dark-ui-color: var(--color-300);
+	--2nd-dark-ui-color: var(--color-400);
+	--3rd-dark-ui-color: var(--color-500);
 
 	/* Scheme Colors (Light): */
-	--1st-color: var(--lightest-color);
-	--2nd-color: var(--lighter-color);
-	--3rd-color: var(--light-color);
+	--1st-color: var(--1st-light-color);
+	--2nd-color: var(--2nd-light-color);
+	--3rd-color: var(--3rd-light-color);
 
-	--1st-ui-color: var(--lightest-ui-color);
-	--2nd-ui-color: var(--lighter-ui-color);
-	--3rd-ui-color: var(--light-ui-color);
+	--1st-ui-color: var(--1st-light-ui-color);
+	--2nd-ui-color: var(--2nd-light-ui-color);
+	--3rd-ui-color: var(--3rd-light-ui-color);
 
 	/* Scheme Colors (Dark): */
 	@media (prefers-color-scheme: dark) {
-		--1st-color: var(--dark-color);
-		--2nd-color: var(--darker-color);
-		--3rd-color: var(--darkest-color);
+		--1st-color: var(--1st-dark-color);
+		--2nd-color: var(--2nd-dark-color);
+		--3rd-color: var(--3rd-dark-color);
 
-		--1st-ui-color: var(--dark-ui-color);
-		--2nd-ui-color: var(--darker-ui-color);
-		--3rd-ui-color: var(--darkest-ui-color);
+		--1st-ui-color: var(--1st-dark-ui-color);
+		--2nd-ui-color: var(--2nd-dark-ui-color);
+		--3rd-ui-color: var(--3rd-dark-ui-color);
 	}
 }
