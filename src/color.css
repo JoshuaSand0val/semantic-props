@@ -27,10 +27,10 @@
 	--color-950: oklch(from var(--color) 5% c h);
 
 	/* Text Color: */
-	--text-color: oklch(from var(--color) 10% 0.01 h);
+	--text-color: oklch(from var(--color-900) l 0 h);
 
 	@media (prefers-color-scheme: dark) {
-		--text-color: oklch(from var(--color) 90% 0.01 h);
+		--text-color: oklch(from var(--color-100) l 0 h);
 	}
 
 	/* Light Colors: */
