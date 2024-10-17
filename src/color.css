@@ -38,18 +38,18 @@
 	--lighter-color: var(--color-100);
 	--light-color: var(--color-200);
 
-	--lightest-ui-color: var(--color-400);
-	--lighter-ui-color: var(--color-500);
-	--light-ui-color: var(--color-600);
+	--lightest-ui-color: var(--color-500);
+	--lighter-ui-color: var(--color-600);
+	--light-ui-color: var(--color-700);
 
 	/* Dark Colors: */
 	--dark-color: var(--color-800);
 	--darker-color: var(--color-900);
 	--darkest-color: var(--color-950);
 
-	--dark-ui-color: var(--color-400);
-	--darker-ui-color: var(--color-500);
-	--darkest-ui-color: var(--color-600);
+	--dark-ui-color: var(--color-300);
+	--darker-ui-color: var(--color-400);
+	--darkest-ui-color: var(--color-500);
 
 	/* Scheme Colors (Light): */
 	--1st-color: var(--lightest-color);
