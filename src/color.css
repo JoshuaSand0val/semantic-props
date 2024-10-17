@@ -1,0 +1,73 @@
+/* Semantic Props for color. */
+
+:where(.--semantic) {
+	/* Color Palette: */
+	--theme-color: oklch(95% 0.01 248);
+	--primary-color: oklch(70% 0.15 240);
+	--secondary-color: oklch(60% 0.02 240);
+	--success-color: oklch(70% 0.15 148);
+	--danger-color: oklch(60% 0.20 24);
+	--warning-color: oklch(80% 0.16 86);
+	--info-color: oklch(80% 0.15 216);
+
+	/* Relative Color: */
+	--color: var(--theme-color);
+
+	/* Color Weights: */
+	--color-50: oklch(from var(--color) 95% c h);
+	--color-100: oklch(from var(--color) 90% c h);
+	--color-200: oklch(from var(--color) 80% c h);
+	--color-300: oklch(from var(--color) 70% c h);
+	--color-400: oklch(from var(--color) 60% c h);
+	--color-500: oklch(from var(--color) 50% c h);
+	--color-600: oklch(from var(--color) 40% c h);
+	--color-700: oklch(from var(--color) 30% c h);
+	--color-800: oklch(from var(--color) 20% c h);
+	--color-900: oklch(from var(--color) 10% c h);
+	--color-950: oklch(from var(--color) 5% c h);
+
+	/* Text Color: */
+	--text-color: oklch(from var(--color) 10% 0.01 h);
+
+	@media (prefers-color-scheme: dark) {
+		--text-color: oklch(from var(--color) 90% 0.01 h);
+	}
+
+	/* Light Colors: */
+	--lightest-bg-color: var(--color-50);
+	--lighter-bg-color: var(--color-100);
+	--light-bg-color: var(--color-200);
+
+	--lightest-color: var(--color-300);
+	--lighter-color: var(--color-400);
+	--light-color: var(--color-500);
+
+	/* Dark Colors: */
+	--dark-bg-color: var(--color-800);
+	--darker-bg-color: var(--color-900);
+	--darkest-bg-color: var(--color-950);
+
+	--dark-color: var(--color-500);
+	--darker-color: var(--color-600);
+	--darkest-color: var(--color-700);
+
+	/* Scheme Colors (Light): */
+	--1st-bg-color: var(--lightest-bg-color);
+	--2nd-bg-color: var(--lighter-bg-color);
+	--3rd-bg-color: var(--light-bg-color);
+
+	--1st-color: var(--dark-color);
+	--2nd-color: var(--darker-color);
+	--3rd-color: var(--darkest-color);
+
+	/* Scheme Colors (Dark): */
+	@media (prefers-color-scheme: dark) {
+		--1st-bg-color: var(--dark-bg-color);
+		--2nd-bg-color: var(--darker-bg-color);
+		--3rd-bg-color: var(--darkest-bg-color);
+
+		--1st-color: var(--lightest-color);
+		--2nd-color: var(--lighter-color);
+		--3rd-color: var(--light-color);
+	}
+}
