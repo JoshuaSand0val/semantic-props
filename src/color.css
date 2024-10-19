@@ -26,48 +26,49 @@
 	--color-900: oklch(from var(--color) 10% c h);
 	--color-950: oklch(from var(--color) 5% c h);
 
-	/* Text Color: */
-	--text-color: oklch(from var(--color-900) l 0 h);
+	/* Light Scheme Colors: */
+	--light-1st-color: var(--color-50);
+	--light-2nd-color: var(--color-100);
+	--light-3rd-color: var(--color-200);
 
-	@media (prefers-color-scheme: dark) {
-		--text-color: oklch(from var(--color-100) l 0 h);
-	}
+	--light-1st-contrast-color: var(--color-500);
+	--light-2nd-contrast-color: var(--color-600);
+	--light-3rd-contrast-color: var(--color-700);
 
-	/* Light Colors: */
-	--1st-light-color: var(--color-50);
-	--2nd-light-color: var(--color-100);
-	--3rd-light-color: var(--color-200);
+	--light-text-color: oklch(from var(--color-900) l 0 h);
 
-	--1st-light-ui-color: var(--color-500);
-	--2nd-light-ui-color: var(--color-600);
-	--3rd-light-ui-color: var(--color-700);
+	/* Dark Scheme Colors: */
+	--dark-1st-color: var(--color-800);
+	--dark-2nd-color: var(--color-900);
+	--dark-3rd-color: var(--color-950);
 
-	/* Dark Colors: */
-	--1st-dark-color: var(--color-800);
-	--2nd-dark-color: var(--color-900);
-	--3rd-dark-color: var(--color-950);
+	--dark-1st-contrast-color: var(--color-300);
+	--dark-2nd-contrast-color: var(--color-400);
+	--dark-3rd-contrast-color: var(--color-500);
 
-	--1st-dark-ui-color: var(--color-300);
-	--2nd-dark-ui-color: var(--color-400);
-	--3rd-dark-ui-color: var(--color-500);
+	--dark-text-color: oklch(from var(--color-100) l 0 h);
 
 	/* Scheme Colors (Light): */
-	--1st-color: var(--1st-light-color);
-	--2nd-color: var(--2nd-light-color);
-	--3rd-color: var(--3rd-light-color);
+	--1st-color: var(--light-1st-color);
+	--2nd-color: var(--light-2nd-color);
+	--3rd-color: var(--light-3rd-color);
 
-	--1st-ui-color: var(--1st-light-ui-color);
-	--2nd-ui-color: var(--2nd-light-ui-color);
-	--3rd-ui-color: var(--3rd-light-ui-color);
+	--1st-contrast-color: var(--light-1st-contrast-color);
+	--2nd-contrast-color: var(--light-2nd-contrast-color);
+	--3rd-contrast-color: var(--light-3rd-contrast-color);
+
+	--text-color: var(--light-text-color);
 
 	/* Scheme Colors (Dark): */
 	@media (prefers-color-scheme: dark) {
-		--1st-color: var(--1st-dark-color);
-		--2nd-color: var(--2nd-dark-color);
-		--3rd-color: var(--3rd-dark-color);
+		--1st-color: var(--dark-1st-color);
+		--2nd-color: var(--dark-2nd-color);
+		--3rd-color: var(--dark-3rd-color);
 
-		--1st-ui-color: var(--1st-dark-ui-color);
-		--2nd-ui-color: var(--2nd-dark-ui-color);
-		--3rd-ui-color: var(--3rd-dark-ui-color);
+		--1st-contrast-color: var(--dark-1st-contrast-color);
+		--2nd-contrast-color: var(--dark-2nd-contrast-color);
+		--3rd-contrast-color: var(--dark-3rd-contrast-color);
+
+		--text-color: var(--dark-text-color);
 	}
 }
