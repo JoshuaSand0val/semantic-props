@@ -1,18 +1,18 @@
 /* Semantic Props for sizing padding, margin, ect. */
-/* https://utopia.fyi/space/calculator/?c=180,16,1.125,1600,18,1.333,5,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
+/* https://utopia.fyi/space/calculator?c=180,16,1.125,1920,16,1.25,10,2,&s=0.75%7C0.5%7C0.25,1.5%7C2%7C3%7C4%7C6,3xs-3xl&g=s,l,xl,12 */
 
 :where(.semantic) {
 	/* Base Sizes: */
-	--3xs-size: clamp(0.25rem, 0.2421rem + 0.0704vw, 0.3125rem);
-	--2xs-size: clamp(0.5rem, 0.4921rem + 0.0704vw, 0.5625rem);
-	--xs-size: clamp(0.75rem, 0.7342rem + 0.1408vw, 0.875rem);
-	--sm-size: clamp(1rem, 0.9842rem + 0.1408vw, 1.125rem);
-	--md-size: clamp(1.5rem, 1.4762rem + 0.2113vw, 1.6875rem);
-	--lg-size: clamp(2rem, 1.9683rem + 0.2817vw, 2.25rem);
-	--xl-size: clamp(3rem, 2.9525rem + 0.4225vw, 3.375rem);
-	--2xl-size: clamp(4rem, 3.9366rem + 0.5634vw, 4.5rem);
-	--3xl-size: clamp(6rem, 5.9049rem + 0.8451vw, 6.75rem);
+	--3xs-size: 0.25rem;
+	--2xs-size: 0.5rem;
+	--xs-size: 0.75rem;
+	--sm-size: 1rem;
+	--md-size: 1.5rem;
+	--lg-size: 2rem;
+	--xl-size: 3rem;
+	--2xl-size: 4rem;
+	--3xl-size: 6rem;
 
 	/* Range Size (3xs to 3xl): */
-	--range-size: clamp(0.25rem, -0.5739rem + 7.3239vw, 6.75rem);
+	--range-size: clamp(0.25rem, -0.3448rem + 5.2874vw, 6rem);
 }
