@@ -10,9 +10,9 @@
 
 	/* Line Heights: */
 	--font-height: 1.6;
-	--monospace-font-height: var(--line-height);
+	--monospace-font-height: var(--font-height);
 	--display-font-height: 1.2;
-	--brand-font-height: var(--line-height);
+	--brand-font-height: var(--font-height);
 
 	/* Font Weights: */
 	--regular-font: 400;
