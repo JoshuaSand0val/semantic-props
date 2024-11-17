@@ -9,10 +9,10 @@
 	--brand-font: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
 
 	/* Line Heights: */
-	--font-height: 1.6;
-	--monospace-font-height: var(--font-height);
-	--display-font-height: 1.2;
-	--brand-font-height: var(--font-height);
+	--line-height: 1.6;
+	--monospace-line-height: var(--line-height);
+	--display-line-height: 1.2;
+	--brand-line-height: var(--line-height);
 
 	/* Font Weights: */
 	--regular-font: 400;
