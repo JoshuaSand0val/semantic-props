@@ -1,32 +1,18 @@
-/* Size: Responsive custom property sizes for padding, margin, ect. */
+/* Semantic Props for sizing padding, margin, ect. */
+/* https://utopia.fyi/space/calculator?c=180,16,1.125,1600,18,1.333,5,3,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-2xl&g=s,l,xl,12 */
 
-:where(:root, .--semantic) {
-	/* Size Scaling Ratio: */
-	--size-scale-ratio: 1.618;
-
+:where(.semantic) {
 	/* Base Sizes: */
-	--3xs-size: calc(var(--2xs-size) / var(--size-scale-ratio));
-	--2xs-size: calc(var(--xs-size) / var(--size-scale-ratio));
-	--xs-size: calc(var(--sm-size) / var(--size-scale-ratio));
-	--sm-size: calc(var(--md-size) / var(--size-scale-ratio));
-	--md-size: 1.618rem;
-	--lg-size: calc(var(--md-size) * var(--size-scale-ratio));
-	--xl-size: calc(var(--lg-size) * var(--size-scale-ratio));
-	--2xl-size: calc(var(--xl-size) * var(--size-scale-ratio));
-	--3xl-size: calc(var(--2xl-size) * var(--size-scale-ratio));
+	--3xs-size: clamp(0.25rem, 0.2421rem + 0.0704vw, 0.3125rem);
+	--2xs-size: clamp(0.5rem, 0.4921rem + 0.0704vw, 0.5625rem);
+	--xs-size: clamp(0.75rem, 0.7342rem + 0.1408vw, 0.875rem);
+	--sm-size: clamp(1rem, 0.9842rem + 0.1408vw, 1.125rem);
+	--md-size: clamp(1.5rem, 1.4762rem + 0.2113vw, 1.6875rem);
+	--lg-size: clamp(2rem, 1.9683rem + 0.2817vw, 2.25rem);
+	--xl-size: clamp(3rem, 2.9525rem + 0.4225vw, 3.375rem);
+	--2xl-size: clamp(4rem, 3.9366rem + 0.5634vw, 4.5rem);
+	--3xl-size: clamp(6rem, 5.9049rem + 0.8451vw, 6.75rem);
 
-	/* Responsive Size: */
-	--responsive-size: var(--sm-size);
-
-	&:where(.--sm-breakpoint) {
-		--responsive-size: var(--md-size);
-	}
-
-	&:where(.--lg-breakpoint) {
-		--responsive-size: var(--lg-size);
-	}
-
-	&:where(.--xl-breakpoint) {
-		--responsive-size: var(--xl-size);
-	}
+	/* Range Size (3xs to 3xl): */
+	--range-size: clamp(0.25rem, -0.5739rem + 7.3239vw, 6.75rem);
 }
