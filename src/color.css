@@ -1,62 +1,65 @@
-/* Semantic Props for color. */
+/* Semantic Props for color. Follows the 60-30-10 color theory rule. */
 
 :where(.semantic) {
-	/* Baseline Color: */
-	--1st-color: oklch(1.00 0.01 240);
-	--2nd-color: oklch(0.95 0.01 240);
-	--3rd-color: oklch(0.90 0.01 240);
+	/* Primary Color: The dominant color, often neutral.
+	   Mostly used as the background. */
+	--1st-primary-color: oklch(1.00 0.01 240);
+	--2nd-primary-color: oklch(0.95 0.01 240);
+	--3rd-primary-color: oklch(0.90 0.01 240);
 
-	/* Contrast Color: */
-	--1st-contrast-color: oklch(0.60 0.15 240);
-	--2nd-contrast-color: oklch(0.55 0.15 240);
-	--3rd-contrast-color: oklch(0.50 0.15 240);
+	/* Secondary Color: Supports the dominant color adding visual interest.
+	   Mostly used for the text. */
+	--1st-secondary-color: oklch(0.20 0.03 240);
+	--2nd-secondary-color: oklch(0.15 0.03 240);
+	--3rd-secondary-color: oklch(0.10 0.03 240);
 
-	/* High Contrast Color: */
-	--1st-high-contrast-color: oklch(0.20 0.02 240);
-	--2nd-high-contrast-color: oklch(0.15 0.02 240);
-	--3rd-high-contrast-color: oklch(0.10 0.02 240);
+	/* Accent Color: Highlights specific features or parts of the design.
+	   Mostly used for highlighting anchor links. */
+	--1st-accent-color: oklch(0.60 0.15 240);
+	--2nd-accent-color: oklch(0.55 0.15 240);
+	--3rd-accent-color: oklch(0.50 0.15 240);
 
-	/* Contrast Color Accents: */
+	/* Alternate Color Accents: */
 
 	&:where(.secondary) {
-		--1st-contrast-color: oklch(0.60 0.02 240);
-		--2nd-contrast-color: oklch(0.55 0.02 240);
-		--3rd-contrast-color: oklch(0.50 0.02 240);
+		--1st-accent-color: oklch(0.60 0.02 240);
+		--2nd-accent-color: oklch(0.55 0.02 240);
+		--3rd-accent-color: oklch(0.50 0.02 240);
 	}
 
 	&:where(.success) {
-		--1st-contrast-color: oklch(0.60 0.15 160);
-		--2nd-contrast-color: oklch(0.55 0.15 160);
-		--3rd-contrast-color: oklch(0.50 0.15 160);
+		--1st-accent-color: oklch(0.60 0.15 160);
+		--2nd-accent-color: oklch(0.55 0.15 160);
+		--3rd-accent-color: oklch(0.50 0.15 160);
 	}
 
 	&:where(.danger) {
-		--1st-contrast-color: oklch(0.60 0.25 20);
-		--2nd-contrast-color: oklch(0.55 0.25 20);
-		--3rd-contrast-color: oklch(0.50 0.25 20);
+		--1st-accent-color: oklch(0.60 0.25 20);
+		--2nd-accent-color: oklch(0.55 0.25 20);
+		--3rd-accent-color: oklch(0.50 0.25 20);
 	}
 
 	&:where(.warning) {
-		--1st-contrast-color: oklch(0.60 0.10 90);
-		--2nd-contrast-color: oklch(0.55 0.10 90);
-		--3rd-contrast-color: oklch(0.50 0.10 90);
+		--1st-accent-color: oklch(0.60 0.10 90);
+		--2nd-accent-color: oklch(0.55 0.10 90);
+		--3rd-accent-color: oklch(0.50 0.10 90);
 	}
 
 	&:where(.info) {
-		--1st-contrast-color: oklch(0.60 0.10 210);
-		--2nd-contrast-color: oklch(0.55 0.10 210);
-		--3rd-contrast-color: oklch(0.50 0.10 210);
+		--1st-accent-color: oklch(0.60 0.10 210);
+		--2nd-accent-color: oklch(0.55 0.10 210);
+		--3rd-accent-color: oklch(0.50 0.10 210);
 	}
 
 	/* Dark Color Scheme: */
 
 	@media (prefers-color-scheme: dark) {
-		--1st-color: oklch(0.20 0.01 240);
-		--2nd-color: oklch(0.15 0.01 240);
-		--3rd-color: oklch(0.10 0.01 240);
+		--1st-primary-color: oklch(0.20 0.01 240);
+		--2nd-primary-color: oklch(0.15 0.01 240);
+		--3rd-primary-color: oklch(0.10 0.01 240);
 
-		--1st-high-contrast-color: oklch(0.90 0.02 240);
-		--2nd-high-contrast-color: oklch(0.85 0.02 240);
-		--3rd-high-contrast-color: oklch(0.80 0.02 240);
+		--1st-secondary-color: oklch(0.90 0.03 240);
+		--2nd-secondary-color: oklch(0.85 0.03 240);
+		--3rd-secondary-color: oklch(0.80 0.03 240);
 	}
 }
