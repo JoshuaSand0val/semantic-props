@@ -1,8 +1,6 @@
 /* Import: All CSS files imported. */
-@import "breakpoint.css";
 @import "color.css";
 @import "container.css";
-@import "deprecated.css";
 @import "font.css";
 @import "index.css";
 @import "safe.css";
