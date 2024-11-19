@@ -1,11 +1,11 @@
 /* Semantic Props for color. */
 
 :where(.semantic) {
-	/* Neutral Color: The color for contrast comparison.
+	/* Color: The base color for contrast comparison.
 	 * Mostly for backgrounds. */
-	--1st-neutral-color: var(--white);
-	--2nd-neutral-color: var(--gray-100);
-	--3rd-neutral-color: var(--gray-200);
+	--1st-color: var(--white);
+	--2nd-color: var(--gray-100);
+	--3rd-color: var(--gray-200);
 
 	/* Contrast Color: The color with maximum contrast.
 	 * Mostly for text. */
@@ -26,7 +26,7 @@
 	--3rd-primary-color: var(--blue-600);
 
 	/* Secondary Accent Color:
-	 * Used to highlight alternative interactive elements. */
+	 * Used to highlight alternative elements. */
 	--1st-secondary-color: var(--gray-400);
 	--2nd-secondary-color: var(--gray-500);
 	--3rd-secondary-color: var(--gray-600);
@@ -58,9 +58,9 @@
 	/* Dark Color Scheme: */
 
 	@media (prefers-color-scheme: dark) {
-		--1st-neutral-color: var(--gray-800);
-		--2nd-neutral-color: var(--gray-900);
-		--3rd-neutral-color: var(--black);
+		--1st-color: var(--gray-800);
+		--2nd-color: var(--gray-900);
+		--3rd-color: var(--black);
 
 		--1st-contrast-color: var(--gray-100);
 		--2nd-contrast-color: var(--gray-200);
@@ -69,9 +69,11 @@
 
 	/* Arbitrary Colors: */
 
+	/* White / Black: */
 	--white: white;
 	--black: black;
 
+	/* Gray: */
 	--gray-100: oklch(0.9 0.02 240);
 	--gray-200: oklch(0.8 0.02 240);
 	--gray-300: oklch(0.7 0.02 240);
@@ -82,6 +84,7 @@
 	--gray-800: oklch(0.2 0.02 240);
 	--gray-900: oklch(0.1 0.02 240);
 
+	/* Blue: */
 	--blue-100: oklch(0.9 0.15 240);
 	--blue-200: oklch(0.8 0.15 240);
 	--blue-300: oklch(0.7 0.15 240);
@@ -92,6 +95,7 @@
 	--blue-800: oklch(0.2 0.15 240);
 	--blue-900: oklch(0.1 0.15 240);
 
+	/* Indigo: */
 	--indigo-100: oklch(0.9 0.15 280);
 	--indigo-200: oklch(0.8 0.15 280);
 	--indigo-300: oklch(0.7 0.15 280);
@@ -102,6 +106,7 @@
 	--indigo-800: oklch(0.2 0.15 280);
 	--indigo-900: oklch(0.1 0.15 280);
 
+	/* Purple: */
 	--purple-100: oklch(0.9 0.2 300);
 	--purple-200: oklch(0.8 0.2 300);
 	--purple-300: oklch(0.7 0.2 300);
@@ -112,6 +117,7 @@
 	--purple-800: oklch(0.2 0.2 300);
 	--purple-900: oklch(0.1 0.2 300);
 
+	/* Pink: */
 	--pink-100: oklch(0.9 0.1 5);
 	--pink-200: oklch(0.8 0.1 5);
 	--pink-300: oklch(0.7 0.1 5);
@@ -122,6 +128,7 @@
 	--pink-800: oklch(0.2 0.1 5);
 	--pink-900: oklch(0.1 0.1 5);
 
+	/* Red: */
 	--red-100: oklch(0.9 0.25 30);
 	--red-200: oklch(0.8 0.25 30);
 	--red-300: oklch(0.7 0.25 30);
@@ -132,6 +139,7 @@
 	--red-800: oklch(0.2 0.25 30);
 	--red-900: oklch(0.1 0.25 30);
 
+	/* Orange: */
 	--orange-100: oklch(0.9 0.17 60);
 	--orange-200: oklch(0.8 0.17 60);
 	--orange-300: oklch(0.7 0.17 60);
@@ -142,6 +150,7 @@
 	--orange-800: oklch(0.2 0.17 60);
 	--orange-900: oklch(0.1 0.17 60);
 
+	/* Yellow: */
 	--yellow-100: oklch(0.9 0.15 90);
 	--yellow-200: oklch(0.8 0.15 90);
 	--yellow-300: oklch(0.7 0.15 90);
@@ -152,6 +161,7 @@
 	--yellow-800: oklch(0.2 0.15 90);
 	--yellow-900: oklch(0.1 0.15 90);
 
+	/* Green: */
 	--green-100: oklch(0.9 0.15 150);
 	--green-200: oklch(0.8 0.15 150);
 	--green-300: oklch(0.7 0.15 150);
@@ -162,6 +172,7 @@
 	--green-800: oklch(0.2 0.15 150);
 	--green-900: oklch(0.1 0.15 150);
 
+	/* Teal: */
 	--teal-100: oklch(0.9 0.1 180);
 	--teal-200: oklch(0.8 0.1 180);
 	--teal-300: oklch(0.7 0.1 180);
@@ -172,6 +183,7 @@
 	--teal-800: oklch(0.2 0.1 180);
 	--teal-900: oklch(0.1 0.1 180);
 
+	/* Cyan: */
 	--cyan-100: oklch(0.9 0.1 200);
 	--cyan-200: oklch(0.8 0.1 200);
 	--cyan-300: oklch(0.7 0.1 200);
