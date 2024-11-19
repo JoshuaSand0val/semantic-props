@@ -15,9 +15,9 @@
 
 	/* Accent Color: Highlights specific features or parts of the design.
 	 * Mostly for interactive elements such as anchor links. */
-	 --1st-accent-color: var(--1st-primary-color);
-	 --2nd-accent-color: var(--2nd-primary-color);
-	 --3rd-accent-color: var(--3rd-primary-color);
+	--1st-accent-color: var(--1st-primary-color);
+	--2nd-accent-color: var(--2nd-primary-color);
+	--3rd-accent-color: var(--3rd-primary-color);
 
 	/* Primary Accent Color:
 	 * Used to highlight the default interactive element. */
