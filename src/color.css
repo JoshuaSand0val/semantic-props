@@ -3,15 +3,15 @@
 :where(.semantic) {
 	/* Neutral Color: The color for contrast comparison.
 	 * Mostly for backgrounds. */
-	--1st-neutral-color: oklch(1.00 0.01 240);
-	--2nd-neutral-color: oklch(0.95 0.01 240);
-	--3rd-neutral-color: oklch(0.90 0.01 240);
+	--1st-neutral-color: var(--white);
+	--2nd-neutral-color: var(--gray-100);
+	--3rd-neutral-color: var(--gray-200);
 
 	/* Contrast Color: The color with maximum contrast.
 	 * Mostly for text. */
-	--1st-contrast-color: oklch(0.20 0.03 240);
-	--2nd-contrast-color: oklch(0.15 0.03 240);
-	--3rd-contrast-color: oklch(0.10 0.03 240);
+	--1st-contrast-color: var(--gray-700);
+	--2nd-contrast-color: var(--gray-800);
+	--3rd-contrast-color: var(--gray-900);
 
 	/* Accent Color: Highlights specific features or parts of the design.
 	 * Mostly for interactive elements such as anchor links. */
@@ -21,49 +21,164 @@
 
 	/* Primary Accent Color:
 	 * Used to highlight the default interactive element. */
-	--1st-primary-color: oklch(0.60 0.15 240);
-	--2nd-primary-color: oklch(0.55 0.15 240);
-	--3rd-primary-color: oklch(0.50 0.15 240);
+	--1st-primary-color: var(--blue-400);
+	--2nd-primary-color: var(--blue-500);
+	--3rd-primary-color: var(--blue-600);
 
 	/* Secondary Accent Color:
 	 * Used to highlight alternative interactive elements. */
-	--1st-secondary-color: oklch(0.60 0.02 240);
-	--2nd-secondary-color: oklch(0.55 0.02 240);
-	--3rd-secondary-color: oklch(0.50 0.02 240);
+	--1st-secondary-color: var(--gray-400);
+	--2nd-secondary-color: var(--gray-500);
+	--3rd-secondary-color: var(--gray-600);
 
 	/* Success Accent Color:
 	 * Used to highlight confirmative user-actions. */
-	--1st-success-color: oklch(0.60 0.15 160);
-	--2nd-success-color: oklch(0.55 0.15 160);
-	--3rd-success-color: oklch(0.50 0.15 160);
+	--1st-success-color: var(--green-400);
+	--2nd-success-color: var(--green-500);
+	--3rd-success-color: var(--green-600);
 
 	/* Danger Accent Color:
 	 * Used to highlight consequential user-actions. */
-	--1st-danger-color: oklch(0.60 0.25 20);
-	--2nd-danger-color: oklch(0.55 0.25 20);
-	--3rd-danger-color: oklch(0.50 0.25 20);
+	--1st-danger-color: var(--red-400);
+	--2nd-danger-color: var(--red-500);
+	--3rd-danger-color: var(--red-600);
 
 	/* Warning Accent Color:
 	 * Used to warn of consequential user-actions. */
-	--1st-warning-color: oklch(0.60 0.10 90);
-	--2nd-warning-color: oklch(0.55 0.10 90);
-	--3rd-warning-color: oklch(0.50 0.10 90);
+	--1st-warning-color: var(--yellow-400);
+	--2nd-warning-color: var(--yellow-500);
+	--3rd-warning-color: var(--yellow-600);
 
 	/* Info Accent Color:
 	 * Used to bring attention to information. */
-	--1st-info-color: oklch(0.60 0.10 210);
-	--2nd-info-color: oklch(0.55 0.10 210);
-	--3rd-info-color: oklch(0.50 0.10 210);
+	--1st-info-color: var(--cyan-400);
+	--2nd-info-color: var(--cyan-500);
+	--3rd-info-color: var(--cyan-600);
 
 	/* Dark Color Scheme: */
 
 	@media (prefers-color-scheme: dark) {
-		--1st-neutral-color: oklch(0.20 0.01 240);
-		--2nd-neutral-color: oklch(0.15 0.01 240);
-		--3rd-neutral-color: oklch(0.10 0.01 240);
+		--1st-neutral-color: var(--gray-800);
+		--2nd-neutral-color: var(--gray-900);
+		--3rd-neutral-color: var(--black);
 
-		--1st-contrast-color: oklch(0.90 0.03 240);
-		--2nd-contrast-color: oklch(0.85 0.03 240);
-		--3rd-contrast-color: oklch(0.80 0.03 240);
+		--1st-contrast-color: var(--gray-100);
+		--2nd-contrast-color: var(--gray-200);
+		--3rd-contrast-color: var(--gray-300);
 	}
+
+	/* Arbitrary Colors: */
+
+	--white: white;
+	--black: black;
+
+	--gray-100: oklch(0.9 0.02 240);
+	--gray-200: oklch(0.8 0.02 240);
+	--gray-300: oklch(0.7 0.02 240);
+	--gray-400: oklch(0.6 0.02 240);
+	--gray-500: oklch(0.5 0.02 240);
+	--gray-600: oklch(0.4 0.02 240);
+	--gray-700: oklch(0.3 0.02 240);
+	--gray-800: oklch(0.2 0.02 240);
+	--gray-900: oklch(0.1 0.02 240);
+
+	--blue-100: oklch(0.9 0.15 240);
+	--blue-200: oklch(0.8 0.15 240);
+	--blue-300: oklch(0.7 0.15 240);
+	--blue-400: oklch(0.6 0.15 240);
+	--blue-500: oklch(0.5 0.15 240);
+	--blue-600: oklch(0.4 0.15 240);
+	--blue-700: oklch(0.3 0.15 240);
+	--blue-800: oklch(0.2 0.15 240);
+	--blue-900: oklch(0.1 0.15 240);
+
+	--indigo-100: oklch(0.9 0.15 280);
+	--indigo-200: oklch(0.8 0.15 280);
+	--indigo-300: oklch(0.7 0.15 280);
+	--indigo-400: oklch(0.6 0.15 280);
+	--indigo-500: oklch(0.5 0.15 280);
+	--indigo-600: oklch(0.4 0.15 280);
+	--indigo-700: oklch(0.3 0.15 280);
+	--indigo-800: oklch(0.2 0.15 280);
+	--indigo-900: oklch(0.1 0.15 280);
+
+	--purple-100: oklch(0.9 0.2 300);
+	--purple-200: oklch(0.8 0.2 300);
+	--purple-300: oklch(0.7 0.2 300);
+	--purple-400: oklch(0.6 0.2 300);
+	--purple-500: oklch(0.5 0.2 300);
+	--purple-600: oklch(0.4 0.2 300);
+	--purple-700: oklch(0.3 0.2 300);
+	--purple-800: oklch(0.2 0.2 300);
+	--purple-900: oklch(0.1 0.2 300);
+
+	--pink-100: oklch(0.9 0.1 5);
+	--pink-200: oklch(0.8 0.1 5);
+	--pink-300: oklch(0.7 0.1 5);
+	--pink-400: oklch(0.6 0.1 5);
+	--pink-500: oklch(0.5 0.1 5);
+	--pink-600: oklch(0.4 0.1 5);
+	--pink-700: oklch(0.3 0.1 5);
+	--pink-800: oklch(0.2 0.1 5);
+	--pink-900: oklch(0.1 0.1 5);
+
+	--red-100: oklch(0.9 0.25 30);
+	--red-200: oklch(0.8 0.25 30);
+	--red-300: oklch(0.7 0.25 30);
+	--red-400: oklch(0.6 0.25 30);
+	--red-500: oklch(0.5 0.25 30);
+	--red-600: oklch(0.4 0.25 30);
+	--red-700: oklch(0.3 0.25 30);
+	--red-800: oklch(0.2 0.25 30);
+	--red-900: oklch(0.1 0.25 30);
+
+	--orange-100: oklch(0.9 0.17 60);
+	--orange-200: oklch(0.8 0.17 60);
+	--orange-300: oklch(0.7 0.17 60);
+	--orange-400: oklch(0.6 0.17 60);
+	--orange-500: oklch(0.5 0.17 60);
+	--orange-600: oklch(0.4 0.17 60);
+	--orange-700: oklch(0.3 0.17 60);
+	--orange-800: oklch(0.2 0.17 60);
+	--orange-900: oklch(0.1 0.17 60);
+
+	--yellow-100: oklch(0.9 0.15 90);
+	--yellow-200: oklch(0.8 0.15 90);
+	--yellow-300: oklch(0.7 0.15 90);
+	--yellow-400: oklch(0.6 0.15 90);
+	--yellow-500: oklch(0.5 0.15 90);
+	--yellow-600: oklch(0.4 0.15 90);
+	--yellow-700: oklch(0.3 0.15 90);
+	--yellow-800: oklch(0.2 0.15 90);
+	--yellow-900: oklch(0.1 0.15 90);
+
+	--green-100: oklch(0.9 0.15 150);
+	--green-200: oklch(0.8 0.15 150);
+	--green-300: oklch(0.7 0.15 150);
+	--green-400: oklch(0.6 0.15 150);
+	--green-500: oklch(0.5 0.15 150);
+	--green-600: oklch(0.4 0.15 150);
+	--green-700: oklch(0.3 0.15 150);
+	--green-800: oklch(0.2 0.15 150);
+	--green-900: oklch(0.1 0.15 150);
+
+	--teal-100: oklch(0.9 0.1 180);
+	--teal-200: oklch(0.8 0.1 180);
+	--teal-300: oklch(0.7 0.1 180);
+	--teal-400: oklch(0.6 0.1 180);
+	--teal-500: oklch(0.5 0.1 180);
+	--teal-600: oklch(0.4 0.1 180);
+	--teal-700: oklch(0.3 0.1 180);
+	--teal-800: oklch(0.2 0.1 180);
+	--teal-900: oklch(0.1 0.1 180);
+
+	--cyan-100: oklch(0.9 0.1 200);
+	--cyan-200: oklch(0.8 0.1 200);
+	--cyan-300: oklch(0.7 0.1 200);
+	--cyan-400: oklch(0.6 0.1 200);
+	--cyan-500: oklch(0.5 0.1 200);
+	--cyan-600: oklch(0.4 0.1 200);
+	--cyan-700: oklch(0.3 0.1 200);
+	--cyan-800: oklch(0.2 0.1 200);
+	--cyan-900: oklch(0.1 0.1 200);
 }
