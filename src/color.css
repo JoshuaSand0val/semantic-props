@@ -1,65 +1,69 @@
-/* Semantic Props for color. Follows the 60-30-10 color theory rule. */
+/* Semantic Props for color. */
 
 :where(.semantic) {
-	/* Primary Color: The dominant color, often neutral.
-	   Mostly used as the background. */
-	--1st-primary-color: oklch(1.00 0.01 240);
-	--2nd-primary-color: oklch(0.95 0.01 240);
-	--3rd-primary-color: oklch(0.90 0.01 240);
+	/* Neutral Color: The color for contrast comparison.
+	 * Mostly for backgrounds. */
+	--1st-neutral-color: oklch(1.00 0.01 240);
+	--2nd-neutral-color: oklch(0.95 0.01 240);
+	--3rd-neutral-color: oklch(0.90 0.01 240);
 
-	/* Secondary Color: Supports the dominant color adding visual interest.
-	   Mostly used for the text. */
-	--1st-secondary-color: oklch(0.20 0.03 240);
-	--2nd-secondary-color: oklch(0.15 0.03 240);
-	--3rd-secondary-color: oklch(0.10 0.03 240);
+	/* Contrast Color: The color with maximum contrast.
+	 * Mostly for text. */
+	--1st-contrast-color: oklch(0.20 0.03 240);
+	--2nd-contrast-color: oklch(0.15 0.03 240);
+	--3rd-contrast-color: oklch(0.10 0.03 240);
 
 	/* Accent Color: Highlights specific features or parts of the design.
-	   Mostly used for highlighting anchor links. */
-	--1st-accent-color: oklch(0.60 0.15 240);
-	--2nd-accent-color: oklch(0.55 0.15 240);
-	--3rd-accent-color: oklch(0.50 0.15 240);
+	 * Mostly for interactive elements such as anchor links. */
+	 --1st-accent-color: var(--1st-primary-color);
+	 --2nd-accent-color: var(--2nd-primary-color);
+	 --3rd-accent-color: var(--3rd-primary-color);
 
-	/* Alternate Color Accents: */
+	/* Primary Accent Color:
+	 * Used to highlight the default interactive element. */
+	--1st-primary-color: oklch(0.60 0.15 240);
+	--2nd-primary-color: oklch(0.55 0.15 240);
+	--3rd-primary-color: oklch(0.50 0.15 240);
 
-	&:where(.secondary) {
-		--1st-accent-color: oklch(0.60 0.02 240);
-		--2nd-accent-color: oklch(0.55 0.02 240);
-		--3rd-accent-color: oklch(0.50 0.02 240);
-	}
+	/* Secondary Accent Color:
+	 * Used to highlight alternative interactive elements. */
+	--1st-secondary-color: oklch(0.60 0.02 240);
+	--2nd-secondary-color: oklch(0.55 0.02 240);
+	--3rd-secondary-color: oklch(0.50 0.02 240);
 
-	&:where(.success) {
-		--1st-accent-color: oklch(0.60 0.15 160);
-		--2nd-accent-color: oklch(0.55 0.15 160);
-		--3rd-accent-color: oklch(0.50 0.15 160);
-	}
+	/* Success Accent Color:
+	 * Used to highlight confirmative user-actions. */
+	--1st-success-color: oklch(0.60 0.15 160);
+	--2nd-success-color: oklch(0.55 0.15 160);
+	--3rd-success-color: oklch(0.50 0.15 160);
 
-	&:where(.danger) {
-		--1st-accent-color: oklch(0.60 0.25 20);
-		--2nd-accent-color: oklch(0.55 0.25 20);
-		--3rd-accent-color: oklch(0.50 0.25 20);
-	}
+	/* Danger Accent Color:
+	 * Used to highlight consequential user-actions. */
+	--1st-danger-color: oklch(0.60 0.25 20);
+	--2nd-danger-color: oklch(0.55 0.25 20);
+	--3rd-danger-color: oklch(0.50 0.25 20);
 
-	&:where(.warning) {
-		--1st-accent-color: oklch(0.60 0.10 90);
-		--2nd-accent-color: oklch(0.55 0.10 90);
-		--3rd-accent-color: oklch(0.50 0.10 90);
-	}
+	/* Warning Accent Color:
+	 * Used to warn of consequential user-actions. */
+	--1st-warning-color: oklch(0.60 0.10 90);
+	--2nd-warning-color: oklch(0.55 0.10 90);
+	--3rd-warning-color: oklch(0.50 0.10 90);
 
-	&:where(.info) {
-		--1st-accent-color: oklch(0.60 0.10 210);
-		--2nd-accent-color: oklch(0.55 0.10 210);
-		--3rd-accent-color: oklch(0.50 0.10 210);
-	}
+	/* Info Accent Color:
+	 * Used to bring attention to information. */
+	--1st-info-color: oklch(0.60 0.10 210);
+	--2nd-info-color: oklch(0.55 0.10 210);
+	--3rd-info-color: oklch(0.50 0.10 210);
 
 	/* Dark Color Scheme: */
 
 	@media (prefers-color-scheme: dark) {
-		--1st-primary-color: oklch(0.20 0.01 240);
-		--2nd-primary-color: oklch(0.15 0.01 240);
-		--3rd-primary-color: oklch(0.10 0.01 240);
+		--1st-neutral-color: oklch(0.20 0.01 240);
+		--2nd-neutral-color: oklch(0.15 0.01 240);
+		--3rd-neutral-color: oklch(0.10 0.01 240);
 
-		--1st-secondary-color: oklch(0.90 0.03 240);
-		--2nd-secondary-color: oklch(0.85 0.03 240);
-		--3rd-secondary-color: oklch(0.80 0.03 240);
+		--1st-contrast-color: oklch(0.90 0.03 240);
+		--2nd-contrast-color: oklch(0.85 0.03 240);
+		--3rd-contrast-color: oklch(0.80 0.03 240);
 	}
 }
