@@ -26,7 +26,7 @@
 	--3rd-primary-color: var(--blue-600);
 
 	/* Secondary Accent Color:
-	 * Used to highlight alternative elements. */
+	 * Used to highlight alternative or parts of elements. */
 	--1st-secondary-color: var(--gray-400);
 	--2nd-secondary-color: var(--gray-500);
 	--3rd-secondary-color: var(--gray-600);
@@ -65,6 +65,30 @@
 		--1st-contrast-color: var(--gray-100);
 		--2nd-contrast-color: var(--gray-200);
 		--3rd-contrast-color: var(--gray-300);
+
+		--1st-primary-color: var(--blue-200);
+		--2nd-primary-color: var(--blue-300);
+		--3rd-primary-color: var(--blue-400);
+
+		--1st-secondary-color: var(--gray-200);
+		--2nd-secondary-color: var(--gray-300);
+		--3rd-secondary-color: var(--gray-400);
+
+		--1st-success-color: var(--green-200);
+		--2nd-success-color: var(--green-300);
+		--3rd-success-color: var(--green-400);
+
+		--1st-danger-color: var(--red-200);
+		--2nd-danger-color: var(--red-300);
+		--3rd-danger-color: var(--red-400);
+
+		--1st-warning-color: var(--yellow-200);
+		--2nd-warning-color: var(--yellow-300);
+		--3rd-warning-color: var(--yellow-400);
+
+		--1st-info-color: var(--cyan-200);
+		--2nd-info-color: var(--cyan-300);
+		--3rd-info-color: var(--cyan-400);
 	}
 
 	/* Arbitrary Colors: */
