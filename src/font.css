@@ -6,13 +6,13 @@
 	--font: system-ui, sans-serif;
 	--monospace-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 	--display-font: var(--font);
-	--brand-font: var(--font);
+	--accent-font: var(--font);
 
 	/* Line Heights: */
 	--line-height: 1.6;
 	--monospace-line-height: var(--line-height);
 	--display-line-height: 1.2;
-	--brand-line-height: var(--line-height);
+	--accent-line-height: var(--line-height);
 
 	/* Font Weights: */
 	--regular-font: 400;
