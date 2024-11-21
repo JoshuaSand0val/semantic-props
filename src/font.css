@@ -1,13 +1,11 @@
 /* Semantic Props for styling fonts. */
 /* https://utopia.fyi/type/calculator/?c=180,16,1.125,1920,18,1.2,9,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
 
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
-
 :where(.semantic) {
 	/* Font Families: */
-	--font: "Noto Sans", serif;
-	--monospace-font: "Noto Sans Mono", monospace;
-	--display-font: "Noto Sans Display", sans-serif;
+	--font: system-ui, sans-serif;
+	--monospace-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	--display-font: var(--font);
 	--brand-font: var(--font);
 
 	/* Line Heights: */
