@@ -45,9 +45,9 @@
 
 	/* Warning Accent Color:
 	 * Used to warn of consequential user-actions. */
-	--1st-warning-color: var(--yellow-400);
-	--2nd-warning-color: var(--yellow-500);
-	--3rd-warning-color: var(--yellow-600);
+	 --1st-warning-color: var(--yellow-300);
+	 --2nd-warning-color: var(--yellow-400);
+	 --3rd-warning-color: var(--yellow-500);
 
 	/* Info Accent Color:
 	 * Used to bring attention to information. */
@@ -82,13 +82,47 @@
 		--2nd-danger-color: var(--red-400);
 		--3rd-danger-color: var(--red-500);
 
-		--1st-warning-color: var(--yellow-300);
-		--2nd-warning-color: var(--yellow-400);
-		--3rd-warning-color: var(--yellow-500);
-
 		--1st-info-color: var(--cyan-300);
 		--2nd-info-color: var(--cyan-400);
 		--3rd-info-color: var(--cyan-500);
+	}
+
+	/* Accent Color Classes: */
+
+	&:where(.primary-color) {
+		--1st-accent-color: var(--1st-primary-color);
+		--2nd-accent-color: var(--2nd-primary-color);
+		--3rd-accent-color: var(--3rd-primary-color);
+	}
+
+	&:where(.secondary-color) {
+		--1st-accent-color: var(--1st-secondary-color);
+		--2nd-accent-color: var(--2nd-secondary-color);
+		--3rd-accent-color: var(--3rd-secondary-color);
+	}
+
+	&:where(.success-color) {
+		--1st-accent-color: var(--1st-success-color);
+		--2nd-accent-color: var(--2nd-success-color);
+		--3rd-accent-color: var(--3rd-success-color);
+	}
+
+	&:where(.danger-color) {
+		--1st-accent-color: var(--1st-danger-color);
+		--2nd-accent-color: var(--2nd-danger-color);
+		--3rd-accent-color: var(--3rd-danger-color);
+	}
+
+	&:where(.warning-color) {
+		--1st-accent-color: var(--1st-warning-color);
+		--2nd-accent-color: var(--2nd-warning-color);
+		--3rd-accent-color: var(--3rd-warning-color);
+	}
+
+	&:where(.info-color) {
+		--1st-accent-color: var(--1st-info-color);
+		--2nd-accent-color: var(--2nd-info-color);
+		--3rd-accent-color: var(--3rd-info-color);
 	}
 
 	/* Arbitrary Colors: */
