@@ -1,5 +1,5 @@
 /* Semantic Props for styling fonts. */
-/* https://utopia.fyi/type/calculator/?c=180,16,1.125,1920,18,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
+/* https://utopia.fyi/type/calculator/?c=180,16,1.125,1920,18,1.2,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
 
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Mono:wght@100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
@@ -23,18 +23,18 @@
 	--heavy-font: 900;
 
 	/* Absolute Font Sizes: */
-	--xs-font: clamp(0.72rem, 0.7974rem + -0.0645cqi, 0.7901rem);
-	--sm-font: clamp(0.8889rem, 0.8877rem + 0.0102cqi, 0.9rem);
+	--xs-font: clamp(0.7813rem, 0.791rem + -0.0082cqi, 0.7901rem);
+	--sm-font: clamp(0.8889rem, 0.8839rem + 0.0447cqi, 0.9375rem);
 	--md-font: clamp(1rem, 0.9871rem + 0.1149cqi, 1.125rem);
-	--lg-font: clamp(1.125rem, 1.0959rem + 0.2586cqi, 1.4063rem);
-	--xl-font: clamp(1.2656rem, 1.2147rem + 0.4526cqi, 1.7578rem);
-	--2xl-font: clamp(1.4238rem, 1.3438rem + 0.7112cqi, 2.1973rem);
-	--3xl-font: clamp(1.6018rem, 1.4834rem + 1.0527cqi, 2.7466rem);
-	--4xl-font: clamp(1.802rem, 1.6333rem + 1.4999cqi, 3.4332rem);
-	--5xl-font: clamp(2.0273rem, 1.7931rem + 2.0821cqi, 4.2915rem);
-	--6xl-font: clamp(2.2807rem, 1.9617rem + 2.8356cqi, 5.3644rem);
+	--lg-font: clamp(1.125rem, 1.1017rem + 0.2069cqi, 1.35rem);
+	--xl-font: clamp(1.2656rem, 1.229rem + 0.3259cqi, 1.62rem);
+	--2xl-font: clamp(1.4238rem, 1.37rem + 0.4783cqi, 1.944rem);
+	--3xl-font: clamp(1.6018rem, 1.5262rem + 0.6722cqi, 2.3328rem);
+	--4xl-font: clamp(1.802rem, 1.6989rem + 0.9171cqi, 2.7994rem);
+	--5xl-font: clamp(2.0273rem, 1.8895rem + 1.2248cqi, 3.3592rem);
+	--6xl-font: clamp(2.2807rem, 2.0996rem + 1.6095cqi, 4.0311rem);
 
 	/* Relative Font Sizes: */
-	--smaller-font: clamp(0.8889em, 0.8877em + 0.0102cqi, 0.9em);
-	--larger-font: clamp(1.125em, 1.0959em + 0.2586cqi, 1.4063em);
+	--smaller-font: clamp(0.8889em, 0.8839em + 0.0447cqi, 0.9375em);
+	--larger-font: clamp(1.125em, 1.1017em + 0.2069cqi, 1.35em);
 }
