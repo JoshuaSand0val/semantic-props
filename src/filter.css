@@ -1,0 +1,25 @@
+/* Semantic Props for filter values. */
+
+:where(.semantic) {
+	/* Blur: */
+	--light-blur: blur(4px);
+	--medium-blur: blur(8px);
+	--heavy-blur: blur(16px);
+
+	/* Brightness: */
+	--low-brightness: brightness(0.75);
+	--high-brightness: brightness(1.25);
+
+	/* Contrast: */
+	--low-contrast: contrast(0.75);
+	--high-contrast: contrast(1.5);
+
+	/* Opacity: */
+	--low-opacity: 0.33;
+	--medium-opacity: 0.66;
+	--high-opacity: 0.8;
+
+	/* Saturation: */
+	--low-saturation: saturate(0.5);
+	--high-saturation: saturate(1.5);
+}

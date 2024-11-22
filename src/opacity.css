@@ -1,7 +1,0 @@
-/* Semantic Props for opacity. */
-
-:where(.semantic) {
-	--low-opacity: 0.33;
-	--medium-opacity: 0.66;
-	--high-opacity: 0.8;
-}
