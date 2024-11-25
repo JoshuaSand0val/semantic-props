@@ -1,53 +1,44 @@
 /* Semantic Props for color. */
 
 :where(.semantic) {
-	/* Color: The base color for contrast comparison.
-	 * Mostly for backgrounds. */
+	/* Color: Dominant color used for contrast comparison. Often neutral. */
 	--1st-color: var(--white);
 	--2nd-color: var(--gray-100);
 	--3rd-color: var(--gray-200);
 
-	/* Contrast Color: The color with maximum contrast.
-	 * Mostly for text. */
+	/* Contrast Color: The color with maximum contrast. */
 	--1st-contrast-color: var(--gray-700);
 	--2nd-contrast-color: var(--gray-800);
 	--3rd-contrast-color: var(--gray-900);
 
-	/* Accent Color: Highlights specific features or parts of the design.
-	 * Mostly for interactive elements such as anchor links. */
+	/* Accent Color: Highlights specific aspects of the design. */
 
-	/* Primary Accent Color:
-	 * Used to highlight the default interactive element. */
+	/* Primary Accent Color: Accents the primary interactive element. */
 	--1st-primary-color: var(--blue-400);
 	--2nd-primary-color: var(--blue-500);
 	--3rd-primary-color: var(--blue-600);
 
-	/* Secondary Accent Color:
-	 * Used to highlight alternative or parts of elements. */
+	/* Secondary Accent Color: Accents secondary aspects of elements. */
 	--1st-secondary-color: var(--gray-400);
 	--2nd-secondary-color: var(--gray-500);
 	--3rd-secondary-color: var(--gray-600);
 
-	/* Success Accent Color:
-	 * Used to highlight confirmative user-actions. */
+	/* Success Accent Color: Accents confirmative user-actions. */
 	--1st-success-color: var(--green-400);
 	--2nd-success-color: var(--green-500);
 	--3rd-success-color: var(--green-600);
 
-	/* Danger Accent Color:
-	 * Used to highlight consequential user-actions. */
+	/* Danger Accent Color: Accents consequential user-actions. */
 	--1st-danger-color: var(--red-400);
 	--2nd-danger-color: var(--red-500);
 	--3rd-danger-color: var(--red-600);
 
-	/* Warning Accent Color:
-	 * Used to warn of consequential user-actions. */
-	 --1st-warning-color: var(--yellow-300);
-	 --2nd-warning-color: var(--yellow-400);
-	 --3rd-warning-color: var(--yellow-500);
+	/* Warning Accent Color: Accents potential of consequential user-actions. */
+	--1st-warning-color: var(--yellow-300);
+	--2nd-warning-color: var(--yellow-400);
+	--3rd-warning-color: var(--yellow-500);
 
-	/* Info Accent Color:
-	 * Used to bring attention to information. */
+	/* Info Accent Color: Accents important information. */
 	--1st-info-color: var(--cyan-400);
 	--2nd-info-color: var(--cyan-500);
 	--3rd-info-color: var(--cyan-600);
