@@ -1,119 +1,67 @@
-/* Semantic Props for color. */
+/* Semantic Props for color. Follows the 60-30-10 color theory rule. */
 
 :where(.semantic) {
-	/* Color: Dominant color used for contrast comparison. Often neutral. */
-	--1st-color: var(--white);
-	--2nd-color: var(--gray-100);
-	--3rd-color: var(--gray-200);
-
-	/* Contrast Color: The color with maximum contrast. */
-	--1st-contrast-color: var(--gray-700);
-	--2nd-contrast-color: var(--gray-800);
-	--3rd-contrast-color: var(--gray-900);
-
-	/* Accent Color: Highlights specific aspects of the design. */
-
-	/* Primary Accent Color: Accents the primary interactive element. */
-	--1st-primary-color: var(--blue-400);
-	--2nd-primary-color: var(--blue-500);
-	--3rd-primary-color: var(--blue-600);
-
-	/* Secondary Accent Color: Accents secondary aspects of elements. */
-	--1st-secondary-color: var(--gray-400);
-	--2nd-secondary-color: var(--gray-500);
-	--3rd-secondary-color: var(--gray-600);
-
-	/* Success Accent Color: Accents confirmative user-actions. */
-	--1st-success-color: var(--green-400);
-	--2nd-success-color: var(--green-500);
-	--3rd-success-color: var(--green-600);
-
-	/* Danger Accent Color: Accents consequential user-actions. */
-	--1st-danger-color: var(--red-400);
-	--2nd-danger-color: var(--red-500);
-	--3rd-danger-color: var(--red-600);
-
-	/* Warning Accent Color: Accents potential of consequential user-actions. */
-	--1st-warning-color: var(--yellow-300);
-	--2nd-warning-color: var(--yellow-400);
-	--3rd-warning-color: var(--yellow-500);
-
-	/* Info Accent Color: Accents important information. */
-	--1st-info-color: var(--cyan-400);
-	--2nd-info-color: var(--cyan-500);
-	--3rd-info-color: var(--cyan-600);
-
-	/* Dark Color Scheme: */
+	/* Primary Color: The neutral color used for contrast comparison. */
+	--1st-primary-color: var(--white);
+	--2nd-primary-color: var(--gray-100);
+	--3rd-primary-color: var(--gray-200);
 
 	@media (prefers-color-scheme: dark) {
-		--1st-color: var(--gray-700);
-		--2nd-color: var(--gray-800);
-		--3rd-color: var(--gray-900);
-
-		--1st-contrast-color: var(--gray-100);
-		--2nd-contrast-color: var(--gray-200);
-		--3rd-contrast-color: var(--gray-300);
-
-		--1st-primary-color: var(--blue-300);
-		--2nd-primary-color: var(--blue-400);
-		--3rd-primary-color: var(--blue-500);
-
-		--1st-secondary-color: var(--gray-300);
-		--2nd-secondary-color: var(--gray-400);
-		--3rd-secondary-color: var(--gray-500);
-
-		--1st-success-color: var(--green-300);
-		--2nd-success-color: var(--green-400);
-		--3rd-success-color: var(--green-500);
-
-		--1st-danger-color: var(--red-300);
-		--2nd-danger-color: var(--red-400);
-		--3rd-danger-color: var(--red-500);
-
-		--1st-info-color: var(--cyan-300);
-		--2nd-info-color: var(--cyan-400);
-		--3rd-info-color: var(--cyan-500);
+		--1st-primary-color: var(--gray-800);
+		--2nd-primary-color: var(--gray-900);
+		--3rd-primary-color: var(--black);
 	}
 
-	/* Accent Color Classes: */
+	/* Secondary Color: Supports the primary color by adding visual contrast. */
+	--1st-secondary-color: var(--gray-800);
+	--2nd-secondary-color: var(--gray-900);
+	--3rd-secondary-color: var(--black);
 
-	&, &:where(.primary-color) {
-		--1st-accent-color: var(--1st-primary-color);
-		--2nd-accent-color: var(--2nd-primary-color);
-		--3rd-accent-color: var(--3rd-primary-color);
+	@media (prefers-color-scheme: dark) {
+		--1st-secondary-color: var(--gray-100);
+		--2nd-secondary-color: var(--gray-200);
+		--3rd-secondary-color: var(--gray-300);
 	}
 
-	&:where(.secondary-color) {
-		--1st-accent-color: var(--1st-secondary-color);
-		--2nd-accent-color: var(--2nd-secondary-color);
-		--3rd-accent-color: var(--3rd-secondary-color);
+	/* Accent Color: Highlights specific features or parts of the design. */
+	--1st-accent-color: var(--blue-400);
+	--2nd-accent-color: var(--blue-500);
+	--3rd-accent-color: var(--blue-600);
+
+	/* Accent the alternate user-option. */
+	&:where(.alternate-color) {
+		--1st-accent-color: var(--gray-400);
+		--2nd-accent-color: var(--gray-500);
+		--3rd-accent-color: var(--gray-600);
 	}
 
+	/* Accent successful user-actions. */
 	&:where(.success-color) {
-		--1st-accent-color: var(--1st-success-color);
-		--2nd-accent-color: var(--2nd-success-color);
-		--3rd-accent-color: var(--3rd-success-color);
+		--1st-accent-color: var(--green-400);
+		--2nd-accent-color: var(--green-500);
+		--3rd-accent-color: var(--green-600);
 	}
 
+	/* Accent destructive user-actions. */
 	&:where(.danger-color) {
-		--1st-accent-color: var(--1st-danger-color);
-		--2nd-accent-color: var(--2nd-danger-color);
-		--3rd-accent-color: var(--3rd-danger-color);
+		--1st-accent-color: var(--red-400);
+		--2nd-accent-color: var(--red-500);
+		--3rd-accent-color: var(--red-600);
 	}
 
+	/* Accent consequential user-actions. */
 	&:where(.warning-color) {
-		--1st-accent-color: var(--1st-warning-color);
-		--2nd-accent-color: var(--2nd-warning-color);
-		--3rd-accent-color: var(--3rd-warning-color);
+		--1st-accent-color: var(--yellow-300);
+		--2nd-accent-color: var(--yellow-400);
+		--3rd-accent-color: var(--yellow-500);
 	}
 
+	/* Accent important information. */
 	&:where(.info-color) {
-		--1st-accent-color: var(--1st-info-color);
-		--2nd-accent-color: var(--2nd-info-color);
-		--3rd-accent-color: var(--3rd-info-color);
+		--1st-accent-color: var(--cyan-400);
+		--2nd-accent-color: var(--cyan-500);
+		--3rd-accent-color: var(--cyan-600);
 	}
-
-	/* Arbitrary Colors: */
 
 	/* White / Black: */
 	--white: white;
