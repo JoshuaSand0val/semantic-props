@@ -13,6 +13,6 @@
 	--2xl-size: clamp(4rem, 3.9483rem + 0.4598cqi, 4.5rem);
 	--3xl-size: clamp(6rem, 5.9224rem + 0.6897cqi, 6.75rem);
 
-	/* Range Size (3xs to 3xl): */
-	--range-size: clamp(0.25rem, -0.4224rem + 5.977cqi, 6.75rem);
+	/* Responsive Size (3xs to 3xl): */
+	--responsive-size: clamp(0.25rem, -0.4224rem + 5.977cqi, 6.75rem);
 }
