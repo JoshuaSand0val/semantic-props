@@ -46,6 +46,7 @@
 	--teal: oklch(0.6 0.1 180);
 	--cyan: oklch(0.7 0.15 200);
 
+	--neutral-color: var(--white);
 	--neutral-color: light-dark(var(--white), var(--black));
 	--alternative-color: var(--gray);
 	--success-color: var(--green);
