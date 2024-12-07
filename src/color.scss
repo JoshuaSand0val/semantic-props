@@ -3,7 +3,7 @@
 :where(.semantic) {
 	// Define map of relative color Semantic Props:
 	$colors: (
-		--primary-color: var(--white),
+		--primary-color: light-dark(var(--white), var(--black)),
 		--secondary-color: var(--gray),
 		--accent-color: var(--blue)
 	);
