@@ -20,6 +20,16 @@
 	--bold-font: 700;
 	--heavy-font: 900;
 
+	/* Letter Spacing: */
+	--dense-lettering: -0.05em;
+	--normal-lettering: normal;
+	--wide-lettering: 0.150em;
+
+	/* Word Spacing: */
+	--dense-wording: -0.1em;
+	--normal-wording: normal;
+	--wide-wording: 0.5em;
+
 	/* Absolute Font Sizes: */
 	--xs-font: clamp(0.7813rem, 0.791rem + -0.0082cqi, 0.7901rem);
 	--sm-font: clamp(0.8889rem, 0.8839rem + 0.0447cqi, 0.9375rem);
