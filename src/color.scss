@@ -3,7 +3,7 @@
 :where(.semantic) {
 	// Define map of relative color Semantic Props:
 	$colors: (
-		--primary-color: var(--neutral-color),
+		--primary-color: var(--white),
 		--secondary-color: var(--gray),
 		--accent-color: var(--blue)
 	);
@@ -16,12 +16,6 @@
 		#{$prop}: $color;
 		@each $l in $weights {
 			#{$prop}-#{$l}: oklch(from var(#{$prop}) #{1 - calc($l / 1000)} c h);
-			@each $d in $weights {
-				@if $d != $l {
-					#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
-					#{$prop}-#{$l}-#{$d}: light-dark(var(#{$prop}-#{$l}), var(#{$prop}-#{$d}));
-				}
-			}
 		}
 	}
 
@@ -46,8 +40,6 @@
 	--teal: oklch(0.6 0.1 180);
 	--cyan: oklch(0.7 0.15 200);
 
-	--neutral-color: var(--white);
-	--neutral-color: light-dark(var(--white), var(--black));
 	--alternative-color: var(--gray);
 	--success-color: var(--green);
 	--danger-color: var(--red);
