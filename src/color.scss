@@ -1,19 +1,11 @@
 /* Semantic Props for color. Follows the 60-30-10 color theory rule. */
 
 :where(.semantic) {
-	// Define map of relative color Semantic Props:
-	$colors: (
-		--primary-color: light-dark(var(--white), var(--black)),
-		--secondary-color: var(--gray),
-		--accent-color: var(--blue)
-	);
-
 	// Define list of lightness channel weights:
 	$weights: 0 100 200 300 400 500 600 700 800 900 1000;
 
 	// Define weighted color Semantic Props:
-	@each $prop, $color in $colors {
-		#{$prop}: $color;
+	@each $prop in --primary-color --secondary-color --accent-color {
 		@each $l in $weights {
 			#{$prop}-#{$l}: oklch(from var(#{$prop}) #{1 - calc($l / 1000)} c h);
 			@each $d in $weights {
@@ -23,6 +15,10 @@
 			}
 		}
 	}
+
+	--primary-color: light-dark(var(--white), var(--black));
+	--secondary-color: var(--gray);
+	--accent-color: var(--blue);
 
 	--black: oklch(0.2 0.02 250);
 	--silver: oklch(0.8 0.02 260);
