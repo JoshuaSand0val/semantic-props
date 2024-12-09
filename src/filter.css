@@ -14,6 +14,11 @@
 	--low-contrast: contrast(0.75);
 	--high-contrast: contrast(1.5);
 
+	/* Drop Shadow: */
+	--light-shadow: drop-shadow(0 2px 2px rgb(0 0 0 / 0.33));
+	--medium-shadow: drop-shadow(0 5px 4px rgb(0 0 0 / 0.33));
+	--heavy-shadow: drop-shadow(0 8px 6px rgb(0 0 0 / 0.33));
+
 	/* Opacity: */
 	--low-opacity: 0.33;
 	--medium-opacity: 0.66;
