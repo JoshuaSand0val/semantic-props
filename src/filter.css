@@ -1,6 +1,6 @@
 /* Semantic Props for filter values. */
 
-:where(.semantic, .semantic-filter) {
+:where(.--semantic, .--filter) {
 	/* Blur: */
 	--light-blur: blur(4px);
 	--medium-blur: blur(8px);

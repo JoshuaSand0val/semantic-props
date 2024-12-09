@@ -2,7 +2,7 @@
 
 @use "sass:color" as color;
 
-:where(.semantic, .semantic-color) {
+:where(.--semantic, .--color) {
 	$colors: (
 		--neutral: oklch(1 0.01 250),
 		--primary: oklch(0.6 0.15 250),

@@ -1,6 +1,6 @@
 /* Semantic Props for z-index positions. */
 
-:where(.semantic, .semantic-index) {
+:where(.--semantic, .--index) {
 	--bottom-index: -1000;
 	--relative-index: 1000;
 	--absolute-index: 2000;

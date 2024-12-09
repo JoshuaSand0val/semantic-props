@@ -1,6 +1,6 @@
 /* Semantic Props for container widths. */
 
-:where(.semantic, .semantic-container) {
+:where(.--semantic, .--container) {
 	--3xs-container: 180px;
 	--2xs-container: 240px;
 	--xs-container: 360px;
