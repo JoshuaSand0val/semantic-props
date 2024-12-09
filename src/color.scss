@@ -1,23 +1,22 @@
 /* Semantic Props for representing component states by color. */
 
+@use "sass:color" as color;
+
 :where(.semantic, .semantic-color) {
-	// Relative Color Palette:
 	$colors: (
-		--neutral-color: oklch(1 0.02 250),
+		--neutral-color: oklch(1 0.01 250),
 		--primary-color: oklch(0.6 0.15 250),
-		--secondary-color: oklch(0.6 0.01 260),
+		--secondary-color: oklch(0.6 0.02 260),
 		--success-color: oklch(0.6 0.2 150),
 		--danger-color: oklch(0.6 0.25 30),
 		--warning-color: oklch(0.6 0.15 90),
 		--info-color: oklch(0.6 0.15 200)
 	);
 
-	// Define Weighted Colors:
-	$weights: 0 100 200 300 400 500 600 700 800 900 1000;
+	$weights: 50 100 200 300 400 500 600 700 800 900 950;
 	@each $prop, $color in $colors {
-		#{$prop}: $color;
 		@each $l in $weights {
-			#{$prop}-#{$l}: oklch(from var($prop) calc(1 - ($l / 1000)) c h);
+			#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)));
 			@each $d in $weights {
 				@if $d != $l {
 					#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
