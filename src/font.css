@@ -31,18 +31,18 @@
 	--wide-wording: 0.5em;
 
 	/* Absolute Font Sizes: */
-	--xs-font: clamp(0.7813rem, 0.791rem + -0.0082cqi, 0.7901rem);
-	--sm-font: clamp(0.8889rem, 0.8839rem + 0.0447cqi, 0.9375rem);
-	--md-font: clamp(1rem, 0.9871rem + 0.1149cqi, 1.125rem);
-	--lg-font: clamp(1.125rem, 1.1017rem + 0.2069cqi, 1.35rem);
-	--xl-font: clamp(1.2656rem, 1.229rem + 0.3259cqi, 1.62rem);
-	--2xl-font: clamp(1.4238rem, 1.37rem + 0.4783cqi, 1.944rem);
-	--3xl-font: clamp(1.6018rem, 1.5262rem + 0.6722cqi, 2.3328rem);
-	--4xl-font: clamp(1.802rem, 1.6989rem + 0.9171cqi, 2.7994rem);
-	--5xl-font: clamp(2.0273rem, 1.8895rem + 1.2248cqi, 3.3592rem);
-	--6xl-font: clamp(2.2807rem, 2.0996rem + 1.6095cqi, 4.0311rem);
-	--7xl-font: clamp(2.5658rem, 2.3308rem + 2.0887cqi, 4.8373rem);
-	--8xl-font: clamp(2.8865rem, 2.5846rem + 2.6834cqi, 5.8048rem);
+	--x-small-font: clamp(0.7813rem, 0.791rem + -0.0082cqi, 0.7901rem);
+	--small-font: clamp(0.8889rem, 0.8839rem + 0.0447cqi, 0.9375rem);
+	--medium-font: clamp(1rem, 0.9871rem + 0.1149cqi, 1.125rem);
+	--large-font: clamp(1.125rem, 1.1017rem + 0.2069cqi, 1.35rem);
+	--x-large-font: clamp(1.2656rem, 1.229rem + 0.3259cqi, 1.62rem);
+	--2x-large-font: clamp(1.4238rem, 1.37rem + 0.4783cqi, 1.944rem);
+	--3x-large-font: clamp(1.6018rem, 1.5262rem + 0.6722cqi, 2.3328rem);
+	--4x-large-font: clamp(1.802rem, 1.6989rem + 0.9171cqi, 2.7994rem);
+	--5x-large-font: clamp(2.0273rem, 1.8895rem + 1.2248cqi, 3.3592rem);
+	--6x-large-font: clamp(2.2807rem, 2.0996rem + 1.6095cqi, 4.0311rem);
+	--7x-large-font: clamp(2.5658rem, 2.3308rem + 2.0887cqi, 4.8373rem);
+	--8x-large-font: clamp(2.8865rem, 2.5846rem + 2.6834cqi, 5.8048rem);
 
 	/* Relative Font Sizes: */
 	--smaller-font: clamp(0.8889em, 0.8839em + 0.0447cqi, 0.9375em);
