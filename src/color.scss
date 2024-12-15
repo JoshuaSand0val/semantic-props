@@ -17,26 +17,18 @@
 		--indigo: oklch(0.4 0.2 270),
 		--violet: oklch(0.4 0.15 290),
 		--purple: oklch(0.4 0.15 300),
-		--magenta: oklch(0.6 0.2 330)
+		--magenta: oklch(0.6 0.2 330),
+
+		--primary: var(--gray),
+		--secondary: var(--gray),
+		--accent: var(--blue)
 	);
 
-	$light-dark: (
-		--primary: --gray,
-		--secondary: --gray,
-		--accent: --blue
-	);
-
-	$weights: 50 100 200 300 400 500 600 700 800 900 950;
-
+	$weights: 50 100 200 300 400 500 600 700 800 900;
 	@each $prop, $color in $colors {
-		@each $weight in $weights {
-			#{$prop}-#{$weight}: color.change($color, $lightness: calc(1 - ($weight / 1000)));
-		}
-	}
-
-	@each $prop, $alias in $light-dark {
+		#{$prop}: $color;
 		@each $l in $weights {
-			#{$prop}-#{$l}: var(#{$alias}-#{$l});
+			#{$prop}-#{$l}: oklch(from var($prop) calc(1 - ($l / 1000)) c h);
 			@each $d in $weights {
 				@if $d != $l {
 					#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
