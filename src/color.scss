@@ -1,7 +1,5 @@
 /* Semantic Props for color. Follows the 60-30-10 color theory rule. */
 
-@use "sass:color" as color;
-
 :where(.--semantic, .--color) {
 	$colors: (
 		--gray: oklch(0.6 0.01 260),
