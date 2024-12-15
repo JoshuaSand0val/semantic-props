@@ -5,6 +5,7 @@
 :where(.--semantic, .--color) {
 	$colors: (
 		--gray: oklch(0.6 0.01 260),
+		--pink: oklch(0.8 0.1 10),
 		--red: oklch(0.5 0.2 30),
 		--coral: oklch(0.7 0.2 40),
 		--brown: oklch(0.6 0.05 50),
