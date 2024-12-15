@@ -26,15 +26,14 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "sass --no-source-map src/import.scss | postcss -o dist/import.css",
-		"watch:build": "onchange 'src/**/*' -- npm run build"
+		"build": "postcss src/import.css -o dist/import.css",
+		"watch:build": "postcss src/import.css -w -o dist/import.css"
 	},
 	"devDependencies": {
 		"cssnano": "^7.0.4",
-		"onchange": "^7.1.0",
 		"postcss": "^8.4.39",
 		"postcss-cli": "^11.0.0",
-		"postcss-preset-env": "^9.6.0",
-		"sass": "^1.82.0"
+		"postcss-import": "^16.1.0",
+		"postcss-preset-env": "^9.6.0"
 	}
 }
