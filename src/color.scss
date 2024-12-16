@@ -28,12 +28,23 @@
 		#{$prop}: $color;
 		@each $l in $weights {
 			#{$prop}-#{$l}: oklch(from var($prop) calc(1 - ($l / 1000)) c h);
-			@each $d in $weights {
-				@if $d != $l {
-					#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
-					#{$prop}-#{$l}-#{$d}: light-dark(var(#{$prop}-#{$l}), var(#{$prop}-#{$d}));
-				}
-			}
 		}
+	}
+
+	/* Light-Dark Colors: */
+	--background-color: var(--primary-50);
+	--middleground-color: var(--primary-200);
+	--foreground-color: var(--primary-300);
+	--emphasis-color: var(--secondary-900);
+	--color: var(--secondary-700);
+	--link-color: var(--accent-500);
+
+	@supports (color: light-dark(white, black)) {
+		--background-color: light-dark(var(--primary-50), var(--primary-800));
+		--middleground-color: light-dark(var(--primary-200), var(--primary-700));
+		--foreground-color: light-dark(var(--primary-300), var(--primary-600));
+		--emphasis-color: light-dark(var(--secondary-900), var(--secondary-50));
+		--color: light-dark(var(--secondary-700), var(--secondary-100));
+		--link-color: light-dark(var(--accent-500), var(--accent-300));
 	}
 }
