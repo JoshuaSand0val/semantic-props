@@ -1,5 +1,5 @@
 /* Semantic Props for sizing padding, margin, ect. */
-/* https://utopia.fyi/space/calculator?c=180,16,1.125,1920,18,1.2,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
+/* https://utopia.fyi/space/calculator/?c=180,16,1.125,1920,18,1.2,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
 
 :where(.--semantic, .--size) {
 	/* Base Sizes: */
