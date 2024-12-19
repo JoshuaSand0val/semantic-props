@@ -33,9 +33,9 @@
 	--3x-high-contrast: contrast(2);
 
 	/* Drop Shadow: */
-	--3x-light-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.05));
-	--2x-light-shadow: drop-shadow(0 2px 2px rgb(0 0 0 / 0.05));
-	--x-light-shadow: drop-shadow(0 3px 3px rgb(0 0 0 / 0.05));
+	--3x-light-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.075));
+	--2x-light-shadow: drop-shadow(0 2px 2px rgb(0 0 0 / 0.075));
+	--x-light-shadow: drop-shadow(0 3px 3px rgb(0 0 0 / 0.075));
 	--light-shadow: drop-shadow(0 6px 4px rgb(0 0 0 / 0.1));
 	--medium-shadow: drop-shadow(0 8px 5px rgb(0 0 0 / 0.1));
 	--heavy-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.1));
