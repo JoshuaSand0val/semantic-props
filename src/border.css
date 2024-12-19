@@ -1,0 +1,5 @@
+/* Semantic Props for aspects of borders. */
+
+:where(.--semantic, .--border) {
+	--border-style: solid;
+}
