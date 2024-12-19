@@ -1,6 +1,6 @@
 /* Semantic Props for display safe areas. */
 
-:where(.--semantic, .--safe) {
+:where(.semantic) {
 	--safe-top: env(safe-area-inset-top);
 	--safe-right: env(safe-area-inset-right);
 	--safe-bottom: env(safe-area-inset-bottom);
