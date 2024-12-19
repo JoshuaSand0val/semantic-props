@@ -40,11 +40,15 @@
 	--x-heavy-shadow: drop-shadow(0 12px 10px rgb(0 0 0 / 0.33));
 
 	/* Opacity: */
-	--x-low-opacity: 0.25;
-	--low-opacity: 0.33;
-	--medium-opacity: 0.66;
-	--high-opacity: 0.8;
-	--x-high-opacity: 0.9;
+	--3x-low-opacity: 0.1;
+	--2x-low-opacity: 0.25;
+	--x-low-opacity: 0.33;
+	--low-opacity: 0.4;
+	--medium-opacity: 0.5;
+	--high-opacity: 0.66;
+	--x-high-opacity: 0.75;
+	--2x-high-opacity: 0.8;
+	--3x-high-opacity: 0.9;
 
 	/* Saturation: */
 	--3x-low-saturation: saturate(0.1);
