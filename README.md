@@ -1,4 +1,4 @@
-# Easy, powerful and semantic CSS custom properties and classes.
+# Easy, powerful and semantic CSS custom properties.
 
 **Add it to your project now via installation by NPM:**
 
@@ -9,7 +9,7 @@ npm install semantic-props --save-dev
 ---
 
 ## What is Semantic Props?
-Semantic Props is a collection of semantic CSS custom properties and classes.
+Semantic Props is a collection of semantic CSS custom properties.
 
 ## Documentation
 This package is still a work-in-progress. Documentation will be added at a later date.
