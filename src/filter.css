@@ -33,11 +33,15 @@
 	--3x-high-contrast: contrast(2);
 
 	/* Drop Shadow: */
-	--x-light-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.33));
-	--light-shadow: drop-shadow(0 2px 2px rgb(0 0 0 / 0.33));
-	--medium-shadow: drop-shadow(0 5px 4px rgb(0 0 0 / 0.33));
-	--heavy-shadow: drop-shadow(0 8px 6px rgb(0 0 0 / 0.33));
-	--x-heavy-shadow: drop-shadow(0 12px 10px rgb(0 0 0 / 0.33));
+	--3x-light-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.15));
+	--2x-light-shadow: drop-shadow(0 2px 2px rgb(0 0 0 / 0.15));
+	--x-light-shadow: drop-shadow(0 3px 3px rgb(0 0 0 / 0.15));
+	--light-shadow: drop-shadow(0 6px 4px rgb(0 0 0 / 0.1));
+	--medium-shadow: drop-shadow(0 8px 5px rgb(0 0 0 / 0.1));
+	--heavy-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.1));
+	--x-heavy-shadow: drop-shadow(0 16px 10px rgb(0 0 0 / 0.1));
+	--2x-heavy-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.1));
+	--3x-heavy-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.125));
 
 	/* Opacity: */
 	--3x-low-opacity: 0.1;
