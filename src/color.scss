@@ -1,5 +1,6 @@
 /* Semantic Props for color. Follows the 60-30-10 color theory rule. */
 
+@use "sass:color" as color;
 @use "sass:map" as map;
 
 :where(.semantic) {
@@ -34,6 +35,7 @@
 	@each $prop, $color in map.merge($colors, $theme) {
 		#{$prop}: $color;
 		@each $l in $weights {
+			#{$prop}-#{$l}: color.change(oklch(1 0 0), $lightness: calc(1 - ($l / 1000)));
 			#{$prop}-#{$l}: oklch(from var($prop) calc(1 - ($l / 1000)) c h);
 		}
 	}
