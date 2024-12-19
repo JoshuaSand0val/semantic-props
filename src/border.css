@@ -2,4 +2,6 @@
 
 :where(.--semantic, .--border) {
 	--border-style: solid;
+	--border-collapse: separate;
+	--border-spacing: 0;
 }
