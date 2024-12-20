@@ -4,6 +4,7 @@
 :root {
 	display: block;
 	font-family: var(--font);
+	font-size: var(--medium-font);
 	font-weight: var(--regular-font);
 	line-height: var(--line-height);
 	background-color: var(--primary-50-900);
