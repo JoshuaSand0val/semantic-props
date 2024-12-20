@@ -22,8 +22,8 @@
 	from {
 		color: var(--accent-500-300);
 		color: oklch(from var(--accent-500-300) l c calc(h + 30 * var(--char, 1)));
-		scale: var(--x-scale-in);
-		filter: var(--3x-light-blur) var(--3x-heavy-shadow);
+		scale: var(--2x-scale-in);
+		filter: var(--2x-light-blur) var(--3x-heavy-shadow);
 		opacity: 0;
 	}
 }
