@@ -10,7 +10,7 @@
 		white-space: pre;
 		@media not (prefers-reduced-motion) {
 			animation:
-			headline-fade-in
+			title-fade-in
 			var(--slow-time)
 			calc(var(--swift-time) * var(--char, 0))
 			both;
