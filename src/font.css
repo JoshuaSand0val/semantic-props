@@ -1,5 +1,5 @@
 /* Semantic Props for styling fonts. */
-/* https://utopia.fyi/type/calculator?c=180,16,1.067,1920,18,1.2,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
+/* https://utopia.fyi/type/calculator?c=180,16,1.067,1920,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
 
 :where(.semantic) {
 	/* Font Families: */
@@ -31,21 +31,21 @@
 	--wide-wording: 0.5em;
 
 	/* Absolute Font Sizes: */
-	--x-small-font: clamp(0.7813rem, 0.8884rem + -0.0893cqi, 0.8784rem);
-	--small-font: clamp(0.9372rem, 0.9372rem + 0.0003cqi, 0.9375rem);
+	--x-small-font: clamp(0.72rem, 0.8947rem + -0.1456cqi, 0.8784rem);
+	--small-font: clamp(0.9rem, 0.9411rem + -0.0342cqi, 0.9372rem);
 	--medium-font: clamp(1rem, 0.9871rem + 0.1149cqi, 1.125rem);
-	--large-font: clamp(1.067rem, 1.0377rem + 0.2602cqi, 1.35rem);
-	--x-large-font: clamp(1.1385rem, 1.0887rem + 0.4428cqi, 1.62rem);
-	--2x-large-font: clamp(1.2148rem, 1.1393rem + 0.6706cqi, 1.944rem);
-	--3x-large-font: clamp(1.2962rem, 1.1889rem + 0.9532cqi, 2.3328rem);
-	--4x-large-font: clamp(1.383rem, 1.2365rem + 1.3024cqi, 2.7994rem);
-	--5x-large-font: clamp(1.4757rem, 1.2808rem + 1.732cqi, 3.3592rem);
-	--6x-large-font: clamp(1.5745rem, 1.3204rem + 2.2589cqi, 4.0311rem);
-	--7x-large-font: clamp(1.68rem, 1.3534rem + 2.9032cqi, 4.8373rem);
-	--8x-large-font: clamp(1.7926rem, 1.3775rem + 3.6893cqi, 5.8048rem);
-	--9x-large-font: clamp(1.9127rem, 1.39rem + 4.6465cqi, 6.9657rem);
+	--large-font: clamp(1.067rem, 1.0319rem + 0.312cqi, 1.4063rem);
+	--x-large-font: clamp(1.1385rem, 1.0744rem + 0.5695cqi, 1.7578rem);
+	--2x-large-font: clamp(1.2148rem, 1.1131rem + 0.9034cqi, 2.1973rem);
+	--3x-large-font: clamp(1.2962rem, 1.1461rem + 1.3337cqi, 2.7466rem);
+	--4x-large-font: clamp(1.383rem, 1.1709rem + 1.8853cqi, 3.4332rem);
+	--5x-large-font: clamp(1.4757rem, 1.1844rem + 2.5893cqi, 4.2915rem);
+	--6x-large-font: clamp(1.5745rem, 1.1825rem + 3.485cqi, 5.3644rem);
+	--7x-large-font: clamp(1.68rem, 1.1601rem + 4.6211cqi, 6.7055rem);
+	--8x-large-font: clamp(1.7926rem, 1.1109rem + 6.0591cqi, 8.3819rem);
+	--9x-large-font: clamp(1.9127rem, 1.0267rem + 7.8756cqi, 10.4774rem);
 
 	/* Relative Font Sizes: */
-	--smaller-font: clamp(0.9372em, 0.9372em + 0.0003cqi, 0.9375em);
-	--larger-font: clamp(1.067em, 1.0377em + 0.2602cqi, 1.35em);
+	--smaller-font: clamp(0.9em, 0.9411em + -0.0342cqi, 0.9372em);
+	--larger-font: clamp(1.067em, 1.0319em + 0.312cqi, 1.4063em);
 }
