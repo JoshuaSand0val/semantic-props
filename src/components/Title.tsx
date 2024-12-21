@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import "./title.css";
+import css from "./Title.module.css";
 
 /**
  * A vibrant primary title.
@@ -10,9 +10,12 @@ export default function Title({ text }: { text: string }) {
 	const chars: string[] = text.split("");
 
 	return (
-		<h1 className="title">
+		<h1 className={css.container}>
 			{chars.map((char, index) => (
-				<span key={index} style={{ "--char": index } as CSSProperties}>
+				<span
+					key={index}
+					className={css.char}
+					style={{ "--char": index } as CSSProperties}>
 					{char}
 				</span>
 			))}
