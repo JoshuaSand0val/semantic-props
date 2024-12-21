@@ -1,0 +1,44 @@
+/* Semantic Props for container sizes and queries. */
+
+@use "sass:map" as map;
+
+$containers: (
+	"3x-small": 180px,
+	"2x-small": 240px,
+	"x-small": 360px,
+	"small": 480px,
+	"medium": 768px,
+	"large": 1024px,
+	"x-large": 1440px,
+	"2x-large": 1600px,
+	"3x-large": 1920px
+);
+
+/* Container style queries: */
+@each $prop in map.keys($containers) {
+	@property --#{$prop}-query {
+		syntax: "true | false";
+		inherits: true;
+		initial-value: false;
+	}
+}
+
+:where(.semantic) {
+	/* Container sizes: */
+	@each $prop, $size in $containers {
+		--#{$prop}-container: #{$size};
+	}
+
+	/* Container style queries: */
+	@each $prop, $size in $containers {
+		@media (min-width: $size) {
+			--#{$prop}-query: true;
+		}
+		@container (max-inline-size: #{$size}) {
+			--#{$prop}-query: false;
+		}
+		@container (min-inline-size: #{$size}) {
+			--#{$prop}-query: true;
+		}
+	}
+}
