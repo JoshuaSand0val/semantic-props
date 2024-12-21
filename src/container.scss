@@ -17,9 +17,9 @@ $containers: (
 /* Container style queries: */
 @each $prop in map.keys($containers) {
 	@property --#{$prop}-query {
-		syntax: "true | false";
+		syntax: "<string>";
 		inherits: true;
-		initial-value: false;
+		initial-value: "false";
 	}
 }
 
@@ -32,13 +32,13 @@ $containers: (
 	/* Container style queries: */
 	@each $prop, $size in $containers {
 		@media (min-width: $size) {
-			--#{$prop}-query: true;
+			--#{$prop}-query: "true";
 		}
 		@container (max-inline-size: #{$size}) {
-			--#{$prop}-query: false;
+			--#{$prop}-query: "false";
 		}
 		@container (min-inline-size: #{$size}) {
-			--#{$prop}-query: true;
+			--#{$prop}-query: "true";
 		}
 	}
 }
