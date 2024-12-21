@@ -15,11 +15,13 @@ $containers: (
 );
 
 /* Container style queries: */
-@each $prop in map.keys($containers) {
-	@property --#{$prop}-query {
-		syntax: "true | false";
-		inherits: true;
-		initial-value: false;
+@each $logic in breakpoint viewport {
+	@each $prop in map.keys($containers) {
+		@property --#{$prop}-#{$logic} {
+			syntax: "true | false";
+			inherits: true;
+			initial-value: false;
+		}
 	}
 }
 
@@ -32,13 +34,14 @@ $containers: (
 	/* Container style queries: */
 	@each $prop, $size in $containers {
 		@media (min-width: $size) {
-			--#{$prop}-query: true;
+			--#{$prop}-breakpoint: true;
+			--#{$prop}-viewport: true;
 		}
 		@container (max-inline-size: #{$size}) {
-			--#{$prop}-query: false;
+			--#{$prop}-breakpoint: false;
 		}
 		@container (min-inline-size: #{$size}) {
-			--#{$prop}-query: true;
+			--#{$prop}-breakpoint: true;
 		}
 	}
 }

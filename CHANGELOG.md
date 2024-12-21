@@ -14,7 +14,7 @@ All relevant changes to Semantic Props will be documented here.
 - Added `-wording` word-spacing props.
 - Added ratio props.
 - Added transform props.
-- Added `@container style()` query props for breakpoints.
+- Added `@container style()` props for breakpoints/viewports.
 
 ### Changed
 
