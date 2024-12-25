@@ -1,10 +1,11 @@
 /* Semantic Props for z-index positions. */
 
-:where(.semantic) {
-	--bottom-index: -1000;
-	--relative-index: 1000;
-	--absolute-index: 2000;
-	--sticky-index: 3000;
-	--fixed-index: 4000;
-	--top-index: 5000;
+:root {
+	/* Z-(Index): */
+	--z-bottom: -1000;
+	--z-relative: 1000;
+	--z-absolute: 2000;
+	--z-sticky: 3000;
+	--z-fixed: 4000;
+	--z-top: 5000;
 }
