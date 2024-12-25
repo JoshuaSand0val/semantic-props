@@ -1,6 +1,6 @@
 /* Semantic Props for timing animation progression. */
 
-:where(.semantic) {
+:where(:root) {
 	--ease: ease;
 	--ease-in: ease-in;
 	--ease-out: ease-out;

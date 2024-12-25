@@ -3,7 +3,7 @@
 @use "sass:color" as color;
 @use "sass:map" as map;
 
-:where(.semantic) {
+:where(:root) {
 	/* Color Palette: */
 	$colors: (
 		--gray: oklch(0.6 0.01 260),

@@ -1,6 +1,6 @@
 /* Semantic Props for timing animations. */
 
-:where(.semantic) {
+:where(:root) {
 	--swift-time: 75ms;
 	--fast-time: 150ms;
 	--normal-time: 300ms;
