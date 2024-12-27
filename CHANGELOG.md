@@ -18,7 +18,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Changed
 
-- Changed scope selector from `:where(:root, .--semantic)` to `:where(.semantic)`.
+- Changed scope selector from `:where(:root, .--semantic)` to `:where(:root)`.
 - Changed breakpoint into container props.
 - Changed color system to implement more colors via weight syntax with light-dark values.
 - Changed `--font` value to `system-ui`.
