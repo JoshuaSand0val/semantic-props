@@ -1,6 +1,6 @@
 /* Semantic Props for aspects of borders. */
 
-:where(.semantic) {
+:where(:root) {
 	--border-style: solid;
 	--border-collapse: separate;
 	--border-spacing: 0;
