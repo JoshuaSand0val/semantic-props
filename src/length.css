@@ -3,15 +3,15 @@
 
 :where(:root) {
 	/* Base Lengths: */
-	--3x-small-length: clamp(0.25rem, 0.2435rem + 0.0575cqi, 0.3125rem);
-	--2x-small-length: clamp(0.5rem, 0.4935rem + 0.0575cqi, 0.5625rem);
-	--x-small-length: clamp(0.75rem, 0.7371rem + 0.1149cqi, 0.875rem);
-	--small-length: clamp(1rem, 0.9871rem + 0.1149cqi, 1.125rem);
-	--medium-length: clamp(1.5rem, 1.4806rem + 0.1724cqi, 1.6875rem);
-	--large-length: clamp(2rem, 1.9741rem + 0.2299cqi, 2.25rem);
-	--x-large-length: clamp(3rem, 2.9612rem + 0.3448cqi, 3.375rem);
-	--2x-large-length: clamp(4rem, 3.9483rem + 0.4598cqi, 4.5rem);
-	--3x-large-length: clamp(6rem, 5.9224rem + 0.6897cqi, 6.75rem);
+	--3x-small: clamp(0.25rem, 0.2435rem + 0.0575cqi, 0.3125rem);
+	--2x-small: clamp(0.5rem, 0.4935rem + 0.0575cqi, 0.5625rem);
+	--x-small: clamp(0.75rem, 0.7371rem + 0.1149cqi, 0.875rem);
+	--small: clamp(1rem, 0.9871rem + 0.1149cqi, 1.125rem);
+	--medium: clamp(1.5rem, 1.4806rem + 0.1724cqi, 1.6875rem);
+	--large: clamp(2rem, 1.9741rem + 0.2299cqi, 2.25rem);
+	--x-large: clamp(3rem, 2.9612rem + 0.3448cqi, 3.375rem);
+	--2x-large: clamp(4rem, 3.9483rem + 0.4598cqi, 4.5rem);
+	--3x-large: clamp(6rem, 5.9224rem + 0.6897cqi, 6.75rem);
 
 	/* Responsive Length (3x-small to 3x-large): */
 	--responsive-length: clamp(0.25rem, -0.4224rem + 5.977cqi, 6.75rem);
