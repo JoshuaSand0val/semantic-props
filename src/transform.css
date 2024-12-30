@@ -1,6 +1,6 @@
 /* Semantic Props for transform properties. */
 
-:where(.semantic) {
+:where(:root) {
 	--3x-scale-out: 0.5;
 	--2x-scale-out: 0.75;
 	--x-scale-out: 0.9;

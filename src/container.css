@@ -1,0 +1,25 @@
+/* Semantic Props for inline/block container sizes. */
+
+:where(:root) {
+	/* Inline-(Size): */
+	--inline-3x-small: 180px;
+	--inline-2x-small: 240px;
+	--inline-x-small: 360px;
+	--inline-small: 480px;
+	--inline-medium: 768px;
+	--inline-large: 1024px;
+	--inline-x-large: 1440px;
+	--inline-2x-large: 1600px;
+	--inline-3x-large: 1920px;
+
+	/* Block-(Size): */
+	--block-3x-small: 180px;
+	--block-2x-small: 240px;
+	--block-x-small: 360px;
+	--block-small: 480px;
+	--block-medium: 768px;
+	--block-large: 1024px;
+	--block-x-large: 1440px;
+	--block-2x-large: 1600px;
+	--block-3x-large: 1920px;
+}
