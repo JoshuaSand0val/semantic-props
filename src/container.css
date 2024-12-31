@@ -1,6 +1,6 @@
 /* Semantic Props for inline/block container sizes. */
 
-:where(:root) {
+:where(.semantic) {
 	/* Inline-(Size): */
 	--inline-3x-small: 180px;
 	--inline-2x-small: 240px;

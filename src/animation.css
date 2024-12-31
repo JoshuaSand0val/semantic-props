@@ -1,6 +1,6 @@
 /* Semantic Props for animations. */
 
-:where(:root) {
+:where(.semantic) {
 	/* CSS <time> Type: */
 	--x-fast-time: 75ms;
 	--fast-time: 150ms;
