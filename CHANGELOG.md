@@ -10,7 +10,7 @@ All relevant changes to Semantic Props will be documented here.
 - Added timing-function ease props.
 - Added filter props.
 - Added `letter-` letter-spacing props.
-- Added `wording-` word-spacing props.
+- Added `word-` word-spacing props.
 - Added ratio props.
 - Added transform props.
 
