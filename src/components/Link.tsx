@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import "./link.css";
+import "./Link.css";
 
 /**
  * A link to another webpage.
@@ -9,6 +9,6 @@ import "./link.css";
 
 export default function Link({ to, children = to}: { to: string, children: ReactNode }) {
 	return (
-		<a className="link" href={to}>{children}</a>
+		<a className="Link" href={to}>{children}</a>
 	);
 }

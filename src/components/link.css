@@ -1,6 +1,6 @@
-.link {
+.Link {
 	color: var(--accent-500-300);
-	&:not(:hover, :focus) {
+	&:not(:hover, :focus, :active) {
 		text-decoration: none;
 	}
 	&:active {
