@@ -1,0 +1,20 @@
+.Main.container {
+	display: block;
+	padding: var(--safe-main);
+	@media not (prefers-reduced-motion) {
+		animation: main-container var(--normal-time) var(--x-fast-time);
+	}
+}
+
+@keyframes main-container {
+	from {
+		scale: var(--scale-out);
+		opacity: 0;
+	}
+}
+
+.Main.wrapper {
+	display: block;
+	padding-inline: max(var(--small-size), var(--responsive-size));
+	margin-block: var(--x-small-size);
+}
