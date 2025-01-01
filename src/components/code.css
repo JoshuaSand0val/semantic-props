@@ -17,3 +17,7 @@
 	filter: var(--medium-shadow);
 	cursor: text;
 }
+
+.Code.content {
+	font-family: var(--mono-font);
+}

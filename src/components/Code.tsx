@@ -9,7 +9,7 @@ import "./Code.css";
 export default function Code({ text, lang }: { text: string, lang: string }) {
 	return (
 		<pre className="Code container">
-			<code className={`language-${lang}`}>{text}</code>
+			<code className={["Code content", `language-${lang}`].join(" ")}>{text}</code>
 		</pre>
 	);
 }
