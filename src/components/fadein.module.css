@@ -14,7 +14,7 @@
 @keyframes fade-in {
 	from {
 		color: var(--secondary-500-300);
-		scale: var(--2x-scale-in);
+		scale: var(--scale-in);
 		filter: var(--2x-light-blur) var(--3x-heavy-shadow);
 		opacity: 0;
 	}
