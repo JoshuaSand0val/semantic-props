@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import css from "./fadein.module.css";
+import "./FadeIn.css";
 
 /**
  * A vibrant title.
@@ -14,7 +14,7 @@ export default function FadeIn({ text }: { text: string }) {
 			{words.map((word, index) => (
 				<span
 					key={index}
-					className={css.word}
+					className="FadeIn word"
 					style={{ "--word": index } as CSSProperties}>
 					{word}
 				</span>

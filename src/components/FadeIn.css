@@ -1,4 +1,4 @@
-.word {
+.FadeIn.word {
 	--word: 0;
 	display: inline-block;
 	white-space: pre;
