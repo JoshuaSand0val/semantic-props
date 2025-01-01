@@ -32,7 +32,7 @@
 	color: var(--secondary-600-300);
 	margin: 0;
 	@media not (prefers-reduced-motion) {
-		animation: header-motto var(--x-slow-time) var(--x-fast-time);
+		animation: header-motto var(--x-slow-time);
 	}
 }
 
@@ -68,7 +68,7 @@
 	gap: var(--3x-small-size) var(--small-size);
 	transform-origin: right;
 	@media not (prefers-reduced-motion) {
-		animation: header-navigation var(--x-slow-time) var(--x-fast-time);
+		animation: header-navigation var(--x-slow-time);
 	}
 	a[href] {
 		display: flex;

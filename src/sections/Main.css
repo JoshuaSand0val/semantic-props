@@ -3,7 +3,7 @@
 	padding: var(--safe-main);
 	transform-origin: top left;
 	@media not (prefers-reduced-motion) {
-		animation: main-container var(--normal-time) var(--x-fast-time);
+		animation: main-container var(--normal-time);
 	}
 }
 
