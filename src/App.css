@@ -1,6 +1,14 @@
 @import "sanitize.css";
 @import "semantic-props";
 
+.semantic {
+	--accent-color: var(--green);
+	@supports (color: light-dark(white, black)) {
+		color-scheme: light dark;
+		--accent-color: light-dark(var(--green), var(--pink));
+	}
+}
+
 :root {
 	display: block;
 	min-height: min(100vh, 100dvh);
@@ -14,9 +22,6 @@
 	transition-property: background-color, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
-	@supports (color: light-dark(white, black)) {
-		color-scheme: light dark;
-	}
 	&::before {
 		content: "";
 		position: fixed;
@@ -27,4 +32,10 @@
 			repeating-linear-gradient(22.5deg, var(--primary-100-900) 0px, var(--primary-50-800) 10px);
 		background-size: 100% 100%;
 	}
+}
+
+::selection {
+	background-color: var(--accent-200-500);
+	background-color: oklch(from var(--accent-200-500) l c h / var(--x-low-opacity));
+	color: var(--secondary-800-100);
 }
