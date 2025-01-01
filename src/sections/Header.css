@@ -1,30 +1,31 @@
-.container {
+.Header.container {
 	display: block;
 	padding: var(--safe-header);
 }
 
-.wrapper {
+.Header.wrapper {
 	display: block;
-	padding-top: var(--x-large-size);
 	padding-inline: max(var(--small-size), var(--responsive-size));
-	padding-bottom: var(--x-small-size);
+	margin-block-start: var(--x-large-size);
+	margin-block-end: var(--x-small-size);
 }
 
-.brand {
+.Header.brand {
 	display: block;
 	line-height: var(--line-short);
-	padding: var(--x-small-size) 0;
+	margin-block: var(--x-small-size);
 }
 
-.title {
+.Header.title {
 	display: inline-block;
 	font-family: var(--display-font);
 	font-weight: var(--bold-font);
 	font-size: var(--8x-large-font);
-	margin: var(--3x-small-size) -0.25rem;
+	margin-block: var(--3x-small-size);
+	margin-inline: -0.25rem;
 }
 
-.motto {
+.Header.motto {
 	display: block;
 	font-size: var(--2x-large-font);
 	font-weight: var(--light-font);
@@ -42,7 +43,7 @@
 	}
 }
 
-.info {
+.Header.info {
 	display: inline-block;
 	font-size: var(--x-small-font);
 	line-height: var(--line-tall);
@@ -58,7 +59,7 @@
 	}
 }
 
-.navigation {
+.Header.navigation {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: flex-end;
