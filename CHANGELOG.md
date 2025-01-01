@@ -6,28 +6,28 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
+- Added distributable files for all CSS modules.
 - Added border props.
 - Added timing-function ease props.
 - Added filter props.
-- Added `--monospace-line-height` and `--accent-line-height` props.
-- Added `-lettering` letter-spacing props.
-- Added `-wording` word-spacing props.
+- Added `letter-` letter-spacing props.
+- Added `word-` word-spacing props.
 - Added ratio props.
-- Added transform props.
-- Added `@container style()` props for breakpoints/viewports.
+- Added scale props.
+- Added opacity props.
 
 ### Changed
 
-- Changed scope selector from `:where(:root, .--semantic)` to `:where(:root)`.
+- Changed scope selector from `:where(:root, .--semantic)` to `:where(.semantic)`.
 - Changed breakpoint into container props.
 - Changed color system to implement more colors via weight syntax with light-dark values.
-- Changed `--font` value to `system-ui`.
-- Changed `--display-font` value to `var(--font)`.
-- Changed `--brand-font` to `--accent-font` and value to `var(--font)`.
-- Changed `-font-leading` props naming to `-line-height`.
+- Changed `--font` prop to `--body-font` and value to `system-ui`.
+- Changed `--display-font` value to `var(--body-font)`.
+- Changed `--brand-font` to `--accent-font` and value to `var(--body-font)`.
+- Changed `-font-leading` props naming to `line-`.
 - Changed `--bold-font` value from `600` to `700`.
 - Changed absolute and relative font-size system to include more sizing using `clamp()`.
-- Changed `-layer` props naming to `-index`.
+- Changed `-layer` props naming to `z-`.
 - Changed padding, margin `-size` system to use `clamp()`.
 - Changed `-timing` props naming to `-time`.
 
