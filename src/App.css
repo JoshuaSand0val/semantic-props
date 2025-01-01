@@ -3,16 +3,29 @@
 
 :root {
 	display: block;
-	font-family: var(--font);
+	min-height: min(100vh, 100dvh);
+	font-family: var(--body-font);
 	font-size: var(--medium-font);
 	font-weight: var(--regular-font);
-	line-height: var(--line-height);
-	background-color: var(--primary-50-900);
+	line-height: var(--line-normal);
+	background-color: var(--primary-50-800);
 	color: var(--secondary-800-100);
 	transition-property: background-color, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
 	@supports (color: light-dark(white, black)) {
 		color-scheme: light dark;
+	}
+	&::before {
+		content: "";
+		position: fixed;
+		inset: 0;
+		z-index: var(--z-bottom);
+		background-image:
+			repeating-linear-gradient(135deg, var(--primary-100-900) 0px, var(--primary-50-800) 10px, transparent 10px, transparent 13px),
+			repeating-linear-gradient(22.5deg, var(--primary-100-900) 0px, var(--primary-50-800) 10px, transparent 10px, transparent 13px),
+			linear-gradient(90deg, var(--green), var(--magenta), var(--blue));
+		background-size: 100% 100%;
+		filter: var(--x-light-blur);
 	}
 }

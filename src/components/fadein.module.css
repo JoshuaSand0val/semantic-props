@@ -1,0 +1,21 @@
+.word {
+	--word: 0;
+	display: inline-block;
+	white-space: pre;
+	@media not (prefers-reduced-motion) {
+		animation:
+		fade-in
+		var(--x-slow-time)
+		calc(var(--normal-time) * var(--word) + var(--x-fast-time))
+		both;
+	}
+}
+
+@keyframes fade-in {
+	from {
+		color: var(--secondary-500-300);
+		scale: var(--2x-scale-in);
+		filter: var(--2x-light-blur) var(--3x-heavy-shadow);
+		opacity: 0;
+	}
+}
