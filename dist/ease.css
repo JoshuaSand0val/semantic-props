@@ -1,1 +1,1 @@
-:where(:root){--ease:ease;--ease-in:ease-in;--ease-out:ease-out;--ease-in-out:ease-in-out}
+:where(.semantic){--ease:ease;--ease-in:ease-in;--ease-out:ease-out;--ease-in-out:ease-in-out}

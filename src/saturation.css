@@ -1,6 +1,6 @@
 /* Semantic Props for CSS saturate filter value. */
 
-:where(:root) {
+:where(.semantic) {
 	--3x-low-saturation: saturate(0.1);
 	--2x-low-saturation: saturate(0.25);
 	--x-low-saturation: saturate(0.5);

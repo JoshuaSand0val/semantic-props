@@ -1,6 +1,6 @@
 /* Semantic Props for CSS brightness filter value. */
 
-:where(:root) {
+:where(.semantic) {
 	--3x-low-brightness: brightness(0.1);
 	--2x-low-brightness: brightness(0.25);
 	--x-low-brightness: brightness(0.5);

@@ -1,1 +1,1 @@
-:where(:root){--word-dense:-0.1em;--word-normal:normal;--word-wide:0.1em}
+:where(.semantic){--word-dense:-0.1em;--word-normal:normal;--word-wide:0.1em}

@@ -2,7 +2,7 @@
 
 @use "sass:color" as color;
 
-:where(:root) {
+:where(.semantic) {
 	/* Relative Colors: */
 	--gray: oklch(0.6 0.01 260);
 	--pink: oklch(0.8 0.1 10);
