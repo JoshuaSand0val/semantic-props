@@ -65,7 +65,7 @@
 	align-items: center;
 	font-size: var(--medium-font);
 	gap: var(--3x-small-size) var(--small-size);
-	transform-origin: left;
+	transform-origin: right;
 	@media not (prefers-reduced-motion) {
 		animation: header-navigation var(--x-slow-time) var(--x-fast-time);
 	}
