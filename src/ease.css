@@ -1,4 +1,4 @@
-/* Semantic Props for timing animation progression. */
+/* Semantic Props for CSS <easing-function> data type. */
 
 :where(:root) {
 	--ease: ease;

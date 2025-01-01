@@ -1,0 +1,7 @@
+/* Semantic Props for CSS letter-spacing property. */
+
+:where(:root) {
+	--letter-dense: -0.05em;
+	--letter-normal: normal;
+	--letter-wide: 0.1em;
+}

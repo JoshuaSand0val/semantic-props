@@ -1,4 +1,4 @@
-/* Semantic Props for aspects of borders. */
+/* Semantic Props for CSS border properties. */
 
 :where(:root) {
 	--border-style: solid;

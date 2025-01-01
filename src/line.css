@@ -1,0 +1,7 @@
+/* Semantic Props for CSS line-height property. */
+
+:where(:root) {
+	--line-short: 1.25;
+	--line-normal: 1.6;
+	--line-tall: 2;
+}

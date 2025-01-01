@@ -1,13 +1,21 @@
 /* Import: All CSS files forwarded. */
+@forward "blur.css";
 @forward "border.css";
+@forward "brightness.css";
 @forward "color.scss";
-@forward "container.scss";
+@forward "container.css";
+@forward "contrast.css";
 @forward "ease.css";
-@forward "filter.css";
 @forward "font.css";
-@forward "index.css";
+@forward "letter.css";
+@forward "line.css";
+@forward "opacity.css";
 @forward "ratio.css";
 @forward "safe.css";
+@forward "saturation.css";
+@forward "scale.css";
+@forward "shadow.css";
 @forward "size.css";
 @forward "time.css";
-@forward "transform.css";
+@forward "word.css";
+@forward "z.css";

@@ -1,36 +1,21 @@
-/* Semantic Props for styling fonts. */
+/* Semantic Props for CSS font properties. */
 /* https://utopia.fyi/type/calculator?c=180,16,1.067,1920,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
 
 :where(:root) {
-	/* Font Families: */
-	--font: system-ui, sans-serif;
-	--monospace-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-	--display-font: var(--font);
-	--accent-font: var(--font);
+	/* Font-Family: */
+	--body-font: system-ui, sans-serif;
+	--display-font: var(--body-font);
+	--mono-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	--accent-font: var(--body-font);
 
-	/* Line Heights: */
-	--line-height: 1.6;
-	--monospace-line-height: var(--line-height);
-	--display-line-height: 1.2;
-	--accent-line-height: var(--line-height);
-
-	/* Font Weights: */
-	--regular-font: 400;
+	/* Font-Weight: */
 	--thin-font: 200;
+	--light-font: 300;
+	--regular-font: 500;
 	--bold-font: 700;
 	--heavy-font: 900;
 
-	/* Letter Spacing: */
-	--dense-lettering: -0.05em;
-	--normal-lettering: normal;
-	--wide-lettering: 0.150em;
-
-	/* Word Spacing: */
-	--dense-wording: -0.1em;
-	--normal-wording: normal;
-	--wide-wording: 0.5em;
-
-	/* Absolute Font Sizes: */
+	/* Font-Size: */
 	--x-small-font: clamp(0.72rem, 0.8947rem + -0.1456cqi, 0.8784rem);
 	--small-font: clamp(0.9rem, 0.9411rem + -0.0342cqi, 0.9372rem);
 	--medium-font: clamp(1rem, 0.9871rem + 0.1149cqi, 1.125rem);
@@ -45,7 +30,6 @@
 	--8x-large-font: clamp(1.7926rem, 1.1109rem + 6.0591cqi, 8.3819rem);
 	--9x-large-font: clamp(1.9127rem, 1.0267rem + 7.8756cqi, 10.4774rem);
 
-	/* Relative Font Sizes: */
 	--smaller-font: clamp(0.9em, 0.9411em + -0.0342cqi, 0.9372em);
 	--larger-font: clamp(1.067em, 1.0319em + 0.312cqi, 1.4063em);
 }

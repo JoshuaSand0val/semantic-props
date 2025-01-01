@@ -1,0 +1,13 @@
+/* Semantic Props for CSS box-shadow or drop-shadow filter value. */
+
+:where(:root) {
+	--3x-light-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.075));
+	--2x-light-shadow: drop-shadow(0 2px 2px rgb(0 0 0 / 0.075));
+	--x-light-shadow: drop-shadow(0 3px 3px rgb(0 0 0 / 0.075));
+	--light-shadow: drop-shadow(0 6px 4px rgb(0 0 0 / 0.1));
+	--medium-shadow: drop-shadow(0 8px 5px rgb(0 0 0 / 0.1));
+	--heavy-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.1));
+	--x-heavy-shadow: drop-shadow(0 16px 10px rgb(0 0 0 / 0.15));
+	--2x-heavy-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.15));
+	--3x-heavy-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+}

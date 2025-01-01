@@ -1,9 +1,9 @@
-/* Semantic Props for timing animations. */
+/* Semantic Props for CSS <time> data type. */
 
 :where(:root) {
-	--swift-time: 75ms;
+	--x-fast-time: 75ms;
 	--fast-time: 150ms;
 	--normal-time: 300ms;
-	--steady-time: 500ms;
-	--slow-time: 750ms;
+	--slow-time: 500ms;
+	--x-slow-time: 750ms;
 }
