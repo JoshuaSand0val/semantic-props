@@ -1,0 +1,19 @@
+.Code.container {
+	display: block;
+	width: fit-content;
+	max-width: min(100%, var(--medium-container));
+	tab-size: 4;
+	hyphens: none;
+	border-radius: var(--3x-small-size);
+	border-block-end: var(--3x-small-size) var(--border-style) var(--secondary-400-600);
+	background-clip: border-box;
+	background-color: var(--primary-50-800);
+	color: var(--secondary-500-400);
+	padding-block: var(--small-size);
+	padding-inline-start: var(--small-size);
+	padding-inline-end: var(--large-size);
+	margin: 0;
+	overflow-inline: auto;
+	filter: var(--medium-shadow);
+	cursor: text;
+}
