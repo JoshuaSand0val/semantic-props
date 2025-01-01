@@ -20,6 +20,9 @@ export default function Navbar() {
 					<h1 className={css.title}>
 						<FadeIn text="Semantic Props" />
 					</h1>
+					<span className={css.info}>
+						<i className="bi bi-info-circle">&ensp;</i>
+						v1.0.0 (MIT)</span>
 				</hgroup>
 			</div>
 		</header>
