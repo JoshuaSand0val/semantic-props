@@ -19,6 +19,7 @@
 	font-size: var(--8x-large-font);
 	margin-block: var(--3x-small-size);
 	margin-inline: -0.25rem;
+	filter: var(--medium-shadow);
 }
 
 .Header.motto {
