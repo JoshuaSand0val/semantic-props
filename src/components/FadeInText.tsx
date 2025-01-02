@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import "..styles/fade-in.css";
+import "../styles/fade-in.css";
 
 /**
  * Sequentially fades-in text content word by word.
