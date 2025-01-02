@@ -1,4 +1,5 @@
 import "./Navbar.css";
+import Link from "../components/Link";
 import "../styles/scale-in.css";
 
 /** Website navbar block. */
@@ -6,12 +7,12 @@ import "../styles/scale-in.css";
 export default function Navbar() {
 	return (
 		<nav className="Navbar container scale-in">
-			<a href="https://github.com/JoshuaSand0val/semantic-props">
+			<Link to="https://github.com/JoshuaSand0val/semantic-props" target="_blank">
 				<i className="bi bi-github"></i> Github
-			</a>
-			<a href="https://heyjes.dev/">
+			</Link>
+			<Link to="https://heyjes.dev/" target="_blank">
 				<i className="bi bi-code-slash"></i> Hey, Jes!
-			</a>
+			</Link>
 		</nav>
 	);
 }
