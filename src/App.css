@@ -1,3 +1,6 @@
+/* Styles for the entire application. */
+
+@import "bootstrap-icons/font/bootstrap-icons.css";
 @import "sanitize.css";
 @import "semantic-props";
 
@@ -9,7 +12,7 @@
 	}
 }
 
-:root {
+#root {
 	display: block;
 	min-height: min(100vh, 100dvh);
 	font-family: var(--body-font);
@@ -25,6 +28,10 @@
 	transition-property: background-color, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
+	padding-inline-start: max(var(--medium-size), var(--responsive-size), var(--safe-left));
+	padding-inline-end: max(var(--medium-size), var(--responsive-size), var(--safe-right));
+	padding-block-start: max(var(--medium-size), var(--responsive-size), var(--safe-top));
+	padding-block-end: max(var(--medium-size), var(--responsive-size), var(--safe-bottom));
 }
 
 ::selection {

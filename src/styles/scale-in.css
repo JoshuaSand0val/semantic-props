@@ -1,0 +1,12 @@
+/* Scales-in content as a whole. */
+
+.scale-in {
+	animation: scale-in var(--slow-time);
+}
+
+@keyframes scale-in {
+	from {
+		scale: var(--scale-out);
+		opacity: 0;
+	}
+}

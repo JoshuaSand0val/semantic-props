@@ -1,6 +1,6 @@
 /* Represents a block of code. */
 
-.code-block, code[class|="language"] {
+.CodeBlock {
 	display: block;
 	width: fit-content;
 	max-width: min(100%, var(--medium-container));

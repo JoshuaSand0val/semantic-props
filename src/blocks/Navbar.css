@@ -1,0 +1,24 @@
+/* Styles for website navbar block. */
+
+.Navbar.container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-end;
+	align-items: center;
+	font-size: var(--medium-font);
+	gap: var(--3x-small-size) var(--small-size);
+	transform-origin: top right;
+	a[href] {
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		gap: var(--2x-small-size);
+		text-decoration: none;
+		&:not(:hover, :focus, :active) {
+			color: inherit;
+		}
+		.bi {
+			font-size: var(--2x-large-font);
+		}
+	}
+}

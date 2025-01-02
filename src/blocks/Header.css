@@ -1,0 +1,35 @@
+/* Styles for website header block. */
+
+.Header.container {
+	display: block;
+	margin-block-start: var(--small-size);
+	margin-block-end: var(--large-size);
+}
+
+.Header:is(.title, .motto, .info) {
+	display: block;
+	line-height: var(--line-short);
+	margin-block: 0;
+}
+
+.Header.info {
+	text-align: end;
+	font-size: var(--x-small-font);
+	color: var(--secondary-500-400);
+	transform-origin: top right;
+}
+
+.Header.title {
+	font-family: var(--display-font);
+	font-weight: var(--bold-font);
+	font-size: var(--9x-large-font);
+	margin-inline: -0.25rem;
+	filter: var(--medium-shadow);
+	transform-origin: left;
+}
+
+.Header.motto {
+	font-size: var(--2x-large-font);
+	font-weight: var(--light-font);
+	color: var(--secondary-600-300);
+}

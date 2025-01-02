@@ -1,6 +1,6 @@
 /* Represents a link to another webpage. */
 
-.link, :any-link {
+.Link {
 	color: var(--accent-500-300);
 	&:not(:hover, :focus, :active) {
 		text-decoration: none;

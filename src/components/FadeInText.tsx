@@ -1,5 +1,5 @@
 import { CSSProperties } from "react";
-import "../styles/fade-in.css";
+import "./FadeInText.css";
 
 /**
  * Sequentially fades-in text content word by word.
@@ -14,8 +14,8 @@ export default function FadeInText({ text }: { text: string }) {
 			{words.map((word, index) => (
 				<span
 					key={index}
-					className="fade-in"
-					style={{ "--delay": index } as CSSProperties}>
+					className="FadeInText"
+					style={{ "--word": index } as CSSProperties}>
 					{word}
 				</span>
 			))}
