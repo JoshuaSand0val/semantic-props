@@ -8,8 +8,8 @@ import "./CodeBlock.css";
 
 export default function CodeBlock({ children, lang }: { children: string, lang: string }) {
 	return (
-		<pre>
-			<code className={`CodeBlock language-${lang}`}>{children}</code>
+		<pre className="CodeBlock">
+			<code className={`language-${lang}`}>{children}</code>
 		</pre>
 	);
 }
