@@ -2,7 +2,9 @@
 
 .Header.container {
 	display: block;
-	margin-block-start: var(--small-size);
+	border-block-end: var(--3x-small-size) var(--border-style) var(--primary-200-700);
+	padding-block-end: var(--small-size);
+	margin-block-start: var(--medium-size);
 	margin-block-end: var(--large-size);
 }
 
