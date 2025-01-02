@@ -1,15 +1,15 @@
-import "./Code.css";
+import "../styles/code-block.css";
 
 /**
- * Syntax highlighted code block.
+ * Simple code block.
  * @param props.text Code to display. 
  * @param props.lang Code language.
  */
 
 export default function Code({ text, lang }: { text: string, lang: string }) {
 	return (
-		<pre className="Code container">
-			<code className={["Code content", `language-${lang}`].join(" ")}>{text}</code>
+		<pre>
+			<code className={`language-${lang}`}>{text}</code>
 		</pre>
 	);
 }

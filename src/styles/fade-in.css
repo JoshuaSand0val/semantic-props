@@ -1,12 +1,13 @@
-.FadeIn.word {
-	--word: 0;
+/* Fades-in wrapped content with optional delay index. */
+
+.fade-in {
+	--delay: 0;
 	display: inline-block;
-	white-space: pre;
 	@media not (prefers-reduced-motion) {
 		animation:
 		fade-in
 		var(--x-slow-time)
-		calc(var(--normal-time) * var(--word) + var(--x-fast-time))
+		calc(var(--normal-time) * var(--delay) + var(--x-fast-time))
 		both;
 	}
 }
