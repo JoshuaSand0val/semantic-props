@@ -7,5 +7,6 @@
 	}
 	&:active {
 		text-decoration-color: var(--secondary-300-500);
+		color: var(--accent-600-400);
 	}
 }
