@@ -4,17 +4,8 @@
 @import "sanitize.css";
 @import "semantic-props";
 
-.semantic {
-	--accent-color: var(--green);
-	@supports (color: light-dark(white, black)) {
-		color-scheme: light dark;
-		--accent-color: light-dark(var(--green), var(--pink));
-	}
-}
-
-#root {
+:root.semantic {
 	display: block;
-	min-height: min(100vh, 100dvh);
 	font-family: var(--body-font);
 	font-size: var(--medium-font);
 	font-weight: var(--regular-font);
@@ -28,10 +19,22 @@
 	transition-property: background-color, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
+	--accent-color: var(--green);
+	@supports (color: light-dark(white, black)) {
+		color-scheme: light dark;
+		--accent-color: light-dark(var(--green), var(--pink));
+	}
+}
+
+#root {
+	display: block;
+	max-width: var(--3x-large-container);
+	min-height: min(100vh, 100dvh);
 	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
 	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
 	padding-block-start: max(var(--responsive-size), var(--safe-top) + var(--medium-size));
 	padding-block-end: max(var(--responsive-size), var(--safe-bottom) + var(--medium-size));
+	margin-inline: auto;
 }
 
 ::selection {
