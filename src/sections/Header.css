@@ -1,13 +1,9 @@
 .Header.container {
 	display: block;
-	padding: var(--safe-header);
-}
-
-.Header.wrapper {
-	display: block;
-	padding-inline: max(var(--small-size), var(--responsive-size));
-	margin-block-start: var(--x-large-size);
-	margin-block-end: var(--x-small-size);
+	padding-inline-start: max(var(--small-size), var(--responsive-size), var(--safe-left));
+	padding-inline-end: max(var(--small-size), var(--responsive-size), var(--safe-right));
+	margin-block-start: max(var(--x-large-size), var(--safe-top));
+	margin-block-end: max(var(--x-small-size), var(--safe-bottom));
 }
 
 .Header.brand {
