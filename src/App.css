@@ -10,6 +10,8 @@
 	font-size: var(--medium-font);
 	font-weight: var(--regular-font);
 	line-height: var(--line-normal);
+	letter-spacing: var(--letter-normal);
+	word-spacing: var(--word-normal);
 	background-color: var(--primary-50-800);
 	background-image:
 		repeating-linear-gradient(135deg, var(--primary-100-900) 0px, var(--primary-50-800) 10px),
@@ -28,7 +30,8 @@
 
 #root {
 	display: block;
-	max-width: var(--3x-large-container);
+	container: root / inline-size;
+	max-width: var(--x-large-container);
 	min-height: min(100vh, 100dvh);
 	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
 	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
