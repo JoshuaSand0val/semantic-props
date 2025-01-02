@@ -10,7 +10,7 @@ export default function Navbar() {
 					Github
 				</a>
 				<a href="https://heyjes.dev/" target="_blank">
-					<i className="bi bi-person-circle"></i>
+					<i className="bi bi-code-slash"></i>
 					Hey, Jes!
 				</a>
 			</nav>
