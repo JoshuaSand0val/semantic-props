@@ -28,10 +28,10 @@
 	transition-property: background-color, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
-	padding-inline-start: max(var(--medium-size), var(--responsive-size), var(--safe-left));
-	padding-inline-end: max(var(--medium-size), var(--responsive-size), var(--safe-right));
-	padding-block-start: max(var(--medium-size), var(--responsive-size), var(--safe-top));
-	padding-block-end: max(var(--medium-size), var(--responsive-size), var(--safe-bottom));
+	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
+	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
+	padding-block-start: max(var(--responsive-size), var(--safe-top) + var(--medium-size));
+	padding-block-end: max(var(--responsive-size), var(--safe-bottom) + var(--medium-size));
 }
 
 ::selection {
