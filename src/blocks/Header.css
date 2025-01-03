@@ -2,10 +2,10 @@
 
 .Header.container {
 	display: block;
-	border-block-end: var(--3x-small-size) var(--border-style) var(--primary-200-700);
-	padding-block-end: var(--small-size);
+	border-block-end: 1px var(--border-style) var(--primary-200-700);
+	padding-block-end: var(--3x-small-size);
 	margin-block-start: var(--medium-size);
-	margin-block-end: var(--large-size);
+	margin-block-end: var(--medium-size);
 }
 
 .Header:is(.title, .motto, .info) {

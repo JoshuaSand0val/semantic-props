@@ -1,6 +1,7 @@
 import "./App.css";
 import Header from "./blocks/Header";
 import Navbar from "./blocks/Navbar";
+import Divider from "./components/Divider";
 import ShowcaseLink from "./components/ShowcaseLink";
 
 export default function App() {
@@ -12,6 +13,10 @@ export default function App() {
 						<Navbar />
 						<Header />
 						<nav className="App navigation">
+							<Divider title="Built with Semantic Props" />
+							<ShowcaseLink to="https://heyjes.dev/" title="Hey, Jes!" target="_blank" />
+
+							<Divider title="Semantic Props" />
 							<ShowcaseLink to="#blur" title="Blur filters" />
 							<ShowcaseLink to="#border" title="Border properties" />
 							<ShowcaseLink to="#brightness" title="Brightness filters" />

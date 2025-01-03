@@ -1,0 +1,25 @@
+/* Divider with title. */
+
+.Divider.title {
+	display: block;
+	font-family: var(--display-font);
+	font-size: var(--x-small-font);
+	font-weight: var(--font-thin);
+	line-height: var(--line-short);
+	text-indent: var(--x-small-size);
+	color: var(--secondary-400-500);
+	margin-block-start: var(--medium-size);
+	margin-block-end: 0;
+	margin-inline: 0;
+}
+
+.Divider.line {
+	display: block;
+	height: 2px;
+	border: none;
+	border-radius: var(--3x-small-size);
+	background-color: var(--secondary-100-700);
+	margin-block-start: var(--2x-small-size);
+	margin-block-end: var(--medium-size);
+	margin-inline: var(--medium-size);
+}
