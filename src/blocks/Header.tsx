@@ -11,12 +11,12 @@ export default function Header() {
 			<span className="Header info scale-in">
 				<i className="bi bi-info-circle"></i> v1.0.0 (MIT)
 			</span>
-			<h2 className="Header motto">
+			<h4 className="Header motto">
 				<FadeInText text="Stylesheets made easy." />
-			</h2>
-			<h1 className="Header title scale-in">
+			</h4>
+			<h3 className="Header title scale-in">
 				Semantic Props
-			</h1>
+			</h3>
 
 			<CodeBlock lang="css">
 @import "https://unpkg.com/semantic-props";
