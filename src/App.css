@@ -4,7 +4,13 @@
 @import "sanitize.css";
 @import "semantic-props";
 
-:root.semantic {
+::selection {
+	background-color: var(--accent-200-500);
+	background-color: oklch(from var(--accent-200-500) l c h / var(--x-low-opacity));
+	color: var(--secondary-800-100);
+}
+
+.App.container {
 	display: block;
 	font-family: var(--body-font);
 	font-size: var(--medium-font);
@@ -28,11 +34,14 @@
 	}
 }
 
-#root {
-	display: block;
-	container: root / inline-size;
-	max-width: var(--x-large-container);
+.App.wrapper {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: start;
+	align-items: stretch;
+	gap: var(--medium-size) var(--large-size);
 	min-height: min(100vh, 100dvh);
+	max-width: var(--x-large-container);
 	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
 	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
 	padding-block-start: calc(var(--safe-top) + var(--large-size));
@@ -40,8 +49,30 @@
 	margin-inline: auto;
 }
 
-::selection {
-	background-color: var(--accent-200-500);
-	background-color: oklch(from var(--accent-200-500) l c h / var(--x-low-opacity));
-	color: var(--secondary-800-100);
+.App.content {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: start;
+	align-items: start;
+	gap: inherit;
+}
+
+.App:is(.main, .aside) {
+	display: block;
+	width: min(100%, var(--small-container));
+	container: App / inline-size;
+	flex: 1 1 auto;
+}
+
+.App.aside {
+	flex-grow: 9999;
+}
+
+.App.footer {
+	display: block;
+	width: 100%;
+	text-align: end;
+	color: var(--secondary-500-400);
+	margin-block-start: auto;
 }
