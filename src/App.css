@@ -4,6 +4,12 @@
 @import "sanitize.css";
 @import "semantic-props";
 
+.semantic {
+	@supports (color: light-dark(white, black)) {
+		color-scheme: light dark;
+	}
+}
+
 ::selection {
 	background-color: var(--accent-200-500);
 	background-color: oklch(from var(--accent-200-500) l c h / var(--x-low-opacity));
@@ -27,11 +33,6 @@
 	transition-property: background-color, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
-	--accent-color: var(--green);
-	@supports (color: light-dark(white, black)) {
-		color-scheme: light dark;
-		--accent-color: light-dark(var(--green), var(--pink));
-	}
 }
 
 .App.wrapper {
@@ -60,12 +61,14 @@
 
 .App:is(.main, .aside) {
 	display: block;
-	width: min(100%, var(--small-container));
+	width: min(100%, var(--x-small-container));
 	container: App / inline-size;
 	flex: 1 1 auto;
 }
 
 .App.aside {
+	position: sticky;
+	top: calc(var(--safe-top) + var(--large-size));
 	flex-grow: 9999;
 }
 

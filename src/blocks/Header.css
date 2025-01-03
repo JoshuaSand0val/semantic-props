@@ -25,7 +25,7 @@
 	font-family: var(--display-font);
 	font-weight: var(--bold-font);
 	font-size: var(--9x-large-font);
-	margin-inline: -0.25rem;
+	margin-inline: -0.2rem;
 	filter: var(--medium-shadow);
 	transform-origin: left;
 }

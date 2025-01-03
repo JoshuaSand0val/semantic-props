@@ -1,4 +1,5 @@
 import "./Header.css";
+import CodeBlock from "../components/CodeBlock";
 import FadeInText from "../components/FadeInText";
 import "../styles/scale-in.css";
 
@@ -16,6 +17,10 @@ export default function Header() {
 			<h1 className="Header title scale-in">
 				Semantic Props
 			</h1>
+
+			<CodeBlock lang="css">
+@import "https://unpkg.com/semantic-props";
+			</CodeBlock>
 		</header>
 	);
 }

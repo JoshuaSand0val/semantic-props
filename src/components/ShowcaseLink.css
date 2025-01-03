@@ -1,0 +1,29 @@
+/* Showcase link with title. */
+
+.ShowcaseLink.container {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: 0 var(--2x-small-size);
+	font-size: var(--x-large-font);
+	word-break: break-word;
+	border-radius: var(--2x-small-size);
+	border-block-end: 1px var(--border-style) var(--secondary-200-700);
+	background-color: var(--primary-50-800);
+	line-height: var(--line-short);
+	padding-block: var(--3x-small-size);
+	padding-inline: var(--2x-small-size);
+	margin-block: var(--3x-small-size);
+	filter: var(--x-light-shadow);
+	@media (pointer: fine) {
+		border-radius: var(--3x-small-size);
+		font-size: var(--large-font);
+	}
+}
+
+.ShowcaseLink.title {
+	display: block;
+	font-weight: var(--normal-font);
+	margin: 0;
+}
