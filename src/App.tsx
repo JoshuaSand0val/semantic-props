@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./blocks/Header";
 import Navbar from "./blocks/Navbar";
 import Divider from "./components/Divider";
+import Link from "./components/Link";
 import ShowcaseLink from "./components/ShowcaseLink";
 
 export default function App() {
@@ -12,7 +13,7 @@ export default function App() {
 					<main className="App main">
 						<Navbar />
 						<Header />
-						<nav className="App navigation">
+						<nav className="App navigation" id="menu">
 							<Divider title="Built with Semantic Props" />
 							<ShowcaseLink to="https://heyjes.dev/" title="Hey, Jes!" target="_blank" />
 
@@ -40,6 +41,8 @@ export default function App() {
 						</nav>
 					</main>
 					<aside className="App aside">
+						<Link to="#menu" target="_self"><i className="bi bi-list"></i> Menu</Link>
+						<br />
 						Usage &amp; Description
 					</aside>
 				</div>
