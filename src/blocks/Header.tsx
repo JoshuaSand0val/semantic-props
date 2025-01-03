@@ -11,7 +11,7 @@ export default function Header() {
 				<i className="bi bi-info-circle"></i> v1.0.0 (MIT)
 			</span>
 			<h2 className="Header motto">
-				<FadeInText text="CSS variables made easy." />
+				<FadeInText text="Stylesheets made easy." />
 			</h2>
 			<h1 className="Header title scale-in">
 				Semantic Props
