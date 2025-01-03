@@ -20,6 +20,11 @@
 		border-radius: var(--3x-small-size);
 		font-size: var(--large-font);
 	}
+	@media not (prefers-reduced-motion) {
+		animation: scale-in 1ms linear alternate;
+		animation-timeline: view();
+		animation-range: entry;
+	}
 }
 
 .ShowcaseLink.title {
