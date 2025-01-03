@@ -19,6 +19,10 @@
 	@media (pointer: fine) {
 		border-radius: var(--3x-small-size);
 		font-size: var(--large-font);
+		transition: scale var(--x-fast-time) var(--ease-out);
+		&:has(.Link:is(:hover, :focus)) {
+			scale: var(--scale-in);
+		}
 	}
 	@media not (prefers-reduced-motion) {
 		animation:
