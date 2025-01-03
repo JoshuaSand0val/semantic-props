@@ -21,9 +21,11 @@
 		font-size: var(--large-font);
 	}
 	@media not (prefers-reduced-motion) {
-		animation: scale-in 1ms linear alternate;
+		animation:
+			scale-in 1ms linear alternate,
+			scale-in 1ms linear alternate-reverse;
 		animation-timeline: view();
-		animation-range: entry;
+		animation-range: entry, exit;
 	}
 }
 

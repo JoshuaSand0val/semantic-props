@@ -4,6 +4,10 @@
 @import "sanitize.css";
 @import "semantic-props";
 
+:root {
+	scroll-behavior: smooth;
+}
+
 .semantic {
 	@supports (color: light-dark(white, black)) {
 		color-scheme: light dark;
@@ -64,6 +68,12 @@
 	width: min(100%, var(--x-small-container));
 	container: App / inline-size;
 	flex: 1 1 auto;
+}
+
+.App.navigation {
+	display: block;
+	max-height: var(--x-small-container);
+	overflow: auto;
 }
 
 .App.aside {
