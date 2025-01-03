@@ -28,11 +28,7 @@
 	line-height: var(--line-normal);
 	letter-spacing: var(--letter-normal);
 	word-spacing: var(--word-normal);
-	background-color: var(--primary-50-800);
-	background-image:
-		repeating-linear-gradient(135deg, var(--primary-100-900) 0px, var(--primary-50-800) 10px),
-		repeating-linear-gradient(22.5deg, var(--primary-100-900) 0px, var(--primary-50-800) 10px);
-	background-size: 100% 100%;
+	background-color: var(--primary-50-900);
 	color: var(--secondary-800-100);
 	transition-property: background-color, color;
 	transition-duration: var(--normal-time);
