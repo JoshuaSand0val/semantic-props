@@ -70,7 +70,7 @@
 
 .App.aside {
 	position: sticky;
-	top: calc(var(--safe-top) + var(--large-size));
+	top: calc(var(--safe-top) + var(--x-small-size));
 	flex-grow: 9999;
 }
 
