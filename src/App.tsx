@@ -17,30 +17,30 @@ export default function App() {
 							<ShowcaseLink to="https://heyjes.dev/" title="Hey, Jes!" target="_blank" />
 
 							<Divider title="Semantic Props" />
-							<ShowcaseLink to="#blur" title="Blur filters" />
-							<ShowcaseLink to="#border" title="Border properties" />
-							<ShowcaseLink to="#brightness" title="Brightness filters" />
-							<ShowcaseLink to="#color" title="Colors" />
+							<ShowcaseLink to="#blur" title="Blur Filters" />
+							<ShowcaseLink to="#border" title="Border Properties" />
+							<ShowcaseLink to="#brightness" title="Brightness Filters" />
+							<ShowcaseLink to="#color" title="Color Properties" />
 							<ShowcaseLink to="#container" title="Container Sizes" />
-							<ShowcaseLink to="#contrast" title="Contrast filters" />
-							<ShowcaseLink to="#ease" title="Easing functions" />
-							<ShowcaseLink to="#font" title="Font properties" />
-							<ShowcaseLink to="#letter" title="Letter-spacing properties" />
-							<ShowcaseLink to="#line" title="Line-height properties" />
-							<ShowcaseLink to="#opacity" title="Opacity properties" />
+							<ShowcaseLink to="#contrast" title="Contrast Filters" />
+							<ShowcaseLink to="#ease" title="Easing Functions" />
+							<ShowcaseLink to="#font" title="Font Properties" />
+							<ShowcaseLink to="#letter" title="Letter-spacing Properties" />
+							<ShowcaseLink to="#line" title="Line-height Properties" />
+							<ShowcaseLink to="#opacity" title="Opacity Properties" />
 							<ShowcaseLink to="#ratio" title="Aspect-Ratios" />
-							<ShowcaseLink to="#safe" title="Display safe-areas" />
-							<ShowcaseLink to="#saturation" title="Saturation filters" />
-							<ShowcaseLink to="#scale" title="Scale properties" />
-							<ShowcaseLink to="#shadow" title="Drop-shadow filters" />
-							<ShowcaseLink to="#size" title="Sizing properties" />
-							<ShowcaseLink to="#time" title="Time properties" />
-							<ShowcaseLink to="#word" title="Word-spacing properties" />
-							<ShowcaseLink to="#z" title="Z-index properties" />
+							<ShowcaseLink to="#safe" title="Display Safe-Areas" />
+							<ShowcaseLink to="#saturation" title="Saturation Filters" />
+							<ShowcaseLink to="#scale" title="Scale Properties" />
+							<ShowcaseLink to="#shadow" title="Drop-Shadow Filters" />
+							<ShowcaseLink to="#size" title="Sizing Properties" />
+							<ShowcaseLink to="#time" title="Time Properties" />
+							<ShowcaseLink to="#word" title="Word-Spacing Properties" />
+							<ShowcaseLink to="#z" title="Z-Index Properties" />
 						</nav>
 					</main>
 					<aside className="App aside">
-						<Divider title="Usage &amp; Description" />
+						<Divider title="Name, Description &amp; Usage" />
 					</aside>
 				</div>
 				<footer className="App footer">
