@@ -2,7 +2,6 @@ import "./App.css";
 import Header from "./blocks/Header";
 import Navbar from "./blocks/Navbar";
 import Divider from "./components/Divider";
-import Link from "./components/Link";
 import ShowcaseLink from "./components/ShowcaseLink";
 
 export default function App() {
@@ -41,9 +40,7 @@ export default function App() {
 						</nav>
 					</main>
 					<aside className="App aside">
-						<Link to="#menu" target="_self"><i className="bi bi-list"></i> Menu</Link>
-						<br />
-						Usage &amp; Description
+						<Divider title="Usage &amp; Description" />
 					</aside>
 				</div>
 				<footer className="App footer">
