@@ -1,0 +1,51 @@
+/* Block of documentation for Semantic Props module. */
+
+.Docs.desc {
+	display: block;
+	font-size: var(--large-font);
+	margin-block: var(--x-small-size);
+}
+
+.Docs.container {
+	display: block;
+	overflow-x: auto;
+}
+
+.Docs.table {
+	display: table;
+	min-width: 100%;
+	border-collapse: collapse;
+	font-weight: var(--light-font);
+	color: var(--secondary-600-200);
+	tr {
+		vertical-align: baseline;
+		text-align: left;
+		border-block-end: 1px var(--border-style) var(--primary-200-700);
+		thead & {
+			border-block-end-color: var(--primary-300-600);
+		}
+	}
+	th {
+		white-space: nowrap;
+		font-weight: var(--regular-font);
+	}
+	th, td {
+		padding-block: var(--2x-small-size);
+		padding-inline-end: var(--x-small-size);
+	}
+}
+
+.Docs:is(.usage, .property) {
+	white-space: pre;
+	font-size: var(--x-small-font);
+	font-family: var(--mono-font);
+	color: var(--secondary-500-300);
+}
+
+.Docs.property {
+	width: 100%;
+}
+
+.Docs.prop {
+	color: var(--accent-500-300);
+}
