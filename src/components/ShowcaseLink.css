@@ -6,23 +6,13 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 0 var(--2x-small-size);
-	font-size: var(--x-large-font);
+	font-size: var(--large-font);
 	word-break: break-word;
-	border-radius: var(--2x-small-size);
-	border-block-end: 1px var(--border-style) var(--secondary-200-700);
-	background-color: var(--primary-50-800);
 	line-height: var(--line-short);
-	padding-block: var(--3x-small-size);
-	padding-inline: var(--2x-small-size);
-	margin-block: var(--3x-small-size);
-	filter: var(--x-light-shadow);
+	margin-block: var(--2x-small-size);
 	@media (pointer: fine) {
-		border-radius: var(--3x-small-size);
-		font-size: var(--large-font);
-		transition: scale var(--x-fast-time) var(--ease-out);
-		&:has(.Link:is(:hover, :focus)) {
-			scale: var(--scale-in);
-		}
+		font-size: var(--medium-font);
+		margin-block: var(--3x-small-size);
 	}
 	@media not (prefers-reduced-motion) {
 		animation:
