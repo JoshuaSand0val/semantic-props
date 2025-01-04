@@ -8,7 +8,7 @@ import "../styles/scale-in.css";
 export default function Header() {
 	return (
 		<header className="Header container">
-			<span className="Header info scale-in">
+			<span className="Header info">
 				<i className="bi bi-info-circle"></i> v1.0.0 (MIT)
 			</span>
 			<h4 className="Header motto">

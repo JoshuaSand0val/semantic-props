@@ -1,12 +1,11 @@
 import "./Navbar.css";
 import Link from "../components/Link";
-import "../styles/scale-in.css";
 
 /** Website navbar block. */
 
 export default function Navbar() {
 	return (
-		<nav className="Navbar container scale-in">
+		<nav className="Navbar container">
 			<Link to="https://github.com/JoshuaSand0val/semantic-props" target="_blank">
 				<i className="bi bi-github"></i> Github
 			</Link>
