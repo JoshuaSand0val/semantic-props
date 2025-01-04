@@ -1,8 +1,8 @@
 import "./App.css";
+import Documentation from "./blocks/Documentation.mdx";
 import Header from "./blocks/Header";
 import Menu from "./blocks/Menu.mdx";
 import Navbar from "./blocks/Navbar";
-import Divider from "./components/Divider";
 
 export default function App() {
 	return (
@@ -15,7 +15,7 @@ export default function App() {
 						<Menu />
 					</main>
 					<aside className="App aside">
-						<Divider title="Name, Description &amp; Usage" />
+						<Documentation />
 					</aside>
 				</div>
 				<footer className="App footer">
