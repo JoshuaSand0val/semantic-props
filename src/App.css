@@ -40,7 +40,7 @@
 	flex-flow: column nowrap;
 	justify-content: start;
 	align-items: stretch;
-	gap: var(--medium-size) var(--large-size);
+	gap: 0 var(--large-size);
 	min-height: min(100vh, 100dvh);
 	max-width: var(--x-large-container);
 	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
