@@ -47,8 +47,8 @@
 	max-width: var(--x-large-container);
 	padding-inline-start: max(var(--responsive-size), var(--safe-left) + var(--medium-size));
 	padding-inline-end: max(var(--responsive-size), var(--safe-right) + var(--medium-size));
-	padding-block-start: calc(var(--safe-top) + var(--large-size));
-	padding-block-end: calc(var(--safe-bottom) + var(--large-size));
+	padding-block-start: calc(var(--safe-top) + var(--medium-size));
+	padding-block-end: calc(var(--safe-bottom) + var(--medium-size));
 	margin-inline: auto;
 }
 
