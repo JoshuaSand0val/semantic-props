@@ -78,6 +78,7 @@
 	display: block;
 	width: 100%;
 	text-align: end;
+	font-size: var(--small-font);
 	color: var(--secondary-500-400);
 	padding-block-start: var(--medium-size);
 	margin-block-start: auto;
