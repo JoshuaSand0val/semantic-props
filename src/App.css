@@ -30,16 +30,44 @@
 	line-height: var(--line-normal);
 	letter-spacing: var(--letter-normal);
 	word-spacing: var(--word-normal);
-	background-color: var(--primary-50-800);
-	background-image:
-		linear-gradient(145deg, oklch(1 0 0 / var(--x-low-opacity)) -100%, transparent),
-		linear-gradient(145deg, var(--primary-50-800), var(--primary-200-900));
-	background-size: 100% 100%;
-	background-attachment: fixed;
 	color: var(--secondary-800-100);
 	transition-property: background-color, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
+	&::before, &::after {
+		content: "";
+		position: fixed;
+		z-index: var(--z-bottom);
+		inset: 0;
+	}
+	&::before {
+		background-color: var(--primary-50-800);
+		background-image:
+			linear-gradient(145deg, oklch(1 0 0 / var(--x-low-opacity)) -100%, transparent),
+			linear-gradient(145deg, var(--primary-50-800), var(--primary-200-900));
+		background-size: 100% 100%;
+	}
+	&::after {
+		background-image: linear-gradient(
+			rgba(255, 0, 0, 1) 0%,
+			rgba(255, 154, 0, 1) 10%,
+			rgba(208, 222, 33, 1) 20%,
+			rgba(79, 220, 74, 1) 30%,
+			rgba(63, 218, 216, 1) 40%,
+			rgba(47, 201, 226, 1) 50%,
+			rgba(28, 127, 238, 1) 60%,
+			rgba(95, 21, 242, 1) 70%,
+			rgba(186, 12, 248, 1) 80%,
+			rgba(251, 7, 217, 1) 90%,
+			rgba(255, 0, 0, 1) 100%
+		);
+		background-size: 80% var(--x-small-container);
+		background-position: center;
+		transform: translate(-20%, -20%) rotate(215deg);
+		transform-origin: center;
+		opacity: var(--3x-low-opacity);
+		filter: var(--3x-heavy-blur);
+	}
 }
 
 .App.wrapper {
