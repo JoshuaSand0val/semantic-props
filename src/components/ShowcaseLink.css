@@ -14,13 +14,6 @@
 		font-size: var(--medium-font);
 		margin-block: var(--3x-small-size);
 	}
-	@media not (prefers-reduced-motion) {
-		animation:
-			scale-in 1ms linear alternate,
-			scale-in 1ms linear alternate-reverse;
-		animation-timeline: view();
-		animation-range: entry, exit;
-	}
 }
 
 .ShowcaseLink.title {
