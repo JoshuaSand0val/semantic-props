@@ -17,7 +17,7 @@
 	height: 2px;
 	border: none;
 	border-radius: var(--3x-small-size);
-	background-color: var(--secondary-100-700);
+	background-color: var(--primary-200-600);
 	margin-block-start: var(--2x-small-size);
 	margin-block-end: var(--small-size);
 }
