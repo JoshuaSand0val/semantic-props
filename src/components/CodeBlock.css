@@ -9,7 +9,7 @@
 	font-size: var(--small-font);
 	font-family: var(--mono-font);
 	border-radius: var(--3x-small-size);
-	border-block-end: var(--3x-small-size) var(--border-style) var(--secondary-400-600);
+	border-block-end: var(--3x-small-size) var(--border-style) var(--primary-400-600);
 	background-clip: border-box;
 	background-color: var(--primary-600-800);
 	color: var(--secondary-200-400);
