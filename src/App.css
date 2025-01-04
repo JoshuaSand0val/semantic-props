@@ -44,7 +44,7 @@
 		background-color: var(--primary-50-800);
 		background-image:
 			linear-gradient(145deg, oklch(1 0 0 / var(--x-low-opacity)) -100%, transparent),
-			linear-gradient(145deg, var(--primary-50-800), var(--primary-200-900));
+			linear-gradient(145deg, var(--primary-50-800), var(--primary-100-900));
 		background-size: 100% 100%;
 	}
 	&::after {
