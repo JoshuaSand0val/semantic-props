@@ -4,6 +4,7 @@
 	display: block;
 	font-family: var(--display-font);
 	font-size: var(--x-large-font);
+	font-weight: var(--regular-font);
 	line-height: var(--line-short);
 	color: var(--secondary-600-300);
 	margin-block-start: var(--medium-size);
