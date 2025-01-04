@@ -3,7 +3,7 @@
 .Divider.title {
 	display: block;
 	font-family: var(--display-font);
-	font-size: var(--x-small-font);
+	font-size: var(--x-large-font);
 	font-weight: var(--font-thin);
 	line-height: var(--line-short);
 	color: var(--secondary-400-500);
