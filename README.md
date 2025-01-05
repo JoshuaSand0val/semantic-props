@@ -12,7 +12,7 @@ npm install semantic-props --save-dev
 Semantic Props is a collection of semantic CSS custom properties.
 
 ## Documentation
-This package is still a work-in-progress. Documentation will be added at a later date.
+Documentation is available at https://semantic-props.style/
 
 ## Acknowledgment
 Semantic Props was built by Joshua Elijah Sandoval.
