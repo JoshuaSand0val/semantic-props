@@ -35,7 +35,7 @@
 	transition-property: background-color, color;
 	transition-duration: var(--normal-time);
 	transition-timing-function: var(--ease-out);
-	overflow: hidden;
+	overflow: clip;
 	&::before, &::after {
 		content: "";
 		position: fixed;
