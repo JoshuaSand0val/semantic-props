@@ -33,7 +33,7 @@ export default function Docs({ title, desc, id, props, children }: props) {
 					</thead>
 					<tbody>
 						{Object.entries(props).map(([usage, properties]) => [properties].flat().map(property => (
-							<tr key={usage}>
+							<tr key={property}>
 								<th scope="row" className="Docs usage">
 									<code>{usage}:</code>
 								</th>
