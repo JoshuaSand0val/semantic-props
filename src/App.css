@@ -65,7 +65,7 @@
 		background-position: top left;
 		transform: rotate(35deg) translateY(-25vb);
 		transform-origin: top left;
-		opacity: var(--2x-low-opacity);
+		opacity: var(--3x-low-opacity);
 		filter: var(--3x-heavy-blur) var(--3x-heavy-blur);
 	}
 }
