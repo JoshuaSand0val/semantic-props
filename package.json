@@ -1,5 +1,4 @@
 {
-	"private": true,
 	"name": "semantic-props",
 	"version": "1.0.0",
 	"description": "A collection of semantic CSS custom properties.",
@@ -9,7 +8,7 @@
 		"CSS framework",
 		"CSS"
 	],
-	"homepage": "https://github.com/JoshuaSand0val/semantic-props#readme",
+	"homepage": "https://semantic-props.style/",
 	"license": "MIT",
 	"author": "Joshua Elijah Sandoval",
 	"files": [
