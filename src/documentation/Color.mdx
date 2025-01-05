@@ -1,0 +1,34 @@
+import Docs from "../components/Docs";
+import Info from "../components/Info";
+
+<Docs
+	id="color"
+	title="Color Properties"
+	desc="Semantic Props for CSS colors."
+	props={{
+		"color": [
+			"--primary-{light}-{dark}",
+			"--secondary-{light}-{dark}",
+			"--accent-{light}-{dark}"
+		],
+		"--primary-color": "--{color}",
+		"--secondary-color": "--{color}",
+		"--accent-color": "--{color}"
+}} />
+
+<Info>
+Syntax `{light}` and `{dark}` are placeholders for color weights,
+for their respective CSS `color-scheme` property modes. Dark is optional.
+These are, from light to dark, `50`, `100`, `200`, `300`, `400`, `500`, `600`, `700`, `800` and `900`.
+
+These Semantic Props use the CSS `light-dark` function, and fallback to light-only values.
+</Info>
+
+<Info>
+Syntax `--{color}` are placeholders for relative color Semantic Props.  
+These being `--gray`, `--pink`, `--red`, `--coral`, `--brown`, `--orange`,
+`--yellow`, `--lime`, `--green`, `--cyan`, `--blue`, `--indigo`,
+`--violet`, `--purple` and `--magenta`.
+
+Colors fallback to shades of white where CSS relative colors are not supported.
+</Info>
