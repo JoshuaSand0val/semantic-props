@@ -1,11 +1,13 @@
 import "./Docs.css";
+import { ReactNode } from "react";
 import Divider from "./Divider";
 
 interface props {
 	title: string,
 	desc: string,
 	id: string,
-	props: { [key: string]: string | string[] }
+	props: { [key: string]: string | string[] },
+	children: ReactNode
 }
 
 /**
@@ -16,7 +18,7 @@ interface props {
  * @param props.props Usage, Property object of Semantic Props.
  */
 
-export default function Docs({ title, desc, id, props }: props) {
+export default function Docs({ title, desc, id, props, children }: props) {
 	return (
 		<article id={id}>
 			<Divider title={title} />
@@ -43,6 +45,7 @@ export default function Docs({ title, desc, id, props }: props) {
 					</tbody>
 				</table>
 			</div>
+			{children}
 		</article>
 	);
 }
