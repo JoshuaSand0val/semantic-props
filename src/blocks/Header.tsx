@@ -1,6 +1,7 @@
 import "./Header.css";
 import CodeBlock from "../components/CodeBlock";
 import FadeInText from "../components/FadeInText";
+import Info from "../components/Info";
 import "../styles/scale-in.css";
 
 /** Website header block. */
@@ -21,6 +22,11 @@ export default function Header() {
 			<CodeBlock lang="css">
 @import "https://unpkg.com/semantic-props";
 			</CodeBlock>
+
+			<Info>
+				Semantic Props are scoped to the <code>semantic</code> class.
+				This allows for CSS custom property reevaluation.
+			</Info>
 		</header>
 	);
 }
