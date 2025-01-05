@@ -17,7 +17,7 @@
 	padding-inline-start: var(--x-small-size);
 	padding-inline-end: var(--medium-size);
 	margin-block: var(--x-small-size) var(--2x-small-size);
-	overflow-inline: auto;
+	overflow: auto;
 	filter: var(--medium-shadow);
 	cursor: text;
 }
