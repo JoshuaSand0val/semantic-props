@@ -116,6 +116,6 @@
 	text-align: end;
 	font-size: var(--small-font);
 	color: var(--secondary-500-400);
-	padding-block-start: var(--medium-size);
+	padding-block: var(--medium-size);
 	margin-block-start: auto;
 }
