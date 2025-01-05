@@ -1,0 +1,22 @@
+/* Displays informative documentation content. */
+
+.Info {
+	display: block;
+	font-size: var(--small-font);
+	font-weight: var(--light-font);
+	background-color: var(--primary-50-700);
+	border: 1px var(--border-style) var(--primary-200-600);
+	border-radius: var(--3x-small-size);
+	padding: var(--x-small-size);
+	margin-block: var(--small-size);
+	code {
+		font-size: var(--smaller-font);
+		color: var(--accent-600-200);
+	}
+	& > :first-child {
+		margin-block-start: 0;
+	}
+	& > :last-child {
+		margin-block-end: 0;
+	}
+}
