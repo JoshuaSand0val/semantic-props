@@ -1,0 +1,10 @@
+/* Semantic Props for CSS z-index property. */
+
+:where(.semantic) {
+	--z-bottom: -1000;
+	--z-relative: 1000;
+	--z-absolute: 2000;
+	--z-sticky: 3000;
+	--z-fixed: 4000;
+	--z-top: 5000;
+}

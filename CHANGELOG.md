@@ -2,6 +2,48 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [1.0.0] - 2025-01-05
+
+### Added
+
+- Added distributable files for all CSS modules.
+- Added border props.
+- Added timing-function ease props.
+- Added filter props.
+- Added `letter-` letter-spacing props.
+- Added `word-` word-spacing props.
+- Added ratio props.
+- Added scale props.
+- Added opacity props.
+
+### Changed
+
+- Changed scope selector from `:where(:root, .--semantic)` to `:where(.semantic)`.
+- Changed breakpoint into container props.
+- Changed color system to implement more colors via weight syntax with light-dark values.
+- Changed `--font` prop to `--body-font` and value to `system-ui`.
+- Changed `--display-font` value to `var(--body-font)`.
+- Changed `--brand-font` to `--accent-font` and value to `var(--body-font)`.
+- Changed `-font-leading` props naming to `line-`.
+- Changed `--regular-font` value from `400` to `500`.
+- Changed `--bold-font` value from `600` to `700`.
+- Changed absolute and relative font-size system to include more sizing using `clamp()`.
+- Changed `-layer` props naming to `z-`.
+- Changed padding, margin `-size` system to use `clamp()`.
+- Changed `-timing` props naming to `-time`.
+
+### Removed
+
+- Removed all JavaScript/TypeScript.
+- Removed breakpoint JavaScript-powered HTML classes.
+- Removed color JavaScript-powered HTML classes.
+- Removed all deprecated props.
+- Removed `--font-scale-ratio` prop.
+
+### Fixed
+
+- Fixed [prettier](https://prettier.io/) configuration.
+
 ## [0.2.1] - 2024-08-10
 
 ### Added
@@ -53,3 +95,4 @@ All relevant changes to Semantic Props will be documented here.
 [0.1.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.1.0
 [0.2.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.0
 [0.2.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.1
+[1.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v1.0.0

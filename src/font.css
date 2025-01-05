@@ -1,57 +1,35 @@
-/* Font: Custom properties for styling fonts. */
+/* Semantic Props for CSS font properties. */
+/* https://utopia.fyi/type/calculator?c=180,16,1.067,1920,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
 
-:where(:root, .--semantic) {
-	/* Font Families: */
-	--font: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
-	--monospace-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-	--display-font: Avenir, Montserrat, Corbel, 'URW Gothic', source-sans-pro, sans-serif;
-	--brand-font: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
- 
-	/* Line Heights: */
-	--font-leading: 1.6;
-	--display-font-leading: 1.2;
+:where(.semantic) {
+	/* Font-Family: */
+	--body-font: system-ui, sans-serif;
+	--display-font: var(--body-font);
+	--mono-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	--accent-font: var(--body-font);
 
-	/* Font Weights: */
-	--regular-font: 400;
+	/* Font-Weight: */
 	--thin-font: 200;
-	--bold-font: 600;
+	--light-font: 300;
+	--regular-font: 500;
+	--bold-font: 700;
 	--heavy-font: 900;
 
-	/* Font Scaling Ratio: */
-	--font-scale-ratio: 1.125;
+	/* Font-Size: */
+	--x-small-font: clamp(0.72rem, 0.8947rem + -0.1456cqi, 0.8784rem);
+	--small-font: clamp(0.9rem, 0.9411rem + -0.0342cqi, 0.9372rem);
+	--medium-font: clamp(1rem, 0.9871rem + 0.1149cqi, 1.125rem);
+	--large-font: clamp(1.067rem, 1.0319rem + 0.312cqi, 1.4063rem);
+	--x-large-font: clamp(1.1385rem, 1.0744rem + 0.5695cqi, 1.7578rem);
+	--2x-large-font: clamp(1.2148rem, 1.1131rem + 0.9034cqi, 2.1973rem);
+	--3x-large-font: clamp(1.2962rem, 1.1461rem + 1.3337cqi, 2.7466rem);
+	--4x-large-font: clamp(1.383rem, 1.1709rem + 1.8853cqi, 3.4332rem);
+	--5x-large-font: clamp(1.4757rem, 1.1844rem + 2.5893cqi, 4.2915rem);
+	--6x-large-font: clamp(1.5745rem, 1.1825rem + 3.485cqi, 5.3644rem);
+	--7x-large-font: clamp(1.68rem, 1.1601rem + 4.6211cqi, 6.7055rem);
+	--8x-large-font: clamp(1.7926rem, 1.1109rem + 6.0591cqi, 8.3819rem);
+	--9x-large-font: clamp(1.9127rem, 1.0267rem + 7.8756cqi, 10.4774rem);
 
-	&:where(.--sm-breakpoint) {
-		--font-scale-ratio: 1.200;
-	}
-
-	&:where(.--lg-breakpoint) {
-		--font-scale-ratio: 1.250;
-	}
-
-	&:where(.--xl-breakpoint) {
-		--font-scale-ratio: 1.333;
-	}
-
-	/* Absolute Font Sizes: */
-	--2xs-font: max(var(--xs-font) / var(--font-scale-ratio), 0.5625rem /* 9px */);
-	--xs-font: max(var(--sm-font) / var(--font-scale-ratio), 0.6875rem /* 11px */);
-	--sm-font: max(var(--md-font) / var(--font-scale-ratio), 0.8125rem /* 13px */);
-	--md-font: 0.875rem;
-	--lg-font: calc(var(--md-font) * var(--font-scale-ratio));
-	--xl-font: calc(var(--lg-font) * var(--font-scale-ratio));
-	--2xl-font: calc(var(--xl-font) * var(--font-scale-ratio));
-	--3xl-font: calc(var(--2xl-font) * var(--font-scale-ratio));
-	--4xl-font: calc(var(--3xl-font) * var(--font-scale-ratio));
-
-	&:where(.--sm-breakpoint) {
-		--md-font: 1rem;
-	}
-
-	&:where(.--2xl-breakpoint) {
-		--md-font: 1.125rem;
-	}
-
-	/* Relative Font Sizes: */
-	--smaller-font: calc(1em / var(--font-scale-ratio));
-	--larger-font: calc(1em * var(--font-scale-ratio));
+	--smaller-font: clamp(0.9em, 0.9411em + -0.0342cqi, 0.9372em);
+	--larger-font: clamp(1.067em, 1.0319em + 0.312cqi, 1.4063em);
 }

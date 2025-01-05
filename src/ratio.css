@@ -1,0 +1,9 @@
+/* Semantic Props for aspect ratios. */
+
+:where(.semantic) {
+	--square-ratio: 1 / 1;
+	--landscape-ratio: 4 / 3;
+	--portrait-ratio: 3 / 4;
+	--video-ratio: 16 / 9;
+	--wide-ratio: 21 / 9;
+}

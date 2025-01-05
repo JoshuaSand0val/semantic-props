@@ -1,0 +1,9 @@
+/* Semantic Props for CSS <time> data type. */
+
+:where(.semantic) {
+	--x-fast-time: 75ms;
+	--fast-time: 150ms;
+	--normal-time: 300ms;
+	--slow-time: 500ms;
+	--x-slow-time: 750ms;
+}
