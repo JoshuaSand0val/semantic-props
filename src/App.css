@@ -61,11 +61,11 @@
 			rgb(251, 7, 217) 90%,
 			rgb(255, 0, 0) 100%
 		);
-		background-size: 80% var(--x-small-container);
-		background-position: center;
-		transform: translate(-20%, -20%) rotate(215deg);
-		transform-origin: center;
-		opacity: var(--3x-low-opacity);
+		background-size: 100vb 50vb;
+		background-position: top left;
+		transform: rotate(35deg) translateY(-25vb);
+		transform-origin: top left;
+		opacity: var(--2x-low-opacity);
 		filter: var(--3x-heavy-blur) var(--3x-heavy-blur);
 	}
 }
