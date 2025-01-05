@@ -1,0 +1,44 @@
+import Docs from "../components/Docs";
+import Info from "../components/Info";
+import Link from "../components/Link";
+
+<Docs id="font" title="Font Properties" desc="Semantic Props for CSS font properties." props={{
+	"font-family": [
+		"--body-font",
+		"--display-font",
+		"--mono-font",
+		"--accent-font"
+	],
+	"font-weight": [
+		"--thin-font",
+		"--light-font",
+		"--regular-font",
+		"--bold-font",
+		"--heavy-font"
+	],
+	"font-size": [
+		"--x-small-font",
+		"--small-font",
+		"--medium-font",
+		"--large-font",
+		"--x-large-font",
+		"--2x-large-font",
+		"--3x-large-font",
+		"--4x-large-font",
+		"--5x-large-font",
+		"--6x-large-font",
+		"--7x-large-font",
+		"--8x-large-font",
+		"--9x-large-font",
+		"--smaller-font",
+		"--larger-font"
+	]
+}} />
+
+<Info>
+Default font-sizes are scaled via inline container query units or `cqi`.
+The values are designed to be a "one size fits all" approach.
+
+Sizing values were calculated using the following:
+<Link to="https://utopia.fyi/type/calculator?c=180,16,1.067,1920,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12" target="_blank">Fluid Type Scale Calculator</Link>.
+</Info>

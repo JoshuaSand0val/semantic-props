@@ -1,0 +1,35 @@
+import Docs from "../components/Docs";
+import Info from "../components/Info";
+import Link from "../components/Link";
+
+<Docs
+	id="size"
+	title="Sizing Properties"
+	desc="Semantic Props for sizing CSS properties."
+	props={{
+		"margin": [
+			"--3x-small-size",
+			"--2x-small-size",
+			"--x-small-size",
+			"--small-size",
+			"--medium-size",
+			"--large-size",
+			"--x-large-size",
+			"--2x-large-size",
+			"--3x-large-size",
+			"--responsive-size"
+		]
+}} />
+
+<Info>
+Default sizes are scaled via inline container query units or `cqi`.
+The values are designed to be a "one size fits all" approach.
+
+Sizing values were calculated using the following:
+<Link to="https://utopia.fyi/space/calculator?c=180,16,1.067,1920,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12" target="_blank">Fluid Space Calculator</Link>.
+</Info>
+
+<Info>
+Semantic Props `--responsive-size` defaults to range between
+the values of `--3x-small-size` and `--3x-large-size`.
+</Info>
