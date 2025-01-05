@@ -13,6 +13,9 @@
 		font-size: var(--smaller-font);
 		color: var(--accent-600-200);
 	}
+	b, strong {
+		font-weight: var(--regular-font);
+	}
 	& > :first-child {
 		margin-block-start: 0;
 	}
