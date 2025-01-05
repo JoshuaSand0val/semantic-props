@@ -5,7 +5,7 @@ interface props {
 	title: string,
 	desc: string,
 	id: string,
-	props: { [key: string]: string }
+	props: { [key: string]: string | string[] }
 }
 
 /**
@@ -13,7 +13,7 @@ interface props {
  * @param props.title Title of the Semantic Props module.
  * @param props.desc Description of the Semantic Props module.
  * @param props.id HTML ID of the documentation.
- * @param props.props Property, Usage object of Semantic Props.
+ * @param props.props Usage, Property object of Semantic Props.
  */
 
 export default function Docs({ title, desc, id, props }: props) {
@@ -30,8 +30,8 @@ export default function Docs({ title, desc, id, props }: props) {
 						</tr>
 					</thead>
 					<tbody>
-						{Object.entries(props).map(([property, usage]) => (
-							<tr key={property}>
+						{Object.entries(props).map(([usage, properties]) => [properties].flat().map(property => (
+							<tr key={usage}>
 								<th scope="row" className="Docs usage">
 									<code>{usage}:</code>
 								</th>
@@ -39,7 +39,7 @@ export default function Docs({ title, desc, id, props }: props) {
 									<code>var(<span className="Docs prop">{property}</span>);</code>
 								</td>
 							</tr>
-						))}
+						)))}
 					</tbody>
 				</table>
 			</div>
