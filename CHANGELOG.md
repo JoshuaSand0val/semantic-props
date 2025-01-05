@@ -2,7 +2,7 @@
 
 All relevant changes to Semantic Props will be documented here.
 
-## [1.0.0] - YYYY-MM-DD
+## [1.0.0] - 2025-01-05
 
 ### Added
 
@@ -25,6 +25,7 @@ All relevant changes to Semantic Props will be documented here.
 - Changed `--display-font` value to `var(--body-font)`.
 - Changed `--brand-font` to `--accent-font` and value to `var(--body-font)`.
 - Changed `-font-leading` props naming to `line-`.
+- Changed `--regular-font` value from `400` to `500`.
 - Changed `--bold-font` value from `600` to `700`.
 - Changed absolute and relative font-size system to include more sizing using `clamp()`.
 - Changed `-layer` props naming to `z-`.
