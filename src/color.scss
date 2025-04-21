@@ -1,40 +1,65 @@
-/* Semantic Props for CSS <color> type. Follows the 60-30-10 color theory rule. */
+/* Semantic Props for colors. Follows the 60-30-10 color theory rule. */
 
 @use "sass:color" as color;
 
+$weights: 50 100 200 300 400 500 600 700 800 900;
+
+$light: (
+	--gray: oklch(0.6 0.01 260),
+	--pink: oklch(0.8 0.1 10),
+	--red: oklch(0.5 0.2 30),
+	--coral: oklch(0.7 0.2 40),
+	--brown: oklch(0.6 0.05 50),
+	--orange: oklch(0.6 0.15 50),
+	--yellow: oklch(0.8 0.15 90),
+	--lime: oklch(0.7 0.15 120),
+	--green: oklch(0.6 0.2 150),
+	--cyan: oklch(0.7 0.15 180),
+	--blue: oklch(0.6 0.15 240),
+	--indigo: oklch(0.4 0.2 270),
+	--violet: oklch(0.4 0.15 290),
+	--purple: oklch(0.4 0.15 300),
+	--magenta: oklch(0.6 0.2 330)
+);
+
+$light-dark: (
+	light: (
+		--primary-color: oklch(0.99 0.01 95),
+		--secondary-color: oklch(0.1 0.01 260),
+		--accent-color: oklch(0.5 0.15 240)
+	),
+	dark: (
+		--primary-color: oklch(0.2 0.01 260),
+		--secondary-color: oklch(0.9 0.01 260),
+		--accent-color: oklch(0.75 0.15 240)
+	)
+);
+
 :where(.semantic) {
-	/* Relative Colors: */
-	--gray: oklch(0.6 0.01 260);
-	--pink: oklch(0.8 0.1 10);
-	--red: oklch(0.5 0.2 30);
-	--coral: oklch(0.7 0.2 40);
-	--brown: oklch(0.6 0.05 50);
-	--orange: oklch(0.6 0.15 50);
-	--yellow: oklch(0.8 0.15 90);
-	--lime: oklch(0.7 0.15 120);
-	--green: oklch(0.6 0.2 150);
-	--cyan: oklch(0.7 0.15 180);
-	--blue: oklch(0.6 0.15 240);
-	--indigo: oklch(0.4 0.2 270);
-	--violet: oklch(0.4 0.15 290);
-	--purple: oklch(0.4 0.15 300);
-	--magenta: oklch(0.6 0.2 330);
-
-	/* Color Palette: */
-	--primary-color: var(--gray);
-	--secondary-color: var(--gray);
-	--accent-color: var(--blue);
-
-	/* Color Weights: */
-	$weights: 50 100 200 300 400 500 600 700 800 900;
-	@each $prop in --primary --secondary --accent {
+	/* Light-Only Colors: */
+	@each $prop, $color in $light {
 		@each $l in $weights {
-			#{$prop}-#{$l}: color.change(oklch(1 0 0), $lightness: calc(1 - ($l / 1000)));
-			#{$prop}-#{$l}: oklch(from var(#{$prop}-color) calc(1 - ($l / 1000)) c h);
-			@each $d in $weights {
-				@if $d != $l {
-					#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
-					#{$prop}-#{$l}-#{$d}: light-dark(var(#{$prop}-#{$l}), var(#{$prop}-#{$d}));
+			#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)));
+		}
+	}
+
+	/* Light-Dark Colors: */
+	@each $scheme, $map in $light-dark {
+		@media (prefers-color-scheme: $scheme) {
+			@each $prop, $color in $map {
+				#{$prop}: $color;
+				@each $l in $weights {
+					#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)));
+					@each $d in $weights {
+						@if $d != $l {
+							@if $scheme == light {
+								#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
+							}
+							@if $scheme == dark {
+								#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$d});
+							}
+						}
+					}
 				}
 			}
 		}
