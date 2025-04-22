@@ -6,6 +6,10 @@ All relevant changes to Semantic Props will be documented here.
 
 A **breaking change** release that greatly improves browser compatibility.
 
+### Added
+
+- Added viewport unit fallbacks to props using container query units.
+
 ### Changed
 
 - Weighted light-dark colors now use `@media (prefers-color-scheme)` not `color-scheme` property.
