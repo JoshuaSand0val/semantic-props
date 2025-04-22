@@ -6,34 +6,34 @@
 $weights: 50 100 200 300 400 500 600 700 800 900;
 
 $props: (
-	--primary: oklch(0.99 0.01 260),
-	--secondary: oklch(0.1 0.01 260),
-	--accent: oklch(0.5 0.15 240),
+	--primary: #f5f9ff,
+	--secondary: #020306,
+	--accent: #006aab
 );
 
 :where(.semantic) {
-	/* Optional Relative Colors: */
-	--gray: oklch(0.6 0.01 260);
-	--pink: oklch(0.8 0.1 10);
-	--red: oklch(0.5 0.2 30);
-	--coral: oklch(0.7 0.2 40);
-	--brown: oklch(0.6 0.05 50);
-	--orange: oklch(0.6 0.15 50);
-	--yellow: oklch(0.8 0.15 90);
-	--lime: oklch(0.7 0.15 120);
-	--green: oklch(0.6 0.2 150);
-	--cyan: oklch(0.7 0.15 180);
-	--blue: oklch(0.6 0.15 240);
-	--indigo: oklch(0.4 0.2 270);
-	--violet: oklch(0.4 0.15 290);
-	--purple: oklch(0.4 0.15 300);
-	--magenta: oklch(0.6 0.2 330);
+	/* Opt-in Relative Colors: */
+	--gray: #7d8086;
+	--pink: #f6a3af;
+	--red: #ba0d01;
+	--coral: #ff6728;
+	--brown: #997866;
+	--orange: #e77f3e;
+	--yellow: #f4c947;
+	--lime: #93ab2c;
+	--green: #009e36;
+	--cyan: #00bba2;
+	--blue: #0089d0;
+	--indigo: #252fb1;
+	--violet: #4a3191;
+	--purple: #562c8b;
+	--magenta: #be47b8;
 
 	/* Weighted Colors: */
 	@each $prop, $color in $props {
 		#{$prop}-color: $color;
 		@each $l in $weights {
-			#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)));
+			#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)), $space: oklch);
 			#{$prop}-#{$l}: oklch(from var(#{$prop}-color) calc(1 - ($l / 1000)) c h);
 		}
 	}
