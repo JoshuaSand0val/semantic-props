@@ -4,7 +4,10 @@
 
 $weights: 50 100 200 300 400 500 600 700 800 900;
 
-$light: (
+$props: (
+	--primary: oklch(0.99 0.01 260),
+	--secondary: oklch(0.1 0.01 260),
+	--accent: oklch(0.5 0.15 240),
 	--gray: oklch(0.6 0.01 260),
 	--pink: oklch(0.8 0.1 10),
 	--red: oklch(0.5 0.2 30),
@@ -22,37 +25,23 @@ $light: (
 	--magenta: oklch(0.6 0.2 330)
 );
 
-$light-dark: (
-	"light": (
-		--primary: oklch(0.99 0.01 260),
-		--secondary: oklch(0.1 0.01 260),
-		--accent: oklch(0.5 0.15 240)
-	),
-	"dark": (
-		--primary: oklch(0.2 0.01 260),
-		--secondary: oklch(0.9 0.01 260),
-		--accent: oklch(0.75 0.15 240)
-	)
-);
-
 :where(.semantic) {
-	/* Light-Only Colors: */
-	@each $prop, $color in $light {
+	/* Color Weights: */
+	@each $prop, $color in $props {
 		#{$prop}: $color;
 		@each $l in $weights {
 			#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)));
+			#{$prop}-#{$l}: oklch(from var($prop) calc(1 - ($l / 1000)) c h);
 		}
 	}
 
 	/* Light-Dark Colors: */
-	@each $scheme, $map in $light-dark {
+	@each $scheme in light dark {
 		@media (prefers-color-scheme: $scheme) {
-			@each $prop, $color in $map {
-				#{$prop}-#{$scheme}: $color;
+			@each $prop in --primary --secondary --accent {
+				#{$prop}-#{$scheme}: var($prop);
 				#{$prop}-color: var(#{$prop}-#{$scheme});
 				@each $l in $weights {
-					#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)));
-					#{$prop}-#{$l}: oklch(from var(#{$prop}-#{$scheme}) calc(1 - ($l / 1000)) c h);
 					@each $d in $weights {
 						@if $d != $l {
 							@if $scheme == light {
