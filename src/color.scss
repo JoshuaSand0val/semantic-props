@@ -24,20 +24,21 @@ $light: (
 
 $light-dark: (
 	light: (
-		--primary-color: oklch(0.99 0.01 95),
-		--secondary-color: oklch(0.1 0.01 260),
-		--accent-color: oklch(0.5 0.15 240)
+		--primary: oklch(0.99 0.01 95),
+		--secondary: oklch(0.1 0.01 260),
+		--accent: oklch(0.5 0.15 240)
 	),
 	dark: (
-		--primary-color: oklch(0.2 0.01 260),
-		--secondary-color: oklch(0.9 0.01 260),
-		--accent-color: oklch(0.75 0.15 240)
+		--primary: oklch(0.2 0.01 260),
+		--secondary: oklch(0.9 0.01 260),
+		--accent: oklch(0.75 0.15 240)
 	)
 );
 
 :where(.semantic) {
 	/* Light-Only Colors: */
 	@each $prop, $color in $light {
+		#{$prop}: $color;
 		@each $l in $weights {
 			#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)));
 		}
@@ -47,7 +48,7 @@ $light-dark: (
 	@each $scheme, $map in $light-dark {
 		@media (prefers-color-scheme: $scheme) {
 			@each $prop, $color in $map {
-				#{$prop}: $color;
+				#{$prop}-color: $color;
 				@each $l in $weights {
 					#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)));
 					@each $d in $weights {
