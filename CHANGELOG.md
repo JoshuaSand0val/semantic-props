@@ -2,6 +2,12 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [2.0.0] - 2025-MM-DD
+
+### Changed
+
+- Weighted light-dark colors now use `@media (prefers-color-scheme)` not `color-scheme` property. **This is a breaking change.**
+
 ## [1.0.0] - 2025-01-05
 
 ### Added
@@ -96,3 +102,4 @@ All relevant changes to Semantic Props will be documented here.
 [0.2.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.0
 [0.2.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.1
 [1.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v1.0.0
+[2.0.0]: https://github.com/JoshuaSand0val/semantic-props/compare/main...v2.0.0
