@@ -23,12 +23,12 @@ $light: (
 );
 
 $light-dark: (
-	light: (
-		--primary: oklch(0.99 0.01 95),
+	"light": (
+		--primary: oklch(0.99 0.01 260),
 		--secondary: oklch(0.1 0.01 260),
 		--accent: oklch(0.5 0.15 240)
 	),
-	dark: (
+	"dark": (
 		--primary: oklch(0.2 0.01 260),
 		--secondary: oklch(0.9 0.01 260),
 		--accent: oklch(0.75 0.15 240)
@@ -48,9 +48,11 @@ $light-dark: (
 	@each $scheme, $map in $light-dark {
 		@media (prefers-color-scheme: $scheme) {
 			@each $prop, $color in $map {
-				#{$prop}-color: $color;
+				#{$prop}-#{$scheme}: $color;
+				#{$prop}-color: var(#{$prop}-#{$scheme});
 				@each $l in $weights {
 					#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)));
+					#{$prop}-#{$l}: oklch(from var(#{$prop}-#{$scheme}) calc(1 - ($l / 1000)) c h);
 					@each $d in $weights {
 						@if $d != $l {
 							@if $scheme == light {
