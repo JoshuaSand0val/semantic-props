@@ -1,48 +1,31 @@
 /* Semantic Props for colors. Follows the 60-30-10 color theory rule. */
 
 @use "sass:color" as color;
-@use "sass:map" as map;
 
 $weights: 50 100 200 300 400 500 600 700 800 900;
 
 $props: (
-	--primary: #f5f9ff,
-	--secondary: #020306,
-	--accent: #006aab
+	"light": (
+		--primary: #f5f9ff,
+		--secondary: #020306,
+		--accent: #006aab
+	),
+	"dark": (
+		--primary: #13161b,
+		--secondary: #dadee5,
+		--accent: #60a7d6
+	)
 );
 
-:where(.semantic) {
-	/* Opt-in Relative Colors: */
-	--gray: #7d8086;
-	--pink: #f6a3af;
-	--red: #ba0d01;
-	--coral: #ff6728;
-	--brown: #997866;
-	--orange: #e77f3e;
-	--yellow: #f4c947;
-	--lime: #93ab2c;
-	--green: #009e36;
-	--cyan: #00bba2;
-	--blue: #0089d0;
-	--indigo: #252fb1;
-	--violet: #4a3191;
-	--purple: #562c8b;
-	--magenta: #be47b8;
-
-	/* Weighted Colors: */
-	@each $prop, $color in $props {
-		#{$prop}-color: $color;
-		@each $l in $weights {
-			#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)), $space: oklch);
-			#{$prop}-#{$l}: oklch(from var(#{$prop}-color) calc(1 - ($l / 1000)) c h);
-		}
-	}
-
-	/* Light-Dark Colors: */
-	@each $scheme in light dark {
-		@media (prefers-color-scheme: $scheme) {
-			@each $prop in map.keys($props) {
+/* Weighted/Light-Dark Colors: */
+@each $scheme, $map in $props {
+	@media (prefers-color-scheme: $scheme) {
+		:where(.semantic) {
+			@each $prop, $color in $map {
 				@each $l in $weights {
+					/* Weighted Colors: */
+					#{$prop}-#{$l}: color.change($color, $lightness: calc(1 - ($l / 1000)), $space: oklch);
+					/* Light-Dark Colors: */
 					@each $d in $weights {
 						@if $d != $l {
 							@if $scheme == light {

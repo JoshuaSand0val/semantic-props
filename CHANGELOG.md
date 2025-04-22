@@ -4,9 +4,16 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [2.0.0] - 2025-MM-DD
 
+A **breaking change** release that greatly improves browser compatibility.
+
 ### Changed
 
-- Weighted light-dark colors now use `@media (prefers-color-scheme)` not `color-scheme` property. **This is a breaking change.**
+- Weighted light-dark colors now use `@media (prefers-color-scheme)` not `color-scheme` property.
+
+### Removed
+
+- Removed relative color palette.
+- Removed `--(primary|secondary|accent)-color` relative colors.
 
 ## [1.0.0] - 2025-01-05
 
