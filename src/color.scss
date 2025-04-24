@@ -25,13 +25,11 @@ $props: (
 			@each $prop in map.keys($props) {
 				@each $l in $weights {
 					@each $d in $weights {
-						@if $d != $l {
-							@if $scheme == light {
-								#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
-							}
-							@if $scheme == dark {
-								#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$d});
-							}
+						@if $d != $l and $scheme == light {
+							#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$l});
+						}
+						@if $d != $l and $scheme == dark {
+							#{$prop}-#{$l}-#{$d}: var(#{$prop}-#{$d});
 						}
 					}
 				}
