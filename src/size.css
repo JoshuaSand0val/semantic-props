@@ -13,8 +13,8 @@
 	--2x-large-size: clamp(4rem, 3.9483rem + 0.4598cqi, 4.5rem);
 	--3x-large-size: clamp(6rem, 5.9224rem + 0.6897cqi, 6.75rem);
 
-	/* Responsive Size (3x-small to 3x-large): */
-	--responsive-size: clamp(0.25rem, -0.4224rem + 5.977cqi, 6.75rem);
+	/* Margin Size: */
+	--margin-size: clamp(0.75rem, 0.1293rem + 5.5172cqi, 6.75rem);
 
 	@supports not (container-type: inline-size) {
 		/* Base Sizes: */
@@ -28,7 +28,7 @@
 		--2x-large-size: clamp(4rem, 3.9483rem + 0.4598vw, 4.5rem);
 		--3x-large-size: clamp(6rem, 5.9224rem + 0.6897vw, 6.75rem);
 
-		/* Responsive Size (3x-small to 3x-large): */
-		--responsive-size: clamp(0.25rem, -0.4224rem + 5.977vw, 6.75rem);
+		/* Margin Size: */
+		--margin-size: clamp(0.75rem, 0.1293rem + 5.5172vw, 6.75rem);
 	}
 }

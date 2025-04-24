@@ -9,6 +9,7 @@ A **breaking change** release that greatly improves browser compatibility.
 ### Added
 
 - Added viewport unit fallbacks to props using container query units.
+- Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 
 ### Changed
 
@@ -18,6 +19,7 @@ A **breaking change** release that greatly improves browser compatibility.
 
 - Removed relative color palette.
 - Removed `--(primary|secondary|accent)-color` relative colors.
+- Removed `--responsive-size` prop in favor of `--margin-size`.
 
 ## [1.0.0] - 2025-01-05
 
