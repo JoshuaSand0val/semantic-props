@@ -10,6 +10,7 @@ A **breaking change** release that greatly improves browser compatibility.
 
 - Added viewport unit fallbacks to props using container query units.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
+- Added `box-shadow` variants of `shadow` props.
 
 ### Changed
 
