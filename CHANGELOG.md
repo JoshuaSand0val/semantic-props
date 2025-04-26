@@ -12,15 +12,11 @@ A **breaking change** release that greatly improves browser compatibility.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added `box-shadow` variants of `shadow` props.
 - Added fallback values for safe-area props.
-
-### Changed
-
-- Weighted light-dark colors now use `@media (prefers-color-scheme)` not `color-scheme` property.
+- Added new color system based on the [Open Color](https://github.com/yeun/open-color) open source project.
 
 ### Removed
 
-- Removed relative color palette.
-- Removed `--(primary|secondary|accent)-color` relative colors.
+- Removed color palette relying on CSS relative colors and `light-dark` function.
 - Removed `--responsive-size` prop in favor of `--margin-size`.
 - Removed use of `:where`, improving browser support.
 

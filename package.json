@@ -26,7 +26,7 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "sass --silence-deprecation=mixed-decls --no-source-map src:dist && postcss dist --replace",
+		"build": "postcss src -d dist",
 		"watch:build": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {
@@ -35,7 +35,6 @@
 		"postcss": "^8.4.39",
 		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.1.0",
-		"postcss-nesting": "^13.0.1",
-		"sass": "^1.82.0"
+		"postcss-nesting": "^13.0.1"
 	}
 }

@@ -1,0 +1,16 @@
+/* Semantic Props for the primary color. */
+
+@import "gray.css";
+
+.semantic {
+	--primary-0: var(--gray-0);
+	--primary-1: var(--gray-1);
+	--primary-2: var(--gray-2);
+	--primary-3: var(--gray-3);
+	--primary-4: var(--gray-4);
+	--primary-5: var(--gray-5);
+	--primary-6: var(--gray-6);
+	--primary-7: var(--gray-7);
+	--primary-8: var(--gray-8);
+	--primary-9: var(--gray-9);
+}
