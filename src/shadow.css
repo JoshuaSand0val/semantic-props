@@ -1,6 +1,6 @@
 /* Semantic Props for CSS box-shadow or drop-shadow filter value. */
 
-:where(.semantic) {
+.semantic {
 	--3x-light-box-shadow: 0 1px 1px rgb(0 0 0 / 0.075);
 	--2x-light-box-shadow: 0 2px 2px rgb(0 0 0 / 0.075);
 	--x-light-box-shadow: 0 3px 3px rgb(0 0 0 / 0.075);

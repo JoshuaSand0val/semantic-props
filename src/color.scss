@@ -11,7 +11,7 @@ $props: (
 	--accent: #006aab
 );
 
-:where(.semantic) {
+.semantic {
 	/* Weighted Colors: */
 	@each $prop, $color in $props {
 		@each $l in $weights {

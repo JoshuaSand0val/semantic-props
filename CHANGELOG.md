@@ -21,6 +21,7 @@ A **breaking change** release that greatly improves browser compatibility.
 - Removed relative color palette.
 - Removed `--(primary|secondary|accent)-color` relative colors.
 - Removed `--responsive-size` prop in favor of `--margin-size`.
+- Removed use of `:where`, improving browser support.
 
 ## [1.0.0] - 2025-01-05
 

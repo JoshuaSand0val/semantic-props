@@ -1,6 +1,6 @@
 /* Semantic Props for container sizes. */
 
-:where(.semantic) {
+.semantic {
 	--3x-small-container: 180px;
 	--2x-small-container: 240px;
 	--x-small-container: 360px;

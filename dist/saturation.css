@@ -1,1 +1,1 @@
-:where(.semantic){--3x-low-saturation:saturate(0.1);--2x-low-saturation:saturate(0.25);--x-low-saturation:saturate(0.5);--low-saturation:saturate(0.75);--high-saturation:saturate(1.25);--x-high-saturation:saturate(1.5);--2x-high-saturation:saturate(1.75);--3x-high-saturation:saturate(2)}
+.semantic{--3x-low-saturation:saturate(0.1);--2x-low-saturation:saturate(0.25);--x-low-saturation:saturate(0.5);--low-saturation:saturate(0.75);--high-saturation:saturate(1.25);--x-high-saturation:saturate(1.5);--2x-high-saturation:saturate(1.75);--3x-high-saturation:saturate(2)}

@@ -1,6 +1,6 @@
 /* Semantic Props for CSS contrast filter value. */
 
-:where(.semantic) {
+.semantic {
 	--3x-low-contrast: contrast(0.1);
 	--2x-low-contrast: contrast(0.25);
 	--x-low-contrast: contrast(0.5);
