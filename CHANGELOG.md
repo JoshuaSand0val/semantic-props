@@ -12,7 +12,7 @@ A **breaking change** release that greatly improves browser compatibility.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added `box-shadow` variants of `shadow` props.
 - Added fallback values for safe-area props.
-- Added new color system based on the [Open Color](https://github.com/yeun/open-color) open source project.
+- Added new color system using weights numbered `0` to `9`.
 
 ### Removed
 

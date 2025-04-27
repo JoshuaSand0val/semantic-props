@@ -1,14 +1,14 @@
 /* Semantic Props for the color pink. */
 
 .semantic {
-	--pink-0: #fff0f6;
-	--pink-1: #ffdeeb;
-	--pink-2: #fcc2d7;
-	--pink-3: #faa2c1;
-	--pink-4: #f783ac;
-	--pink-5: #f06595;
-	--pink-6: #e64980;
-	--pink-7: #d6336c;
-	--pink-8: #c2255c;
-	--pink-9: #a61e4d;
+	--pink-0: oklch(0.98 0.1 10);
+	--pink-1: oklch(0.9 0.1 10);
+	--pink-2: oklch(0.8 0.1 10);
+	--pink-3: oklch(0.7 0.1 10);
+	--pink-4: oklch(0.6 0.1 10);
+	--pink-5: oklch(0.5 0.1 10);
+	--pink-6: oklch(0.4 0.1 10);
+	--pink-7: oklch(0.3 0.1 10);
+	--pink-8: oklch(0.2 0.1 10);
+	--pink-9: oklch(0.1 0.1 10);
 }

@@ -1,14 +1,14 @@
 /* Semantic Props for the color red. */
 
 .semantic {
-	--red-0: #fff5f5;
-	--red-1: #ffe3e3;
-	--red-2: #ffc9c9;
-	--red-3: #ffa8a8;
-	--red-4: #ff8787;
-	--red-5: #ff6b6b;
-	--red-6: #fa5252;
-	--red-7: #f03e3e;
-	--red-8: #e03131;
-	--red-9: #c92a2a;
+	--red-0: oklch(0.98 0.2 30);
+	--red-1: oklch(0.9 0.2 30);
+	--red-2: oklch(0.8 0.2 30);
+	--red-3: oklch(0.7 0.2 30);
+	--red-4: oklch(0.6 0.2 30);
+	--red-5: oklch(0.5 0.2 30);
+	--red-6: oklch(0.4 0.2 30);
+	--red-7: oklch(0.3 0.2 30);
+	--red-8: oklch(0.2 0.2 30);
+	--red-9: oklch(0.1 0.2 30);
 }

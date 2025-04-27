@@ -30,9 +30,10 @@
 		"watch:build": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {
+		"@csstools/postcss-oklab-function": "^4.0.9",
 		"cssnano": "^7.0.4",
 		"onchange": "^7.1.0",
-		"postcss": "^8.4.39",
+		"postcss": "^8.5.3",
 		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.1.0",
 		"postcss-nesting": "^13.0.1"

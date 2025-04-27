@@ -1,0 +1,1 @@
+.semantic{--brown-0:#fff7f2;--brown-1:#fbd5c1;--brown-2:#d9b5a2;--brown-3:#b99683;--brown-4:#997866;--brown-5:#7b5b4a;--brown-6:#5e402f;--brown-7:#422616;--brown-8:#270e01;--brown-9:#090200}@supports (color:color(display-p3 0 0 0%)){.semantic{--brown-0:color(display-p3 1 0.96609 0.94483);--brown-9:color(display-p3 0.03227 0.00645 0)}}

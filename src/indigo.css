@@ -1,14 +1,14 @@
 /* Semantic Props for the color indigo. */
 
 .semantic {
-	--indigo-0: #edf2ff;
-	--indigo-1: #dbe4ff;
-	--indigo-2: #bac8ff;
-	--indigo-3: #91a7ff;
-	--indigo-4: #748ffc;
-	--indigo-5: #5c7cfa;
-	--indigo-6: #4c6ef5;
-	--indigo-7: #4263eb;
-	--indigo-8: #3b5bdb;
-	--indigo-9: #364fc7;
+	--indigo-0: oklch(0.98 0.2 270);
+	--indigo-1: oklch(0.9 0.2 270);
+	--indigo-2: oklch(0.8 0.2 270);
+	--indigo-3: oklch(0.7 0.2 270);
+	--indigo-4: oklch(0.6 0.2 270);
+	--indigo-5: oklch(0.5 0.2 270);
+	--indigo-6: oklch(0.4 0.2 270);
+	--indigo-7: oklch(0.3 0.2 270);
+	--indigo-8: oklch(0.2 0.2 270);
+	--indigo-9: oklch(0.1 0.2 270);
 }

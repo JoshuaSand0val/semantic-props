@@ -1,14 +1,14 @@
 /* Semantic Props for the color blue. */
 
 .semantic {
-	--blue-0: #e7f5ff;
-	--blue-1: #d0ebff;
-	--blue-2: #a5d8ff;
-	--blue-3: #74c0fc;
-	--blue-4: #4dabf7;
-	--blue-5: #339af0;
-	--blue-6: #228be6;
-	--blue-7: #1c7ed6;
-	--blue-8: #1971c2;
-	--blue-9: #1864ab;
+	--blue-0: oklch(0.98 0.15 240);
+	--blue-1: oklch(0.9 0.15 240);
+	--blue-2: oklch(0.8 0.15 240);
+	--blue-3: oklch(0.7 0.15 240);
+	--blue-4: oklch(0.6 0.15 240);
+	--blue-5: oklch(0.5 0.15 240);
+	--blue-6: oklch(0.4 0.15 240);
+	--blue-7: oklch(0.3 0.15 240);
+	--blue-8: oklch(0.2 0.15 240);
+	--blue-9: oklch(0.1 0.15 240);
 }

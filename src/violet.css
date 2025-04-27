@@ -1,14 +1,14 @@
 /* Semantic Props for the color violet. */
 
 .semantic {
-	--violet-0: #f3f0ff;
-	--violet-1: #e5dbff;
-	--violet-2: #d0bfff;
-	--violet-3: #b197fc;
-	--violet-4: #9775fa;
-	--violet-5: #845ef7;
-	--violet-6: #7950f2;
-	--violet-7: #7048e8;
-	--violet-8: #6741d9;
-	--violet-9: #5f3dc4;
+	--violet-0: oklch(0.98 0.15 290);
+	--violet-1: oklch(0.9 0.15 290);
+	--violet-2: oklch(0.8 0.15 290);
+	--violet-3: oklch(0.7 0.15 290);
+	--violet-4: oklch(0.6 0.15 290);
+	--violet-5: oklch(0.5 0.15 290);
+	--violet-6: oklch(0.4 0.15 290);
+	--violet-7: oklch(0.3 0.15 290);
+	--violet-8: oklch(0.2 0.15 290);
+	--violet-9: oklch(0.1 0.15 290);
 }
