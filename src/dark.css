@@ -1,0 +1,14 @@
+/* Semantic Props boolean for dark colors. */
+
+@property --dark {
+	syntax: "true | false";
+	inherits: true;
+	initial-value: false;
+}
+
+.semantic {
+	--dark: false;
+	@media (prefers-color-scheme: dark) {
+		--dark: true;
+	}
+}

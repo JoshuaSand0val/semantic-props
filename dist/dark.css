@@ -1,0 +1,1 @@
+@property --dark{syntax:"true | false";inherits:true;initial-value:false}.semantic{--dark:false}@media (prefers-color-scheme:dark){.semantic{--dark:true}}

@@ -13,6 +13,7 @@ A **breaking change** release that greatly improves browser compatibility.
 - Added `box-shadow` variants of `shadow` props.
 - Added fallback values for safe-area props.
 - Added new color system using weights numbered `0` to `9`.
+- Added `--dark` boolean prop for use in container style queries.
 
 ### Removed
 
