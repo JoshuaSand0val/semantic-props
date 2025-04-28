@@ -3,15 +3,15 @@
 :where(.semantic) {
 	--is-true: initial;
 	--is-false: ;
+	@media (prefers-color-scheme: dark) {
+		--is-light: var(--is-false);
+		--is-dark: var(--is-true);
+	}
 	:where(&, &.light, &.light &)  {
 		--is-light: var(--is-true);
 		--is-dark: var(--is-false);
 	}
 	:where(&.dark, &.dark &) {
-		--is-light: var(--is-false);
-		--is-dark: var(--is-true);
-	}
-	@media (prefers-color-scheme: dark) {
 		--is-light: var(--is-false);
 		--is-dark: var(--is-true);
 	}
