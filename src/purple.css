@@ -1,5 +1,7 @@
 /* Semantic Props for the color purple. */
 
+@import "is.css";
+
 .semantic {
 	--purple-0: oklch(0.98 0.15 300);
 	--purple-1: oklch(0.9 0.15 300);
@@ -11,4 +13,26 @@
 	--purple-7: oklch(0.3 0.15 300);
 	--purple-8: oklch(0.2 0.15 300);
 	--purple-9: oklch(0.1 0.15 300);
+
+	--purple-0-light: var(--is-light, var(--purple-0));
+	--purple-1-light: var(--is-light, var(--purple-1));
+	--purple-2-light: var(--is-light, var(--purple-2));
+	--purple-3-light: var(--is-light, var(--purple-3));
+	--purple-4-light: var(--is-light, var(--purple-4));
+	--purple-5-light: var(--is-light, var(--purple-5));
+	--purple-6-light: var(--is-light, var(--purple-6));
+	--purple-7-light: var(--is-light, var(--purple-7));
+	--purple-8-light: var(--is-light, var(--purple-8));
+	--purple-9-light: var(--is-light, var(--purple-9));
+
+	--purple-0-dark: var(--is-dark, var(--purple-0));
+	--purple-1-dark: var(--is-dark, var(--purple-1));
+	--purple-2-dark: var(--is-dark, var(--purple-2));
+	--purple-3-dark: var(--is-dark, var(--purple-3));
+	--purple-4-dark: var(--is-dark, var(--purple-4));
+	--purple-5-dark: var(--is-dark, var(--purple-5));
+	--purple-6-dark: var(--is-dark, var(--purple-6));
+	--purple-7-dark: var(--is-dark, var(--purple-7));
+	--purple-8-dark: var(--is-dark, var(--purple-8));
+	--purple-9-dark: var(--is-dark, var(--purple-9));
 }

@@ -1,0 +1,1 @@
+.semantic,.semantic.light{--is-light:initial;--is-dark: }.semantic.dark{--is-light: ;--is-dark:initial}@media (prefers-color-scheme:dark){.semantic{--is-light: ;--is-dark:initial}}

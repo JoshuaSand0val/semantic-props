@@ -1,5 +1,7 @@
 /* Semantic Props for the color orange. */
 
+@import "is.css";
+
 .semantic {
 	--orange-0: oklch(0.98 0.15 50);
 	--orange-1: oklch(0.9 0.15 50);
@@ -11,4 +13,26 @@
 	--orange-7: oklch(0.3 0.15 50);
 	--orange-8: oklch(0.2 0.15 50);
 	--orange-9: oklch(0.1 0.15 50);
+
+	--orange-0-light: var(--is-light, var(--orange-0));
+	--orange-1-light: var(--is-light, var(--orange-1));
+	--orange-2-light: var(--is-light, var(--orange-2));
+	--orange-3-light: var(--is-light, var(--orange-3));
+	--orange-4-light: var(--is-light, var(--orange-4));
+	--orange-5-light: var(--is-light, var(--orange-5));
+	--orange-6-light: var(--is-light, var(--orange-6));
+	--orange-7-light: var(--is-light, var(--orange-7));
+	--orange-8-light: var(--is-light, var(--orange-8));
+	--orange-9-light: var(--is-light, var(--orange-9));
+
+	--orange-0-dark: var(--is-dark, var(--orange-0));
+	--orange-1-dark: var(--is-dark, var(--orange-1));
+	--orange-2-dark: var(--is-dark, var(--orange-2));
+	--orange-3-dark: var(--is-dark, var(--orange-3));
+	--orange-4-dark: var(--is-dark, var(--orange-4));
+	--orange-5-dark: var(--is-dark, var(--orange-5));
+	--orange-6-dark: var(--is-dark, var(--orange-6));
+	--orange-7-dark: var(--is-dark, var(--orange-7));
+	--orange-8-dark: var(--is-dark, var(--orange-8));
+	--orange-9-dark: var(--is-dark, var(--orange-9));
 }

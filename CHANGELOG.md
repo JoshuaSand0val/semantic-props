@@ -12,8 +12,8 @@ A **breaking change** release that greatly improves browser compatibility.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added `box-shadow` variants of `shadow` props.
 - Added fallback values for safe-area props.
+- Added `--is-light` and `is-dark` boolean props. Value is `initial` if true, whitespace if false.
 - Added new color system using weights numbered `0` to `9`.
-- Added `--dark` boolean prop for use in container style queries.
 
 ### Removed
 

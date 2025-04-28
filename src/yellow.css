@@ -1,5 +1,7 @@
 /* Semantic Props for the color yellow. */
 
+@import "is.css";
+
 .semantic {
 	--yellow-0: oklch(0.98 0.15 90);
 	--yellow-1: oklch(0.9 0.15 90);
@@ -11,4 +13,26 @@
 	--yellow-7: oklch(0.3 0.15 90);
 	--yellow-8: oklch(0.2 0.15 90);
 	--yellow-9: oklch(0.1 0.15 90);
+
+	--yellow-0-light: var(--is-light, var(--yellow-0));
+	--yellow-1-light: var(--is-light, var(--yellow-1));
+	--yellow-2-light: var(--is-light, var(--yellow-2));
+	--yellow-3-light: var(--is-light, var(--yellow-3));
+	--yellow-4-light: var(--is-light, var(--yellow-4));
+	--yellow-5-light: var(--is-light, var(--yellow-5));
+	--yellow-6-light: var(--is-light, var(--yellow-6));
+	--yellow-7-light: var(--is-light, var(--yellow-7));
+	--yellow-8-light: var(--is-light, var(--yellow-8));
+	--yellow-9-light: var(--is-light, var(--yellow-9));
+
+	--yellow-0-dark: var(--is-dark, var(--yellow-0));
+	--yellow-1-dark: var(--is-dark, var(--yellow-1));
+	--yellow-2-dark: var(--is-dark, var(--yellow-2));
+	--yellow-3-dark: var(--is-dark, var(--yellow-3));
+	--yellow-4-dark: var(--is-dark, var(--yellow-4));
+	--yellow-5-dark: var(--is-dark, var(--yellow-5));
+	--yellow-6-dark: var(--is-dark, var(--yellow-6));
+	--yellow-7-dark: var(--is-dark, var(--yellow-7));
+	--yellow-8-dark: var(--is-dark, var(--yellow-8));
+	--yellow-9-dark: var(--is-dark, var(--yellow-9));
 }

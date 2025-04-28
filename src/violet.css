@@ -1,5 +1,7 @@
 /* Semantic Props for the color violet. */
 
+@import "is.css";
+
 .semantic {
 	--violet-0: oklch(0.98 0.15 290);
 	--violet-1: oklch(0.9 0.15 290);
@@ -11,4 +13,26 @@
 	--violet-7: oklch(0.3 0.15 290);
 	--violet-8: oklch(0.2 0.15 290);
 	--violet-9: oklch(0.1 0.15 290);
+
+	--violet-0-light: var(--is-light, var(--violet-0));
+	--violet-1-light: var(--is-light, var(--violet-1));
+	--violet-2-light: var(--is-light, var(--violet-2));
+	--violet-3-light: var(--is-light, var(--violet-3));
+	--violet-4-light: var(--is-light, var(--violet-4));
+	--violet-5-light: var(--is-light, var(--violet-5));
+	--violet-6-light: var(--is-light, var(--violet-6));
+	--violet-7-light: var(--is-light, var(--violet-7));
+	--violet-8-light: var(--is-light, var(--violet-8));
+	--violet-9-light: var(--is-light, var(--violet-9));
+
+	--violet-0-dark: var(--is-dark, var(--violet-0));
+	--violet-1-dark: var(--is-dark, var(--violet-1));
+	--violet-2-dark: var(--is-dark, var(--violet-2));
+	--violet-3-dark: var(--is-dark, var(--violet-3));
+	--violet-4-dark: var(--is-dark, var(--violet-4));
+	--violet-5-dark: var(--is-dark, var(--violet-5));
+	--violet-6-dark: var(--is-dark, var(--violet-6));
+	--violet-7-dark: var(--is-dark, var(--violet-7));
+	--violet-8-dark: var(--is-dark, var(--violet-8));
+	--violet-9-dark: var(--is-dark, var(--violet-9));
 }

@@ -1,5 +1,7 @@
 /* Semantic Props for the color gray. */
 
+@import "is.css";
+
 .semantic {
 	--gray-0: oklch(0.98 0.01 260);
 	--gray-1: oklch(0.9 0.01 260);
@@ -11,4 +13,26 @@
 	--gray-7: oklch(0.3 0.01 260);
 	--gray-8: oklch(0.2 0.01 260);
 	--gray-9: oklch(0.1 0.01 260);
+
+	--gray-0-light: var(--is-light, var(--gray-0));
+	--gray-1-light: var(--is-light, var(--gray-1));
+	--gray-2-light: var(--is-light, var(--gray-2));
+	--gray-3-light: var(--is-light, var(--gray-3));
+	--gray-4-light: var(--is-light, var(--gray-4));
+	--gray-5-light: var(--is-light, var(--gray-5));
+	--gray-6-light: var(--is-light, var(--gray-6));
+	--gray-7-light: var(--is-light, var(--gray-7));
+	--gray-8-light: var(--is-light, var(--gray-8));
+	--gray-9-light: var(--is-light, var(--gray-9));
+
+	--gray-0-dark: var(--is-dark, var(--gray-0));
+	--gray-1-dark: var(--is-dark, var(--gray-1));
+	--gray-2-dark: var(--is-dark, var(--gray-2));
+	--gray-3-dark: var(--is-dark, var(--gray-3));
+	--gray-4-dark: var(--is-dark, var(--gray-4));
+	--gray-5-dark: var(--is-dark, var(--gray-5));
+	--gray-6-dark: var(--is-dark, var(--gray-6));
+	--gray-7-dark: var(--is-dark, var(--gray-7));
+	--gray-8-dark: var(--is-dark, var(--gray-8));
+	--gray-9-dark: var(--is-dark, var(--gray-9));
 }

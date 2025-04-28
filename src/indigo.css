@@ -1,5 +1,7 @@
 /* Semantic Props for the color indigo. */
 
+@import "is.css";
+
 .semantic {
 	--indigo-0: oklch(0.98 0.2 270);
 	--indigo-1: oklch(0.9 0.2 270);
@@ -11,4 +13,26 @@
 	--indigo-7: oklch(0.3 0.2 270);
 	--indigo-8: oklch(0.2 0.2 270);
 	--indigo-9: oklch(0.1 0.2 270);
+
+	--indigo-0-light: var(--is-light, var(--indigo-0));
+	--indigo-1-light: var(--is-light, var(--indigo-1));
+	--indigo-2-light: var(--is-light, var(--indigo-2));
+	--indigo-3-light: var(--is-light, var(--indigo-3));
+	--indigo-4-light: var(--is-light, var(--indigo-4));
+	--indigo-5-light: var(--is-light, var(--indigo-5));
+	--indigo-6-light: var(--is-light, var(--indigo-6));
+	--indigo-7-light: var(--is-light, var(--indigo-7));
+	--indigo-8-light: var(--is-light, var(--indigo-8));
+	--indigo-9-light: var(--is-light, var(--indigo-9));
+
+	--indigo-0-dark: var(--is-dark, var(--indigo-0));
+	--indigo-1-dark: var(--is-dark, var(--indigo-1));
+	--indigo-2-dark: var(--is-dark, var(--indigo-2));
+	--indigo-3-dark: var(--is-dark, var(--indigo-3));
+	--indigo-4-dark: var(--is-dark, var(--indigo-4));
+	--indigo-5-dark: var(--is-dark, var(--indigo-5));
+	--indigo-6-dark: var(--is-dark, var(--indigo-6));
+	--indigo-7-dark: var(--is-dark, var(--indigo-7));
+	--indigo-8-dark: var(--is-dark, var(--indigo-8));
+	--indigo-9-dark: var(--is-dark, var(--indigo-9));
 }

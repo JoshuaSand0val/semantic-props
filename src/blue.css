@@ -1,5 +1,7 @@
 /* Semantic Props for the color blue. */
 
+@import "is.css";
+
 .semantic {
 	--blue-0: oklch(0.98 0.15 240);
 	--blue-1: oklch(0.9 0.15 240);
@@ -11,4 +13,26 @@
 	--blue-7: oklch(0.3 0.15 240);
 	--blue-8: oklch(0.2 0.15 240);
 	--blue-9: oklch(0.1 0.15 240);
+
+	--blue-0-light: var(--is-light, var(--blue-0));
+	--blue-1-light: var(--is-light, var(--blue-1));
+	--blue-2-light: var(--is-light, var(--blue-2));
+	--blue-3-light: var(--is-light, var(--blue-3));
+	--blue-4-light: var(--is-light, var(--blue-4));
+	--blue-5-light: var(--is-light, var(--blue-5));
+	--blue-6-light: var(--is-light, var(--blue-6));
+	--blue-7-light: var(--is-light, var(--blue-7));
+	--blue-8-light: var(--is-light, var(--blue-8));
+	--blue-9-light: var(--is-light, var(--blue-9));
+
+	--blue-0-dark: var(--is-dark, var(--blue-0));
+	--blue-1-dark: var(--is-dark, var(--blue-1));
+	--blue-2-dark: var(--is-dark, var(--blue-2));
+	--blue-3-dark: var(--is-dark, var(--blue-3));
+	--blue-4-dark: var(--is-dark, var(--blue-4));
+	--blue-5-dark: var(--is-dark, var(--blue-5));
+	--blue-6-dark: var(--is-dark, var(--blue-6));
+	--blue-7-dark: var(--is-dark, var(--blue-7));
+	--blue-8-dark: var(--is-dark, var(--blue-8));
+	--blue-9-dark: var(--is-dark, var(--blue-9));
 }

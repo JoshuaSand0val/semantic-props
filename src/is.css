@@ -1,0 +1,16 @@
+/* Semantic Props boolean values for activating var() fallback. */
+
+.semantic {
+	&, &.light {
+		--is-light: initial;
+		--is-dark: ;
+	}
+	&.dark {
+		--is-light: ;
+		--is-dark: initial;
+	}
+	@media (prefers-color-scheme: dark) {
+		--is-light: ;
+		--is-dark: initial;
+	}
+}

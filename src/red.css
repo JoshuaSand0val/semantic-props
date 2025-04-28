@@ -1,5 +1,7 @@
 /* Semantic Props for the color red. */
 
+@import "is.css";
+
 .semantic {
 	--red-0: oklch(0.98 0.2 30);
 	--red-1: oklch(0.9 0.2 30);
@@ -11,4 +13,26 @@
 	--red-7: oklch(0.3 0.2 30);
 	--red-8: oklch(0.2 0.2 30);
 	--red-9: oklch(0.1 0.2 30);
+
+	--red-0-light: var(--is-light, var(--red-0));
+	--red-1-light: var(--is-light, var(--red-1));
+	--red-2-light: var(--is-light, var(--red-2));
+	--red-3-light: var(--is-light, var(--red-3));
+	--red-4-light: var(--is-light, var(--red-4));
+	--red-5-light: var(--is-light, var(--red-5));
+	--red-6-light: var(--is-light, var(--red-6));
+	--red-7-light: var(--is-light, var(--red-7));
+	--red-8-light: var(--is-light, var(--red-8));
+	--red-9-light: var(--is-light, var(--red-9));
+
+	--red-0-dark: var(--is-dark, var(--red-0));
+	--red-1-dark: var(--is-dark, var(--red-1));
+	--red-2-dark: var(--is-dark, var(--red-2));
+	--red-3-dark: var(--is-dark, var(--red-3));
+	--red-4-dark: var(--is-dark, var(--red-4));
+	--red-5-dark: var(--is-dark, var(--red-5));
+	--red-6-dark: var(--is-dark, var(--red-6));
+	--red-7-dark: var(--is-dark, var(--red-7));
+	--red-8-dark: var(--is-dark, var(--red-8));
+	--red-9-dark: var(--is-dark, var(--red-9));
 }

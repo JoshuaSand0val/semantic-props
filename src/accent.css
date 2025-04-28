@@ -1,6 +1,7 @@
 /* Semantic Props for the accent color. */
 
 @import "blue.css";
+@import "is.css";
 
 .semantic {
 	--accent-0: var(--blue-0);
@@ -13,4 +14,26 @@
 	--accent-7: var(--blue-7);
 	--accent-8: var(--blue-8);
 	--accent-9: var(--blue-9);
+
+	--accent-0-light: var(--is-light, var(--accent-0));
+	--accent-1-light: var(--is-light, var(--accent-1));
+	--accent-2-light: var(--is-light, var(--accent-2));
+	--accent-3-light: var(--is-light, var(--accent-3));
+	--accent-4-light: var(--is-light, var(--accent-4));
+	--accent-5-light: var(--is-light, var(--accent-5));
+	--accent-6-light: var(--is-light, var(--accent-6));
+	--accent-7-light: var(--is-light, var(--accent-7));
+	--accent-8-light: var(--is-light, var(--accent-8));
+	--accent-9-light: var(--is-light, var(--accent-9));
+
+	--accent-0-dark: var(--is-dark, var(--accent-0));
+	--accent-1-dark: var(--is-dark, var(--accent-1));
+	--accent-2-dark: var(--is-dark, var(--accent-2));
+	--accent-3-dark: var(--is-dark, var(--accent-3));
+	--accent-4-dark: var(--is-dark, var(--accent-4));
+	--accent-5-dark: var(--is-dark, var(--accent-5));
+	--accent-6-dark: var(--is-dark, var(--accent-6));
+	--accent-7-dark: var(--is-dark, var(--accent-7));
+	--accent-8-dark: var(--is-dark, var(--accent-8));
+	--accent-9-dark: var(--is-dark, var(--accent-9));
 }

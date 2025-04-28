@@ -1,5 +1,7 @@
 /* Semantic Props for the color coral. */
 
+@import "is.css";
+
 .semantic {
 	--coral-0: oklch(0.98 0.2 40);
 	--coral-1: oklch(0.9 0.2 40);
@@ -11,4 +13,26 @@
 	--coral-7: oklch(0.3 0.2 40);
 	--coral-8: oklch(0.2 0.2 40);
 	--coral-9: oklch(0.1 0.2 40);
+
+	--coral-0-light: var(--is-light, var(--coral-0));
+	--coral-1-light: var(--is-light, var(--coral-1));
+	--coral-2-light: var(--is-light, var(--coral-2));
+	--coral-3-light: var(--is-light, var(--coral-3));
+	--coral-4-light: var(--is-light, var(--coral-4));
+	--coral-5-light: var(--is-light, var(--coral-5));
+	--coral-6-light: var(--is-light, var(--coral-6));
+	--coral-7-light: var(--is-light, var(--coral-7));
+	--coral-8-light: var(--is-light, var(--coral-8));
+	--coral-9-light: var(--is-light, var(--coral-9));
+
+	--coral-0-dark: var(--is-dark, var(--coral-0));
+	--coral-1-dark: var(--is-dark, var(--coral-1));
+	--coral-2-dark: var(--is-dark, var(--coral-2));
+	--coral-3-dark: var(--is-dark, var(--coral-3));
+	--coral-4-dark: var(--is-dark, var(--coral-4));
+	--coral-5-dark: var(--is-dark, var(--coral-5));
+	--coral-6-dark: var(--is-dark, var(--coral-6));
+	--coral-7-dark: var(--is-dark, var(--coral-7));
+	--coral-8-dark: var(--is-dark, var(--coral-8));
+	--coral-9-dark: var(--is-dark, var(--coral-9));
 }
