@@ -1,1 +1,1 @@
-.semantic{--letter-dense:-0.05em;--letter-normal:normal;--letter-wide:0.1em}
+:where(.semantic){--letter-dense:-0.05em;--letter-normal:normal;--letter-wide:0.1em}

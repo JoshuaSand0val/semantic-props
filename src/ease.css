@@ -1,6 +1,6 @@
 /* Semantic Props for CSS <easing-function> data type. */
 
-.semantic {
+:where(.semantic) {
 	--ease: ease;
 	--ease-in: ease-in;
 	--ease-out: ease-out;

@@ -1,1 +1,1 @@
-.semantic{--3x-small-container:180px;--2x-small-container:240px;--x-small-container:360px;--small-container:480px;--medium-container:768px;--large-container:1024px;--x-large-container:1440px;--2x-large-container:1600px;--3x-large-container:1920px}
+:where(.semantic){--3x-small-container:180px;--2x-small-container:240px;--x-small-container:360px;--small-container:480px;--medium-container:768px;--large-container:1024px;--x-large-container:1440px;--2x-large-container:1600px;--3x-large-container:1920px}

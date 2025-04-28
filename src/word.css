@@ -1,6 +1,6 @@
 /* Semantic Props for CSS word-spacing property. */
 
-.semantic {
+:where(.semantic) {
 	--word-dense: -0.1em;
 	--word-normal: normal;
 	--word-wide: 0.1em;

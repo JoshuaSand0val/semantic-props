@@ -1,6 +1,6 @@
 /* Semantic Props for CSS scale property. */
 
-.semantic {
+:where(.semantic) {
 	--scale-3x-out: 0.5;
 	--scale-2x-out: 0.75;
 	--scale-x-out: 0.9;

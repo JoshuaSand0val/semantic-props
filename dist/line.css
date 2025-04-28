@@ -1,1 +1,1 @@
-.semantic{--line-short:1.25;--line-normal:1.6;--line-tall:2}
+:where(.semantic){--line-short:1.25;--line-normal:1.6;--line-tall:2}

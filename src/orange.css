@@ -2,7 +2,7 @@
 
 @import "is.css";
 
-.semantic {
+:where(.semantic) {
 	--orange-0: oklch(0.98 0.15 50);
 	--orange-1: oklch(0.9 0.15 50);
 	--orange-2: oklch(0.8 0.15 50);

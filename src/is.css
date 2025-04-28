@@ -1,13 +1,13 @@
 /* Semantic Props boolean values for activating var() fallback. */
 
-.semantic {
+:where(.semantic) {
 	--is-true: initial;
 	--is-false: ;
-	&, &.light {
+	:where(&, &.light, &.light &)  {
 		--is-light: var(--is-true);
 		--is-dark: var(--is-false);
 	}
-	&.dark {
+	:where(&.dark, &.dark &) {
 		--is-light: var(--is-false);
 		--is-dark: var(--is-true);
 	}
