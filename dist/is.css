@@ -1,1 +1,1 @@
-.semantic,.semantic.light{--is-light:initial;--is-dark: }.semantic.dark{--is-light: ;--is-dark:initial}@media (prefers-color-scheme:dark){.semantic{--is-light: ;--is-dark:initial}}
+.semantic{--is-true:initial;--is-false: }.semantic,.semantic.light{--is-light:var(--is-true);--is-dark:var(--is-false)}.semantic.dark{--is-light:var(--is-false);--is-dark:var(--is-true)}@media (prefers-color-scheme:dark){.semantic{--is-light:var(--is-false);--is-dark:var(--is-true)}}
