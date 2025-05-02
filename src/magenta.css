@@ -3,18 +3,16 @@
 @import "is.css";
 
 :where(.semantic) {
-	--magenta-0: oklch(0.98 0.2 330);
-	--magenta-1: oklch(0.9 0.2 330);
-	--magenta-2: oklch(0.8 0.2 330);
-	--magenta-3: oklch(0.7 0.2 330);
-	--magenta-4: oklch(0.6 0.2 330);
-	--magenta-5: oklch(0.5 0.2 330);
-	--magenta-6: oklch(0.4 0.2 330);
-	--magenta-7: oklch(0.3 0.2 330);
-	--magenta-8: oklch(0.2 0.2 330);
-	--magenta-9: oklch(0.1 0.2 330);
+	--magenta-1: oklch(0.98 0.2 330);
+	--magenta-2: oklch(0.9 0.2 330);
+	--magenta-3: oklch(0.8 0.2 330);
+	--magenta-4: oklch(0.7 0.2 330);
+	--magenta-5: oklch(0.6 0.2 330);
+	--magenta-6: oklch(0.5 0.2 330);
+	--magenta-7: oklch(0.4 0.2 330);
+	--magenta-8: oklch(0.3 0.2 330);
+	--magenta-9: oklch(0.2 0.2 330);
 
-	--magenta-0-light: var(--is-light, var(--magenta-0));
 	--magenta-1-light: var(--is-light, var(--magenta-1));
 	--magenta-2-light: var(--is-light, var(--magenta-2));
 	--magenta-3-light: var(--is-light, var(--magenta-3));
@@ -25,7 +23,6 @@
 	--magenta-8-light: var(--is-light, var(--magenta-8));
 	--magenta-9-light: var(--is-light, var(--magenta-9));
 
-	--magenta-0-dark: var(--is-dark, var(--magenta-0));
 	--magenta-1-dark: var(--is-dark, var(--magenta-1));
 	--magenta-2-dark: var(--is-dark, var(--magenta-2));
 	--magenta-3-dark: var(--is-dark, var(--magenta-3));

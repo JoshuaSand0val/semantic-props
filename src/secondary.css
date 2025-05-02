@@ -4,7 +4,6 @@
 @import "is.css";
 
 :where(.semantic) {
-	--secondary-0: var(--gray-0);
 	--secondary-1: var(--gray-1);
 	--secondary-2: var(--gray-2);
 	--secondary-3: var(--gray-3);
@@ -15,7 +14,6 @@
 	--secondary-8: var(--gray-8);
 	--secondary-9: var(--gray-9);
 
-	--secondary-0-light: var(--is-light, var(--secondary-0));
 	--secondary-1-light: var(--is-light, var(--secondary-1));
 	--secondary-2-light: var(--is-light, var(--secondary-2));
 	--secondary-3-light: var(--is-light, var(--secondary-3));
@@ -26,7 +24,6 @@
 	--secondary-8-light: var(--is-light, var(--secondary-8));
 	--secondary-9-light: var(--is-light, var(--secondary-9));
 
-	--secondary-0-dark: var(--is-dark, var(--secondary-0));
 	--secondary-1-dark: var(--is-dark, var(--secondary-1));
 	--secondary-2-dark: var(--is-dark, var(--secondary-2));
 	--secondary-3-dark: var(--is-dark, var(--secondary-3));

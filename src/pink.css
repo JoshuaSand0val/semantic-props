@@ -3,18 +3,16 @@
 @import "is.css";
 
 :where(.semantic) {
-	--pink-0: oklch(0.98 0.1 10);
-	--pink-1: oklch(0.9 0.1 10);
-	--pink-2: oklch(0.8 0.1 10);
-	--pink-3: oklch(0.7 0.1 10);
-	--pink-4: oklch(0.6 0.1 10);
-	--pink-5: oklch(0.5 0.1 10);
-	--pink-6: oklch(0.4 0.1 10);
-	--pink-7: oklch(0.3 0.1 10);
-	--pink-8: oklch(0.2 0.1 10);
-	--pink-9: oklch(0.1 0.1 10);
+	--pink-1: oklch(0.98 0.1 10);
+	--pink-2: oklch(0.9 0.1 10);
+	--pink-3: oklch(0.8 0.1 10);
+	--pink-4: oklch(0.7 0.1 10);
+	--pink-5: oklch(0.6 0.1 10);
+	--pink-6: oklch(0.5 0.1 10);
+	--pink-7: oklch(0.4 0.1 10);
+	--pink-8: oklch(0.3 0.1 10);
+	--pink-9: oklch(0.2 0.1 10);
 
-	--pink-0-light: var(--is-light, var(--pink-0));
 	--pink-1-light: var(--is-light, var(--pink-1));
 	--pink-2-light: var(--is-light, var(--pink-2));
 	--pink-3-light: var(--is-light, var(--pink-3));
@@ -25,7 +23,6 @@
 	--pink-8-light: var(--is-light, var(--pink-8));
 	--pink-9-light: var(--is-light, var(--pink-9));
 
-	--pink-0-dark: var(--is-dark, var(--pink-0));
 	--pink-1-dark: var(--is-dark, var(--pink-1));
 	--pink-2-dark: var(--is-dark, var(--pink-2));
 	--pink-3-dark: var(--is-dark, var(--pink-3));

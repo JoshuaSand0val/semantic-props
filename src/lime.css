@@ -3,18 +3,16 @@
 @import "is.css";
 
 :where(.semantic) {
-	--lime-0: oklch(0.98 0.15 120);
-	--lime-1: oklch(0.9 0.15 120);
-	--lime-2: oklch(0.8 0.15 120);
-	--lime-3: oklch(0.7 0.15 120);
-	--lime-4: oklch(0.6 0.15 120);
-	--lime-5: oklch(0.5 0.15 120);
-	--lime-6: oklch(0.4 0.15 120);
-	--lime-7: oklch(0.3 0.15 120);
-	--lime-8: oklch(0.2 0.15 120);
-	--lime-9: oklch(0.1 0.15 120);
+	--lime-1: oklch(0.98 0.15 120);
+	--lime-2: oklch(0.9 0.15 120);
+	--lime-3: oklch(0.8 0.15 120);
+	--lime-4: oklch(0.7 0.15 120);
+	--lime-5: oklch(0.6 0.15 120);
+	--lime-6: oklch(0.5 0.15 120);
+	--lime-7: oklch(0.4 0.15 120);
+	--lime-8: oklch(0.3 0.15 120);
+	--lime-9: oklch(0.2 0.15 120);
 
-	--lime-0-light: var(--is-light, var(--lime-0));
 	--lime-1-light: var(--is-light, var(--lime-1));
 	--lime-2-light: var(--is-light, var(--lime-2));
 	--lime-3-light: var(--is-light, var(--lime-3));
@@ -25,7 +23,6 @@
 	--lime-8-light: var(--is-light, var(--lime-8));
 	--lime-9-light: var(--is-light, var(--lime-9));
 
-	--lime-0-dark: var(--is-dark, var(--lime-0));
 	--lime-1-dark: var(--is-dark, var(--lime-1));
 	--lime-2-dark: var(--is-dark, var(--lime-2));
 	--lime-3-dark: var(--is-dark, var(--lime-3));

@@ -3,18 +3,16 @@
 @import "is.css";
 
 :where(.semantic) {
-	--brown-0: oklch(0.98 0.05 50);
-	--brown-1: oklch(0.9 0.05 50);
-	--brown-2: oklch(0.8 0.05 50);
-	--brown-3: oklch(0.7 0.05 50);
-	--brown-4: oklch(0.6 0.05 50);
-	--brown-5: oklch(0.5 0.05 50);
-	--brown-6: oklch(0.4 0.05 50);
-	--brown-7: oklch(0.3 0.05 50);
-	--brown-8: oklch(0.2 0.05 50);
-	--brown-9: oklch(0.1 0.05 50);
+	--brown-1: oklch(0.98 0.05 50);
+	--brown-2: oklch(0.9 0.05 50);
+	--brown-3: oklch(0.8 0.05 50);
+	--brown-4: oklch(0.7 0.05 50);
+	--brown-5: oklch(0.6 0.05 50);
+	--brown-6: oklch(0.5 0.05 50);
+	--brown-7: oklch(0.4 0.05 50);
+	--brown-8: oklch(0.3 0.05 50);
+	--brown-9: oklch(0.2 0.05 50);
 
-	--brown-0-light: var(--is-light, var(--brown-0));
 	--brown-1-light: var(--is-light, var(--brown-1));
 	--brown-2-light: var(--is-light, var(--brown-2));
 	--brown-3-light: var(--is-light, var(--brown-3));
@@ -25,7 +23,6 @@
 	--brown-8-light: var(--is-light, var(--brown-8));
 	--brown-9-light: var(--is-light, var(--brown-9));
 
-	--brown-0-dark: var(--is-dark, var(--brown-0));
 	--brown-1-dark: var(--is-dark, var(--brown-1));
 	--brown-2-dark: var(--is-dark, var(--brown-2));
 	--brown-3-dark: var(--is-dark, var(--brown-3));
