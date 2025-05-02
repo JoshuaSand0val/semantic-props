@@ -26,7 +26,7 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "postcss src -d dist",
+		"build": "postcss src/import.css -o dist/import.css",
 		"watch:build": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {

@@ -18,6 +18,7 @@ A **breaking change** release that greatly improves browser compatibility.
 
 - Removed color palette relying on CSS relative colors and `light-dark` function.
 - Removed `--responsive-size` prop in favor of `--margin-size`.
+- Removed individual import distribution files. Use a PostCSS plugin (such as [PurgeCSS](https://purgecss.com/)) for optimizations instead.
 
 ## [1.0.0] - 2025-01-05
 
