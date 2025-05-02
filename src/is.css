@@ -1,20 +1,122 @@
 /* Semantic Props boolean values for activating var() fallback. */
 
 :where(.semantic) {
+	/* Boolean Values: */
 	--is-true: initial;
 	--is-false: ;
+
+	/* Light/Dark Values: */
 	--is-light: var(--is-true);
 	--is-dark: var(--is-false);
+
 	@media (prefers-color-scheme: dark) {
 		--is-light: var(--is-false);
 		--is-dark: var(--is-true);
 	}
+
 	:where(&.light, &.light &)  {
 		--is-light: var(--is-true);
 		--is-dark: var(--is-false);
 	}
+
 	:where(&.dark, &.dark &) {
 		--is-light: var(--is-false);
 		--is-dark: var(--is-true);
 	}
+
+	/* Media-Query Values: */
+	--is-3xs: var(--is-true);
+	--is-2xs: var(--is-false);
+	--is-xs: var(--is-false);
+	--is-sm: var(--is-false);
+	--is-md: var(--is-false);
+	--is-lg: var(--is-false);
+	--is-xl: var(--is-false);
+	--is-2xl: var(--is-false);
+	--is-3xl: var(--is-false);
+
+	@media (min-width: 240px) {
+		--is-3xs: var(--is-false);
+		--is-2xs: var(--is-true);
+	}
+
+	@media (min-width: 360px) {
+		--is-2xs: var(--is-false);
+		--is-xs: var(--is-true);
+	}
+
+	@media (min-width: 480px) {
+		--is-xs: var(--is-false);
+		--is-sm: var(--is-true);
+	}
+
+	@media (min-width: 768px) {
+		--is-sm: var(--is-false);
+		--is-md: var(--is-true);
+	}
+
+	@media (min-width: 1024px) {
+		--is-md: var(--is-false);
+		--is-lg: var(--is-true);
+	}
+
+	@media (min-width: 1440px) {
+		--is-lg: var(--is-false);
+		--is-xl: var(--is-true);
+	}
+
+	@media (min-width: 1600px) {
+		--is-xl: var(--is-false);
+		--is-2xl: var(--is-true);
+	}
+
+	@media (min-width: 1920px) {
+		--is-2xl: var(--is-false);
+		--is-3xl: var(--is-true);
+	}
+
+	/* Media Query Ranges: */
+	--is-3xs-2xs: var(--is-3xs) var(--is-2xs);
+	--is-3xs-xs: var(--is-3xs-2xs) var(--is-xs);
+	--is-3xs-sm: var(--is-3xs-xs) var(--is-sm);
+	--is-3xs-md: var(--is-3xs-sm) var(--is-md);
+	--is-3xs-lg: var(--is-3xs-md) var(--is-lg);
+	--is-3xs-xl: var(--is-3xs-lg) var(--is-xl);
+	--is-3xs-2xl: var(--is-3xs-xl) var(--is-2xl);
+	--is-3xs-3xl: var(--is-3xs-2xl) var(--is-3xl);
+
+	--is-2xs-xs: var(--is-2xs) var(--is-xs);
+	--is-2xs-sm: var(--is-2xs-xs) var(--is-sm);
+	--is-2xs-md: var(--is-2xs-sm) var(--is-md);
+	--is-2xs-lg: var(--is-2xs-md) var(--is-lg);
+	--is-2xs-xl: var(--is-2xs-lg) var(--is-xl);
+	--is-2xs-2xl: var(--is-2xs-xl) var(--is-2xl);
+	--is-2xs-3xl: var(--is-2xs-2xl) var(--is-3xl);
+
+	--is-xs-sm: var(--is-xs) var(--is-sm);
+	--is-xs-md: var(--is-xs-sm) var(--is-md);
+	--is-xs-lg: var(--is-xs-md) var(--is-lg);
+	--is-xs-xl: var(--is-xs-lg) var(--is-xl);
+	--is-xs-2xl: var(--is-xs-xl) var(--is-2xl);
+	--is-xs-3xl: var(--is-xs-2xl) var(--is-3xl);
+
+	--is-sm-md: var(--is-sm) var(--is-md);
+	--is-sm-lg: var(--is-sm-md) var(--is-lg);
+	--is-sm-xl: var(--is-sm-lg) var(--is-xl);
+	--is-sm-2xl: var(--is-sm-xl) var(--is-2xl);
+	--is-sm-3xl: var(--is-sm-2xl) var(--is-3xl);
+
+	--is-md-lg: var(--is-md) var(--is-lg);
+	--is-md-xl: var(--is-md-lg) var(--is-xl);
+	--is-md-2xl: var(--is-md-xl) var(--is-2xl);
+	--is-md-3xl: var(--is-md-2xl) var(--is-3xl);
+
+	--is-lg-xl: var(--is-lg) var(--is-xl);
+	--is-lg-2xl: var(--is-lg-xl) var(--is-2xl);
+	--is-lg-3xl: var(--is-lg-2xl) var(--is-3xl);
+
+	--is-xl-2xl: var(--is-xl) var(--is-2xl);
+	--is-xl-3xl: var(--is-xl-2xl) var(--is-3xl);
+
+	--is-2xl-3xl: var(--is-2xl) var(--is-3xl);
 }
