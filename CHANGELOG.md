@@ -8,11 +8,14 @@ A **breaking change** release that greatly improves browser compatibility.
 
 ### Added
 
-- Added viewport unit fallbacks to props using container query units.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added `box-shadow` variants of `shadow` props.
 - Added `--is-` color-scheme and media-query boolean props. Value is `initial` if true, whitespace if false.
 - Added new color system using weights numbered `1` to `9`.
+
+### Changed
+
+- Changed container query units to viewport units.
 
 ### Removed
 
