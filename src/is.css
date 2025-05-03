@@ -52,17 +52,17 @@
 	}
 
 	/* Media-Query Ranges: */
-	--is-watch-phone: var(--is-watch) var(--is-phone);
-	--is-watch-tablet: var(--is-watch-phone) var(--is-tablet);
-	--is-watch-laptop: var(--is-watch-tablet) var(--is-laptop);
-	--is-watch-desktop: var(--is-watch-laptop) var(--is-desktop);
+	--is-watch-to-phone: var(--is-watch) var(--is-phone);
+	--is-watch-to-tablet: var(--is-watch-to-phone) var(--is-tablet);
+	--is-watch-to-laptop: var(--is-watch-to-tablet) var(--is-laptop);
+	--is-watch-to-desktop: var(--is-watch-to-laptop) var(--is-desktop);
 
-	--is-phone-tablet: var(--is-phone) var(--is-tablet);
-	--is-phone-laptop: var(--is-phone-tablet) var(--is-laptop);
-	--is-phone-desktop: var(--is-phone-laptop) var(--is-desktop);
+	--is-phone-to-tablet: var(--is-phone) var(--is-tablet);
+	--is-phone-to-laptop: var(--is-phone-to-tablet) var(--is-laptop);
+	--is-phone-to-desktop: var(--is-phone-to-laptop) var(--is-desktop);
 
-	--is-tablet-laptop: var(--is-tablet) var(--is-laptop);
-	--is-tablet-desktop: var(--is-tablet-laptop) var(--is-desktop);
+	--is-tablet-to-laptop: var(--is-tablet) var(--is-laptop);
+	--is-tablet-to-desktop: var(--is-tablet-to-laptop) var(--is-desktop);
 
-	--is-laptop-desktop: var(--is-laptop) var(--is-desktop);
+	--is-laptop-to-desktop: var(--is-laptop) var(--is-desktop);
 }
