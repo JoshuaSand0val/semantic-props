@@ -14,18 +14,14 @@
 		--is-dark: var(--is-true);
 	}
 
-	:where(&.light, &.light &)  {
-		:where(&:not(.dark)) {
-			--is-light: var(--is-true);
-			--is-dark: var(--is-false);
-		}
+	:where(:is(&.light, &.light &):not(.dark)) {
+		--is-light: var(--is-true);
+		--is-dark: var(--is-false);
 	}
 
-	:where(&.dark, &.dark &) {
-		:where(&:not(.light)) {
-			--is-light: var(--is-false);
-			--is-dark: var(--is-true);
-		}
+	:where(:is(&.dark, &.dark &):not(.light)) {
+		--is-light: var(--is-false);
+		--is-dark: var(--is-true);
 	}
 
 	/* Media-Query Values: */
