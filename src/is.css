@@ -6,7 +6,7 @@
 	--is-false: ;
 
 	/* Light/Dark Values: */
-	:where(&:not(& &)) {
+	&:not(& &) {
 		--is-light: var(--is-true);
 		--is-dark: var(--is-false);
 		@media (prefers-color-scheme: dark) {
@@ -15,18 +15,18 @@
 		}
 	}
 
-	:where(&.light:not(.dark)) {
+	&:where(.light) {
 		--is-light: var(--is-true);
 		--is-dark: var(--is-false);
 	}
 
-	:where(&.dark:not(.light)) {
+	&:where(.dark) {
 		--is-light: var(--is-false);
 		--is-dark: var(--is-true);
 	}
 
 	/* Media-Query Values: */
-	:where(&:not(& &)) {
+	&:not(& &) {
 		--is-watch: var(--is-true);
 		--is-phone: var(--is-false);
 		--is-tablet: var(--is-false);
@@ -35,28 +35,28 @@
 	}
 
 	@media (min-width: 320px) {
-		:where(&:not(.watch)) {
+		&:where(:not(.watch)) {
 			--is-watch: var(--is-false);
 			--is-phone: var(--is-true);
 		}
 	}
 
 	@media (min-width: 768px) {
-		:where(&:not(.watch, .phone)) {
+		&:where(:not(.watch, .phone)) {
 			--is-phone: var(--is-false);
 			--is-tablet: var(--is-true);
 		}
 	}
 
 	@media (min-width: 1200px) {
-		:where(&:not(.watch, .phone, .tablet)) {
+		&:where(:not(.watch, .phone, .tablet)) {
 			--is-tablet: var(--is-false);
 			--is-laptop: var(--is-true);
 		}
 	}
 
 	@media (min-width: 1600px) {
-		:where(&:not(.watch, .phone, .tablet, .laptop)) {
+		&:where(:not(.watch, .phone, .tablet, .laptop)) {
 			--is-tablet: var(--is-false);
 			--is-desktop: var(--is-true);
 		}
