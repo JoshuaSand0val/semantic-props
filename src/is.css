@@ -6,21 +6,25 @@
 	--is-false: ;
 
 	/* Light/Dark Values: */
-	@media (prefers-color-scheme: light) {
-		--is-light: var(--is-true);
-		--is-dark: var(--is-false);
-		:where(&.dark, &.dark &) {
-			--is-light: var(--is-false);
-			--is-dark: var(--is-true);
-		}
-	}
+	--is-light: var(--is-true);
+	--is-dark: var(--is-false);
 
 	@media (prefers-color-scheme: dark) {
 		--is-light: var(--is-false);
 		--is-dark: var(--is-true);
-		:where(&.light, &.light &)  {
+	}
+
+	:where(&.light, &.light &)  {
+		:where(&:not(.dark)) {
 			--is-light: var(--is-true);
 			--is-dark: var(--is-false);
+		}
+	}
+
+	:where(&.dark, &.dark &) {
+		:where(&:not(.light)) {
+			--is-light: var(--is-false);
+			--is-dark: var(--is-true);
 		}
 	}
 
