@@ -1,12 +1,12 @@
-/* Semantic Props for CSS scale property. */
+/* Semantic Props for CSS transform property scale function. */
 
 :where(.semantic) {
-	--scale-3x-out: 0.5;
-	--scale-2x-out: 0.75;
-	--scale-x-out: 0.9;
-	--scale-out: 0.95;
-	--scale-in: 1.05;
-	--scale-x-in: 1.1;
-	--scale-2x-in: 1.25;
-	--scale-3x-in: 1.5;
+	--scale-3x-out: scale(0.5);
+	--scale-2x-out: scale(0.75);
+	--scale-x-out: scale(0.9);
+	--scale-out: scale(0.95);
+	--scale-in: scale(1.05);
+	--scale-x-in: scale(1.1);
+	--scale-2x-in: scale(1.25);
+	--scale-3x-in: scale(1.5);
 }

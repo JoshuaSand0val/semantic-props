@@ -16,6 +16,7 @@ A **breaking change** release that greatly improves browser compatibility.
 ### Changed
 
 - Changed container query units to viewport units.
+- Changed `--scale-` props to use transform property `scale()` function.
 
 ### Removed
 
