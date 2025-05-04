@@ -32,28 +32,28 @@
 	--is-desktop: var(--is-false);
 
 	@media (min-width: 320px) {
-		&:not(.watch) {
+		&:where(:not(.watch)) {
 			--is-watch: var(--is-false);
 			--is-phone: var(--is-true);
 		}
 	}
 
 	@media (min-width: 768px) {
-		&:not(.watch, .phone) {
+		&:where(:not(.watch, .phone)) {
 			--is-phone: var(--is-false);
 			--is-tablet: var(--is-true);
 		}
 	}
 
 	@media (min-width: 1200px) {
-		&:not(.watch, .phone, .tablet) {
+		&:where(:not(.watch, .phone, .tablet)) {
 			--is-tablet: var(--is-false);
 			--is-laptop: var(--is-true);
 		}
 	}
 
 	@media (min-width: 1600px) {
-		&:not(.watch, .phone, .tablet, .laptop) {
+		&:where(:not(.watch, .phone, .tablet, .laptop)) {
 			--is-laptop: var(--is-false);
 			--is-desktop: var(--is-true);
 		}
