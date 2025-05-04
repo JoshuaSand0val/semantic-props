@@ -1,13 +1,10 @@
 /* Semantic Props boolean values for activating var() fallback. */
 
-/* Boolean Values: */
 :where(.semantic) {
+	/* Boolean Values: */
 	--is-true: initial;
 	--is-false: ;
-}
 
-/* Inherited Values: */
-:where(.semantic:not(.semantic .semantic)) {
 	/* Light/Dark Values: */
 	--is-light: var(--is-true);
 	--is-dark: var(--is-false);
@@ -43,10 +40,7 @@
 		--is-laptop: var(--is-false);
 		--is-desktop: var(--is-true);
 	}
-}
 
-/* Persistent Values: */
-:where(.semantic) {
 	/* Media-Query Ranges: */
 	--is-watch-to-phone: var(--is-watch) var(--is-phone);
 	--is-watch-to-tablet: var(--is-watch-to-phone) var(--is-tablet);
