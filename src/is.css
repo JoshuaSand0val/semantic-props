@@ -1,67 +1,52 @@
 /* Semantic Props boolean values for activating var() fallback. */
 
+/* Boolean Values: */
 :where(.semantic) {
-	/* Boolean Values: */
 	--is-true: initial;
 	--is-false: ;
+}
 
+/* Inherited Values: */
+:where(.semantic:not(.semantic .semantic)) {
 	/* Light/Dark Values: */
-	&:not(& &) {
-		--is-light: var(--is-true);
-		--is-dark: var(--is-false);
-		@media (prefers-color-scheme: dark) {
-			--is-light: var(--is-false);
-			--is-dark: var(--is-true);
-		}
-	}
+	--is-light: var(--is-true);
+	--is-dark: var(--is-false);
 
-	&:where(.light) {
-		--is-light: var(--is-true);
-		--is-dark: var(--is-false);
-	}
-
-	&:where(.dark) {
+	@media (prefers-color-scheme: dark) {
 		--is-light: var(--is-false);
 		--is-dark: var(--is-true);
 	}
 
 	/* Media-Query Values: */
-	&:where(:not(& &), .watch, .phone, .tablet, .laptop, .desktop) {
-		--is-watch: var(--is-true);
-		--is-phone: var(--is-false);
-		--is-tablet: var(--is-false);
-		--is-laptop: var(--is-false);
-		--is-desktop: var(--is-false);
-	}
+	--is-watch: var(--is-true);
+	--is-phone: var(--is-false);
+	--is-tablet: var(--is-false);
+	--is-laptop: var(--is-false);
+	--is-desktop: var(--is-false);
 
 	@media (min-width: 320px) {
-		&:where(:not(& &), .phone, .tablet, .laptop, .desktop) {
-			--is-watch: var(--is-false);
-			--is-phone: var(--is-true);
-		}
+		--is-watch: var(--is-false);
+		--is-phone: var(--is-true);
 	}
 
 	@media (min-width: 768px) {
-		&:where(:not(& &), .tablet, .laptop, .desktop) {
-			--is-phone: var(--is-false);
-			--is-tablet: var(--is-true);
-		}
+		--is-phone: var(--is-false);
+		--is-tablet: var(--is-true);
 	}
 
 	@media (min-width: 1200px) {
-		&:where(:not(& &), .laptop, .desktop) {
-			--is-tablet: var(--is-false);
-			--is-laptop: var(--is-true);
-		}
+		--is-tablet: var(--is-false);
+		--is-laptop: var(--is-true);
 	}
 
 	@media (min-width: 1600px) {
-		&:where(:not(& &), .desktop) {
-			--is-laptop: var(--is-false);
-			--is-desktop: var(--is-true);
-		}
+		--is-laptop: var(--is-false);
+		--is-desktop: var(--is-true);
 	}
+}
 
+/* Persistent Values: */
+:where(.semantic) {
 	/* Media-Query Ranges: */
 	--is-watch-to-phone: var(--is-watch) var(--is-phone);
 	--is-watch-to-tablet: var(--is-watch-to-phone) var(--is-tablet);
