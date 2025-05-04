@@ -26,7 +26,7 @@
 	}
 
 	/* Media-Query Values: */
-	&:not(& &) {
+	&:where(:not(& &), .watch, .phone, .tablet, .laptop, .desktop) {
 		--is-watch: var(--is-true);
 		--is-phone: var(--is-false);
 		--is-tablet: var(--is-false);
@@ -35,28 +35,28 @@
 	}
 
 	@media (min-width: 320px) {
-		&:where(:not(.watch)) {
+		&:where(:not(& &), .phone, .tablet, .laptop, .desktop) {
 			--is-watch: var(--is-false);
 			--is-phone: var(--is-true);
 		}
 	}
 
 	@media (min-width: 768px) {
-		&:where(:not(.watch, .phone)) {
+		&:where(:not(& &), .tablet, .laptop, .desktop) {
 			--is-phone: var(--is-false);
 			--is-tablet: var(--is-true);
 		}
 	}
 
 	@media (min-width: 1200px) {
-		&:where(:not(.watch, .phone, .tablet)) {
+		&:where(:not(& &), .laptop, .desktop) {
 			--is-tablet: var(--is-false);
 			--is-laptop: var(--is-true);
 		}
 	}
 
 	@media (min-width: 1600px) {
-		&:where(:not(.watch, .phone, .tablet, .laptop)) {
+		&:where(:not(& &), .desktop) {
 			--is-laptop: var(--is-false);
 			--is-desktop: var(--is-true);
 		}
