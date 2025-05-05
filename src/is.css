@@ -14,12 +14,12 @@
 		--is-dark: var(--is-true);
 	}
 
-	&:where(.light) {
+	:where(&.light, &.light &)  {
 		--is-light: var(--is-true);
 		--is-dark: var(--is-false);
 	}
 
-	&:where(.dark) {
+	:where(&.dark, &.dark &) {
 		--is-light: var(--is-false);
 		--is-dark: var(--is-true);
 	}
@@ -32,31 +32,23 @@
 	--is-desktop: var(--is-false);
 
 	@media (min-width: 320px) {
-		&:where(:not(.watch)) {
-			--is-watch: var(--is-false);
-			--is-phone: var(--is-true);
-		}
+		--is-watch: var(--is-false);
+		--is-phone: var(--is-true);
 	}
 
 	@media (min-width: 768px) {
-		&:where(:not(.watch, .phone)) {
-			--is-phone: var(--is-false);
-			--is-tablet: var(--is-true);
-		}
+		--is-phone: var(--is-false);
+		--is-tablet: var(--is-true);
 	}
 
 	@media (min-width: 1200px) {
-		&:where(:not(.watch, .phone, .tablet)) {
-			--is-tablet: var(--is-false);
-			--is-laptop: var(--is-true);
-		}
+		--is-tablet: var(--is-false);
+		--is-laptop: var(--is-true);
 	}
 
 	@media (min-width: 1600px) {
-		&:where(:not(.watch, .phone, .tablet, .laptop)) {
-			--is-laptop: var(--is-false);
-			--is-desktop: var(--is-true);
-		}
+		--is-tablet: var(--is-false);
+		--is-desktop: var(--is-true);
 	}
 
 	/* Media-Query Ranges: */
