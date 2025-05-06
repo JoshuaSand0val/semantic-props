@@ -41,14 +41,14 @@
 		}
 	}
 
-	@media (min-width: 768px) {
+	@media (min-width: 640px) {
 		&:where(:not(& &):not(.watch, .phone), .tablet, .laptop, .desktop) {
 			--is-phone: var(--is-false);
 			--is-tablet: var(--is-true);
 		}
 	}
 
-	@media (min-width: 1200px) {
+	@media (min-width: 1280px) {
 		&:where(:not(& &):not(.watch, .phone, .tablet), .laptop, .desktop) {
 			--is-tablet: var(--is-false);
 			--is-laptop: var(--is-true);
