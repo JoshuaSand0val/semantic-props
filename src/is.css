@@ -57,7 +57,7 @@
 
 	@media (min-width: 100rem) {
 		&:where(:not(& &):not(.watch, .phone, .tablet, .laptop), .desktop) {
-			--is-tablet: var(--is-false);
+			--is-laptop: var(--is-false);
 			--is-desktop: var(--is-true);
 		}
 	}
