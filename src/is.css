@@ -6,49 +6,60 @@
 	--is-false: ;
 
 	/* Light/Dark Values: */
-	--is-light: var(--is-true);
-	--is-dark: var(--is-false);
-
-	@media (prefers-color-scheme: dark) {
-		--is-light: var(--is-false);
-		--is-dark: var(--is-true);
+	&:where(:not(& &), .light.dark) {
+		--is-light: var(--is-true);
+		--is-dark: var(--is-false);
+		@media (prefers-color-scheme: dark) {
+			--is-light: var(--is-false);
+			--is-dark: var(--is-true);
+		}
 	}
 
-	:where(&.light, &.light &)  {
+	&:where(.light:not(.dark)) {
 		--is-light: var(--is-true);
 		--is-dark: var(--is-false);
 	}
 
-	:where(&.dark, &.dark &) {
+	&:where(.dark:not(.light)) {
 		--is-light: var(--is-false);
 		--is-dark: var(--is-true);
 	}
 
 	/* Media-Query Values: */
-	--is-watch: var(--is-true);
-	--is-phone: var(--is-false);
-	--is-tablet: var(--is-false);
-	--is-laptop: var(--is-false);
-	--is-desktop: var(--is-false);
+	&:where(:not(& &), .watch, .phone, .tablet, .laptop, .desktop) {
+		--is-watch: var(--is-true);
+		--is-phone: var(--is-false);
+		--is-tablet: var(--is-false);
+		--is-laptop: var(--is-false);
+		--is-desktop: var(--is-false);
+	}
 
 	@media (min-width: 320px) {
-		--is-watch: var(--is-false);
-		--is-phone: var(--is-true);
+		&:where(:not(& &):not(.watch), .phone, .tablet, .laptop, .desktop) {
+			--is-watch: var(--is-false);
+			--is-phone: var(--is-true);
+		}
 	}
 
 	@media (min-width: 768px) {
-		--is-phone: var(--is-false);
-		--is-tablet: var(--is-true);
+		&:where(:not(& &):not(.watch, .phone), .tablet, .laptop, .desktop) {
+			--is-phone: var(--is-false);
+			--is-tablet: var(--is-true);
+		}
 	}
 
 	@media (min-width: 1200px) {
-		--is-tablet: var(--is-false);
-		--is-laptop: var(--is-true);
+		&:where(:not(& &):not(.watch, .phone, .tablet), .laptop, .desktop) {
+			--is-tablet: var(--is-false);
+			--is-laptop: var(--is-true);
+		}
 	}
 
 	@media (min-width: 1600px) {
-		--is-tablet: var(--is-false);
-		--is-desktop: var(--is-true);
+		&:where(:not(& &):not(.watch, .phone, .tablet, .laptop), .desktop) {
+			--is-tablet: var(--is-false);
+			--is-desktop: var(--is-true);
+		}
 	}
 
 	/* Media-Query Ranges: */
