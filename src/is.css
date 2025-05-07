@@ -34,29 +34,29 @@
 		--is-desktop: var(--is-false);
 	}
 
-	@media (min-width: 20rem) {
-		&:where(:not(& &):not(.watch), .phone, .tablet, .laptop, .desktop) {
+	&:where(:not(& &):not(.watch), .phone, .tablet, .laptop, .desktop) {
+		@media (min-width: 20rem) {
 			--is-watch: var(--is-false);
 			--is-phone: var(--is-true);
 		}
 	}
 
-	@media (min-width: 48rem) {
-		&:where(:not(& &):not(.watch, .phone), .tablet, .laptop, .desktop) {
+	&:where(:not(& &):not(.watch, .phone), .tablet, .laptop, .desktop) {
+		@media (min-width: 48rem) {
 			--is-phone: var(--is-false);
 			--is-tablet: var(--is-true);
 		}
 	}
 
-	@media (min-width: 80rem) {
-		&:where(:not(& &):not(.watch, .phone, .tablet), .laptop, .desktop) {
+	&:where(:not(& &):not(.watch, .phone, .tablet), .laptop, .desktop) {
+		@media (min-width: 80rem) {
 			--is-tablet: var(--is-false);
 			--is-laptop: var(--is-true);
 		}
 	}
 
-	@media (min-width: 100rem) {
-		&:where(:not(& &):not(.watch, .phone, .tablet, .laptop), .desktop) {
+	&:where(:not(& &):not(.watch, .phone, .tablet, .laptop), .desktop) {
+		@media (min-width: 100rem) {
 			--is-laptop: var(--is-false);
 			--is-desktop: var(--is-true);
 		}
