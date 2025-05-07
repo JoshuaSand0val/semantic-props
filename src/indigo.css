@@ -3,6 +3,11 @@
 @import "is.css";
 
 :where(.semantic) {
+	--indigo: var(--indigo-6-light) var(--indigo-4-dark);
+	@media (prefers-contrast: more) {
+		--indigo: var(--indigo-7-light) var(--indigo-3-dark);
+	}
+
 	--indigo-1: oklch(0.98 0.2 270);
 	--indigo-2: oklch(0.9 0.2 270);
 	--indigo-3: oklch(0.8 0.2 270);

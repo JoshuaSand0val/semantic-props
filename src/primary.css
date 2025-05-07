@@ -4,6 +4,8 @@
 @import "is.css";
 
 :where(.semantic) {
+	--primary: var(--primary-1-light) var(--primary-9-dark);
+
 	--primary-1: var(--gray-1);
 	--primary-2: var(--gray-2);
 	--primary-3: var(--gray-3);

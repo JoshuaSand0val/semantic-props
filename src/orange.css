@@ -3,6 +3,11 @@
 @import "is.css";
 
 :where(.semantic) {
+	--orange: var(--orange-6-light) var(--orange-4-dark);
+	@media (prefers-contrast: more) {
+		--orange: var(--orange-7-light) var(--orange-3-dark);
+	}
+
 	--orange-1: oklch(0.98 0.15 50);
 	--orange-2: oklch(0.9 0.15 50);
 	--orange-3: oklch(0.8 0.15 50);

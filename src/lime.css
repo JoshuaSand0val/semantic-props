@@ -3,6 +3,11 @@
 @import "is.css";
 
 :where(.semantic) {
+	--lime: var(--lime-6-light) var(--lime-5-dark);
+	@media (prefers-contrast: more) {
+		--lime: var(--lime-7-light) var(--lime-3-dark);
+	}
+
 	--lime-1: oklch(0.98 0.15 120);
 	--lime-2: oklch(0.9 0.15 120);
 	--lime-3: oklch(0.8 0.15 120);

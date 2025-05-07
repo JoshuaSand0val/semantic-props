@@ -3,6 +3,11 @@
 @import "is.css";
 
 :where(.semantic) {
+	--cyan: var(--cyan-6-light) var(--cyan-4-dark);
+	@media (prefers-contrast: more) {
+		--cyan: var(--cyan-7-light) var(--cyan-3-dark);
+	}
+
 	--cyan-1: oklch(0.98 0.15 180);
 	--cyan-2: oklch(0.9 0.15 180);
 	--cyan-3: oklch(0.8 0.15 180);

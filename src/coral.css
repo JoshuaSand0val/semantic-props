@@ -3,6 +3,11 @@
 @import "is.css";
 
 :where(.semantic) {
+	--coral: var(--coral-6-light) var(--coral-4-dark);
+	@media (prefers-contrast: more) {
+		--coral: var(--coral-7-light) var(--coral-3-dark);
+	}
+
 	--coral-1: oklch(0.98 0.2 40);
 	--coral-2: oklch(0.9 0.2 40);
 	--coral-3: oklch(0.8 0.2 40);
