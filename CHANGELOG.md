@@ -15,7 +15,7 @@ A **breaking change** release that greatly improves browser compatibility.
 
 ### Changed
 
-- Changed container query units to viewport units.
+- Changed dynamic size values using `clamp()` function to a fixed value scale.
 - Changed `--scale-` props to use transform property `scale()` function.
 - Changed `-container` props to use `rem` versus `px` units.
 
