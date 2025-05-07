@@ -1,12 +1,33 @@
 /* Semantic Props for CSS transform property scale function. */
 
 :where(.semantic) {
-	--scale-3x-out: scale(0.5);
-	--scale-2x-out: scale(0.75);
-	--scale-x-out: scale(0.9);
-	--scale-out: scale(0.95);
-	--scale-in: scale(1.05);
-	--scale-x-in: scale(1.1);
-	--scale-2x-in: scale(1.25);
-	--scale-3x-in: scale(1.5);
+	/* Scale (X-axis): */
+	--scaleX-3x-out: scaleX(0.5);
+	--scaleX-2x-out: scaleX(0.75);
+	--scaleX-x-out: scaleX(0.9);
+	--scaleX-out: scaleX(0.95);
+	--scaleX-in: scaleX(1.05);
+	--scaleX-x-in: scaleX(1.1);
+	--scaleX-2x-in: scaleX(1.25);
+	--scaleX-3x-in: scaleX(1.5);
+
+	/* Scale (Y-axis): */
+	--scaleY-3x-out: scaleY(0.5);
+	--scaleY-2x-out: scaleY(0.75);
+	--scaleY-x-out: scaleY(0.9);
+	--scaleY-out: scaleY(0.95);
+	--scaleY-in: scaleY(1.05);
+	--scaleY-x-in: scaleY(1.1);
+	--scaleY-2x-in: scaleY(1.25);
+	--scaleY-3x-in: scaleY(1.5);
+
+	/* Scale (X+Y-axis): */
+	--scale-3x-out: var(--scaleX-3x-out) var(--scaleY-3x-out);
+	--scale-2x-out: var(--scaleX-2x-out) var(--scaleY-2x-out);
+	--scale-x-out: var(--scaleX-x-out) var(--scaleY-x-out);
+	--scale-out: var(--scaleX-out) var(--scaleY-out);
+	--scale-in: var(--scaleX-in) var(--scaleY-in);
+	--scale-x-in: var(--scaleX-x-in) var(--scaleY-x-in);
+	--scale-2x-in: var(--scaleX-2x-in) var(--scaleY-2x-in);
+	--scale-3x-in: var(--scaleX-3x-in) var(--scaleY-3x-in);
 }

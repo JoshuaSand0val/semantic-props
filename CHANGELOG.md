@@ -12,6 +12,7 @@ A **breaking change** release that greatly improves browser compatibility.
 - Added `box-shadow` variants of `shadow` props.
 - Added `--is-` color-scheme and media-query boolean props alongside classes. Value is `initial` if true, whitespace if false.
 - Added new color system using weights numbered `1` to `9`.
+- Added new `--scaleX-` and `--scaleY-` props for scaling the X and Y axis.
 
 ### Changed
 
