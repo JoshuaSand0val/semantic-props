@@ -1,0 +1,17 @@
+/* Semantic Props for the complementary color. */
+
+@import "is.css";
+
+:where(.semantic) {
+	--lightest-complement: oklch(0.98 0.01 260);
+	--lighter-complement: oklch(0.9 0.01 260);
+	--light-complement: oklch(0.8 0.01 260);
+
+	--dark-complement: oklch(0.4 0.01 260);
+	--darker-complement: oklch(0.3 0.01 260);
+	--darkest-complement: oklch(0.2 0.01 260);
+
+	--primary-complement: var(--is-light, var(--darkest-complement)) var(--is-dark, var(--lightest-complement));
+	--secondary-complement: var(--is-light, var(--darker-complement)) var(--is-dark, var(--lighter-complement));
+	--tertiary-complement: var(--is-light, var(--dark-complement)) var(--is-dark, var(--light-complement));
+}

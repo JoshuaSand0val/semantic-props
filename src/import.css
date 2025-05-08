@@ -5,6 +5,7 @@
 @import "border.css";
 @import "brightness.css";
 @import "brown.css";
+@import "complement.css";
 @import "container.css";
 @import "contrast.css";
 @import "coral.css";
@@ -32,7 +33,6 @@
 @import "scale.css";
 @import "shadow.css";
 @import "size.css";
-@import "text.css";
 @import "time.css";
 @import "violet.css";
 @import "word.css";
