@@ -11,7 +11,7 @@
 	--darker-lime: oklch(0.45 0.15 120);
 	--darkest-lime: oklch(0.4 0.15 120);
 
-	--primary-lime: var(--is-light, var(--dark-lime)) var(--is-dark, var(--lightest-lime));
+	--primary-lime: var(--is-light, var(--dark-lime)) var(--is-dark, var(--light-lime));
 	--secondary-lime: var(--is-light, var(--darker-lime)) var(--is-dark, var(--lighter-lime));
-	--tertiary-lime: var(--is-light, var(--darkest-lime)) var(--is-dark, var(--light-lime));
+	--tertiary-lime: var(--is-light, var(--darkest-lime)) var(--is-dark, var(--lightest-lime));
 }

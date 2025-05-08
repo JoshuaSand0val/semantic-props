@@ -11,7 +11,7 @@
 	--darker-accent: var(--darker-blue);
 	--darkest-accent: var(--darkest-blue);
 
-	--primary-accent: var(--is-light, var(--dark-accent)) var(--is-dark, var(--lightest-accent));
+	--primary-accent: var(--is-light, var(--dark-accent)) var(--is-dark, var(--light-accent));
 	--secondary-accent: var(--is-light, var(--darker-accent)) var(--is-dark, var(--lighter-accent));
-	--tertiary-accent: var(--is-light, var(--darkest-accent)) var(--is-dark, var(--light-accent));
+	--tertiary-accent: var(--is-light, var(--darkest-accent)) var(--is-dark, var(--lightest-accent));
 }

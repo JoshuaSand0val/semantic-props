@@ -11,7 +11,7 @@
 	--darker-indigo: oklch(0.45 0.2 270);
 	--darkest-indigo: oklch(0.4 0.2 270);
 
-	--primary-indigo: var(--is-light, var(--dark-indigo)) var(--is-dark, var(--lightest-indigo));
+	--primary-indigo: var(--is-light, var(--dark-indigo)) var(--is-dark, var(--light-indigo));
 	--secondary-indigo: var(--is-light, var(--darker-indigo)) var(--is-dark, var(--lighter-indigo));
-	--tertiary-indigo: var(--is-light, var(--darkest-indigo)) var(--is-dark, var(--light-indigo));
+	--tertiary-indigo: var(--is-light, var(--darkest-indigo)) var(--is-dark, var(--lightest-indigo));
 }

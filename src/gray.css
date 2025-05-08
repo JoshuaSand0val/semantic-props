@@ -11,7 +11,7 @@
 	--darker-gray: oklch(0.45 0.01 260);
 	--darkest-gray: oklch(0.4 0.01 260);
 
-	--primary-gray: var(--is-light, var(--dark-gray)) var(--is-dark, var(--lightest-gray));
+	--primary-gray: var(--is-light, var(--dark-gray)) var(--is-dark, var(--light-gray));
 	--secondary-gray: var(--is-light, var(--darker-gray)) var(--is-dark, var(--lighter-gray));
-	--tertiary-gray: var(--is-light, var(--darkest-gray)) var(--is-dark, var(--light-gray));
+	--tertiary-gray: var(--is-light, var(--darkest-gray)) var(--is-dark, var(--lightest-gray));
 }

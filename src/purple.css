@@ -11,7 +11,7 @@
 	--darker-purple: oklch(0.45 0.15 300);
 	--darkest-purple: oklch(0.4 0.15 300);
 
-	--primary-purple: var(--is-light, var(--dark-purple)) var(--is-dark, var(--lightest-purple));
+	--primary-purple: var(--is-light, var(--dark-purple)) var(--is-dark, var(--light-purple));
 	--secondary-purple: var(--is-light, var(--darker-purple)) var(--is-dark, var(--lighter-purple));
-	--tertiary-purple: var(--is-light, var(--darkest-purple)) var(--is-dark, var(--light-purple));
+	--tertiary-purple: var(--is-light, var(--darkest-purple)) var(--is-dark, var(--lightest-purple));
 }

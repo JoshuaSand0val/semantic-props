@@ -11,7 +11,7 @@
 	--darker-magenta: oklch(0.45 0.2 330);
 	--darkest-magenta: oklch(0.4 0.2 330);
 
-	--primary-magenta: var(--is-light, var(--dark-magenta)) var(--is-dark, var(--lightest-magenta));
+	--primary-magenta: var(--is-light, var(--dark-magenta)) var(--is-dark, var(--light-magenta));
 	--secondary-magenta: var(--is-light, var(--darker-magenta)) var(--is-dark, var(--lighter-magenta));
-	--tertiary-magenta: var(--is-light, var(--darkest-magenta)) var(--is-dark, var(--light-magenta));
+	--tertiary-magenta: var(--is-light, var(--darkest-magenta)) var(--is-dark, var(--lightest-magenta));
 }

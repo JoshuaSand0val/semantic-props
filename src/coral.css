@@ -11,7 +11,7 @@
 	--darker-coral: oklch(0.45 0.2 40);
 	--darkest-coral: oklch(0.4 0.2 40);
 
-	--primary-coral: var(--is-light, var(--dark-coral)) var(--is-dark, var(--lightest-coral));
+	--primary-coral: var(--is-light, var(--dark-coral)) var(--is-dark, var(--light-coral));
 	--secondary-coral: var(--is-light, var(--darker-coral)) var(--is-dark, var(--lighter-coral));
-	--tertiary-coral: var(--is-light, var(--darkest-coral)) var(--is-dark, var(--light-coral));
+	--tertiary-coral: var(--is-light, var(--darkest-coral)) var(--is-dark, var(--lightest-coral));
 }

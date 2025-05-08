@@ -11,7 +11,7 @@
 	--darker-cyan: oklch(0.45 0.15 180);
 	--darkest-cyan: oklch(0.4 0.15 180);
 
-	--primary-cyan: var(--is-light, var(--dark-cyan)) var(--is-dark, var(--lightest-cyan));
+	--primary-cyan: var(--is-light, var(--dark-cyan)) var(--is-dark, var(--light-cyan));
 	--secondary-cyan: var(--is-light, var(--darker-cyan)) var(--is-dark, var(--lighter-cyan));
-	--tertiary-cyan: var(--is-light, var(--darkest-cyan)) var(--is-dark, var(--light-cyan));
+	--tertiary-cyan: var(--is-light, var(--darkest-cyan)) var(--is-dark, var(--lightest-cyan));
 }

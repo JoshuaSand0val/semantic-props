@@ -11,7 +11,7 @@
 	--darker-green: oklch(0.45 0.2 150);
 	--darkest-green: oklch(0.4 0.2 150);
 
-	--primary-green: var(--is-light, var(--dark-green)) var(--is-dark, var(--lightest-green));
+	--primary-green: var(--is-light, var(--dark-green)) var(--is-dark, var(--light-green));
 	--secondary-green: var(--is-light, var(--darker-green)) var(--is-dark, var(--lighter-green));
-	--tertiary-green: var(--is-light, var(--darkest-green)) var(--is-dark, var(--light-green));
+	--tertiary-green: var(--is-light, var(--darkest-green)) var(--is-dark, var(--lightest-green));
 }

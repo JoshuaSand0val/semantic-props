@@ -11,7 +11,7 @@
 	--darker-violet: oklch(0.45 0.15 290);
 	--darkest-violet: oklch(0.4 0.15 290);
 
-	--primary-violet: var(--is-light, var(--dark-violet)) var(--is-dark, var(--lightest-violet));
+	--primary-violet: var(--is-light, var(--dark-violet)) var(--is-dark, var(--light-violet));
 	--secondary-violet: var(--is-light, var(--darker-violet)) var(--is-dark, var(--lighter-violet));
-	--tertiary-violet: var(--is-light, var(--darkest-violet)) var(--is-dark, var(--light-violet));
+	--tertiary-violet: var(--is-light, var(--darkest-violet)) var(--is-dark, var(--lightest-violet));
 }

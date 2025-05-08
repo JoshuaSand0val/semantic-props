@@ -11,7 +11,7 @@
 	--darker-yellow: oklch(0.45 0.15 90);
 	--darkest-yellow: oklch(0.4 0.15 90);
 
-	--primary-yellow: var(--is-light, var(--dark-yellow)) var(--is-dark, var(--lightest-yellow));
+	--primary-yellow: var(--is-light, var(--dark-yellow)) var(--is-dark, var(--light-yellow));
 	--secondary-yellow: var(--is-light, var(--darker-yellow)) var(--is-dark, var(--lighter-yellow));
-	--tertiary-yellow: var(--is-light, var(--darkest-yellow)) var(--is-dark, var(--light-yellow));
+	--tertiary-yellow: var(--is-light, var(--darkest-yellow)) var(--is-dark, var(--lightest-yellow));
 }

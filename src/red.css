@@ -11,7 +11,7 @@
 	--darker-red: oklch(0.45 0.2 30);
 	--darkest-red: oklch(0.4 0.2 30);
 
-	--primary-red: var(--is-light, var(--dark-red)) var(--is-dark, var(--lightest-red));
+	--primary-red: var(--is-light, var(--dark-red)) var(--is-dark, var(--light-red));
 	--secondary-red: var(--is-light, var(--darker-red)) var(--is-dark, var(--lighter-red));
-	--tertiary-red: var(--is-light, var(--darkest-red)) var(--is-dark, var(--light-red));
+	--tertiary-red: var(--is-light, var(--darkest-red)) var(--is-dark, var(--lightest-red));
 }

@@ -11,7 +11,7 @@
 	--darker-blue: oklch(0.45 0.15 240);
 	--darkest-blue: oklch(0.4 0.15 240);
 
-	--primary-blue: var(--is-light, var(--dark-blue)) var(--is-dark, var(--lightest-blue));
+	--primary-blue: var(--is-light, var(--dark-blue)) var(--is-dark, var(--light-blue));
 	--secondary-blue: var(--is-light, var(--darker-blue)) var(--is-dark, var(--lighter-blue));
-	--tertiary-blue: var(--is-light, var(--darkest-blue)) var(--is-dark, var(--light-blue));
+	--tertiary-blue: var(--is-light, var(--darkest-blue)) var(--is-dark, var(--lightest-blue));
 }

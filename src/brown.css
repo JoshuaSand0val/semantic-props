@@ -11,7 +11,7 @@
 	--darker-brown: oklch(0.45 0.05 50);
 	--darkest-brown: oklch(0.4 0.05 50);
 
-	--primary-brown: var(--is-light, var(--dark-brown)) var(--is-dark, var(--lightest-brown));
+	--primary-brown: var(--is-light, var(--dark-brown)) var(--is-dark, var(--light-brown));
 	--secondary-brown: var(--is-light, var(--darker-brown)) var(--is-dark, var(--lighter-brown));
-	--tertiary-brown: var(--is-light, var(--darkest-brown)) var(--is-dark, var(--light-brown));
+	--tertiary-brown: var(--is-light, var(--darkest-brown)) var(--is-dark, var(--lightest-brown));
 }
