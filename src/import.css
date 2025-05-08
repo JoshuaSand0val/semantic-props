@@ -3,7 +3,6 @@
 @import "black.css";
 @import "blue.css";
 @import "blur.css";
-@import "body.css";
 @import "border.css";
 @import "brightness.css";
 @import "brown.css";
@@ -21,6 +20,7 @@
 @import "lime.css";
 @import "line.css";
 @import "magenta.css";
+@import "neutral.css";
 @import "opacity.css";
 @import "orange.css";
 @import "pink.css";

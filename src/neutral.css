@@ -1,0 +1,17 @@
+/* Semantic Props for the neutral color. */
+
+@import "is.css";
+
+:where(.semantic) {
+	--lightest-neutral: oklch(0.98 0.01 260);
+	--lighter-neutral: oklch(0.9 0.01 260);
+	--light-neutral: oklch(0.8 0.01 260);
+
+	--dark-neutral: oklch(0.4 0.01 260);
+	--darker-neutral: oklch(0.3 0.01 260);
+	--darkest-neutral: oklch(0.2 0.01 260);
+
+	--primary-neutral: var(--is-light, var(--lightest-neutral)) var(--is-dark, var(--darkest-neutral));
+	--secondary-neutral: var(--is-light, var(--lighter-neutral)) var(--is-dark, var(--darker-neutral));
+	--tertiary-neutral: var(--is-light, var(--light-neutral)) var(--is-dark, var(--dark-neutral));
+}
