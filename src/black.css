@@ -1,7 +1,0 @@
-/* Semantic Props for the color black. */
-
-:where(.semantic) {
-	--primary-black: oklch(0.2 0.01 260);
-	--secondary-black: oklch(0.3 0.01 260);
-	--tertiary-black: oklch(0.4 0.01 260);
-}

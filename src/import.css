@@ -1,6 +1,5 @@
 /* Import: All CSS files imported. */
 @import "accent.css";
-@import "black.css";
 @import "blue.css";
 @import "blur.css";
 @import "border.css";
@@ -36,7 +35,6 @@
 @import "text.css";
 @import "time.css";
 @import "violet.css";
-@import "white.css";
 @import "word.css";
 @import "yellow.css";
 @import "z.css";
