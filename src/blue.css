@@ -4,9 +4,6 @@
 
 :where(.semantic) {
 	--blue-1: var(--is-light, oklch(0.5 0.15 240)) var(--is-dark, oklch(0.7 0.15 240));
-	--blue-2: var(--is-light, oklch(0.4 0.15 240)) var(--is-dark, oklch(0.8 0.15 240));
-	--blue-3: var(--is-light, oklch(0.3 0.15 240)) var(--is-dark, oklch(0.9 0.15 240));
-	@media (prefers-contrast: more) {
-		--blue-1: var(--is-light, oklch(0.45 0.15 240)) var(--is-dark, oklch(0.75 0.15 240));
-	}
+	--blue-2: var(--is-light, oklch(0.45 0.15 240)) var(--is-dark, oklch(0.75 0.15 240));
+	--blue-3: var(--is-light, oklch(0.4 0.15 240)) var(--is-dark, oklch(0.8 0.15 240));
 }
