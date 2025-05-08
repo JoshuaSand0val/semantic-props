@@ -14,6 +14,7 @@ A **breaking change** release that greatly improves browser compatibility.
 - Added new color system using weights numbered `1` to `3`.
 - Added new `--scaleX-` and `--scaleY-` props for scaling the X and Y axis.
 - Added new `-radius` props for applying `border-radius`.
+- Added `--white` and `--black` color props.
 
 ### Changed
 
