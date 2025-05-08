@@ -3,6 +3,7 @@
 @import "black.css";
 @import "blue.css";
 @import "blur.css";
+@import "body.css";
 @import "border.css";
 @import "brightness.css";
 @import "brown.css";
@@ -23,7 +24,6 @@
 @import "opacity.css";
 @import "orange.css";
 @import "pink.css";
-@import "primary.css";
 @import "purple.css";
 @import "radius.css";
 @import "ratio.css";
@@ -31,9 +31,9 @@
 @import "safe.css";
 @import "saturation.css";
 @import "scale.css";
-@import "secondary.css";
 @import "shadow.css";
 @import "size.css";
+@import "text.css";
 @import "time.css";
 @import "violet.css";
 @import "white.css";

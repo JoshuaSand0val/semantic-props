@@ -11,10 +11,9 @@ A **breaking change** release that greatly improves browser compatibility.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added `box-shadow` variants of `shadow` props.
 - Added `--is-` color-scheme and media-query boolean props alongside classes. Value is `initial` if true, whitespace if false.
-- Added new color system using weights numbered `1` to `3`.
+- Added new color system using light and dark color-scheme values.
 - Added new `--scaleX-` and `--scaleY-` props for scaling the X and Y axis.
 - Added new `-radius` props for applying `border-radius`.
-- Added `--white` and `--black` color props.
 
 ### Changed
 

@@ -3,7 +3,15 @@
 @import "is.css";
 
 :where(.semantic) {
-	--orange-1: var(--is-light, oklch(0.5 0.15 50)) var(--is-dark, oklch(0.7 0.15 50));
-	--orange-2: var(--is-light, oklch(0.45 0.15 50)) var(--is-dark, oklch(0.75 0.15 50));
-	--orange-3: var(--is-light, oklch(0.4 0.15 50)) var(--is-dark, oklch(0.8 0.15 50));
+	--lightest-orange: oklch(0.8 0.15 50);
+	--lighter-orange: oklch(0.75 0.15 50);
+	--light-orange: oklch(0.7 0.15 50);
+
+	--dark-orange: oklch(0.5 0.15 50);
+	--darker-orange: oklch(0.45 0.15 50);
+	--darkest-orange: oklch(0.4 0.15 50);
+
+	--primary-orange: var(--is-light, var(--dark-orange)) var(--is-dark, var(--lightest-orange));
+	--secondary-orange: var(--is-light, var(--darker-orange)) var(--is-dark, var(--lighter-orange));
+	--tertiary-orange: var(--is-light, var(--darkest-orange)) var(--is-dark, var(--light-orange));
 }

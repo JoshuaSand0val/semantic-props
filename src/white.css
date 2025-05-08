@@ -1,7 +1,7 @@
 /* Semantic Props for the color white. */
 
 :where(.semantic) {
-	--white-1: oklch(0.98 0.01 260);
-	--white-2: oklch(0.9 0.01 260);
-	--white-3: oklch(0.8 0.01 260);
+	--primary-white: oklch(0.98 0.01 260);
+	--secondary-white: oklch(0.9 0.01 260);
+	--tertiary-white: oklch(0.8 0.01 260);
 }

@@ -3,7 +3,15 @@
 @import "is.css";
 
 :where(.semantic) {
-	--gray-1: var(--is-light, oklch(0.5 0.01 260)) var(--is-dark, oklch(0.7 0.01 260));
-	--gray-2: var(--is-light, oklch(0.45 0.01 260)) var(--is-dark, oklch(0.75 0.01 260));
-	--gray-3: var(--is-light, oklch(0.4 0.01 260)) var(--is-dark, oklch(0.8 0.01 260));
+	--lightest-gray: oklch(0.8 0.01 260);
+	--lighter-gray: oklch(0.75 0.01 260);
+	--light-gray: oklch(0.7 0.01 260);
+
+	--dark-gray: oklch(0.5 0.01 260);
+	--darker-gray: oklch(0.45 0.01 260);
+	--darkest-gray: oklch(0.4 0.01 260);
+
+	--primary-gray: var(--is-light, var(--dark-gray)) var(--is-dark, var(--lightest-gray));
+	--secondary-gray: var(--is-light, var(--darker-gray)) var(--is-dark, var(--lighter-gray));
+	--tertiary-gray: var(--is-light, var(--darkest-gray)) var(--is-dark, var(--light-gray));
 }

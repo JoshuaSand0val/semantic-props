@@ -1,7 +1,5 @@
 /* Semantic Props for CSS border properties. */
 
-@import "primary.css";
-
 :where(.semantic) {
 	--border-style: solid;
 	--border-collapse: separate;

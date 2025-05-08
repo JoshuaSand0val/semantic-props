@@ -3,7 +3,15 @@
 @import "is.css";
 
 :where(.semantic) {
-	--purple-1: var(--is-light, oklch(0.5 0.15 300)) var(--is-dark, oklch(0.7 0.15 300));
-	--purple-2: var(--is-light, oklch(0.45 0.15 300)) var(--is-dark, oklch(0.75 0.15 300));
-	--purple-3: var(--is-light, oklch(0.4 0.15 300)) var(--is-dark, oklch(0.8 0.15 300));
+	--lightest-purple: oklch(0.8 0.15 300);
+	--lighter-purple: oklch(0.75 0.15 300);
+	--light-purple: oklch(0.7 0.15 300);
+
+	--dark-purple: oklch(0.5 0.15 300);
+	--darker-purple: oklch(0.45 0.15 300);
+	--darkest-purple: oklch(0.4 0.15 300);
+
+	--primary-purple: var(--is-light, var(--dark-purple)) var(--is-dark, var(--lightest-purple));
+	--secondary-purple: var(--is-light, var(--darker-purple)) var(--is-dark, var(--lighter-purple));
+	--tertiary-purple: var(--is-light, var(--darkest-purple)) var(--is-dark, var(--light-purple));
 }

@@ -3,7 +3,15 @@
 @import "is.css";
 
 :where(.semantic) {
-	--indigo-1: var(--is-light, oklch(0.5 0.2 270)) var(--is-dark, oklch(0.7 0.2 270));
-	--indigo-2: var(--is-light, oklch(0.45 0.2 270)) var(--is-dark, oklch(0.75 0.2 270));
-	--indigo-3: var(--is-light, oklch(0.4 0.2 270)) var(--is-dark, oklch(0.8 0.2 270));
+	--lightest-indigo: oklch(0.8 0.2 270);
+	--lighter-indigo: oklch(0.75 0.2 270);
+	--light-indigo: oklch(0.7 0.2 270);
+
+	--dark-indigo: oklch(0.5 0.2 270);
+	--darker-indigo: oklch(0.45 0.2 270);
+	--darkest-indigo: oklch(0.4 0.2 270);
+
+	--primary-indigo: var(--is-light, var(--dark-indigo)) var(--is-dark, var(--lightest-indigo));
+	--secondary-indigo: var(--is-light, var(--darker-indigo)) var(--is-dark, var(--lighter-indigo));
+	--tertiary-indigo: var(--is-light, var(--darkest-indigo)) var(--is-dark, var(--light-indigo));
 }

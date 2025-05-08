@@ -3,7 +3,15 @@
 @import "is.css";
 
 :where(.semantic) {
-	--brown-1: var(--is-light, oklch(0.5 0.05 50)) var(--is-dark, oklch(0.7 0.05 50));
-	--brown-2: var(--is-light, oklch(0.45 0.05 50)) var(--is-dark, oklch(0.75 0.05 50));
-	--brown-3: var(--is-light, oklch(0.4 0.05 50)) var(--is-dark, oklch(0.8 0.05 50));
+	--lightest-brown: oklch(0.8 0.05 50);
+	--lighter-brown: oklch(0.75 0.05 50);
+	--light-brown: oklch(0.7 0.05 50);
+
+	--dark-brown: oklch(0.5 0.05 50);
+	--darker-brown: oklch(0.45 0.05 50);
+	--darkest-brown: oklch(0.4 0.05 50);
+
+	--primary-brown: var(--is-light, var(--dark-brown)) var(--is-dark, var(--lightest-brown));
+	--secondary-brown: var(--is-light, var(--darker-brown)) var(--is-dark, var(--lighter-brown));
+	--tertiary-brown: var(--is-light, var(--darkest-brown)) var(--is-dark, var(--light-brown));
 }
