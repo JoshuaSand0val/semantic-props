@@ -3,38 +3,10 @@
 @import "is.css";
 
 :where(.semantic) {
-	--purple: var(--purple-6-light) var(--purple-4-dark);
+	--purple-1: var(--is-light, oklch(0.5 0.15 300)) var(--is-dark, oklch(0.7 0.15 300));
+	--purple-2: var(--is-light, oklch(0.4 0.15 300)) var(--is-dark, oklch(0.8 0.15 300));
+	--purple-3: var(--is-light, oklch(0.3 0.15 300)) var(--is-dark, oklch(0.9 0.15 300));
 	@media (prefers-contrast: more) {
-		--purple: var(--purple-7-light) var(--purple-3-dark);
+		--purple-1: var(--is-light, oklch(0.45 0.15 300)) var(--is-dark, oklch(0.75 0.15 300));
 	}
-
-	--purple-1: oklch(0.98 0.15 300);
-	--purple-2: oklch(0.9 0.15 300);
-	--purple-3: oklch(0.8 0.15 300);
-	--purple-4: oklch(0.7 0.15 300);
-	--purple-5: oklch(0.6 0.15 300);
-	--purple-6: oklch(0.5 0.15 300);
-	--purple-7: oklch(0.4 0.15 300);
-	--purple-8: oklch(0.3 0.15 300);
-	--purple-9: oklch(0.2 0.15 300);
-
-	--purple-1-light: var(--is-light, var(--purple-1));
-	--purple-2-light: var(--is-light, var(--purple-2));
-	--purple-3-light: var(--is-light, var(--purple-3));
-	--purple-4-light: var(--is-light, var(--purple-4));
-	--purple-5-light: var(--is-light, var(--purple-5));
-	--purple-6-light: var(--is-light, var(--purple-6));
-	--purple-7-light: var(--is-light, var(--purple-7));
-	--purple-8-light: var(--is-light, var(--purple-8));
-	--purple-9-light: var(--is-light, var(--purple-9));
-
-	--purple-1-dark: var(--is-dark, var(--purple-1));
-	--purple-2-dark: var(--is-dark, var(--purple-2));
-	--purple-3-dark: var(--is-dark, var(--purple-3));
-	--purple-4-dark: var(--is-dark, var(--purple-4));
-	--purple-5-dark: var(--is-dark, var(--purple-5));
-	--purple-6-dark: var(--is-dark, var(--purple-6));
-	--purple-7-dark: var(--is-dark, var(--purple-7));
-	--purple-8-dark: var(--is-dark, var(--purple-8));
-	--purple-9-dark: var(--is-dark, var(--purple-9));
 }

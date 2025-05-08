@@ -3,38 +3,10 @@
 @import "is.css";
 
 :where(.semantic) {
-	--pink: var(--pink-6-light) var(--pink-4-dark);
+	--pink-1: var(--is-light, oklch(0.5 0.1 10)) var(--is-dark, oklch(0.7 0.1 10));
+	--pink-2: var(--is-light, oklch(0.4 0.1 10)) var(--is-dark, oklch(0.8 0.1 10));
+	--pink-3: var(--is-light, oklch(0.3 0.1 10)) var(--is-dark, oklch(0.9 0.1 10));
 	@media (prefers-contrast: more) {
-		--pink: var(--pink-7-light) var(--pink-3-dark);
+		--pink-1: var(--is-light, oklch(0.45 0.1 10)) var(--is-dark, oklch(0.75 0.1 10));
 	}
-
-	--pink-1: oklch(0.98 0.1 10);
-	--pink-2: oklch(0.9 0.1 10);
-	--pink-3: oklch(0.8 0.1 10);
-	--pink-4: oklch(0.7 0.1 10);
-	--pink-5: oklch(0.6 0.1 10);
-	--pink-6: oklch(0.5 0.1 10);
-	--pink-7: oklch(0.4 0.1 10);
-	--pink-8: oklch(0.3 0.1 10);
-	--pink-9: oklch(0.2 0.1 10);
-
-	--pink-1-light: var(--is-light, var(--pink-1));
-	--pink-2-light: var(--is-light, var(--pink-2));
-	--pink-3-light: var(--is-light, var(--pink-3));
-	--pink-4-light: var(--is-light, var(--pink-4));
-	--pink-5-light: var(--is-light, var(--pink-5));
-	--pink-6-light: var(--is-light, var(--pink-6));
-	--pink-7-light: var(--is-light, var(--pink-7));
-	--pink-8-light: var(--is-light, var(--pink-8));
-	--pink-9-light: var(--is-light, var(--pink-9));
-
-	--pink-1-dark: var(--is-dark, var(--pink-1));
-	--pink-2-dark: var(--is-dark, var(--pink-2));
-	--pink-3-dark: var(--is-dark, var(--pink-3));
-	--pink-4-dark: var(--is-dark, var(--pink-4));
-	--pink-5-dark: var(--is-dark, var(--pink-5));
-	--pink-6-dark: var(--is-dark, var(--pink-6));
-	--pink-7-dark: var(--is-dark, var(--pink-7));
-	--pink-8-dark: var(--is-dark, var(--pink-8));
-	--pink-9-dark: var(--is-dark, var(--pink-9));
 }

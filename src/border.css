@@ -6,8 +6,4 @@
 	--border-style: solid;
 	--border-collapse: separate;
 	--border-spacing: 0;
-	--border-color: var(--primary-4-light) var(--primary-6-dark);
-	@media (prefers-contrast: more) {
-		--border-color: var(--primary-6-light) var(--primary-4-dark);
-	}
 }

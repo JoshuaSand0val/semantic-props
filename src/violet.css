@@ -3,38 +3,10 @@
 @import "is.css";
 
 :where(.semantic) {
-	--violet: var(--violet-6-light) var(--violet-4-dark);
+	--violet-1: var(--is-light, oklch(0.5 0.15 290)) var(--is-dark, oklch(0.7 0.15 290));
+	--violet-2: var(--is-light, oklch(0.4 0.15 290)) var(--is-dark, oklch(0.8 0.15 290));
+	--violet-3: var(--is-light, oklch(0.3 0.15 290)) var(--is-dark, oklch(0.9 0.15 290));
 	@media (prefers-contrast: more) {
-		--violet: var(--violet-7-light) var(--violet-3-dark);
+		--violet-1: var(--is-light, oklch(0.45 0.15 290)) var(--is-dark, oklch(0.75 0.15 290));
 	}
-
-	--violet-1: oklch(0.98 0.15 290);
-	--violet-2: oklch(0.9 0.15 290);
-	--violet-3: oklch(0.8 0.15 290);
-	--violet-4: oklch(0.7 0.15 290);
-	--violet-5: oklch(0.6 0.15 290);
-	--violet-6: oklch(0.5 0.15 290);
-	--violet-7: oklch(0.4 0.15 290);
-	--violet-8: oklch(0.3 0.15 290);
-	--violet-9: oklch(0.2 0.15 290);
-
-	--violet-1-light: var(--is-light, var(--violet-1));
-	--violet-2-light: var(--is-light, var(--violet-2));
-	--violet-3-light: var(--is-light, var(--violet-3));
-	--violet-4-light: var(--is-light, var(--violet-4));
-	--violet-5-light: var(--is-light, var(--violet-5));
-	--violet-6-light: var(--is-light, var(--violet-6));
-	--violet-7-light: var(--is-light, var(--violet-7));
-	--violet-8-light: var(--is-light, var(--violet-8));
-	--violet-9-light: var(--is-light, var(--violet-9));
-
-	--violet-1-dark: var(--is-dark, var(--violet-1));
-	--violet-2-dark: var(--is-dark, var(--violet-2));
-	--violet-3-dark: var(--is-dark, var(--violet-3));
-	--violet-4-dark: var(--is-dark, var(--violet-4));
-	--violet-5-dark: var(--is-dark, var(--violet-5));
-	--violet-6-dark: var(--is-dark, var(--violet-6));
-	--violet-7-dark: var(--is-dark, var(--violet-7));
-	--violet-8-dark: var(--is-dark, var(--violet-8));
-	--violet-9-dark: var(--is-dark, var(--violet-9));
 }

@@ -1,38 +1,9 @@
 /* Semantic Props for the primary color. */
 
-@import "gray.css";
 @import "is.css";
 
 :where(.semantic) {
-	--primary: var(--primary-1-light) var(--primary-9-dark);
-
-	--primary-1: var(--gray-1);
-	--primary-2: var(--gray-2);
-	--primary-3: var(--gray-3);
-	--primary-4: var(--gray-4);
-	--primary-5: var(--gray-5);
-	--primary-6: var(--gray-6);
-	--primary-7: var(--gray-7);
-	--primary-8: var(--gray-8);
-	--primary-9: var(--gray-9);
-
-	--primary-1-light: var(--is-light, var(--primary-1));
-	--primary-2-light: var(--is-light, var(--primary-2));
-	--primary-3-light: var(--is-light, var(--primary-3));
-	--primary-4-light: var(--is-light, var(--primary-4));
-	--primary-5-light: var(--is-light, var(--primary-5));
-	--primary-6-light: var(--is-light, var(--primary-6));
-	--primary-7-light: var(--is-light, var(--primary-7));
-	--primary-8-light: var(--is-light, var(--primary-8));
-	--primary-9-light: var(--is-light, var(--primary-9));
-
-	--primary-1-dark: var(--is-dark, var(--primary-1));
-	--primary-2-dark: var(--is-dark, var(--primary-2));
-	--primary-3-dark: var(--is-dark, var(--primary-3));
-	--primary-4-dark: var(--is-dark, var(--primary-4));
-	--primary-5-dark: var(--is-dark, var(--primary-5));
-	--primary-6-dark: var(--is-dark, var(--primary-6));
-	--primary-7-dark: var(--is-dark, var(--primary-7));
-	--primary-8-dark: var(--is-dark, var(--primary-8));
-	--primary-9-dark: var(--is-dark, var(--primary-9));
+	--primary-1: var(--is-light, oklch(0.98 0.01 260)) var(--is-dark, oklch(0.2 0.01 260));
+	--primary-2: var(--is-light, oklch(0.9 0.01 260)) var(--is-dark, oklch(0.3 0.01 260));
+	--primary-3: var(--is-light, oklch(0.8 0.01 260)) var(--is-dark, oklch(0.4 0.01 260));
 }

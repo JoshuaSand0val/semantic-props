@@ -3,38 +3,10 @@
 @import "is.css";
 
 :where(.semantic) {
-	--green: var(--green-6-light) var(--green-5-dark);
+	--green-1: var(--is-light, oklch(0.5 0.2 150)) var(--is-dark, oklch(0.7 0.2 150));
+	--green-2: var(--is-light, oklch(0.4 0.2 150)) var(--is-dark, oklch(0.8 0.2 150));
+	--green-3: var(--is-light, oklch(0.3 0.2 150)) var(--is-dark, oklch(0.9 0.2 150));
 	@media (prefers-contrast: more) {
-		--green: var(--green-7-light) var(--green-4-dark);
+		--green-1: var(--is-light, oklch(0.45 0.2 150)) var(--is-dark, oklch(0.75 0.2 150));
 	}
-
-	--green-1: oklch(0.98 0.2 150);
-	--green-2: oklch(0.9 0.2 150);
-	--green-3: oklch(0.8 0.2 150);
-	--green-4: oklch(0.7 0.2 150);
-	--green-5: oklch(0.6 0.2 150);
-	--green-6: oklch(0.5 0.2 150);
-	--green-7: oklch(0.4 0.2 150);
-	--green-8: oklch(0.3 0.2 150);
-	--green-9: oklch(0.2 0.2 150);
-
-	--green-1-light: var(--is-light, var(--green-1));
-	--green-2-light: var(--is-light, var(--green-2));
-	--green-3-light: var(--is-light, var(--green-3));
-	--green-4-light: var(--is-light, var(--green-4));
-	--green-5-light: var(--is-light, var(--green-5));
-	--green-6-light: var(--is-light, var(--green-6));
-	--green-7-light: var(--is-light, var(--green-7));
-	--green-8-light: var(--is-light, var(--green-8));
-	--green-9-light: var(--is-light, var(--green-9));
-
-	--green-1-dark: var(--is-dark, var(--green-1));
-	--green-2-dark: var(--is-dark, var(--green-2));
-	--green-3-dark: var(--is-dark, var(--green-3));
-	--green-4-dark: var(--is-dark, var(--green-4));
-	--green-5-dark: var(--is-dark, var(--green-5));
-	--green-6-dark: var(--is-dark, var(--green-6));
-	--green-7-dark: var(--is-dark, var(--green-7));
-	--green-8-dark: var(--is-dark, var(--green-8));
-	--green-9-dark: var(--is-dark, var(--green-9));
 }

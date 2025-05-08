@@ -3,38 +3,10 @@
 @import "is.css";
 
 :where(.semantic) {
-	--yellow: var(--yellow-6-light) var(--yellow-4-dark);
+	--yellow-1: var(--is-light, oklch(0.5 0.15 90)) var(--is-dark, oklch(0.7 0.15 90));
+	--yellow-2: var(--is-light, oklch(0.4 0.15 90)) var(--is-dark, oklch(0.8 0.15 90));
+	--yellow-3: var(--is-light, oklch(0.3 0.15 90)) var(--is-dark, oklch(0.9 0.15 90));
 	@media (prefers-contrast: more) {
-		--yellow: var(--yellow-7-light) var(--yellow-3-dark);
+		--yellow-1: var(--is-light, oklch(0.45 0.15 90)) var(--is-dark, oklch(0.75 0.15 90));
 	}
-
-	--yellow-1: oklch(0.98 0.15 90);
-	--yellow-2: oklch(0.9 0.15 90);
-	--yellow-3: oklch(0.8 0.15 90);
-	--yellow-4: oklch(0.7 0.15 90);
-	--yellow-5: oklch(0.6 0.15 90);
-	--yellow-6: oklch(0.5 0.15 90);
-	--yellow-7: oklch(0.4 0.15 90);
-	--yellow-8: oklch(0.3 0.15 90);
-	--yellow-9: oklch(0.2 0.15 90);
-
-	--yellow-1-light: var(--is-light, var(--yellow-1));
-	--yellow-2-light: var(--is-light, var(--yellow-2));
-	--yellow-3-light: var(--is-light, var(--yellow-3));
-	--yellow-4-light: var(--is-light, var(--yellow-4));
-	--yellow-5-light: var(--is-light, var(--yellow-5));
-	--yellow-6-light: var(--is-light, var(--yellow-6));
-	--yellow-7-light: var(--is-light, var(--yellow-7));
-	--yellow-8-light: var(--is-light, var(--yellow-8));
-	--yellow-9-light: var(--is-light, var(--yellow-9));
-
-	--yellow-1-dark: var(--is-dark, var(--yellow-1));
-	--yellow-2-dark: var(--is-dark, var(--yellow-2));
-	--yellow-3-dark: var(--is-dark, var(--yellow-3));
-	--yellow-4-dark: var(--is-dark, var(--yellow-4));
-	--yellow-5-dark: var(--is-dark, var(--yellow-5));
-	--yellow-6-dark: var(--is-dark, var(--yellow-6));
-	--yellow-7-dark: var(--is-dark, var(--yellow-7));
-	--yellow-8-dark: var(--is-dark, var(--yellow-8));
-	--yellow-9-dark: var(--is-dark, var(--yellow-9));
 }

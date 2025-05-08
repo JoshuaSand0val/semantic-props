@@ -1,38 +1,9 @@
 /* Semantic Props for the secondary color. */
 
-@import "gray.css";
 @import "is.css";
 
 :where(.semantic) {
-	--secondary: var(--secondary-8-light) var(--secondary-2-dark);
-
-	--secondary-1: var(--gray-1);
-	--secondary-2: var(--gray-2);
-	--secondary-3: var(--gray-3);
-	--secondary-4: var(--gray-4);
-	--secondary-5: var(--gray-5);
-	--secondary-6: var(--gray-6);
-	--secondary-7: var(--gray-7);
-	--secondary-8: var(--gray-8);
-	--secondary-9: var(--gray-9);
-
-	--secondary-1-light: var(--is-light, var(--secondary-1));
-	--secondary-2-light: var(--is-light, var(--secondary-2));
-	--secondary-3-light: var(--is-light, var(--secondary-3));
-	--secondary-4-light: var(--is-light, var(--secondary-4));
-	--secondary-5-light: var(--is-light, var(--secondary-5));
-	--secondary-6-light: var(--is-light, var(--secondary-6));
-	--secondary-7-light: var(--is-light, var(--secondary-7));
-	--secondary-8-light: var(--is-light, var(--secondary-8));
-	--secondary-9-light: var(--is-light, var(--secondary-9));
-
-	--secondary-1-dark: var(--is-dark, var(--secondary-1));
-	--secondary-2-dark: var(--is-dark, var(--secondary-2));
-	--secondary-3-dark: var(--is-dark, var(--secondary-3));
-	--secondary-4-dark: var(--is-dark, var(--secondary-4));
-	--secondary-5-dark: var(--is-dark, var(--secondary-5));
-	--secondary-6-dark: var(--is-dark, var(--secondary-6));
-	--secondary-7-dark: var(--is-dark, var(--secondary-7));
-	--secondary-8-dark: var(--is-dark, var(--secondary-8));
-	--secondary-9-dark: var(--is-dark, var(--secondary-9));
+	--secondary-1: var(--is-light, oklch(0.2 0.01 260)) var(--is-dark, oklch(0.9 0.01 260));
+	--secondary-2: var(--is-light, oklch(0.3 0.01 260)) var(--is-dark, oklch(0.8 0.01 260));
+	--secondary-3: var(--is-light, oklch(0.4 0.01 260)) var(--is-dark, oklch(0.7 0.01 260));
 }
