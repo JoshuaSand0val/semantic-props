@@ -11,7 +11,7 @@
 	--darker-neutral: oklch(0.3 0.01 260);
 	--darkest-neutral: oklch(0.2 0.01 260);
 
-	--primary-neutral: var(--is-light, var(--lightest-neutral)) var(--is-dark, var(--darkest-neutral));
-	--secondary-neutral: var(--is-light, var(--lighter-neutral)) var(--is-dark, var(--darker-neutral));
-	--tertiary-neutral: var(--is-light, var(--light-neutral)) var(--is-dark, var(--dark-neutral));
+	--primary-neutral: var(--is-light, var(--darkest-neutral)) var(--is-dark, var(--lightest-neutral));
+	--secondary-neutral: var(--is-light, var(--darker-neutral)) var(--is-dark, var(--lighter-neutral));
+	--tertiary-neutral: var(--is-light, var(--dark-neutral)) var(--is-dark, var(--light-neutral));
 }

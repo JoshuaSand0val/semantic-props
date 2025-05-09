@@ -1,0 +1,18 @@
+/* Semantic Props for the (dominant) background color. */
+
+@import "is.css";
+@import "neutral.css";
+
+:where(.semantic) {
+	--lightest-background: var(--lightest-neutral);
+	--lighter-background: var(--lighter-neutral);
+	--light-background: var(--light-neutral);
+
+	--dark-background: var(--dark-neutral);
+	--darker-background: var(--darker-neutral);
+	--darkest-background: var(--darkest-neutral);
+
+	--primary-background: var(--is-light, var(--lightest-background)) var(--is-dark, var(--darkest-background));
+	--secondary-background: var(--is-light, var(--lighter-background)) var(--is-dark, var(--darker-background));
+	--tertiary-background: var(--is-light, var(--light-background)) var(--is-dark, var(--dark-background));
+}
