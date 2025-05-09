@@ -1,12 +1,13 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
 
-	interface props {
+	let { children, level }: {
 		children: Snippet,
-		level: "title" | "subtitle" | "heading" | "subheading" | "section" | "subsection"
-	}
-
-	let { children, level }: props = $props();
+		level:
+			"title" | "subtitle" |
+			"heading" | "subheading" |
+			"section" | "subsection"
+	} = $props();
 </script>
 
 {#if level === "title"}
