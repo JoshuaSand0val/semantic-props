@@ -3,13 +3,13 @@
 @import "is.css";
 
 :where(.semantic) {
-	--lightest-pink: oklch(0.8 0.1 10);
-	--lighter-pink: oklch(0.75 0.1 10);
+	--lightest-pink: oklch(0.9 0.1 10);
+	--lighter-pink: oklch(0.8 0.1 10);
 	--light-pink: oklch(0.7 0.1 10);
 
 	--dark-pink: oklch(0.5 0.1 10);
-	--darker-pink: oklch(0.45 0.1 10);
-	--darkest-pink: oklch(0.4 0.1 10);
+	--darker-pink: oklch(0.4 0.1 10);
+	--darkest-pink: oklch(0.3 0.1 10);
 
 	--primary-pink: var(--is-light, var(--dark-pink)) var(--is-dark, var(--light-pink));
 	--secondary-pink: var(--is-light, var(--darker-pink)) var(--is-dark, var(--lighter-pink));

@@ -3,13 +3,13 @@
 @import "is.css";
 
 :where(.semantic) {
-	--lightest-cyan: oklch(0.8 0.15 180);
-	--lighter-cyan: oklch(0.75 0.15 180);
+	--lightest-cyan: oklch(0.9 0.15 180);
+	--lighter-cyan: oklch(0.8 0.15 180);
 	--light-cyan: oklch(0.7 0.15 180);
 
 	--dark-cyan: oklch(0.5 0.15 180);
-	--darker-cyan: oklch(0.45 0.15 180);
-	--darkest-cyan: oklch(0.4 0.15 180);
+	--darker-cyan: oklch(0.4 0.15 180);
+	--darkest-cyan: oklch(0.3 0.15 180);
 
 	--primary-cyan: var(--is-light, var(--dark-cyan)) var(--is-dark, var(--light-cyan));
 	--secondary-cyan: var(--is-light, var(--darker-cyan)) var(--is-dark, var(--lighter-cyan));

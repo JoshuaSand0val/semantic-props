@@ -3,13 +3,13 @@
 @import "is.css";
 
 :where(.semantic) {
-	--lightest-lime: oklch(0.8 0.15 120);
-	--lighter-lime: oklch(0.75 0.15 120);
+	--lightest-lime: oklch(0.9 0.15 120);
+	--lighter-lime: oklch(0.8 0.15 120);
 	--light-lime: oklch(0.7 0.15 120);
 
 	--dark-lime: oklch(0.5 0.15 120);
-	--darker-lime: oklch(0.45 0.15 120);
-	--darkest-lime: oklch(0.4 0.15 120);
+	--darker-lime: oklch(0.4 0.15 120);
+	--darkest-lime: oklch(0.3 0.15 120);
 
 	--primary-lime: var(--is-light, var(--dark-lime)) var(--is-dark, var(--light-lime));
 	--secondary-lime: var(--is-light, var(--darker-lime)) var(--is-dark, var(--lighter-lime));
