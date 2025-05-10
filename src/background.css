@@ -1,16 +1,15 @@
 /* Semantic Props for the (dominant) background color. */
 
 @import "is.css";
-@import "neutral.css";
 
 :where(.semantic) {
-	--lightest-background: var(--lightest-neutral);
-	--lighter-background: var(--lighter-neutral);
-	--light-background: var(--light-neutral);
+	--lightest-background: oklch(1.0 0.01 260);
+	--lighter-background: oklch(0.9 0.01 260);
+	--light-background: oklch(0.8 0.01 260);
 
-	--dark-background: var(--dark-neutral);
-	--darker-background: var(--darker-neutral);
-	--darkest-background: var(--darkest-neutral);
+	--dark-background: oklch(0.4 0.01 260);
+	--darker-background: oklch(0.3 0.01 260);
+	--darkest-background: oklch(0.2 0.01 260);
 
 	--primary-background: var(--is-light, var(--lightest-background)) var(--is-dark, var(--darkest-background));
 	--secondary-background: var(--is-light, var(--lighter-background)) var(--is-dark, var(--darker-background));
