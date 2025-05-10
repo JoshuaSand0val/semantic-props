@@ -1,13 +1,11 @@
 /* Semantic Props for container sizes. */
 
-:where(.semantic) {
-	--3x-small-container: 11.25rem;
-	--2x-small-container: 15rem;
-	--x-small-container: 22.5rem;
-	--small-container: 30rem;
-	--medium-container: 48rem;
-	--large-container: 64rem;
-	--x-large-container: 90rem;
-	--2x-large-container: 100rem;
-	--3x-large-container: 120rem;
+:where(:root) {
+	--smallest-container: 11.25rem; /* 180px */
+	--smaller-container: 15rem; /* 240px */
+	--small-container: 20rem; /* 320px */
+	--medium-container: 30rem; /* 480px */
+	--large-container: 48rem; /* 768px */
+	--larger-container: 80rem; /* 1280px */
+	--largest-container: 100rem; /* 1600px */
 }

@@ -1,22 +1,87 @@
-/* Semantic Props for sizing padding, margin, ect. */
+/* Semantic Props for sizing font and spacing. */
 
-:where(.semantic) {
+@import "boolean.css";
+
+:where(:root, .watch, .phone, .tablet, .laptop, .desktop) {
+	/* Size Scale Ratio: */
+	--scale-ratio:
+		var(--is-watch, 1.067)
+		var(--is-phone, 1.125)
+		var(--is-tablet, 1.200)
+		var(--is-laptop-to-desktop, 1.250);
+
 	/* Base Sizes: */
-	--3x-small-size: 0.25rem;
-	--2x-small-size: 0.5rem;
-	--x-small-size: 0.75rem;
-	--small-size: 1rem;
-	--medium-size: 1.5rem;
-	--large-size: 2rem;
-	--x-large-size: 3rem;
-	--2x-large-size: 4rem;
-	--3x-large-size: 6rem;
+	--3x-small: max(0.25rem, var(--2x-small) / var(--scale-ratio)); /* 4px */
+	--2x-small: max(0.5rem, var(--x-small) / var(--scale-ratio)); /* 8px */
+	--x-small: max(0.75rem, var(--small) / var(--scale-ratio)); /* 12px */
+	--small: max(0.875rem, var(--medium) / var(--scale-ratio)); /* 14px */
+	--medium: 1rem; /* 16px */
+	--large: min(1.125rem, var(--medium) * var(--scale-ratio)); /* 18px */
+	--x-large: min(1.25rem, var(--large) * var(--scale-ratio)); /* 20px */
+	--2x-large: min(1.5rem, var(--x-large) * var(--scale-ratio)); /* 24px */
+	--3x-large: min(1.875rem, var(--2x-large) * var(--scale-ratio)); /* 30px */
+	--4x-large: min(2.25rem, var(--3x-large) * var(--scale-ratio)); /* 36px */
+	--5x-large: min(3rem, var(--4x-large) * var(--scale-ratio)); /* 48px */
+	--6x-large: min(3.75rem, var(--5x-large) * var(--scale-ratio)); /* 60px */
+	--7x-large: min(4.5rem, var(--6x-large) * var(--scale-ratio)); /* 72px */
+	--8x-large: min(6rem, var(--7x-large) * var(--scale-ratio)); /* 96px */
+	--9x-large: min(8rem, var(--8x-large) * var(--scale-ratio)); /* 128px */
 
 	/* Margin Size: */
 	--margin-size:
-		var(--is-watch, var(--x-small-size))
-		var(--is-phone, var(--medium-size))
-		var(--is-tablet, var(--x-large-size))
-		var(--is-laptop, var(--2x-large-size))
-		var(--is-desktop, var(--3x-large-size));
+		var(--is-watch, var(--x-small))
+		var(--is-phone, var(--2x-large))
+		var(--is-tablet, var(--5x-large))
+		var(--is-laptop, var(--6x-large))
+		var(--is-desktop, var(--8x-large));
+
+	/* Media Query Booleans: */
+	--is-watch: var(--true);
+	--is-phone: var(--false);
+	--is-tablet: var(--false);
+	--is-laptop: var(--false);
+	--is-desktop: var(--false);
+
+	--is-watch-to-phone: var(--is-watch) var(--is-phone);
+	--is-watch-to-tablet: var(--is-watch-to-phone) var(--is-tablet);
+	--is-watch-to-laptop: var(--is-watch-to-tablet) var(--is-laptop);
+
+	--is-phone-to-tablet: var(--is-phone) var(--is-tablet);
+	--is-phone-to-laptop: var(--is-phone-to-tablet) var(--is-laptop);
+	--is-phone-to-desktop: var(--is-phone-to-laptop) var(--is-desktop);
+
+	--is-tablet-to-laptop: var(--is-tablet) var(--is-laptop);
+	--is-tablet-to-desktop: var(--is-tablet-to-laptop) var(--is-desktop);
+
+	--is-laptop-to-desktop: var(--is-laptop) var(--is-desktop);
+}
+
+/* Media Query Booleans: */
+
+@media (min-width: 20rem) {
+	:where(:root:not(.watch), .phone, .tablet, .laptop, .desktop) {
+		--is-watch: var(--false);
+		--is-phone: var(--true);
+	}
+}
+
+@media (min-width: 48rem) {
+	:where(:root:not(.watch, .phone), .tablet, .laptop, .desktop) {
+		--is-phone: var(--false);
+		--is-tablet: var(--true);
+	}
+}
+
+@media (min-width: 80rem) {
+	:where(:root:not(.watch, .phone, .tablet), .laptop, .desktop) {
+		--is-tablet: var(--false);
+		--is-laptop: var(--true);
+	}
+}
+
+@media (min-width: 100rem) {
+	:where(:root:not(.watch, .phone, .tablet, .laptop), .desktop) {
+		--is-laptop: var(--false);
+		--is-desktop: var(--true);
+	}
 }

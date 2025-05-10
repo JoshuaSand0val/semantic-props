@@ -1,34 +1,31 @@
-/* Semantic Props for CSS font properties. */
+/* Semantic Props for font properties. */
 
-:where(.semantic) {
+:where(:root) {
 	/* Font-Family: */
-	--body-font: system-ui, sans-serif;
-	--display-font: var(--body-font);
-	--mono-font: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-	--accent-font: var(--body-font);
+	--body-family: system-ui, sans-serif;
+	--display-family: var(--body-family);
+	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	--accent-family: var(--body-family);
 
 	/* Font-Weight: */
-	--thin-font: 200;
-	--light-font: 300;
-	--regular-font: 500;
-	--bold-font: 700;
-	--heavy-font: 900;
+	--thin: 200;
+	--light: 300;
+	--regular: 500;
+	--bold: 700;
+	--heavy: 900;
 
-	/* Font-Size: */
-	--x-small-font: 0.75rem; /* 12px */
-	--small-font: 0.875rem; /* 14px */
-	--medium-font: 1rem; /* 16px */
-	--large-font: 1.125rem; /* 18px */
-	--x-large-font: 1.25rem; /* 20px */
-	--2x-large-font: 1.5rem; /* 24px */
-	--3x-large-font: 1.875rem; /* 30px */
-	--4x-large-font: 2.25rem; /* 36px */
-	--5x-large-font: 3rem; /* 48px */
-	--6x-large-font: 3.75rem; /* 60px */
-	--7x-large-font: 4.5rem; /* 72px */
-	--8x-large-font: 6rem; /* 96px */
-	--9x-large-font: 8rem; /* 128px */
+	/* Letter-Spacing: */
+	--dense-letters: -0.05em;
+	--normal-letters: normal;
+	--wide-letters: 0.1em;
 
-	--smaller-font: 0.875em; /* 14px */
-	--larger-font: 1.125em; /* 18px */
+	/* Line-Height: */
+	--short-line: 1.25;
+	--normal-line: 1.6;
+	--tall-line: 2;
+
+	/* Word-Spacing: */
+	--dense-words: -0.1em;
+	--normal-words: normal;
+	--wide-words: 0.1em;
 }
