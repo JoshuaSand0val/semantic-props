@@ -66,7 +66,6 @@
 	--is-watch-to-phone: var(--is-watch) var(--is-phone);
 	--is-watch-to-tablet: var(--is-watch-to-phone) var(--is-tablet);
 	--is-watch-to-laptop: var(--is-watch-to-tablet) var(--is-laptop);
-	--is-watch-to-desktop: var(--is-watch-to-laptop) var(--is-desktop);
 
 	--is-phone-to-tablet: var(--is-phone) var(--is-tablet);
 	--is-phone-to-laptop: var(--is-phone-to-tablet) var(--is-laptop);
