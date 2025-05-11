@@ -2,13 +2,13 @@
 
 @import "boolean.css";
 
-:where(:root, .watch, .phone, .tablet, .laptop, .desktop) {
+:where(.semantic) {
 	/* Size Scale Ratio: */
 	--scale-ratio:
-		var(--is-watch, 1.067)
-		var(--is-phone, 1.125)
-		var(--is-tablet, 1.200)
-		var(--is-laptop-to-desktop, 1.250);
+	var(--is-watch, 1.067)
+	var(--is-phone, 1.125)
+	var(--is-tablet, 1.200)
+	var(--is-laptop-to-desktop, 1.250);
 
 	/* Base Sizes: */
 	--3x-small: max(0.25rem, var(--2x-small) / var(--scale-ratio)); /* 4px */
@@ -32,19 +32,50 @@
 
 	/* Margin Size: */
 	--margin-size:
-		var(--is-watch, var(--x-small))
-		var(--is-phone, var(--2x-large))
-		var(--is-tablet, var(--5x-large))
-		var(--is-laptop, var(--6x-large))
-		var(--is-desktop, var(--8x-large));
+	var(--is-watch, var(--x-small))
+	var(--is-phone, var(--2x-large))
+	var(--is-tablet, var(--5x-large))
+	var(--is-laptop, var(--6x-large))
+	var(--is-desktop, var(--8x-large));
 
 	/* Media Query Booleans: */
-	--is-watch: var(--true);
-	--is-phone: var(--false);
-	--is-tablet: var(--false);
-	--is-laptop: var(--false);
-	--is-desktop: var(--false);
+	&:where(:not(& &), .watch, .phone, .tablet, .laptop, .desktop) {
+		--is-watch: var(--true);
+		--is-phone: var(--false);
+		--is-tablet: var(--false);
+		--is-laptop: var(--false);
+		--is-desktop: var(--false);
+	}
 
+	&:where(:not(& &):not(.watch), .phone, .tablet, .laptop, .desktop) {
+		@media (min-width: 20rem) {
+			--is-watch: var(--false);
+			--is-phone: var(--true);
+		}
+	}
+
+	&:where(:not(& &):not(.watch, .phone), .tablet, .laptop, .desktop) {
+		@media (min-width: 48rem) {
+			--is-phone: var(--false);
+			--is-tablet: var(--true);
+		}
+	}
+
+	&:where(:not(& &):not(.watch, .phone, .tablet), .laptop, .desktop) {
+		@media (min-width: 80rem) {
+			--is-tablet: var(--false);
+			--is-laptop: var(--true);
+		}
+	}
+
+	&:where(:not(& &):not(.watch, .phone, .tablet, .laptop), .desktop) {
+		@media (min-width: 100rem) {
+			--is-laptop: var(--false);
+			--is-desktop: var(--true);
+		}
+	}
+
+	/* Media Query Range Booleans: */
 	--is-watch-to-phone: var(--is-watch) var(--is-phone);
 	--is-watch-to-tablet: var(--is-watch-to-phone) var(--is-tablet);
 	--is-watch-to-laptop: var(--is-watch-to-tablet) var(--is-laptop);
@@ -57,34 +88,4 @@
 	--is-tablet-to-desktop: var(--is-tablet-to-laptop) var(--is-desktop);
 
 	--is-laptop-to-desktop: var(--is-laptop) var(--is-desktop);
-}
-
-/* Media Query Booleans: */
-
-@media (min-width: 20rem) {
-	:where(:root:not(.watch), .phone, .tablet, .laptop, .desktop) {
-		--is-watch: var(--false);
-		--is-phone: var(--true);
-	}
-}
-
-@media (min-width: 48rem) {
-	:where(:root:not(.watch, .phone), .tablet, .laptop, .desktop) {
-		--is-phone: var(--false);
-		--is-tablet: var(--true);
-	}
-}
-
-@media (min-width: 80rem) {
-	:where(:root:not(.watch, .phone, .tablet), .laptop, .desktop) {
-		--is-tablet: var(--false);
-		--is-laptop: var(--true);
-	}
-}
-
-@media (min-width: 100rem) {
-	:where(:root:not(.watch, .phone, .tablet, .laptop), .desktop) {
-		--is-laptop: var(--false);
-		--is-desktop: var(--true);
-	}
 }

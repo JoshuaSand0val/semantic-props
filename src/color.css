@@ -2,30 +2,27 @@
 
 @import "boolean.css";
 
-/* Light/Dark Booleans: */
+:where(.semantic) {
+	/* Light/Dark Booleans: */
+	&:where(:not(& &), .light.dark) {
+		--is-light: var(--true);
+		--is-dark: var(--false);
+		@media (prefers-color-scheme: dark) {
+			--is-light: var(--false);
+			--is-dark: var(--true);
+		}
+	}
 
-:where(:root, .light.dark) {
-	--is-light: var(--true);
-	--is-dark: var(--false);
-	@media (prefers-color-scheme: dark) {
+	&:where(.light:not(.dark)) {
+		--is-light: var(--true);
+		--is-dark: var(--false);
+	}
+
+	&:where(.dark:not(.light)) {
 		--is-light: var(--false);
 		--is-dark: var(--true);
 	}
-}
 
-:where(.light:not(.dark)) {
-	--is-light: var(--true);
-	--is-dark: var(--false);
-}
-
-:where(.dark:not(.light)) {
-	--is-light: var(--false);
-	--is-dark: var(--true);
-}
-
-/* Color Palette: */
-
-:where(:root) {
 	/* Background Color: */
 	--lightest-background: oklch(1.0 0.01 260);
 	--lighter-background: oklch(0.9 0.01 260);
@@ -34,6 +31,10 @@
 	--dark-background: oklch(0.4 0.01 260);
 	--darker-background: oklch(0.3 0.01 260);
 	--darkest-background: oklch(0.2 0.01 260);
+
+	--primary-background: var(--is-light, var(--lightest-background)) var(--is-dark, var(--darkest-background));
+	--secondary-background: var(--is-light, var(--lighter-background)) var(--is-dark, var(--darker-background));
+	--tertiary-background: var(--is-light, var(--light-background)) var(--is-dark, var(--dark-background));
 
 	/* Accent Color: */
 	--lightest-accent: var(--lightest-blue);
@@ -44,6 +45,10 @@
 	--darker-accent: var(--darker-blue);
 	--darkest-accent: var(--darkest-blue);
 
+	--primary-accent: var(--is-light, var(--dark-accent)) var(--is-dark, var(--light-accent));
+	--secondary-accent: var(--is-light, var(--darker-accent)) var(--is-dark, var(--lighter-accent));
+	--tertiary-accent: var(--is-light, var(--darkest-accent)) var(--is-dark, var(--lightest-accent));
+
 	/* Blue */
 	--lightest-blue: oklch(0.9 0.15 240);
 	--lighter-blue: oklch(0.8 0.15 240);
@@ -52,6 +57,10 @@
 	--dark-blue: oklch(0.5 0.15 240);
 	--darker-blue: oklch(0.4 0.15 240);
 	--darkest-blue: oklch(0.3 0.15 240);
+
+	--primary-blue: var(--is-light, var(--dark-blue)) var(--is-dark, var(--light-blue));
+	--secondary-blue: var(--is-light, var(--darker-blue)) var(--is-dark, var(--lighter-blue));
+	--tertiary-blue: var(--is-light, var(--darkest-blue)) var(--is-dark, var(--lightest-blue));
 
 	/* Brown: */
 	--lightest-brown: oklch(0.9 0.05 50);
@@ -62,6 +71,10 @@
 	--darker-brown: oklch(0.4 0.05 50);
 	--darkest-brown: oklch(0.3 0.05 50);
 
+	--primary-brown: var(--is-light, var(--dark-brown)) var(--is-dark, var(--light-brown));
+	--secondary-brown: var(--is-light, var(--darker-brown)) var(--is-dark, var(--lighter-brown));
+	--tertiary-brown: var(--is-light, var(--darkest-brown)) var(--is-dark, var(--lightest-brown));
+
 	/* Coral: */
 	--lightest-coral: oklch(0.9 0.2 40);
 	--lighter-coral: oklch(0.8 0.2 40);
@@ -70,6 +83,10 @@
 	--dark-coral: oklch(0.5 0.2 40);
 	--darker-coral: oklch(0.4 0.2 40);
 	--darkest-coral: oklch(0.3 0.2 40);
+
+	--primary-coral: var(--is-light, var(--dark-coral)) var(--is-dark, var(--light-coral));
+	--secondary-coral: var(--is-light, var(--darker-coral)) var(--is-dark, var(--lighter-coral));
+	--tertiary-coral: var(--is-light, var(--darkest-coral)) var(--is-dark, var(--lightest-coral));
 
 	/* Cyan: */
 	--lightest-cyan: oklch(0.9 0.15 180);
@@ -80,6 +97,10 @@
 	--darker-cyan: oklch(0.4 0.15 180);
 	--darkest-cyan: oklch(0.3 0.15 180);
 
+	--primary-cyan: var(--is-light, var(--dark-cyan)) var(--is-dark, var(--light-cyan));
+	--secondary-cyan: var(--is-light, var(--darker-cyan)) var(--is-dark, var(--lighter-cyan));
+	--tertiary-cyan: var(--is-light, var(--darkest-cyan)) var(--is-dark, var(--lightest-cyan));
+
 	/* Gray: */
 	--lightest-gray: oklch(0.9 0.01 260);
 	--lighter-gray: oklch(0.8 0.01 260);
@@ -88,6 +109,10 @@
 	--dark-gray: oklch(0.5 0.01 260);
 	--darker-gray: oklch(0.4 0.01 260);
 	--darkest-gray: oklch(0.3 0.01 260);
+
+	--primary-gray: var(--is-light, var(--dark-gray)) var(--is-dark, var(--light-gray));
+	--secondary-gray: var(--is-light, var(--darker-gray)) var(--is-dark, var(--lighter-gray));
+	--tertiary-gray: var(--is-light, var(--darkest-gray)) var(--is-dark, var(--lightest-gray));
 
 	/* Green: */
 	--lightest-green: oklch(0.9 0.2 150);
@@ -98,6 +123,10 @@
 	--darker-green: oklch(0.4 0.2 150);
 	--darkest-green: oklch(0.3 0.2 150);
 
+	--primary-green: var(--is-light, var(--dark-green)) var(--is-dark, var(--light-green));
+	--secondary-green: var(--is-light, var(--darker-green)) var(--is-dark, var(--lighter-green));
+	--tertiary-green: var(--is-light, var(--darkest-green)) var(--is-dark, var(--lightest-green));
+
 	/* Indigo: */
 	--lightest-indigo: oklch(0.9 0.2 270);
 	--lighter-indigo: oklch(0.8 0.2 270);
@@ -106,6 +135,10 @@
 	--dark-indigo: oklch(0.5 0.2 270);
 	--darker-indigo: oklch(0.4 0.2 270);
 	--darkest-indigo: oklch(0.3 0.2 270);
+
+	--primary-indigo: var(--is-light, var(--dark-indigo)) var(--is-dark, var(--light-indigo));
+	--secondary-indigo: var(--is-light, var(--darker-indigo)) var(--is-dark, var(--lighter-indigo));
+	--tertiary-indigo: var(--is-light, var(--darkest-indigo)) var(--is-dark, var(--lightest-indigo));
 
 	/* Lime: */
 	--lightest-lime: oklch(0.9 0.15 120);
@@ -116,6 +149,10 @@
 	--darker-lime: oklch(0.4 0.15 120);
 	--darkest-lime: oklch(0.3 0.15 120);
 
+	--primary-lime: var(--is-light, var(--dark-lime)) var(--is-dark, var(--light-lime));
+	--secondary-lime: var(--is-light, var(--darker-lime)) var(--is-dark, var(--lighter-lime));
+	--tertiary-lime: var(--is-light, var(--darkest-lime)) var(--is-dark, var(--lightest-lime));
+
 	/* Magenta: */
 	--lightest-magenta: oklch(0.9 0.2 330);
 	--lighter-magenta: oklch(0.8 0.2 330);
@@ -124,6 +161,10 @@
 	--dark-magenta: oklch(0.5 0.2 330);
 	--darker-magenta: oklch(0.4 0.2 330);
 	--darkest-magenta: oklch(0.3 0.2 330);
+
+	--primary-magenta: var(--is-light, var(--dark-magenta)) var(--is-dark, var(--light-magenta));
+	--secondary-magenta: var(--is-light, var(--darker-magenta)) var(--is-dark, var(--lighter-magenta));
+	--tertiary-magenta: var(--is-light, var(--darkest-magenta)) var(--is-dark, var(--lightest-magenta));
 
 	/* Neutral Color: */
 	--lightest-neutral: oklch(1.0 0.01 260);
@@ -134,6 +175,10 @@
 	--darker-neutral: oklch(0.3 0.01 260);
 	--darkest-neutral: oklch(0.2 0.01 260);
 
+	--primary-neutral: var(--is-light, var(--darkest-neutral)) var(--is-dark, var(--lightest-neutral));
+	--secondary-neutral: var(--is-light, var(--darker-neutral)) var(--is-dark, var(--lighter-neutral));
+	--tertiary-neutral: var(--is-light, var(--dark-neutral)) var(--is-dark, var(--light-neutral));
+
 	/* Orange: */
 	--lightest-orange: oklch(0.9 0.15 50);
 	--lighter-orange: oklch(0.8 0.15 50);
@@ -142,6 +187,10 @@
 	--dark-orange: oklch(0.5 0.15 50);
 	--darker-orange: oklch(0.4 0.15 50);
 	--darkest-orange: oklch(0.3 0.15 50);
+
+	--primary-orange: var(--is-light, var(--dark-orange)) var(--is-dark, var(--light-orange));
+	--secondary-orange: var(--is-light, var(--darker-orange)) var(--is-dark, var(--lighter-orange));
+	--tertiary-orange: var(--is-light, var(--darkest-orange)) var(--is-dark, var(--lightest-orange));
 
 	/* Pink: */
 	--lightest-pink: oklch(0.9 0.1 10);
@@ -152,6 +201,10 @@
 	--darker-pink: oklch(0.4 0.1 10);
 	--darkest-pink: oklch(0.3 0.1 10);
 
+	--primary-pink: var(--is-light, var(--dark-pink)) var(--is-dark, var(--light-pink));
+	--secondary-pink: var(--is-light, var(--darker-pink)) var(--is-dark, var(--lighter-pink));
+	--tertiary-pink: var(--is-light, var(--darkest-pink)) var(--is-dark, var(--lightest-pink));
+
 	/* Purple: */
 	--lightest-purple: oklch(0.9 0.15 300);
 	--lighter-purple: oklch(0.8 0.15 300);
@@ -160,6 +213,10 @@
 	--dark-purple: oklch(0.5 0.15 300);
 	--darker-purple: oklch(0.4 0.15 300);
 	--darkest-purple: oklch(0.3 0.15 300);
+
+	--primary-purple: var(--is-light, var(--dark-purple)) var(--is-dark, var(--light-purple));
+	--secondary-purple: var(--is-light, var(--darker-purple)) var(--is-dark, var(--lighter-purple));
+	--tertiary-purple: var(--is-light, var(--darkest-purple)) var(--is-dark, var(--lightest-purple));
 
 	/* Red: */
 	--lightest-red: oklch(0.9 0.2 30);
@@ -170,6 +227,10 @@
 	--darker-red: oklch(0.4 0.2 30);
 	--darkest-red: oklch(0.3 0.2 30);
 
+	--primary-red: var(--is-light, var(--dark-red)) var(--is-dark, var(--light-red));
+	--secondary-red: var(--is-light, var(--darker-red)) var(--is-dark, var(--lighter-red));
+	--tertiary-red: var(--is-light, var(--darkest-red)) var(--is-dark, var(--lightest-red));
+
 	/* Violet: */
 	--lightest-violet: oklch(0.9 0.15 290);
 	--lighter-violet: oklch(0.8 0.15 290);
@@ -179,6 +240,10 @@
 	--darker-violet: oklch(0.4 0.15 290);
 	--darkest-violet: oklch(0.3 0.15 290);
 
+	--primary-violet: var(--is-light, var(--dark-violet)) var(--is-dark, var(--light-violet));
+	--secondary-violet: var(--is-light, var(--darker-violet)) var(--is-dark, var(--lighter-violet));
+	--tertiary-violet: var(--is-light, var(--darkest-violet)) var(--is-dark, var(--lightest-violet));
+
 	/* Yellow: */
 	--lightest-yellow: oklch(0.9 0.15 90);
 	--lighter-yellow: oklch(0.8 0.15 90);
@@ -187,95 +252,7 @@
 	--dark-yellow: oklch(0.5 0.15 90);
 	--darker-yellow: oklch(0.4 0.15 90);
 	--darkest-yellow: oklch(0.3 0.15 90);
-}
 
-:where(:root, .light, .dark) {
-	/* Background Color: */
-	--primary-background: var(--is-light, var(--lightest-background)) var(--is-dark, var(--darkest-background));
-	--secondary-background: var(--is-light, var(--lighter-background)) var(--is-dark, var(--darker-background));
-	--tertiary-background: var(--is-light, var(--light-background)) var(--is-dark, var(--dark-background));
-
-	/* Accent Color: */
-	--primary-accent: var(--is-light, var(--dark-accent)) var(--is-dark, var(--light-accent));
-	--secondary-accent: var(--is-light, var(--darker-accent)) var(--is-dark, var(--lighter-accent));
-	--tertiary-accent: var(--is-light, var(--darkest-accent)) var(--is-dark, var(--lightest-accent));
-
-	/* Blue */
-	--primary-blue: var(--is-light, var(--dark-blue)) var(--is-dark, var(--light-blue));
-	--secondary-blue: var(--is-light, var(--darker-blue)) var(--is-dark, var(--lighter-blue));
-	--tertiary-blue: var(--is-light, var(--darkest-blue)) var(--is-dark, var(--lightest-blue));
-
-	/* Brown: */
-	--primary-brown: var(--is-light, var(--dark-brown)) var(--is-dark, var(--light-brown));
-	--secondary-brown: var(--is-light, var(--darker-brown)) var(--is-dark, var(--lighter-brown));
-	--tertiary-brown: var(--is-light, var(--darkest-brown)) var(--is-dark, var(--lightest-brown));
-
-	/* Coral: */
-	--primary-coral: var(--is-light, var(--dark-coral)) var(--is-dark, var(--light-coral));
-	--secondary-coral: var(--is-light, var(--darker-coral)) var(--is-dark, var(--lighter-coral));
-	--tertiary-coral: var(--is-light, var(--darkest-coral)) var(--is-dark, var(--lightest-coral));
-
-	/* Cyan: */
-	--primary-cyan: var(--is-light, var(--dark-cyan)) var(--is-dark, var(--light-cyan));
-	--secondary-cyan: var(--is-light, var(--darker-cyan)) var(--is-dark, var(--lighter-cyan));
-	--tertiary-cyan: var(--is-light, var(--darkest-cyan)) var(--is-dark, var(--lightest-cyan));
-
-	/* Gray: */
-	--primary-gray: var(--is-light, var(--dark-gray)) var(--is-dark, var(--light-gray));
-	--secondary-gray: var(--is-light, var(--darker-gray)) var(--is-dark, var(--lighter-gray));
-	--tertiary-gray: var(--is-light, var(--darkest-gray)) var(--is-dark, var(--lightest-gray));
-
-	/* Green: */
-	--primary-green: var(--is-light, var(--dark-green)) var(--is-dark, var(--light-green));
-	--secondary-green: var(--is-light, var(--darker-green)) var(--is-dark, var(--lighter-green));
-	--tertiary-green: var(--is-light, var(--darkest-green)) var(--is-dark, var(--lightest-green));
-
-	/* Indigo: */
-	--primary-indigo: var(--is-light, var(--dark-indigo)) var(--is-dark, var(--light-indigo));
-	--secondary-indigo: var(--is-light, var(--darker-indigo)) var(--is-dark, var(--lighter-indigo));
-	--tertiary-indigo: var(--is-light, var(--darkest-indigo)) var(--is-dark, var(--lightest-indigo));
-
-	/* Lime: */
-	--primary-lime: var(--is-light, var(--dark-lime)) var(--is-dark, var(--light-lime));
-	--secondary-lime: var(--is-light, var(--darker-lime)) var(--is-dark, var(--lighter-lime));
-	--tertiary-lime: var(--is-light, var(--darkest-lime)) var(--is-dark, var(--lightest-lime));
-
-	/* Magenta: */
-	--primary-magenta: var(--is-light, var(--dark-magenta)) var(--is-dark, var(--light-magenta));
-	--secondary-magenta: var(--is-light, var(--darker-magenta)) var(--is-dark, var(--lighter-magenta));
-	--tertiary-magenta: var(--is-light, var(--darkest-magenta)) var(--is-dark, var(--lightest-magenta));
-
-	/* Neutral Color: */
-	--primary-neutral: var(--is-light, var(--darkest-neutral)) var(--is-dark, var(--lightest-neutral));
-	--secondary-neutral: var(--is-light, var(--darker-neutral)) var(--is-dark, var(--lighter-neutral));
-	--tertiary-neutral: var(--is-light, var(--dark-neutral)) var(--is-dark, var(--light-neutral));
-
-	/* Orange: */
-	--primary-orange: var(--is-light, var(--dark-orange)) var(--is-dark, var(--light-orange));
-	--secondary-orange: var(--is-light, var(--darker-orange)) var(--is-dark, var(--lighter-orange));
-	--tertiary-orange: var(--is-light, var(--darkest-orange)) var(--is-dark, var(--lightest-orange));
-
-	/* Pink: */
-	--primary-pink: var(--is-light, var(--dark-pink)) var(--is-dark, var(--light-pink));
-	--secondary-pink: var(--is-light, var(--darker-pink)) var(--is-dark, var(--lighter-pink));
-	--tertiary-pink: var(--is-light, var(--darkest-pink)) var(--is-dark, var(--lightest-pink));
-
-	/* Purple: */
-	--primary-purple: var(--is-light, var(--dark-purple)) var(--is-dark, var(--light-purple));
-	--secondary-purple: var(--is-light, var(--darker-purple)) var(--is-dark, var(--lighter-purple));
-	--tertiary-purple: var(--is-light, var(--darkest-purple)) var(--is-dark, var(--lightest-purple));
-
-	/* Red: */
-	--primary-red: var(--is-light, var(--dark-red)) var(--is-dark, var(--light-red));
-	--secondary-red: var(--is-light, var(--darker-red)) var(--is-dark, var(--lighter-red));
-	--tertiary-red: var(--is-light, var(--darkest-red)) var(--is-dark, var(--lightest-red));
-
-	/* Violet: */
-	--primary-violet: var(--is-light, var(--dark-violet)) var(--is-dark, var(--light-violet));
-	--secondary-violet: var(--is-light, var(--darker-violet)) var(--is-dark, var(--lighter-violet));
-	--tertiary-violet: var(--is-light, var(--darkest-violet)) var(--is-dark, var(--lightest-violet));
-
-	/* Yellow: */
 	--primary-yellow: var(--is-light, var(--dark-yellow)) var(--is-dark, var(--light-yellow));
 	--secondary-yellow: var(--is-light, var(--darker-yellow)) var(--is-dark, var(--lighter-yellow));
 	--tertiary-yellow: var(--is-light, var(--darkest-yellow)) var(--is-dark, var(--lightest-yellow));

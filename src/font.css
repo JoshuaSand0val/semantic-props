@@ -1,6 +1,6 @@
 /* Semantic Props for font properties. */
 
-:where(:root) {
+:where(.semantic) {
 	/* Font-Family: */
 	--body-family: system-ui, sans-serif;
 	--display-family: var(--body-family);
