@@ -4,22 +4,24 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [2.0.0] - 2025-MM-DD
 
-A **breaking change** release that greatly improves browser compatibility.
+A **breaking change** release that greatly improves browser compatibility, features and syntax.
 
 ### Added
 
-- Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
-- Added `box-shadow` variants of `shadow` props.
-- Added `--is-` color-scheme and media-query boolean props alongside classes. Value is `initial` if true, whitespace if false.
-- Added new color system using light and dark color-scheme values.
-- Added new `--scaleX-` and `--scaleY-` props for scaling the X and Y axis.
+- Added color, query boolean props and classes. Value `--true` is `initial` and `--false` is whitespace.
 - Added new `-radius` props for applying `border-radius`.
+- Added new color system using light, dark and prioritized values.
+- Added `box-shadow` variants of `shadow` props.
+- Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
+- Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
 
 ### Changed
 
-- Changed dynamic size values using `clamp()` function to a fixed value scale.
-- Changed `--scale-` props to use transform property `scale()` function.
-- Changed `-container` props to use `rem` versus `px` units.
+- Changed syntax of all props to be descriptive versus namespaced.
+- Changed syntax of all props with upper/lower value limits from using `-x-` modifier and given new values.
+- Changed prop values from using `px` to use `rem` units.
+- Changed font and spacing scales to be unified and based on new `--scale-ratio` value.
+- Changed scale props to use transform `scale()` function.
 
 ### Removed
 
