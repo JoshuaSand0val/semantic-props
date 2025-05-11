@@ -2,26 +2,26 @@
 
 :where(.semantic) {
 	/* Scale (X-axis): */
-	--smallest-scale-x: scaleX(0.25);
-	--smaller-scale-x: scaleX(0.5);
-	--small-scale-x: scaleX(0.75);
-	--large-scale-x: scaleX(1.25);
-	--larger-scale-x: scaleX(1.5);
-	--largest-scale-x: scaleX(2);
+	--smallest-scale-x: scaleX(0.5);
+	--smaller-scale-x: scaleX(0.75);
+	--small-scale-x: scaleX(0.875);
+	--large-scale-x: scaleX(1.125);
+	--larger-scale-x: scaleX(1.25);
+	--largest-scale-x: scaleX(1.5);
 
 	/* Scale (Y-axis): */
-	--smallest-scale-y: scaleY(0.25);
-	--smaller-scale-y: scaleY(0.5);
-	--small-scale-y: scaleY(0.75);
-	--large-scale-y: scaleY(1.25);
-	--larger-scale-y: scaleY(1.5);
-	--largest-scale-y: scaleY(2);
+	--smallest-scale-y: scaleY(0.5);
+	--smaller-scale-y: scaleY(0.75);
+	--small-scale-y: scaleY(0.875);
+	--large-scale-y: scaleY(1.125);
+	--larger-scale-y: scaleY(1.25);
+	--largest-scale-y: scaleY(1.5);
 
 	/* Scale (X+Y-axis): */
-	--smallest-scale: scale(0.25);
-	--smaller-scale: scale(0.5);
-	--small-scale: scale(0.75);
-	--large-scale: scale(1.25);
-	--larger-scale: scale(1.5);
-	--largest-scale: scale(2);
+	--smallest-scale: scale(0.5);
+	--smaller-scale: scale(0.75);
+	--small-scale: scale(0.875);
+	--large-scale: scale(1.125);
+	--larger-scale: scale(1.25);
+	--largest-scale: scale(1.5);
 }
