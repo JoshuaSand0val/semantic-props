@@ -27,6 +27,9 @@
 	--8x-large: min(6rem, var(--7x-large) * var(--scale-ratio)); /* 96px */
 	--9x-large: min(8rem, var(--8x-large) * var(--scale-ratio)); /* 128px */
 
+	--smaller: calc(1em / var(--scale-ratio));
+	--larger: calc(1em * var(--scale-ratio));
+
 	/* Margin Size: */
 	--margin-size:
 		var(--is-watch, var(--x-small))
