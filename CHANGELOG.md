@@ -4,7 +4,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [2.0.0] - 2025-MM-DD
 
-A **breaking change** release that greatly improves browser compatibility, features and syntax.
+A **breaking change** release that greatly improves browser compatibility, file size, features and syntax.
 
 ### Added
 
