@@ -25,12 +25,12 @@
 
 	/* Background Color: */
 	--primary-light-background: oklch(1.0 0.01 260);
-	--secondary-light-background: oklch(0.9 0.01 260);
-	--tertiary-light-background: oklch(0.8 0.01 260);
+	--secondary-light-background: oklch(0.95 0.01 260);
+	--tertiary-light-background: oklch(0.9 0.01 260);
 
 	--primary-dark-background: oklch(0.2 0.01 260);
-	--secondary-dark-background: oklch(0.3 0.01 260);
-	--tertiary-dark-background: oklch(0.4 0.01 260);
+	--secondary-dark-background: oklch(0.25 0.01 260);
+	--tertiary-dark-background: oklch(0.3 0.01 260);
 
 	--primary-background: var(--is-light, var(--primary-light-background)) var(--is-dark, var(--primary-dark-background));
 	--secondary-background: var(--is-light, var(--secondary-light-background)) var(--is-dark, var(--secondary-dark-background));
@@ -168,12 +168,12 @@
 
 	/* Neutral Color: */
 	--primary-light-neutral: oklch(1.0 0.01 260);
-	--secondary-light-neutral: oklch(0.9 0.01 260);
-	--tertiary-light-neutral: oklch(0.8 0.01 260);
+	--secondary-light-neutral: oklch(0.95 0.01 260);
+	--tertiary-light-neutral: oklch(0.9 0.01 260);
 
 	--primary-dark-neutral: oklch(0.2 0.01 260);
-	--secondary-dark-neutral: oklch(0.3 0.01 260);
-	--tertiary-dark-neutral: oklch(0.4 0.01 260);
+	--secondary-dark-neutral: oklch(0.25 0.01 260);
+	--tertiary-dark-neutral: oklch(0.3 0.01 260);
 
 	--primary-neutral: var(--is-light, var(--primary-dark-neutral)) var(--is-dark, var(--primary-light-neutral));
 	--secondary-neutral: var(--is-light, var(--secondary-dark-neutral)) var(--is-dark, var(--secondary-light-neutral));
