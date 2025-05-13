@@ -223,9 +223,9 @@
 	--secondary-neutral-background: var(--is-light, var(--lighter-neutral)) var(--is-dark, var(--darker-neutral));
 	--tertiary-neutral-background: var(--is-light, var(--light-neutral)) var(--is-dark, var(--dark-neutral));
 
-	--primary-neutral: var(--is-light, var(--darkest-neutral)) var(--is-dark, var(--lightest-neutral));
+	--primary-neutral: var(--is-light, var(--dark-neutral)) var(--is-dark, var(--light-neutral));
 	--secondary-neutral: var(--is-light, var(--darker-neutral)) var(--is-dark, var(--lighter-neutral));
-	--tertiary-neutral: var(--is-light, var(--dark-neutral)) var(--is-dark, var(--light-neutral));
+	--tertiary-neutral: var(--is-light, var(--darkest-neutral)) var(--is-dark, var(--lightest-neutral));
 
 	/* Orange: */
 	--lightest-orange: oklch(0.9 0.15 50);
