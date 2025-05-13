@@ -36,9 +36,9 @@
 	--secondary-theme-fill: var(--is-light, var(--lighter-theme)) var(--is-dark, var(--darker-theme));
 	--tertiary-theme-fill: var(--is-light, var(--light-theme)) var(--is-dark, var(--dark-theme));
 
-	--primary-theme: var(--is-light, var(--dark-theme)) var(--is-dark, var(--light-theme));
+	--primary-theme: var(--is-light, var(--darkest-theme)) var(--is-dark, var(--lightest-theme));
 	--secondary-theme: var(--is-light, var(--darker-theme)) var(--is-dark, var(--lighter-theme));
-	--tertiary-theme: var(--is-light, var(--darkest-theme)) var(--is-dark, var(--lightest-theme));
+	--tertiary-theme: var(--is-light, var(--dark-theme)) var(--is-dark, var(--light-theme));
 
 	/* Accent Color: */
 	--lightest-accent: var(--lightest-blue);
@@ -223,9 +223,9 @@
 	--secondary-neutral-fill: var(--is-light, var(--lighter-neutral)) var(--is-dark, var(--darker-neutral));
 	--tertiary-neutral-fill: var(--is-light, var(--light-neutral)) var(--is-dark, var(--dark-neutral));
 
-	--primary-neutral: var(--is-light, var(--dark-neutral)) var(--is-dark, var(--light-neutral));
+	--primary-neutral: var(--is-light, var(--darkest-neutral)) var(--is-dark, var(--lightest-neutral));
 	--secondary-neutral: var(--is-light, var(--darker-neutral)) var(--is-dark, var(--lighter-neutral));
-	--tertiary-neutral: var(--is-light, var(--darkest-neutral)) var(--is-dark, var(--lightest-neutral));
+	--tertiary-neutral: var(--is-light, var(--dark-neutral)) var(--is-dark, var(--light-neutral));
 
 	/* Orange: */
 	--lightest-orange: oklch(0.9 0.15 50);
