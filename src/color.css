@@ -24,20 +24,20 @@
 		--is-dark: var(--true);
 	}
 
-	/* Light and Dark Color: */
-	--light-color: oklch(1 0.01 260);
-	--dark-color: oklch(0.2 0.01 260);
-
 	/* Page Background Color: */
-	--background-color: var(--is-light, var(--light-color)) var(--is-dark, var(--dark-color));
+	--background-color: var(--is-light, oklch(1 0.01 260)) var(--is-dark, oklch(0.2 0.01 260));
 
 	/* Prioritized Color: */
-	--primary-color: var(--background-color);
+	--primary-color: var(--is-light, oklch(1 0.01 260 / 0.9)) var(--is-dark, oklch(0.2 0.01 260 / 0.9));
 	--secondary-color: var(--is-light, oklch(0 0 0 / 0.1)) var(--is-dark, oklch(1 0 0 / 0.1));
 	--tertiary-color: var(--is-light, oklch(0 0 0 / 0.2)) var(--is-dark, oklch(1 0 0 / 0.2));
 
 	/* Backdrop Color: */
 	--backdrop-color: oklch(0 0 0 / var(--lower-opacity));
+
+	/* Light and Dark Color: */
+	--light-color: oklch(1 0.01 260);
+	--dark-color: oklch(0.2 0.01 260);
 
 	/* High Contrast Color: */
 	--high-contrast-color: var(--is-light, var(--dark-color)) var(--is-dark, var(--light-color));
