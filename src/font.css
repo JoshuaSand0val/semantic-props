@@ -8,11 +8,11 @@
 	--accent-family: var(--body-family);
 
 	/* Font-Weight: */
-	--thin: 200;
-	--light: 300;
-	--regular: 500;
-	--bold: 700;
-	--heavy: 900;
+	--thin-weight: 200;
+	--light-weight: 300;
+	--regular-weight: 500;
+	--bold-weight: 700;
+	--heavy-weight: 900;
 
 	/* Letter-Spacing: */
 	--dense-letters: -0.05em;
