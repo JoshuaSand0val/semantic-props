@@ -6,103 +6,103 @@
 :where(.semantic) {
 	/* Light/Dark Booleans: */
 	&:where(:not(& &), .light.dark) {
-		--is-light: var(--true);
-		--is-dark: var(--false);
+		--light: var(--true);
+		--dark: var(--false);
 		@media (prefers-color-scheme: dark) {
-			--is-light: var(--false);
-			--is-dark: var(--true);
+			--light: var(--false);
+			--dark: var(--true);
 		}
 	}
 
 	&:where(.light:not(.dark)) {
-		--is-light: var(--true);
-		--is-dark: var(--false);
+		--light: var(--true);
+		--dark: var(--false);
 	}
 
 	&:where(.dark:not(.light)) {
-		--is-light: var(--false);
-		--is-dark: var(--true);
+		--light: var(--false);
+		--dark: var(--true);
 	}
 
 	/* Background Color: */
-	--background-color: var(--is-light, oklch(1 0.01 260)) var(--is-dark, oklch(0.2 0.01 260));
+	--background-color: var(--light, oklch(1 0.01 260)) var(--dark, oklch(0.2 0.01 260));
 
 	/* Backdrop Color: */
 	--backdrop-color: oklch(0.5 0 0 / var(--lowest-opacity));
 
 	/* Layered Color: */
-	--primary-color: var(--is-light, oklch(1 0.01 260)) var(--is-dark, oklch(0.2 0.01 260));
-	--secondary-color: var(--is-light, oklch(0.95 0.01 260)) var(--is-dark, oklch(0.25 0.01 260));
-	--tertiary-color: var(--is-light, oklch(0.9 0.01 260)) var(--is-dark, oklch(0.3 0.01 260));
+	--primary-color: var(--light, oklch(1 0.01 260)) var(--dark, oklch(0.2 0.01 260));
+	--secondary-color: var(--light, oklch(0.95 0.01 260)) var(--dark, oklch(0.25 0.01 260));
+	--tertiary-color: var(--light, oklch(0.9 0.01 260)) var(--dark, oklch(0.3 0.01 260));
 
 	/* Light and Dark Color: */
 	--light-color: oklch(1 0.01 260);
 	--dark-color: oklch(0.2 0.01 260);
 
 	/* High Contrast Color: */
-	--high-contrast-color: var(--is-light, var(--dark-color)) var(--is-dark, var(--light-color));
+	--high-contrast-color: var(--light, var(--dark-color)) var(--dark, var(--light-color));
 
 	/* Accent Color: */
 	--accent-color: var(--blue);
 	--subtle-accent-color: var(--subtle-blue);
 
 	/* Blue: */
-	--blue: var(--is-light, oklch(0.5 0.15 240)) var(--is-dark, oklch(0.7 0.15 240));
-	--subtle-blue: var(--is-light, oklch(0.9 0.15 240)) var(--is-dark, oklch(0.3 0.15 240));
+	--blue: var(--light, oklch(0.5 0.15 240)) var(--dark, oklch(0.7 0.15 240));
+	--subtle-blue: var(--light, oklch(0.9 0.15 240)) var(--dark, oklch(0.3 0.15 240));
 
 	/* Brown: */
-	--brown: var(--is-light, oklch(0.5 0.05 50)) var(--is-dark, oklch(0.7 0.05 50));
-	--subtle-brown: var(--is-light, oklch(0.9 0.05 50)) var(--is-dark, oklch(0.3 0.05 50));
+	--brown: var(--light, oklch(0.5 0.05 50)) var(--dark, oklch(0.7 0.05 50));
+	--subtle-brown: var(--light, oklch(0.9 0.05 50)) var(--dark, oklch(0.3 0.05 50));
 
 	/* Coral: */
-	--coral: var(--is-light, oklch(0.5 0.2 40)) var(--is-dark, oklch(0.7 0.2 40));
-	--subtle-coral: var(--is-light, oklch(0.9 0.2 40)) var(--is-dark, oklch(0.3 0.2 40));
+	--coral: var(--light, oklch(0.5 0.2 40)) var(--dark, oklch(0.7 0.2 40));
+	--subtle-coral: var(--light, oklch(0.9 0.2 40)) var(--dark, oklch(0.3 0.2 40));
 
 	/* Cyan: */
-	--cyan: var(--is-light, oklch(0.5 0.15 180)) var(--is-dark, oklch(0.7 0.15 180));
-	--subtle-cyan: var(--is-light, oklch(0.9 0.15 180)) var(--is-dark, oklch(0.3 0.15 180));
+	--cyan: var(--light, oklch(0.5 0.15 180)) var(--dark, oklch(0.7 0.15 180));
+	--subtle-cyan: var(--light, oklch(0.9 0.15 180)) var(--dark, oklch(0.3 0.15 180));
 
 	/* Gray: */
-	--gray: var(--is-light, oklch(0.5 0.01 260)) var(--is-dark, oklch(0.7 0.01 260));
-	--subtle-gray: var(--is-light, oklch(0.9 0.01 260)) var(--is-dark, oklch(0.3 0.01 260));
+	--gray: var(--light, oklch(0.5 0.01 260)) var(--dark, oklch(0.7 0.01 260));
+	--subtle-gray: var(--light, oklch(0.9 0.01 260)) var(--dark, oklch(0.3 0.01 260));
 
 	/* Green: */
-	--green: var(--is-light, oklch(0.5 0.2 150)) var(--is-dark, oklch(0.7 0.2 150));
-	--subtle-green: var(--is-light, oklch(0.9 0.2 150)) var(--is-dark, oklch(0.3 0.2 150));
+	--green: var(--light, oklch(0.5 0.2 150)) var(--dark, oklch(0.7 0.2 150));
+	--subtle-green: var(--light, oklch(0.9 0.2 150)) var(--dark, oklch(0.3 0.2 150));
 
 	/* Indigo: */
-	--indigo: var(--is-light, oklch(0.5 0.2 270)) var(--is-dark, oklch(0.7 0.2 270));
-	--subtle-indigo: var(--is-light, oklch(0.9 0.2 270)) var(--is-dark, oklch(0.3 0.2 270));
+	--indigo: var(--light, oklch(0.5 0.2 270)) var(--dark, oklch(0.7 0.2 270));
+	--subtle-indigo: var(--light, oklch(0.9 0.2 270)) var(--dark, oklch(0.3 0.2 270));
 
 	/* Lime: */
-	--lime: var(--is-light, oklch(0.5 0.15 120)) var(--is-dark, oklch(0.7 0.15 120));
-	--subtle-lime: var(--is-light, oklch(0.9 0.15 120)) var(--is-dark, oklch(0.3 0.15 120));
+	--lime: var(--light, oklch(0.5 0.15 120)) var(--dark, oklch(0.7 0.15 120));
+	--subtle-lime: var(--light, oklch(0.9 0.15 120)) var(--dark, oklch(0.3 0.15 120));
 
 	/* Magenta: */
-	--magenta: var(--is-light, oklch(0.5 0.2 330)) var(--is-dark, oklch(0.7 0.2 330));
-	--subtle-magenta: var(--is-light, oklch(0.9 0.2 330)) var(--is-dark, oklch(0.3 0.2 330));
+	--magenta: var(--light, oklch(0.5 0.2 330)) var(--dark, oklch(0.7 0.2 330));
+	--subtle-magenta: var(--light, oklch(0.9 0.2 330)) var(--dark, oklch(0.3 0.2 330));
 
 	/* Orange: */
-	--orange: var(--is-light, oklch(0.5 0.15 50)) var(--is-dark, oklch(0.7 0.15 50));
-	--subtle-orange: var(--is-light, oklch(0.9 0.15 50)) var(--is-dark, oklch(0.3 0.15 50));
+	--orange: var(--light, oklch(0.5 0.15 50)) var(--dark, oklch(0.7 0.15 50));
+	--subtle-orange: var(--light, oklch(0.9 0.15 50)) var(--dark, oklch(0.3 0.15 50));
 
 	/* Pink: */
-	--pink: var(--is-light, oklch(0.5 0.1 10)) var(--is-dark, oklch(0.7 0.1 10));
-	--subtle-pink: var(--is-light, oklch(0.9 0.1 10)) var(--is-dark, oklch(0.3 0.1 10));
+	--pink: var(--light, oklch(0.5 0.1 10)) var(--dark, oklch(0.7 0.1 10));
+	--subtle-pink: var(--light, oklch(0.9 0.1 10)) var(--dark, oklch(0.3 0.1 10));
 
 	/* Purple: */
-	--purple: var(--is-light, oklch(0.5 0.15 300)) var(--is-dark, oklch(0.7 0.15 300));
-	--subtle-purple: var(--is-light, oklch(0.9 0.15 300)) var(--is-dark, oklch(0.3 0.15 300));
+	--purple: var(--light, oklch(0.5 0.15 300)) var(--dark, oklch(0.7 0.15 300));
+	--subtle-purple: var(--light, oklch(0.9 0.15 300)) var(--dark, oklch(0.3 0.15 300));
 
 	/* Red: */
-	--red: var(--is-light, oklch(0.5 0.2 30)) var(--is-dark, oklch(0.7 0.2 30));
-	--subtle-red: var(--is-light, oklch(0.9 0.2 30)) var(--is-dark, oklch(0.3 0.2 30));
+	--red: var(--light, oklch(0.5 0.2 30)) var(--dark, oklch(0.7 0.2 30));
+	--subtle-red: var(--light, oklch(0.9 0.2 30)) var(--dark, oklch(0.3 0.2 30));
 
 	/* Violet: */
-	--violet: var(--is-light, oklch(0.5 0.15 290)) var(--is-dark, oklch(0.7 0.15 290));
-	--subtle-violet: var(--is-light, oklch(0.9 0.15 290)) var(--is-dark, oklch(0.3 0.15 290));
+	--violet: var(--light, oklch(0.5 0.15 290)) var(--dark, oklch(0.7 0.15 290));
+	--subtle-violet: var(--light, oklch(0.9 0.15 290)) var(--dark, oklch(0.3 0.15 290));
 
 	/* Yellow: */
-	--yellow: var(--is-light, oklch(0.5 0.15 90)) var(--is-dark, oklch(0.7 0.15 90));
-	--subtle-yellow: var(--is-light, oklch(0.9 0.15 90)) var(--is-dark, oklch(0.3 0.15 90));
+	--yellow: var(--light, oklch(0.5 0.15 90)) var(--dark, oklch(0.7 0.15 90));
+	--subtle-yellow: var(--light, oklch(0.9 0.15 90)) var(--dark, oklch(0.3 0.15 90));
 }
