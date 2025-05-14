@@ -24,22 +24,16 @@
 		--is-dark: var(--true);
 	}
 
-	/* Page Background Color: */
+	/* Background Color: */
 	--background-color: var(--is-light, oklch(1 0.01 260)) var(--is-dark, oklch(0.2 0.01 260));
 
-	/* Prioritized Color: */
-	--primary-color:
-	var(--is-light, oklch(1 0.01 260 / var(--highest-opacity)))
-	var(--is-dark, oklch(0.2 0.01 260 / var(--highest-opacity)));
-	--secondary-color:
-	var(--is-light, oklch(0.95 0.01 260 / var(--highest-opacity)))
-	var(--is-dark, oklch(0.25 0.01 260 / var(--highest-opacity)));
-	--tertiary-color:
-	var(--is-light, oklch(0.9 0.01 260 / var(--highest-opacity)))
-	var(--is-dark, oklch(0.3 0.01 260 / var(--highest-opacity)));
-
 	/* Backdrop Color: */
-	--backdrop-color: oklch(0 0 0 / var(--lower-opacity));
+	--backdrop-color: oklch(0.5 0 0 / var(--lowest-opacity));
+
+	/* Layered Color: */
+	--primary-color: var(--is-light, oklch(1 0.01 260)) var(--is-dark, oklch(0.2 0.01 260));
+	--secondary-color: var(--is-light, oklch(0.95 0.01 260)) var(--is-dark, oklch(0.25 0.01 260));
+	--tertiary-color: var(--is-light, oklch(0.9 0.01 260)) var(--is-dark, oklch(0.3 0.01 260));
 
 	/* Light and Dark Color: */
 	--light-color: oklch(1 0.01 260);
