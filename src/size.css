@@ -5,10 +5,10 @@
 :where(.semantic) {
 	/* Size Scale Ratio: */
 	--scale-ratio:
-	var(--is-watch, 1.067)
-	var(--is-phone, 1.125)
-	var(--is-tablet, 1.200)
-	var(--is-laptop-to-desktop, 1.250);
+	var(--watch, 1.067)
+	var(--phone, 1.125)
+	var(--tablet, 1.200)
+	var(--laptop-to-desktop, 1.250);
 
 	/* Base Sizes: */
 	--3x-small: max(0.25rem, var(--2x-small) / var(--scale-ratio)); /* 4px */
@@ -32,60 +32,59 @@
 
 	/* Margin Size: */
 	--margin-size:
-	var(--is-watch, var(--x-small))
-	var(--is-phone, var(--2x-large))
-	var(--is-tablet, var(--5x-large))
-	var(--is-laptop, var(--6x-large))
-	var(--is-desktop, var(--8x-large));
+	var(--watch, var(--x-small))
+	var(--phone, var(--2x-large))
+	var(--tablet, var(--4x-large))
+	var(--laptop-to-desktop, var(--5x-large));
 
 	/* Media Query Booleans: */
 	&:where(:not(& &), .watch, .phone, .tablet, .laptop, .desktop) {
-		--is-watch: var(--true);
-		--is-phone: var(--false);
-		--is-tablet: var(--false);
-		--is-laptop: var(--false);
-		--is-desktop: var(--false);
+		--watch: var(--true);
+		--phone: var(--false);
+		--tablet: var(--false);
+		--laptop: var(--false);
+		--desktop: var(--false);
 	}
 
 	&:where(:not(& &):not(.watch), .phone, .tablet, .laptop, .desktop) {
 		@media (min-width: 20rem) {
-			--is-watch: var(--false);
-			--is-phone: var(--true);
+			--watch: var(--false);
+			--phone: var(--true);
 		}
 	}
 
 	&:where(:not(& &):not(.watch, .phone), .tablet, .laptop, .desktop) {
-		@media (min-width: 48rem) {
-			--is-phone: var(--false);
-			--is-tablet: var(--true);
+		@media (min-width: 40rem) {
+			--phone: var(--false);
+			--tablet: var(--true);
 		}
 	}
 
 	&:where(:not(& &):not(.watch, .phone, .tablet), .laptop, .desktop) {
-		@media (min-width: 80rem) {
-			--is-tablet: var(--false);
-			--is-laptop: var(--true);
+		@media (min-width: 60rem) {
+			--tablet: var(--false);
+			--laptop: var(--true);
 		}
 	}
 
 	&:where(:not(& &):not(.watch, .phone, .tablet, .laptop), .desktop) {
-		@media (min-width: 100rem) {
-			--is-laptop: var(--false);
-			--is-desktop: var(--true);
+		@media (min-width: 80rem) {
+			--laptop: var(--false);
+			--desktop: var(--true);
 		}
 	}
 
 	/* Media Query Range Booleans: */
-	--is-watch-to-phone: var(--is-watch) var(--is-phone);
-	--is-watch-to-tablet: var(--is-watch-to-phone) var(--is-tablet);
-	--is-watch-to-laptop: var(--is-watch-to-tablet) var(--is-laptop);
+	--watch-to-phone: var(--watch) var(--phone);
+	--watch-to-tablet: var(--watch-to-phone) var(--tablet);
+	--watch-to-laptop: var(--watch-to-tablet) var(--laptop);
 
-	--is-phone-to-tablet: var(--is-phone) var(--is-tablet);
-	--is-phone-to-laptop: var(--is-phone-to-tablet) var(--is-laptop);
-	--is-phone-to-desktop: var(--is-phone-to-laptop) var(--is-desktop);
+	--phone-to-tablet: var(--phone) var(--tablet);
+	--phone-to-laptop: var(--phone-to-tablet) var(--laptop);
+	--phone-to-desktop: var(--phone-to-laptop) var(--desktop);
 
-	--is-tablet-to-laptop: var(--is-tablet) var(--is-laptop);
-	--is-tablet-to-desktop: var(--is-tablet-to-laptop) var(--is-desktop);
+	--tablet-to-laptop: var(--tablet) var(--laptop);
+	--tablet-to-desktop: var(--tablet-to-laptop) var(--desktop);
 
-	--is-laptop-to-desktop: var(--is-laptop) var(--is-desktop);
+	--laptop-to-desktop: var(--laptop) var(--desktop);
 }
