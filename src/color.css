@@ -35,14 +35,14 @@
 	--secondary-black: oklch(0.25 0.01 260);
 	--tertiary-black: oklch(0.3 0.01 260);
 
-	--black-text-shadow: 0 0 1px oklch(0.8 0.01 260);
+	--black-text-shadow: 0 0 1pt oklch(0.8 0.01 260);
 
 	/* Blue */
 	--primary-blue: oklch(0.6 0.15 240);
 	--secondary-blue: oklch(0.55 0.15 240);
 	--tertiary-blue: oklch(0.5 0.15 240);
 
-	--blue-text-shadow: 0 0 1px oklch(0.4 0.15 240);
+	--blue-text-shadow: 0 0 1pt oklch(0.4 0.15 240);
 
 	/* Body Color: */
 	--primary-body: var(--light, var(--primary-white)) var(--dark, var(--primary-black));
@@ -56,21 +56,21 @@
 	--secondary-brown: oklch(0.55 0.05 50);
 	--tertiary-brown: oklch(0.5 0.05 50);
 
-	--brown-text-shadow: 0 0 1px oklch(0.4 0.05 50);
+	--brown-text-shadow: 0 0 1pt oklch(0.4 0.05 50);
 
 	/* Coral: */
 	--primary-coral: oklch(0.7 0.2 40);
 	--secondary-coral: oklch(0.65 0.2 40);
 	--tertiary-coral: oklch(0.6 0.2 40);
 
-	--coral-text-shadow: 0 0 1px oklch(0.4 0.2 40);
+	--coral-text-shadow: 0 0 1pt oklch(0.4 0.2 40);
 
 	/* Cyan: */
 	--primary-cyan: oklch(0.7 0.15 180);
 	--secondary-cyan: oklch(0.65 0.15 180);
 	--tertiary-cyan: oklch(0.6 0.15 180);
 
-	--cyan-text-shadow: 0 0 1px oklch(0.4 0.15 180);
+	--cyan-text-shadow: 0 0 1pt oklch(0.4 0.15 180);
 
 	/* Gray: */
 	--primary-gray: var(--light, oklch(0.6 0.01 260)) var(--dark, oklch(0.5 0.01 260));
@@ -86,56 +86,56 @@
 	--secondary-green: oklch(0.55 0.2 150);
 	--tertiary-green: oklch(0.5 0.2 150);
 
-	--green-text-shadow: 0 0 1px oklch(0.4 0.2 150);
+	--green-text-shadow: 0 0 1pt oklch(0.4 0.2 150);
 
 	/* Indigo: */
 	--primary-indigo: oklch(0.4 0.2 270);
 	--secondary-indigo: oklch(0.35 0.2 270);
 	--tertiary-indigo: oklch(0.3 0.2 270);
 
-	--indigo-text-shadow: 0 0 1px oklch(0.8 0.2 270);
+	--indigo-text-shadow: 0 0 1pt oklch(0.8 0.2 270);
 
 	/* Lime: */
 	--primary-lime: oklch(0.7 0.15 120);
 	--secondary-lime: oklch(0.65 0.15 120);
 	--tertiary-lime: oklch(0.6 0.15 120);
 
-	--lime-text-shadow: 0 0 1px oklch(0.4 0.15 120);
+	--lime-text-shadow: 0 0 1pt oklch(0.4 0.15 120);
 
 	/* Magenta: */
 	--primary-magenta: oklch(0.6 0.2 330);
 	--secondary-magenta: oklch(0.55 0.2 330);
 	--tertiary-magenta: oklch(0.5 0.2 330);
 
-	--magenta-text-shadow: 0 0 1px oklch(0.4 0.2 330);
+	--magenta-text-shadow: 0 0 1pt oklch(0.4 0.2 330);
 
 	/* Orange: */
 	--primary-orange: oklch(0.6 0.15 50);
 	--secondary-orange: oklch(0.55 0.15 50);
 	--tertiary-orange: oklch(0.5 0.15 50);
 
-	--orange-text-shadow: 0 0 1px oklch(0.4 0.15 50);
+	--orange-text-shadow: 0 0 1pt oklch(0.4 0.15 50);
 
 	/* Pink: */
 	--primary-pink: oklch(0.8 0.1 10);
 	--secondary-pink: oklch(0.75 0.1 10);
 	--tertiary-pink: oklch(0.7 0.1 10);
 
-	--pink-text-shadow: 0 0 1px oklch(0.4 0.1 10);
+	--pink-text-shadow: 0 0 1pt oklch(0.4 0.1 10);
 
 	/* Purple: */
 	--primary-purple: oklch(0.4 0.15 300);
 	--secondary-purple: oklch(0.35 0.15 300);
 	--tertiary-purple: oklch(0.3 0.15 300);
 
-	--purple-text-shadow: 0 0 1px oklch(0.8 0.15 300);
+	--purple-text-shadow: 0 0 1pt oklch(0.8 0.15 300);
 
 	/* Red: */
 	--primary-red: oklch(0.5 0.2 30);
 	--secondary-red: oklch(0.45 0.2 30);
 	--tertiary-red: oklch(0.4 0.2 30);
 
-	--red-text-shadow: 0 0 1px oklch(0.8 0.2 30);
+	--red-text-shadow: 0 0 1pt oklch(0.8 0.2 30);
 
 	/* Text Color: */
 	--primary-text: var(--light, var(--primary-black)) var(--dark, var(--primary-white));
@@ -149,14 +149,14 @@
 	--secondary-violet: oklch(0.35 0.15 290);
 	--tertiary-violet: oklch(0.3 0.15 290);
 
-	--violet-text-shadow: 0 0 1px oklch(0.8 0.15 290);
+	--violet-text-shadow: 0 0 1pt oklch(0.8 0.15 290);
 
 	/* White: */
 	--primary-white: oklch(1 0.01 260);
 	--secondary-white: oklch(0.95 0.01 260);
 	--tertiary-white: oklch(0.9 0.01 260);
 
-	--white-text-shadow: 0 0 1px oklch(0.4 0.01 260);
+	--white-text-shadow: 0 0 1pt oklch(0.4 0.01 260);
 
 	/* Yellow: */
 	--primary-yellow: oklch(0.8 0.15 90);
