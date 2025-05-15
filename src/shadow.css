@@ -1,6 +1,9 @@
-/* Semantic Props for CSS box-shadow or drop-shadow filter value. */
+/* Semantic Props for CSS text-shadow, box-shadow and drop-shadow filter. */
 
 :where(.semantic) {
+	/* Text-Shadow: */
+	--text-shadow: 0 0 min(0.125em, 4px) white, 0 0 min(0.125em, 4px) black;
+
 	/* Box-Shadow: */
 	--lightest-box-shadow: 0 2px 3px rgb(0 0 0 / 0.1);
 	--lighter-box-shadow: 0 5px 4px rgb(0 0 0 / 0.1);
