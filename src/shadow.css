@@ -2,10 +2,7 @@
 
 :where(.semantic) {
 	/* Text-Shadow: */
-	--text-shadow: 0 0 min(0.125em, 2px) black, 0 0 min(0.125em, 4px) white;
-	@supports (color: oklch(from currentColor l c h)) {
-		--text-shadow: 0 0 min(0.125em, 2px) oklch(from currentColor calc(1 - l) c h);
-	}
+	--text-shadow: 0 0 1px black, 0 0 2px white;
 
 	/* Box-Shadow: */
 	--lightest-box-shadow: 0 2px 3px rgb(0 0 0 / 0.1);
