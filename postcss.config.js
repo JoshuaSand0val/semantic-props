@@ -3,6 +3,7 @@ export default {
 		"postcss-import": {},
 		"postcss-nesting": {},
 		"@csstools/postcss-oklab-function": {},
+		"autoprefixer": {},
 		"cssnano": {
 			preset: "default"
 		}
