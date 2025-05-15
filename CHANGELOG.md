@@ -11,7 +11,7 @@ A **breaking change** release that greatly improves browser compatibility, file 
 - Added color, query boolean props and classes. Value `--true` is `initial` and `--false` is whitespace.
 - Added new `-radius` props for applying `border-radius`.
 - Added new color system using light, dark and prioritized values.
-- Added `text` and `box-shadow` variants of `shadow` props.
+- Added `box-shadow` variants of `shadow` props.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
 
