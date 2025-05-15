@@ -28,11 +28,6 @@
 	--secondary-accent: var(--secondary-blue);
 	--tertiary-accent: var(--tertiary-blue);
 
-	/* Background Color: */
-	--primary-background: var(--light, var(--primary-white)) var(--dark, var(--primary-black));
-	--secondary-background: var(--light, var(--secondary-white)) var(--dark, var(--secondary-black));
-	--tertiary-background: var(--light, var(--tertiary-white)) var(--dark, var(--tertiary-black));
-
 	/* Black: */
 	--primary-black: oklch(0.2 0.01 260);
 	--secondary-black: oklch(0.25 0.01 260);
@@ -42,6 +37,11 @@
 	--primary-blue: oklch(0.6 0.15 240);
 	--secondary-blue: oklch(0.55 0.15 240);
 	--tertiary-blue: oklch(0.5 0.15 240);
+
+	/* Body Color: */
+	--primary-body: var(--light, var(--primary-white)) var(--dark, var(--primary-black));
+	--secondary-body: var(--light, var(--secondary-white)) var(--dark, var(--secondary-black));
+	--tertiary-body: var(--light, var(--tertiary-white)) var(--dark, var(--tertiary-black));
 
 	/* Brown: */
 	--primary-brown: oklch(0.6 0.05 50);
