@@ -2,7 +2,7 @@
 
 :where(.semantic) {
 	/* Text-Shadow: */
-	--text-shadow: 0 0 1px black, 0 0 2px white;
+	--text-shadow: 0 0 1pt var(--primary-text), 0 0 1pt var(--primary-body);
 
 	/* Box-Shadow: */
 	--lightest-box-shadow: 0 2px 3px rgb(0 0 0 / 0.1);
