@@ -83,6 +83,11 @@
 	--medium-magenta: oklch(0.6 0.2 330);
 	--dark-magenta: oklch(0.5 0.2 330);
 
+	/* Neutral Color: */
+	--light-neutral: oklch(1 0.01 260);
+	--medium-neutral: oklch(0.6 0.01 260);
+	--dark-neutral: oklch(0.2 0.01 260);
+
 	/* Orange: */
 	--light-orange: oklch(0.7 0.15 50);
 	--medium-orange: oklch(0.6 0.15 50);
