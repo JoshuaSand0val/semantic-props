@@ -23,17 +23,23 @@
 		--dark: var(--true);
 	}
 
-	/* Theme Palette: */
+	/* Primary Color: */
+	--lightest-primary: var(--lightest-neutral);
+	--lighter-primary: var(--lighter-neutral);
+	--light-primary: var(--light-neutral);
 
-	/* Primary/Secondary/Tertiary Colors: */
-	--primary-color: var(--light, var(--lightest-neutral)) var(--dark, var(--darkest-neutral));
-	--secondary-color: var(--light, var(--lighter-neutral)) var(--dark, var(--darker-neutral));
-	--tertiary-color: var(--light, var(--light-neutral)) var(--dark, var(--dark-neutral));
+	--dark-primary: var(--dark-neutral);
+	--darker-primary: var(--darker-neutral);
+	--darkest-primary: var(--darkest-neutral);
 
-	/* (High) Contrast Color: */
-	--contrast-color: var(--light, var(--darkest-neutral)) var(--dark, var(--lightest-neutral));
+	/* Secondary Color: */
+	--lightest-secondary: var(--lightest-neutral);
+	--lighter-secondary: var(--lighter-neutral);
+	--light-secondary: var(--light-neutral);
 
-	/* Color Palette: */
+	--dark-secondary: var(--dark-neutral);
+	--darker-secondary: var(--darker-neutral);
+	--darkest-secondary: var(--darkest-neutral);
 
 	/* Accent Color: */
 	--lightest-accent: var(--lightest-blue);
