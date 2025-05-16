@@ -5,7 +5,7 @@
 	--smaller-container: 15rem; /* 240px */
 	--small-container: 20rem; /* 320px */
 	--medium-container: 30rem; /* 480px */
-	--large-container: 48rem; /* 768px */
-	--larger-container: 80rem; /* 1280px */
-	--largest-container: 100rem; /* 1600px */
+	--large-container: 40rem; /* 640px */
+	--larger-container: 60rem; /* 960px */
+	--largest-container: 80rem; /* 1280px */
 }

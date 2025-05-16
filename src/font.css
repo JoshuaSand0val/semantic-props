@@ -15,9 +15,9 @@
 	--heavy-weight: 900;
 
 	/* Letter-Spacing: */
-	--dense-letters: -0.05em;
-	--normal-letters: normal;
-	--wide-letters: 0.1em;
+	--dense-letter: -0.05em;
+	--normal-letter: normal;
+	--wide-letter: 0.1em;
 
 	/* Line-Height: */
 	--short-line: 1.25;
@@ -25,7 +25,7 @@
 	--tall-line: 2;
 
 	/* Word-Spacing: */
-	--dense-words: -0.1em;
-	--normal-words: normal;
-	--wide-words: 0.1em;
+	--dense-word: -0.1em;
+	--normal-word: normal;
+	--wide-word: 0.1em;
 }
