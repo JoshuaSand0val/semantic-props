@@ -24,9 +24,9 @@
 	}
 
 	/* Primary Color: */
-	--light-primary: var(--light, oklch(1 0.01 260)) var(--dark, oklch(0.2 0.01 260));
-	--medium-primary: var(--light, oklch(0.95 0.01 260)) var(--dark, oklch(0.15 0.01 260));
-	--dark-primary: var(--light, oklch(0.9 0.01 260)) var(--dark, oklch(0.1 0.01 260));
+	--light-primary: var(--light, oklch(1 0.01 260)) var(--dark, oklch(0.25 0.01 260));
+	--medium-primary: var(--light, oklch(0.95 0.01 260)) var(--dark, oklch(0.2 0.01 260));
+	--dark-primary: var(--light, oklch(0.9 0.01 260)) var(--dark, oklch(0.15 0.01 260));
 
 	/* Secondary Color: */
 	--light-secondary: var(--light, oklch(0.3 0.01 260)) var(--dark, oklch(1 0.01 260));
