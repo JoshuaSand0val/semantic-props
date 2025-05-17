@@ -1,0 +1,10 @@
+/* Semantic Props for CSS table properties. */
+
+:where(.semantic) {
+	/* Caption-Side: */
+	--caption-side: top;
+	--reverse-caption-side: bottom;
+
+	/* Empty-Cells: */
+	--empty-cells: show;
+}
