@@ -13,17 +13,17 @@
 	--heaviest-text-shadow: 0 10px 10px rgb(0 0 0 / 0.3);
 
 	--text-contrast-shadow:
-	-1px -1px var(--fifth-text), 0 -1px var(--fifth-text),
-	1px -1px var(--fifth-text), 1px 0 var(--fifth-text),
-	1px 1px var(--fifth-text), 0 1px var(--fifth-text),
-	-1px 1px var(--fifth-text), -1px 0 var(--fifth-text);
+	-1px -1px var(--contrast-body), 0 -1px var(--contrast-body),
+	1px -1px var(--contrast-body), 1px 0 var(--contrast-body),
+	1px 1px var(--contrast-body), 0 1px var(--contrast-body),
+	-1px 1px var(--contrast-body), -1px 0 var(--contrast-body);
 
 	@media (min-resolution: 2x) {
 		--text-contrast-shadow:
-		-0.5px -0.5px var(--fifth-text), 0 -0.5px var(--fifth-text),
-		0.5px -0.5px var(--fifth-text), 0.5px 0 var(--fifth-text),
-		0.5px 0.5px var(--fifth-text), 0 0.5px var(--fifth-text),
-		-0.5px 0.5px var(--fifth-text), -0.5px 0 var(--fifth-text);
+		-0.5px -0.5px var(--contrast-body), 0 -0.5px var(--contrast-body),
+		0.5px -0.5px var(--contrast-body), 0.5px 0 var(--contrast-body),
+		0.5px 0.5px var(--contrast-body), 0 0.5px var(--contrast-body),
+		-0.5px 0.5px var(--contrast-body), -0.5px 0 var(--contrast-body);
 	}
 
 	/* Box-Shadow: */
