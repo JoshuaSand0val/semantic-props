@@ -19,6 +19,15 @@
 	--heavier-box-shadow: 0 9px 9px rgb(0 0 0 / 0.2);
 	--heaviest-box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
 
+	/* Box-Shadow (Inset): */
+	--lightest-inset-shadow: inset 0 2px 3px rgb(0 0 0 / 0.1);
+	--lighter-inset-shadow: inset 0 5px 4px rgb(0 0 0 / 0.1);
+	--light-inset-shadow: inset 0 7px 5px rgb(0 0 0 / 0.1);
+	--medium-inset-shadow: inset 0 8px 8px rgb(0 0 0 / 0.15);
+	--heavy-inset-shadow: inset 0 8px 8px rgb(0 0 0 / 0.2);
+	--heavier-inset-shadow: inset 0 9px 9px rgb(0 0 0 / 0.2);
+	--heaviest-inset-shadow: inset 0 10px 10px rgb(0 0 0 / 0.2);
+
 	/* Drop-Shadow (Filter): */
 	--lightest-shadow: drop-shadow(0 2px 3px rgb(0 0 0 / 0.1));
 	--lighter-shadow: drop-shadow(0 5px 4px rgb(0 0 0 / 0.1));
