@@ -24,7 +24,7 @@
 		display: inline-block;
 		inline-size: fit-content;
 		max-inline-size: min(100%, var(--medium-container));
-		margin-block: var(--large) var(--medium);
+		margin-block: 0 var(--medium);
 		margin-inline-end: var(--small);
 		:global(& + &) {
 			margin-block-start: 0;

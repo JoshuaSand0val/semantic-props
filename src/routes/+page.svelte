@@ -5,8 +5,10 @@
     import Paragraph from "$lib/components/Paragraph.svelte";
 </script>
 
-<small class="copyright">&copy; {new Date().getFullYear()} Joshua Elijah Sandoval.</small>
-<small class="version">v2.0.0 (MIT)</small>
+<div class="info">
+	<small class="copyright">&copy; {new Date().getFullYear()} Joshua Elijah Sandoval.</small>
+	<small class="version">v2.0.0 (MIT)</small>
+</div>
 
 <Heading level={4}>Stylesheets made simple.</Heading>
 <Heading level={1}>
@@ -22,6 +24,10 @@
 ...
 
 <style>
+	.info {
+		overflow: hidden;
+	}
+
 	.copyright, .version {
 		display: block;
 		font-size: var(--small);
