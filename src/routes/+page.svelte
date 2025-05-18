@@ -77,10 +77,10 @@
 
 	@keyframes title {
 		from {
-			filter: hue-rotate(0deg) var(--light-shadow);
+			filter: hue-rotate(0deg) var(--lightest-shadow);
 		}
 		to {
-			filter: hue-rotate(-360deg) var(--light-shadow);
+			filter: hue-rotate(-360deg) var(--lightest-shadow);
 		}
 	}
 </style>
