@@ -20,7 +20,7 @@
 		:global(& + &) {
 			margin-block-start: 0;
 		}
-		:global(:not(&) + &) {
+		:global(&:has(+ :not(&))) {
 			margin-block-end: var(--x-large);
 		}
 	}
@@ -34,7 +34,7 @@
 	[aria-level="2"],
 	[aria-level="4"],
 	[aria-level="6"] {
-		color: var(--fifth-text-color);
+		color: var(--third-text-color);
 		font-weight: var(--light-weight);
 	}
 
