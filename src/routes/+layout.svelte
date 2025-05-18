@@ -30,6 +30,7 @@
 	:global(:root) {
 		scroll-behavior: smooth;
 		background-color: var(--primary-body-color);
+		background-image: linear-gradient(var(--secondary-body-color), var(--primary-body-color));
 		color: var(--primary-text-color);
 		font-family: var(--body-family);
 		line-height: var(--normal-line);
