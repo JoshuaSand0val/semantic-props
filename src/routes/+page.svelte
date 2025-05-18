@@ -52,7 +52,7 @@
 			var(--primary-violet)
 		);
 		background-clip: text;
-		color: var(--secondary-white);
+		color: var(--secondary-body-color);
 		animation: title 3s infinite both;
 		@media (prefers-reduced-motion: reduce) {
 			animation: none;
