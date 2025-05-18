@@ -3,7 +3,7 @@
 </script>
 
 <div class="container">
-	<main class="content">
+	<main class="content semantic tablet">
 		{@render children()}
 	</main>
 </div>
@@ -51,7 +51,7 @@
 
 	.content {
 		display: block;
-		inline-size: min(var(--largest-container), 100%);
+		inline-size: min(var(--larger-container), 100%);
 		flex: 1 0 auto;
 		transition: padding var(--faster-time) var(--ease-in);
 		padding: var(--margin-size);
