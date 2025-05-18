@@ -16,8 +16,9 @@
 
 	:global(:root) {
 		background-color: var(--primary-body-color);
+		background-image: linear-gradient(123deg, var(--primary-body-color), var(--secondary-body-color));
 		color: var(--primary-text-color);
-		line-height: var(--line-normal);
+		line-height: var(--normal-line);
 	}
 
 	:global(:root, body),
