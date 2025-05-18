@@ -10,10 +10,17 @@
 
 <details open={open}>
 	<summary>{title}</summary>
-	{@render children()}
+	<div class="content">
+		{@render children()}
+	</div>
 </details>
 
 <style>
+	details, .content {
+		display: block;
+		margin-block: var(--x-large) var(--large);
+	}
+
 	summary {
 		display: list-item;
 		font-size: var(--x-large);
@@ -23,6 +30,5 @@
 		color: var(--secondary-text-color);
 		padding-block-end: var(--3x-small);
 		padding-inline-start: 1px;
-		margin-block: var(--x-large) var(--large);
 	}
 </style>
