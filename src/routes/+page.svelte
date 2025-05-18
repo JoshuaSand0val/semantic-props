@@ -3,19 +3,8 @@
     import TableOfContents from "$lib/blocks/TableOfContents.svelte";
     import CodeBlock from "$lib/components/CodeBlock.svelte";
 	import Heading from "$lib/components/Heading.svelte";
-    import Link from "$lib/components/Link.svelte";
 </script>
 
-<aside class="info">
-	<span class="copyright">
-		&copy; {new Date().getFullYear()}
-		<Link to="https://heyjes.dev/">Joshua Elijah Sandoval.</Link>
-	</span>
-	<ul class="about">
-		<li><Link to="https://github.com/JoshuaSand0val/semantic-props/">Github</Link></li>
-		<li class="version">v2.0.0 (MIT)</li>
-	</ul>
-</aside>
 
 <Heading level={4}>Stylesheets made simple.</Heading>
 <Heading level={1}>
@@ -28,32 +17,6 @@
 <BuiltWith />
 
 <style>
-	.info {
-		display: flex;
-		flex-flow: row wrap;
-		align-items: start;
-		font-size: var(--x-small);
-		font-family: var(--body-family);
-		color: var(--fifth-text-color);
-		gap: var(--3x-small) 1ch;
-		overflow: hidden;
-	}
-
-	.about {
-		display: flex;
-		flex-flow: row wrap;
-		margin-block: 0;
-		margin-inline: auto 0;
-		li {
-			list-style: inside;
-			margin-inline-start: 1ch;
-			&:first-child {
-				list-style-type: none;
-				margin-inline-start: 0;
-			}
-		}
-	}
-
 	.title {
 		-webkit-text-stroke: min(0.0625em, 4px) transparent;
 		background-image: linear-gradient(123deg,

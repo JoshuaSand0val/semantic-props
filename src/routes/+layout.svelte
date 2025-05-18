@@ -1,4 +1,6 @@
 <script>
+    import Footer from '$lib/blocks/Footer.svelte';
+
 	let { children } = $props();
 </script>
 
@@ -6,6 +8,7 @@
 	<main class="content semantic tablet">
 		{@render children()}
 	</main>
+	<Footer />
 </div>
 
 <style>
