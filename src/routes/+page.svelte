@@ -1,7 +1,7 @@
 <script>
     import BuiltWith from "$lib/blocks/BuiltWith.svelte";
+    import TableOfContents from "$lib/blocks/TableOfContents.svelte";
     import CodeBlock from "$lib/components/CodeBlock.svelte";
-	import Divider from "$lib/components/Divider.svelte";
 	import Heading from "$lib/components/Heading.svelte";
     import Link from "$lib/components/Link.svelte";
 </script>
@@ -24,9 +24,7 @@
 <CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
 <CodeBlock description="Scoping Class" lang="html" code='<html class="semantic">...</html>' />
 
-<Divider title="Table of Contents" />
-...
-
+<TableOfContents />
 <BuiltWith />
 
 <style>

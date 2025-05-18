@@ -1,14 +1,21 @@
 <script lang="ts">
-	let { title }: {
-		title: string
+	import type { Snippet } from "svelte";
+
+	let { children, title, open = true }: {
+		children: Snippet,
+		title: string,
+		open?: boolean
 	} = $props();
 </script>
 
-<div class="container">{title}</div>
+<details open={open}>
+	<summary>{title}</summary>
+	{@render children()}
+</details>
 
 <style>
-	.container {
-		display: block;
+	summary {
+		display: list-item;
 		font-size: var(--x-large);
 		font-family: var(--display-family);
 		line-height: var(--shorter-line);

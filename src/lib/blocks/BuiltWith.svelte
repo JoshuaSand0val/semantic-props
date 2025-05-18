@@ -4,18 +4,18 @@
 	import Portal from "$lib/components/Portal.svelte";
 </script>
 
-<Divider title="Built using Semantic Props" />
-<Paragraph>A curation of designs created using Semantic Props.</Paragraph>
-
-<div class="grid">
-	<Portal
-		title="Hey, Jes!"
-		description="Portfolio website by Jess Sandoval."
-		url="https://heyjes.dev/"
-		image="built-with/heyjesdev.png"
-		imageDark="built-with/heyjesdev-dark.png"
-	/>
-</div>
+<Divider title="Built using Semantic Props" open={false}>
+	<Paragraph>A curation of designs created using Semantic Props.</Paragraph>
+	<div class="grid" id="builtwith">
+		<Portal
+			title="Hey, Jes!"
+			description="Portfolio website by Jess Sandoval."
+			url="https://heyjes.dev/"
+			image="built-with/heyjesdev.png"
+			imageDark="built-with/heyjesdev-dark.png"
+		/>
+	</div>
+</Divider>
 
 <style>
 	.grid {
