@@ -12,7 +12,7 @@
 		font-size: var(--x-large);
 		font-family: var(--display-family);
 		line-height: var(--shorter-line);
-		border-block-end: 1px var(--border-style) var(--fifth-body-color);
+		border-block-end: 1px var(--border-style) var(--fourth-body-color);
 		color: var(--secondary-text-color);
 		padding-block-end: var(--3x-small);
 		padding-inline-start: 1px;
