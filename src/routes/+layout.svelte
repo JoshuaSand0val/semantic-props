@@ -17,6 +17,7 @@
 	:global(:root) {
 		background-color: var(--primary-body-color);
 		color: var(--primary-text-color);
+		line-height: var(--line-normal);
 	}
 
 	:global(:root, body),
@@ -34,6 +35,8 @@
 
 	.content {
 		display: block;
+		inline-size: min(var(--largest-container), 100%);
 		flex: 1 0 auto;
+		margin-inline: auto;
 	}
 </style>

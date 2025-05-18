@@ -34,13 +34,12 @@
 	[aria-level="2"],
 	[aria-level="4"],
 	[aria-level="6"] {
-		text-shadow: var(--text-stroke-shadow);
-		color: var(--primary-gray);
+		color: var(--fifth-text-color);
 		font-weight: var(--light-weight);
 	}
 
 	[aria-level="1"] {
-		font-size: var(--7x-large);
+		font-size: var(--8x-large);
 	}
 
 	[aria-level="2"] {
