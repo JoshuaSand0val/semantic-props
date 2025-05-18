@@ -24,20 +24,20 @@
 <CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
 <CodeBlock description="Scoping Class" lang="html" code='<html class="semantic">...</html>' />
 
-<BuiltWith />
-
-<Divider title="Semantic Props" />
+<Divider title="Table of Contents" />
 ...
+
+<BuiltWith />
 
 <style>
 	.info {
 		display: flex;
 		flex-flow: row wrap;
 		align-items: start;
-		font-size: var(--small);
+		font-size: var(--x-small);
 		font-family: var(--body-family);
 		color: var(--fifth-text-color);
-		gap: var(--3x-small);
+		gap: var(--3x-small) 1ch;
 		overflow: hidden;
 	}
 
@@ -47,9 +47,11 @@
 		margin-block: 0;
 		margin-inline: auto 0;
 		li {
-			margin-inline-start: 3ch;
+			list-style: inside;
+			margin-inline-start: 1ch;
 			&:first-child {
 				list-style-type: none;
+				margin-inline-start: 0;
 			}
 		}
 	}
@@ -75,10 +77,10 @@
 
 	@keyframes title {
 		from {
-			filter: hue-rotate(0deg)var(--lightest-shadow);
+			filter: hue-rotate(0deg) var(--light-shadow);
 		}
 		to {
-			filter: hue-rotate(-360deg) var(--lightest-shadow);
+			filter: hue-rotate(-360deg) var(--light-shadow);
 		}
 	}
 </style>
