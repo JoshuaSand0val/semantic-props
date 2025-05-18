@@ -38,6 +38,7 @@
 		display: block;
 		inline-size: min(var(--largest-container), 100%);
 		flex: 1 0 auto;
+		padding: var(--safe-main);
 		margin-inline: auto;
 	}
 </style>
