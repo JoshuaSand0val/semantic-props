@@ -9,7 +9,6 @@
 <style>
 	.container {
 		display: block;
-		max-inline-size: var(--larger-container);
 		font-size: var(--x-large);
 		font-family: var(--display-family);
 		line-height: var(--shorter-line);

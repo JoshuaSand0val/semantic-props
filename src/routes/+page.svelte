@@ -1,9 +1,9 @@
 <script>
+    import BuiltWith from "$lib/blocks/BuiltWith.svelte";
     import CodeBlock from "$lib/components/CodeBlock.svelte";
 	import Divider from "$lib/components/Divider.svelte";
 	import Heading from "$lib/components/Heading.svelte";
     import Link from "$lib/components/Link.svelte";
-    import Paragraph from "$lib/components/Paragraph.svelte";
 </script>
 
 <aside class="info">
@@ -24,8 +24,7 @@
 <CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
 <CodeBlock description="Scoping Class" lang="html" code='<html class="semantic">...</html>' />
 
-<Divider title="Built using Semantic Props" />
-<Paragraph>A curation of designs created using Semantic Props.</Paragraph>
+<BuiltWith />
 
 <Divider title="Semantic Props" />
 ...
