@@ -13,7 +13,7 @@
 <style>
 	.container {
 		display: block;
-		transition: padding var(--x-fast-time) var(--ease-in);
+		transition: padding var(--faster-time) var(--ease-in);
 		padding: var(--margin-size);
 		margin-inline: auto;
 	}

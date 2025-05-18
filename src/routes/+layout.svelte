@@ -15,8 +15,8 @@
 	}
 
 	:global(:root) {
-		background-color: var(--primary-background);
-		color: var(--primary-neutral);
+		background-color: var(--primary-body-color);
+		color: var(--primary-text-color);
 	}
 
 	:global(:root, body),

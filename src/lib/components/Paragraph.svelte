@@ -13,8 +13,8 @@
 <style>
 	.container {
 		display: block;
-		font-family: var(--body-font);
-		line-height: var(--line-normal);
-		margin-block: var(--medium-size);
+		font-family: var(--body-family);
+		line-height: var(--normal-line);
+		margin-block: var(--medium);
 	}
 </style>
