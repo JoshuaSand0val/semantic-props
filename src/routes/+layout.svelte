@@ -16,7 +16,11 @@
 
 	:global(:root) {
 		background-color: var(--primary-body-color);
-		background-image: linear-gradient(123deg, var(--primary-body-color), var(--secondary-body-color));
+		background-image:
+		radial-gradient(var(--secondary-body-color) 15%, transparent 16%),
+		linear-gradient(123deg, var(--primary-body-color), var(--secondary-body-color));
+		background-size: var(--3x-small) var(--3x-small), 100% 100%;
+		background-repeat: repeat;
 		color: var(--primary-text-color);
 		line-height: var(--normal-line);
 	}
