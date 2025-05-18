@@ -57,7 +57,7 @@
 	}
 
 	.title {
-		-webkit-text-stroke: 3px transparent;
+		-webkit-text-stroke: 5px transparent;
 		background-image: linear-gradient(123deg,
 			var(--primary-red),
 			var(--primary-orange),
