@@ -38,7 +38,10 @@
 		display: block;
 		inline-size: min(var(--largest-container), 100%);
 		flex: 1 0 auto;
-		padding: var(--safe-main);
+		transition: padding var(--faster-time) var(--ease-in);
+		padding: var(--margin-size);
+		padding-right: max(var(--safe-right), var(--margin-size));
+		padding-left: max(var(--safe-left), var(--margin-size));
 		margin-inline: auto;
 	}
 </style>
