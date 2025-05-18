@@ -2,13 +2,20 @@
     import CodeBlock from "$lib/components/CodeBlock.svelte";
 	import Divider from "$lib/components/Divider.svelte";
 	import Heading from "$lib/components/Heading.svelte";
+    import Link from "$lib/components/Link.svelte";
     import Paragraph from "$lib/components/Paragraph.svelte";
 </script>
 
-<div class="info">
-	<small class="copyright">&copy; {new Date().getFullYear()} Joshua Elijah Sandoval.</small>
-	<small class="version">v2.0.0 (MIT)</small>
-</div>
+<aside class="info">
+	<span class="copyright">
+		&copy; {new Date().getFullYear()}
+		<Link to="https://heyjes.dev/">Joshua Elijah Sandoval.</Link>
+	</span>
+	<ul class="about">
+		<li><Link to="https://github.com/JoshuaSand0val/semantic-props/">Github</Link></li>
+		<li class="version">v2.0.0 (MIT)</li>
+	</ul>
+</aside>
 
 <Heading level={4}>Stylesheets made simple.</Heading>
 <Heading level={1}>
@@ -25,19 +32,27 @@
 
 <style>
 	.info {
-		overflow: hidden;
-	}
-
-	.copyright, .version {
-		display: block;
+		display: flex;
+		flex-flow: row wrap;
+		align-items: start;
 		font-size: var(--small);
 		font-family: var(--body-family);
 		color: var(--fifth-text-color);
-		float: left;
+		gap: var(--3x-small);
+		overflow: hidden;
 	}
 
-	.version {
-		float: right;
+	.about {
+		display: flex;
+		flex-flow: row wrap;
+		margin-block: 0;
+		margin-inline: auto 0;
+		li {
+			margin-inline-start: 3ch;
+			&:first-child {
+				list-style-type: none;
+			}
+		}
 	}
 
 	.title {
