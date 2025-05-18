@@ -53,7 +53,7 @@
 		border: 1px var(--border-style) var(--third-body-color);
 		border-block-end-width: 3px;
 		background-clip: border-box;
-		background-color: var(--primary-body-color);
+		background-color: var(--secondary-body-color);
 		color: var(--primary-gray);
 		text-shadow: var(--light, var(--text-stroke-shadow));
 		padding-block-start: var(--small);
