@@ -30,6 +30,7 @@
 	:global(:root) {
 		background-color: var(--primary-body-color);
 		color: var(--primary-text-color);
+		font-family: var(--body-family);
 		line-height: var(--normal-line);
 	}
 
