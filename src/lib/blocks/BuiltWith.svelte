@@ -23,6 +23,11 @@
 			description="Built with Semantic Props."
 			url="#builtwith"
 		/>
+		<Portal
+			title="Coming Soon"
+			description="Built with Semantic Props."
+			url="#builtwith"
+		/>
 	</div>
 </Divider>
 
