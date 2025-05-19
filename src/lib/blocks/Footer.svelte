@@ -29,6 +29,7 @@
 		display: flex;
 		flex-flow: row wrap;
 		align-items: start;
+		justify-content: space-between;
 		font-size: var(--small);
 		color: var(--fifth-text-color);
 		gap: var(--3x-small) 1ch;
@@ -40,8 +41,8 @@
 	.about {
 		display: flex;
 		flex-flow: row wrap;
-		margin-block: 0;
-		margin-inline: auto 0;
+		padding: 0;
+		margin: 0;
 		li {
 			list-style: inside;
 			margin-inline-start: 1ch;
