@@ -54,7 +54,7 @@
 		border-block-end-width: var(--4x-small);
 		background-clip: border-box;
 		background-color: var(--secondary-body-color);
-		color: var(--primary-gray);
+		color: var(--secondary-text-color);
 		text-shadow: var(--light, var(--text-stroke-shadow));
 		padding-block-start: var(--small);
 		padding-block-end: var(--x-small);
