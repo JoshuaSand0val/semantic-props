@@ -22,7 +22,9 @@
 	}
 
 	summary {
-		display: block;
+		display: flex;
+		flex-flow: row wrap;
+		gap: 0 1ch;
 		font-size: var(--x-large);
 		font-family: var(--display-family);
 		line-height: var(--shorter-line);
@@ -33,7 +35,7 @@
 		&::after {
 			content: "‹";
 			margin-inline: 1ch;
-			float: right;
+			margin-inline-start: auto;
 		}
 		details[open] &::after {
 			transform: rotate(-90deg);
