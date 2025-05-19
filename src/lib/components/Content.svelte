@@ -30,7 +30,7 @@
 
 	.wrapper {
 		display: block;
-		inline-size: min(var(--larger-container), 100%);
+		inline-size: min(var(--largest-container), 100%);
 		margin-inline: auto;
 		margin-block: var(--medium);
 	}
