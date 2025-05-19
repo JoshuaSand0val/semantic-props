@@ -27,7 +27,7 @@
 	}
 
 	.wrapper {
-		margin-block-start: var(--margin-size);
+		margin-block-start: var(--9x-large);
 	}
 
 	.title {
