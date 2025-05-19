@@ -22,7 +22,7 @@
 	}
 
 	summary {
-		display: list-item;
+		display: block;
 		font-size: var(--x-large);
 		font-family: var(--display-family);
 		line-height: var(--shorter-line);
@@ -30,5 +30,13 @@
 		color: var(--secondary-text-color);
 		padding-block-end: var(--3x-small);
 		padding-inline-start: 1px;
+		&::after {
+			content: "‹";
+			margin-inline: 1ch;
+			float: right;
+		}
+		details[open] &::after {
+			transform: rotate(-90deg);
+		}
 	}
 </style>
