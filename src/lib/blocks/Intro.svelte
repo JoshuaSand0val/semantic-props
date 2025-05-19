@@ -14,22 +14,6 @@
 			<Heading level={6}>Expertly crafted CSS Custom Properties (variables) for creating <strong>consistent components</strong> in any design.</Heading>
 			<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
 			<CodeBlock description="Scoping Class" lang="html" code='<html class="semantic">...</html>' />
-			<CodeBlock description="Example Usage" lang="css" code={`
-code.semantic.dark {
-	display: block;
-	tab-size: 4;
-	white-space: pre;
-	font: var(--small)/var(--short-line) var(--mono-family);
-	border-radius: var(--smallest-radius);
-	border: 1px var(--border-style) var(--third-body-color);
-	border-block-end-width: var(--4x-small);
-	background-color: var(--secondary-body-color);
-	color: var(--secondary-text-color);
-	padding-block: var(--small) var(--x-small);
-	padding-inline: var(--x-small) var(--x-large);
-	overflow: auto;
-}
-			`} />
 		</Content>
 	</div>
 </header>
