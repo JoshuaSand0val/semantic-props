@@ -11,6 +11,7 @@
 			<Heading level={1}>
 				<span class="title">Semantic Props</span>
 			</Heading>
+			<Heading level={6}>Expertly crafted CSS Custom Properties (variables) for creating consistent components in any project.</Heading>
 			<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
 			<CodeBlock description="Scoping Class" lang="html" code='<html class="semantic">...</html>' />
 		</Content>

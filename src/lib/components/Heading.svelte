@@ -15,7 +15,7 @@
 	[role="heading"] {
 		transition: font-size var(--fast-time) var(--ease-out);
 		font-family: var(--display-family);
-		line-height: var(--shorter-line);
+		line-height: var(--short-line);
 		margin-block: var(--4x-large) 0;
 		:global(& + &) {
 			margin-block-start: 0;
