@@ -20,7 +20,7 @@
 <style>
 	.grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(var(--small-container), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--small-container)), 1fr));
 		gap: var(--small);
 		margin-block: var(--2x-large);
 	}

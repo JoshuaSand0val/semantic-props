@@ -27,7 +27,7 @@
 	.container {
 		display: flex;
 		flex-flow: column nowrap;
-		max-inline-size: var(--large-container);
+		inline-size: min(100%, var(--large-container));
 		.header {
 			display: block;
 			font-family: var(--body-family);
