@@ -21,7 +21,7 @@
 <style>
 	.container {
 		display: block;
-		background-color: var(--secondary-body-color);
+		border-block-start: 1px var(--border-style) var(--secondary-body-color);
 		--primary-accent-color: var(--primary-gray);
 	}
 
