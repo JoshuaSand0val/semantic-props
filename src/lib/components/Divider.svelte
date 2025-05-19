@@ -18,7 +18,7 @@
 <style>
 	details, .content {
 		display: block;
-		margin-block: var(--x-large) var(--large);
+		margin-block: var(--2x-large) var(--3x-large);
 	}
 
 	summary {
