@@ -10,7 +10,7 @@
 
 <article class="container">
 	<h4 class="desc">{lang} &mdash; {description}</h4>
-	<pre>
+	<pre class=" semantic dark">
 		<code>{@html hljs.highlight(code, { language: lang }).value}</code>
 	</pre>
 </article>
