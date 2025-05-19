@@ -9,7 +9,7 @@
 	--small-container: 20rem; /* 320px */
 	--medium-container: 30rem; /* 480px */
 	--large-container: 40rem; /* 640px */
-	--larger-container: 60rem; /* 960px */
+	--larger-container: 64rem; /* 1024px */
 	--largest-container: 80rem; /* 1280px */
 
 	/* Size Scale Ratio: */
@@ -72,7 +72,7 @@
 	}
 
 	&:where(:not(& &):not(.watch, .phone, .tablet), .laptop, .desktop) {
-		@media (min-width: 60rem) {
+		@media (min-width: 64rem) {
 			--tablet: var(--false);
 			--laptop: var(--true);
 		}
