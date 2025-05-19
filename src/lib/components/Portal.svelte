@@ -2,7 +2,7 @@
 	let { title, description, image, imageDark, url }: {
 		title: string,
 		description: string,
-		image: string,
+		image?: string,
 		imageDark?: string,
 		url: string
 	} = $props();
@@ -14,12 +14,14 @@
 		<p class="description">{description}</p>
 	</header>
 	<div class="image">
+		{#if typeof image !== "undefined"}
 		<a href={url} target="_blank">
 			<img class={imageDark && "light"} src={image} alt={`${title} (Light Theme)`} />
 			{#if imageDark}
 			<img class="dark" src={imageDark} alt={`${title} (Dark Theme)`} />
 			{/if}
 		</a>
+		{/if}
 	</div>
 </article>
 
@@ -43,6 +45,7 @@
 		}
 		.image {
 			display: block;
+			aspect-ratio: 3 / 2;
 			border-radius: var(--medium-radius);
 			border: 1px var(--border-style) var(--third-body-color);
 			background-color: var(--secondary-black);
