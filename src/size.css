@@ -20,10 +20,11 @@
 	var(--laptop-to-desktop, 1.250);
 
 	/* Base Sizes: */
-	--3x-small: max(0.25rem, var(--2x-small) / var(--scale-ratio)); /* 4px */
-	--2x-small: max(0.5rem, var(--x-small) / var(--scale-ratio)); /* 8px */
-	--x-small: max(0.75rem, var(--small) / var(--scale-ratio)); /* 12px */
-	--small: max(0.875rem, var(--medium) / var(--scale-ratio)); /* 14px */
+	--4x-small: min(0.125rem, var(--3x-small / var(--scale-ratio))); /* 2px */
+	--3x-small: min(0.25rem, var(--2x-small) / var(--scale-ratio)); /* 4px */
+	--2x-small: min(0.5rem, var(--x-small) / var(--scale-ratio)); /* 8px */
+	--x-small: min(0.75rem, var(--small) / var(--scale-ratio)); /* 12px */
+	--small: min(0.875rem, var(--medium) / var(--scale-ratio)); /* 14px */
 	--medium: 1rem; /* 16px */
 	--large: min(1.125rem, var(--medium) * var(--scale-ratio)); /* 18px */
 	--x-large: min(1.25rem, var(--large) * var(--scale-ratio)); /* 20px */
@@ -44,7 +45,8 @@
 	var(--watch, var(--x-small))
 	var(--phone, var(--2x-large))
 	var(--tablet, var(--4x-large))
-	var(--laptop-to-desktop, var(--5x-large));
+	var(--laptop, var(--5x-large))
+	var(--desktop, var(--6x-large));
 
 	/* Media Query Booleans: */
 	&:where(:not(& &), .watch, .phone, .tablet, .laptop, .desktop) {
