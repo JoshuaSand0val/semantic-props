@@ -10,8 +10,8 @@
 
 <article class="container">
 	<h4 class="desc">{lang} &mdash; {description}</h4>
-	<pre class=" semantic dark">
-		<code>{@html hljs.highlight(code.trim(), { language: lang }).value}</code>
+	<pre>
+		<code class="semantic dark">{@html hljs.highlight(code.trim(), { language: lang }).value}</code>
 	</pre>
 </article>
 
@@ -44,29 +44,22 @@
 	}
 
 	pre {
-		display: block;
-		tab-size: 4;
-		hyphens: none;
-		font-size: var(--small);
-		font-family: var(--mono-family);
-		border-radius: var(--smallest-radius);
-		border: 1px var(--border-style) var(--third-body-color);
-		border-block-end-width: var(--4x-small);
-		background-clip: border-box;
-		background-color: var(--secondary-body-color);
-		color: var(--secondary-text-color);
-		text-shadow: var(--light, var(--text-stroke-shadow));
-		padding-block-start: var(--small);
-		padding-block-end: var(--x-small);
-		padding-inline-start: var(--x-small);
-		padding-inline-end: var(--x-large);
-		overflow: auto;
-		margin: 0;
 		white-space: normal;
-		cursor: text;
+		margin: 0;
 	}
 
 	code {
+		display: block;
+		tab-size: 4;
 		white-space: pre;
+		font: var(--small)/var(--short-line) var(--mono-family);
+		border-radius: var(--smallest-radius);
+		border: 1px var(--border-style) var(--third-body-color);
+		border-block-end-width: var(--4x-small);
+		background-color: var(--secondary-body-color);
+		color: var(--secondary-text-color);
+		padding-block: var(--small) var(--x-small);
+		padding-inline: var(--x-small) var(--x-large);
+		overflow: auto;
 	}
 </style>
