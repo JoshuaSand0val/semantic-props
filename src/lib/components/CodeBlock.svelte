@@ -51,7 +51,7 @@
 		font-family: var(--mono-family);
 		border-radius: var(--smallest-radius);
 		border: 1px var(--border-style) var(--third-body-color);
-		border-block-end-width: 3px;
+		border-block-end-width: var(--4x-small);
 		background-clip: border-box;
 		background-color: var(--secondary-body-color);
 		color: var(--primary-gray);
