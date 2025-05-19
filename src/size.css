@@ -20,7 +20,7 @@
 	var(--laptop-to-desktop, 1.250);
 
 	/* Base Sizes: */
-	--4x-small: min(0.125rem, var(--3x-small / var(--scale-ratio))); /* 2px */
+	--4x-small: min(0.125rem, var(--3x-small) / var(--scale-ratio)); /* 2px */
 	--3x-small: min(0.25rem, var(--2x-small) / var(--scale-ratio)); /* 4px */
 	--2x-small: min(0.5rem, var(--x-small) / var(--scale-ratio)); /* 8px */
 	--x-small: min(0.75rem, var(--small) / var(--scale-ratio)); /* 12px */
