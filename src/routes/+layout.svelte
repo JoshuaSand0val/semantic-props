@@ -5,7 +5,7 @@
 </script>
 
 <div class="container">
-	<main class="content semantic tablet">
+	<main class="content">
 		{@render children()}
 	</main>
 	<Footer />
@@ -34,8 +34,6 @@
 		scroll-behavior: smooth;
 		background-color: var(--primary-body-color);
 		color: var(--primary-text-color);
-		font-family: var(--body-family);
-		line-height: var(--normal-line);
 	}
 
 	:global(:root, body),
@@ -53,12 +51,6 @@
 
 	.content {
 		display: block;
-		inline-size: min(var(--larger-container), 100%);
 		flex: 1 0 auto;
-		transition: padding var(--faster-time) var(--ease-in);
-		padding: var(--margin-size);
-		padding-right: max(var(--safe-right), var(--margin-size));
-		padding-left: max(var(--safe-left), var(--margin-size));
-		margin-inline: auto;
 	}
 </style>
