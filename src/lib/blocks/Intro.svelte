@@ -4,7 +4,7 @@
 	import Heading from "$lib/components/Heading.svelte";
 </script>
 
-<header class="container semantic dark">
+<header class="container">
 	<div class="wrapper">
 		<Content>
 			<Heading level={4}>Stylesheets made simple.</Heading>
@@ -30,7 +30,7 @@
 	}
 
 	.title {
-		-webkit-text-stroke: min(0.0625em, 4px) transparent;
+		-webkit-text-stroke: min(0.125em, 4px) transparent;
 		background-image: linear-gradient(123deg,
 			var(--primary-red),
 			var(--primary-orange),

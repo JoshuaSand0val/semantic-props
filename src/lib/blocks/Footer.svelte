@@ -3,7 +3,7 @@
 	import Link from "$lib/components/Link.svelte";
 </script>
 
-<footer class="container semantic dark">
+<footer class="container">
 	<Content>
 		<div class="wrapper">
 			<span class="copyright">
