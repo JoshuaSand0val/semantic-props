@@ -38,8 +38,8 @@
 		font-size: var(--x-small);
 		text-transform: uppercase;
 		color: var(--fifth-text-color);
-		line-height: var(--tall-line);
-		margin-block: 0;
+		line-height: var(--short-line);
+		margin-block: 0 var(--3x-small);
 		margin-inline: var(--smallest-radius);
 	}
 
