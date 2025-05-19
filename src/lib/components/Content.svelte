@@ -25,12 +25,11 @@
 		letter-spacing: var(--normal-letter);
 		margin-right: max(var(--safe-right), var(--margin-size));
 		margin-left: max(var(--safe-left), var(--margin-size));
-		overflow: hidden;
 	}
 
 	.wrapper {
 		display: block;
-		inline-size: min(var(--largest-container), 100%);
+		inline-size: min(var(--larger-container), 100%);
 		margin-inline: auto;
 		margin-block: var(--medium);
 	}
