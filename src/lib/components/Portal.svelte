@@ -58,7 +58,7 @@
 			}
 			&:active {
 				animation: none;
-				filter: var(--low-contrast);
+				filter: var(--low-brightness);
 				transform: none;
 			}
 			img {
