@@ -52,7 +52,7 @@
 	/* Lighten/Darken/Shift Color: */
 	--lighten-color: oklch(1 0 0 / 0.1);
 	--darken-color: oklch(0 0 0 / 0.1);
-	--shift-color: var(--light, var(--darker-color)) var(--dark, var(--lighter-color));
+	--shift-color: var(--light, var(--darken-color)) var(--dark, var(--lighten-color));
 
 	/* Stroke Color: */
 	--stroke-color: var(--text-color);
