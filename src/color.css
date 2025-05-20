@@ -124,7 +124,7 @@
 	--tertiary-yellow: oklch(0.7 0.15 90);
 
 	/* Text Stroke Color: */
-	--text-stroke-color: var(--fifth-text-color);
+	--text-stroke-color: var(--tertiary-text-color);
 	@supports (color: oklch(from currentColor l c h)) {
 		--text-stroke-color:
 		var(--light, oklch(from currentColor 0.5 c h))
