@@ -56,7 +56,7 @@
 	--shift-image: linear-gradient(var(--shift) 0 0);
 
 	/* Stroke Color: */
-	--stroke-color: var(--text-color);
+	--stroke-color: var(--secondary-color);
 	@supports (color: color-mix(in oklch, white, black, 50%)) {
 		--stroke-color:
 		var(--light, color-mix(in oklch, currentColor, black 50%))
