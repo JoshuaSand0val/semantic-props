@@ -30,7 +30,7 @@
 		line-height: var(--shorter-line);
 		border-block-end: 1px var(--border-style) var(--tertiary-body-color);
 		color: var(--secondary-text-color);
-		padding-block-end: var(--3x-small);
+		padding-block-end: var(--2x-small);
 		padding-inline-start: 1px;
 		&::after {
 			content: "‹";
