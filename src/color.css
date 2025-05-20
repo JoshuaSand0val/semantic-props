@@ -24,13 +24,10 @@
 	}
 
 	/* Color Palette: */
-	--primary-color: var(--light, white) var(--dark, oklch(0.2 0.01 260));
-	--secondary-color: var(--light, oklch(0.95 0.01 260)) var(--dark, oklch(0.25 0.01 260));
-	--tertiary-color: var(--light, oklch(0.9 0.01 260)) var(--dark, oklch(0.3 0.01 260));
-
-	--text-color: var(--light, var(--black)) var(--dark, var(--white));
-
+	--primary-color: var(--light, var(--white)) var(--dark, var(--black));
+	--secondary-color: var(--light, var(--black)) var(--dark, var(--white));
 	--accent-color: var(--blue);
+
 	--black: oklch(0.2 0.01 260);
 	--blue: oklch(0.6 0.15 240);
 	--brown: oklch(0.6 0.05 50);
@@ -49,10 +46,12 @@
 	--white: oklch(1 0.01 260);
 	--yellow: oklch(0.8 0.15 90);
 
-	/* Lighten/Darken/Shift Color: */
-	--lighten-color: oklch(1 0 0 / 0.1);
-	--darken-color: oklch(0 0 0 / 0.1);
-	--shift-color: var(--light, var(--darken-color)) var(--dark, var(--lighten-color));
+	/* Lighten/Darken Color: */
+	--lighten: oklch(1 0 0 / 0.1);
+	--darken: oklch(0 0 0 / 0.1);
+
+	--lighten-image: linear-gradient(var(--lighten) 0 0);
+	--darken-image: linear-gradient(var(--darken) 0 0);
 
 	/* Stroke Color: */
 	--stroke-color: var(--text-color);
