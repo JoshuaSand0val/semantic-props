@@ -11,12 +11,12 @@
 	--heaviest-blur: blur(32px);
 
 	/* Brightness: */
-	--lowest-brightness: brightness(0.25);
-	--lower-brightness: brightness(0.5);
-	--low-brightness: brightness(0.75);
-	--high-brightness: brightness(1.25);
-	--higher-brightness: brightness(1.5);
-	--highest-brightness: brightness(2);
+	--lowest-brightness: brightness(0.5);
+	--lower-brightness: brightness(0.75);
+	--low-brightness: brightness(0.875);
+	--high-brightness: brightness(1.125);
+	--higher-brightness: brightness(1.25);
+	--highest-brightness: brightness(1.5);
 
 	/* Contrast: */
 	--lowest-contrast: contrast(0.25);
@@ -27,10 +27,10 @@
 	--highest-contrast: contrast(2);
 
 	/* Saturation: */
-	--lowest-saturation: saturation(0.25);
-	--lower-saturation: saturation(0.5);
-	--low-saturation: saturation(0.75);
-	--high-saturation: saturation(1.25);
-	--higher-saturation: saturation(1.5);
-	--highest-saturation: saturation(2);
+	--lowest-saturation: saturate(0.25);
+	--lower-saturation: saturate(0.5);
+	--low-saturation: saturate(0.75);
+	--high-saturation: saturate(1.25);
+	--higher-saturation: saturate(1.5);
+	--highest-saturation: saturate(2);
 }
