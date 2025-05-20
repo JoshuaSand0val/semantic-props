@@ -31,7 +31,7 @@
 		align-items: start;
 		justify-content: space-between;
 		font-size: var(--small);
-		color: var(--fifth-text-color);
+		color: var(--tertiary-text-color);
 		gap: var(--3x-small) 1ch;
 		margin-inline: auto;
 		margin-bottom: var(--safe-bottom);

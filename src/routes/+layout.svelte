@@ -25,9 +25,7 @@
 
 		--primary-accent-color: var(--primary-yellow);
 		--secondary-accent-color: var(--secondary-yellow);
-		--third-accent-color: var(--third-yellow);
-		--fourth-accent-color: var(--fourth-yellow);
-		--fifth-accent-color: var(--fifth-yellow);
+		--tertiary-accent-color: var(--tertiary-yellow);
 	}
 
 	:global(:root) {

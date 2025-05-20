@@ -47,7 +47,7 @@
 			display: block;
 			aspect-ratio: 3 / 2;
 			border-radius: var(--medium-radius);
-			border: 1px var(--border-style) var(--third-body-color);
+			border: 1px var(--border-style) var(--tertiary-body-color);
 			background-color: var(--secondary-body-color);
 			box-shadow: var(--lightest-inset-shadow), var(--light-box-shadow);
 			overflow: hidden;
