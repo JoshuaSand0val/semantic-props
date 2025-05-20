@@ -1,5 +1,8 @@
 node_modules
 
+# Testing
+/testing
+
 # Output
 .output
 .vercel
