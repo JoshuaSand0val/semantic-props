@@ -49,12 +49,10 @@
 	--white: oklch(1 0.01 260);
 	--yellow: oklch(0.8 0.15 90);
 
-	/* Background-Image / Border-Image: */
-	--lighter-image: linear-gradient(oklch(1 0 0 / 0.1) 0 0);
-	--darker-image: linear-gradient(oklch(0 0 0 / 0.1) 0 0);
-	--shift-image:
-	var(--light, var(--darker-image-color))
-	var(--dark, var(--lighter-image-color));
+	/* Lighten/Darken/Shift Color: */
+	--lighten-color: oklch(1 0 0 / 0.1);
+	--darken-color: oklch(0 0 0 / 0.1);
+	--shift-color: var(--light, var(--darker-color)) var(--dark, var(--lighter-color));
 
 	/* Stroke Color: */
 	--stroke-color: var(--text-color);
