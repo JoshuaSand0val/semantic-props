@@ -49,11 +49,11 @@
 	/* Lighten/Darken/Shift: */
 	--lighten-color: oklch(1 0 0 / 0.05);
 	--darken-color: oklch(0 0 0 / 0.05);
-	--shift-color: var(--light, var(--darken)) var(--dark, var(--lighten));
+	--shift-color: var(--light, var(--darken-color)) var(--dark, var(--lighten-color));
 
-	--lighten-image: linear-gradient(var(--lighten) 0 0);
-	--darken-image: linear-gradient(var(--darken) 0 0);
-	--shift-image: linear-gradient(var(--shift) 0 0);
+	--lighten-image: linear-gradient(var(--lighten-color) 0 0);
+	--darken-image: linear-gradient(var(--darken-color) 0 0);
+	--shift-image: linear-gradient(var(--shift-color) 0 0);
 
 	/* Stroke Color: */
 	--stroke-color: var(--secondary-color);
