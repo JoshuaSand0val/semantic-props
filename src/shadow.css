@@ -13,17 +13,17 @@
 	--heaviest-text-shadow: 0 10px 10px rgb(0 0 0 / 0.3);
 
 	--text-stroke-shadow:
-	-0.5px -0.5px var(--stroke-color), 0 -0.5px var(--stroke-color),
-	0.5px -0.5px var(--stroke-color), 0.5px 0 var(--stroke-color),
-	0.5px 0.5px var(--stroke-color), 0 0.5px var(--stroke-color),
-	-0.5px 0.5px var(--stroke-color), -0.5px 0 var(--stroke-color);
+	-0.5px -0.5px var(--primary-text-color), 0 -0.5px var(--primary-text-color),
+	0.5px -0.5px var(--primary-text-color), 0.5px 0 var(--primary-text-color),
+	0.5px 0.5px var(--primary-text-color), 0 0.5px var(--primary-text-color),
+	-0.5px 0.5px var(--primary-text-color), -0.5px 0 var(--primary-text-color);
 
 	@media (min-resolution: 2x) {
 		--text-stroke-shadow:
-		-0.25px -0.25px var(--stroke-color), 0 -0.25px var(--stroke-color),
-		0.25px -0.25px var(--stroke-color), 0.25px 0 var(--stroke-color),
-		0.25px 0.25px var(--stroke-color), 0 0.25px var(--stroke-color),
-		-0.25px 0.25px var(--stroke-color), -0.25px 0 var(--stroke-color);
+		-0.25px -0.25px var(--primary-text-color), 0 -0.25px var(--primary-text-color),
+		0.25px -0.25px var(--primary-text-color), 0.25px 0 var(--primary-text-color),
+		0.25px 0.25px var(--primary-text-color), 0 0.25px var(--primary-text-color),
+		-0.25px 0.25px var(--primary-text-color), -0.25px 0 var(--primary-text-color);
 	}
 
 	/* Box-Shadow: */
