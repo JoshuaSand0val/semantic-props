@@ -46,15 +46,6 @@
 	--white: oklch(1 0.01 260);
 	--yellow: oklch(0.8 0.15 90);
 
-	/* Lighten/Darken/Shift: */
-	--lighten-color: oklch(1 0 0 / 0.05);
-	--darken-color: oklch(0 0 0 / 0.05);
-	--shift-color: var(--light, var(--darken-color)) var(--dark, var(--lighten-color));
-
-	--lighten-image: linear-gradient(var(--lighten-color) 0 0);
-	--darken-image: linear-gradient(var(--darken-color) 0 0);
-	--shift-image: linear-gradient(var(--shift-color) 0 0);
-
 	/* Stroke Color: */
 	--stroke-color: var(--secondary-color);
 	@supports (color: color-mix(in oklch, white, black, 50%)) {
