@@ -23,103 +23,31 @@
 		--dark: var(--true);
 	}
 
-	/* Accent Color: */
-	--primary-accent-color: var(--primary-blue);
-	--secondary-accent-color: var(--secondary-blue);
-	--tertiary-accent-color: var(--tertiary-blue);
+	@each $prefix $i in (primary, secondary, tertiary) {
+		/* Lighten/Darken Mix: */
+		$lighten: white calc(5% * $i);
+		$darken: black calc(5% * $i);
 
-	/* Black: */
-	--primary-black: oklch(0.2 0.01 260);
-	--secondary-black: oklch(0.25 0.01 260);
-	--tertiary-black: oklch(0.3 0.01 260);
-
-	/* Blue */
-	--primary-blue: oklch(0.6 0.15 240);
-	--secondary-blue: oklch(0.55 0.15 240);
-	--tertiary-blue: oklch(0.5 0.15 240);
-
-	/* Body Color: */
-	--primary-body-color: var(--light, var(--primary-white)) var(--dark, var(--primary-black));
-	--secondary-body-color: var(--light, var(--secondary-white)) var(--dark, var(--secondary-black));
-	--tertiary-body-color: var(--light, var(--tertiary-white)) var(--dark, var(--tertiary-black));
-
-	/* Brown: */
-	--primary-brown: oklch(0.6 0.05 50);
-	--secondary-brown: oklch(0.55 0.05 50);
-	--tertiary-brown: oklch(0.5 0.05 50);
-
-	/* Coral: */
-	--primary-coral: oklch(0.7 0.2 40);
-	--secondary-coral: oklch(0.65 0.2 40);
-	--tertiary-coral: oklch(0.6 0.2 40);
-
-	/* Cyan: */
-	--primary-cyan: oklch(0.7 0.15 180);
-	--secondary-cyan: oklch(0.65 0.15 180);
-	--tertiary-cyan: oklch(0.6 0.15 180);
-
-	/* Gray: */
-	--primary-gray: var(--light, oklch(0.6 0.01 260)) var(--dark, oklch(0.5 0.01 260));
-	--secondary-gray: var(--light, oklch(0.55 0.01 260)) var(--dark, oklch(0.45 0.01 260));
-	--tertiary-gray: var(--light, oklch(0.5 0.01 260)) var(--dark, oklch(0.4 0.01 260));
-
-	/* Green: */
-	--primary-green: oklch(0.6 0.2 150);
-	--secondary-green: oklch(0.55 0.2 150);
-	--tertiary-green: oklch(0.5 0.2 150);
-
-	/* Indigo: */
-	--primary-indigo: oklch(0.4 0.2 270);
-	--secondary-indigo: oklch(0.35 0.2 270);
-	--tertiary-indigo: oklch(0.3 0.2 270);
-
-	/* Lime: */
-	--primary-lime: oklch(0.7 0.15 120);
-	--secondary-lime: oklch(0.65 0.15 120);
-	--tertiary-lime: oklch(0.6 0.15 120);
-
-	/* Magenta: */
-	--primary-magenta: oklch(0.6 0.2 330);
-	--secondary-magenta: oklch(0.55 0.2 330);
-	--tertiary-magenta: oklch(0.5 0.2 330);
-
-	/* Orange: */
-	--primary-orange: oklch(0.6 0.15 50);
-	--secondary-orange: oklch(0.55 0.15 50);
-	--tertiary-orange: oklch(0.5 0.15 50);
-
-	/* Pink: */
-	--primary-pink: oklch(0.8 0.1 10);
-	--secondary-pink: oklch(0.75 0.1 10);
-	--tertiary-pink: oklch(0.7 0.1 10);
-
-	/* Purple: */
-	--primary-purple: oklch(0.4 0.15 300);
-	--secondary-purple: oklch(0.35 0.15 300);
-	--tertiary-purple: oklch(0.3 0.15 300);
-
-	/* Red: */
-	--primary-red: oklch(0.5 0.2 30);
-	--secondary-red: oklch(0.45 0.2 30);
-	--tertiary-red: oklch(0.4 0.2 30);
-
-	/* Text Color: */
-	--primary-text-color: var(--light, var(--primary-black)) var(--dark, var(--primary-white));
-	--secondary-text-color: var(--light, var(--secondary-black)) var(--dark, var(--secondary-white));
-	--tertiary-text-color: var(--light, var(--tertiary-black)) var(--dark, var(--tertiary-white));
-
-	/* Violet: */
-	--primary-violet: oklch(0.4 0.15 290);
-	--secondary-violet: oklch(0.35 0.15 290);
-	--tertiary-violet: oklch(0.3 0.15 290);
-
-	/* White: */
-	--primary-white: oklch(1 0.01 260);
-	--secondary-white: oklch(0.95 0.01 260);
-	--tertiary-white: oklch(0.9 0.01 260);
-
-	/* Yellow: */
-	--primary-yellow: oklch(0.8 0.15 90);
-	--secondary-yellow: oklch(0.75 0.15 90);
-	--tertiary-yellow: oklch(0.7 0.15 90);
+		/* Color Palette */
+		--$(prefix)-accent-color: var(--$(prefix)-blue);
+		--$(prefix)-black: color-mix(in oklch, oklch(0.2 0.01 260), $lighten);
+		--$(prefix)-blue: color-mix(in oklch, oklch(0.6 0.15 240), $darken);
+		--$(prefix)-body-color: var(--light, var(--$(prefix)-white)) var(--dark, var(--$(prefix)-black));
+		--$(prefix)-brown: color-mix(in oklch, oklch(0.6 0.05 50), $darken);
+		--$(prefix)-coral: color-mix(in oklch, oklch(0.7 0.2 40), $darken);
+		--$(prefix)-cyan: color-mix(in oklch, oklch(0.7 0.15 180), $darken);
+		--$(prefix)-gray: color-mix(in oklch, oklch(0.5 0.01 260), $lighten);
+		--$(prefix)-green: color-mix(in oklch, oklch(0.6 0.2 150), $darken);
+		--$(prefix)-indigo: color-mix(in oklch, oklch(0.4 0.2 270), $lighten);
+		--$(prefix)-lime: color-mix(in oklch, oklch(0.7 0.15 120), $darken);
+		--$(prefix)-magenta: color-mix(in oklch, oklch(0.6 0.2 330), $darken);
+		--$(prefix)-orange: color-mix(in oklch, oklch(0.6 0.15 50), $darken);
+		--$(prefix)-pink: color-mix(in oklch, oklch(0.8 0.1 10), $darken);
+		--$(prefix)-purple: color-mix(in oklch, oklch(0.4 0.15 300), $lighten);
+		--$(prefix)-red: color-mix(in oklch, oklch(0.5 0.2 30), $lighten);
+		--$(prefix)-text-color: var(--light, var(--$(prefix)-black)) var(--dark, var(--$(prefix)-white));
+		--$(prefix)-violet: color-mix(in oklch, oklch(0.4 0.15 290), $lighten);
+		--$(prefix)-white: color-mix(in oklch, oklch(1 0.01 260), $darken);
+		--$(prefix)-yellow: color-mix(in oklch, oklch(0.8 0.15 90), $darken);
+	}
 }
