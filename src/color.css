@@ -25,8 +25,8 @@
 
 	@each $prefix $i in (primary, secondary, tertiary) {
 		/* Lighten/Darken Mix: */
-		$lighten: white calc(8% * $i);
-		$darken: black calc(8% * $i);
+		$lighten: white calc(7% * $i);
+		$darken: black calc(7% * $i);
 
 		/* Color Palette */
 		--$(prefix)-accent-color: var(--$(prefix)-blue);
