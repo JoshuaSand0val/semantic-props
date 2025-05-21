@@ -65,10 +65,10 @@
 		font-family: var(--display-family);
 		overflow: auto;
 		transition: all var(--fast-time) var(--ease-out);
-		transition-property: opacity, transform;
-		.button:not(:focus) ~ &:not(:focus-within) {
+		transition-property: opacity, transform, visibility;
+		.button:not(:focus) + &:not(:focus-within) {
 			transform: translateY(calc(var(--3x-small) * -1));
-			pointer-events: none;
+			visibility: hidden;
 			opacity: 0;
 		}
 	}
