@@ -5,7 +5,7 @@
 </script>
 
 <Divider title="Built using Semantic Props">
-	<div class="grid" id="builtwith">
+	<div class="grid" id="builtusing">
 		<Portal
 			title="Hey, Jes!"
 			description="Portfolio website by Jess Sandoval."

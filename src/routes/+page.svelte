@@ -1,5 +1,5 @@
 <script>
-    import BuiltWith from "$lib/blocks/BuiltWith.svelte";
+    import BuiltUsing from "$lib/blocks/BuiltUsing.svelte";
     import Intro from "$lib/blocks/Intro.svelte";
     import Content from "$lib/components/Content.svelte";
 </script>
@@ -11,5 +11,5 @@
 <Intro />
 
 <Content>
-	<BuiltWith />
+	<BuiltUsing />
 </Content>
