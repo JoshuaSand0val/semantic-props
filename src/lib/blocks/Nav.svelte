@@ -81,6 +81,7 @@
 		pointer-events: none;
 		opacity: 0;
 		.button:focus ~ &, .navigation:focus-within + & {
+			pointer-events: auto;
 			opacity: 1;
 		}
 	}
