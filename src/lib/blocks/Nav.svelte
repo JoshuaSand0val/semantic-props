@@ -61,6 +61,7 @@
 		border: 1px var(--border-style) var(--tertiary-body-color);
 		background-color: var(--primary-body-color);
 		box-shadow: var(--lighter-box-shadow);
+		font-family: var(--display-family);
 		overflow: auto;
 		transition: all var(--fast-time) var(--ease-out);
 		transition-property: opacity, transform;
