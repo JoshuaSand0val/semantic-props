@@ -53,9 +53,7 @@
 
 	/* Text Stroke Color: */
 	--text-stroke-color: var(--tertiary-text-color);
-	@supports (color: color-mix(in oklch, white, black)) {
-		--text-stroke-color:
-		var(--light, color-mix(in oklch, currentColor, black 40%))
-		var(--dark, color-mix(in oklch, currentColor, white 40%));
+	@supports (color: oklch(from currentColor l c h)) {
+		--text-stroke-color: oklch(from currentColor round(1 - l) c h);
 	}
 }
