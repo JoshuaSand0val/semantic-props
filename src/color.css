@@ -50,4 +50,12 @@
 		--$(prefix)-white: color-mix(in oklch, oklch(1 0.01 260), $darken);
 		--$(prefix)-yellow: color-mix(in oklch, oklch(0.8 0.15 90), $darken);
 	}
+
+	/* Stroke Color: */
+	--stroke-color: var(--tertiary-text-color);
+	@supports (color: oklch(from currentColor l c h)) {
+		--stroke-color:
+		var(--light, oklch(from currentColor 0.4 c h))
+		var(--dark, oklch(from currentColor 0.8 c h));
+	}
 }
