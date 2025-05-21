@@ -26,7 +26,7 @@
 	.container {
 		display: block;
 		background-color: var(--primary-body-color);
-		background-image: linear-gradient(231deg, var(--secondary-body-color), var(--primary-body-color));
+		background-image: linear-gradient(123deg, var(--secondary-body-color), var(--primary-body-color) 50%);
 		border-block-end: 1px var(--border-style) var(--secondary-body-color);
 		overflow: hidden;
 	}
