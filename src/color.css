@@ -54,6 +54,6 @@
 	/* Text Stroke Color: */
 	--text-stroke-color: var(--tertiary-text-color);
 	@supports (color: oklch(from currentColor l c h)) {
-		--text-stroke-color: oklch(from currentColor round(1 - l) c h);
+		--text-stroke-color: oklch(from currentColor clamp(0.4, round(1 - l), 0.8) c h);
 	}
 }
