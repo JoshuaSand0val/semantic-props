@@ -42,7 +42,7 @@
 		border-radius: var(--largest-radius);
 		background-color: var(--primary-body-color);
 		padding: var(--x-small);
-		line-height: 1;
+		line-height: 0;
 		box-shadow: var(--lightest-box-shadow);
 		transition: background-color var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
