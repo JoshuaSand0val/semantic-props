@@ -2,7 +2,7 @@
     import Content from "$lib/components/Content.svelte";
 </script>
 
-<div class="container semantic dark">
+<div class="container">
 	<Content>
 		<aside class="wrapper">
 			<span tabindex="0" role="button" class="button" aria-label="Main Navigation Menu">
@@ -43,15 +43,11 @@
 		background-color: var(--primary-body-color);
 		padding: var(--x-small);
 		line-height: 1;
-		box-shadow: var(--light-box-shadow);
+		box-shadow: var(--lightest-box-shadow);
 		transition: background-color var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
-		&:focus, &:active {
-			background-color: var(--secondary-body-color);
-			background-image: linear-gradient(
-				var(--primary-body-color),
-				var(--secondary-body-color)
-			);
+		&:focus, &:has(+ .navigation:focus-within) {
+			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
 		}
 	}
 
@@ -64,7 +60,7 @@
 		border-radius: var(--small-radius);
 		border: 1px var(--border-style) var(--tertiary-body-color);
 		background-color: var(--primary-body-color);
-		box-shadow: var(--light-box-shadow);
+		box-shadow: var(--lighter-box-shadow);
 		overflow: auto;
 		transition: all var(--fast-time) var(--ease-out);
 		transition-property: opacity, transform;
@@ -79,11 +75,12 @@
 		position: fixed;
 		z-index: var(--z-bottom);
 		inset: 0;
-		background-color: var(--secondary-black);
+		transition: opacity var(--normal-time) var(--ease-out);
+		backdrop-filter: var(--lightest-blur);
 		pointer-events: none;
 		opacity: 0;
 		.button:focus ~ &, .navigation:focus-within + & {
-			opacity: var(--lowest-opacity);
+			opacity: 1;
 		}
 	}
 
