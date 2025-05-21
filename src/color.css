@@ -53,9 +53,9 @@
 
 	/* Stroke Color: */
 	--stroke-color: var(--tertiary-text-color);
-	@supports (color: oklch(from currentColor l c h)) {
+	@supports (color: color-mix(in oklch, white, black)) {
 		--stroke-color:
-		var(--light, oklch(from currentColor 0.4 c h))
-		var(--dark, oklch(from currentColor 0.8 c h));
+		var(--light, color-mix(in oklch, currentColor, black 40%))
+		var(--dark, color-mix(in oklch, currentColor, white 40%))
 	}
 }
