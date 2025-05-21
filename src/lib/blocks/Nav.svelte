@@ -47,6 +47,7 @@
 		transition: background-color var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
 		&:focus, &:has(+ .navigation:focus-within) {
+			background-color: var(--secondary-body-color);
 			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
 		}
 	}
@@ -57,7 +58,7 @@
 		top: calc(100% + var(--x-small));
 		inline-size: min(100%, var(--smaller-container));
 		max-block-size: min(60vb, var(--medium-container));
-		border-radius: var(--small-radius);
+		border-radius: var(--smaller-radius);
 		border: 1px var(--border-style) var(--tertiary-body-color);
 		background-color: var(--primary-body-color);
 		box-shadow: var(--lighter-box-shadow);
