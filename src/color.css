@@ -30,7 +30,7 @@
 
 		/* Color Palette */
 		--$(prefix)-accent-color: var(--$(prefix)-blue);
-		--$(prefix)-black: color-mix(in oklch, oklch(0.2 0.01 260), $lighten);
+		--$(prefix)-black: color-mix(in oklch, oklch(0.16 0.01 260), $lighten);
 		--$(prefix)-blue: color-mix(in oklch, oklch(0.6 0.15 240), $darken);
 		--$(prefix)-body-color: var(--light, var(--$(prefix)-white)) var(--dark, var(--$(prefix)-black));
 		--$(prefix)-brown: color-mix(in oklch, oklch(0.6 0.05 50), $darken);
