@@ -10,10 +10,13 @@
 				&copy; {new Date().getFullYear()}
 				<Link to="https://heyjes.dev/">Joshua Elijah Sandoval.</Link>
 			</span>
-			<ul class="about">
-				<li><Link to="https://github.com/JoshuaSand0val/semantic-props/">Github</Link></li>
-				<li class="version">v2.0.0 (MIT)</li>
-			</ul>
+			<span>
+				<ul class="about">
+					<li><Link to="https://github.com/JoshuaSand0val/semantic-props/">Github</Link></li>
+					<li class="version">v2.0.0 (MIT)</li>
+				</ul>
+				<Link to="#top">Scroll to Top ↑</Link>
+			</span>
 		</div>
 	</Content>
 </footer>
