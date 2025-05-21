@@ -56,6 +56,6 @@
 	@supports (color: color-mix(in oklch, white, black)) {
 		--text-stroke-color:
 		var(--light, color-mix(in oklch, currentColor, black 40%))
-		var(--dark, color-mix(in oklch, currentColor, white 40%))
+		var(--dark, color-mix(in oklch, currentColor, white 40%));
 	}
 }
