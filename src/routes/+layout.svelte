@@ -1,10 +1,12 @@
 <script>
     import Footer from '$lib/blocks/Footer.svelte';
+    import Nav from '$lib/blocks/Nav.svelte';
 
 	let { children } = $props();
 </script>
 
 <div class="container">
+	<Nav />
 	<main class="content">
 		{@render children()}
 	</main>
