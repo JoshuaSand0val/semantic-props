@@ -83,7 +83,7 @@
 		pointer-events: none;
 		opacity: 0;
 		.button:focus ~ &, .navigation:focus-within + & {
-			opacity: var(--lower-opacity);
+			opacity: var(--lowest-opacity);
 		}
 	}
 
