@@ -104,8 +104,9 @@
 			background-color: var(--secondary-body-color);
 		}
 		&:active {
+			background-color: var(--primary-accent-color);
+			color: var(--primary-white);
 			text-shadow: var(--text-stroke-shadow);
-			color: var(--primary-accent-color);
 		}
 	}
 </style>
