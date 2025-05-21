@@ -42,6 +42,7 @@
 		padding-block: var(--3x-small);
 		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--2x-large);
+		scrollbar-width: none;
 		overflow: auto;
 		:global(& > *) {
 			scroll-snap-align: center;
