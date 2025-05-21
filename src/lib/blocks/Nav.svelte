@@ -38,7 +38,7 @@
 		z-index: var(--z-top);
 		display: block;
 		font-size: var(--x-large);
-		border: 1px var(--border-style) var(--primary-body-color);
+		border: 1px var(--border-style) var(--tertiary-body-color);
 		border-radius: var(--largest-radius);
 		background-color: var(--primary-body-color);
 		padding: var(--x-small);
