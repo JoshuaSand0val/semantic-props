@@ -32,6 +32,11 @@
 		color: var(--secondary-text-color);
 		padding-block-end: var(--2x-small);
 		padding-inline-start: 1px;
+		list-style: none;
+		&::marker,
+		&::-webkit-details-marker {
+			display: none;
+		}
 		&::after {
 			content: "‹";
 			margin-inline: 1ch;
