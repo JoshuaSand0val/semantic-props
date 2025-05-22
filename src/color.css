@@ -27,7 +27,7 @@
 	--white: white;
 	--black: oklch(0.1 0.01 260);
 
-	@for $priority $weight from 100 to 900 by 100 {
+	@for $weight from 100 to 900 by 100 {
 		/* Calculate Lightness: */
 		$percentage: calc(($weight - 100) / (900 - 100));
 		$l: calc(0.2 + (0.9 - 0.2) * $percentage);
@@ -54,9 +54,9 @@
 	}
 
 	/* Alias Colors: */
-	--primary-background: var(--light, var(--white)) var(--dark, var(--black));
-	--secondary-background: var(--light, var(--gray-100)) var(--dark, var(--gray-900));
-	--tertiary-background: var(--light, var(--gray-200)) var(--dark, var(--gray-800));
+	--primary-body: var(--light, var(--white)) var(--dark, var(--black));
+	--secondary-body: var(--light, var(--gray-100)) var(--dark, var(--gray-900));
+	--tertiary-body: var(--light, var(--gray-200)) var(--dark, var(--gray-800));
 
 	--text-color: var(--light, var(--gray-900)) var(--dark, var(--gray-100));
 
