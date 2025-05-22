@@ -105,6 +105,9 @@
 			background-color: var(--secondary-body-color);
 		}
 		&:active {
+			background-color:
+			var(--light, var(--accent-100))
+			var(--dark, var(--accent-900));
 			color: var(--primary-accent-color);
 		}
 	}
