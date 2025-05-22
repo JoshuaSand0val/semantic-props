@@ -13,7 +13,6 @@
 
 <style>
 	.container {
-		text-shadow: var(--text-stroke-shadow);
 		color: var(--primary-accent-color);
 		&:not(:hover, :focus) {
 			text-decoration: none;

@@ -24,10 +24,6 @@
 		--display-family: "Ubuntu", sans-serif;
 		--body-family: "Open Sans", sans-serif;
 		--mono-family: "IBM Plex Mono", monospace;
-
-		--primary-accent-color: var(--primary-yellow);
-		--secondary-accent-color: var(--secondary-yellow);
-		--tertiary-accent-color: var(--tertiary-yellow);
 	}
 
 	:global(:root) {

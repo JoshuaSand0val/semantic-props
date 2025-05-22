@@ -25,7 +25,6 @@
 	.container {
 		display: block;
 		border-block-start: 1px var(--border-style) var(--secondary-body-color);
-		--primary-accent-color: var(--primary-gray);
 	}
 
 	.wrapper {
