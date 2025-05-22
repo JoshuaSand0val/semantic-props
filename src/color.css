@@ -23,36 +23,49 @@
 		--dark: var(--true);
 	}
 
-	@each $prefix $i in (primary, secondary, tertiary) {
-		/* Lighten/Darken Mix: */
-		$lighten: white calc(5% * $i);
-		$darken: black calc(5% * $i);
+	/* Color Palette: */
+	--white: white;
+	--black: oklch(0.1 0.01 260);
 
-		/* Color Palette */
-		--$(prefix)-accent-color: var(--$(prefix)-blue);
-		--$(prefix)-black: color-mix(in oklch, oklch(0.15 0.01 260), $lighten);
-		--$(prefix)-blue: color-mix(in oklch, oklch(0.6 0.15 240), $darken);
-		--$(prefix)-body-color: var(--light, var(--$(prefix)-white)) var(--dark, var(--$(prefix)-black));
-		--$(prefix)-brown: color-mix(in oklch, oklch(0.6 0.05 50), $darken);
-		--$(prefix)-coral: color-mix(in oklch, oklch(0.7 0.2 40), $darken);
-		--$(prefix)-cyan: color-mix(in oklch, oklch(0.7 0.15 180), $darken);
-		--$(prefix)-gray: color-mix(in oklch, oklch(0.5 0.01 260), $lighten);
-		--$(prefix)-green: color-mix(in oklch, oklch(0.6 0.2 150), $darken);
-		--$(prefix)-indigo: color-mix(in oklch, oklch(0.4 0.2 270), $lighten);
-		--$(prefix)-lime: color-mix(in oklch, oklch(0.7 0.15 120), $darken);
-		--$(prefix)-magenta: color-mix(in oklch, oklch(0.6 0.2 330), $darken);
-		--$(prefix)-orange: color-mix(in oklch, oklch(0.6 0.15 50), $darken);
-		--$(prefix)-pink: color-mix(in oklch, oklch(0.8 0.1 10), $darken);
-		--$(prefix)-purple: color-mix(in oklch, oklch(0.4 0.15 300), $lighten);
-		--$(prefix)-red: color-mix(in oklch, oklch(0.5 0.2 30), $lighten);
-		--$(prefix)-text-color: var(--light, var(--$(prefix)-black)) var(--dark, var(--$(prefix)-white));
-		--$(prefix)-violet: color-mix(in oklch, oklch(0.4 0.15 290), $lighten);
-		--$(prefix)-white: color-mix(in oklch, oklch(1 0.01 260), $darken);
-		--$(prefix)-yellow: color-mix(in oklch, oklch(0.8 0.15 90), $darken);
+	@for $priority $weight from 100 to 900 by 100 {
+		/* Calculate Lightness: */
+		$percentage: calc(($weight - 100) / (900 - 100));
+		$l: calc(0.2 + (0.9 - 0.2) * $percentage);
+
+		--primary-$(weight): var(--gray-$(weight));
+		--secondary-$(weight): var(--gray-$(weight));
+		--accent-$(weight): var(--blue-$(weight));
+
+		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l c h);
+		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $l c h);
+		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $l c h);
+		--cyan-$(weight): oklch(from oklch(0.7 0.15 180) $l c h);
+		--gray-$(weight): oklch(from oklch(0.5 0.01 260) $l c h);
+		--green-$(weight): oklch(from oklch(0.6 0.2 150) $l c h);
+		--indigo-$(weight): oklch(from oklch(0.4 0.2 270) $l c h);
+		--lime-$(weight): oklch(from oklch(0.7 0.15 120) $l c h);
+		--magenta-$(weight): oklch(from oklch(0.6 0.2 330) $l c h);
+		--orange-$(weight): oklch(from oklch(0.6 0.15 50) $l c h);
+		--pink-$(weight): oklch(from oklch(0.8 0.1 10) $l c h);
+		--purple-$(weight): oklch(from oklch(0.4 0.15 300) $l c h);
+		--red-$(weight): oklch(from oklch(0.5 0.2 30) $l c h);
+		--violet-$(weight): oklch(from oklch(0.4 0.15 290) $l c h);
+		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l c h);
 	}
 
+	/* Alias Colors: */
+	--primary-background: var(--light, var(--white)) var(--dark, var(--black));
+	--secondary-background: var(--light, var(--gray-100)) var(--dark, var(--gray-900));
+	--tertiary-background: var(--light, var(--gray-200)) var(--dark, var(--gray-800));
+
+	--text-color: var(--light, var(--gray-900)) var(--dark, var(--gray-100));
+
+	--primary-accent: var(--light, var(--blue-400)) var(--dark, var(--blue-500));
+	--secondary-accent: var(--light, var(--gray-500)) var(--dark, var(--gray-400));
+	--tertiary-accent: var(--light, var(--gray-600)) var(--dark, var(--gray-300));
+
 	/* Stroke Color: */
-	--light-stroke-color: oklch(0.8 0.01 260);
-	--dark-stroke-color: oklch(0.4 0.01 260);
-	--stroke-color: oklch(0.6 0.01 260);
+	--light-stroke-color: var(--gray-300);
+	--dark-stroke-color: var(--gray-700);
+	--stroke-color: var(--gray-500);
 }

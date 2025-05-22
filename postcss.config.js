@@ -4,7 +4,7 @@ export default {
 		"postcss-nesting": {},
 		"postcss-advanced-variables": {},
 		"@csstools/postcss-oklab-function": {},
-		"@csstools/postcss-color-mix-function": {
+		"@csstools/postcss-relative-color-syntax": {
 			preserve: false
 		},
 		"autoprefixer": {},
