@@ -30,8 +30,8 @@
 	@for $weight from 100 to 900 by 100 {
 		/* Calculate Lightness and Chroma: */
 		$percentage: calc(1 - (($weight - 100) / (900 - 100)));
-		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
-		$c: min(sin((1 - l) * pi) * c, c);
+		$l: calc(0.2 + (0.9 - 0.2) * $percentage);
+		$c: min(sin((1 - l) * pi) * c);
 
 		--accent-$(weight): var(--blue-$(weight));
 
