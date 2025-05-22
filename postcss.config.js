@@ -3,13 +3,9 @@ export default {
 		"postcss-import": {},
 		"postcss-nesting": {},
 		"postcss-advanced-variables": {},
-		"@csstools/postcss-trigonometric-functions": {
-			preserve: false
-		},
+		"@csstools/postcss-trigonometric-functions": {},
+		"@csstools/postcss-relative-color-syntax": {},
 		"@csstools/postcss-oklab-function": {},
-		"@csstools/postcss-relative-color-syntax": {
-			preserve: false
-		},
 		"autoprefixer": {},
 		"cssnano": {
 			preset: "default"
