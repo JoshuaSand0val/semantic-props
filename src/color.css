@@ -25,12 +25,12 @@
 
 	/* Color Palette: */
 	--white: white;
-	--black: oklch(0.2 0.01 260);
+	--black: oklch(0.1 0.01 260);
 
 	@for $weight from 100 to 900 by 100 {
 		/* Calculate Lightness: */
 		$percentage: calc(1 - (($weight - 100) / (900 - 100)));
-		$l: calc(0.3 + (0.9 - 0.3) * $percentage);
+		$l: calc(0.2 + (0.9 - 0.2) * $percentage);
 
 		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l c h);
 		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $l c h);
