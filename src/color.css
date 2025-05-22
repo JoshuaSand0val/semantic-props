@@ -59,8 +59,8 @@
 	--tertiary-text-color: var(--light, var(--gray-700)) var(--dark, var(--gray-300));
 
 	--primary-accent-color: var(--light, var(--blue-400)) var(--dark, var(--blue-500));
-	--secondary-accent-color: var(--light, var(--gray-500)) var(--dark, var(--gray-400));
-	--tertiary-accent-color: var(--light, var(--gray-600)) var(--dark, var(--gray-300));
+	--secondary-accent-color: var(--light, var(--blue-500)) var(--dark, var(--blue-400));
+	--tertiary-accent-color: var(--light, var(--blue-600)) var(--dark, var(--blue-300));
 
 	/* Stroke Color: */
 	--light-stroke-color: var(--gray-300);
