@@ -32,10 +32,6 @@
 		$percentage: calc(($weight - 100) / (900 - 100));
 		$l: calc(0.2 + (0.9 - 0.2) * $percentage);
 
-		--primary-$(weight): var(--gray-$(weight));
-		--secondary-$(weight): var(--gray-$(weight));
-		--accent-$(weight): var(--blue-$(weight));
-
 		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l c h);
 		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $l c h);
 		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $l c h);
@@ -54,15 +50,17 @@
 	}
 
 	/* Alias Colors: */
-	--primary-body: var(--light, var(--white)) var(--dark, var(--black));
-	--secondary-body: var(--light, var(--gray-100)) var(--dark, var(--gray-900));
-	--tertiary-body: var(--light, var(--gray-200)) var(--dark, var(--gray-800));
+	--primary-body-color: var(--light, var(--white)) var(--dark, var(--black));
+	--secondary-body-color: var(--light, var(--gray-100)) var(--dark, var(--gray-900));
+	--tertiary-body-color: var(--light, var(--gray-200)) var(--dark, var(--gray-800));
 
-	--text-color: var(--light, var(--gray-900)) var(--dark, var(--gray-100));
+	--primary-text-color: var(--light, var(--gray-900)) var(--dark, var(--gray-100));
+	--secondary-text-color: var(--light, var(--gray-800)) var(--dark, var(--gray-200));
+	--tertiary-text-color: var(--light, var(--gray-700)) var(--dark, var(--gray-300));
 
-	--primary-accent: var(--light, var(--blue-400)) var(--dark, var(--blue-500));
-	--secondary-accent: var(--light, var(--gray-500)) var(--dark, var(--gray-400));
-	--tertiary-accent: var(--light, var(--gray-600)) var(--dark, var(--gray-300));
+	--primary-accent-color: var(--light, var(--blue-400)) var(--dark, var(--blue-500));
+	--secondary-accent-color: var(--light, var(--gray-500)) var(--dark, var(--gray-400));
+	--tertiary-accent-color: var(--light, var(--gray-600)) var(--dark, var(--gray-300));
 
 	/* Stroke Color: */
 	--light-stroke-color: var(--gray-300);
