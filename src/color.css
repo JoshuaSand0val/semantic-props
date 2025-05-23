@@ -23,7 +23,11 @@
 		--dark: var(--true);
 	}
 
-	/* Color Palette: */
+	/* White / Black: */
+	--white: white;
+	--black: black;
+
+	/* Color Weights: */
 	@for $weight from 0 to 9 {
 		/* Calculate Lightness and Chroma: */
 		$percentage: calc(1 - $weight / 9);
@@ -54,6 +58,13 @@
 			$(scheme)-$(weight): var($scheme, var(--gray-$(weight)));
 		}
 	}
+
+	/* Alias Colors: */
+	--primary-color: var(--light, var(--white)) var(--dark, var(--black));
+	--secondary-color: var(--light-0) var(--dark-9);
+	--tertiary-color: var(--light-1) var(--dark-8);
+
+	--text-color: var(--light-9) var(--dark-0);
 
 	/* Stroke Color: */
 	--light-stroke-color: var(--gray-3);
