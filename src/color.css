@@ -60,8 +60,10 @@
 	--tertiary-color: var(--light, var(--gray-1)) var(--dark, var(--gray-8));
 
 	--high-contrast-color: var(--light, var(--gray-9)) var(--dark, var(--gray-0));
+	--medium-contrast-color: var(--light, var(--gray-7)) var(--dark, var(--gray-2));
 	--low-contrast-color: var(--light, var(--gray-5)) var(--dark, var(--gray-4));
 	@media (prefers-contrast: more) {
+		--medium-contrast-color: var(--light, var(--gray-8)) var(--dark, var(--gray-1));
 		--low-contrast-color: var(--light, var(--gray-6)) var(--dark, var(--gray-3));
 	}
 
