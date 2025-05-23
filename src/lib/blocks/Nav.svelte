@@ -106,8 +106,8 @@
 		}
 		&:active {
 			background-color:
-			var(--light, var(--accent-100))
-			var(--dark, var(--accent-900));
+			var(--light, var(--accent-0))
+			var(--dark, var(--accent-9));
 			color: var(--primary-accent-color);
 		}
 	}
