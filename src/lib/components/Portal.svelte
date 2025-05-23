@@ -56,13 +56,13 @@
 			&:hover, &:focus {
 				animation: pulse var(--slowest-time) var(--ease-in-out) infinite alternate;
 			}
-			&:active {
-				animation: none;
-				filter: var(--low-brightness);
-				transform: none;
-			}
 			img {
 				inline-size: 100%;
+				&:active {
+					animation: none;
+					filter: var(--low-brightness);
+					transform: none;
+				}
 			}
 			img.light {
 				display: var(--light, block) var(--dark, none);
