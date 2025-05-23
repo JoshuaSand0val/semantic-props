@@ -38,13 +38,13 @@
 	.title {
 		-webkit-text-stroke: var(--3x-small) transparent;
 		background-image: linear-gradient(123deg,
-			var(--light, var(--red-500)) var(--dark, var(--red-400)),
-			var(--light, var(--orange-500)) var(--dark, var(--orange-400)),
-			var(--light, var(--yellow-500)) var(--dark, var(--yellow-400)),
-			var(--light, var(--green-500)) var(--dark, var(--green-400)),
-			var(--light, var(--blue-500)) var(--dark, var(--blue-400)),
-			var(--light, var(--indigo-500)) var(--dark, var(--indigo-400)),
-			var(--light, var(--violet-500)) var(--dark, var(--violet-400))
+			var(--light, var(--red-600)) var(--dark, var(--red-300)),
+			var(--light, var(--orange-600)) var(--dark, var(--orange-300)),
+			var(--light, var(--yellow-600)) var(--dark, var(--yellow-300)),
+			var(--light, var(--green-600)) var(--dark, var(--green-300)),
+			var(--light, var(--blue-600)) var(--dark, var(--blue-300)),
+			var(--light, var(--indigo-600)) var(--dark, var(--indigo-300)),
+			var(--light, var(--violet-600)) var(--dark, var(--violet-300))
 		);
 		background-clip: text;
 		color: var(--secondary-body-color);
