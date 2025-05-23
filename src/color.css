@@ -35,6 +35,8 @@
 		$c: calc(sin(l * pi) * c);
 
 		/* Colors + Gray: */
+		--accent-$(weight): var(--blue-$(weight));
+
 		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l $c h);
 		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $l $c h);
 		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $l $c h);
@@ -53,17 +55,12 @@
 	}
 
 	/* Alias Colors: */
-	--primary-body-color: var(--light, var(--white)) var(--dark, var(--black));
-	--secondary-body-color: var(--light, var(--gray-0)) var(--dark, var(--gray-9));
-	--tertiary-body-color: var(--light, var(--gray-1)) var(--dark, var(--gray-8));
+	--primary-color: var(--light, var(--white)) var(--dark, var(--black));
+	--secondary-color: var(--light, var(--gray-0)) var(--dark, var(--gray-9));
+	--tertiary-color: var(--light, var(--gray-1)) var(--dark, var(--gray-8));
 
-	--primary-text-color: var(--light, var(--gray-9)) var(--dark, var(--gray-0));
-	--secondary-text-color: var(--light, var(--gray-8)) var(--dark, var(--gray-1));
-	--tertiary-text-color: var(--light, var(--gray-7)) var(--dark, var(--gray-2));
-
-	--primary-accent-color: var(--light, var(--blue-6)) var(--dark, var(--blue-3));
-	--secondary-accent-color: var(--light, var(--blue-7)) var(--dark, var(--blue-4));
-	--tertiary-accent-color: var(--light, var(--blue-8)) var(--dark, var(--blue-5));
+	--high-contrast-color: var(--light, var(--gray-9)) var(--dark, var(--gray-0));
+	--low-contrast-color: var(--light, var(--gray-6)) var(--dark, var(--gray-3));
 
 	/* Stroke Color: */
 	--light-stroke-color: var(--gray-3);
