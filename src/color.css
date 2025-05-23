@@ -55,7 +55,7 @@
 
 		/* Scheme Colors: */
 		@each $scheme in (--light, --dark) {
-			$(scheme)-$(weight): var(--$(scheme), var(--gray-$(weight)));
+			$(scheme)-$(weight): var($scheme, var(--gray-$(weight)));
 		}
 	}
 
