@@ -23,16 +23,19 @@
 		--dark: var(--true);
 	}
 
-	/* Color Palette: */
+	/* White / Black: */
 	--white: white;
 	--black: black;
 
+	/* Color Weights: */
 	@for $weight from 0 to 9 {
 		/* Calculate Lightness and Chroma: */
 		$percentage: calc(1 - $weight / 9);
 		$l: calc(0.15 + (0.97 - 0.15) * $percentage);
 		$c: calc(sin(l * pi) * c);
 
+		--primary-$(weight): var(--gray-$(weight));
+		--secondary-$(weight): var(--gray-$(weight));
 		--accent-$(weight): var(--blue-$(weight));
 
 		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l $c h);
@@ -52,18 +55,14 @@
 		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l $c h);
 	}
 
-	/* Alias Colors: */
-	--primary-body-color: var(--light, var(--white)) var(--dark, var(--black));
-	--secondary-body-color: var(--light, var(--gray-1)) var(--dark, var(--gray-9));
-	--tertiary-body-color: var(--light, var(--gray-2)) var(--dark, var(--gray-8));
-
-	--primary-text-color: var(--light, var(--gray-9)) var(--dark, var(--gray-1));
-	--secondary-text-color: var(--light, var(--gray-8)) var(--dark, var(--gray-2));
-	--tertiary-text-color: var(--light, var(--gray-7)) var(--dark, var(--gray-3));
-
-	--primary-accent-color: var(--light, var(--accent-6)) var(--dark, var(--accent-3));
-	--secondary-accent-color: var(--light, var(--accent-7)) var(--dark, var(--accent-4));
-	--tertiary-accent-color: var(--light, var(--accent-8)) var(--dark, var(--accent-5));
+	/* Scheme Colors: */
+	@each $scheme in (light, dark) {
+		@for $weight from 0 to 9 {
+			--primary-$(weight)-$(scheme): var(--$(scheme), var(--primary-$(weight)));
+			--secondary-$(weight)-$(scheme): var(--$(scheme), var(--secondary-$(weight)));
+			--accent-$(weight)-$(scheme): var(--$(scheme), var(--accent-$(weight)));
+		}
+	}
 
 	/* Stroke Color: */
 	--light-stroke-color: var(--gray-3);
