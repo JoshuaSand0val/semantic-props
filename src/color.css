@@ -27,10 +27,10 @@
 	--white: white;
 	--black: black;
 
-	@for $weight from 100 to 900 by 100 {
+	@for $weight from 0 to 9 {
 		/* Calculate Lightness and Chroma: */
-		$percentage: calc(1 - ($weight - 100) / (900 - 100));
-		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
+		$percentage: calc(1 - $weight / 9);
+		$l: calc(0.15 + (0.97 - 0.15) * $percentage);
 		$c: calc(sin(l * pi) * c);
 
 		--accent-$(weight): var(--blue-$(weight));
@@ -54,19 +54,19 @@
 
 	/* Alias Colors: */
 	--primary-body-color: var(--light, var(--white)) var(--dark, var(--black));
-	--secondary-body-color: var(--light, var(--gray-100)) var(--dark, var(--gray-900));
-	--tertiary-body-color: var(--light, var(--gray-200)) var(--dark, var(--gray-800));
+	--secondary-body-color: var(--light, var(--gray-1)) var(--dark, var(--gray-9));
+	--tertiary-body-color: var(--light, var(--gray-2)) var(--dark, var(--gray-8));
 
-	--primary-text-color: var(--light, var(--gray-900)) var(--dark, var(--gray-100));
-	--secondary-text-color: var(--light, var(--gray-800)) var(--dark, var(--gray-200));
-	--tertiary-text-color: var(--light, var(--gray-700)) var(--dark, var(--gray-300));
+	--primary-text-color: var(--light, var(--gray-9)) var(--dark, var(--gray-1));
+	--secondary-text-color: var(--light, var(--gray-8)) var(--dark, var(--gray-2));
+	--tertiary-text-color: var(--light, var(--gray-7)) var(--dark, var(--gray-3));
 
-	--primary-accent-color: var(--light, var(--accent-600)) var(--dark, var(--accent-300));
-	--secondary-accent-color: var(--light, var(--accent-700)) var(--dark, var(--accent-400));
-	--tertiary-accent-color: var(--light, var(--accent-800)) var(--dark, var(--accent-500));
+	--primary-accent-color: var(--light, var(--accent-6)) var(--dark, var(--accent-3));
+	--secondary-accent-color: var(--light, var(--accent-7)) var(--dark, var(--accent-4));
+	--tertiary-accent-color: var(--light, var(--accent-8)) var(--dark, var(--accent-5));
 
 	/* Stroke Color: */
-	--light-stroke-color: var(--gray-300);
-	--dark-stroke-color: var(--gray-700);
-	--stroke-color: var(--gray-500);
+	--light-stroke-color: var(--gray-3);
+	--dark-stroke-color: var(--gray-7);
+	--stroke-color: var(--gray-5);
 }
