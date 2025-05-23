@@ -11,12 +11,12 @@
 	--heaviest-blur: blur(32px);
 
 	/* Brightness: */
-	--lowest-brightness: brightness(0.5);
-	--lower-brightness: brightness(0.75);
-	--low-brightness: brightness(0.875);
-	--high-brightness: brightness(1.125);
-	--higher-brightness: brightness(1.25);
-	--highest-brightness: brightness(1.5);
+	--lowest-brightness: brightness(0.8);
+	--lower-brightness: brightness(0.9);
+	--low-brightness: brightness(0.95);
+	--high-brightness: brightness(1.05);
+	--higher-brightness: brightness(1.1);
+	--highest-brightness: brightness(1.2);
 
 	/* Contrast: */
 	--lowest-contrast: contrast(0.25);
