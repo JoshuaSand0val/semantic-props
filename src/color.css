@@ -60,10 +60,13 @@
 	--tertiary-color: var(--light, var(--gray-1)) var(--dark, var(--gray-8));
 
 	--high-contrast-color: var(--light, var(--gray-9)) var(--dark, var(--gray-0));
-	--low-contrast-color: var(--light, var(--gray-6)) var(--dark, var(--gray-3));
+	--low-contrast-color: var(--light, var(--gray-5)) var(--dark, var(--gray-4));
+	@media (prefers-contrast: more) {
+		--low-contrast-color: var(--light, var(--gray-6)) var(--dark, var(--gray-3));
+	}
 
 	/* Stroke Color: */
 	--light-stroke-color: var(--gray-3);
-	--dark-stroke-color: var(--gray-7);
-	--stroke-color: var(--gray-5);
+	--dark-stroke-color: var(--gray-6);
+	--stroke-color: var(--low-contrast-color);
 }
