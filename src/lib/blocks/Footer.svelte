@@ -24,7 +24,7 @@
 <style>
 	.container {
 		display: block;
-		border-block-start: 1px var(--border-style) var(--secondary-body-color);
+		border-block-start: 1px var(--border-style) var(--secondary-color);
 	}
 
 	.wrapper {
@@ -33,7 +33,7 @@
 		align-items: start;
 		justify-content: space-between;
 		font-size: var(--small);
-		color: var(--tertiary-text-color);
+		color: var(--low-contrast-color);
 		gap: var(--3x-small) 1ch;
 		margin-inline: auto;
 		margin-bottom: var(--safe-bottom);

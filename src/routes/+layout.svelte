@@ -28,8 +28,8 @@
 
 	:global(:root) {
 		scroll-behavior: smooth;
-		background-color: var(--primary-body-color);
-		color: var(--primary-text-color);
+		background-color: var(--primary-color);
+		color: var(--high-contrast-color);
 	}
 
 	:global(:root, body),

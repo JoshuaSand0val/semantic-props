@@ -34,7 +34,7 @@
 	[aria-level="2"],
 	[aria-level="4"],
 	[aria-level="6"] {
-		color: var(--tertiary-text-color);
+		color: var(--medium-contrast-color);
 		font-weight: var(--light-weight);
 	}
 

@@ -28,8 +28,8 @@
 		font-size: var(--x-large);
 		font-family: var(--display-family);
 		line-height: var(--shorter-line);
-		border-block-end: 1px var(--border-style) var(--tertiary-body-color);
-		color: var(--secondary-text-color);
+		border-block-end: 1px var(--border-style) var(--tertiary-color);
+		color: var(--medium-contrast-color);
 		padding-block-end: var(--2x-small);
 		padding-inline-start: 1px;
 		list-style: none;

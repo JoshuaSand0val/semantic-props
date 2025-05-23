@@ -13,12 +13,13 @@
 
 <style>
 	.container {
-		color: var(--primary-accent-color);
+		text-shadow: var(--text-stroke-shadow);
+		color: var(--accent-4);
 		&:not(:hover, :focus) {
 			text-decoration: none;
 		}
 		&:active {
-			color: var(--secondary-accent-color);
+			color: var(--accent-5);
 		}
 	}
 </style>

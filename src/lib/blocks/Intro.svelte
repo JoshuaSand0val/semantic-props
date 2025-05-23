@@ -25,9 +25,9 @@
 
 	.container {
 		display: block;
-		background-color: var(--primary-body-color);
-		background-image: linear-gradient(123deg, var(--secondary-body-color), var(--primary-body-color) 50%);
-		border-block-end: 1px var(--border-style) var(--secondary-body-color);
+		background-color: var(--primary-color);
+		background-image: linear-gradient(123deg, var(--secondary-color), var(--primary-color) 50%);
+		border-block-end: 1px var(--border-style) var(--secondary-color);
 		overflow: hidden;
 	}
 
@@ -47,7 +47,7 @@
 			var(--light, var(--violet-6)) var(--dark, var(--violet-3))
 		);
 		background-clip: text;
-		color: var(--secondary-body-color);
+		color: var(--secondary-color);
 		animation: title 3s infinite both;
 		@media (prefers-reduced-motion: reduce) {
 			animation: none;

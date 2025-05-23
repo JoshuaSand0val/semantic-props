@@ -23,7 +23,7 @@
 		position: fixed;
 		z-index: var(--z-fixed);
 		inset: 0 0 auto;
-		color: var(--secondary-text-color);
+		color: var(--medium-contrast-color);
 	}
 
 	.wrapper {
@@ -38,16 +38,16 @@
 		z-index: var(--z-top);
 		display: block;
 		font-size: var(--x-large);
-		border: 1px var(--border-style) var(--tertiary-body-color);
+		border: 1px var(--border-style) var(--tertiary-color);
 		border-radius: var(--largest-radius);
-		background-color: var(--primary-body-color);
+		background-color: var(--primary-color);
 		padding: var(--x-small);
 		line-height: 0;
 		box-shadow: var(--lightest-box-shadow);
 		transition: background-color var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
 		&:focus, &:has(+ .navigation:focus-within) {
-			background-color: var(--secondary-body-color);
+			background-color: var(--secondary-color);
 			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
 		}
 	}
@@ -59,8 +59,8 @@
 		inline-size: min(100%, var(--smaller-container));
 		max-block-size: min(60vb, var(--medium-container));
 		border-radius: var(--smaller-radius);
-		border: 1px var(--border-style) var(--tertiary-body-color);
-		background-color: var(--primary-body-color);
+		border: 1px var(--border-style) var(--tertiary-color);
+		background-color: var(--primary-color);
 		box-shadow: var(--lighter-box-shadow);
 		font-family: var(--display-family);
 		overflow: auto;
@@ -89,7 +89,7 @@
 
 	a[href] {
 		display: block;
-		border-block-end: 1px var(--border-style) var(--secondary-body-color);
+		border-block-end: 1px var(--border-style) var(--secondary-color);
 		text-decoration: none;
 		color: inherit;
 		padding-inline: var(--medium);
@@ -102,13 +102,13 @@
 			transition: background-color var(--fast-time) var(--ease-in-out);
 		}
 		&:hover, &:focus {
-			background-color: var(--secondary-body-color);
+			background-color: var(--secondary-color);
 		}
 		&:active {
 			background-color:
 			var(--light, var(--accent-0))
 			var(--dark, var(--accent-9));
-			color: var(--primary-accent-color);
+			color: var(--accent-4);
 		}
 	}
 </style>

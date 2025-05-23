@@ -38,7 +38,7 @@
 		font-family: var(--display-family);
 		font-size: var(--x-small);
 		text-transform: uppercase;
-		color: var(--tertiary-text-color);
+		color: var(--low-contrast-color);
 		line-height: var(--short-line);
 		margin-block: 0 var(--3x-small);
 		margin-inline: var(--smallest-radius);
@@ -55,10 +55,10 @@
 		white-space: pre;
 		font: var(--small)/var(--short-line) var(--mono-family);
 		border-radius: var(--smallest-radius);
-		border: 1px var(--border-style) var(--tertiary-body-color);
+		border: 1px var(--border-style) var(--tertiary-color);
 		border-block-end-width: var(--4x-small);
-		background-color: var(--secondary-body-color);
-		color: var(--secondary-text-color);
+		background-color: var(--secondary-color);
+		color: var(--medium-contrast-color);
 		padding-block: var(--small) var(--x-small);
 		padding-inline: var(--x-small) var(--x-large);
 		overflow: auto;
