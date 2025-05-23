@@ -34,8 +34,7 @@
 		$l: calc(0.15 + (0.97 - 0.15) * $percentage);
 		$c: calc(sin(l * pi) * c);
 
-		--primary-$(weight): var(--gray-$(weight));
-		--secondary-$(weight): var(--gray-$(weight));
+		/* Colors + Gray: */
 		--accent-$(weight): var(--blue-$(weight));
 
 		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l $c h);
@@ -53,14 +52,10 @@
 		--red-$(weight): oklch(from oklch(0.5 0.2 30) $l $c h);
 		--violet-$(weight): oklch(from oklch(0.4 0.15 290) $l $c h);
 		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l $c h);
-	}
 
-	/* Scheme Colors: */
-	@each $scheme in (light, dark) {
-		@for $weight from 0 to 9 {
-			--primary-$(weight)-$(scheme): var(--$(scheme), var(--primary-$(weight)));
-			--secondary-$(weight)-$(scheme): var(--$(scheme), var(--secondary-$(weight)));
-			--accent-$(weight)-$(scheme): var(--$(scheme), var(--accent-$(weight)));
+		/* Scheme Colors: */
+		@each $scheme in (--light, --dark) {
+			$(scheme)-$(weight): var(--$(scheme), var(--gray-$(weight)));
 		}
 	}
 
