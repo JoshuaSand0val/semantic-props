@@ -16,17 +16,17 @@
 		<Portal
 			title="Coming Soon"
 			description="Built with Semantic Props."
-			url="#builtwith"
+			url="#builtusing"
 		/>
 		<Portal
 			title="Coming Soon"
 			description="Built with Semantic Props."
-			url="#builtwith"
+			url="#builtusing"
 		/>
 		<Portal
 			title="Coming Soon"
 			description="Built with Semantic Props."
-			url="#builtwith"
+			url="#builtusing"
 		/>
 	</div>
 </Divider>
