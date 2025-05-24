@@ -16,9 +16,11 @@
 <style>
 	.container {
 		display: flex;
-		flex-flow: column nowrap;
+		flex-flow: row nowrap;
 		border: 1px var(--border-style) var(--neutral-800);
 		margin: 0;
+		scroll-snap-type: x mandatory;
+		overflow: auto;
 	}
 
 	.color {
@@ -36,6 +38,8 @@
 		color: var(--prop, transparent);
 		padding-inline: var(--small);
 		padding-block: var(--x-small);
+		scroll-snap-align: start;
+		flex: 1 0 calc(100% - var(--x-small));
 	}
 
 	.prop, .name {

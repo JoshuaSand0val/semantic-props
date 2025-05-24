@@ -57,7 +57,7 @@
 <style>
 	.container {
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
 		align-items: start;
 		gap: var(--2x-small);
 		padding-inline: calc((100vi - 100%) * 0.5);
