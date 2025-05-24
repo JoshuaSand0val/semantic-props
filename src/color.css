@@ -23,10 +23,6 @@
 		--dark: var(--true);
 	}
 
-	/* White / Black: */
-	--white: white;
-	--black: black;
-
 	/* Color Weights: */
 	@for $weight from 0 to 9 {
 		/* Calculate Lightness and Chroma: */
@@ -41,11 +37,11 @@
 		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $l $c h);
 		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $l $c h);
 		--cyan-$(weight): oklch(from oklch(0.7 0.15 180) $l $c h);
-		--gray-$(weight): oklch(from oklch(0.5 0.01 260) $l $c h);
 		--green-$(weight): oklch(from oklch(0.6 0.2 150) $l $c h);
 		--indigo-$(weight): oklch(from oklch(0.4 0.2 270) $l $c h);
 		--lime-$(weight): oklch(from oklch(0.7 0.15 120) $l $c h);
 		--magenta-$(weight): oklch(from oklch(0.6 0.2 330) $l $c h);
+		--neutral-$(weight): oklch(from oklch(0.5 0.01 260) $l $c h);
 		--orange-$(weight): oklch(from oklch(0.6 0.15 50) $l $c h);
 		--pink-$(weight): oklch(from oklch(0.8 0.1 10) $l $c h);
 		--purple-$(weight): oklch(from oklch(0.4 0.15 300) $l $c h);
@@ -55,17 +51,17 @@
 	}
 
 	/* Alias Colors: */
-	--primary-color: var(--light, var(--white)) var(--dark, var(--black));
-	--secondary-color: var(--light, var(--gray-0)) var(--dark, var(--gray-9));
-	--tertiary-color: var(--light, var(--gray-1)) var(--dark, var(--gray-8));
+	--primary-color: var(--light, var(--neutral-0)) var(--dark, var(--neutral-9));
+	--secondary-color: var(--light, var(--neutral-1)) var(--dark, var(--neutral-8));
+	--tertiary-color: var(--light, var(--neutral-2)) var(--dark, var(--neutral-7));
 
-	--high-contrast-color: var(--light, var(--gray-9)) var(--dark, var(--gray-0));
-	--medium-contrast-color: var(--light, var(--gray-7)) var(--dark, var(--gray-2));
-	--low-contrast-color: var(--light, var(--gray-5)) var(--dark, var(--gray-4));
+	--high-contrast-color: var(--light, var(--neutral-8)) var(--dark, var(--neutral-1));
+	--medium-contrast-color: var(--light, var(--neutral-6)) var(--dark, var(--neutral-3));
+	--low-contrast-color: var(--light, var(--neutral-5)) var(--dark, var(--neutral-4));
 	@media (prefers-contrast: more) {
-		--high-contrast-color: var(--light, var(--black)) var(--dark, var(--white));
-		--medium-contrast-color: var(--light, var(--gray-8)) var(--dark, var(--gray-1));
-		--low-contrast-color: var(--light, var(--gray-6)) var(--dark, var(--gray-3));
+		--high-contrast-color: var(--light, var(--neutral-9)) var(--dark, var(--neutral-0));
+		--medium-contrast-color: var(--light, var(--neutral-7)) var(--dark, var(--neutral-2));
+		--low-contrast-color: var(--light, var(--neutral-6)) var(--dark, var(--neutral-3));
 	}
 
 	/* Stroke Color: */
