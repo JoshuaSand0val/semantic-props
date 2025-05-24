@@ -19,10 +19,13 @@
 		:global(code) {
 			display: inline;
 			border-radius: var(--smallest-radius);
-			background-color: var(--neutral-750);
-			color: var(--orange-350);
+			background-color:
+			var(--light, var(--neutral-200))
+			var(--dark, var(--neutral-700));
+			color: var(--medium-contrast-color);
 			font-family: var(--mono-family);
-			line-height: var(--short-line);
+			font-size: var(--small);
+			line-height: var(--tall-line);
 			padding-inline: var(--2x-small);
 			padding-block: var(--4x-small);
 			margin-block: var(--4x-small);
