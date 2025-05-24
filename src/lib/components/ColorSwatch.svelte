@@ -61,6 +61,7 @@
 	}
 
 	.prop {
+		font-family: var(--mono-family);
 		opacity: var(--high-opacity);
 	}
 </style>
