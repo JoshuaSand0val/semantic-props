@@ -78,10 +78,6 @@
 		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--smallest-container)), 1fr));
 		align-items: start;
 		gap: var(--2x-small);
-		padding-inline: calc((100vi - 100%) * 0.5);
-		margin-inline: calc((100vi - 100%) * -0.5);
-		scroll-padding: var(--2x-small);
-		scrollbar-width: none;
 		overflow: auto;
 	}
 </style>
