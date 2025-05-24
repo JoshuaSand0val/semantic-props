@@ -38,11 +38,19 @@
 		"Low Contrast Color": "var(--low-contrast-color)"
 	};
 
+	/** Stroke Color Swatches. */
+	const strokes = {
+		"Light Stroke Color": "var(--light-stroke-color)",
+		"Dark Stroke Color": "var(--dark-stroke-color)",
+		"Stroke Color": "var(--stroke-color)"
+	};
+
 	/** All Color Swatches. */
 	const swatches = [
 		...colorPalette,
 		priorityAlias,
-		contrastAlias
+		contrastAlias,
+		strokes
 	];
 </script>
 
