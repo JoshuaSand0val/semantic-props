@@ -33,8 +33,8 @@
 		justify-content: start;
 		gap: var(--4x-small) var(--2x-small);
 		inline-size:
-		var(--watch-to-phone, calc(100% - var(--small)))
-		var(--tablet-to-desktop, 100%);
+		var(--watch-to-tablet, calc(100% - var(--small)))
+		var(--laptop-to-desktop, 100%);
 		list-style: none;
 		font-size: var(--medium);
 		font-family: var(--display-family);
