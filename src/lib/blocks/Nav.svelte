@@ -12,6 +12,7 @@
 			</span>
 			<nav class="navigation">
 				<a href="#builtusing">Built using Semantic Props</a>
+				<a href="#colors">Color Palette and Booleans</a>
 			</nav>
 			<div class="backdrop"></div>
 		</aside>

@@ -1,14 +1,15 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
 
-	let { children, title, open = true }: {
+	let { children, title, id, open = true }: {
 		children: Snippet,
 		title: string,
+		id: string,
 		open?: boolean
 	} = $props();
 </script>
 
-<details open={open}>
+<details open={open} id={id}>
 	<summary>{title}</summary>
 	<div class="content">
 		{@render children()}

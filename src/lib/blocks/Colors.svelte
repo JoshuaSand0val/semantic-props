@@ -55,7 +55,7 @@
 	];
 </script>
 
-<Divider title="Color Palette and Booleans">
+<Divider title="Color Palette and Booleans" id="colors">
 	<Paragraph>
 		Semantic Props provides a simple but expansive color palette.<br>
 		Color schemes can be forced via classes <code>light</code> and <code>dark</code>.
