@@ -76,7 +76,9 @@
 		var(--laptop-to-desktop, var(--smaller-container));
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--column-width)), 1fr));
-		align-items: start;
+		align-items:
+		var(--watch-to-tablet, stretch)
+		var(--laptop-to-desktop, start);
 		gap: var(--2x-small);
 		padding-inline: var(--margin-size);
 		margin-inline: calc((100vi - 100%) * -0.5);
