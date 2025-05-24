@@ -49,7 +49,7 @@
 			border-radius: var(--medium-radius);
 			border: 1px var(--border-style) var(--tertiary-color);
 			background-color: var(--secondary-color);
-			box-shadow: var(--light-box-shadow);
+			box-shadow: var(--lightest-box-shadow);
 			overflow: hidden;
 			order: -1;
 			transition: all var(--faster-time) var(--ease-out);
