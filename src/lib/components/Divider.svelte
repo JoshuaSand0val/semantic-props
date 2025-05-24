@@ -16,7 +16,7 @@
 </details>
 
 <style>
-	details, .content {
+	details {
 		display: block;
 		margin-block: var(--3x-large) var(--4x-large);
 	}
@@ -45,5 +45,9 @@
 		details[open] &::after {
 			transform: rotate(-90deg);
 		}
+	}
+
+	.content {
+		margin-block: var(--medium) var(--large);
 	}
 </style>
