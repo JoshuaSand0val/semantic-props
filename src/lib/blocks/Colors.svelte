@@ -45,14 +45,6 @@
 		"Dark Stroke Color": "var(--dark-stroke-color)",
 		"Stroke Color": "var(--stroke-color)"
 	};
-
-	/** All Color Swatches. */
-	const swatches = [
-		...colorPalette,
-		priorityAlias,
-		contrastAlias,
-		strokes
-	];
 </script>
 
 <Divider title="Color Palette and Booleans" id="colors">
@@ -66,18 +58,39 @@
 		Example use: <code>color: var(<b>--light</b>, black) var(<b>--dark</b>, white);</code>
 	</Paragraph>
 	<div class="container">
-		{#each swatches as swatch}
+		{#each colorPalette as swatch}
 		<ColorSwatch colors={swatch}/>
 		{/each}
+		<div class="group">
+			{#each [priorityAlias, contrastAlias, strokes] as swatch}
+			<ColorSwatch colors={swatch}/>
+			{/each}
+		</div>
 	</div>
 </Divider>
 
 <style>
 	.container {
+		--column-width:
+		var(--watch-to-tablet, var(--smallest-container))
+		var(--laptop-to-desktop, var(--smaller-container));
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--smallest-container)), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--column-width)), 1fr));
 		align-items: start;
 		gap: var(--2x-small);
-		overflow: auto;
+		padding-inline: var(--margin-size);
+		margin-inline: calc((100vi - 100%) * -0.5);
+		margin-block: var(--2x-large);
+	}
+
+	.group {
+		display:
+		var(--watch-to-tablet, contents)
+		var(--laptop-to-desktop, flex);
+		flex-flow: row wrap;
+		gap: inherit;
+		:global(& > *) {
+			flex: 1 1 auto;
+		}
 	}
 </style>
