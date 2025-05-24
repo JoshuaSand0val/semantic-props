@@ -84,6 +84,7 @@
 		padding-left: max(var(--margin-size), var(--safe-left));
 		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--2x-large);
+		transition: padding var(--faster-time) var(--ease-in);
 	}
 
 	.group {
