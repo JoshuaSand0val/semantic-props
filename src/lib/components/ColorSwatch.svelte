@@ -16,10 +16,13 @@
 <style>
 	.container {
 		display: flex;
-		flex-flow: row nowrap;
-		border: 1px var(--border-style) var(--neutral-800);
+		flex-direction: var(--watch-to-tablet, row) var(--laptop-to-desktop, column);
+		flex-wrap: nowrap;
+		max-block-size: clamp(var(--smallest-container), 60vmax, 90vb);
+		border-radius: var(--smallest-radius);
+		border: 1px var(--border-style) var(--tertiary-color);
 		margin: 0;
-		scroll-snap-type: x mandatory;
+		scroll-snap-type: both mandatory;
 		overflow: auto;
 	}
 
@@ -29,17 +32,19 @@
 		flex-flow: column nowrap;
 		justify-content: start;
 		gap: var(--4x-small) var(--2x-small);
+		inline-size:
+		var(--watch-to-phone, calc(100% - var(--small)))
+		var(--tablet-to-desktop, 100%);
 		list-style: none;
-		inline-size: 100%;
 		font-size: var(--medium);
 		font-family: var(--display-family);
 		line-height: var(--short-line);
 		background-color: currentColor;
 		color: var(--prop, transparent);
 		padding-inline: var(--small);
-		padding-block: var(--x-small);
+		padding-block: var(--2x-small);
 		scroll-snap-align: start;
-		flex: 1 0 calc(100% - var(--x-small));
+		flex: 1 0 auto;
 	}
 
 	.prop, .name {
