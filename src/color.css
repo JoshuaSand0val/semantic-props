@@ -45,8 +45,8 @@
 
 	/* Alias Colors: */
 	--primary-color: var(--light, var(--neutral-100)) var(--dark, var(--neutral-900));
-	--secondary-color: var(--light, var(--neutral-200)) var(--dark, var(--neutral-800));
-	--tertiary-color: var(--light, var(--neutral-300)) var(--dark, var(--neutral-700));
+	--secondary-color: var(--light, var(--neutral-150)) var(--dark, var(--neutral-850));
+	--tertiary-color: var(--light, var(--neutral-200)) var(--dark, var(--neutral-800));
 
 	--high-contrast-color: var(--light, var(--neutral-800)) var(--dark, var(--neutral-200));
 	--medium-contrast-color: var(--light, var(--neutral-650)) var(--dark, var(--neutral-350));
@@ -58,7 +58,7 @@
 	}
 
 	/* Stroke Color: */
-	--light-stroke-color: var(--gray-3);
-	--dark-stroke-color: var(--gray-6);
+	--light-stroke-color: var(--neutral-350);
+	--dark-stroke-color: var(--neutral-650);
 	--stroke-color: var(--low-contrast-color);
 }
