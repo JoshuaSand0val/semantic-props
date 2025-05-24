@@ -1,6 +1,7 @@
 <script lang="ts">
     import ColorSwatch from "$lib/components/ColorSwatch.svelte";
     import Divider from "$lib/components/Divider.svelte";
+    import Paragraph from "$lib/components/Paragraph.svelte";
 
 	/** Returns ColorSwatch value, weights 100 to 900. */
 	const weights = ([color, prefix]: string[]) => {
@@ -54,7 +55,16 @@
 	];
 </script>
 
-<Divider title="Color Palette and Schemes">
+<Divider title="Color Palette and Booleans">
+	<Paragraph>
+		Semantic Props provides a simple but expansive color palette.<br>
+		Color schemes can be forced via classes <code>light</code> and <code>dark</code>.
+		Combine for the system color scheme.
+	</Paragraph>
+	<Paragraph>
+		Colors schemes can be targeted using the boolean Semantic Props <code>--light</code> and <code>--dark</code>.<br>
+		Example use: <code>color: var(<b>--light</b>, black) var(<b>--dark</b>, white);</code>
+	</Paragraph>
 	<div class="container">
 		{#each swatches as swatch}
 		<ColorSwatch colors={swatch}/>
