@@ -1,5 +1,6 @@
 <script>
     import BuiltUsing from "$lib/blocks/BuiltUsing.svelte";
+    import Colors from "$lib/blocks/Colors.svelte";
     import Intro from "$lib/blocks/Intro.svelte";
     import Content from "$lib/components/Content.svelte";
 </script>
@@ -12,4 +13,5 @@
 
 <Content>
 	<BuiltUsing />
+	<Colors />
 </Content>
