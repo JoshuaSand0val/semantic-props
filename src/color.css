@@ -24,9 +24,9 @@
 	}
 
 	/* Color Weights: */
-	@for $weight from 0 to 9 {
+	@for $weight from 100 to 900 by 50 {
 		/* Calculate Lightness and Chroma: */
-		$percentage: calc(1 - $weight / 9);
+		$percentage: calc(1 - ($weight - 100) / (900 - 100));
 		$l: calc(0.15 + (0.98 - 0.15) * $percentage);
 		$c: calc(sin(l * pi) * c);
 
@@ -51,17 +51,17 @@
 	}
 
 	/* Alias Colors: */
-	--primary-color: var(--light, var(--neutral-0)) var(--dark, var(--neutral-9));
-	--secondary-color: var(--light, var(--neutral-1)) var(--dark, var(--neutral-8));
-	--tertiary-color: var(--light, var(--neutral-2)) var(--dark, var(--neutral-7));
+	--primary-color: var(--light, var(--neutral-100)) var(--dark, var(--neutral-900));
+	--secondary-color: var(--light, var(--neutral-200)) var(--dark, var(--neutral-800));
+	--tertiary-color: var(--light, var(--neutral-300)) var(--dark, var(--neutral-700));
 
-	--high-contrast-color: var(--light, var(--neutral-8)) var(--dark, var(--neutral-1));
-	--medium-contrast-color: var(--light, var(--neutral-6)) var(--dark, var(--neutral-3));
-	--low-contrast-color: var(--light, var(--neutral-5)) var(--dark, var(--neutral-4));
+	--high-contrast-color: var(--light, var(--neutral-800)) var(--dark, var(--neutral-200));
+	--medium-contrast-color: var(--light, var(--neutral-650)) var(--dark, var(--neutral-350));
+	--low-contrast-color: var(--light, var(--neutral-550)) var(--dark, var(--neutral-450));
 	@media (prefers-contrast: more) {
-		--high-contrast-color: var(--light, var(--neutral-9)) var(--dark, var(--neutral-0));
-		--medium-contrast-color: var(--light, var(--neutral-7)) var(--dark, var(--neutral-2));
-		--low-contrast-color: var(--light, var(--neutral-6)) var(--dark, var(--neutral-3));
+		--high-contrast-color: var(--light, var(--neutral-900)) var(--dark, var(--neutral-100));
+		--medium-contrast-color: var(--light, var(--neutral-750)) var(--dark, var(--neutral-250));
+		--low-contrast-color: var(--light, var(--neutral-650)) var(--dark, var(--neutral-350));
 	}
 
 	/* Stroke Color: */
