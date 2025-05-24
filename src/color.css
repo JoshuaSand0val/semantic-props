@@ -31,7 +31,7 @@
 	@for $weight from 0 to 9 {
 		/* Calculate Lightness and Chroma: */
 		$percentage: calc(1 - $weight / 9);
-		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
+		$l: calc(0.15 + (0.98 - 0.15) * $percentage);
 		$c: calc(sin(l * pi) * c);
 
 		/* Colors + Gray: */
@@ -63,6 +63,7 @@
 	--medium-contrast-color: var(--light, var(--gray-7)) var(--dark, var(--gray-2));
 	--low-contrast-color: var(--light, var(--gray-5)) var(--dark, var(--gray-4));
 	@media (prefers-contrast: more) {
+		--high-contrast-color: var(--light, var(--black)) var(--dark, var(--white));
 		--medium-contrast-color: var(--light, var(--gray-8)) var(--dark, var(--gray-1));
 		--low-contrast-color: var(--light, var(--gray-6)) var(--dark, var(--gray-3));
 	}
