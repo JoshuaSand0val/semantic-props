@@ -80,7 +80,8 @@
 		var(--watch-to-tablet, stretch)
 		var(--laptop-to-desktop, start);
 		gap: var(--2x-small);
-		padding-inline: var(--margin-size);
+		padding-right: max(var(--margin-size), var(--safe-right));
+		padding-left: max(var(--margin-size), var(--safe-left));
 		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--2x-large);
 	}
