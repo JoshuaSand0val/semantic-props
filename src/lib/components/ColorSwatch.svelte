@@ -18,7 +18,7 @@
 		display: flex;
 		flex-direction: var(--watch-to-tablet, row) var(--laptop-to-desktop, column);
 		flex-wrap: nowrap;
-		max-block-size: clamp(var(--smallest-container), 60vmax, 90vb);
+		max-block-size: max(var(--smallest-container), 60vb);
 		border-radius: var(--smallest-radius);
 		border: 1px var(--border-style) var(--tertiary-color);
 		margin: 0;
