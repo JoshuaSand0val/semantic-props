@@ -1,4 +1,5 @@
 <script>
+    import AspectRatios from "$lib/blocks/AspectRatios.svelte";
     import BuiltUsing from "$lib/blocks/BuiltUsing.svelte";
     import Colors from "$lib/blocks/Colors.svelte";
     import Intro from "$lib/blocks/Intro.svelte";
@@ -14,4 +15,5 @@
 <Content>
 	<BuiltUsing />
 	<Colors />
+	<AspectRatios />
 </Content>
