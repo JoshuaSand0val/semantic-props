@@ -80,7 +80,7 @@
 		z-index: var(--z-bottom);
 		inset: 0;
 		transition: opacity var(--normal-time) var(--ease-out);
-		backdrop-filter: var(--lightest-blur);
+		backdrop-filter: var(--lighter-blur) var(--low-brightness);
 		pointer-events: none;
 		opacity: 0;
 		.button:focus ~ &, .navigation:focus-within + & {
