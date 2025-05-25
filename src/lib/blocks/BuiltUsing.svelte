@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Content from "$lib/components/Content.svelte";
 	import Divider from "$lib/components/Divider.svelte";
 	import Portal from "$lib/components/Portal.svelte";
 </script>

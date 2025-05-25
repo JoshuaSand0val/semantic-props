@@ -1,12 +1,12 @@
 <script lang="ts">
 	import CodeBlock from "$lib/components/CodeBlock.svelte";
-    import Content from "$lib/components/Content.svelte";
+    import Body from "$lib/components/Body.svelte";
 	import Heading from "$lib/components/Heading.svelte";
 </script>
 
 <header class="container">
 	<div class="wrapper">
-		<Content>
+		<Body>
 			<Heading level={4}>Stylesheets made simple.</Heading>
 			<Heading level={1}>
 				<span class="title">Semantic Props</span>
@@ -14,7 +14,7 @@
 			<Heading level={6}>Expertly crafted CSS Custom Properties (variables) for creating <strong>consistent components</strong> in any design.</Heading>
 			<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
 			<CodeBlock description="Scoping Class" lang="html" code='<html class="semantic">...</html>' />
-		</Content>
+		</Body>
 	</div>
 </header>
 

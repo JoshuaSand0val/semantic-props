@@ -3,7 +3,7 @@
     import BuiltUsing from "$lib/blocks/BuiltUsing.svelte";
     import Colors from "$lib/blocks/Colors.svelte";
     import Intro from "$lib/blocks/Intro.svelte";
-    import Content from "$lib/components/Content.svelte";
+    import Body from "$lib/components/Body.svelte";
 </script>
 
 <svelte:head>
@@ -12,8 +12,8 @@
 
 <Intro />
 
-<Content>
+<Body>
 	<BuiltUsing />
 	<Colors />
 	<AspectRatios />
-</Content>
+</Body>
