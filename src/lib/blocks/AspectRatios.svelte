@@ -50,6 +50,7 @@
 		var(--watch-to-phone, var(--small))
 		var(--tablet, var(--large))
 		var(--laptop-to-desktop, var(--x-large));
+		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
 		border-radius: var(--smallest-radius);
 		background-color: var(--primary-color);
