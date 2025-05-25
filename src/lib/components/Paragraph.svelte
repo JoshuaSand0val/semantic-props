@@ -20,8 +20,8 @@
 			display: inline;
 			border-radius: var(--smallest-radius);
 			background-color:
-			var(--light, var(--neutral-200))
-			var(--dark, var(--neutral-700));
+			var(--light, var(--neutral-150))
+			var(--dark, var(--neutral-800));
 			color: var(--medium-contrast-color);
 			font-family: var(--mono-family);
 			font-size: var(--small);
