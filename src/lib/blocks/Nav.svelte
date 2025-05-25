@@ -11,6 +11,7 @@
 				</svg>
 			</span>
 			<nav class="navigation">
+				<a href="#top">Semantic Props</a>
 				<a href="#builtusing">Built using Semantic Props</a>
 				<a href="#colors">Color Palette and Booleans</a>
 			</nav>
@@ -91,11 +92,16 @@
 	a[href] {
 		display: block;
 		border-block-end: 1px var(--border-style) var(--secondary-color);
+		font-size: var(--small);
 		text-decoration: none;
 		color: inherit;
 		padding-inline: var(--medium);
-		padding-block: var(--small);
+		padding-block: var(--x-small);
 		outline-offset: -4px;
+		@media (pointer: fine) {
+			padding-inline: var(--small);
+			padding-block: var(--2x-small);
+		}
 		&:last-child {
 			border-block-end: none;
 		}
