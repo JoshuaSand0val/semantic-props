@@ -72,16 +72,15 @@
 <style>
 	.container {
 		--column-width:
-		var(--watch-to-tablet, minmax(min(100%, var(--smallest-container)), 1fr))
-		var(--laptop-to-desktop, min(100%, var(--smaller-container)));
+		var(--watch-to-tablet, var(--smallest-container))
+		var(--laptop-to-desktop, var(--smaller-container));
 		display: grid;
-		grid-template-columns: repeat(auto-fit, var(--column-width));
-		justify-content: center;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-width)), 1fr));
 		align-items: stretch;
 		gap: var(--2x-small);
 		padding-right: max(var(--margin-size), var(--safe-right));
 		padding-left: max(var(--margin-size), var(--safe-left));
-		margin-inline: calc((100vi - 100%) * -0.5);
+		margin-inline: calc((min(100vi, 3840px) - 100%) * -0.5);
 		margin-block: var(--2x-large);
 		transition: padding var(--faster-time) var(--ease-in);
 	}
