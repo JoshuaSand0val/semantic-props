@@ -75,10 +75,9 @@
 		var(--watch-to-tablet, var(--smallest-container))
 		var(--laptop-to-desktop, var(--smaller-container));
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--column-width)), 1fr));
-		align-items:
-		var(--watch-to-tablet, stretch)
-		var(--laptop-to-desktop, start);
+		grid-template-columns: repeat(auto-fit, min(100%, var(--column-width)));
+		justify-content: center;
+		align-items: stretch;
 		gap: var(--2x-small);
 		padding-right: max(var(--margin-size), var(--safe-right));
 		padding-left: max(var(--margin-size), var(--safe-left));
