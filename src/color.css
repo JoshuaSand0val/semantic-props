@@ -30,7 +30,7 @@
 		$l: calc(0.15 + (0.98 - 0.15) * $percentage);
 		$c: calc(sin(l * pi) * c);
 
-		/* Colors + Gray: */
+		/* Colors + Neutral: */
 		--accent-$(weight): var(--blue-$(weight));
 
 		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l $c h);
