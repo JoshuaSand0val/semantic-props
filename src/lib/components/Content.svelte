@@ -12,11 +12,6 @@
 
 <style>
 	.container {
-		transition: all var(--faster-time) var(--ease-in);
-		transition-property: padding, margin;
-	}
-
-	.container {
 		display: block;
 		inline-size: min(var(--largest-container), 100%);
 		font-family: var(--body-family);
@@ -28,5 +23,7 @@
 		padding-left: max(var(--safe-left), var(--margin-size));
 		margin-inline: auto;
 		margin-block: var(--medium);
+		transition: all var(--faster-time) var(--ease-in);
+		transition-property: padding, margin;
 	}
 </style>
