@@ -20,6 +20,7 @@
 		display: block;
 		inline-size: min(var(--largest-container), 100%);
 		font-family: var(--body-family);
+		font-weight: var(--regular-weight);
 		line-height: var(--normal-line);
 		word-spacing: var(--normal-word);
 		letter-spacing: var(--normal-letter);
