@@ -30,6 +30,8 @@
 		scroll-behavior: smooth;
 		background-color: var(--primary-color);
 		color: var(--high-contrast-color);
+		overflow-x: hidden;
+		overflow-y: auto;
 	}
 
 	:global(:root, body),
