@@ -4,7 +4,7 @@
 	} = $props();
 </script>
 
-<dl class="container">
+<dl class="container scroll">
 	{#each Object.entries(colors) as [name, prop]}
 	<span style:--prop={prop} class="color">
 		<dt class="name">{name}</dt>
@@ -14,6 +14,8 @@
 </dl>
 
 <style>
+	@import "../styles/scroll.css";
+
 	.container {
 		display: flex;
 		flex-direction: var(--watch-to-tablet, row) var(--laptop-to-desktop, column);
@@ -23,7 +25,6 @@
 		border: 1px var(--border-style) var(--tertiary-color);
 		margin: 0;
 		scroll-snap-type: both mandatory;
-		overflow: auto;
 	}
 
 	.color {

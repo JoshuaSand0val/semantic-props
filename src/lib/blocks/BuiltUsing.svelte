@@ -4,7 +4,7 @@
 </script>
 
 <Divider title="Built using Semantic Props" id="builtusing">
-	<div class="grid">
+	<div class="grid scroll">
 		<Portal
 			title="Hey, Jes!"
 			description="Portfolio website by Jess Sandoval."
@@ -31,6 +31,8 @@
 </Divider>
 
 <style>
+	@import "../styles/scroll.css";
+
 	.grid {
 		display: flex;
 		flex-flow: row nowrap;
@@ -41,8 +43,6 @@
 		padding-block: var(--3x-small);
 		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--2x-large);
-		scrollbar-width: none;
-		overflow: auto;
 		:global(& > *) {
 			scroll-snap-align: center;
 			inline-size: min(100%, var(--small-container));

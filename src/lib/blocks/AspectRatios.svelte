@@ -13,7 +13,7 @@
 
 <Divider title="Aspect Ratios" id="aspectratios">
 	<Paragraph>Semantic Props provides aspect-ratios for various types of media.</Paragraph>
-	<div class="container">
+	<div class="container scroll">
 		{#each Object.entries(ratios) as [ratio, prop]}
 		<div>
 			<span class="ratio" style:--prop={prop}>{ratio}</span>
@@ -24,6 +24,8 @@
 </Divider>
 
 <style>
+	@import "../styles/scroll.css";
+
 	.container {
 		display: flex;
 		flex-flow: row nowrap;
@@ -33,7 +35,6 @@
 		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--large);
 		scroll-snap-type: x mandatory;
-		overflow: auto;
 	}
 
 	.ratio {
