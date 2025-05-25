@@ -72,10 +72,10 @@
 <style>
 	.container {
 		--column-width:
-		var(--watch-to-tablet, var(--smallest-container))
-		var(--laptop-to-desktop, var(--smaller-container));
+		var(--watch-to-tablet, minmax(min(100%, var(--smallest-container)), 1fr))
+		var(--laptop-to-desktop, min(100%, var(--smaller-container)));
 		display: grid;
-		grid-template-columns: repeat(auto-fit, min(100%, var(--column-width)));
+		grid-template-columns: repeat(auto-fit, var(--column-width));
 		justify-content: center;
 		align-items: stretch;
 		gap: var(--2x-small);
