@@ -12,7 +12,7 @@
 </script>
 
 <Divider title="Aspect Ratios" id="aspectratios">
-	<Paragraph>Semantic Props provides aspect-ratios for various types of media.</Paragraph>
+	<Paragraph>Semantic Props provides CSS <code>aspect-ratio</code> values for various types of media.</Paragraph>
 	<div class="container scroll">
 		{#each Object.entries(ratios) as [ratio, prop]}
 		<div>
