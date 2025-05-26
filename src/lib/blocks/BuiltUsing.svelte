@@ -45,7 +45,7 @@
 		margin-block: var(--2x-large);
 		:global(& > *) {
 			scroll-snap-align: center;
-			inline-size: min(100%, var(--small-container));
+			inline-size: clamp(var(--smaller-container), 40vi, var(--medium-container));
 			flex: 0 0 auto;
 		}
 	}
