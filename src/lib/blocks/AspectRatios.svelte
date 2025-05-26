@@ -28,11 +28,12 @@
 
 	.container {
 		display: block;
-		column-count: auto;
-		column-width:
-		var(--watch-to-phone, var(--smallest-container))
-		var(--tablet-to-desktop, var(--smaller-container));
-		column-gap: var(--2x-large);
+		column-count:
+		var(--watch, 1)
+		var(--phone, 2)
+		var(--tablet-to-laptop, 3)
+		var(--desktop, 4);
+		column-gap: var(--large);
 		column-fill: balance;
 		padding-inline: calc((100vi - 100%) * 0.5);
 		padding-block: var(--3x-small);
