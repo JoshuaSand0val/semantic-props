@@ -49,7 +49,7 @@
 	<Paragraph>
 		Semantic Props provides containers alongside responsive sizes based on the <code>--scale-ratio</code> prop.<br>
 	</Paragraph>
-	<div class="graph sizes">
+	<div class="sizes">
 		{#each Object.entries(sizes) as [size, prop]}
 		<span class="size" style:--prop={prop}>
 			<strong class="title">{size}</strong>
@@ -57,12 +57,9 @@
 		</span>
 		{/each}
 	</div>
-	<Paragraph>
-		<em>Container sizes shown below are at <strong>0.25x scale</strong> for viewing convenience.</em>
-	</Paragraph>
-	<div class="graph containers">
+	<div class="containers">
 		{#each Object.entries(containers) as [container, prop]}
-		<span class="size" style:--prop={`calc(${prop} / 4)`}>
+		<span class="size" style:--prop={prop}>
 			<strong class="title">{container}</strong>
 			<small class="prop">{prop}</small>
 		</span>
@@ -71,41 +68,53 @@
 </Divider>
 
 <style>
-	.graph {
-		display: block;
-		column-count:
-		var(--watch, 1)
-		var(--phone, 2)
-		var(--tablet, 3)
-		var(--laptop-to-desktop, 4);
-		column-gap: var(--large);
-		column-fill: balance;
+	.sizes, .containers {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: start;
+		align-items: stretch;
+		gap: var(--medium);
+		padding-inline: calc((100vi - 100%) * 0.5);
+		padding-block: 1px;
+		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--3x-large);
+		scroll-snap-type: x mandatory;
+		scroll-padding: var(--margin-size);
+		overflow: auto;
 	}
 
 	.size {
+		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: end;
-		align-items: start;
+		justify-content: center;
 		gap: 0 var(--x-small);
 		white-space: nowrap;
-		box-sizing: content-box;
 		font-size: var(--medium);
 		line-height: var(--short-line);
-		break-inside: avoid;
-		margin-block-end: var(--medium);
-		overflow: visible;
-		flex: 0 0 auto;
-		&::after {
+		padding-inline: var(--medium);
+		padding-block: var(--x-small);
+		border-radius: var(--smallest-radius);
+		outline: 1px dashed var(--low-contrast-color);
+		scroll-snap-align: end;
+		flex: 1 1 0;
+	}
+
+	.sizes .size {
+		align-items: center;
+		border: var(--prop) solid transparent;
+		&::before {
 			content: "";
-			inline-size: 100%;
-			block-size: var(--prop);
-			border-radius: var(--smallest-radius);
-			outline: 1px dashed var(--low-contrast-color);
-			box-shadow: var(--lighter-box-shadow);
-			margin-block: var(--2x-small);
+			position: absolute;
+			inset: 0;
+			outline: inherit;
+			box-shadow: var(--lightest-box-shadow);
 		}
+	}
+
+	.containers .size {
+		align-items: start;
+		flex: 0 0 var(--prop);
 	}
 
 	.title {
