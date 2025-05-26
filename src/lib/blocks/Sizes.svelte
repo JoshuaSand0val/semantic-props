@@ -83,7 +83,7 @@
 		gap: 0 var(--x-small);
 		white-space: nowrap;
 		box-sizing: content-box;
-		font-size: var(--small);
+		font-size: var(--medium);
 		line-height: var(--short-line);
 		break-inside: avoid;
 		margin-block-end: var(--medium);
