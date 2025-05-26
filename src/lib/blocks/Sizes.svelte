@@ -4,37 +4,37 @@
     import ReferenceTable from "$lib/components/ReferenceTable.svelte";
 
 	const containers: Record<string, string>= {
-		"Smallest Container": "var(--smallest-container)",
-		"Smaller Container": "var(--smaller-container)",
-		"Small Container": "var(--small-container)",
-		"Medium Container": "var(--medium-container)",
-		"Large Container": "var(--large-container)",
-		"Larger Container": "var(--larger-container)",
-		"Largest Container": "var(--largest-container)"
+		"Smallest Container": "--smallest-container",
+		"Smaller Container": "--smaller-container",
+		"Small Container": "--small-container",
+		"Medium Container": "--medium-container",
+		"Large Container": "--large-container",
+		"Larger Container": "--larger-container",
+		"Largest Container": "--largest-container"
 	};
 
 	const sizes: Record<string, string> = {
-		"Extra Small (4x)": "var(--4x-small)",
-		"Extra Small (3x)": "var(--3x-small)",
-		"Extra Small (2x)": "var(--2x-small)",
-		"Extra Small": "var(--x-small)",
-		"Small": "var(--small)",
-		"Medium": "var(--medium)",
-		"Large": "var(--large)",
-		"Extra Large": "var(--x-large)",
-		"Extra Large (2x)": "var(--2x-large)",
-		"Extra Large (3x)": "var(--3x-large)",
-		"Extra Large (4x)": "var(--4x-large)",
-		"Extra Large (5x)": "var(--5x-large)",
-		"Extra Large (6x)": "var(--6x-large)",
-		"Extra Large (7x)": "var(--7x-large)",
-		"Extra Large (8x)": "var(--8x-large)",
-		"Extra Large (9x)": "var(--9x-large)",
+		"Extra Small (4x)": "--4x-small",
+		"Extra Small (3x)": "--3x-small",
+		"Extra Small (2x)": "--2x-small",
+		"Extra Small": "--x-small",
+		"Small": "--small",
+		"Medium": "--medium",
+		"Large": "--large",
+		"Extra Large": "--x-large",
+		"Extra Large (2x)": "--2x-large",
+		"Extra Large (3x)": "--3x-large",
+		"Extra Large (4x)": "--4x-large",
+		"Extra Large (5x)": "--5x-large",
+		"Extra Large (6x)": "--6x-large",
+		"Extra Large (7x)": "--7x-large",
+		"Extra Large (8x)": "--8x-large",
+		"Extra Large (9x)": "--9x-large",
 		
-		"Smaller": "var(--smaller)",
-		"Larger": "var(--larger)",
+		"Smaller": "--smaller",
+		"Larger": "--larger",
 
-		"Margin Size": "var(--margin-size)"
+		"Margin Size": "--margin-size"
 	};
 
 	const reference: string[] = Object.values({
@@ -51,7 +51,7 @@
 	</Paragraph>
 	<div class="sizes">
 		{#each Object.entries(sizes) as [size, prop]}
-		<span class="size" style:--prop={prop}>
+		<span class="size" style:--prop={`var(${prop})`}>
 			<strong class="title">{size}</strong>
 			<small class="prop">{prop}</small>
 		</span>
@@ -59,7 +59,7 @@
 	</div>
 	<div class="containers scroll">
 		{#each Object.entries(containers) as [container, prop]}
-		<span class="size" style:--prop={prop}>
+		<span class="size" style:--prop={`var(${prop})`}>
 			<strong class="title">{container}</strong>
 			<small class="prop">{prop}</small>
 		</span>

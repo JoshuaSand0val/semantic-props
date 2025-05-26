@@ -1,20 +1,30 @@
 <script lang="ts">
-	import beautify from "js-beautify";
+	import { onMount } from "svelte";
+
 	import semantic from "semantic-props?inline";
+	import * as prettier from "prettier";
+	import * as prettierPostCSSParser from "prettier/parser-postcss";
 
 	let { props }: {
 		props: string[],
 	} = $props();
 
-	const styles: string = beautify.css(semantic);
-	const declarations: string[][] = [];
+	let declarations: string[][] = $state([]);
 
-	props.map(prop => prop.replace(/var\(|\)/g, "")).forEach(prop => {
-		const regex = new RegExp(`${prop}:([^;}]+)`);
-		const value = styles.match(regex);
-		if (value !== null) {
-			declarations.push([prop, value[1]]);
-		}
+	onMount(async () => {
+		const styles = await prettier.format(semantic, {
+			parser: "css",
+			plugins: [prettierPostCSSParser]
+		});
+
+		declarations = props.map(prop => {
+			const regex = new RegExp(`${prop}:([^;}]+)`);
+			const value = styles.match(regex);
+			if (value !== null) {
+				return [prop, value[1]];
+			}
+			return [prop, "[no value]"];
+		});
 	});
 </script>
 
@@ -29,13 +39,13 @@
 				</tr>
 			</thead>
 			<tbody>
-				{#each declarations as [prop, value]}	
+				{#each declarations as [prop, value]}
 				<tr>
 					<td class="prop">
-						<code>{prop}</code>
+						<code>{prop}:</code>
 					</td>
 					<td class="value">
-						<code class="scroll">{value}</code>
+						<code class="scroll">{value};</code>
 					</td>
 				</tr>
 				{/each}

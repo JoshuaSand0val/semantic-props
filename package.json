@@ -24,7 +24,7 @@
 	},
 	"dependencies": {
 		"highlight.js": "^11.11.1",
-		"js-beautify": "^1.15.4",
+		"prettier": "^3.5.3",
 		"sanitize.css": "^13.0.0",
 		"semantic-props": "github:joshuasand0val/semantic-props#v2.0.0"
 	}
