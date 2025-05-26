@@ -53,7 +53,7 @@
 		{#each Object.entries(sizes) as [size, prop]}
 		<span class="size" style:--prop={`var(${prop})`}>
 			<strong class="title">{size}</strong>
-			<small class="prop">{prop}</small>
+			<small class="prop">var({prop})</small>
 		</span>
 		{/each}
 	</div>
@@ -61,7 +61,7 @@
 		{#each Object.entries(containers) as [container, prop]}
 		<span class="size" style:--prop={`var(${prop})`}>
 			<strong class="title">{container}</strong>
-			<small class="prop">{prop}</small>
+			<small class="prop">var({prop})</small>
 		</span>
 		{/each}
 	</div>
