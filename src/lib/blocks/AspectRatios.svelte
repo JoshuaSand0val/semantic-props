@@ -1,22 +1,26 @@
 <script lang="ts">
     import Divider from "$lib/components/Divider.svelte";
     import Paragraph from "$lib/components/Paragraph.svelte";
+    import ReferenceTable from "$lib/components/ReferenceTable.svelte";
 
 	const ratios = {
-		"Square Ratio": "var(--square-ratio)",
-		"Landscape Ratio":"var(--landscape-ratio)",
-		"Portrait Ratio":"var(--portrait-ratio)",
-		"Video Ratio":"var(--video-ratio)",
-		"Wide Ratio":"var(--wide-ratio)"
+		"Square Ratio": "--square-ratio",
+		"Landscape Ratio": "--landscape-ratio",
+		"Portrait Ratio": "--portrait-ratio",
+		"Video Ratio": "--video-ratio",
+		"Wide Ratio": "--wide-ratio"
 	};
+
+	const reference = Object.values(ratios);
 </script>
 
 <Divider title="Aspect Ratios" id="aspectratios">
+	<ReferenceTable props={reference} />
 	<Paragraph>Semantic Props provides CSS <code>aspect-ratio</code> values for various types of media.</Paragraph>
 	<div class="container scroll">
 		{#each Object.entries(ratios) as [ratio, prop]}
 		<div class="item">
-			<span class="ratio" style:--prop={prop}>{ratio}</span>
+			<span class="ratio" style:--prop={`var(${prop})`}>{ratio}</span>
 			<code class="prop">{prop}</code>
 		</div>
 		{/each}
