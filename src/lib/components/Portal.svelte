@@ -33,7 +33,7 @@
 		.header {
 			display: block;
 			font-family: var(--body-family);
-			line-height: var(--shorter-line);
+			line-height: var(--normal-line);
 			margin-inline: var(--3x-small);
 			margin-block: var(--small) 0;
 			.title, .description {
