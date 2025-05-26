@@ -37,7 +37,7 @@
 		display: flex;
 		flex-flow: row nowrap;
 		inline-size: 100vi;
-		gap: var(--small);
+		gap: var(--large);
 		scroll-snap-type: x mandatory;
 		padding-inline: calc((100vi - 100%) * 0.5);
 		padding-block: var(--3x-small);
