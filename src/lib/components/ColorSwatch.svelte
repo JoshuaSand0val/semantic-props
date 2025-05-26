@@ -6,9 +6,9 @@
 
 <dl class="container scroll">
 	{#each Object.entries(colors) as [name, prop]}
-	<span style:--prop={prop} class="color">
+	<span style:--prop={`var(${prop})`} class="color">
 		<dt class="name">{name}</dt>
-		<dd class="prop">{prop}</dd>
+		<dd class="prop">var({prop})</dd>
 	</span>
 	{/each}
 </dl>
