@@ -1,6 +1,7 @@
 <script lang="ts">
     import Divider from "$lib/components/Divider.svelte";
 	import Paragraph from "$lib/components/Paragraph.svelte";
+    import ReferenceTable from "$lib/components/ReferenceTable.svelte";
 
 	const containers: Record<string, string>= {
 		"Smallest Container": "var(--smallest-container)",
@@ -35,9 +36,16 @@
 
 		"Margin Size": "var(--margin-size)"
 	};
+
+	const reference: string[] = Object.values({
+		...containers,
+		...sizes
+	});
 </script>
 
 <Divider title="Containers and Spacing/Type Sizes" id="sizes">
+	<ReferenceTable props={reference} />
+
 	<Paragraph>
 		Semantic Props provides containers alongside responsive sizes based on the <code>--scale-ratio</code> prop.<br>
 	</Paragraph>

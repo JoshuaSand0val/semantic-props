@@ -1,0 +1,122 @@
+<script lang="ts">
+	import beautify from "js-beautify";
+	import semantic from "semantic-props?inline";
+
+	let { props }: {
+		props: string[],
+	} = $props();
+
+	const styles: string = beautify.css(semantic);
+	const declarations: string[][] = [];
+
+	props.map(prop => prop.replace(/var\(|\)/g, "")).forEach(prop => {
+		const regex = new RegExp(`${prop}:([^;}]+)`);
+		const value = styles.match(regex);
+		if (value !== null) {
+			declarations.push([prop, value[1]]);
+		}
+	});
+</script>
+
+<details>
+	<summary>Reference Table</summary>
+	<div class="container scroll">
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Semantic Props</th>
+					<th scope="col">Value</th>
+				</tr>
+			</thead>
+			<tbody>
+				{#each declarations as [prop, value]}	
+				<tr>
+					<td class="prop">
+						<code>{prop}</code>
+					</td>
+					<td class="value">
+						<code class="scroll">{value}</code>
+					</td>
+				</tr>
+				{/each}
+			</tbody>
+		</table>
+	</div>
+</details>
+
+<style>
+	@import "../styles/scroll.css";
+
+	summary {
+		display: inline-flex;
+		flex-flow: row wrap;
+		gap: 0 1ch;
+		font-size: var(--small);
+		font-family: var(--display-family);
+		line-height: var(--shorter-line);
+		color: var(--high-contrast-color);
+		list-style: none;
+		&::marker,
+		&::-webkit-details-marker {
+			display: none;
+		}
+		&::after {
+			content: "‹";
+		}
+		details[open] &::after {
+			transform: rotate(-90deg);
+		}
+	}
+
+	.container {
+		padding-inline: calc((100vi - 100%) * 0.5);
+		margin-inline: calc((100vi - 100%) * -0.5);
+	}
+
+	table {
+		display: table;
+		white-space: nowrap;
+	}
+
+	tr {
+		vertical-align: baseline;
+		text-align: left;
+		border-block-end: 1px var(--border-style) var(--tertiary-color);
+		thead & {
+			border-block-end-color:
+			var(--light, var(--neutral-350))
+			var(--dark, var(--neutral-550));
+		}
+	}
+
+	th, td {
+		padding-block: var(--x-small);
+		padding-inline-end: var(--small);
+	}
+
+	th {
+		font-size: var(--medium);
+		font-family: var(--display-family);
+		font-weight: var(--regular-weight);
+		color: var(--medium-contrast-color);
+	}
+
+	td {
+		font-size: var(--small);
+	}
+
+	code {
+		font-family: var(--mono-family);
+	}
+
+	.prop {
+		min-inline-size: var(--smaller-container);
+		color: var(--light, var(--accent-600)) var(--dark, var(--accent-300));
+	}
+
+	.value {
+		white-space: normal;
+		min-inline-size: var(--medium-container);
+		color: var(--low-contrast-color);
+	}
+</style>
