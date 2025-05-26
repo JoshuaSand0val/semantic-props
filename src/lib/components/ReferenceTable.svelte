@@ -42,10 +42,10 @@
 				{#each declarations as [prop, value]}
 				<tr>
 					<td class="prop">
-						<code>{prop}:</code>
+						<code>{prop}</code>:
 					</td>
 					<td class="value">
-						<code class="scroll">{value};</code>
+						<code>{value}</code>;
 					</td>
 				</tr>
 				{/each}
@@ -123,11 +123,15 @@
 
 	.prop {
 		min-inline-size: 20ch;
-		color: var(--light, var(--accent-600)) var(--dark, var(--accent-300));
+		code {
+			color: var(--light, var(--accent-600)) var(--dark, var(--accent-300));
+		}
 	}
 
 	.value {
 		min-inline-size: 45ch;
-		color: var(--low-contrast-color);
+		code {
+			color: var(--low-contrast-color);
+		}
 	}
 </style>
