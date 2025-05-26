@@ -57,7 +57,7 @@
 		</span>
 		{/each}
 	</div>
-	<div class="containers">
+	<div class="containers scroll">
 		{#each Object.entries(containers) as [container, prop]}
 		<span class="size" style:--prop={prop}>
 			<strong class="title">{container}</strong>
@@ -68,6 +68,8 @@
 </Divider>
 
 <style>
+	@import "../styles/scroll.css";
+
 	.sizes, .containers {
 		display: flex;
 		flex-flow: row wrap;
@@ -80,7 +82,6 @@
 		margin-block: var(--3x-large);
 		scroll-snap-type: x mandatory;
 		scroll-padding: var(--margin-size);
-		overflow: auto;
 	}
 
 	.size {
