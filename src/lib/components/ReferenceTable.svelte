@@ -61,10 +61,10 @@
 		display: inline-flex;
 		flex-flow: row wrap;
 		gap: 0 1ch;
-		font-size: var(--small);
+		font-size: var(--medium);
 		font-family: var(--display-family);
 		line-height: var(--shorter-line);
-		color: var(--high-contrast-color);
+		color: var(--medium-contrast-color);
 		list-style: none;
 		&::marker,
 		&::-webkit-details-marker {
@@ -95,7 +95,7 @@
 		thead & {
 			border-block-end-color:
 			var(--light, var(--neutral-350))
-			var(--dark, var(--neutral-550));
+			var(--dark, var(--neutral-650));
 		}
 	}
 
@@ -108,7 +108,7 @@
 		font-size: var(--medium);
 		font-family: var(--display-family);
 		font-weight: var(--regular-weight);
-		color: var(--medium-contrast-color);
+		color: var(--high-contrast-color);
 	}
 
 	td {
