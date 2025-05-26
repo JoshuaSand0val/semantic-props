@@ -86,7 +86,6 @@
 	table {
 		display: table;
 		min-inline-size: 100%;
-		white-space: nowrap;
 	}
 
 	tr {
@@ -101,15 +100,17 @@
 	}
 
 	th, td {
-		padding-block: var(--x-small);
-		padding-inline-end: var(--small);
+		padding-block: var(--2x-small);
+		padding-inline-end: var(--large);
 	}
 
 	th {
+		white-space: nowrap;
 		font-size: var(--medium);
 		font-family: var(--display-family);
 		font-weight: var(--regular-weight);
 		color: var(--high-contrast-color);
+		padding-block: var(--small) var(--2x-small);
 	}
 
 	td {
@@ -121,13 +122,12 @@
 	}
 
 	.prop {
-		min-inline-size: var(--smaller-container);
+		min-inline-size: 20ch;
 		color: var(--light, var(--accent-600)) var(--dark, var(--accent-300));
 	}
 
 	.value {
-		white-space: normal;
-		min-inline-size: var(--medium-container);
+		min-inline-size: 45ch;
 		color: var(--low-contrast-color);
 	}
 </style>
