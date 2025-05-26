@@ -74,7 +74,7 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: start;
-		align-items: stretch;
+		align-items: end;
 		gap: var(--medium);
 		padding-inline: calc((100vi - 100%) * 0.5);
 		padding-block: 1px;
@@ -88,34 +88,31 @@
 		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: center;
+		justify-content: start;
 		gap: 0 var(--x-small);
-		white-space: nowrap;
 		font-size: var(--medium);
 		line-height: var(--short-line);
-		padding-inline: var(--medium);
+		padding-inline: var(--small);
 		padding-block: var(--x-small);
 		border-radius: var(--smallest-radius);
 		outline: 1px dashed var(--low-contrast-color);
+		box-shadow: var(--lightest-box-shadow);
 		scroll-snap-align: end;
-		flex: 1 1 0;
+		flex: 0 0 auto;
+		overflow: auto;
 	}
 
 	.sizes .size {
-		align-items: center;
-		border: var(--prop) solid var(--secondary-color);
+		border-inline-end: var(--prop) solid var(--secondary-color);
 		&::before {
 			content: "";
 			position: absolute;
 			inset: 0;
 			outline: inherit;
-			box-shadow: var(--lightest-box-shadow);
 		}
 	}
 
 	.containers .size {
-		background-color: var(--secondary-color);
-		align-items: start;
 		flex: 0 0 var(--prop);
 	}
 
