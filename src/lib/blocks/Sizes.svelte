@@ -37,10 +37,13 @@
 		"Margin Size": "--margin-size"
 	};
 
-	const reference: string[] = Object.values({
-		...containers,
-		...sizes
-	});
+	const reference: string[] = [
+		"--scale-ratio",
+		...Object.values({
+			...containers,
+			...sizes
+		})
+	];
 </script>
 
 <Divider title="Containers and Spacing/Type Sizes" id="sizes">
