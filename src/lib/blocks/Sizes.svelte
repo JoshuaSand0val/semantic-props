@@ -90,6 +90,9 @@
 		flex-flow: column nowrap;
 		justify-content: start;
 		gap: 0 var(--x-small);
+		inline-size:
+			var(--watch-to-phone, var(--smallest-container))
+			var(--tablet-to-desktop, var(--smaller-container));
 		font-size: var(--medium);
 		line-height: var(--short-line);
 		padding-inline: var(--small);
@@ -98,12 +101,12 @@
 		outline: 1px dashed var(--low-contrast-color);
 		box-shadow: var(--lightest-box-shadow);
 		scroll-snap-align: end;
-		flex: 0 0 auto;
+		flex: 1 0 auto;
 		overflow: auto;
 	}
 
 	.sizes .size {
-		border-inline-end: var(--prop) solid var(--secondary-color);
+		border-inline-end: var(--prop) solid var(--tertiary-color);
 		&::before {
 			content: "";
 			position: absolute;
