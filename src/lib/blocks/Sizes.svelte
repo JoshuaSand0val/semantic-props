@@ -37,7 +37,7 @@
 	};
 </script>
 
-<Divider title="Containers and Spacing Sizes" id="sizes">
+<Divider title="Containers and Spacing/Type Sizes" id="sizes">
 	<Paragraph>
 		Semantic Props provides containers alongside responsive sizes based on the <code>--scale-ratio</code> prop.<br>
 	</Paragraph>
