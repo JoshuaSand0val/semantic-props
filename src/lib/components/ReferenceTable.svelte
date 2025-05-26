@@ -85,6 +85,7 @@
 
 	table {
 		display: table;
+		min-inline-size: 100%;
 		white-space: nowrap;
 	}
 
