@@ -30,5 +30,8 @@
 			padding-block: var(--4x-small);
 			margin-block: var(--4x-small);
 		}
+		:global(strong, b) {
+			font-weight: var(--bold-weight);
+		}
 	}
 </style>
