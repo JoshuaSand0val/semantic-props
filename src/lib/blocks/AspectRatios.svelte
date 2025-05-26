@@ -15,7 +15,7 @@
 	<Paragraph>Semantic Props provides CSS <code>aspect-ratio</code> values for various types of media.</Paragraph>
 	<div class="container scroll">
 		{#each Object.entries(ratios) as [ratio, prop]}
-		<div>
+		<div class="item">
 			<span class="ratio" style:--prop={prop}>{ratio}</span>
 			<code class="prop">{prop}</code>
 		</div>
@@ -27,14 +27,23 @@
 	@import "../styles/scroll.css";
 
 	.container {
-		display: flex;
-		flex-flow: row nowrap;
-		gap: var(--small);
+		display: block;
+		column-count: auto;
+		column-width:
+		var(--watch-to-phone, var(--smallest-container))
+		var(--tablet-to-desktop, var(--smaller-container));
+		column-gap: var(--2x-large);
+		column-fill: balance;
 		padding-inline: calc((100vi - 100%) * 0.5);
 		padding-block: var(--3x-small);
 		margin-inline: calc((100vi - 100%) * -0.5);
-		margin-block: var(--large);
-		scroll-snap-type: x mandatory;
+		margin-block: var(--2x-large);
+	}
+
+	.item {
+		display: block;
+		break-inside: avoid;
+		margin-block-end: var(--3x-large);
 	}
 
 	.ratio {
@@ -43,10 +52,6 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: center;
-		block-size:
-		var(--watch-to-phone, var(--smallest-container))
-		var(--tablet, var(--smaller-container))
-		var(--laptop-to-desktop, var(--small-container));
 		font-size:
 		var(--watch-to-phone, var(--small))
 		var(--tablet, var(--large))
@@ -58,7 +63,6 @@
 		background-clip: content-box;
 		color: var(--low-contrast-color);
 		box-shadow: var(--lightest-box-shadow);
-		scroll-snap-align: center;
 		padding: var(--3x-small);
 		overflow: hidden;
 		&::before, &::after {
