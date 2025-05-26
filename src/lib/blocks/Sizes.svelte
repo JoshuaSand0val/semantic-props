@@ -103,7 +103,7 @@
 
 	.sizes .size {
 		align-items: center;
-		border: var(--prop) solid transparent;
+		border: var(--prop) solid var(--secondary-color);
 		&::before {
 			content: "";
 			position: absolute;
@@ -114,6 +114,7 @@
 	}
 
 	.containers .size {
+		background-color: var(--secondary-color);
 		align-items: start;
 		flex: 0 0 var(--prop);
 	}
