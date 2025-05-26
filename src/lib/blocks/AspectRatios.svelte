@@ -72,34 +72,8 @@
 			z-index: -1;
 			inset: 0;
 			background-color:
-			var(--light, var(--neutral-200))
-			var(--dark, var(--neutral-700));
-		}
-		&::after {
-			background-image: linear-gradient(123deg,
-				var(--red-400),
-				var(--orange-400),
-				var(--yellow-400),
-				var(--green-400),
-				var(--blue-400),
-				var(--indigo-400),
-				var(--violet-400)
-			);
-			animation: border 10s infinite both linear;
-			@media (prefers-reduced-motion: reduce) {
-				animation: none;
-			}
-		}
-	}
-
-	@keyframes border {
-		from {
-			transform: rotate(0deg) var(--large-scale);
-			filter: var(--light-blur);
-		}
-		to {
-			transform: rotate(360deg) var(--large-scale);
-			filter: var(--light-blur);
+			var(--light, var(--neutral-300))
+			var(--dark, var(--neutral-600));
 		}
 	}
 
