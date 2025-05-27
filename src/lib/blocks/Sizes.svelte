@@ -48,7 +48,6 @@
 
 <Divider title="Containers and Spacing/Type Sizes" id="sizes">
 	<ReferenceTable props={reference} />
-
 	<Paragraph>
 		Semantic Props provides containers alongside responsive sizes based on the <code>--scale-ratio</code> prop.<br>
 	</Paragraph>
@@ -75,9 +74,7 @@
 
 	.size-grid, .container-column {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--9x-large)), 1fr));
-		justify-content: start;
-		align-content: start;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem), 1fr));
 		align-items: end;
 		gap: var(--x-small) var(--medium);
 		inline-size: 100vi;
@@ -85,8 +82,6 @@
 		padding-block: 1px;
 		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--3x-large);
-		scroll-snap-type: x mandatory;
-		scroll-padding: var(--margin-size);
 	}
 
 	.container-column {
@@ -100,10 +95,8 @@
 		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
-		justify-content: start;
 		gap: 0 var(--x-small);
 		line-height: var(--short-line);
-		scroll-snap-align: center;
 		&::after {
 			content: "";
 			display: block;
@@ -129,7 +122,7 @@
 		font-family: var(--display-family);
 		font-weight: var(--bold-weight);
 		color: var(--medium-contrast-color);
-		font-size: var(--small);
+		font-size: var(--medium);
 	}
 
 	.prop {
@@ -137,6 +130,6 @@
 		font-family: var(--mono-family);
 		font-weight: var(--regular-weight);
 		color: var(--low-contrast-color);
-		font-size: var(--x-small);
+		font-size: var(--small);
 	}
 </style>
