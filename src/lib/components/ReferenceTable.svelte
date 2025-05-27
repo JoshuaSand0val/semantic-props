@@ -123,14 +123,15 @@
 	}
 
 	.prop {
+		inline-size: 0px;
 		min-inline-size: 20ch;
+		white-space: nowrap;
 		code {
 			color: var(--light, var(--accent-600)) var(--dark, var(--accent-300));
 		}
 	}
 
 	.value {
-		min-inline-size: 45ch;
 		code {
 			color: var(--low-contrast-color);
 		}
