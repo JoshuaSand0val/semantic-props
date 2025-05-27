@@ -51,6 +51,9 @@
 		transition: background-color var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
 		&:focus, &:has(+ .navigation:focus-within) {
+			border-color:
+			var(--light, var(--neutral-300))
+			var(--dark, var(--neutral-700));
 			background-color: var(--secondary-color);
 			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
 		}
