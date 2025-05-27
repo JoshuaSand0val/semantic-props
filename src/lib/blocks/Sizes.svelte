@@ -52,7 +52,7 @@
 	<Paragraph>
 		Semantic Props provides containers alongside responsive sizes based on the <code>--scale-ratio</code> prop.<br>
 	</Paragraph>
-	<div class="sizes">
+	<div class="size-grid">
 		{#each Object.entries(sizes) as [size, prop]}
 		<span class="size" style:--prop={`var(${prop})`}>
 			<strong class="title">{size}</strong>
@@ -60,9 +60,9 @@
 		</span>
 		{/each}
 	</div>
-	<div class="containers scroll">
+	<div class="container-column scroll">
 		{#each Object.entries(containers) as [container, prop]}
-		<span class="size" style:--prop={`var(${prop})`}>
+		<span class="container" style:--prop={`var(${prop})`}>
 			<strong class="title">{container}</strong>
 			<small class="prop">var({prop})</small>
 		</span>
@@ -73,12 +73,14 @@
 <style>
 	@import "../styles/scroll.css";
 
-	.sizes, .containers {
-		display: flex;
-		flex-flow: row wrap;
+	.size-grid, .container-column {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--9x-large)), 1fr));
 		justify-content: start;
+		align-content: start;
 		align-items: end;
-		gap: var(--medium);
+		gap: var(--x-small) var(--medium);
+		inline-size: 100vi;
 		padding-inline: calc((100vi - 100%) * 0.5);
 		padding-block: 1px;
 		margin-inline: calc((100vi - 100%) * -0.5);
@@ -87,39 +89,39 @@
 		scroll-padding: var(--margin-size);
 	}
 
-	.size {
+	.container-column {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: start;
+		gap: var(--x-small);
+	}
+
+	.size, .container {
 		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: start;
 		gap: 0 var(--x-small);
-		inline-size:
-			var(--watch-to-phone, var(--smallest-container))
-			var(--tablet-to-desktop, var(--smaller-container));
-		font-size: var(--medium);
 		line-height: var(--short-line);
-		padding-inline: var(--small);
-		padding-block: var(--x-small);
-		border-radius: var(--smallest-radius);
-		outline: 1px dashed var(--low-contrast-color);
-		box-shadow: var(--lightest-box-shadow);
-		scroll-snap-align: end;
-		flex: 1 0 auto;
-		overflow: auto;
-	}
-
-	.sizes .size {
-		border-inline-end: var(--prop) solid var(--tertiary-color);
-		&::before {
+		scroll-snap-align: center;
+		&::after {
 			content: "";
-			position: absolute;
-			inset: 0;
-			outline: inherit;
+			display: block;
+			block-size: min(var(--large), var(--larger));
+			border-inline-start: var(--prop) solid var(--low-contrast-color);
+			outline: 1px dashed var(--low-contrast-color);
+			border-radius: var(--smallest-radius);
+			box-shadow: var(--lightest-box-shadow);
+			margin-block: var(--x-small);
 		}
 	}
 
-	.containers .size {
-		flex: 0 0 var(--prop);
+	.size::after {
+		inline-size: var(--9x-large);
+	}
+	
+	.container::after {
+		inline-size: var(--largest-container);
 	}
 
 	.title {
@@ -127,12 +129,14 @@
 		font-family: var(--display-family);
 		font-weight: var(--bold-weight);
 		color: var(--medium-contrast-color);
+		font-size: var(--small);
 	}
 
 	.prop {
 		display: block;
 		font-family: var(--mono-family);
 		font-weight: var(--regular-weight);
-		color: var(--low-contrast-color);	
+		color: var(--low-contrast-color);
+		font-size: var(--x-small);
 	}
 </style>
