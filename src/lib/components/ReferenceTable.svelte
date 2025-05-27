@@ -86,6 +86,7 @@
 	table {
 		display: table;
 		min-inline-size: 100%;
+		color: var(--medium-contrast-color);
 	}
 
 	tr {
