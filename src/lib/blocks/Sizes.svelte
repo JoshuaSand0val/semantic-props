@@ -74,7 +74,7 @@
 
 	.size-grid, .container-column {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem, var(--smallest-container)), 1fr));
 		align-items: end;
 		gap: var(--x-small) var(--medium);
 		inline-size: 100vi;
