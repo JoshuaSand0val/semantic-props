@@ -120,10 +120,6 @@
 		font-size: var(--small);
 	}
 
-	code {
-		font-family: var(--mono-family);
-	}
-
 	.prop {
 		inline-size: 0px;
 		min-inline-size: 20ch;
