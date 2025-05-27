@@ -10,6 +10,10 @@
 <code>{@html hljs.highlight(code.trim(), { language: lang }).value}</code>
 
 <style>
+	code {
+		font-family: var(--mono-family);
+	}
+
 	code :global {
 		/*
 			Atom One Light+Dark by Daniel Gamage
