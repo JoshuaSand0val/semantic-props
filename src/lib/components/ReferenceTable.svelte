@@ -132,6 +132,7 @@
 	}
 
 	.value {
+		min-inline-size: 45ch;
 		code {
 			color: var(--low-contrast-color);
 		}
