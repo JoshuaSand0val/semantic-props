@@ -48,7 +48,7 @@
 		padding: var(--x-small);
 		line-height: 0;
 		box-shadow: var(--lightest-box-shadow);
-		transition: background-color var(--fast-time) var(--ease-in-out);
+		transition: all var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
 		&:focus, &:has(+ .navigation:focus-within) {
 			border-color:
