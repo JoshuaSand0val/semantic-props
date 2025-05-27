@@ -5,6 +5,8 @@
 	import * as prettier from "prettier";
 	import * as prettierPostCSSParser from "prettier/parser-postcss";
 
+    import Code from "./Code.svelte";
+
 	let { props }: {
 		props: string[],
 	} = $props();
@@ -42,10 +44,10 @@
 				{#each declarations as [prop, value]}
 				<tr>
 					<td class="prop">
-						<code>{prop}</code>:
+						<Code lang="css" code={`${prop}:`} />
 					</td>
 					<td class="value">
-						<code>{value}</code>;
+						<Code lang="css" code={`${value};`} />
 					</td>
 				</tr>
 				{/each}
@@ -126,15 +128,9 @@
 		inline-size: 0px;
 		min-inline-size: 20ch;
 		white-space: nowrap;
-		code {
-			color: var(--light, var(--accent-600)) var(--dark, var(--accent-300));
-		}
 	}
 
 	.value {
 		min-inline-size: 45ch;
-		code {
-			color: var(--low-contrast-color);
-		}
 	}
 </style>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import hljs from 'highlight.js';
+    import Code from "./Code.svelte";
 
 	let { description, lang, code }: {
 		description: string,
@@ -10,16 +10,10 @@
 
 <article class="container">
 	<h4 class="desc">{lang} &mdash; {description}</h4>
-	<pre>
-		<code class="semantic dark">{@html hljs.highlight(code.trim(), { language: lang }).value}</code>
-	</pre>
+	<pre class="semantic dark"><Code lang={lang} code={code} /></pre>
 </article>
 
 <style>
-	:global {
-		@import 'highlight.js/styles/atom-one-dark.css';
-	}
-
 	.container {
 		display: inline-block;
 		inline-size: fit-content;
@@ -45,11 +39,6 @@
 	}
 
 	pre {
-		white-space: normal;
-		margin: 0;
-	}
-
-	code {
 		display: block;
 		tab-size: 4;
 		white-space: pre;
@@ -61,6 +50,7 @@
 		color: var(--medium-contrast-color);
 		padding-block: var(--small) var(--x-small);
 		padding-inline: var(--x-small) var(--x-large);
+		margin: 0;
 		overflow: auto;
 	}
 </style>
