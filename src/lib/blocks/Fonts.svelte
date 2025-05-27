@@ -22,9 +22,61 @@
 		"Smaller": "--smaller"
 	};
 
+	const families: Record<string, string> = {
+		"Body Family": "--body-family",
+		"Display Family": "--display-family",
+		"Monospace Family": "--mono-family",
+		"Accent Family": "--accent-family"
+	};
+
+	const weights: Record<string, string> = {
+		"Thin": "--thin-weight",
+		"Light": "--light-weight",
+		"Regular": "--regular-weight",
+		"Bold": "--bold-weight",
+		"Heavy": "--heavy-weight"
+	};
+
+	const letterSpacing: Record<string, string> = {
+		"Densest Letter Spacing": "--densest-letter",
+		"Denser Letter Spacing": "--denser-letter",
+		"Dense Letter Spacing": "--dense-letter",
+		"Normal Letter Spacing": "--normal-letter",
+		"Wide Letter Spacing": "--wide-letter",
+		"Wider Letter Spacing": "--wider-letter",
+		"Widest Letter Spacing": "--widest-letter"
+	};
+
+	const lineHeight: Record<string, string> = {
+		"Shortest Line Height": "--shortest-line",
+		"Shorter Line Height": "--shorter-line",
+		"Short Line Height": "--short-line",
+		"Normal Line Height": "--normal-line",
+		"Tall Line Height": "--tall-line",
+		"Taller Line Height": "--taller-line",
+		"Tallest Line Height": "--tallest-line"	
+	};
+
+	const wordSpacing: Record<string, string> = {
+		"Densest Word Spacing": "--densest-word",
+		"Denser Word Spacing": "--denser-word",
+		"Dense Word Spacing": "--dense-word",
+		"Normal Word Spacing": "--normal-word",
+		"Wide Word Spacing": "--wide-word",
+		"Wider Word Spacing": "--wider-word",
+		"Widest Word Spacing": "--widest-word"
+	};
+
 	const reference: string[] = [
 		"--scale-ratio",
-		...Object.values(sizes)
+		...Object.values({
+			...sizes,
+			...families,
+			...weights,
+			...letterSpacing,
+			...lineHeight,
+			...wordSpacing
+		})
 	];
 </script>
 
