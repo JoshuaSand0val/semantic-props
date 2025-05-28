@@ -92,6 +92,7 @@
 	}
 
 	.size, .container {
+		--bar-color: var(--light, var(--accent-350)) var(--dark, var(--accent-450));
 		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
@@ -101,7 +102,7 @@
 			content: "";
 			display: block;
 			block-size: min(var(--large), var(--larger));
-			border-inline-start: var(--prop) solid var(--low-contrast-color);
+			border-inline-start: var(--prop) solid var(--bar-color);
 			outline: 1px dashed var(--low-contrast-color);
 			border-radius: var(--smallest-radius);
 			box-shadow: var(--lightest-box-shadow);
