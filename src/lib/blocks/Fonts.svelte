@@ -198,7 +198,7 @@
 	.letter-spacing .demo {
 		display: block;
 		font-size: var(--2x-large);
-		font-weight: var(--regular-weight);
+		font-weight: var(--light-weight);
 		font-family: var(--display-family);
 		line-height: var(--short-line);
 		letter-spacing: var(--prop);
