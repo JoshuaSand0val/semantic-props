@@ -26,7 +26,6 @@
 	.container {
 		display: block;
 		background-color: var(--primary-color);
-		background-image: linear-gradient(123deg, var(--secondary-color), var(--primary-color) 50%);
 		border-block-end: 1px var(--border-style) var(--secondary-color);
 		overflow: hidden;
 	}
