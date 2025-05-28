@@ -143,6 +143,18 @@
 		</article>
 		{/each}
 	</div>
+	<div class="container word-spacing">
+		{#each Object.entries(wordSpacing) as [spacing, prop]}
+		<article>
+			<h4 class="title">
+				<span class="demo" style:--prop={`var(${prop})`}>
+					{spacing.toUpperCase()}
+				</span>
+			</h4>
+			<code class="prop">var({prop})</code>
+		</article>
+		{/each}
+	</div>
 </Divider>
 
 <style>
@@ -152,7 +164,7 @@
 		margin-block: var(--3x-large);
 	}
 
-	.container:is(.families, .weights, .letter-spacing, .line-height) {
+	.container:is(.families, .weights, .letter-spacing, .line-height, .word-spacing) {
 		--column-width:
 		var(--watch-to-phone, var(--smallest-container))
 		var(--tablet-to-laptop, var(--smaller-container))
@@ -211,7 +223,7 @@
 		color: var(--high-contrast-color);
 	}
 
-	.letter-spacing .demo {
+	:is(.letter-spacing, .word-spacing) .demo {
 		display: block;
 		font-size: var(--x-large);
 		font-weight: var(--light-weight);
@@ -234,5 +246,10 @@
 		color: var(--medium-contrast-color);
 		overflow: hidden;
 		margin-block-end: var(--3x-small);
+	}
+
+	.word-spacing .demo {
+		word-spacing: var(--prop);
+		letter-spacing: revert;
 	}
 </style>
