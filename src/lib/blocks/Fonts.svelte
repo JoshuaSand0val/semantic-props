@@ -83,26 +83,50 @@
 <Divider title="Font Sizes and Styles" id="fonts">
 	<ReferenceTable props={reference} />
 	<Paragraph>
-		Semantic Props provides a responsive type-scale based on the <code>--scale-ratio</code> prop.<br>
+		Semantic Props provides a responsive type-scale based on the <code>--scale-ratio</code> prop.
 	</Paragraph>
-	{#each Object.entries(sizes) as [size, prop]}
-	<article class="size-compare" aria-label="Semantic Props font-size comparison.">
-		<h4 class="title">{size}</h4>
-		<code class="prop">var({prop})</code>
-		<span class="size" style:--prop={`var(${prop})`} role="presentation">The quick brown fox jumps over the lazy dog.</span>
-	</article>
-	{/each}
+	<div class="container sizes">
+		{#each Object.entries(sizes) as [size, prop]}
+		<article>
+			<h4 class="title">{size}</h4>
+			<code class="prop">var({prop})</code>
+			<span class="demo" style:--prop={`var(${prop})`} role="presentation">The quick brown fox jumps over the lazy dog.</span>
+		</article>
+		{/each}
+	</div>
+	<Paragraph>
+		Semantic Props provides values for styling fonts in various situations.
+	</Paragraph>
+	<div class="container families">
+		{#each Object.entries(families) as [family, prop]}
+		<article>
+			<h4 class="title">{family}</h4>
+			<code class="prop">var({prop})</code>
+			<div class="demo" style:--prop={`var(${prop})`} role="presentation" aria-label="English Alphabet">
+				{#each "abcdefghijklmnopqrstuvwxyz".split("") as letter}
+				<span>{letter.toUpperCase()}{letter}</span>
+				{/each}
+			</div>
+		</article>
+		{/each}
+	</div>
 </Divider>
 
 <style>
-	.size-compare {
+	.container {
 		display: block;
-		margin-block: var(--x-small);
+		line-height: var(--normal-line);
+		margin-block: var(--large);
+	}
+
+	.container.families {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--small-container)), 1fr));
+		gap: var(--large) var(--3x-large);
 	}
 
 	.title {
 		display: block;
-		line-height: var(--short-line);
 		font-family: var(--body-family);
 		color: var(--medium-contrast-color);
 		margin: 0;
@@ -110,22 +134,32 @@
 
 	.prop {
 		display: block;
-		line-height: var(--tall-line);
 		font-family: var(--mono-family);
-		font-size: var(--x-small);
+		font-size: var(--small);
 		color: var(--low-contrast-color);
 	}
 
-	.size {
+	.sizes .demo {
 		display: block;
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		line-height: var(--shortest-line);
 		font-family: var(--display-family);
 		font-size: var(--prop);
+		font-weight: var(--regular-weight);
 		transition: font-size var(--normal-time) var(--ease-out);
 		color: var(--high-contrast-color);
-		padding-block: var(--4x-small);
+		padding-block: var(--x-small);
 		overflow: hidden;
+	}
+
+	.families .demo {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(2em, 1fr));
+		grid-auto-rows: minmax(2em, 1fr);
+		gap: var(--small);
+		font-family: var(--prop);
+		line-height: 2em;
+		margin-block-start: var(--small);
 	}
 </style>
