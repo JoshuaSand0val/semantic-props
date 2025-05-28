@@ -48,6 +48,7 @@
 		);
 		background-clip: text;
 		color: var(--primary-color);
+		filter: var(--lightest-shadow);
 		animation: title 3s infinite both;
 		@media (prefers-reduced-motion: reduce) {
 			animation: none;
