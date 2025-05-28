@@ -133,7 +133,7 @@
 
 	.container:is(.families, .weights) {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--smallest-container)), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--smallest-container)), 1fr));
 		gap: var(--large) var(--3x-large);
 	}
 
