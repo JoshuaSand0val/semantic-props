@@ -137,7 +137,7 @@
 	.container {
 		display: block;
 		line-height: var(--normal-line);
-		margin-block: var(--large);
+		margin-block: var(--3x-large);
 	}
 
 	.container:is(.families, .weights, .letter-spacing) {
