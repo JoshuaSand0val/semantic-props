@@ -131,6 +131,18 @@
 		</article>
 		{/each}
 	</div>
+	<div class="container line-height">
+		{#each Object.entries(lineHeight) as [height, prop]}
+		<article>
+			<h4 class="title">
+				<span class="demo" style:--prop={`var(${prop})`}>
+					{height.toUpperCase()}
+				</span>
+			</h4>
+			<code class="prop">var({prop})</code>
+		</article>
+		{/each}
+	</div>
 </Divider>
 
 <style>
@@ -140,7 +152,7 @@
 		margin-block: var(--3x-large);
 	}
 
-	.container:is(.families, .weights, .letter-spacing) {
+	.container:is(.families, .weights, .letter-spacing, .line-height) {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--smallest-container)), 1fr));
 		gap: var(--large) var(--3x-large);
@@ -197,11 +209,26 @@
 
 	.letter-spacing .demo {
 		display: block;
-		font-size: var(--2x-large);
+		font-size: var(--x-large);
 		font-weight: var(--light-weight);
 		font-family: var(--display-family);
 		line-height: var(--short-line);
 		letter-spacing: var(--prop);
 		color: var(--high-contrast-color);
+	}
+
+	.line-height .demo {
+		display: block;
+		font-size: var(--large);
+		font-weight: var(--regular-weight);
+		font-family: var(--body-family);
+		line-height: var(--prop);
+		text-align: center;
+		white-space: nowrap;
+		text-overflow: clip;
+		border-block: 1px solid var(--high-contrast-color);
+		color: var(--medium-contrast-color);
+		overflow: hidden;
+		margin-block-end: var(--3x-small);
 	}
 </style>
