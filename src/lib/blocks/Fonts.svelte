@@ -83,7 +83,7 @@
 <Divider title="Font Sizes and Styles" id="fonts">
 	<ReferenceTable props={reference} />
 	<Paragraph>
-		Semantic Props provides a responsive type-scale based on the <code>--scale-ratio</code> prop.
+		Semantic Props provides values for styling fonts, and a responsive type-scale based on the <code>--scale-ratio</code> prop.
 	</Paragraph>
 	<div class="container sizes">
 		{#each Object.entries(sizes) as [size, prop]}
@@ -94,9 +94,6 @@
 		</article>
 		{/each}
 	</div>
-	<Paragraph>
-		Semantic Props provides values for styling fonts in various situations.
-	</Paragraph>
 	<div class="container families">
 		{#each Object.entries(families) as [family, prop]}
 		<article>
