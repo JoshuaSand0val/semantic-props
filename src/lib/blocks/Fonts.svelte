@@ -149,7 +149,8 @@
 		font-weight: var(--regular-weight);
 		transition: font-size var(--normal-time) var(--ease-out);
 		color: var(--high-contrast-color);
-		padding-block: var(--x-small);
+		padding-block: var(--4x-small);
+		margin-block: var(--2x-small);
 		overflow: hidden;
 	}
 
