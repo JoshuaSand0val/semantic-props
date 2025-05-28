@@ -110,6 +110,18 @@
 		</article>
 		{/each}
 	</div>
+	<div class="container weights">
+		{#each Object.entries(weights) as [weight, prop]}
+		<article>
+			<h4 class="title">
+				<span class="demo" style:--prop={`var(${prop})`}>
+					{weight.toUpperCase()}
+				</span>
+			</h4>
+			<code class="prop">var({prop})</code>
+		</article>
+		{/each}
+	</div>
 </Divider>
 
 <style>
@@ -119,9 +131,9 @@
 		margin-block: var(--large);
 	}
 
-	.container.families {
+	.container:is(.families, .weights) {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--small-container)), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--smallest-container)), 1fr));
 		gap: var(--large) var(--3x-large);
 	}
 
@@ -162,5 +174,15 @@
 		font-family: var(--prop);
 		line-height: 2em;
 		margin-block-start: var(--small);
+	}
+
+	.weights .demo {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		font-size: var(--3x-large);
+		font-weight: var(--prop);
+		font-family: var(--display-family);
+		color: var(--high-contrast-color);
 	}
 </style>
