@@ -122,6 +122,18 @@
 		</article>
 		{/each}
 	</div>
+	<div class="container letter-spacing">
+		{#each Object.entries(letterSpacing) as [spacing, prop]}
+		<article>
+			<h4 class="title">
+				<span class="demo" style:--prop={`var(${prop})`}>
+					{spacing.toUpperCase()}
+				</span>
+			</h4>
+			<code class="prop">var({prop})</code>
+		</article>
+		{/each}
+	</div>
 </Divider>
 
 <style>
@@ -131,7 +143,7 @@
 		margin-block: var(--large);
 	}
 
-	.container:is(.families, .weights) {
+	.container:is(.families, .weights, .letter-spacing) {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--smallest-container)), 1fr));
 		gap: var(--large) var(--3x-large);
@@ -140,6 +152,7 @@
 	.title {
 		display: block;
 		font-family: var(--body-family);
+		font-weight: var(--bold-weight);
 		color: var(--medium-contrast-color);
 		margin: 0;
 	}
@@ -177,12 +190,21 @@
 	}
 
 	.weights .demo {
-		display: flex;
+		display: block;
 		justify-content: start;
-		align-items: center;
 		font-size: var(--3x-large);
 		font-weight: var(--prop);
 		font-family: var(--display-family);
+		color: var(--high-contrast-color);
+	}
+
+	.letter-spacing .demo {
+		display: block;
+		font-size: var(--2x-large);
+		font-weight: var(--regular-weight);
+		font-family: var(--display-family);
+		line-height: var(--short-line);
+		letter-spacing: var(--prop);
 		color: var(--high-contrast-color);
 	}
 </style>
