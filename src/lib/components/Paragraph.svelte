@@ -15,7 +15,7 @@
 		display: block;
 		font-family: var(--body-family);
 		line-height: var(--normal-line);
-		margin-block: var(--medium);
+		margin-block: var(--large);
 		:global(code) {
 			display: inline;
 			border-radius: var(--smallest-radius);
