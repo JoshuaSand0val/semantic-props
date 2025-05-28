@@ -161,7 +161,10 @@
 	.container {
 		display: block;
 		line-height: var(--normal-line);
-		margin-block: var(--3x-large);
+		margin-block: var(--x-large);
+		& + & {
+			margin-block-start: var(--5x-large);
+		}
 	}
 
 	.container:is(.families, .weights, .letter-spacing, .line-height, .word-spacing) {
