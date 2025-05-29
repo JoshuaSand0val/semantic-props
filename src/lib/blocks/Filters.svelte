@@ -51,5 +51,86 @@
 <Divider title="Filter Effects" id="filters">
 	<ReferenceTable props={reference} />
 	<Paragraph>Semantic Props provides CSS <code>filter</code> values for various types of media.</Paragraph>
-
+	<div class="container">
+		{#each [blur, brightness, contrast, saturation] as filter}
+		<article class="wrapper scroll">
+			{#each Object.entries(filter) as [title, prop]}			
+			<section class="content">
+				<span class="demo" style:--prop={`var(${prop})`}>
+					<img src="/blocks/Filters/demo.jpg" alt="" />
+				</span>
+				<h4 class="title">{title}</h4>
+				<code class="prop">var({prop})</code>
+			</section>
+			{/each}
+		</article>
+		{/each}
+	</div>
 </Divider>
+
+<style>
+	@import "../styles/scroll.css";
+
+	.container {
+		position: relative;
+		display: flex;
+		flex-flow: column nowrap;
+		gap: var(--3x-large);
+		margin-block: var(--3x-large);
+	}
+
+	.wrapper {
+		display: flex;
+		flex-flow: row nowrap;
+		inline-size: 100vi;
+		gap: inherit;
+		padding-inline: calc((100vi - 100%) * 0.5);
+		margin-inline: calc((100vi - 100%) * -0.5);
+		scroll-snap-type: inline mandatory;
+	}
+
+	.content {
+		--inline-size:
+		var(--watch-to-tablet, var(--smallest-container))
+		var(--laptop-to-desktop, var(--smaller-container));
+		display: block;
+		inline-size: min(100%, var(--inline-size));
+		transition: inline-size var(--normal-time) var(--ease-out);
+		scroll-snap-align: center;
+		flex: 0 0 auto;
+	}
+
+	.demo {
+		position: relative;
+		display: block;
+		inline-size: 100%;
+		aspect-ratio: var(--square-ratio);
+		border-radius: var(--large-radius);
+		box-shadow: var(--lightest-box-shadow);
+		margin-block-end: var(--x-small);
+		overflow: hidden;
+		img {
+			display: block;
+			inline-size: 100%;
+			block-size: 100%;
+			object-fit: cover;
+			object-position: center;
+			filter: var(--prop);
+		}
+	}
+
+	.title {
+		display: block;
+		font-family: var(--body-family);
+		font-weight: var(--bold-weight);
+		color: var(--medium-contrast-color);
+		margin: 0;
+	}
+
+	.prop {
+		display: block;
+		font-family: var(--mono-family);
+		font-size: var(--small);
+		color: var(--low-contrast-color);
+	}
+</style>
