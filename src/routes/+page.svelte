@@ -2,6 +2,7 @@
     import AspectRatios from "$lib/blocks/AspectRatios.svelte";
     import BuiltUsing from "$lib/blocks/BuiltUsing.svelte";
     import Colors from "$lib/blocks/Colors.svelte";
+    import Filters from "$lib/blocks/Filters.svelte";
     import Fonts from "$lib/blocks/Fonts.svelte";
     import Intro from "$lib/blocks/Intro.svelte";
     import Sizes from "$lib/blocks/Sizes.svelte";
@@ -17,6 +18,7 @@
 <Body>
 	<BuiltUsing />
 	<Colors />
+	<Filters />
 	<Sizes />
 	<Fonts />
 	<AspectRatios />
