@@ -1,7 +1,5 @@
 /* Semantic Props for color. */
 
-@import "boolean.css";
-
 :where(.semantic) {
 	/* Light/Dark Class: */
 	--color-scheme: light;

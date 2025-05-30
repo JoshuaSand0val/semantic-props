@@ -1,5 +1,4 @@
 // Import: All files imported.
-import "./boolean.css";
 import "./border.css";
 import "./color.css";
 import "./color.js";
@@ -10,6 +9,7 @@ import "./ratio.css";
 import "./safe-area.css";
 import "./shadow.css";
 import "./size.css";
+import "./size.js";
 import "./table.css";
 import "./timing.css";
 import "./transform.css";

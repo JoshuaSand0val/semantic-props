@@ -1,7 +1,0 @@
-/* Semantic Props boolean values for activating var() fallback. */
-
-:where(.semantic) {
-	/* True/False Booleans: */
-	--true: initial;
-	--false: ;
-}
