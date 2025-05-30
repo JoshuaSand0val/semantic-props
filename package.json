@@ -19,6 +19,7 @@
 		"README.md"
 	],
 	"main": "dist/import.js",
+	"style": "dist/import.css",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
