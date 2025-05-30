@@ -211,7 +211,7 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(2em, 1fr));
 		grid-auto-rows: minmax(2em, 1fr);
-		gap: var(--small);
+		gap: var(--2x-small);
 		font-family: var(--prop);
 		line-height: 2em;
 		margin-block-start: var(--small);
