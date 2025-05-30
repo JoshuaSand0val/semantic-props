@@ -17,7 +17,7 @@
 	.container {
 		display: inline-block;
 		inline-size: fit-content;
-		max-inline-size: min(100%, var(--medium-container));
+		max-inline-size: min(100%, var(--large-container));
 		vertical-align: top;
 		margin-block: 0 var(--medium);
 		margin-inline-end: var(--small);
