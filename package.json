@@ -26,20 +26,24 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "postcss src/import.css -o dist/import.css",
-		"watch:build": "onchange 'src/**/*' -- npm run build"
+		"build": "rollup -c",
+		"watch:build": "rollup -c -w"
 	},
 	"devDependencies": {
 		"@csstools/postcss-oklab-function": "^4.0.9",
 		"@csstools/postcss-relative-color-syntax": "^3.0.9",
 		"@csstools/postcss-trigonometric-functions": "^4.0.8",
+		"@rollup/plugin-commonjs": "^28.0.3",
+		"@rollup/plugin-node-resolve": "^16.0.1",
+		"@rollup/plugin-terser": "^0.4.4",
+		"@rollup/plugin-typescript": "^12.1.2",
 		"autoprefixer": "^10.4.21",
 		"cssnano": "^7.0.4",
-		"onchange": "^7.1.0",
-		"postcss": "^8.5.3",
 		"postcss-advanced-variables": "^5.0.0",
-		"postcss-cli": "^11.0.0",
 		"postcss-import": "^16.1.0",
-		"postcss-nesting": "^13.0.1"
+		"postcss-nesting": "^13.0.1",
+		"rollup": "^4.41.1",
+		"rollup-plugin-postcss": "^4.0.2",
+		"tslib": "^2.8.1"
 	}
 }
