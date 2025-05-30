@@ -18,9 +18,7 @@ export default {
 		nodeResolve(),
 		commonjs(),
 		typescript(),
-		postcss({
-			extract: "import.css"
-		}),
+		postcss(),
 		terser()
 	]
 };
