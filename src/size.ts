@@ -20,4 +20,6 @@ function size(): void {
 	requestAnimationFrame(size);
 }
 
-requestAnimationFrame(size);
+if (typeof window !== "undefined") {
+	requestAnimationFrame(size);
+}

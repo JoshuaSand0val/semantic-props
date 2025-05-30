@@ -21,4 +21,6 @@ function color(): void {
 	requestAnimationFrame(color);
 }
 
-requestAnimationFrame(color);
+if (typeof window !== "undefined") {
+	requestAnimationFrame(color);
+}
