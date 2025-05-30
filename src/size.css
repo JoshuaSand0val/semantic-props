@@ -11,10 +11,10 @@
 	--largest-container: 80rem; /* 1280px */
 
 	/* Size Scale Ratio: */
-	--scale-ratio: 1.067;
+	--scale-ratio: 1.125;
 
-	&:where(.phone) {
-		--scale-ratio: 1.125;
+	&:where(.watch:not(.phone, .tablet, .laptop, .desktop)) {
+		--scale-ratio: 1.067;
 	}
 
 	&:where(.tablet) {
@@ -47,10 +47,10 @@
 	--larger: min(1.125em, 1em * var(--scale-ratio));
 
 	/* Margin Size: */
-	--margin-size: var(--x-small);
+	--margin-size: var(--2x-large);
 
-	&:where(.phone) {
-		--margin-size: var(--2x-large);
+	&:where(.watch:not(.phone, .tablet, .laptop, .desktop)) {
+		--margin-size: var(--x-small);
 	}
 
 	&:where(.tablet) {
