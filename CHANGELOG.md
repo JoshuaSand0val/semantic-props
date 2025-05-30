@@ -8,7 +8,7 @@ A **breaking change** release that greatly improves browser compatibility, file 
 
 ### Added
 
-- Added color, query boolean props and classes. Value `--true` is `initial` and `--false` is whitespace.
+- Added color and size classes based on boolean props.
 - Added new `-radius` props for applying `border-radius`.
 - Added new color system using weights and alias values.
 - Added `text-shadow` and `box-shadow` variants of `shadow` props.
