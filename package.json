@@ -19,10 +19,6 @@
 		"README.md"
 	],
 	"exports": {
-		".": {
-			"browser": "./dist/import.js",
-			"default": "./dist/import.css"
-		},
 		"./css": {
 			"default": "./dist/import.css"
 		},
