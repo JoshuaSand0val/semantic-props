@@ -1,6 +1,6 @@
 /* Semantic Props for CSS transform property values. */
 
-:where(.semantic) {
+.semantic {
 	/* Scale (X-axis): */
 	--smallest-scale-x: scaleX(0.8);
 	--smaller-scale-x: scaleX(0.9);

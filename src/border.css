@@ -1,6 +1,6 @@
 /* Semantic Props for CSS border properties. */
 
-:where(.semantic) {
+.semantic {
 	/* Border-Style: */
 	--border-style: solid;
 

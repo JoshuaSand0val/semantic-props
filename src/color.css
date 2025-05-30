@@ -1,10 +1,12 @@
 /* Semantic Props for color. */
 
-:where(.semantic) {
+.semantic {
 	/* Light/Dark Class: */
 	--color-scheme: light;
+
 	@media (prefers-color-scheme: dark) {
 		--color-scheme: dark;
+		@extend .semantic.dark;
 	}
 
 	/* Color Weights: */
@@ -35,13 +37,14 @@
 	--high-contrast-color: var(--neutral-800);
 	--medium-contrast-color: var(--neutral-650);
 	--low-contrast-color: var(--neutral-550);
+
 	@media (prefers-contrast: more) {
 		--high-contrast-color: var(--neutral-900);
 		--medium-contrast-color: var(--neutral-750);
 		--low-contrast-color: var(--neutral-650);
 	}
 
-	&:where(.dark) {
+	&.dark {
 		--primary-color: var(--neutral-900);
 		--secondary-color: var(--neutral-850);
 		--tertiary-color: var(--neutral-800);
@@ -49,6 +52,7 @@
 		--high-contrast-color: var(--neutral-200);
 		--medium-contrast-color: var(--neutral-350);
 		--low-contrast-color: var(--neutral-450);
+
 		@media (prefers-contrast: more) {
 			--high-contrast-color: var(--neutral-100);
 			--medium-contrast-color: var(--neutral-250);

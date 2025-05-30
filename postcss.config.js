@@ -1,5 +1,8 @@
 export default {
 	plugins: {
+		"postcss-extend-rule": {
+			onUnusedExtend: "throw"
+		},
 		"postcss-nesting": {},
 		"postcss-advanced-variables": {},
 		"@csstools/postcss-trigonometric-functions": {},

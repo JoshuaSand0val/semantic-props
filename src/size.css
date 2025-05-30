@@ -1,6 +1,6 @@
 /* Semantic Props for sizing containers, fonts and space. */
 
-:where(.semantic) {
+.semantic {
 	/* Container Sizes: */
 	--smallest-container: 10rem; /* 160px */
 	--smaller-container: 15rem; /* 240px */
@@ -11,17 +11,17 @@
 	--largest-container: 80rem; /* 1280px */
 
 	/* Size Scale Ratio: */
-	--scale-ratio: 1.125;
+	--scale-ratio: 1.067;
 
-	&:where(.watch:not(.phone, .tablet, .laptop, .desktop)) {
-		--scale-ratio: 1.067;
+	&.phone {
+		--scale-ratio: 1.125;
 	}
 
-	&:where(.tablet) {
+	&.tablet {
 		--scale-ratio: 1.200;
 	}
 
-	&:where(.laptop) {
+	&.laptop {
 		--scale-ratio: 1.250;
 	}
 
@@ -47,21 +47,21 @@
 	--larger: min(1.125em, 1em * var(--scale-ratio));
 
 	/* Margin Size: */
-	--margin-size: var(--2x-large);
+	--margin-size: var(--x-small);
 
-	&:where(.watch:not(.phone, .tablet, .laptop, .desktop)) {
-		--margin-size: var(--x-small);
+	&.phone {
+		--margin-size: var(--2x-large);
 	}
 
-	&:where(.tablet) {
+	&.tablet {
 		--margin-size: var(--4x-large);
 	}
 
-	&:where(.laptop) {
+	&.laptop {
 		--margin-size: var(--5x-large);
 	}
 
-	&:where(.desktop) {
+	&.desktop {
 		--margin-size: var(--6x-large);
 	}
 
@@ -74,17 +74,21 @@
 
 	@media (min-width: 20rem) {
 		--phone: true;
+		@extend .semantic.phone;
 	}
 
 	@media (min-width: 40rem) {
 		--tablet: true;
+		@extend .semantic.tablet;
 	}
 
 	@media (min-width: 64rem) {
 		--laptop: true;
+		@extend .semantic.laptop;
 	}
 
 	@media (min-width: 80rem) {
 		--desktop: true;
+		@extend .semantic.desktop;
 	}
 }

@@ -1,6 +1,6 @@
 /* Semantic Props for the CSS opacity property. */
 
-:where(.semantic) {
+.semantic {
 	--lowest-opacity: 0.1;
 	--lower-opacity: 0.25;
 	--low-opacity: 0.33;
