@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 
-	import semantic from "semantic-props?raw";
+	import semantic from "semantic-props/css?inline";
 	import * as prettier from "prettier";
-	import * as prettierBabelParser from "prettier/parser-babel";
-	import prettierEstree from "prettier/plugins/estree";
+	import * as prettierPostCSSParser from "prettier/parser-postcss";
 
     import Code from "./Code.svelte";
 
@@ -16,8 +15,8 @@
 
 	onMount(async () => {
 		const styles = await prettier.format(semantic, {
-			parser: "babel",
-			plugins: [prettierBabelParser, prettierEstree]
+			parser: "css",
+			plugins: [prettierPostCSSParser]
 		});
 
 		declarations = props.map(prop => {
