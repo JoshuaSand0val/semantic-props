@@ -18,8 +18,7 @@
 		"LICENSE",
 		"README.md"
 	],
-	"main": "dist/import.css",
-	"style": "dist/import.css",
+	"main": "dist/import.js",
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
