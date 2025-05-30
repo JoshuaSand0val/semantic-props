@@ -21,5 +21,5 @@ function size(): void {
 }
 
 if (typeof window !== "undefined") {
-	requestAnimationFrame(size);
+	size();
 }
