@@ -12,8 +12,11 @@
 				<span class="title">Semantic Props</span>
 			</Heading>
 			<Heading level={6}>Expertly crafted CSS Custom Properties (variables) for creating <strong>consistent components</strong> in any design.</Heading>
-			<CodeBlock description="Import Script" lang="html" code='<script src="https://unpkg.com/semantic-props"></script>' />
-			<CodeBlock description="Scoping Class" lang="html" code='<html class="semantic">...</html>' />
+			<CodeBlock description="Scoping" lang="html" code='<html class="semantic">...</html>' />
+			<CodeBlock description="Importing" lang="html" code={`
+<link href="https://unpkg.com/semantic-props/css" rel="stylesheet" />
+<script src="https://unpkg.com/semantic-props/js"></script>
+`} />
 		</Body>
 	</div>
 </header>
