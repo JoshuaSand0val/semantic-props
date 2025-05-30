@@ -1,6 +1,5 @@
 export default {
 	plugins: {
-		"postcss-import": {},
 		"postcss-nesting": {},
 		"postcss-advanced-variables": {},
 		"@csstools/postcss-trigonometric-functions": {},

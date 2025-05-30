@@ -1,7 +1,5 @@
 /* Semantic Props for CSS text-shadow, box-shadow and drop-shadow filter. */
 
-@import "color.css";
-
 :where(.semantic) {
 	/* Text-Shadow: */
 	--lightest-text-shadow: 0 2px 3px rgb(0 0 0 / 0.15);
