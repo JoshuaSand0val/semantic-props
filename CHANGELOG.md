@@ -18,6 +18,7 @@ A **breaking change** release that greatly improves browser compatibility, file 
 
 ### Changed
 
+- Changed to a JavaScript import vs CSS.
 - Changed syntax of all props to be descriptive versus namespaced.
 - Changed syntax of all props with upper/lower values from using `-x-` modifier and given limited values.
 - Changed prop values from using `px` to use `rem` units.
