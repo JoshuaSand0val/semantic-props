@@ -1,14 +1,6 @@
 /* Semantic Props for color. */
 
 .semantic {
-	/* Light/Dark Class: */
-	--color-scheme: light;
-
-	@media (prefers-color-scheme: dark) {
-		--color-scheme: dark;
-		@extend .semantic.dark;
-	}
-
 	/* Color Weights: */
 	@for $weight from 100 to 900 by 50 {
 		/* Calculate Lightness and Chroma: */
@@ -64,4 +56,12 @@
 	--light-stroke-color: var(--neutral-350);
 	--dark-stroke-color: var(--neutral-650);
 	--stroke-color: var(--low-contrast-color);
+
+	/* Light/Dark Class: */
+	--color-scheme: light;
+
+	@media (prefers-color-scheme: dark) {
+		--color-scheme: dark;
+		@extend .semantic.dark;
+	}
 }
