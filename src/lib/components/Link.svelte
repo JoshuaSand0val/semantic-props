@@ -13,16 +13,18 @@
 
 <style>
 	.container {
-		color:
-		var(--light, var(--accent-500))
-		var(--dark, var(--accent-300));
+		color: var(--accent-500);
+		:global(.semantic.dark) & {
+			color: var(--accent-300);
+		}
 		&:not(:hover, :focus) {
 			text-decoration: none;
 		}
 		&:active {
-			color:
-			var(--light, var(--accent-550))
-			var(--dark, var(--accent-350));
+			color: var(--accent-550);
+			:global(.semantic.dark) & {
+				color: var(--accent-350);
+			}
 		}
 	}
 </style>

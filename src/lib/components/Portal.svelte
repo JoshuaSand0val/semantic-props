@@ -57,18 +57,19 @@
 				animation: pulse var(--slowest-time) var(--ease-in-out) infinite alternate;
 			}
 			img {
+				display: block;
 				inline-size: 100%;
 				&:active {
 					animation: none;
 					filter: var(--low-brightness);
 					transform: none;
 				}
-			}
-			img.light {
-				display: var(--light, block) var(--dark, none);
-			}
-			img.dark {
-				display: var(--light, none) var(--dark, block);
+				:global(.semantic.light) &.dark {
+					display: none;
+				}
+				:global(.semantic.dark) &.light {
+					display: none;
+				}
 			}
 		}
 	}

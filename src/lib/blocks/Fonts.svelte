@@ -168,13 +168,16 @@
 	}
 
 	.container:is(.families, .weights, .letter-spacing, .line-height, .word-spacing) {
-		--column-width:
-		var(--watch-to-phone, var(--smallest-container))
-		var(--tablet-to-laptop, var(--smaller-container))
-		var(--desktop, var(--small-container));
+		--column-width: var(--smallest-container);
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-width)), 1fr));
 		gap: var(--large) var(--3x-large);
+		:global(.semantic.tablet) & {
+			--column-width: var(--smaller-container);
+		}
+		:global(.semantic.desktop) & {
+			--column-width: var(--small-container);
+		}
 	}
 
 	.title {

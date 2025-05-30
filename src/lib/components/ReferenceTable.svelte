@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { onMount } from "svelte";
 
-	import semantic from "semantic-props?inline";
+	import semantic from "semantic-props?raw";
 	import * as prettier from "prettier";
-	import * as prettierPostCSSParser from "prettier/parser-postcss";
+	import * as prettierBabelParser from "prettier/parser-babel";
+	import prettierEstree from "prettier/plugins/estree";
 
     import Code from "./Code.svelte";
 
@@ -15,8 +16,8 @@
 
 	onMount(async () => {
 		const styles = await prettier.format(semantic, {
-			parser: "css",
-			plugins: [prettierPostCSSParser]
+			parser: "babel",
+			plugins: [prettierBabelParser, prettierEstree]
 		});
 
 		declarations = props.map(prop => {
@@ -96,9 +97,10 @@
 		text-align: left;
 		border-block-end: 1px var(--border-style) var(--tertiary-color);
 		thead & {
-			border-block-end-color:
-			var(--light, var(--neutral-350))
-			var(--dark, var(--neutral-650));
+			border-block-end-color: var(--neutral-350);
+			:global(.semantic.dark) & {
+				border-block-end-color: var(--neutral-650);
+			}
 		}
 	}
 

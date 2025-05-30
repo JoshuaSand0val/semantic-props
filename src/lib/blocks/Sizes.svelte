@@ -105,11 +105,17 @@
 			border-radius: var(--smallest-radius);
 			box-shadow: var(--lightest-box-shadow);
 			background-image: linear-gradient(
-				var(--light, var(--accent-300)) var(--dark, var(--accent-400)),
-				var(--light, var(--accent-500)) var(--dark, var(--accent-600))
+				var(--accent-300),
+				var(--accent-500)
 			);
 			background-size: var(--prop) 100%;
 			margin-block: var(--x-small);
+			:global(.semantic.dark) & {
+				background-image: linear-gradient(
+					var(--accent-400),
+					var(--accent-600)
+				);
+			}
 		}
 	}
 

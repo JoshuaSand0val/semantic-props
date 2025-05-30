@@ -90,14 +90,15 @@
 	}
 
 	.content {
-		--inline-size:
-		var(--watch-to-tablet, var(--smallest-container))
-		var(--laptop-to-desktop, var(--smaller-container));
+		--inline-size: var(--smallest-container);
 		display: block;
 		inline-size: min(100%, var(--inline-size));
 		transition: inline-size var(--normal-time) var(--ease-out);
 		scroll-snap-align: center;
 		flex: 0 0 auto;
+		:global(.semantic.laptop) & {
+			--inline-size: var(--smaller-container);
+		}
 	}
 
 	.demo {

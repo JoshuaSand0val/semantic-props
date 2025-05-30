@@ -88,9 +88,7 @@
 
 <style>
 	.container {
-		--column-width:
-		var(--watch-to-tablet, var(--smallest-container))
-		var(--laptop-to-desktop, var(--smaller-container));
+		--column-width: var(--smallest-container);
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-width)), 1fr));
 		align-items: stretch;
@@ -100,14 +98,18 @@
 		margin-inline: calc((min(100vi, 3840px) - 100%) * -0.5);
 		margin-block: var(--2x-large);
 		transition: padding var(--faster-time) var(--ease-in);
+		:global(.semantic.laptop) & {
+			--column-width: var(--smaller-container);
+		}
 	}
 
 	.group {
-		display:
-		var(--watch-to-tablet, contents)
-		var(--laptop-to-desktop, flex);
+		display: contents;
 		flex-flow: row wrap;
 		gap: inherit;
+		:global(.semantic.laptop) & {
+			display: flex;
+		}
 		:global(& > *) {
 			flex: 1 1 auto;
 		}

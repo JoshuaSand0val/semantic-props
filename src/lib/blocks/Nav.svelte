@@ -53,11 +53,12 @@
 		transition: all var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
 		&:focus, &:has(+ .navigation:focus-within) {
-			border-color:
-			var(--light, var(--neutral-300))
-			var(--dark, var(--neutral-700));
+			border-color: var(--neutral-300);
 			background-color: var(--secondary-color);
 			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
+			:global(.semantic.dark) & {
+				border-color: var(--neutral-700);
+			}
 		}
 	}
 
@@ -119,10 +120,11 @@
 			background-color: var(--secondary-color);
 		}
 		&:active {
-			background-color:
-			var(--light, var(--accent-150))
-			var(--dark, var(--accent-850));
+			background-color: var(--accent-150);
 			color: var(--accent-400);
+			:global(.semantic.dark) & {
+				background-color: var(--accent-850);
+			}
 		}
 	}
 </style>

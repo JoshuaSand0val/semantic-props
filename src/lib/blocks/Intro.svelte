@@ -37,13 +37,13 @@
 	.title {
 		-webkit-text-stroke: var(--3x-small) transparent;
 		background-image: linear-gradient(123deg,
-			var(--light, var(--red-600)) var(--dark, var(--red-300)),
-			var(--light, var(--orange-600)) var(--dark, var(--orange-300)),
-			var(--light, var(--yellow-600)) var(--dark, var(--yellow-300)),
-			var(--light, var(--green-600)) var(--dark, var(--green-300)),
-			var(--light, var(--blue-600)) var(--dark, var(--blue-300)),
-			var(--light, var(--indigo-600)) var(--dark, var(--indigo-300)),
-			var(--light, var(--violet-600)) var(--dark, var(--violet-300))
+			var(--red-600),
+			var(--orange-600),
+			var(--yellow-600),
+			var(--green-600),
+			var(--blue-600),
+			var(--indigo-600),
+			var(--violet-600)
 		);
 		background-clip: text;
 		color: var(--primary-color);
@@ -51,6 +51,17 @@
 		animation: title 3s infinite both;
 		@media (prefers-reduced-motion: reduce) {
 			animation: none;
+		}
+		:global(.semantic.dark) & {
+			background-image: linear-gradient(123deg,
+				var(--red-300),
+				var(--orange-300),
+				var(--yellow-300),
+				var(--green-300),
+				var(--blue-300),
+				var(--indigo-300),
+				var(--violet-300)
+			);	
 		}
 	}
 

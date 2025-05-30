@@ -10,7 +10,7 @@
 
 <article class="container">
 	<h4 class="desc">{lang} &mdash; {description}</h4>
-	<pre class="semantic dark"><Code lang={lang} code={code} /></pre>
+	<pre class="semantic"><Code lang={lang} code={code} /></pre>
 </article>
 
 <style>
@@ -39,6 +39,7 @@
 	}
 
 	pre {
+		--color-scheme: dark;
 		display: block;
 		tab-size: 4;
 		white-space: pre;
