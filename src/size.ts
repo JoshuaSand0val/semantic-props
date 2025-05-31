@@ -13,10 +13,15 @@
 		desktop: matchMedia("(min-width: 80rem)")
 	};
 
-	// Toggle breakpoint class on match:
-	addEventListener("resize", () => {
+	/** Toggles breakpoint classes on match. */
+	function size(): void {
 		for (const [className, media] of Object.entries(breakpoints)) {
 			root.classList.toggle(className, media.matches);
 		}
-	});
+	}
+
+	// Initialize breakpoint matching:
+	document.addEventListener("DOMContentLoaded", size);
+	addEventListener("resize", size);
+	size();
 })();

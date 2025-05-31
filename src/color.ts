@@ -7,9 +7,14 @@
 	/** Media-Query matching for user preferring dark scheme. */
 	const prefersDark = matchMedia("(prefers-color-scheme: dark)");
 
-	// Toggle `light` or `dark` class based on preferred color-scheme:
-	prefersDark.addEventListener("change", () => {
+	/** Toggles `light` or `dark` class matching preferred color-scheme. */
+	function color(): void {
 		root.classList.toggle("light", !prefersDark.matches);
 		root.classList.toggle("dark", prefersDark.matches);
-	});
+	}
+
+	// Initialize color-scheme matching:
+	document.addEventListener("DOMContentLoaded", color);
+	prefersDark.addEventListener("change", color);
+	color();
 })();
