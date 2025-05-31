@@ -74,21 +74,17 @@
 
 	@media (min-width: 20rem) {
 		--phone: true;
-		@extend .semantic.phone;
 	}
 
 	@media (min-width: 40rem) {
 		--tablet: true;
-		@extend .semantic.tablet;
 	}
 
 	@media (min-width: 64rem) {
 		--laptop: true;
-		@extend .semantic.laptop;
 	}
 
 	@media (min-width: 80rem) {
 		--desktop: true;
-		@extend .semantic.desktop;
 	}
 }
