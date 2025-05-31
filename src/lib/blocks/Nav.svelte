@@ -13,7 +13,7 @@
 			<nav class="navigation">
 				<a href="#top">Semantic Props</a>
 				<a href="#builtusing">Built using Semantic Props</a>
-				<a href="#colors">Color Palette and Booleans</a>
+				<a href="#colors">Color Palette</a>
 				<a href="#filters">Filter Effects</a>
 				<a href="#sizes">Containers and Spacing Sizes</a>
 				<a href="#fonts">Font Sizes and Styles</a>

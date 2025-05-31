@@ -63,7 +63,7 @@
 	});
 </script>
 
-<Divider title="Color Palette and Booleans" id="colors">
+<Divider title="Color Palette" id="colors">
 	<ReferenceTable props={reference} />
 	<Paragraph>
 		Semantic Props provides a simple but expansive color palette.<br>
