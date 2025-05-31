@@ -2,19 +2,19 @@
 	if (typeof window === "undefined") return;
 
 	/** Breakpoint class paired to min-width in numbered pixels. */
-	const breakpoints: [string, number][] = Object.entries({
+	const breakpoints: Record<string, number> = {
 		watch: 0,
 		phone: 320,
 		tablet: 640,
 		laptop: 1024,
 		desktop: 1280
-	});
+	};
 
 	/** Toggles matching breakpoint classes on entries. */
 	const size = new ResizeObserver(entries => {
 		for (const { target, contentBoxSize } of entries) {
 			if (typeof contentBoxSize[0] === "undefined") continue;
-			for (const [name, minWidth] of breakpoints) {
+			for (const [name, minWidth] of Object.entries(breakpoints)) {
 				target.classList.toggle(name, contentBoxSize[0].inlineSize >= minWidth);
 			}
 		}
@@ -33,6 +33,7 @@
 			else {
 				if (oldValue?.includes("container")) {
 					size.unobserve(target);
+					target.classList.remove(...Object.keys(breakpoints));
 				}
 			}
 		}
