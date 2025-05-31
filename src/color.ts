@@ -1,28 +1,15 @@
 (function () {
 	if (typeof window === "undefined") return;
 
-	/** All Semantic Props containers. */
-	const semantic: HTMLCollection = document.getElementsByClassName("semantic");
+	/** HTML `:root` document element. */
+	const root: HTMLElement = document.documentElement;
 
-	/** Toggles `light` or `dark` class on Semantic Props containers. */
-	function color(): void {
-		for (const element of semantic) {
-			/** Semantic Props container `--color-scheme` value. */
-			const scheme: string = getComputedStyle(element).getPropertyValue("--color-scheme");
+	/** Media-Query matching for user preferring dark scheme. */
+	const prefersDark = matchMedia("(prefers-color-scheme: dark)");
 
-			// Enable `light` or `dark` class via scheme:
-			if ("dark" === scheme) {
-				element.classList.remove("light");
-				element.classList.add("dark");
-			}
-			else {
-				element.classList.remove("dark");
-				element.classList.add("light");
-			}
-		}
-
-		requestAnimationFrame(color);
-	}
-
-	color();
+	// Toggle `light` or `dark` class based on preferred color-scheme:
+	prefersDark.addEventListener("change", () => {
+		root.classList.toggle("light", !prefersDark.matches);
+		root.classList.toggle("dark", prefersDark.matches);
+	});
 })();

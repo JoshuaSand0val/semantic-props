@@ -1,6 +1,6 @@
 /* Semantic Props for CSS border properties. */
 
-.semantic {
+:root {
 	/* Border-Style: */
 	--border-style: solid;
 

@@ -1,6 +1,6 @@
 /* Semantic Props for sizing containers, fonts and space. */
 
-.semantic {
+:root, .watch {
 	/* Container Sizes: */
 	--smallest-container: 10rem; /* 160px */
 	--smaller-container: 15rem; /* 240px */
@@ -12,18 +12,6 @@
 
 	/* Size Scale Ratio: */
 	--scale-ratio: 1.067;
-
-	&.phone {
-		--scale-ratio: 1.125;
-	}
-
-	&.tablet {
-		--scale-ratio: 1.200;
-	}
-
-	&.laptop {
-		--scale-ratio: 1.250;
-	}
 
 	/* Base Sizes: */
 	--4x-small: min(0.125rem, var(--3x-small) / var(--scale-ratio)); /* 2px */
@@ -48,43 +36,33 @@
 
 	/* Margin Size: */
 	--margin-size: var(--x-small);
+}
 
-	&.phone {
-		--margin-size: var(--2x-large);
-	}
+.phone {
+	/* Size Scale Ratio: */
+	--scale-ratio: 1.125;
 
-	&.tablet {
-		--margin-size: var(--4x-large);
-	}
+	/* Margin Size: */
+	--margin-size: var(--2x-large);
+}
 
-	&.laptop {
-		--margin-size: var(--5x-large);
-	}
+.tablet {
+	/* Size Scale Ratio: */
+	--scale-ratio: 1.200;
 
-	&.desktop {
-		--margin-size: var(--6x-large);
-	}
+	/* Margin Size: */
+	--margin-size: var(--4x-large);
+}
 
-	/* Media Query Classes: */
-	--watch: true;
-	--phone: false;
-	--tablet: false;
-	--laptop: false;
-	--desktop: false;
+.laptop {
+	/* Size Scale Ratio: */
+	--scale-ratio: 1.250;
 
-	@media (min-width: 20rem) {
-		--phone: true;
-	}
+	/* Margin Size: */
+	--margin-size: var(--5x-large);
+}
 
-	@media (min-width: 40rem) {
-		--tablet: true;
-	}
-
-	@media (min-width: 64rem) {
-		--laptop: true;
-	}
-
-	@media (min-width: 80rem) {
-		--desktop: true;
-	}
+.desktop {
+	/* Margin Size: */
+	--margin-size: var(--6x-large);
 }

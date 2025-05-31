@@ -1,6 +1,6 @@
 /* Semantic Props for font properties. */
 
-.semantic {
+:root {
 	/* Font-Family: */
 	--body-family: system-ui, sans-serif;
 	--display-family: var(--body-family);

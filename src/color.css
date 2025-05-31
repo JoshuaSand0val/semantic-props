@@ -1,13 +1,6 @@
 /* Semantic Props for color. */
 
-.semantic {
-	/* Light/Dark Class: */
-	--color-scheme: light;
-
-	@media (prefers-color-scheme: dark) {
-		--color-scheme: dark;
-	}
-
+:root, .light {
 	/* Color Weights: */
 	@for $weight from 100 to 900 by 50 {
 		/* Calculate Lightness and Chroma: */
@@ -43,24 +36,24 @@
 		--low-contrast-color: var(--neutral-650);
 	}
 
-	&.dark {
-		--primary-color: var(--neutral-900);
-		--secondary-color: var(--neutral-850);
-		--tertiary-color: var(--neutral-800);
-
-		--high-contrast-color: var(--neutral-200);
-		--medium-contrast-color: var(--neutral-350);
-		--low-contrast-color: var(--neutral-450);
-
-		@media (prefers-contrast: more) {
-			--high-contrast-color: var(--neutral-100);
-			--medium-contrast-color: var(--neutral-250);
-			--low-contrast-color: var(--neutral-350);
-		}
-	}
-
 	/* Stroke Color: */
 	--light-stroke-color: var(--neutral-350);
 	--dark-stroke-color: var(--neutral-650);
 	--stroke-color: var(--low-contrast-color);
+}
+
+.dark {
+	--primary-color: var(--neutral-900);
+	--secondary-color: var(--neutral-850);
+	--tertiary-color: var(--neutral-800);
+
+	--high-contrast-color: var(--neutral-200);
+	--medium-contrast-color: var(--neutral-350);
+	--low-contrast-color: var(--neutral-450);
+
+	@media (prefers-contrast: more) {
+		--high-contrast-color: var(--neutral-100);
+		--medium-contrast-color: var(--neutral-250);
+		--low-contrast-color: var(--neutral-350);
+	}
 }

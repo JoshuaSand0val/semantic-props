@@ -1,27 +1,22 @@
 (function () {
 	if (typeof window === "undefined") return;
 
-	/** All Semantic Props containers. */
-	const semantic: HTMLCollection = document.getElementsByClassName("semantic");
+	/** HTML `:root` document element. */
+	const root: HTMLElement = document.documentElement;
 
-	/** Semantic Props container sizes. */
-	const sizes: string[] = ["watch", "phone", "tablet", "laptop", "desktop"];
+	/** Breakpoint class paired to media-query. */
+	const breakpoints: Record<string, MediaQueryList> = {
+		watch: matchMedia("(min-width: 0rem)"),
+		phone: matchMedia("(min-width: 20rem)"),
+		tablet: matchMedia("(min-width: 40rem)"),
+		laptop: matchMedia("(min-width: 64rem)"),
+		desktop: matchMedia("(min-width: 80rem)")
+	};
 
-	/** Toggles size classes on Semantic Props containers. */
-	function size(): void {
-		for (const element of semantic) {
-			/** Semantic Props container computed style value. */
-			const style = getComputedStyle(element);
-
-			// Toggle size classes via boolean props:
-			for (const size of sizes) {
-				const prop: string = style.getPropertyValue(`--${size}`);
-				element.classList.toggle(size, "true" === prop);
-			}
+	// Toggle breakpoint class on match:
+	addEventListener("resize", () => {
+		for (const [className, media] of Object.entries(breakpoints)) {
+			root.classList.toggle(className, media.matches);
 		}
-
-		requestAnimationFrame(size);
-	}
-
-	size();
+	});
 })();
