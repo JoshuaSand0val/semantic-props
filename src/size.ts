@@ -4,19 +4,26 @@
 	/** HTML `:root` document element. */
 	const root: HTMLElement = document.documentElement;
 
-	/** Breakpoint class paired to media-query. */
-	const breakpoints: Record<string, MediaQueryList> = {
-		watch: matchMedia("(min-width: 0rem)"),
-		phone: matchMedia("(min-width: 20rem)"),
-		tablet: matchMedia("(min-width: 40rem)"),
-		laptop: matchMedia("(min-width: 64rem)"),
-		desktop: matchMedia("(min-width: 80rem)")
+	/** Elements representing a scoped container. */
+	const containers: HTMLCollection = document.getElementsByClassName("container");
+
+	/** Breakpoint class paired to min-width in numbered pixels. */
+	const breakpoints: Record<string, number> = {
+		watch: 0,
+		phone: 320,
+		tablet: 640,
+		laptop: 1024,
+		desktop: 1280
 	};
 
-	/** Toggles breakpoint classes on match. */
+	/** Toggles matching breakpoint classes on root and containers. */
 	function size(): void {
-		for (const [className, media] of Object.entries(breakpoints)) {
-			root.classList.toggle(className, media.matches);
+		for (const [name, width] of Object.entries(breakpoints)) {
+			for (const container of [root, ...containers]) {
+				if (container instanceof HTMLElement) {
+					container.classList.toggle(name, container.offsetWidth >= width);
+				}
+			}
 		}
 	}
 
