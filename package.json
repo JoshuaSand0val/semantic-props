@@ -20,10 +20,10 @@
 	],
 	"exports": {
 		"./css": {
-			"import": "./dist/import.css"
+			"default": "./dist/import.css"
 		},
 		"./js": {
-			"import": "./dist/import.js"
+			"default": "./dist/import.js"
 		}
 	},
 	"repository": {
