@@ -1,6 +1,6 @@
 /* Semantic Props for sizing containers, fonts and space. */
 
-:root, .watch {
+:root, .watch, .phone, .tablet, .laptop, .desktop {
 	/* Container Sizes: */
 	--smallest-container: 10rem; /* 160px */
 	--smaller-container: 15rem; /* 240px */
