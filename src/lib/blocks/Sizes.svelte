@@ -110,7 +110,7 @@
 			);
 			background-size: var(--prop) 100%;
 			margin-block: var(--x-small);
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				background-image: linear-gradient(
 					var(--accent-400),
 					var(--accent-600)

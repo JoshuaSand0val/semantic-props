@@ -98,7 +98,7 @@
 		margin-inline: calc((min(100vi, 3840px) - 100%) * -0.5);
 		margin-block: var(--2x-large);
 		transition: padding var(--faster-time) var(--ease-in);
-		:global(.semantic.laptop) & {
+		:global(.laptop) & {
 			--column-width: var(--smaller-container);
 		}
 	}
@@ -107,7 +107,7 @@
 		display: contents;
 		flex-flow: row wrap;
 		gap: inherit;
-		:global(.semantic.laptop) & {
+		:global(.laptop) & {
 			display: flex;
 		}
 		:global(& > *) {

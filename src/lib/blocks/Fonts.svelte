@@ -172,10 +172,10 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-width)), 1fr));
 		gap: var(--large) var(--3x-large);
-		:global(.semantic.tablet) & {
+		:global(.tablet) & {
 			--column-width: var(--smaller-container);
 		}
-		:global(.semantic.desktop) & {
+		:global(.desktop) & {
 			--column-width: var(--small-container);
 		}
 	}

@@ -39,13 +39,13 @@
 		padding-block: var(--3x-small);
 		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--2x-large);
-		:global(.semantic.phone) & {
+		:global(.phone) & {
 			column-count: 2;
 		}
-		:global(.semantic.tablet) & {
+		:global(.tablet) & {
 			column-count: 3;
 		}
-		:global(.semantic.desktop) & {
+		:global(.desktop) & {
 			column-count: 4;
 		}
 	}
@@ -72,10 +72,10 @@
 		box-shadow: var(--lightest-box-shadow);
 		padding: var(--3x-small);
 		overflow: hidden;
-		:global(.semantic.tablet) & {
+		:global(.tablet) & {
 			font-size: var(--large);
 		}
-		:global(.semantic.laptop) & {
+		:global(.laptop) & {
 			font-size: var(--x-large);
 		}
 		&::before, &::after {
@@ -84,7 +84,7 @@
 			z-index: -1;
 			inset: 0;
 			background-color:  var(--neutral-300);
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				background-color: var(--neutral-600);			
 			}
 		}
@@ -97,10 +97,10 @@
 		font-size: var(--x-small);
 		color: var(--medium-contrast-color);
 		margin-block: var(--x-small);
-		:global(.semantic.tablet) & {
+		:global(.tablet) & {
 			font-size: var(--small);
 		}
-		:global(.semantic.laptop) & {
+		:global(.laptop) & {
 			font-size: var(--medium);
 		}
 	}

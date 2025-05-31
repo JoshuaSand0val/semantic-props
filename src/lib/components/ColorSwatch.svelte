@@ -24,7 +24,7 @@
 		border: 1px var(--border-style) var(--tertiary-color);
 		margin: 0;
 		scroll-snap-type: both mandatory;
-		:global(.semantic.laptop) & {
+		:global(.laptop) & {
 			flex-direction: column;
 		}
 	}
@@ -48,7 +48,7 @@
 		scroll-snap-align: start;
 		flex: 1 0 auto;
 		overflow: auto;
-		:global(.semantic.laptop) & {
+		:global(.laptop) & {
 			flex-direction: row;
 			justify-content: space-between;
 			inline-size: 100%;

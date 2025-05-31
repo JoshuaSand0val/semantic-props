@@ -97,7 +97,7 @@
 		border-block-end: 1px var(--border-style) var(--tertiary-color);
 		thead & {
 			border-block-end-color: var(--neutral-350);
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				border-block-end-color: var(--neutral-650);
 			}
 		}

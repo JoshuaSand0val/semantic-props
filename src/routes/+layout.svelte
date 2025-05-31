@@ -22,13 +22,11 @@
 		@import "semantic-props/css";
 	}
 
-	:global(.semantic) {
+	:global(:root) {
 		--display-family: "Ubuntu", sans-serif;
 		--body-family: "Open Sans", sans-serif;
 		--mono-family: "IBM Plex Mono", monospace;
-	}
 
-	:global(:root) {
 		scroll-behavior: smooth;
 		background-color: var(--primary-color);
 		color: var(--high-contrast-color);

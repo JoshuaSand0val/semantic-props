@@ -23,7 +23,7 @@
 
 		.hljs {
 			color: #383a42;
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: #abb2bf;
 			}
 		}
@@ -32,7 +32,7 @@
 		.hljs-quote {
 			color: #a0a1a7;
 			font-style: italic;
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: #5c6370;
 			}
 		}
@@ -41,7 +41,7 @@
 		.hljs-keyword,
 		.hljs-formula {
 			color: #a626a4;
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: #c678dd;
 			}
 		}
@@ -52,14 +52,14 @@
 		.hljs-deletion,
 		.hljs-subst {
 			color: #e45649;
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: #e06c75;
 			}
 		}
 
 		.hljs-literal {
 			color: #0184bb;
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: #56b6c2;
 			}
 		}
@@ -70,7 +70,7 @@
 		.hljs-attribute,
 		.hljs-meta-string {
 			color: #50a14f;
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: #98c379;
 			}
 		}
@@ -78,7 +78,7 @@
 		.hljs-built_in,
 		.hljs-class .hljs-title {
 			color: #c18401;
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: #e6c07b;
 			}
 		}
@@ -92,7 +92,7 @@
 		.hljs-selector-pseudo,
 		.hljs-number {
 			color: #986801;
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: #d19a66;
 			}
 		}
@@ -104,7 +104,7 @@
 		.hljs-selector-id,
 		.hljs-title {
 			color: #4078f2;
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: #61aeee;
 			}
 		}

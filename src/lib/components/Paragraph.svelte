@@ -27,7 +27,7 @@
 			padding-inline: var(--2x-small);
 			padding-block: var(--4x-small);
 			margin-block: var(--4x-small);
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				background-color: var(--neutral-800);
 			}
 		}

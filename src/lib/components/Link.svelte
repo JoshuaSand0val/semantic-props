@@ -14,7 +14,7 @@
 <style>
 	.container {
 		color: var(--accent-500);
-		:global(.semantic.dark) & {
+		:global(.dark) & {
 			color: var(--accent-300);
 		}
 		&:not(:hover, :focus) {
@@ -22,7 +22,7 @@
 		}
 		&:active {
 			color: var(--accent-550);
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				color: var(--accent-350);
 			}
 		}

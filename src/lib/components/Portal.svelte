@@ -64,10 +64,10 @@
 					filter: var(--low-brightness);
 					transform: none;
 				}
-				:global(.semantic.light) &.dark {
+				:global(.light) &.dark {
 					display: none;
 				}
-				:global(.semantic.dark) &.light {
+				:global(.dark) &.light {
 					display: none;
 				}
 			}

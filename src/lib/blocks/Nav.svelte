@@ -56,7 +56,7 @@
 			border-color: var(--neutral-300);
 			background-color: var(--secondary-color);
 			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				border-color: var(--neutral-700);
 			}
 		}
@@ -122,7 +122,7 @@
 		&:active {
 			background-color: var(--accent-150);
 			color: var(--accent-400);
-			:global(.semantic.dark) & {
+			:global(.dark) & {
 				background-color: var(--accent-850);
 			}
 		}

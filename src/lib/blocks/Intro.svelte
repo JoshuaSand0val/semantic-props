@@ -55,7 +55,7 @@
 		@media (prefers-reduced-motion: reduce) {
 			animation: none;
 		}
-		:global(.semantic.dark) & {
+		:global(.dark) & {
 			background-image: linear-gradient(123deg,
 				var(--red-300),
 				var(--orange-300),

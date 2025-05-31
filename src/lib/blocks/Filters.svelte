@@ -96,7 +96,7 @@
 		transition: inline-size var(--normal-time) var(--ease-out);
 		scroll-snap-align: center;
 		flex: 0 0 auto;
-		:global(.semantic.laptop) & {
+		:global(.laptop) & {
 			--inline-size: var(--smaller-container);
 		}
 	}
