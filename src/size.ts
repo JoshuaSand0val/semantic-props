@@ -42,7 +42,7 @@
 	/** Initializes observation of all containers. */
 	let initialize = (): void => {
 		// Observe document as container:
-		document.documentElement.classList.add("container");
+		size.observe(document.documentElement);
 
 		// Observe existing containers:
 		for (const container of document.querySelectorAll(".container")) {
