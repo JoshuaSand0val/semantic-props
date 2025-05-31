@@ -67,12 +67,7 @@
 	<ReferenceTable props={reference} />
 	<Paragraph>
 		Semantic Props provides a simple but expansive color palette.<br>
-		Color schemes can be forced via classes <code>light</code> and <code>dark</code>.
-		Combine for the system color scheme.
-	</Paragraph>
-	<Paragraph>
-		Colors schemes can be targeted using the boolean Semantic Props <code>--light</code> and <code>--dark</code>.<br>
-		Example use: <code>color: var(<b>--light</b>, black) var(<b>--dark</b>, white);</code>
+		Color schemes can be forced and targeted via classes <code>light</code> and <code>dark</code>.
 	</Paragraph>
 	<div class="container">
 		{#each palette as swatch}
