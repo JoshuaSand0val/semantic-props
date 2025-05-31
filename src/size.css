@@ -54,7 +54,7 @@
 	--margin-size: var(--4x-large);
 }
 
-.laptop {
+.laptop, .desktop {
 	/* Size Scale Ratio: */
 	--scale-ratio: 1.250;
 
