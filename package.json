@@ -19,7 +19,7 @@
 		"README.md"
 	],
 	"exports": {
-		"./css": {
+		".": {
 			"default": "./dist/import.css"
 		},
 		"./js": {
