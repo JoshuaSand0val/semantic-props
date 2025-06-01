@@ -65,28 +65,21 @@
 		font-size: var(--small);
 		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
+		border: var(--3x-small) solid var(--neutral-200);
 		border-radius: var(--smallest-radius);
 		background-color: var(--primary-color);
 		background-clip: content-box;
 		color: var(--low-contrast-color);
 		box-shadow: var(--lightest-box-shadow);
-		padding: var(--3x-small);
 		overflow: hidden;
+		:global(.dark) & {
+			border-color: var(--neutral-700);			
+		}
 		:global(.tablet) & {
 			font-size: var(--large);
 		}
 		:global(.laptop) & {
 			font-size: var(--x-large);
-		}
-		&::before, &::after {
-			content: "";
-			position: absolute;
-			z-index: -1;
-			inset: 0;
-			background-color:  var(--neutral-300);
-			:global(.dark) & {
-				background-color: var(--neutral-600);			
-			}
 		}
 	}
 
