@@ -46,7 +46,9 @@
 				}
 			}
 			else if (oldValue?.includes("container")) {
-				unobserve([target]);
+				if (target !== document.documentElement) {
+					unobserve([target]);
+				}
 			}
 		}
 	});
