@@ -1,6 +1,6 @@
 /* Semantic Props for sizing containers, fonts and space. */
 
-:root, .watch, .phone, .tablet, .laptop, .desktop {
+:root, .viewport, .watch, .phone, .tablet, .laptop, .desktop {
 	/* Container Sizes: */
 	--smallest-container: 10rem; /* 160px */
 	--smaller-container: 15rem; /* 240px */
@@ -38,31 +38,39 @@
 	--margin-size: var(--x-small);
 }
 
-.phone {
-	/* Size Scale Ratio: */
-	--scale-ratio: 1.125;
+@media (min-width: 20rem) {
+	:root, .viewport, .phone, .tablet, .laptop, .desktop {
+		/* Size Scale Ratio: */
+		--scale-ratio: 1.125;
 
-	/* Margin Size: */
-	--margin-size: var(--2x-large);
+		/* Margin Size: */
+		--margin-size: var(--2x-large);
+	}
 }
 
-.tablet {
-	/* Size Scale Ratio: */
-	--scale-ratio: 1.200;
+@media (min-width: 40rem) {
+	:root, .viewport, .tablet, .laptop, .desktop {
+		/* Size Scale Ratio: */
+		--scale-ratio: 1.200;
 
-	/* Margin Size: */
-	--margin-size: var(--4x-large);
+		/* Margin Size: */
+		--margin-size: var(--4x-large);
+	}
 }
 
-.laptop, .desktop {
-	/* Size Scale Ratio: */
-	--scale-ratio: 1.250;
+@media (min-width: 64rem) {
+	:root, .viewport, .laptop, .desktop {
+		/* Size Scale Ratio: */
+		--scale-ratio: 1.250;
 
-	/* Margin Size: */
-	--margin-size: var(--5x-large);
+		/* Margin Size: */
+		--margin-size: var(--5x-large);
+	}
 }
 
-.desktop {
-	/* Margin Size: */
-	--margin-size: var(--6x-large);
+@media (min-width: 80rem) {
+	:root, .viewport, .desktop {
+		/* Margin Size: */
+		--margin-size: var(--6x-large);
+	}
 }

@@ -1,6 +1,6 @@
 /* Semantic Props for color. */
 
-:root, .light {
+:root, .system, .dark {
 	/* Color Weights: */
 	@for $weight from 100 to 900 by 50 {
 		/* Calculate Lightness and Chroma: */
@@ -22,27 +22,6 @@
 	}
 
 	/* Alias Colors: */
-	--primary-color: var(--neutral-100);
-	--secondary-color: var(--neutral-150);
-	--tertiary-color: var(--neutral-200);
-
-	--high-contrast-color: var(--neutral-800);
-	--medium-contrast-color: var(--neutral-650);
-	--low-contrast-color: var(--neutral-550);
-
-	@media (prefers-contrast: more) {
-		--high-contrast-color: var(--neutral-900);
-		--medium-contrast-color: var(--neutral-750);
-		--low-contrast-color: var(--neutral-650);
-	}
-
-	/* Stroke Color: */
-	--light-stroke-color: var(--neutral-350);
-	--dark-stroke-color: var(--neutral-650);
-	--stroke-color: var(--low-contrast-color);
-}
-
-.dark {
 	--primary-color: var(--neutral-900);
 	--secondary-color: var(--neutral-850);
 	--tertiary-color: var(--neutral-800);
@@ -55,5 +34,28 @@
 		--high-contrast-color: var(--neutral-100);
 		--medium-contrast-color: var(--neutral-250);
 		--low-contrast-color: var(--neutral-350);
+	}
+
+	/* Stroke Color: */
+	--light-stroke-color: var(--neutral-350);
+	--dark-stroke-color: var(--neutral-650);
+	--stroke-color: var(--low-contrast-color);
+}
+
+@media (prefers-color-scheme: light) {
+	:root, .system {
+		--primary-color: var(--neutral-100);
+		--secondary-color: var(--neutral-150);
+		--tertiary-color: var(--neutral-200);
+
+		--high-contrast-color: var(--neutral-800);
+		--medium-contrast-color: var(--neutral-650);
+		--low-contrast-color: var(--neutral-550);
+
+		@media (prefers-contrast: more) {
+			--high-contrast-color: var(--neutral-900);
+			--medium-contrast-color: var(--neutral-750);
+			--low-contrast-color: var(--neutral-650);
+		}
 	}
 }
