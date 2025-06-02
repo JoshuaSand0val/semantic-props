@@ -1,9 +1,7 @@
 // Import: All files imported.
+import "./boolean.css";
 import "./border.css";
-import "./breakpoint.css";
-import "./breakpoint.js";
 import "./color.css";
-import "./color.js";
 import "./filter.css";
 import "./font.css";
 import "./opacity.css";

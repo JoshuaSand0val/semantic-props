@@ -1,14 +1,6 @@
 /* Semantic Props for color. */
 
 :root {
-	/* Color-Scheme Booleans: */
-	--color-scheme: light;
-
-	@media (prefers-color-scheme: dark) {
-		@extend .dark;
-	}
-
-	/* Color Weights: */
 	@for $weight from 100 to 900 by 50 {
 		/* Calculate Lightness and Chroma: */
 		$percentage: calc(1 - ($weight - 100) / (900 - 100));
@@ -27,9 +19,4 @@
 		--violet-$(weight): oklch(from oklch(0.4 0.15 290) $l $c h);
 		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l $c h);
 	}
-}
-
-.dark {
-	/* Color-Scheme Booleans: */
-	--color-scheme: dark;
 }
