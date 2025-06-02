@@ -1,6 +1,6 @@
 /* Semantic Props for sizing containers, fonts and space. */
 
-:root, .viewport, .watch, .phone, .tablet, .laptop, .desktop {
+:root {
 	/* Container Sizes: */
 	--smallest-container: 10rem; /* 160px */
 	--smaller-container: 15rem; /* 240px */
@@ -10,67 +10,43 @@
 	--larger-container: 64rem; /* 1024px */
 	--largest-container: 80rem; /* 1280px */
 
-	/* Size Scale Ratio: */
-	--scale-ratio: 1.067;
-
 	/* Base Sizes: */
-	--4x-small: min(0.125rem, var(--3x-small) / var(--scale-ratio)); /* 2px */
-	--3x-small: min(0.25rem, var(--2x-small) / var(--scale-ratio)); /* 4px */
-	--2x-small: min(0.5rem, var(--x-small) / var(--scale-ratio)); /* 8px */
-	--x-small: min(0.75rem, var(--small) / var(--scale-ratio)); /* 12px */
-	--small: min(0.875rem, var(--medium) / var(--scale-ratio)); /* 14px */
+	--4x-small: 0.125rem; /* 2px */
+	--3x-small: 0.25rem; /* 4px */
+	--2x-small: 0.5rem; /* 8px */
+	--x-small: 0.75rem; /* 12px */
+	--small: 0.875rem; /* 14px */
 	--medium: 1rem; /* 16px */
-	--large: min(1.125rem, var(--medium) * var(--scale-ratio)); /* 18px */
-	--x-large: min(1.25rem, var(--large) * var(--scale-ratio)); /* 20px */
-	--2x-large: min(1.5rem, var(--x-large) * var(--scale-ratio)); /* 24px */
-	--3x-large: min(1.875rem, var(--2x-large) * var(--scale-ratio)); /* 30px */
-	--4x-large: min(2.25rem, var(--3x-large) * var(--scale-ratio)); /* 36px */
-	--5x-large: min(3rem, var(--4x-large) * var(--scale-ratio)); /* 48px */
-	--6x-large: min(3.75rem, var(--5x-large) * var(--scale-ratio)); /* 60px */
-	--7x-large: min(4.5rem, var(--6x-large) * var(--scale-ratio)); /* 72px */
-	--8x-large: min(6rem, var(--7x-large) * var(--scale-ratio)); /* 96px */
-	--9x-large: min(8rem, var(--8x-large) * var(--scale-ratio)); /* 128px */
+	--large: 1.125rem; /* 18px */
+	--x-large: 1.25rem; /* 20px */
+	--2x-large: 1.5rem; /* 24px */
+	--3x-large: 1.875rem; /* 30px */
+	--4x-large: 2.25rem; /* 36px */
+	--5x-large: 3rem; /* 48px */
+	--6x-large: 3.75rem; /* 60px */
+	--7x-large: 4.5rem; /* 72px */
+	--8x-large: 6rem; /* 96px */
+	--9x-large: 8rem; /* 128px */
 
-	--smaller: min(0.875em, 1em / var(--scale-ratio));
-	--larger: min(1.125em, 1em * var(--scale-ratio));
+	--smaller: 0.875em; /* 14/16px */
+	--larger: 1.125em; /* 18/16px */
 
 	/* Margin Size: */
 	--margin-size: var(--x-small);
-}
 
-@media (min-width: 20rem) {
-	:root, .viewport, .phone, .tablet, .laptop, .desktop {
-		/* Size Scale Ratio: */
-		--scale-ratio: 1.125;
-
-		/* Margin Size: */
+	@media (min-width: 20rem) {
 		--margin-size: var(--2x-large);
 	}
-}
 
-@media (min-width: 40rem) {
-	:root, .viewport, .tablet, .laptop, .desktop {
-		/* Size Scale Ratio: */
-		--scale-ratio: 1.200;
-
-		/* Margin Size: */
+	@media (min-width: 40rem) {
 		--margin-size: var(--4x-large);
 	}
-}
 
-@media (min-width: 64rem) {
-	:root, .viewport, .laptop, .desktop {
-		/* Size Scale Ratio: */
-		--scale-ratio: 1.250;
-
-		/* Margin Size: */
+	@media (min-width: 64rem) {
 		--margin-size: var(--5x-large);
 	}
-}
 
-@media (min-width: 80rem) {
-	:root, .viewport, .desktop {
-		/* Margin Size: */
+	@media (min-width: 80rem) {
 		--margin-size: var(--6x-large);
 	}
 }

@@ -14,7 +14,7 @@ A **breaking change** release that greatly improves browser compatibility, file 
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
 - Added `--caption-side`, `--reverse-caption-side` and `--empty-cells` table props.
-- Added color-scheme and media-query breakpoint limiting classes.
+- Added color-scheme limiting classes.
 
 ### Changed
 
@@ -23,7 +23,7 @@ A **breaking change** release that greatly improves browser compatibility, file 
 - Changed syntax of all props to be descriptive versus namespaced.
 - Changed syntax of all props with upper/lower values from using `-x-` modifier and given limited values.
 - Changed prop values from using `px` to use `rem` units.
-- Changed font and spacing scales to be unified and based on new `--scale-ratio` value.
+- Changed font and spacing scales to be unified.
 - Changed scale props to use transform `scale()` function.
 
 ### Removed
