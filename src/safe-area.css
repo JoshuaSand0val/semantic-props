@@ -11,6 +11,6 @@
 	--safe-y: var(--safe-top) 0 var(--safe-bottom) 0;
 
 	--safe-header: var(--safe-top) var(--safe-right) 0 var(--safe-left);
-	--safe-main: var(--safe-x);
+	--safe-body: var(--safe-x);
 	--safe-footer: 0 var(--safe-right) var(--safe-bottom) var(--safe-left);
 }
