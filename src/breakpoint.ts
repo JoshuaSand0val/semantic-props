@@ -40,7 +40,7 @@
 
 	/** Initializes observation of scripted containers. */
 	function initialize(): void {
-		for (const container of document.querySelectorAll("scripted")) {
+		for (const container of document.querySelectorAll(".scripted")) {
 			observer.observe(container);
 		}
 

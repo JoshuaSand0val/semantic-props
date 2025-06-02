@@ -13,7 +13,7 @@
 
 	/** Performs observation of scripted containers. */
 	function observe(): void {
-		for (const container of document.querySelectorAll("scripted")) {
+		for (const container of document.querySelectorAll(".scripted")) {
 			color(container);
 		}
 	}
