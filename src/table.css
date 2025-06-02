@@ -1,6 +1,6 @@
 /* Semantic Props for CSS table properties. */
 
-:root {
+.semantic {
 	/* Caption-Side: */
 	--caption-side: top;
 	--reverse-caption-side: bottom;

@@ -1,6 +1,6 @@
 /* Semantic Props for timing animations. */
 
-:root {
+.semantic {
 	/* Easing Values: */
 	--ease: ease;
 	--ease-in: ease-in;

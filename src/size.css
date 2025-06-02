@@ -1,6 +1,6 @@
 /* Semantic Props for sizing containers, fonts and space. */
 
-:root {
+.semantic {
 	/* Container Sizes: */
 	--smallest-container: 10rem; /* 160px */
 	--smaller-container: 15rem; /* 240px */
@@ -34,19 +34,19 @@
 	/* Margin Size: */
 	--margin-size: var(--x-small);
 
-	@media (min-width: 20rem) {
+	@container style(--phone) {
 		--margin-size: var(--2x-large);
 	}
 
-	@media (min-width: 40rem) {
+	@container style(--tablet) {
 		--margin-size: var(--4x-large);
 	}
 
-	@media (min-width: 64rem) {
+	@container style(--laptop) {
 		--margin-size: var(--5x-large);
 	}
 
-	@media (min-width: 80rem) {
+	@container style(--desktop) {
 		--margin-size: var(--6x-large);
 	}
 }

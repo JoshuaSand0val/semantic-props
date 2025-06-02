@@ -9,7 +9,7 @@ A **breaking change** release that greatly improves browser compatibility, file 
 ### Added
 
 - Added new `-radius` props for applying `border-radius`.
-- Added new color palette using weights 100 to 900 by 50.
+- Added new color palette using aliases and weights 100 to 900 by 50.
 - Added `text-shadow` and `box-shadow` variants of `shadow` props.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
@@ -19,7 +19,6 @@ A **breaking change** release that greatly improves browser compatibility, file 
 
 ### Changed
 
-- Changed `semantic` class to instead use `:root`.
 - Changed imports to use separate CSS and JavaScript paths.
 - Changed syntax of all props to be descriptive versus namespaced.
 - Changed syntax of all props with upper/lower values from using `-x-` modifier and given limited values.
@@ -29,7 +28,6 @@ A **breaking change** release that greatly improves browser compatibility, file 
 
 ### Removed
 
-- Removed `semantic` class.
 - Removed color palette relying on CSS relative colors and `light-dark` function.
 - Removed `--responsive-size` prop in favor of `--margin-size`.
 - Removed individual import distribution files. Use a PostCSS plugin (such as [PurgeCSS](https://purgecss.com/)) for optimizations instead.
