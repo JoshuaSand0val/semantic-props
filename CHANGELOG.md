@@ -15,7 +15,7 @@ A **breaking change** release that greatly improves browser compatibility, file 
 - Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
 - Added `--caption-side`, `--reverse-caption-side` and `--empty-cells` table props.
 - Added `scripted` class for JavaScript enhanced props.
-- Added breakpoint props for style-query and scripted classes.
+- Added `--color-scheme` and breakpoint props for style-query and scripted classes.
 
 ### Changed
 
