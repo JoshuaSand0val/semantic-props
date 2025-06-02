@@ -24,11 +24,15 @@
 	}
 
 	/* Breakpoint Booleans: */
-	--watch: true;
+	--watch: false;
 	--phone: false;
 	--tablet: false;
 	--laptop: false;
 	--desktop: false;
+
+	@media (max-width: 20rem) {
+		--watch: true;
+	}
 
 	@media (min-width: 20rem) {
 		--phone: true;
