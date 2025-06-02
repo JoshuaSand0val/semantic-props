@@ -1,6 +1,6 @@
 /* Semantic Props boolean values for @container style queries. */
 
-@each $token in (dark, watch, phone, tablet, laptop, desktop) {
+@each $token in (dark, high-contrast, watch, phone, tablet, laptop, desktop) {
 	@property --$(token) {
 		syntax: "true | false";
 		initial-value: false;
@@ -9,11 +9,18 @@
 }
 
 :root {
-	/* Color-Scheme Booleans: */
+	/* Color Scheme Booleans: */
 	--dark: false;
 
 	@media (prefers-color-scheme: dark) {
 		--dark: true;
+	}
+
+	/* Color Contrast Booleans: */
+	--high-contrast: false;
+
+	@media (prefers-contrast: more) {
+		--high-contrast: true;
 	}
 
 	/* Breakpoint Booleans: */
