@@ -9,12 +9,11 @@ A **breaking change** release that greatly improves browser compatibility, file 
 ### Added
 
 - Added new `-radius` props for applying `border-radius`.
-- Added new color system using weights and alias values.
+- Added new color palette using weights 100 to 900 by 50.
 - Added `text-shadow` and `box-shadow` variants of `shadow` props.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
 - Added `--caption-side`, `--reverse-caption-side` and `--empty-cells` table props.
-- Added color-scheme limiting classes.
 
 ### Changed
 
