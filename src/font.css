@@ -15,9 +15,9 @@
 	--heavy-weight: 900;
 
 	/* Letter-Spacing: */
-	--densest-letter: -0.1em;
-	--denser-letter: -0.075em;
-	--dense-letter: -0.05em;
+	--tightest-letter: -0.1em;
+	--tighter-letter: -0.075em;
+	--tight-letter: -0.05em;
 	--normal-letter: normal;
 	--wide-letter: 0.1em;
 	--wider-letter: 0.2em;
@@ -33,9 +33,9 @@
 	--tallest-line: 3;
 
 	/* Word-Spacing: */
-	--densest-word: -0.15em;
-	--denser-word: -0.125em;
-	--dense-word: -0.1em;
+	--tightest-word: -0.15em;
+	--tighter-word: -0.125em;
+	--tight-word: -0.1em;
 	--normal-word: normal;
 	--wide-word: 0.1em;
 	--wider-word: 0.2em;
