@@ -15,10 +15,12 @@ A **breaking change** release that greatly improves browser compatibility, file 
 - Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
 - Added `--caption-side`, `--reverse-caption-side` and `--empty-cells` table props.
 - Added `scripted` class for JavaScript enhanced props.
-- Added `--dark`, `--high-contrast` and breakpoint props for `@container` style queries.
+- Added color and viewport `@custom-media` props for use with
+[PostCSS Custom Media](https://www.npmjs.com/package/postcss-custom-media).
 
 ### Changed
 
+- Changed use of `semantic` class to `:root` selector.
 - Changed imports to use separate CSS and JavaScript paths.
 - Changed syntax of all props to be descriptive versus namespaced.
 - Changed syntax of all props with upper/lower values from using `-x-` modifier and given limited values.
@@ -28,6 +30,7 @@ A **breaking change** release that greatly improves browser compatibility, file 
 
 ### Removed
 
+- Removed `semantic` class.
 - Removed color palette relying on CSS relative colors and `light-dark` function.
 - Removed `--responsive-size` prop in favor of `--margin-size`.
 - Removed individual import distribution files. Use a PostCSS plugin (such as [PurgeCSS](https://purgecss.com/)) for optimizations instead.

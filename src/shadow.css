@@ -1,6 +1,6 @@
 /* Semantic Props for CSS text-shadow, box-shadow and drop-shadow filter. */
 
-.semantic {
+:root {
 	/* Text-Shadow: */
 	--lightest-text-shadow: 0 2px 3px rgb(0 0 0 / 0.15);
 	--lighter-text-shadow: 0 5px 4px rgb(0 0 0 / 0.15);

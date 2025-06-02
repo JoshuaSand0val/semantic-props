@@ -1,6 +1,10 @@
 /* Semantic Props for color. */
 
-.semantic {
+@custom-media --light (prefers-color-scheme: light);
+@custom-media --dark (prefers-color-scheme: dark);
+@custom-media --high-contrast (prefers-contrast: more);
+
+:root {
 	/* Color Weights: */
 	@for $weight from 100 to 900 by 50 {
 		/* Calculate Lightness and Chroma: */
@@ -37,13 +41,13 @@
 	--medium-contrast-color: var(--neutral-650);
 	--low-contrast-color: var(--neutral-550);
 
-	@container style(--high-contrast) {
+	@media (--high-contrast) {
 		--high-contrast-color: var(--neutral-900);
 		--medium-contrast-color: var(--neutral-750);
 		--low-contrast-color: var(--neutral-650);
 	}
 
-	@container style(--dark) {
+	@media (--dark) {
 		--primary-color: var(--neutral-900);
 		--secondary-color: var(--neutral-850);
 		--tertiary-color: var(--neutral-800);
@@ -53,7 +57,7 @@
 		--low-contrast-color: var(--neutral-450);
 	}
 
-	@container style(--dark) and style(--high-contrast) {
+	@media (--dark) and (--high-contrast) {
 		--high-contrast-color: var(--neutral-100);
 		--medium-contrast-color: var(--neutral-250);
 		--low-contrast-color: var(--neutral-350);

@@ -1,5 +1,8 @@
 export default {
 	plugins: {
+		"postcss-custom-media": {
+			preserve: true
+		},
 		"postcss-nesting": {},
 		"postcss-advanced-variables": {},
 		"@csstools/postcss-trigonometric-functions": {},
