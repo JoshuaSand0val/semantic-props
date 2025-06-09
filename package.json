@@ -2,11 +2,13 @@
 	"private": true,
 	"name": "semantic-props",
 	"version": "2.0.0",
-	"description": "A collection of semantic CSS custom properties.",
+	"description": "A collection of semantic CSS-in-JS object properties.",
 	"keywords": [
 		"Semantic Props",
-		"CSS custom properties",
-		"CSS framework",
+		"CSS-in-JS properties",
+		"CSS-in-JS framework",
+		"CSS-in-JS",
+		"JavaScript",
 		"CSS"
 	],
 	"homepage": "https://semantic-props.style/",
@@ -20,9 +22,6 @@
 	],
 	"exports": {
 		".": {
-			"default": "./dist/import.css"
-		},
-		"./js": {
 			"default": "./dist/import.js"
 		}
 	},
@@ -32,27 +31,16 @@
 	},
 	"type": "module",
 	"scripts": {
-		"build": "rollup -c",
-		"watch:build": "rollup -c -w"
+		"preexport": "rimraf dist/*",
+		"export": "tsx src/export.ts",
+		"watch:export": "onchange 'src/**/*' -- npm run export"
 	},
 	"devDependencies": {
-		"@csstools/postcss-oklab-function": "^4.0.9",
-		"@csstools/postcss-relative-color-syntax": "^3.0.9",
-		"@csstools/postcss-trigonometric-functions": "^4.0.8",
-		"@rollup/plugin-commonjs": "^28.0.3",
-		"@rollup/plugin-node-resolve": "^16.0.1",
-		"@rollup/plugin-terser": "^0.4.4",
-		"@rollup/plugin-typescript": "^12.1.2",
-		"autoprefixer": "^10.4.21",
-		"cssnano": "^7.0.4",
-		"postcss-advanced-variables": "^5.0.0",
-		"postcss-nesting": "^13.0.1",
-		"rollup": "^4.41.1",
-		"rollup-plugin-postcss": "^4.0.2",
-		"tslib": "^2.8.1"
-	},
-	"dependencies": {
-		"postcss": "^8.5.4",
-		"postcss-custom-media": "^11.0.6"
+		"@types/chroma-js": "^3.1.1",
+		"@types/node": "^22.15.30",
+		"chroma-js": "^3.1.2",
+		"onchange": "^7.1.0",
+		"rimraf": "^6.0.1",
+		"tsx": "^4.19.4"
 	}
 }
