@@ -1,10 +1,15 @@
-/** Semantic Props for the CSS z-index property. */
+interface props {
+	/** Semantic Props for the CSS z-index property. */
+	z: Record<string, number>
+}
 
-export const props = {
-	zBottom: -1000,
-	zRelative: 1000,
-	zAbsolute: 2000,
-	zSticky: 3000,
-	zFixed: 4000,
-	zTop: 5000
+export const props: props = {
+	z: {
+		bottom: -1000,
+		relative: 1000,
+		absolute: 2000,
+		sticky: 3000,
+		fixed: 4000,
+		top: 5000
+	}
 };
