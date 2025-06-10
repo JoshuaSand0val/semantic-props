@@ -31,9 +31,9 @@
 	},
 	"type": "module",
 	"scripts": {
-		"preexport": "rimraf dist/*",
-		"export": "tsx src/export.ts",
-		"watch:export": "onchange 'src/**/*' -- npm run export"
+		"prebuild": "rimraf dist/*",
+		"build": "tsx src/export.ts",
+		"watch:build": "onchange 'src/**/*' -- npm run export"
 	},
 	"devDependencies": {
 		"@types/chroma-js": "^3.1.1",
