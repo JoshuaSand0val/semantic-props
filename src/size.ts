@@ -11,22 +11,24 @@ export const props = {
 	largestContainer: "80rem", // 1280px
 
 	// Base Sizes:
-	xSmall4: "0.125rem", // 2px
-	xSmall3: "0.25rem", // 4px
-	xSmall2: "0.5rem", // 8px
-	xSmall: "0.75rem", // 12px
-	small: "0.875rem", // 14px
-	medium: "1rem", // 16px
-	large: "1.125rem", // 18px
-	xLarge: "1.25rem", // 20px
-	xLarge2: "1.5rem", // 24px
-	xLarge3: "1.875rem", // 30px
-	xLarge4: "2.25rem", // 36px
-	xLarge5: "3rem", // 48px
-	xLarge6: "3.75rem", // 60px
-	xLarge7: "4.5rem", // 72px
-	xLarge8: "6rem", // 96px
-	xLarge9: "8rem", // 128px
+	size: {
+		[-5]: "0.125rem", // 2px
+		[-4]: "0.25rem", // 4px
+		[-3]: "0.5rem", // 8px
+		[-2]: "0.75rem", // 12px
+		[-1]: "0.875rem", // 14px
+		[0]: "1rem", // 16px
+		[1]: "1.125rem", // 18px
+		[2]: "1.25rem", // 20px
+		[3]: "1.5rem", // 24px
+		[4]: "1.875rem", // 30px
+		[5]: "2.25rem", // 36px
+		[6]: "3rem", // 48px
+		[7]: "3.75rem", // 60px
+		[8]: "4.5rem", // 72px
+		[9]: "6rem", // 96px
+		[10]: "8rem" // 128px
+	},
 
 	smaller: "0.875em", // 14/16px
 	larger: "1.125em" // 18/16px
