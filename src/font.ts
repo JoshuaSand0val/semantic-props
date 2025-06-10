@@ -1,46 +1,56 @@
-/** Semantic Props for font properties. */
+// Semantic Props for font properties.
 
-export let props = {
-	// Font-Family:
-	bodyFamily: "system-ui, sans-serif",
-	monoFamily: "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace",
+import type { Property } from "csstype";
 
-	// Font-Weight:
-	thinWeight: 200,
-	lightWeight: 300,
-	regularWeight: 500,
-	boldWeight: 700,
-	heavyWeight: 900,
-
-	// Letter-Spacing:
-	tightestLetter: "-0.1em",
-	tighterLetter: "-0.075em",
-	tightLetter: "-0.05em",
-	normalLetter: "normal",
-	wideLetter: "0.1em",
-	widerLetter: "0.2em",
-	widestLetter: "0.3em",
-
-	// Line-Height:
-	shortestLine: 1.05,
-	shorterLine: 1.15,
-	shortLine: 1.25,
-	normalLine: 1.6,
-	tallLine: 2,
-	tallerLine: 2.5,
-	tallestLine: 3,
-
-	// Word-Spacing:
-	tightestWord: "-0.15em",
-	tighterWord: "-0.125em",
-	tightWord: "-0.1em",
-	normalWord: "normal",
-	wideWord: "0.1em",
-	widerWord: "0.2em",
-	widestWord: "0.3em"
+/** Semantic Props for CSS `font-family` property value. */
+export const family: Record<string, Property.FontFamily> = {
+	body: "system-ui, sans-serif",
+	mono: "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace"
 };
 
-Object.assign(props, {
-	displayFamily: props.bodyFamily,
-	accentFamily: props.bodyFamily
+Object.assign(family, {
+	display: family.body,
+	accent: family.body
 });
+
+/** Semantic Props for CSS `font-weight` property value. */
+export const weight: Record<string, Property.FontWeight> = {
+	thin: 200,
+	light: 300,
+	regular: 500,
+	bold: 700,
+	heavy: 900
+};
+
+/** Semantic Props for CSS `letter-spacing` property value. */
+export const letterSpacing: Record<string, Property.LetterSpacing> = {
+	tightest: "-0.1em",
+	tighter: "-0.075em",
+	tight: "-0.05em",
+	normal: "normal",
+	wide: "0.1em",
+	wider: "0.2em",
+	widest: "0.3em"
+};
+
+/** Semantic Props for CSS `line-height` property value. */
+export const line: Record<string, Property.LineHeight> = {
+	shortest: 1.05,
+	shorter: 1.15,
+	short: 1.25,
+	normal: 1.6,
+	tall: 2,
+	taller: 2.5,
+	tallest: 3,
+};
+
+/** Semantic Props for CSS `word-spacing` property value. */
+export const wordSpacing: Record<string, Property.WordSpacing> = {
+	tightest: "-0.15em",
+	tighter: "-0.125em",
+	tight: "-0.1em",
+	normal: "normal",
+	wide: "0.1em",
+	wider: "0.2em",
+	widest: "0.3em"
+};

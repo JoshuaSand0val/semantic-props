@@ -1,39 +1,43 @@
-/** Semantic Props for CSS text-shadow, box-shadow and drop-shadow filter. */
+// Semantic Props for CSS text-shadow, box-shadow and drop-shadow filter.
 
-export const props = {
-	// Text-Shadow:
-	lightestTextShadow: "0 2px 3px rgb(0 0 0 / 0.15)",
-	lighterTextShadow: "0 5px 4px rgb(0 0 0 / 0.15)",
-	lightTextShadow: "0 7px 5px rgb(0 0 0 / 0.15)",
-	mediumTextShadow: "0 8px 8px rgb(0 0 0 / 0.225)",
-	heavyTextShadow: "0 8px 8px rgb(0 0 0 / 0.3)",
-	heavierTextShadow: "0 9px 9px rgb(0 0 0 / 0.3)",
-	heaviestTextShadow: "0 10px 10px rgb(0 0 0 / 0.3)",
+import type { Property } from "csstype";
 
-	// Box-Shadow:
-	lightestBoxShadow: "0 2px 3px rgb(0 0 0 / 0.1)",
-	lighterBoxShadow: "0 5px 4px rgb(0 0 0 / 0.1)",
-	lightBoxShadow: "0 7px 5px rgb(0 0 0 / 0.1)",
-	mediumBoxShadow: "0 8px 8px rgb(0 0 0 / 0.15)",
-	heavyBoxShadow: "0 8px 8px rgb(0 0 0 / 0.2)",
-	heavierBoxShadow: "0 9px 9px rgb(0 0 0 / 0.2)",
-	heaviestBoxShadow: "0 10px 10px rgb(0 0 0 / 0.2)",
+/** Semantic Props for CSS `text-shadow` property value. */
+export const textShadow: Record<string, Property.TextShadow> = {
+	lightest: "0 2px 3px rgb(0 0 0 / 0.15)",
+	lighter: "0 5px 4px rgb(0 0 0 / 0.15)",
+	light: "0 7px 5px rgb(0 0 0 / 0.15)",
+	medium: "0 8px 8px rgb(0 0 0 / 0.225)",
+	heavy: "0 8px 8px rgb(0 0 0 / 0.3)",
+	heavier: "0 9px 9px rgb(0 0 0 / 0.3)",
+	heaviest: "0 10px 10px rgb(0 0 0 / 0.3)"
+};
 
-	// Box-Shadow (Inset):
-	lightestInsetShadow: "inset 0 2px 3px rgb(0 0 0 / 0.1)",
-	lighterInsetShadow: "inset 0 5px 4px rgb(0 0 0 / 0.1)",
-	lightInsetShadow: "inset 0 7px 5px rgb(0 0 0 / 0.1)",
-	mediumInsetShadow: "inset 0 8px 8px rgb(0 0 0 / 0.15)",
-	heavyInsetShadow: "inset 0 8px 8px rgb(0 0 0 / 0.2)",
-	heavierInsetShadow: "inset 0 9px 9px rgb(0 0 0 / 0.2)",
-	heaviestInsetShadow: "inset 0 10px 10px rgb(0 0 0 / 0.2)",
+/** Semantic Props for CSS `box-shadow` property value. */
+export const boxShadow: Record<string, Property.BoxShadow> = {
+	lightest: "0 2px 3px rgb(0 0 0 / 0.1)",
+	lighter: "0 5px 4px rgb(0 0 0 / 0.1)",
+	light: "0 7px 5px rgb(0 0 0 / 0.1)",
+	medium: "0 8px 8px rgb(0 0 0 / 0.15)",
+	heavy: "0 8px 8px rgb(0 0 0 / 0.2)",
+	heavier: "0 9px 9px rgb(0 0 0 / 0.2)",
+	heaviest: "0 10px 10px rgb(0 0 0 / 0.2)",
+	lightestInset: "inset 0 2px 3px rgb(0 0 0 / 0.1)",
+	lighterInset: "inset 0 5px 4px rgb(0 0 0 / 0.1)",
+	lightInset: "inset 0 7px 5px rgb(0 0 0 / 0.1)",
+	mediumInset: "inset 0 8px 8px rgb(0 0 0 / 0.15)",
+	heavyInset: "inset 0 8px 8px rgb(0 0 0 / 0.2)",
+	heavierInset: "inset 0 9px 9px rgb(0 0 0 / 0.2)",
+	heaviestInset: "inset 0 10px 10px rgb(0 0 0 / 0.2)"
+};
 
-	// Drop-Shadow (Filter):
-	lightestShadow: "drop-shadow(0 2px 3px rgb(0 0 0 / 0.1))",
-	lighterShadow: "drop-shadow(0 5px 4px rgb(0 0 0 / 0.1))",
-	lightShadow: "drop-shadow(0 7px 5px rgb(0 0 0 / 0.1))",
-	mediumShadow: "drop-shadow(0 8px 8px rgb(0 0 0 / 0.15))",
-	heavyShadow: "drop-shadow(0 8px 8px rgb(0 0 0 / 0.2))",
-	heavierShadow: "drop-shadow(0 9px 9px rgb(0 0 0 / 0.2))",
-	heaviestShadow: "drop-shadow(0 10px 10px rgb(0 0 0 / 0.2))"
+/** Semantic Props for CSS `filter` `drop-shadow()` function. */
+export const dropShadow: Record<string, Property.Filter> = {
+	lightest: "drop-shadow(0 2px 3px rgb(0 0 0 / 0.1))",
+	lighter: "drop-shadow(0 5px 4px rgb(0 0 0 / 0.1))",
+	light: "drop-shadow(0 7px 5px rgb(0 0 0 / 0.1))",
+	medium: "drop-shadow(0 8px 8px rgb(0 0 0 / 0.15))",
+	heavy: "drop-shadow(0 8px 8px rgb(0 0 0 / 0.2))",
+	heavier: "drop-shadow(0 9px 9px rgb(0 0 0 / 0.2))",
+	heaviest: "drop-shadow(0 10px 10px rgb(0 0 0 / 0.2))"
 };

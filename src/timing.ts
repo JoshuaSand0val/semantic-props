@@ -1,18 +1,22 @@
-/** Semantic Props for timing animations. */
+// Semantic Props for timing animations.
 
-export const props = {
-	// Easing Values:
+import type { Property } from "csstype";
+
+/** Semantic Props for CSS `<easing-function>` type. */
+export const easing: Record<string, Property.AnimationTimingFunction> = {
 	ease: "ease",
 	easeIn: "ease-in",
 	easeOut: "ease-out",
-	easeInOut: "ease-in-out",
+	easeInOut: "ease-in-out"
+};
 
-	// Time Values:
-	fastestTime: "75ms",
-	fasterTime: "100ms",
-	fastTime: "150ms",
-	normalTime: "300ms",
-	slowTime: "500ms",
-	slowerTime: "750ms",
-	slowestTime: "1s"
+/** Semantic Props for CSS `<time>` type. */
+export const time: Record<string, Property.AnimationDuration> = {
+	fastest: "75ms",
+	faster: "100ms",
+	fast: "150ms",
+	normal: "300ms",
+	slow: "500ms",
+	slower: "750ms",
+	slowest: "1s"
 };

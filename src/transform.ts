@@ -1,27 +1,31 @@
-/** Semantic Props for CSS transform property values. */
+// Semantic Props for CSS transform property values.
 
-export const props = {
-	// Scale (X-axis):
-	smallestScaleX: "scaleX(0.8)",
-	smallerScaleX: "scaleX(0.9)",
-	smallScaleX: "scaleX(0.95)",
-	largeScaleX: "scaleX(1.05)",
-	largerScaleX: "scaleX(1.1)",
-	largestScaleX: "scaleX(1.2)",
+/** Semantic Props for CSS `scaleX()` transform function. */
+export const scaleX: Record<string, `scaleX(${number})`> = {
+	smallest: "scaleX(0.8)",
+	smaller: "scaleX(0.9)",
+	small: "scaleX(0.95)",
+	large: "scaleX(1.05)",
+	larger: "scaleX(1.1)",
+	largest: "scaleX(1.2)"
+};
 
-	// Scale (Y-axis):
-	smallestScaleY: "scaleY(0.8)",
-	smallerScaleY: "scaleY(0.9)",
-	smallScaleY: "scaleY(0.95)",
-	largeScaleY: "scaleY(1.05)",
-	largerScaleY: "scaleY(1.1)",
-	largestScaleY: "scaleY(1.2)",
+/** Semantic Props for CSS `scaleY()` transform function. */
+export const scaleY: Record<string, `scaleY(${number})`> = {
+	smallest: "scaleY(0.8)",
+	smaller: "scaleY(0.9)",
+	small: "scaleY(0.95)",
+	large: "scaleY(1.05)",
+	larger: "scaleY(1.1)",
+	largest: "scaleY(1.2)"
+};
 
-	// Scale (X+Y-axis):
-	smallestScale: "scale(0.8)",
-	smallerScale: "scale(0.9)",
-	smallScale: "scale(0.95)",
-	largeScale: "scale(1.05)",
-	largerScale: "scale(1.1)",
-	largestScale: "scale(1.2)"
+/** Semantic Props for CSS `scale()` transform function. */
+export const scale: Record<string, `scale(${number})`> = {
+	smallest: "scale(0.8)",
+	smaller: "scale(0.9)",
+	small: "scale(0.95)",
+	large: "scale(1.05)",
+	larger: "scale(1.1)",
+	largest: "scale(1.2)"
 };

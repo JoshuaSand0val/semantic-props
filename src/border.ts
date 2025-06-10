@@ -1,19 +1,23 @@
-/** Semantic Props for CSS border properties. */
+// Semantic Props for CSS border properties.
 
-export const props = {
-	// Border-Style:
-	borderStyle: "solid",
+import type { Property } from "csstype";
 
-	// Table Borders:
-	borderCollapse: "separate",
-	borderSpacing: 0,
+/** Default CSS `border-style` property value. */
+export const borderStyle: Property.BorderStyle = "solid";
 
-	// Border-Radius:
-	smallestRadius: "0.3125rem", // 5px
-	smallerRadius: "0.5rem", // 8px
-	smallRadius: "0.75rem", // 12px
-	mediumRadius: "1rem", // 16px
-	largeRadius: "1.5rem", // 24px
-	largerRadius: "1.875rem", // 30px
-	largestRadius: "2.25rem" // 36px
+/** Default CSS `border-collapse` property value. */
+export const borderCollapse: Property.BorderCollapse = "separate";
+
+/** Default CSS `border-spacing` property value. */
+export const borderSpacing: Property.BorderSpacing = 0;
+
+/** Semantic Props for CSS `border-radius` property value. */
+export const radius: Record<string, Property.BorderRadius> = {
+	smallest: "0.3125rem", // 5px
+	smaller: "0.5rem", // 8px
+	small: "0.75rem", // 12px
+	medium: "1rem", // 16px
+	large: "1.5rem", // 24px
+	larger: "1.875rem", // 30px
+	largest: "2.25rem" // 36px
 };

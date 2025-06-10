@@ -1,42 +1,12 @@
-// Export: Write Semantic Props as JSON.
+// Export: Semantic Props as default export of JavaScript file.
 
-import { writeFileSync, type WriteFileOptions } from "node:fs"
-
-import { props as border } from "./border";
-import { props as color } from "./color";
-import { props as filter } from "./filter";
-import { props as font } from "./font";
-import { props as opacity } from "./opacity";
-import { props as ratio } from "./ratio";
-import { props as safeArea } from "./safeArea";
-import { props as shadow } from "./shadow";
-import { props as size } from "./size";
-import { props as table } from "./table";
-import { props as timing } from "./timing";
-import { props as transform } from "./transform";
-import { props as zIndex } from "./zIndex";
+import { writeFileSync } from "node:fs"
+import * as props from "./import";
 
 /** JSON export data. */
-const data: string = JSON.stringify({
-	...border,
-	...color,
-	...filter,
-	...font,
-	...opacity,
-	...ratio,
-	...safeArea,
-	...shadow,
-	...size,
-	...table,
-	...timing,
-	...transform,
-	...zIndex
-});
+const data: string = JSON.stringify(props);
 
-/** Options for Node.js `writeFileSync`. */
-const options: WriteFileOptions = {
+writeFileSync("dist/import.js", `export default ${data}`, {
 	encoding: "utf8",
 	flag: "w"
-};
-
-writeFileSync("dist/import.json", data, options);
+});

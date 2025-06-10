@@ -1,10 +1,12 @@
-/** Semantic Props for CSS table properties. */
+// Semantic Props for CSS table properties.
 
-export const props = {
-	// Caption-Side:
-	captionSide: "top",
-	reverseCaptionSide: "bottom",
+import type { Property } from "csstype";
 
-	// Empty-Cells:
-	emptyCells: "show"
-};
+/** Default CSS `caption-side` property value. */
+export const captionSide: Property.CaptionSide = "top";
+
+/** Reverse of default CSS `caption-side` property value. */
+export const reverseCaptionSide: Property.CaptionSide = "bottom";
+
+/** Default CSS `empty-cells` property value. */
+export const emptyCells: Property.EmptyCells = "show";

@@ -1,11 +1,14 @@
-/** Semantic Props for the CSS opacity property. */
+// Semantic Props for the CSS opacity property.
 
-export const props = {
-	lowestOpacity: 0.1,
-	lowerOpacity: 0.25,
-	lowOpacity: 0.33,
-	mediumOpacity: 0.5,
-	highOpacity: 0.66,
-	higherOpacity: 0.75,
-	highestOpacity: 0.9
+import type { Property } from "csstype";
+
+/** Semantic Props for CSS `opacity` property value. */
+export const opacity: Record<string, Property.Opacity> = {
+	lowest: 0.1,
+	lower: 0.25,
+	low: 0.33,
+	medium: 0.5,
+	high: 0.66,
+	higher: 0.75,
+	highest: 0.9
 };
