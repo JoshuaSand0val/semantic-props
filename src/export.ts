@@ -1,12 +1,14 @@
-// Export: Semantic Props as default export of JavaScript file.
-
-import { writeFileSync } from "node:fs"
-import * as props from "./import";
-
-/** JSON export data. */
-const data: string = JSON.stringify(props);
-
-writeFileSync("dist/import.js", `export default ${data}`, {
-	encoding: "utf8",
-	flag: "w"
-});
+// Export: All Semantic Props exported.
+export * from "./border";
+export * from "./color";
+export * from "./filter";
+export * from "./font";
+export * from "./opacity";
+export * from "./ratio";
+export * from "./safeArea";
+export * from "./shadow";
+export * from "./size";
+export * from "./table";
+export * from "./timing";
+export * from "./transform";
+export * from "./zIndex";

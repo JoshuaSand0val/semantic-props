@@ -22,8 +22,8 @@
 	],
 	"exports": {
 		".": {
-			"default": "./dist/import.js",
-			"types": "./dist/import.d.ts"
+			"default": "./dist/index.js",
+			"types": "./dist/index.d.ts"
 		}
 	},
 	"repository": {
@@ -33,7 +33,7 @@
 	"type": "module",
 	"scripts": {
 		"prebuild": "rimraf dist/*",
-		"build": "tsx src/export.ts && rollup -c",
+		"build": "tsx src/index.ts && rollup -c",
 		"watch:build": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {

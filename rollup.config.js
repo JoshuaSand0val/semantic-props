@@ -3,9 +3,9 @@
 import { dts } from "rollup-plugin-dts";
 
 export default {
-	input: "src/import.ts",
+	input: "src/export.ts",
 	output: {
-		file: "dist/import.d.ts",
+		file: "dist/index.d.ts",
 		format: "es"
 	},
 	plugins: [dts()]
