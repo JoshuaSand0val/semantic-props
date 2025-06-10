@@ -22,7 +22,7 @@
 	],
 	"exports": {
 		".": {
-			"default": "./dist/import.js"
+			"default": "./dist/import.json"
 		}
 	},
 	"repository": {

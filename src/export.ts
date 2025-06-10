@@ -1,4 +1,4 @@
-// Export: Semantic Props as default export of a JavaScript file.
+// Export: Write Semantic Props as JSON.
 
 import { writeFileSync, type WriteFileOptions } from "node:fs"
 
@@ -39,4 +39,4 @@ const options: WriteFileOptions = {
 	flag: "w"
 };
 
-writeFileSync("dist/import.js", `export default ${data}`, options);
+writeFileSync("dist/import.json", data, options);
