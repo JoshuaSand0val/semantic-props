@@ -4,7 +4,7 @@ import type { Property } from "csstype";
 import chroma from "chroma-js";
 
 /** Semantic Props for CSS `color` value type. */
-export let color: Record<string, Property.Color> = {};
+export const color: Record<string, Property.Color> = {};
 
 /** Semantic Props color palette. */
 const palette: Record<string, chroma.ChromaInput> = {

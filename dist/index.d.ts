@@ -10,7 +10,7 @@ declare const borderSpacing: Property.BorderSpacing;
 declare const radius: Record<string, Property.BorderRadius>;
 
 /** Semantic Props for CSS `color` value type. */
-declare let color: Record<string, Property.Color>;
+declare const color: Record<string, Property.Color>;
 
 /** Semantic Props for CSS `filter` `blur()` function. */
 declare const blur: Record<string, Property.Filter>;
