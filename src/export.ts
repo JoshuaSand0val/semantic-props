@@ -13,4 +13,4 @@ const options: WriteFileOptions = {
 };
 
 // Write JSON data to distribution file:
-writeFileSync("dist/import.json", data, options);
+writeFileSync("dist/export.json", data, options);
