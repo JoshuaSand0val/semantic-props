@@ -3,7 +3,7 @@
 import type { Property } from "csstype";
 import chroma from "chroma-js";
 
-/** Semantic Props for CSS `color` value type. */
+/** Semantic Props for CSS `<color>` type. */
 export const color: Record<string, Property.Color> = {};
 
 /** Semantic Props color palette. */
