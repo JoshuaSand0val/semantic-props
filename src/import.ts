@@ -1,3 +1,4 @@
+// Import: Entry point for Semantic Props.
 export * from "./border";
 export * from "./color";
 export * from "./filter";

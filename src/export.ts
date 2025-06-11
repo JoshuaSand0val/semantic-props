@@ -1,14 +1,16 @@
-// Export: All Semantic Props exported.
-export * from "./border";
-export * from "./color";
-export * from "./filter";
-export * from "./font";
-export * from "./opacity";
-export * from "./ratio";
-export * from "./safeArea";
-export * from "./shadow";
-export * from "./size";
-export * from "./table";
-export * from "./timing";
-export * from "./transform";
-export * from "./zIndex";
+// Export: Export Semantic Props to distributable file.
+
+import { writeFileSync, type WriteFileOptions } from "node:fs";
+import * as props from "./import";
+
+/** JSON export data. */
+const data: string = JSON.stringify(props);
+
+/** Options for Node.js `writeFileSync`. */
+const options: WriteFileOptions = {
+	encoding: "utf8",
+	flag: "w"
+};
+
+// Write JSON data to distribution file:
+writeFileSync("dist/import.json", data, options);

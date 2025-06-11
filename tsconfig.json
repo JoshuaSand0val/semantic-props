@@ -5,16 +5,18 @@
 		/* Language and Environment */
 		"target": "ES2016",
 		"lib": ["ESNext"],
+		"moduleDetection": "force",
 
 		/* Modules */
-		"module": "ESNext",
+		"module": "preserve",
 		"rootDir": "./src/",
 		"moduleResolution": "Node",
+		"resolveJsonModule": true,
 
 		/* Emit */
 		"declaration": true,
 		"declarationMap": false,
-		"emitDeclarationOnly": false,
+		"emitDeclarationOnly": true,
 		"sourceMap": false,
 		"inlineSourceMap": false,
 		"outDir": "./dist/",
