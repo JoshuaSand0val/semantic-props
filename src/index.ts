@@ -3,10 +3,14 @@
 import { writeFileSync } from "node:fs"
 import * as props from "./export";
 
-/** JSON export data. */
-const data: string = JSON.stringify(props);
+/** File export data. */
+let data: string = "";
 
-writeFileSync("dist/index.js", `export default ${data}`, {
+for (const [key, value] of Object.entries(props)) {
+	data += `export const ${key} = ${JSON.stringify(value)};\n`;
+}
+
+writeFileSync("dist/index.js", data, {
 	encoding: "utf8",
 	flag: "w"
 });
