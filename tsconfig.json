@@ -12,14 +12,14 @@
 		"moduleResolution": "Node",
 
 		/* Emit */
-		"declaration": false,
+		"declaration": true,
 		"declarationMap": false,
 		"emitDeclarationOnly": false,
 		"sourceMap": false,
 		"inlineSourceMap": false,
 		"outDir": "./dist/",
 		"removeComments": false,
-		"noEmit": true,
+		"noEmit": false,
 		"inlineSources": false,
 		"noEmitOnError": true,
 

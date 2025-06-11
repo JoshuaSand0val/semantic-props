@@ -22,8 +22,7 @@
 	],
 	"exports": {
 		".": {
-			"default": "./dist/index.js",
-			"types": "./dist/index.d.ts"
+			"import": "./dist/export.js"
 		}
 	},
 	"repository": {
@@ -33,20 +32,17 @@
 	"type": "module",
 	"scripts": {
 		"prebuild": "rimraf dist/*",
-		"build": "tsx src/index.ts && rollup -c",
+		"build": "tsc",
 		"watch:build": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {
 		"@types/chroma-js": "^3.1.1",
-		"@types/node": "^22.15.30",
-		"chroma-js": "^3.1.2",
 		"onchange": "^7.1.0",
 		"rimraf": "^6.0.1",
-		"rollup": "^4.42.0",
-		"rollup-plugin-dts": "^6.2.1",
-		"tsx": "^4.19.4"
+		"typescript": "^5.8.3"
 	},
 	"dependencies": {
+		"chroma-js": "^3.1.2",
 		"csstype": "^3.1.3"
 	}
 }
