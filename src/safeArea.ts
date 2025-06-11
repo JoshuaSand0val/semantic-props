@@ -14,5 +14,5 @@ Object.assign(safe, {
 Object.assign(safe, {
 	header: `${safe.top} ${safe.right} 0 ${safe.left}`,
 	body: safe.x,
-	footer: `0 ${safe.right} ${safe.bottom} ${safe.left}`,
+	footer: `0 ${safe.right} ${safe.bottom} ${safe.left}`
 });
