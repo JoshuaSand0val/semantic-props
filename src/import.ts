@@ -6,7 +6,6 @@ import "./font.css";
 import "./opacity.css";
 import "./ratio.css";
 import "./safe-area.css";
-import "./scripted.js";
 import "./shadow.css";
 import "./size.css";
 import "./table.css";
