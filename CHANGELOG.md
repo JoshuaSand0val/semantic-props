@@ -13,6 +13,7 @@ A **complete rewrite** release focusing on CSS-in-JS that greatly improves brows
 - Added `textShadow` and `boxShadow` variants of shadow props.
 - Added new `scaleX` and `scaleY` props for scaling the X and Y axis.
 - Added `captionSide` and `emptyCells` table props.
+- Added `size.margin` prop for sizing document margins.
 
 ### Changed
 

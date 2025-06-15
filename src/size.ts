@@ -32,5 +32,6 @@ export const size: Record<string, Property.FontSize> = {
 	[9]: "6rem", // 96px
 	[10]: "8rem", // 128px
 	smaller: "0.875em", // 14/16px
-	larger: "1.125em" // 18/16px
+	larger: "1.125em", // 18/16px
+	margin: "5%"
 };
