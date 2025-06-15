@@ -1,16 +1,15 @@
 // Export: Export Semantic Props to distributable file.
 
-import { writeFileSync, type WriteFileOptions } from "node:fs";
+export * as default from "./import";
+
+import { writeFileSync } from "node:fs";
 import * as props from "./import";
 
 /** JSON export data. */
 const data: string = JSON.stringify(props);
 
-/** Options for Node.js `writeFileSync`. */
-const options: WriteFileOptions = {
+// Write JSON data to distribution file:
+writeFileSync("dist/export.js", `export default ${data}`, {
 	encoding: "utf8",
 	flag: "w"
-};
-
-// Write JSON data to distribution file:
-writeFileSync("dist/export.json", data, options);
+});

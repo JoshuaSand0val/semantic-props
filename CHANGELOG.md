@@ -16,7 +16,7 @@ A **complete rewrite** release focusing on CSS-in-JS that greatly improves brows
 
 ### Changed
 
-- Changed use of CSS custom properties to JSON export.
+- Changed use of CSS custom properties to JavaScript export.
 - Changed syntax of all props to be descriptive versus namespaced.
 - Changed syntax of all props with upper/lower values from using `-x-` modifier and given limited values.
 - Changed prop values from using `px` to use `rem` units.
