@@ -1,11 +1,5 @@
 /* Semantic Props for sizing containers, fonts and space. */
 
-@custom-media --watch (max-width: 20rem);
-@custom-media --phone (min-width: 20rem);
-@custom-media --tablet (min-width: 40rem);
-@custom-media --laptop (min-width: 64rem);
-@custom-media --desktop (min-width: 80rem);
-
 :root {
 	/* Container Sizes: */
 	--smallest-container: 10rem; /* 160px */
@@ -38,21 +32,5 @@
 	--larger: 1.125em; /* 18/16px */
 
 	/* Margin Size: */
-	--margin-size: var(--x-small);
-
-	@media (--phone) {
-		--margin-size: var(--2x-large);
-	}
-
-	@media (--tablet) {
-		--margin-size: var(--4x-large);
-	}
-
-	@media (--laptop) {
-		--margin-size: var(--5x-large);
-	}
-
-	@media (--desktop) {
-		--margin-size: var(--6x-large);
-	}
+	--margin-size: 5%;
 }

@@ -1,7 +1,7 @@
 export default {
 	plugins: {
 		"postcss-custom-media": {
-			preserve: true
+			preserve: false
 		},
 		"postcss-nesting": {},
 		"postcss-advanced-variables": {},

@@ -13,15 +13,11 @@ A **breaking change** release that greatly improves browser compatibility, file 
 - Added `text-shadow` and `box-shadow` variants of `shadow` props.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
-- Added `--caption-side`, `--reverse-caption-side` and `--empty-cells` table props.
-- Added `scripted` class for JavaScript enhanced props.
-- Added color and viewport `@custom-media` props for use with
-[PostCSS Custom Media](https://www.npmjs.com/package/postcss-custom-media).
+- Added `--caption-side` and `--empty-cells` table props.
 
 ### Changed
 
 - Changed use of `semantic` class to `:root` selector.
-- Changed imports to use separate CSS and JavaScript paths.
 - Changed syntax of all props to be descriptive versus namespaced.
 - Changed syntax of all props with upper/lower values from using `-x-` modifier and given limited values.
 - Changed prop values from using `px` to use `rem` units.
