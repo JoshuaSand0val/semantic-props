@@ -8,15 +8,15 @@ A **complete rewrite** release focusing on CSS-in-JS that greatly improves brows
 
 ### Added
 
-- Added new radius props for applying `border-radius`.
+- Added new `radius` props for applying `border-radius`.
 - Added new color palette using weights 100 to 900 by 50.
 - Added `textShadow` and `boxShadow` variants of shadow props.
 - Added new `scaleX` and `scaleY` props for scaling the X and Y axis.
-- Added `captionSide`, `reverseCaptionSide` and `emptyCells` table props.
+- Added `captionSide` and `emptyCells` table props.
 
 ### Changed
 
-- Changed use of CSS custom properties to JSON import.
+- Changed use of CSS custom properties to JSON export.
 - Changed syntax of all props to be descriptive versus namespaced.
 - Changed syntax of all props with upper/lower values from using `-x-` modifier and given limited values.
 - Changed prop values from using `px` to use `rem` units.

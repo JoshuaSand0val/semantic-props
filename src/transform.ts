@@ -1,7 +1,9 @@
 // Semantic Props for CSS transform property values.
 
+import type { Property } from "csstype";
+
 /** Semantic Props for CSS `scaleX()` transform function. */
-export const scaleX: Record<string, `scaleX(${number})`> = {
+export const scaleX: Record<string, Property.Transform> = {
 	smallest: "scaleX(0.8)",
 	smaller: "scaleX(0.9)",
 	small: "scaleX(0.95)",
@@ -11,7 +13,7 @@ export const scaleX: Record<string, `scaleX(${number})`> = {
 };
 
 /** Semantic Props for CSS `scaleY()` transform function. */
-export const scaleY: Record<string, `scaleY(${number})`> = {
+export const scaleY: Record<string, Property.Transform> = {
 	smallest: "scaleY(0.8)",
 	smaller: "scaleY(0.9)",
 	small: "scaleY(0.95)",
@@ -21,7 +23,7 @@ export const scaleY: Record<string, `scaleY(${number})`> = {
 };
 
 /** Semantic Props for CSS `scale()` transform function. */
-export const scale: Record<string, `scale(${number})`> = {
+export const scale: Record<string, Property.Transform> = {
 	smallest: "scale(0.8)",
 	smaller: "scale(0.9)",
 	small: "scale(0.95)",

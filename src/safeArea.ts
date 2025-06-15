@@ -6,13 +6,9 @@ export const safe: Record<string, string> = {
 	left: "env(safe-area-inset-left)"
 };
 
-Object.assign(safe, {
-	x: `0 ${safe.right} 0 ${safe.left}`,
-	y: `${safe.top} 0 ${safe.bottom} 0`
-});
+safe.x = `0 ${safe.right} 0 ${safe.left}`;
+safe.y = `${safe.top} 0 ${safe.bottom} 0`;
 
-Object.assign(safe, {
-	header: `${safe.top} ${safe.right} 0 ${safe.left}`,
-	body: safe.x,
-	footer: `0 ${safe.right} ${safe.bottom} ${safe.left}`
-});
+safe.header = `${safe.top} ${safe.right} 0 ${safe.left}`;
+safe.body = safe.x;
+safe.footer = `0 ${safe.right} ${safe.bottom} ${safe.left}`;

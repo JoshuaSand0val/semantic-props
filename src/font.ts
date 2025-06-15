@@ -8,10 +8,8 @@ export const family: Record<string, Property.FontFamily> = {
 	mono: "ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace"
 };
 
-Object.assign(family, {
-	display: family.body,
-	accent: family.body
-});
+family.display = family.body!;
+family.accent = family.body!;
 
 /** Semantic Props for CSS `font-weight` property value. */
 export const weight: Record<string, Property.FontWeight> = {
@@ -23,7 +21,7 @@ export const weight: Record<string, Property.FontWeight> = {
 };
 
 /** Semantic Props for CSS `letter-spacing` property value. */
-export const letterSpacing: Record<string, Property.LetterSpacing> = {
+export const letter: Record<string, Property.LetterSpacing> = {
 	tightest: "-0.1em",
 	tighter: "-0.075em",
 	tight: "-0.05em",
@@ -45,7 +43,7 @@ export const line: Record<string, Property.LineHeight> = {
 };
 
 /** Semantic Props for CSS `word-spacing` property value. */
-export const wordSpacing: Record<string, Property.WordSpacing> = {
+export const word: Record<string, Property.WordSpacing> = {
 	tightest: "-0.15em",
 	tighter: "-0.125em",
 	tight: "-0.1em",

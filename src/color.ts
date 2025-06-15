@@ -4,19 +4,16 @@ import type { Property } from "csstype";
 import chroma from "chroma-js";
 
 /** Semantic Props for CSS `<color>` type. */
-export const color: Record<string, Property.Color> = {};
-
-/** Semantic Props color palette. */
-const palette: Record<string, chroma.ChromaInput> = {
+export const color: Record<string, Property.Color> = {
 	blue: "oklch(0.6 0.15 240)",
 	brown: "oklch(0.6 0.05 50)",
 	coral: "oklch(0.7 0.2 40)",
 	cyan: "oklch(0.7 0.15 180)",
+	gray: "oklch(0.5 0.01 260)",
 	green: "oklch(0.6 0.2 150)",
 	indigo: "oklch(0.4 0.2 270)",
 	lime: "oklch(0.7 0.15 120)",
 	magenta: "oklch(0.6 0.2 330)",
-	neutral: "oklch(0.5 0.01 260)",
 	orange: "oklch(0.6 0.15 50)",
 	pink: "oklch(0.8 0.1 10)",
 	purple: "oklch(0.4 0.15 300)",
@@ -25,16 +22,14 @@ const palette: Record<string, chroma.ChromaInput> = {
 	yellow: "oklch(0.8 0.15 90)"
 };
 
-// Assign Semantic Props palette aliases:
-Object.assign(palette, {
-	primary: palette.neutral,
-	secondary: palette.neutral,
-	accent: palette.blue
-});
+// Assign Semantic Props color alias:
+color.primary = color.gray!;
+color.secondary = color.gray!;
+color.accent = color.blue!;
 
 // Assign color weights 100 to 900 by 50:
-for (let weight = 100; weight <= 900; weight += 50) {
-	for (const [prop, value] of Object.entries(palette)) {
+for (const [prop, value] of Object.entries(color)) {
+	for (let weight = 100; weight <= 900; weight += 50) {
 		/** Color channel in OKLCH color space. */
 		let [l, c, h] = chroma(value).oklch();
 
@@ -46,6 +41,9 @@ for (let weight = 100; weight <= 900; weight += 50) {
 		c = Math.sin(l * Math.PI) * c;
 
 		// Assign color weight Semantic Props:
-		color[`${prop}${weight}`] = chroma(`oklch(${l} ${c} ${h})`).hex();
+		color[`${prop}${weight}`] = chroma.oklch(l, c, h).hex();
 	}
+
+	// Delete source color:
+	delete color[prop];
 }

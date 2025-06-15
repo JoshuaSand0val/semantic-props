@@ -1,7 +1,9 @@
 // Semantic Props for sizing containers, fonts and whitespace.
 
-/** Semantic Props container sizes in `rem` units. */
-export const container: Record<string, `${number}rem`> = {
+import type { Property } from "csstype";
+
+/** Semantic Props container sizes. */
+export const container: Record<string, Property.InlineSize> = {
 	smallest: "10rem", // 160px
 	smaller: "15rem", // 240px
 	small: "20rem", // 320px
@@ -11,8 +13,8 @@ export const container: Record<string, `${number}rem`> = {
 	largest: "80rem" // 1280px
 };
 
-/** Semantic Props sizes in `rem` or `em` units. */
-export const size: Record<string, `${number}${"rem" | "em"}`> = {
+/** Semantic Props font/whitespace sizes. */
+export const size: Record<string, Property.FontSize> = {
 	[-5]: "0.125rem", // 2px
 	[-4]: "0.25rem", // 4px
 	[-3]: "0.5rem", // 8px
