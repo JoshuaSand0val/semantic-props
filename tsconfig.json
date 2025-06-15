@@ -14,14 +14,14 @@
 		"resolveJsonModule": true,
 
 		/* Emit */
-		"declaration": false,
+		"declaration": true,
 		"declarationMap": false,
-		"emitDeclarationOnly": false,
+		"emitDeclarationOnly": true,
 		"sourceMap": false,
 		"inlineSourceMap": false,
 		"outDir": "./dist/",
 		"removeComments": false,
-		"noEmit": true,
+		"noEmit": false,
 		"inlineSources": false,
 		"noEmitOnError": true,
 
