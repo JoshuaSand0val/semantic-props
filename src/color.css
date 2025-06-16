@@ -1,6 +1,7 @@
 /* Semantic Props for color. */
 
 :root {
+	/* Color Weights: */
 	@for $weight from 100 to 900 by 50 {
 		/* Calculate Lightness and Chroma: */
 		$percentage: calc(1 - ($weight - 100) / (900 - 100));
@@ -27,5 +28,30 @@
 		--red-$(weight): oklch(from oklch(0.5 0.2 30) $l $c h);
 		--violet-$(weight): oklch(from oklch(0.4 0.15 290) $l $c h);
 		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l $c h);
+	}
+
+	/* Alias Colors: */
+	--primary-color: var(--primary-100);
+	--secondary-color: var(--secondary-800);
+	--accent-color: var(--accent-600);
+
+	--highlight-color: var(--primary-150);
+	--selected-color: var(--primary-200);
+
+	@media (prefers-contrast: more) {
+		--accent-color: var(--accent-650);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		--primary-color: var(--primary-900);
+		--secondary-color: var(--secondary-200);
+		--accent-color: var(--accent-400);
+
+		--highlight-color: var(--primary-850);
+		--selected-color: var(--primary-800);
+	}
+
+	@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+		--accent-color: var(--accent-350);
 	}
 }
