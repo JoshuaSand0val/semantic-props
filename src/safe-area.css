@@ -2,8 +2,8 @@
 
 :root {
 	--safe-top: 0;
-	--safe-right: 0
-	--safe-bottom: 0
+	--safe-right: 0;
+	--safe-bottom: 0;
 	--safe-left: 0;
 
 	@supports (top: env(safe-area-inset-top)) {
