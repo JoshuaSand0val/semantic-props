@@ -31,38 +31,24 @@
 	}
 
 	/* Alias Colors: */
-	--light-primary-color: var(--primary-100);
-	--light-secondary-color: var(--secondary-200);
-	--light-accent-color: var(--accent-400);
-	--light-highlight-color: var(--primary-150);
-	--light-selected-color: var(--primary-200);
-	--light-border-color: var(--primary-400);
+	--lightest-primary: var(--primary-100);
+	--lighter-primary: var(--primary-150);
+	--light-primary: var(--primary-200);
+	--dark-primary: var(--primary-800);
+	--darker-primary: var(--primary-850);
+	--darkest-primary: var(--primary-900);
 
-	--dark-primary-color: var(--primary-900);
-	--dark-secondary-color: var(--secondary-800);
-	--dark-accent-color: var(--accent-600);
-	--dark-highlight-color: var(--primary-850);
-	--dark-selected-color: var(--primary-800);
-	--dark-border-color: var(--primary-600);
+	--lightest-secondary: var(--secondary-100);
+	--lighter-secondary: var(--secondary-150);
+	--light-secondary: var(--secondary-200);
+	--dark-secondary: var(--secondary-800);
+	--darker-secondary: var(--secondary-850);
+	--darkest-secondary: var(--secondary-900);
 
-	@media (prefers-contrast: more) {
-		--light-accent-color: var(--accent-350);
-		--dark-accent-color: var(--accent-650);
-	}
-
-	--primary-color: var(--light-primary-color);
-	--secondary-color: var(--dark-secondary-color);
-	--accent-color: var(--dark-accent-color);
-	--highlight-color: var(--light-highlight-color);
-	--selected-color: var(--light-selected-color);
-	--border-color: var(--light-border-color);
-
-	@media (prefers-color-scheme: dark) {
-		--primary-color: var(--dark-primary-color);
-		--secondary-color: var(--light-secondary-color);
-		--accent-color: var(--light-accent-color);
-		--highlight-color: var(--dark-highlight-color);
-		--selected-color: var(--dark-selected-color);
-		--border-color: var(--dark-border-color);
-	}
+	--lightest-accent: var(--accent-300);
+	--lighter-accent: var(--accent-350);
+	--light-accent: var(--accent-400);
+	--dark-accent: var(--accent-600);
+	--darker-accent: var(--accent-650);
+	--darkest-accent: var(--accent-700);
 }
