@@ -43,10 +43,10 @@
 	--darkest-primary: var(--primary-900);
 
 	--lightest-secondary: var(--secondary-100);
-	--lighter-secondary: var(--secondary-150);
-	--light-secondary: var(--secondary-200);
-	--dark-secondary: var(--secondary-800);
-	--darker-secondary: var(--secondary-850);
+	--lighter-secondary: var(--secondary-200);
+	--light-secondary: var(--secondary-300);
+	--dark-secondary: var(--secondary-700);
+	--darker-secondary: var(--secondary-800);
 	--darkest-secondary: var(--secondary-900);
 
 	--lightest-accent: var(--accent-300);
