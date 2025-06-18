@@ -44,20 +44,20 @@
 		z-index: var(--z-top);
 		display: block;
 		font-size: var(--x-large);
-		border: 1px var(--border-style) var(--tertiary-color);
+		border: 1px var(--border-style) var(--foreground-color);
 		border-radius: var(--largest-radius);
-		background-color: var(--primary-color);
+		background-color: var(--background-color);
 		padding: var(--x-small);
 		line-height: 0;
 		box-shadow: var(--lightest-box-shadow);
 		transition: all var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
 		&:focus, &:has(+ .navigation:focus-within) {
-			border-color: var(--neutral-300);
-			background-color: var(--secondary-color);
+			border-color: var(--gray-300);
+			background-color: var(--middleground-color);
 			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
-			:global(.dark) & {
-				border-color: var(--neutral-700);
+			@media (--dark) {
+				border-color: var(--gray-700);
 			}
 		}
 	}
@@ -69,8 +69,8 @@
 		inline-size: min(100%, var(--smaller-container));
 		max-block-size: min(60vb, var(--medium-container));
 		border-radius: var(--smaller-radius);
-		border: 1px var(--border-style) var(--tertiary-color);
-		background-color: var(--primary-color);
+		border: 1px var(--border-style) var(--foreground-color);
+		background-color: var(--background-color);
 		box-shadow: var(--lighter-box-shadow);
 		font-family: var(--display-family);
 		overflow: auto;
@@ -99,7 +99,7 @@
 
 	a[href] {
 		display: block;
-		border-block-end: 1px var(--border-style) var(--secondary-color);
+		border-block-end: 1px var(--border-style) var(--middleground-color);
 		font-size: var(--small);
 		text-decoration: none;
 		color: inherit;
@@ -117,12 +117,12 @@
 			transition: background-color var(--fast-time) var(--ease-in-out);
 		}
 		&:hover, &:focus {
-			background-color: var(--secondary-color);
+			background-color: var(--middleground-color);
 		}
 		&:active {
 			background-color: var(--accent-150);
 			color: var(--accent-400);
-			:global(.dark) & {
+			@media (--dark) {
 				background-color: var(--accent-850);
 			}
 		}

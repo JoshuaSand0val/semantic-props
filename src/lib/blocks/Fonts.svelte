@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Divider from "$lib/components/Divider.svelte";
     import Paragraph from "$lib/components/Paragraph.svelte";
-    import ReferenceTable from "$lib/components/ReferenceTable.svelte";
 
 	const sizes: Record<string, string> = {
 		"Extra Large (9x)": "--9x-large",
@@ -38,9 +37,9 @@
 	};
 
 	const letterSpacing: Record<string, string> = {
-		"Densest Letter Spacing": "--densest-letter",
-		"Denser Letter Spacing": "--denser-letter",
-		"Dense Letter Spacing": "--dense-letter",
+		"Tightest Letter Spacing": "--tightest-letter",
+		"Tighter Letter Spacing": "--tighter-letter",
+		"Tight Letter Spacing": "--tight-letter",
 		"Normal Letter Spacing": "--normal-letter",
 		"Wide Letter Spacing": "--wide-letter",
 		"Wider Letter Spacing": "--wider-letter",
@@ -58,32 +57,19 @@
 	};
 
 	const wordSpacing: Record<string, string> = {
-		"Densest Word Spacing": "--densest-word",
-		"Denser Word Spacing": "--denser-word",
-		"Dense Word Spacing": "--dense-word",
+		"Tightest Word Spacing": "--tightest-word",
+		"Tighter Word Spacing": "--tighter-word",
+		"Tight Word Spacing": "--tight-word",
 		"Normal Word Spacing": "--normal-word",
 		"Wide Word Spacing": "--wide-word",
 		"Wider Word Spacing": "--wider-word",
 		"Widest Word Spacing": "--widest-word"
 	};
-
-	const reference: string[] = [
-		"--scale-ratio",
-		...Object.values({
-			...sizes,
-			...families,
-			...weights,
-			...letterSpacing,
-			...lineHeight,
-			...wordSpacing
-		})
-	];
 </script>
 
 <Divider title="Font Sizes and Styles" id="fonts">
-	<ReferenceTable props={reference} />
 	<Paragraph>
-		Semantic Props provides values for styling fonts, and a responsive type-scale based on the <code>--scale-ratio</code> prop.
+		Semantic Props provides various values for styling fonts.
 	</Paragraph>
 	<div class="container sizes">
 		{#each Object.entries(sizes) as [size, prop]}
@@ -172,10 +158,10 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-width)), 1fr));
 		gap: var(--large) var(--3x-large);
-		:global(.tablet) & {
+		@media (--tablet) {
 			--column-width: var(--smaller-container);
 		}
-		:global(.desktop) & {
+		@media (--desktop) {
 			--column-width: var(--small-container);
 		}
 	}

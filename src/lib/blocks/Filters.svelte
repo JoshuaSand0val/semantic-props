@@ -1,7 +1,6 @@
 <script lang="ts">
     import Divider from "$lib/components/Divider.svelte";
     import Paragraph from "$lib/components/Paragraph.svelte";
-    import ReferenceTable from "$lib/components/ReferenceTable.svelte";
 
 	const blur: Record<string, string> = {
 		"Lightest Blur": "--lightest-blur",
@@ -39,17 +38,9 @@
 		"Higher Saturation": "--higher-saturation",
 		"Highest Saturation": "--highest-saturation"
 	};
-
-	const reference = Object.values({
-		...blur,
-		...brightness,
-		...contrast,
-		...saturation
-	});
 </script>
 
 <Divider title="Filter Effects" id="filters">
-	<ReferenceTable props={reference} />
 	<Paragraph>Semantic Props provides CSS <code>filter</code> values for various types of media.</Paragraph>
 	<div class="container">
 		{#each [blur, brightness, contrast, saturation] as filter}
@@ -96,7 +87,7 @@
 		transition: inline-size var(--normal-time) var(--ease-out);
 		scroll-snap-align: center;
 		flex: 0 0 auto;
-		:global(.laptop) & {
+		@media (--laptop) {
 			--inline-size: var(--smaller-container);
 		}
 	}

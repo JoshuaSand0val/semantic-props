@@ -21,10 +21,10 @@
 		flex-flow: row nowrap;
 		max-block-size: max(var(--smallest-container), 80vb);
 		border-radius: var(--smallest-radius);
-		border: 1px var(--border-style) var(--tertiary-color);
+		border: 1px var(--border-style) var(--foreground-color);
 		margin: 0;
 		scroll-snap-type: both mandatory;
-		:global(.laptop) & {
+		@media (--laptop) {
 			flex-direction: column;
 		}
 	}
@@ -48,7 +48,7 @@
 		scroll-snap-align: start;
 		flex: 1 0 auto;
 		overflow: auto;
-		:global(.laptop) & {
+		@media (--laptop) {
 			flex-direction: row;
 			justify-content: space-between;
 			inline-size: 100%;

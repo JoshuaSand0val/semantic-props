@@ -24,7 +24,7 @@
 <style>
 	.container {
 		display: block;
-		border-block-start: 1px var(--border-style) var(--secondary-color);
+		border-block-start: 1px var(--border-style) var(--middleground-color);
 	}
 
 	.wrapper {

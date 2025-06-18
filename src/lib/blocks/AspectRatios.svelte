@@ -1,7 +1,6 @@
 <script lang="ts">
     import Divider from "$lib/components/Divider.svelte";
     import Paragraph from "$lib/components/Paragraph.svelte";
-    import ReferenceTable from "$lib/components/ReferenceTable.svelte";
 
 	const ratios = {
 		"Square Ratio": "--square-ratio",
@@ -10,12 +9,9 @@
 		"Video Ratio": "--video-ratio",
 		"Wide Ratio": "--wide-ratio"
 	};
-
-	const reference = Object.values(ratios);
 </script>
 
 <Divider title="Aspect Ratios" id="aspectratios">
-	<ReferenceTable props={reference} />
 	<Paragraph>Semantic Props provides CSS <code>aspect-ratio</code> values for various types of media.</Paragraph>
 	<div class="container scroll">
 		{#each Object.entries(ratios) as [ratio, prop]}
@@ -39,13 +35,13 @@
 		padding-block: var(--3x-small);
 		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--2x-large);
-		:global(.phone) & {
+		@media (--phone) {
 			column-count: 2;
 		}
-		:global(.tablet) & {
+		@media (--tablet) {
 			column-count: 3;
 		}
-		:global(.desktop) & {
+		@media (--desktop) {
 			column-count: 4;
 		}
 	}
@@ -65,20 +61,20 @@
 		font-size: var(--small);
 		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
-		border: var(--3x-small) solid var(--neutral-200);
+		border: var(--3x-small) solid var(--gray-200);
 		border-radius: var(--smallest-radius);
-		background-color: var(--primary-color);
+		background-color: var(--background-color);
 		background-clip: content-box;
 		color: var(--low-contrast-color);
 		box-shadow: var(--lightest-box-shadow);
 		overflow: hidden;
-		:global(.dark) & {
-			border-color: var(--neutral-700);			
+		@media (--dark) {
+			border-color: var(--gray-700);			
 		}
-		:global(.tablet) & {
+		@media (--tablet) {
 			font-size: var(--large);
 		}
-		:global(.laptop) & {
+		@media (--laptop) {
 			font-size: var(--x-large);
 		}
 	}
@@ -90,10 +86,10 @@
 		font-size: var(--x-small);
 		color: var(--medium-contrast-color);
 		margin-block: var(--x-small);
-		:global(.tablet) & {
+		@media (--tablet) {
 			font-size: var(--small);
 		}
-		:global(.laptop) & {
+		@media (--laptop) {
 			font-size: var(--medium);
 		}
 	}

@@ -44,9 +44,9 @@
 		white-space: pre;
 		font: var(--small)/var(--short-line) var(--mono-family);
 		border-radius: var(--smallest-radius);
-		border: 1px var(--border-style) var(--tertiary-color);
-		border-block-end-width: var(--4x-small);
-		background-color: var(--secondary-color);
+		border: 1px var(--border-style) var(--foreground-color);
+		box-shadow: var(--lightest-box-shadow), var(--lightest-inset-shadow);
+		background-color: var(--background-color);
 		color: var(--medium-contrast-color);
 		padding-block: var(--small) var(--x-small);
 		padding-inline: var(--x-small) var(--x-large);

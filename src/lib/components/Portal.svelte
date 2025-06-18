@@ -47,8 +47,8 @@
 			display: block;
 			aspect-ratio: 3 / 2;
 			border-radius: var(--medium-radius);
-			border: 1px var(--border-style) var(--tertiary-color);
-			background-color: var(--secondary-color);
+			border: 1px var(--border-style) var(--foreground-color);
+			background-color: var(--middleground-color);
 			box-shadow: var(--lightest-box-shadow);
 			overflow: hidden;
 			order: -1;
@@ -64,11 +64,15 @@
 					filter: var(--low-brightness);
 					transform: none;
 				}
-				:global(.light) &.dark {
-					display: none;
+				@media (--light) {
+					&.dark {
+						display: none;
+					}
 				}
-				:global(.dark) &.light {
-					display: none;
+				@media (--dark) { 
+					&.light {
+						display: none;
+					}
 				}
 			}
 		}

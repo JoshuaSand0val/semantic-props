@@ -19,7 +19,7 @@
 		:global(code) {
 			display: inline;
 			border-radius: var(--smallest-radius);
-			background-color: var(--neutral-150);
+			background-color: var(--gray-150);
 			color: var(--medium-contrast-color);
 			font-family: var(--mono-family);
 			font-size: var(--small);
@@ -27,8 +27,8 @@
 			padding-inline: var(--2x-small);
 			padding-block: var(--4x-small);
 			margin-block: var(--4x-small);
-			:global(.dark) & {
-				background-color: var(--neutral-800);
+			@media (--dark) {
+				background-color: var(--gray-800);
 			}
 		}
 		:global(strong, b) {

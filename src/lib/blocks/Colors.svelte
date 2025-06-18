@@ -2,10 +2,9 @@
     import ColorSwatch from "$lib/components/ColorSwatch.svelte";
     import Divider from "$lib/components/Divider.svelte";
     import Paragraph from "$lib/components/Paragraph.svelte";
-    import ReferenceTable from "$lib/components/ReferenceTable.svelte";
 
 	/** Returns ColorSwatch value, weights 100 to 900. */
-	const weights = ([color, prefix]: string[]) => {
+	const weights = (color: string, prefix: string): Record<string, string> => {
 		let swatch = {};
 		for (let weight = 100; weight <= 900; weight += 50) {
 			swatch = { ...swatch, [`${color} ${weight}`]: `${prefix}-${weight}` };
@@ -14,70 +13,53 @@
 	};
 
 	/** Color Palette Swatches. */
-	const accent = weights(["Accent", "--accent"]);
-	const blue = weights(["Blue", "--blue"]);
-	const green = weights(["Green", "--green"]);
-	const indigo = weights(["Indigo", "--indigo"]);
-	const neutral = weights(["Neutral", "--neutral"]);
-	const orange = weights(["Orange", "--orange"]);
-	const red = weights(["Red", "--red"]);	
-	const violet = weights(["Violet", "--violet"]);
-	const yellow = weights(["Yellow", "--yellow"]);
-	const palette = [accent, blue, green, indigo, neutral, orange, red, violet, yellow];
+	const palette: Record<string, string>[] = [
+		weights("Accent", "--accent"),
+		weights("Blue", "--blue"),
+		weights("Brown", "--brown"),
+		weights("Coral", "--coral"),
+		weights("Cyan", "--cyan"),
+		weights("Gray", "--gray"),
+		weights("Green", "--green"),
+		weights("Indigo", "--indigo"),
+		weights("Lime", "--lime"),
+		weights("Magenta", "--magenta"),
+		weights("Orange", "--orange"),
+		weights("Pink", "--pink"),
+		weights("Purple", "--purple"),
+		weights("Red", "--red"),	
+		weights("Violet", "--violet"),
+		weights("Yellow", "--yellow")
+	];
 
-	/** Priority Alias Swatches. */
-	const priorityAlias = {
-		"Primary Color": "--primary-color",
-		"Secondary Color": "--secondary-color",
-		"Tertiary Color": "--tertiary-color"
+	/** Layer Contextual Swatch. */
+	const contextualLayer: Record<string, string> = {
+		"Background Color": "--background-color",
+		"Middleground Color": "--middleground-color",
+		"Foreground Color": "--foreground-color"
 	};
 
-	/** Contrast Alias Swatches. */
-	const contrastAlias = {
+	/** Contrast Contextual Swatch. */
+	const contextualContrast: Record<string, string> = {
 		"High Contrast Color": "--high-contrast-color",
 		"Medium Contrast Color": "--medium-contrast-color",
 		"Low Contrast Color": "--low-contrast-color"
 	};
-
-	/** Stroke Color Swatches. */
-	const strokes = {
-		"Light Stroke Color": "--light-stroke-color",
-		"Dark Stroke Color": "--dark-stroke-color",
-		"Stroke Color": "--stroke-color"
-	};
-
-	/** All Semantic Props referenced. */
-	const reference = Object.values({
-		...accent,
-		...blue,
-		...green,
-		...indigo,
-		...neutral,
-		...orange,
-		...red,
-		...violet,
-		...yellow,
-		...priorityAlias,
-		...contrastAlias,
-		...strokes
-	});
 </script>
 
 <Divider title="Color Palette" id="colors">
-	<ReferenceTable props={reference} />
 	<Paragraph>
-		Semantic Props provides a simple but expansive color palette.<br>
-		Color schemes can be forced and targeted via classes <code>light</code> and <code>dark</code>.
+		Semantic Props provides a simple but expansive color palette.
 	</Paragraph>
 	<div class="container">
-		{#each palette as swatch}
-		<ColorSwatch colors={swatch}/>
-		{/each}
 		<div class="group">
-			{#each [priorityAlias, contrastAlias, strokes] as swatch}
+			{#each [contextualLayer, contextualContrast] as swatch}
 			<ColorSwatch colors={swatch}/>
 			{/each}
 		</div>
+		{#each palette as swatch}
+		<ColorSwatch colors={swatch}/>
+		{/each}
 	</div>
 </Divider>
 
@@ -93,7 +75,7 @@
 		margin-inline: calc((min(100vi, 3840px) - 100%) * -0.5);
 		margin-block: var(--2x-large);
 		transition: padding var(--faster-time) var(--ease-in);
-		:global(.laptop) & {
+		@media (--laptop) {
 			--column-width: var(--smaller-container);
 		}
 	}
@@ -102,7 +84,7 @@
 		display: contents;
 		flex-flow: row wrap;
 		gap: inherit;
-		:global(.laptop) & {
+		@media (--laptop) {
 			display: flex;
 		}
 		:global(& > *) {

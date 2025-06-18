@@ -12,10 +12,7 @@
 				<span class="title">Semantic Props</span>
 			</Heading>
 			<Heading level={6}>Expertly crafted CSS Custom Properties (variables) for creating <strong>consistent components</strong> in any design.</Heading>
-			<CodeBlock description="Import" lang="html" code={`
-<link href="https://unpkg.com/semantic-props/css" rel="stylesheet" />
-<script src="https://unpkg.com/semantic-props/js"></script>
-`} />
+			<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
 		</Body>
 	</div>
 </header>
@@ -27,13 +24,23 @@
 
 	.container {
 		display: block;
-		background-color: var(--primary-color);
-		border-block-end: 1px var(--border-style) var(--secondary-color);
+		background-color: var(--background-color);
+		border-block-end: 1px var(--border-style) var(--middleground-color);
 		overflow: hidden;
 	}
 
 	.wrapper {
-		margin-block-start: var(--9x-large);
+		transition: margin-block-start var(--faster-time) var(--ease-in);
+		margin-block-start: var(--8x-large);
+		@media (--phone) {
+			margin-block-start: var(--6x-large);
+		}
+		@media (--tablet) {
+			margin-block-start: var(--8x-large);
+		}
+		@media (--laptop) {
+			margin-block-start: var(--9x-large);
+		}
 	}
 
 	.title {
@@ -48,13 +55,13 @@
 			var(--violet-600)
 		);
 		background-clip: text;
-		color: var(--primary-color);
+		color: var(--background-color);
 		filter: var(--lightest-shadow);
 		animation: title 3s infinite both;
 		@media (prefers-reduced-motion: reduce) {
 			animation: none;
 		}
-		:global(.dark) & {
+		@media (--dark) {
 			background-image: linear-gradient(123deg,
 				var(--red-300),
 				var(--orange-300),

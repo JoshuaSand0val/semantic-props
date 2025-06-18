@@ -29,7 +29,7 @@
 		font-size: var(--x-large);
 		font-family: var(--display-family);
 		line-height: var(--shorter-line);
-		border-block-end: 1px var(--border-style) var(--tertiary-color);
+		border-block-end: 1px var(--border-style) var(--foreground-color);
 		color: var(--high-contrast-color);
 		padding-block-end: var(--2x-small);
 		padding-inline-start: 1px;
