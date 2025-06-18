@@ -1,5 +1,8 @@
 /* Semantic Props for color. */
 
+@custom-media --light (prefers-color-scheme: light);
+@custom-media --dark (prefers-color-scheme: dark);
+
 :root {
 	/* Color Weights: */
 	@for $weight from 100 to 900 by 50 {
@@ -52,4 +55,17 @@
 	--dark-accent: var(--accent-600);
 	--darker-accent: var(--accent-650);
 	--darkest-accent: var(--accent-700);
+
+	/* Contextual Colors: */
+	--background-color: var(--lightest-primary);
+	--middleground-color: var(--lighter-primary);
+	--foreground-color: var(--light-primary);
+	--text-color: var(--darker-secondary);
+
+	@media (--dark) {
+		--background-color: var(--darkest-primary);
+		--middleground-color: var(--darker-primary);
+		--foreground-color: var(--dark-primary);
+		--text-color: var(--lighter-secondary);
+	}
 }
