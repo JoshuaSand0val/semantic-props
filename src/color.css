@@ -11,12 +11,9 @@
 		$l: calc(0.15 + (0.99 - 0.15) * $percentage);
 		$c: calc(sin(l * pi) * c);
 
-		/* Alias Colors: */
-		--primary-$(weight): var(--gray-$(weight));
-		--secondary-$(weight): var(--gray-$(weight));
+		/* Colors + Gray: */
 		--accent-$(weight): var(--blue-$(weight));
 
-		/* Colors + Gray: */
 		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l $c h);
 		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $l $c h);
 		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $l $c h);
@@ -34,44 +31,22 @@
 		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l $c h);
 	}
 
-	/* Alias Colors: */
-	--lightest-primary: var(--primary-100);
-	--lighter-primary: var(--primary-150);
-	--light-primary: var(--primary-200);
-	--dark-primary: var(--primary-800);
-	--darker-primary: var(--primary-850);
-	--darkest-primary: var(--primary-900);
-
-	--lightest-secondary: var(--secondary-100);
-	--lighter-secondary: var(--secondary-200);
-	--light-secondary: var(--secondary-300);
-	--dark-secondary: var(--secondary-700);
-	--darker-secondary: var(--secondary-800);
-	--darkest-secondary: var(--secondary-900);
-
-	--lightest-accent: var(--accent-300);
-	--lighter-accent: var(--accent-350);
-	--light-accent: var(--accent-400);
-	--dark-accent: var(--accent-600);
-	--darker-accent: var(--accent-650);
-	--darkest-accent: var(--accent-700);
-
 	/* Contextual Colors: */
-	--background-color: var(--lightest-primary);
-	--middleground-color: var(--lighter-primary);
-	--foreground-color: var(--light-primary);
+	--background-color: var(--gray-100);
+	--middleground-color: var(--gray-150);
+	--foreground-color: var(--gray-200);
 
-	--high-contrast-color: var(--darkest-secondary);
-	--medium-contrast-color: var(--darker-secondary);
-	--low-contrast-color: var(--dark-secondary);
+	--high-contrast-color: var(--gray-900);
+	--medium-contrast-color: var(--gray-800);
+	--low-contrast-color: var(--gray-700);
 
 	@media (--dark) {
-		--background-color: var(--darkest-primary);
-		--middleground-color: var(--darker-primary);
-		--foreground-color: var(--dark-primary);
+		--background-color: var(--gray-900);
+		--middleground-color: var(--gray-850);
+		--foreground-color: var(--gray-800);
 
-		--high-contrast-color: var(--lightest-secondary);
-		--medium-contrast-color: var(--lighter-secondary);
-		--low-contrast-color: var(--light-secondary);
+		--high-contrast-color: var(--gray-100);
+		--medium-contrast-color: var(--gray-200);
+		--low-contrast-color: var(--gray-300);
 	}
 }
