@@ -60,12 +60,18 @@
 	--background-color: var(--lightest-primary);
 	--middleground-color: var(--lighter-primary);
 	--foreground-color: var(--light-primary);
-	--text-color: var(--darker-secondary);
+
+	--high-contrast-color: var(--darkest-secondary);
+	--medium-contrast-color: var(--darker-secondary);
+	--low-contrast-color: var(--dark-secondary);
 
 	@media (--dark) {
 		--background-color: var(--darkest-primary);
 		--middleground-color: var(--darker-primary);
 		--foreground-color: var(--dark-primary);
-		--text-color: var(--lighter-secondary);
+
+		--high-contrast-color: var(--lightest-secondary);
+		--medium-contrast-color: var(--lighter-secondary);
+		--low-contrast-color: var(--light-secondary);
 	}
 }
