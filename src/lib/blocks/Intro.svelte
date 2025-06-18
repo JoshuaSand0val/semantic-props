@@ -44,7 +44,7 @@
 	}
 
 	.title {
-		-webkit-text-stroke: var(--3x-small) transparent;
+		-webkit-text-stroke: var(--4x-small) transparent;
 		background-image: linear-gradient(123deg,
 			var(--red-600),
 			var(--orange-600),
