@@ -26,7 +26,6 @@
 		weights("Magenta", "--magenta"),
 		weights("Orange", "--orange"),
 		weights("Pink", "--pink"),
-		weights("Purple", "--purple"),
 		weights("Red", "--red"),	
 		weights("Violet", "--violet"),
 		weights("Yellow", "--yellow")
