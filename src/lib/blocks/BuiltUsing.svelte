@@ -3,7 +3,7 @@
 	import Portal from "$lib/components/Portal.svelte";
 </script>
 
-<Divider title="Built using Semantic Props" id="builtusing">
+<Divider title="Built using Semantic Props" id="builtusing" open={false}>
 	<div class="grid scroll">
 		<Portal
 			title="Hey, Jes!"
