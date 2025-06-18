@@ -5,6 +5,7 @@ export default {
 				"./src/app.css"
 			]
 		},
-		"postcss-custom-media": {}
+		"postcss-custom-media": {},
+		"autoprefixer": {}
 	}
 }
