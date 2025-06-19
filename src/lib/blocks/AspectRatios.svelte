@@ -58,7 +58,7 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: center;
-		font-size: var(--small);
+		font-size: var(--medium);
 		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
 		border: var(--3x-small) solid var(--gray-300);
@@ -70,10 +70,10 @@
 		@media (--dark) {
 			border-color: var(--gray-700);			
 		}
-		@media (--tablet) {
+		@media (--phone) {
 			font-size: var(--large);
 		}
-		@media (--laptop) {
+		@media (--tablet) {
 			font-size: var(--x-large);
 		}
 	}
@@ -82,13 +82,10 @@
 		display: block;
 		text-align: center;
 		font-family: var(--mono-family);
-		font-size: var(--x-small);
+		font-size: var(--small);
 		color: var(--medium-contrast-color);
 		margin-block: var(--x-small);
-		@media (--tablet) {
-			font-size: var(--small);
-		}
-		@media (--laptop) {
+		@media (--phone) {
 			font-size: var(--medium);
 		}
 	}
