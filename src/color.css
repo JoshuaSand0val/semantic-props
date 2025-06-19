@@ -31,9 +31,9 @@
 	}
 
 	/* Contextual Colors: */
-	--background-color: var(--gray-100);
-	--middleground-color: var(--gray-150);
-	--foreground-color: var(--gray-200);
+	--background-color: white;
+	--middleground-color: var(--gray-100);
+	--foreground-color: var(--gray-150);
 
 	--high-contrast-color: var(--gray-900);
 	--medium-contrast-color: var(--gray-800);
