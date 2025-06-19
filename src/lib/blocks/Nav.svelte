@@ -15,9 +15,9 @@
 				<a href="#builtusing">Built using Semantic Props</a>
 				<a href="#colors">Color Palette</a>
 				<a href="#filters">Filter Effects</a>
-				<a href="#sizes">Containers and Spacing Sizes</a>
 				<a href="#fonts">Font Sizes and Styles</a>
 				<a href="#aspectratios">Aspect Ratios</a>
+				<a href="#sizes">Containers and Spacing Sizes</a>
 			</nav>
 			<div class="backdrop"></div>
 		</aside>

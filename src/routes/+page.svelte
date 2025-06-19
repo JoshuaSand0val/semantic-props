@@ -19,7 +19,7 @@
 	<BuiltUsing />
 	<Colors />
 	<Filters />
-	<Sizes />
 	<Fonts />
 	<AspectRatios />
+	<Sizes />
 </Body>
