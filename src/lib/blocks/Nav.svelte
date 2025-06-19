@@ -121,10 +121,10 @@
 			background-color: var(--middleground-color);
 		}
 		&:active {
-			background-color: var(--accent-150);
+			background-color: var(--accent-50);
 			color: var(--accent-400);
 			@media (--dark) {
-				background-color: var(--accent-850);
+				background-color: var(--accent-950);
 			}
 		}
 	}

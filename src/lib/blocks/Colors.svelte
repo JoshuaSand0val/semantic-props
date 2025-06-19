@@ -3,10 +3,16 @@
     import Divider from "$lib/components/Divider.svelte";
     import Paragraph from "$lib/components/Paragraph.svelte";
 
-	/** Returns ColorSwatch value, weights 100 to 900. */
+	/** White/Black Swatch. */
+	const whiteBlack: Record<string, string> = {
+		"White": "--white",
+		"Black": "--black"
+	};
+
+	/** Returns ColorSwatch value, weights 50 to 950. */
 	const weights = (color: string, prefix: string): Record<string, string> => {
 		let swatch = {};
-		for (let weight = 100; weight <= 900; weight += 50) {
+		for (let weight = 50; weight <= 950; weight += 50) {
 			swatch = { ...swatch, [`${color} ${weight}`]: `${prefix}-${weight}` };
 		}
 		return swatch;
@@ -52,7 +58,7 @@
 	</Paragraph>
 	<div class="container">
 		<div class="group">
-			{#each [contextualLayer, contextualContrast] as swatch}
+			{#each [whiteBlack, contextualLayer, contextualContrast] as swatch}
 			<ColorSwatch colors={swatch}/>
 			{/each}
 		</div>
