@@ -19,7 +19,7 @@
 		:global(code) {
 			display: inline;
 			border-radius: var(--smallest-radius);
-			background-color: var(--gray-150);
+			background-color: var(--gray-100);
 			color: var(--medium-contrast-color);
 			font-family: var(--mono-family);
 			font-size: var(--small);
