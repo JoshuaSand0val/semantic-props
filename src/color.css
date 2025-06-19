@@ -8,7 +8,7 @@
 	@for $weight from 100 to 900 by 50 {
 		/* Calculate Lightness and Chroma: */
 		$percentage: calc(1 - ($weight - 100) / (900 - 100));
-		$l: calc(0.15 + (0.97 - 0.15) * $percentage);
+		$l: calc(0.13 + (0.97 - 0.13) * $percentage);
 		$c: calc(sin(l * pi) * c);
 
 		/* Colors + Gray: */
