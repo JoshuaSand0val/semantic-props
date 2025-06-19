@@ -97,6 +97,7 @@
 		display: block;
 		text-align: center;
 		scroll-snap-align: center;
+		flex: 0 0 auto;
 	}
 
 	.display {
@@ -104,8 +105,10 @@
 		--border-size: var(--3x-small);
 		position: relative;
 		display: block;
-		inline-size: var(--smaller-container);
-		block-size: var(--small-container);
+		aspect-ratio: var(--portrait-ratio);
+		inline-size: min(100%, var(--smaller-container));
+		block-size: var(--smallest-container);
+		transition: block-size var(--normal-time) var(--ease-out);
 		box-shadow: var(--lightest-box-shadow);
 		border: var(--4x-small) solid var(--low-contrast-color);
 		border-radius: var(--large-radius);
@@ -117,6 +120,12 @@
 		@media (--dark) {
 			--border-color: var(--gray-600);
 		}
+		@media (--phone) {
+			block-size: var(--smaller-container);
+		}
+		@media (--tablet) {
+			block-size: var(--small-container);
+		}
 	}
 
 	.content {
@@ -126,15 +135,25 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: center;
-		background-color: var(--background-color);
+		font-size: var(--medium);
+		font-family: var(--display-family);
 		border-radius: var(--smallest-radius);
+		background-color: var(--background-color);
+		color: var(--low-contrast-color);
+		padding: var(--x-small);
 		margin: var(--demo, 0);
+		@media (--phone) {
+			font-size: var(--large);
+		}
 	}
 
 	.prop {
 		display: block;
 		font-family: var(--mono-family);
 		margin-block: var(--3x-small);
-		color: var(--low-contrast-color);
+		color: var(--medium-contrast-color);
+		@media (--watch) {
+			font-size: var(--small);
+		}
 	}
 </style>
