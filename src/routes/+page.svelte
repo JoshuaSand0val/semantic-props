@@ -5,6 +5,7 @@
     import Filters from "$lib/blocks/Filters.svelte";
     import Fonts from "$lib/blocks/Fonts.svelte";
     import Intro from "$lib/blocks/Intro.svelte";
+    import SafeAreas from "$lib/blocks/SafeAreas.svelte";
     import Sizes from "$lib/blocks/Sizes.svelte";
     import Body from "$lib/components/Body.svelte";
 </script>
@@ -21,5 +22,6 @@
 	<Filters />
 	<Fonts />
 	<AspectRatios />
+	<SafeAreas />
 	<Sizes />
 </Body>

@@ -17,6 +17,7 @@
 				<a href="#filters">Filter Effects</a>
 				<a href="#fonts">Font Sizes and Styles</a>
 				<a href="#aspectratios">Aspect Ratios</a>
+				<a href="#safeareas">Display Safe-Areas</a>
 				<a href="#sizes">Containers and Spacing Sizes</a>
 			</nav>
 			<div class="backdrop"></div>

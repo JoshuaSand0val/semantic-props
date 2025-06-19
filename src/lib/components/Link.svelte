@@ -1,13 +1,14 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
 
-	let { children, to }: {
+	let { children, to, target }: {
 		children: Snippet,
-		to: string
+		to: string,
+		target?: string
 	} = $props();
 </script>
 
-<a class="container" href={to}>
+<a class="container" href={to} target={target ?? "_self"}>
 	{@render children()}
 </a>
 
