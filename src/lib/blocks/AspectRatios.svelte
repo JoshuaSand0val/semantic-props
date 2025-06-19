@@ -61,12 +61,11 @@
 		font-size: var(--small);
 		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
-		border: var(--3x-small) solid var(--gray-200);
+		border: var(--3x-small) solid var(--gray-300);
 		border-radius: var(--smallest-radius);
 		background-color: var(--background-color);
 		background-clip: content-box;
 		color: var(--low-contrast-color);
-		box-shadow: var(--lightest-box-shadow);
 		overflow: hidden;
 		@media (--dark) {
 			border-color: var(--gray-700);			
