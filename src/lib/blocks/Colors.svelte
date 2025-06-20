@@ -56,7 +56,7 @@
 	<Paragraph>
 		Semantic Props provides a simple but expansive color palette.
 	</Paragraph>
-	<div class="container">
+	<div class="container scroll">
 		<div class="group">
 			{#each [whiteBlack, contextualLayer, contextualContrast] as swatch}
 			<ColorSwatch colors={swatch}/>
@@ -69,19 +69,26 @@
 </Divider>
 
 <style>
+	@import "../styles/scroll.css";
+
 	.container {
 		--column-width: var(--smallest-container);
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-width)), 1fr));
 		align-items: stretch;
 		gap: var(--2x-small);
-		padding-right: max(var(--margin-size), var(--safe-right));
-		padding-left: max(var(--margin-size), var(--safe-left));
-		margin-inline: calc((min(100vi, 3840px) - 100%) * -0.5);
+		padding-inline: calc((100vi - 100%) * 0.5);
+		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--2x-large);
-		transition: padding var(--faster-time) var(--ease-in);
 		@media (--laptop) {
-			--column-width: var(--smaller-container);
+			--column-width: var(--small-container);
+			display: flex;
+			flex-flow: row nowrap;
+			scroll-snap-type: inline mandatory;
+			:global(& > *) {
+				flex: 0 0 var(--column-width);
+				scroll-snap-align: center;
+			}
 		}
 	}
 
