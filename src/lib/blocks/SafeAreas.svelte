@@ -58,7 +58,7 @@
 		{#each Object.entries(safeAreas) as [name, values]}
 		<article class="demo">
 			<div class="display" style:--demo={values.demo}>
-				<span class="content">{name}</span>
+				<h4 class="content">{name}</h4>
 			</div>
 			<span class="prop">{values.prop}</span>
 		</article>
@@ -137,6 +137,7 @@
 		align-items: center;
 		font-size: var(--medium);
 		font-family: var(--display-family);
+		font-weight: var(--regular-weight);
 		border-radius: var(--smallest-radius);
 		background-color: var(--background-color);
 		color: var(--low-contrast-color);
