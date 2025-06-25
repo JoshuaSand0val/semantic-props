@@ -31,6 +31,11 @@
 		z-index: var(--z-fixed);
 		inset: 0 0 auto;
 		color: var(--medium-contrast-color);
+		pointer-events: none;
+	}
+
+	.button, .navigation, .backdrop {
+		pointer-events: auto;
 	}
 
 	.wrapper {
