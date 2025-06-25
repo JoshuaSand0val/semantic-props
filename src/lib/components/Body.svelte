@@ -14,16 +14,10 @@
 	.container {
 		display: block;
 		inline-size: min(var(--largest-container), 100%);
-		font-family: var(--body-family);
-		font-weight: var(--regular-weight);
-		line-height: var(--normal-line);
-		word-spacing: var(--normal-word);
-		letter-spacing: var(--normal-letter);
 		padding-right: max(var(--safe-right), var(--margin-size));
 		padding-left: max(var(--safe-left), var(--margin-size));
 		margin-inline: auto;
 		margin-block: var(--medium);
-		transition: all var(--faster-time) var(--ease-in);
-		transition-property: padding, margin;
+		transition: padding var(--faster-time) var(--ease-in);
 	}
 </style>
