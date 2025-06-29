@@ -1,20 +1,18 @@
 <script lang="ts">
 	import CodeBlock from "$lib/components/CodeBlock.svelte";
-    import Body from "$lib/components/Body.svelte";
+    import Divider from "$lib/components/Divider.svelte";
 	import Heading from "$lib/components/Heading.svelte";
 </script>
 
 <header class="container">
-	<div class="wrapper">
-		<Body>
-			<Heading level={4}>Stylesheets made simple.</Heading>
-			<Heading level={1}>
-				<span class="title">Semantic Props</span>
-			</Heading>
-			<Heading level={6}>Expertly crafted CSS Custom Properties (variables) for creating <strong>consistent components</strong> in any design.</Heading>
-			<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
-		</Body>
-	</div>
+	<Divider title="Introduction to Semantic Props" id="intro">
+		<Heading level={4}>Stylesheets made simple.</Heading>
+		<Heading level={1}>
+			<span class="title">Semantic Props</span>
+		</Heading>
+		<Heading level={6}>Expertly crafted CSS Custom Properties (variables) for creating <strong>consistent components</strong> in any design.</Heading>
+		<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
+	</Divider>
 </header>
 
 <style>
@@ -24,12 +22,6 @@
 
 	.container {
 		display: block;
-		background-color: var(--background-color);
-		border-block-end: 1px var(--border-style) var(--middleground-color);
-		overflow: hidden;
-	}
-
-	.wrapper {
 		transition: margin-block-start var(--faster-time) var(--ease-in);
 		margin-block-start: var(--8x-large);
 		@media (--phone) {
@@ -37,9 +29,6 @@
 		}
 		@media (--tablet) {
 			margin-block-start: var(--8x-large);
-		}
-		@media (--laptop) {
-			margin-block-start: var(--9x-large);
 		}
 	}
 

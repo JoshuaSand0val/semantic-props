@@ -1,6 +1,7 @@
 <script>
 	import "../app.css";
 
+    import Body from "$lib/components/Body.svelte";
     import Footer from '$lib/blocks/Footer.svelte';
     import Nav from '$lib/blocks/Nav.svelte';
 
@@ -10,7 +11,9 @@
 <div class="container">
 	<Nav />
 	<main class="content">
-		{@render children()}
+		<Body>
+			{@render children()}
+		</Body>
 	</main>
 	<Footer />
 </div>

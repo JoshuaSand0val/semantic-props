@@ -7,7 +7,6 @@
     import Intro from "$lib/blocks/Intro.svelte";
     import SafeAreas from "$lib/blocks/SafeAreas.svelte";
     import Sizes from "$lib/blocks/Sizes.svelte";
-    import Body from "$lib/components/Body.svelte";
 </script>
 
 <svelte:head>
@@ -15,13 +14,10 @@
 </svelte:head>
 
 <Intro />
-
-<Body>
-	<BuiltUsing />
-	<Colors />
-	<Filters />
-	<Fonts />
-	<AspectRatios />
-	<SafeAreas />
-	<Sizes />
-</Body>
+<BuiltUsing />
+<Colors />
+<Filters />
+<Fonts />
+<AspectRatios />
+<SafeAreas />
+<Sizes />
