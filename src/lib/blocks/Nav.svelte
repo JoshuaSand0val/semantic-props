@@ -11,7 +11,7 @@
 				</svg>
 			</span>
 			<nav class="navigation">
-				<a href="#intro">Semantic Props</a>
+				<a href="#intro">Introduction to Semantic Props</a>
 				<a href="#builtusing">Built using Semantic Props</a>
 				<a href="#colors">Color Palette</a>
 				<a href="#filters">Filter Effects</a>
