@@ -26,11 +26,12 @@
 		display: flex;
 		flex-flow: row wrap;
 		gap: 0 1ch;
-		font-size: var(--x-large);
+		font-size: var(--large);
 		font-family: var(--display-family);
+		font-weight: var(--light-weight);
 		line-height: var(--shorter-line);
 		border-block-end: 1px var(--border-style) var(--foreground-color);
-		color: var(--high-contrast-color);
+		color: var(--low-contrast-color);
 		padding-block-end: var(--2x-small);
 		padding-inline-start: 1px;
 		list-style: none;
