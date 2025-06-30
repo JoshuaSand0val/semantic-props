@@ -33,7 +33,7 @@
 		font-size: var(--x-small);
 		text-transform: uppercase;
 		color: var(--low-contrast-color);
-		line-height: var(--short-line);
+		line-height: var(--normal-line);
 		margin-block: 0 var(--3x-small);
 		margin-inline: var(--smallest-radius);
 	}
@@ -45,7 +45,7 @@
 		font: var(--small)/var(--short-line) var(--mono-family);
 		border-radius: var(--smallest-radius);
 		border: 1px var(--border-style) var(--foreground-color);
-		box-shadow: var(--lightest-box-shadow), var(--lightest-inset-shadow);
+		box-shadow: var(--lightest-box-shadow);
 		background-color: var(--background-color);
 		color: var(--medium-contrast-color);
 		padding-block: var(--small) var(--x-small);
