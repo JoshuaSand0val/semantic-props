@@ -1,4 +1,6 @@
 <script>
+    import Nav from "$lib/components/Nav.svelte";
+
     import AspectRatios from "./chapters/AspectRatios.svelte";
     import BuiltUsing from "./chapters/BuiltUsing.svelte";
     import Colors from "./chapters/Colors.svelte";
@@ -12,6 +14,17 @@
 <svelte:head>
 	<title>Semantic Props: Stylesheets made simple.</title>
 </svelte:head>
+
+<Nav chapters={{
+	"#intro": "Introduction to Semantic Props",
+	"#builtusing": "Built using Semantic Props",
+	"#colors": "Color Palette",
+	"#filters": "Filter Effects",
+	"#fonts": "Font Sizes and Styles",
+	"#aspectratios": "Aspect Ratios",
+	"#safeareas": "Display Safe-Areas",
+	"#sizes": "Containers and Spacing Sizes"
+}} />
 
 <Intro />
 <BuiltUsing />

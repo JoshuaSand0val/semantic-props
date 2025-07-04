@@ -3,13 +3,11 @@
 
     import Body from "$lib/components/Body.svelte";
     import Footer from "$lib/components/Footer.svelte";
-    import Nav from "$lib/components/Nav.svelte";
 
 	let { children } = $props();
 </script>
 
 <div class="container">
-	<Nav />
 	<main class="content">
 		<Body>
 			{@render children()}

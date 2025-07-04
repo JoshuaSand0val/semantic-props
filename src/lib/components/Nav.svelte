@@ -1,5 +1,9 @@
-<script>
+<script lang="ts">
     import Body from "$lib/components/Body.svelte";
+
+	let { chapters }: {
+		chapters: Record<string, string>
+	} = $props();
 </script>
 
 <div class="container">
@@ -11,14 +15,9 @@
 				</svg>
 			</span>
 			<nav class="navigation">
-				<a href="#intro">Introduction to Semantic Props</a>
-				<a href="#builtusing">Built using Semantic Props</a>
-				<a href="#colors">Color Palette</a>
-				<a href="#filters">Filter Effects</a>
-				<a href="#fonts">Font Sizes and Styles</a>
-				<a href="#aspectratios">Aspect Ratios</a>
-				<a href="#safeareas">Display Safe-Areas</a>
-				<a href="#sizes">Containers and Spacing Sizes</a>
+				{#each Object.entries(chapters) as [url, title]}
+				<a href={url}>{title}</a>
+				{/each}
 			</nav>
 			<div class="backdrop"></div>
 		</aside>
