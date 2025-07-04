@@ -60,7 +60,7 @@
 </Divider>
 
 <style>
-	@import "../styles/scroll.css";
+	@import "$lib/styles/scroll.css";
 
 	.size-grid, .container-column {
 		display: grid;

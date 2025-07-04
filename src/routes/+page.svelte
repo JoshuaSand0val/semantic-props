@@ -1,12 +1,12 @@
 <script>
-    import AspectRatios from "$lib/blocks/AspectRatios.svelte";
-    import BuiltUsing from "$lib/blocks/BuiltUsing.svelte";
-    import Colors from "$lib/blocks/Colors.svelte";
-    import Filters from "$lib/blocks/Filters.svelte";
-    import Fonts from "$lib/blocks/Fonts.svelte";
-    import Intro from "$lib/blocks/Intro.svelte";
-    import SafeAreas from "$lib/blocks/SafeAreas.svelte";
-    import Sizes from "$lib/blocks/Sizes.svelte";
+    import AspectRatios from "./chapters/AspectRatios.svelte";
+    import BuiltUsing from "./chapters/BuiltUsing.svelte";
+    import Colors from "./chapters/Colors.svelte";
+    import Filters from "./chapters/Filters.svelte";
+    import Fonts from "./chapters/Fonts.svelte";
+    import Intro from "./chapters/Intro.svelte";
+    import SafeAreas from "./chapters/SafeAreas.svelte";
+    import Sizes from "./chapters/Sizes.svelte";
 </script>
 
 <svelte:head>

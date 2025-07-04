@@ -31,7 +31,7 @@
 </Divider>
 
 <style>
-	@import "../styles/scroll.css";
+	@import "$lib/styles/scroll.css";
 
 	.grid {
 		display: flex;

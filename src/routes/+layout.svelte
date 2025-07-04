@@ -2,8 +2,8 @@
 	import "../app.css";
 
     import Body from "$lib/components/Body.svelte";
-    import Footer from "$lib/blocks/Footer.svelte";
-    import Nav from "$lib/blocks/Nav.svelte";
+    import Footer from "$lib/components/Footer.svelte";
+    import Nav from "$lib/components/Nav.svelte";
 
 	let { children } = $props();
 </script>
