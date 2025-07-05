@@ -85,7 +85,6 @@
 		padding-inline: var(--x-small);
 		padding-block: var(--2x-small);
 		flex: 1 0 0;
-		cursor: pointer;
 		@media (--dark) {
 			border-color: oklch(1 0 0 / 0.1);
 		}
