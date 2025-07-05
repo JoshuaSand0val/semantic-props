@@ -55,27 +55,21 @@
 
 <style>
 	.container {
-		display: block;
-		column-count: 1;
-		column-gap: var(--x-small);
-		column-fill: balance;
-		@media (--phone) {
-			column-count: 2;
-		}
-		@media (--tablet) {
-			column-count: 3;
-		}
-		@media (--desktop) {
-			column-count: 4;
-		}
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: start;
+		align-items: stretch;
+		gap: var(--x-small);
+		overflow: auto;
 	}
 
 	.palette {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(var(--smallest-container), 100%), 1fr));
+		gap: var(--4x-small);
 		inline-size: min(100%, var(--medium-container));
-		margin-block: 0 var(--x-small);
-		break-inside: avoid;
+		margin-block: 0;
+		overflow: hidden;
 		flex: 1 0 auto;
 	}
 
@@ -86,7 +80,7 @@
 		align-content: start;
 		gap: 0 var(--x-small);
 		min-inline-size: min-content;
-		outline: 1px solid var(--foreground-color);
+		border: 1px solid var(--foreground-color);
 		background-color: var(--prop);
 		padding-inline: var(--x-small);
 		padding-block: var(--2x-small);
