@@ -1,9 +1,6 @@
 <script lang="ts">
 	/** Semantic Props color palettes. */
 	const palettes: Record<string, `var(${string})`>[] = [{
-		"White": "var(--white)",
-		"Black": "var(--black)"
-	}, {
 		"Background Color": "var(--background-color)",
 		"Middleground Color": "var(--middleground-color)",
 		"Foreground Color": "var(--foreground-color)"
@@ -11,6 +8,9 @@
 		"High Contrast Color": "var(--high-contrast-color)",
 		"Medium Contrast Color": "var(--medium-contrast-color)",
 		"Low Contrast Color": "var(--low-contrast-color)"
+	}, {
+		"White": "var(--white)",
+		"Black": "var(--black)"
 	}];
 
 	Object.entries({
