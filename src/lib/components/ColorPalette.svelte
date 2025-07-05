@@ -66,20 +66,11 @@
 	.palette {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(var(--smallest-container), 100%), 1fr));
+		gap: var(--4x-small);
 		inline-size: min(100%, var(--medium-container));
-		border-radius: var(--smaller-radius);
-		border: 1px solid var(--foreground-color);
-		background-color: var(--gray-950);
 		margin-block: 0;
 		overflow: hidden;
 		flex: 1 0 auto;
-		background: conic-gradient(
-			var(--gray-950) 90deg,
-			var(--gray-900) 90deg 180deg,
-			var(--gray-950) 180deg 270deg,
-			var(--gray-900) 270deg
-		);
-		background-size: var(--large) var(--large);
 	}
 
 	.color {
@@ -89,6 +80,7 @@
 		align-content: start;
 		gap: 0 var(--x-small);
 		min-inline-size: min-content;
+		border: 1px solid var(--foreground-color);
 		background-color: var(--prop);
 		padding-inline: var(--x-small);
 		padding-block: var(--2x-small);
