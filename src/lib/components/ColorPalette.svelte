@@ -63,8 +63,8 @@
 	}
 
 	.palette {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(var(--smallest-container), 100%), 1fr));
+		display: flex;
+		flex-flow: row wrap;
 		inline-size: min(100%, var(--smaller-container));
 		border-radius: var(--smallest-radius);
 		border: 1px solid var(--foreground-color);
@@ -79,13 +79,11 @@
 		justify-content: space-between;
 		align-content: start;
 		gap: 0 var(--x-small);
-		min-inline-size: min-content;
+		inline-size: var(--smallest-container);
 		background-color: var(--prop);
 		padding-inline: var(--x-small);
 		padding-block: var(--2x-small);
-		&:last-child {
-			grid-column: 1 / -1;
-		}
+		flex: 1 0 auto;
 	}
 
 	.name, .prop {
