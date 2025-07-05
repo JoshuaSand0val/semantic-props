@@ -65,7 +65,7 @@
 
 	.palette {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(var(--smaller-container), 100%), 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(min(var(--smallest-container), 100%), 1fr));
 		inline-size: min(100%, var(--medium-container));
 		border-radius: var(--smaller-radius);
 		border: 1px solid var(--foreground-color);
