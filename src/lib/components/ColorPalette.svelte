@@ -68,7 +68,7 @@
 		flex-flow: row wrap;
 		inline-size: min(100%, var(--medium-container));
 		border-radius: var(--smaller-radius);
-		border: 1px solid oklch(0 0 0 / 0.2);
+		border: 1px solid var(--foreground-color);
 		margin-block: 0;
 		overflow: hidden;
 		flex: 1 0 auto;
@@ -85,9 +85,6 @@
 		padding-inline: var(--x-small);
 		padding-block: var(--2x-small);
 		flex: 1 0 0;
-		@media (--dark) {
-			border-color: oklch(1 0 0 / 0.1);
-		}
 	}
 
 	.name, .prop {
