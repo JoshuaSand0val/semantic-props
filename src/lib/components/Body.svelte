@@ -13,7 +13,7 @@
 <style>
 	.container {
 		display: block;
-		inline-size: min(var(--largest-container), 100%);
+		inline-size: 100%;
 		padding-right: max(var(--safe-right), var(--margin-size));
 		padding-left: max(var(--safe-left), var(--margin-size));
 		margin-inline: auto;
