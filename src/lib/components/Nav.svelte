@@ -28,7 +28,7 @@
 	.container {
 		position: fixed;
 		z-index: var(--z-fixed);
-		inset: 0 0 auto;
+		inset: auto 0 var(--safe-bottom);
 		color: var(--medium-contrast-color);
 		pointer-events: none;
 	}
@@ -70,7 +70,7 @@
 	.navigation {
 		position: absolute;
 		z-index: var(--z-top);
-		top: calc(100% + var(--x-small));
+		bottom: calc(100% + var(--x-small));
 		inline-size: min(100%, var(--smaller-container));
 		max-block-size: min(60vb, var(--medium-container));
 		border-radius: var(--smaller-radius);
@@ -82,7 +82,7 @@
 		transition: all var(--fast-time) var(--ease-out);
 		transition-property: opacity, transform, visibility;
 		.button:not(:focus) + &:not(:focus-within) {
-			transform: translateY(calc(var(--3x-small) * -1));
+			transform: translateY(var(--3x-small));
 			visibility: hidden;
 			opacity: 0;
 		}
