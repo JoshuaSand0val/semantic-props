@@ -60,17 +60,25 @@
 		justify-content: start;
 		align-items: stretch;
 		gap: var(--x-small);
-		overflow: auto;
 	}
 
 	.palette {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(var(--smallest-container), 100%), 1fr));
-		gap: var(--4x-small);
-		inline-size: min(100%, var(--medium-container));
+		inline-size: min(100%, var(--smaller-container));
+		border-radius: var(--smallest-radius);
+		border: 1px solid var(--foreground-color);
+		background-color: var(--middleground-color);
 		margin-block: 0;
 		overflow: hidden;
 		flex: 1 0 auto;
+		background: conic-gradient(
+			var(--middleground-color) 90deg,
+			var(--foreground-color) 90deg 180deg,
+			var(--middleground-color) 180deg 270deg,
+			var(--foreground-color) 270deg
+		);
+		background-size: var(--large) var(--large);
 	}
 
 	.color {
@@ -80,7 +88,6 @@
 		align-content: start;
 		gap: 0 var(--x-small);
 		min-inline-size: min-content;
-		border: 1px solid var(--foreground-color);
 		background-color: var(--prop);
 		padding-inline: var(--x-small);
 		padding-block: var(--2x-small);
