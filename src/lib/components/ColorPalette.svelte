@@ -64,14 +64,22 @@
 	}
 
 	.palette {
-		display: flex;
-		flex-flow: row wrap;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(var(--smaller-container), 100%), 1fr));
 		inline-size: min(100%, var(--medium-container));
 		border-radius: var(--smaller-radius);
 		border: 1px solid var(--foreground-color);
+		background-color: var(--middleground-color);
 		margin-block: 0;
 		overflow: hidden;
 		flex: 1 0 auto;
+		background: conic-gradient(
+			var(--middleground-color) 90deg,
+			var(--foreground-color) 90deg 180deg,
+			var(--middleground-color) 180deg 270deg,
+			var(--foreground-color) 270deg
+		);
+		background-size: var(--large) var(--large);
 	}
 
 	.color {
@@ -84,7 +92,6 @@
 		background-color: var(--prop);
 		padding-inline: var(--x-small);
 		padding-block: var(--2x-small);
-		flex: 1 0 0;
 	}
 
 	.name, .prop {
@@ -100,7 +107,6 @@
 	}
 
 	.prop {
-		white-space: nowrap;
 		font-family: var(--mono-family);
 		opacity: var(--high-opacity);
 	}
