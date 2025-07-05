@@ -69,15 +69,15 @@
 		inline-size: min(100%, var(--medium-container));
 		border-radius: var(--smaller-radius);
 		border: 1px solid var(--foreground-color);
-		background-color: var(--middleground-color);
+		background-color: var(--gray-950);
 		margin-block: 0;
 		overflow: hidden;
 		flex: 1 0 auto;
 		background: conic-gradient(
-			var(--middleground-color) 90deg,
-			var(--foreground-color) 90deg 180deg,
-			var(--middleground-color) 180deg 270deg,
-			var(--foreground-color) 270deg
+			var(--gray-950) 90deg,
+			var(--gray-900) 90deg 180deg,
+			var(--gray-950) 180deg 270deg,
+			var(--gray-900) 270deg
 		);
 		background-size: var(--large) var(--large);
 	}
