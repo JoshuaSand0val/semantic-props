@@ -68,17 +68,9 @@
 		inline-size: min(100%, var(--smaller-container));
 		border-radius: var(--smallest-radius);
 		border: 1px solid var(--foreground-color);
-		background-color: var(--middleground-color);
 		margin-block: 0;
 		overflow: hidden;
 		flex: 1 0 auto;
-		background: conic-gradient(
-			var(--middleground-color) 90deg,
-			var(--foreground-color) 90deg 180deg,
-			var(--middleground-color) 180deg 270deg,
-			var(--foreground-color) 270deg
-		);
-		background-size: var(--large) var(--large);
 	}
 
 	.color {
@@ -91,6 +83,9 @@
 		background-color: var(--prop);
 		padding-inline: var(--x-small);
 		padding-block: var(--2x-small);
+		&:last-child {
+			grid-column: 1 / -1;
+		}
 	}
 
 	.name, .prop {
