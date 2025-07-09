@@ -3,8 +3,8 @@
 	import Portal from "$lib/components/Portal.svelte";
 </script>
 
-<Divider title="Built using Semantic Props" id="builtusing" open={false}>
-	<div class="grid scroll">
+<Divider title="Built using Semantic Props" id="builtusing" open={true}>
+	<div class="grid">
 		<Portal
 			title="Hey, Jes!"
 			description="Portfolio website by Jess Sandoval."
@@ -22,31 +22,20 @@
 			description="Built with Semantic Props."
 			url="#builtusing"
 		/>
-		<Portal
-			title="Coming Soon"
-			description="Built with Semantic Props."
-			url="#builtusing"
-		/>
 	</div>
 </Divider>
 
 <style>
-	@import "$lib/styles/scroll.css";
-
 	.grid {
-		display: flex;
-		flex-flow: row nowrap;
-		inline-size: 100vi;
+		--grid-size: var(--smallest-container);
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-size), 100%), 1fr));
 		gap: var(--large);
-		scroll-snap-type: inline mandatory;
-		padding-inline: calc((100vi - 100%) * 0.5);
-		padding-block: var(--3x-small);
-		margin-inline: calc((100vi - 100%) * -0.5);
-		margin-block: var(--2x-large);
-		:global(& > *) {
-			scroll-snap-align: center;
-			inline-size: clamp(min(100%, var(--smaller-container)), 30vi, var(--medium-container));
-			flex: 0 0 auto;
+		@media (--tablet) {
+			--grid-size: var(--smaller-container);
+		}
+		@media (--laptop) {
+			--grid-size: var(--small-container);
 		}
 	}
 </style>
