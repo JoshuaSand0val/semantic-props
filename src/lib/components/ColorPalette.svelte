@@ -64,7 +64,7 @@
 		display: flex;
 		flex-flow: row wrap;
 		gap: var(--4x-small);
-		inline-size: min(100%, var(--smaller-container));
+		inline-size: min(100%, var(--small-container));
 		margin-block: 0;
 		overflow: hidden;
 		flex: 1 0 auto;
