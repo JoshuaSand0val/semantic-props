@@ -33,9 +33,13 @@
 		.header {
 			display: block;
 			font-family: var(--body-family);
-			line-height: var(--normal-line);
+			font-size: var(--small);
+			line-height: var(--short-line);
 			margin-inline: var(--3x-small);
 			margin-block: var(--small) 0;
+			@media (--tablet) {
+				font-size: var(--medium);
+			}
 			.title, .description {
 				display: inline;
 			}
