@@ -57,7 +57,7 @@
 		flex-flow: row wrap;
 		justify-content: start;
 		align-items: stretch;
-		gap: var(--x-small);
+		gap: var(--2x-small);
 	}
 
 	.palette {
