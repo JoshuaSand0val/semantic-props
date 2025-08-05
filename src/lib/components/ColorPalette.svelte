@@ -54,10 +54,12 @@
 <style>
 	.container {
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: row nowrap;
 		justify-content: start;
 		align-items: stretch;
 		gap: var(--2x-small);
+		scroll-snap-type: inline mandatory;
+		overflow: auto;
 	}
 
 	.palette {
@@ -66,6 +68,7 @@
 		gap: var(--4x-small);
 		inline-size: min(100%, var(--small-container));
 		margin-block: 0;
+		scroll-snap-align: center;
 		overflow: hidden;
 		flex: 1 0 auto;
 	}
