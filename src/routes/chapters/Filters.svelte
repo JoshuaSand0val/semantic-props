@@ -64,7 +64,7 @@
 		position: relative;
 		display: flex;
 		flex-flow: column nowrap;
-		gap: var(--3x-large);
+		gap: var(--2x-large);
 		margin-block: var(--3x-large);
 	}
 
