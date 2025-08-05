@@ -27,15 +27,16 @@
 
 <style>
 	.grid {
-		--grid-size: var(--smallest-container);
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-size), 100%), 1fr));
+		display: flex;
+		flex-flow: row nowrap;
 		gap: var(--large);
-		@media (--tablet) {
-			--grid-size: var(--smaller-container);
-		}
-		@media (--laptop) {
-			--grid-size: var(--small-container);
+		scroll-snap-type: inline mandatory;
+		overflow-x: auto;
+		overflow-y: hidden;
+		:global(& > *) {
+			scroll-snap-align: center;
+			inline-size: min(100%, var(--small-container));
+			flex: 0 0 auto;
 		}
 	}
 </style>
