@@ -49,7 +49,7 @@
 		</span>
 		{/each}
 	</div>
-	<div class="container-column scroll">
+	<div class="container-column">
 		{#each Object.entries(containers) as [container, prop]}
 		<span class="container" style:--prop={`var(${prop})`}>
 			<strong class="title">{container}</strong>
@@ -60,18 +60,13 @@
 </Divider>
 
 <style>
-	@import "$lib/styles/scroll.css";
-
 	.size-grid, .container-column {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem, var(--smallest-container)), 1fr));
 		align-items: end;
 		gap: var(--x-small) var(--medium);
-		inline-size: 100vi;
-		padding-inline: calc((100vi - 100%) * 0.5);
-		padding-block: 1px;
-		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--3x-large);
+		overflow: auto;
 	}
 
 	.container-column {
@@ -91,21 +86,14 @@
 			content: "";
 			display: block;
 			block-size: min(var(--large), var(--larger));
-			outline: 1px dashed var(--low-contrast-color);
-			border-radius: var(--smallest-radius);
+			border: 1px dotted var(--low-contrast-color);
 			box-shadow: var(--lightest-box-shadow);
 			background-image: linear-gradient(
-				var(--accent-300),
-				var(--accent-500)
+				var(--high-contrast-color),
+				var(--low-contrast-color)
 			);
 			background-size: var(--prop) 100%;
 			margin-block: var(--x-small);
-			@media (--dark) {
-				background-image: linear-gradient(
-					var(--accent-400),
-					var(--accent-600)
-				);
-			}
 		}
 	}
 

@@ -1,8 +1,0 @@
-.scroll {
-	display: block;
-	scrollbar-color: var(--low-contrast-color) var(--background-color);
-	overflow: auto;
-	&:not(:hover, :focus-within) {
-		scrollbar-width: none;
-	}
-}
