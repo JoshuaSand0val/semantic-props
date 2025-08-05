@@ -35,7 +35,7 @@
 		overflow-y: hidden;
 		:global(& > *) {
 			scroll-snap-align: center;
-			inline-size: min(100%, var(--small-container));
+			inline-size: min(100%, var(--smaller-container));
 			flex: 0 0 auto;
 		}
 	}
