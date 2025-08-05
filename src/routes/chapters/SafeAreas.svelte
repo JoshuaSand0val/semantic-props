@@ -54,7 +54,7 @@
 		<Link target="_blank" to="https://developer.mozilla.org/en-US/docs/Web/CSS/env#values">Learn More.</Link><br>
 		The following demo modifies the values for presentation purposes.
 	</Paragraph>
-	<div class="container scroll">
+	<div class="container">
 		{#each Object.entries(safeAreas) as [name, values]}
 		<article class="demo">
 			<div class="display" style:--demo={values.demo}>
@@ -67,8 +67,6 @@
 </Divider>
 
 <style>
-	@import "$lib/styles/scroll.css";
-
 	.container {
 		--safe-top: var(--medium);
 		--safe-right: var(--medium);
@@ -86,11 +84,10 @@
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: start;
-		padding-inline: calc((100vi - 100%) * 0.5);
-		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--2x-large);
 		gap: var(--large);
 		scroll-snap-type: inline mandatory;
+		overflow: auto;
 	}
 
 	.demo {
