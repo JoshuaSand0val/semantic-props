@@ -1,9 +1,0 @@
-/* Semantic Props for CSS table properties. */
-
-:root {
-	/* Caption-Side: */
-	--caption-side: top;
-
-	/* Empty-Cells: */
-	--empty-cells: show;
-}
