@@ -6,13 +6,13 @@
 :root {
 	/* White/Black: */
 	--white: white;
-	--black: oklch(0.15 0 0);
+	--black: black;
 
 	/* Color Weights: */
 	@for $weight from 50 to 950 by 50 {
 		/* Calculate Lightness and Chroma: */
 		$percentage: calc(1 - ($weight - 50) / (950 - 50));
-		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
+		$l: calc(0.05 + (0.95 - 0.05) * $percentage);
 		$c: calc(sin(l * pi) * c);
 
 		/* Colors + Gray: */
