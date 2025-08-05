@@ -45,6 +45,7 @@
 	.item {
 		display: block;
 		break-inside: avoid;
+		text-align: center;
 		margin-block-end: var(--3x-large);
 	}
 
@@ -54,7 +55,6 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: center;
-		text-align: center;
 		font-size: var(--medium);
 		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
