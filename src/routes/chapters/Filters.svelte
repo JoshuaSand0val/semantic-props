@@ -44,7 +44,7 @@
 	<Paragraph>Semantic Props provides CSS <code>filter</code> values for various types of media.</Paragraph>
 	<div class="container">
 		{#each [blur, brightness, contrast, saturation] as filter}
-		<article class="wrapper scroll">
+		<article class="wrapper">
 			{#each Object.entries(filter) as [title, prop]}			
 			<section class="content">
 				<span class="demo" style:--prop={`var(${prop})`}>
@@ -60,8 +60,6 @@
 </Divider>
 
 <style>
-	@import "$lib/styles/scroll.css";
-
 	.container {
 		position: relative;
 		display: flex;
@@ -73,11 +71,9 @@
 	.wrapper {
 		display: flex;
 		flex-flow: row nowrap;
-		inline-size: 100vi;
 		gap: inherit;
-		padding-inline: calc((100vi - 100%) * 0.5);
-		margin-inline: calc((100vi - 100%) * -0.5);
 		scroll-snap-type: inline mandatory;
+		overflow: auto;
 	}
 
 	.content {
@@ -97,9 +93,8 @@
 		display: block;
 		inline-size: 100%;
 		aspect-ratio: var(--square-ratio);
-		border-radius: var(--large-radius);
 		box-shadow: var(--lightest-box-shadow);
-		margin-block-end: var(--x-small);
+		margin-block-end: var(--2x-small);
 		overflow: hidden;
 		img {
 			display: block;
@@ -107,6 +102,7 @@
 			block-size: 100%;
 			object-fit: cover;
 			object-position: center;
+			transform: var(--large-scale);
 			filter: var(--prop);
 		}
 	}
