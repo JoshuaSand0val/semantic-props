@@ -155,14 +155,20 @@
 
 	.container:is(.families, .weights, .letter-spacing, .line-height, .word-spacing) {
 		--column-width: var(--smallest-container);
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--column-width)), 1fr));
+		display: flex;
+		flex-flow: row nowrap;
 		gap: var(--large) var(--3x-large);
+		scroll-snap-type: inline mandatory;
+		overflow: auto;
 		@media (--tablet) {
 			--column-width: var(--smaller-container);
 		}
 		@media (--desktop) {
 			--column-width: var(--small-container);
+		}
+		:global(& > *) {
+			flex: 0 0 min(100%, var(--column-width));
+			scroll-snap-align: center;
 		}
 	}
 
