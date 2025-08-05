@@ -13,7 +13,7 @@
 
 <Divider title="Aspect Ratios" id="aspectratios">
 	<Paragraph>Semantic Props provides CSS <code>aspect-ratio</code> values for various types of media.</Paragraph>
-	<div class="container scroll">
+	<div class="container">
 		{#each Object.entries(ratios) as [ratio, prop]}
 		<div class="item">
 			<span class="ratio" style:--prop={`var(${prop})`}>{ratio}</span>
@@ -24,16 +24,12 @@
 </Divider>
 
 <style>
-	@import "$lib/styles/scroll.css";
-
 	.container {
 		display: block;
 		column-count: 1;
 		column-gap: var(--large);
 		column-fill: balance;
-		padding-inline: calc((100vi - 100%) * 0.5);
 		padding-block: var(--3x-small);
-		margin-inline: calc((100vi - 100%) * -0.5);
 		margin-block: var(--2x-large);
 		@media (--phone) {
 			column-count: 2;
@@ -58,6 +54,7 @@
 		flex-flow: column nowrap;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		font-size: var(--medium);
 		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
@@ -66,6 +63,8 @@
 		background-color: var(--background-color);
 		background-clip: content-box;
 		color: var(--low-contrast-color);
+		padding: var(--medium);
+		margin-inline: auto;
 		overflow: hidden;
 		@media (--dark) {
 			border-color: var(--gray-700);			
@@ -80,10 +79,9 @@
 
 	.prop {
 		display: block;
-		text-align: center;
 		font-family: var(--mono-family);
 		font-size: var(--small);
-		color: var(--medium-contrast-color);
+		color: var(--low-contrast-color);
 		margin-block: var(--x-small);
 		@media (--phone) {
 			font-size: var(--medium);
