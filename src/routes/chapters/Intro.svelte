@@ -6,7 +6,7 @@
 
 <header class="container">
 	<Divider title="Introduction to Semantic Props" id="intro">
-		<Heading level={4}>Stylesheets made simple.</Heading>
+		<Heading level={4}>Stylesheet values made simple.</Heading>
 		<Heading level={1}>
 			<span class="title">Semantic Props</span>
 		</Heading>

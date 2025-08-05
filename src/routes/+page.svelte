@@ -12,7 +12,7 @@
 </script>
 
 <svelte:head>
-	<title>Semantic Props: Stylesheets made simple.</title>
+	<title>Semantic Props: Stylesheet values made simple.</title>
 </svelte:head>
 
 <Nav chapters={{
