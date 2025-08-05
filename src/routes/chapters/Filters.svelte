@@ -93,6 +93,7 @@
 		display: block;
 		inline-size: 100%;
 		aspect-ratio: var(--square-ratio);
+		border-radius: var(--smallest-radius);
 		box-shadow: var(--lightest-box-shadow);
 		margin-block-end: var(--2x-small);
 		overflow: hidden;
