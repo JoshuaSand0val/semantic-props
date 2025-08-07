@@ -128,7 +128,7 @@
 			background-color: var(--accent-50);
 			color: var(--accent-400);
 			@media (--dark) {
-				background-color: var(--accent-950);
+				background-color: var(--accent-900);
 			}
 		}
 	}
