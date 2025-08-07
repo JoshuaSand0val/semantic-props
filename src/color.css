@@ -44,9 +44,9 @@
 	--low-contrast-color: var(--gray-700);
 
 	@media (--dark) {
-		--background-color: var(--black);
-		--middleground-color: var(--gray-950);
-		--foreground-color: var(--gray-900);
+		--background-color: var(--gray-950);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-850);
 
 		--high-contrast-color: var(--gray-100);
 		--medium-contrast-color: var(--gray-200);
