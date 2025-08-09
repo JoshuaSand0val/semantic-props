@@ -73,12 +73,16 @@
 	.palette {
 		display: flex;
 		flex-flow: row wrap;
-		gap: var(--4x-small);
-		inline-size: min(100%, var(--small-container));
+		inline-size: min(100%, var(--medium-container));
+		border: 1px solid var(--gray-150);
+		border-radius: var(--smallest-radius);
 		margin-block: 0;
 		scroll-snap-align: center;
 		overflow: hidden;
 		flex: 1 0 auto;
+		@media (--dark) {
+			border-color: var(--gray-800);
+		}
 	}
 
 	.color {
