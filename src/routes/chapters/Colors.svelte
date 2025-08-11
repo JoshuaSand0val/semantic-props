@@ -73,7 +73,7 @@
 	.palette {
 		display: flex;
 		flex-flow: row wrap;
-		inline-size: min(100%, var(--medium-container));
+		inline-size: min(100%, var(--small-container));
 		border: 1px solid var(--gray-150);
 		border-radius: var(--smallest-radius);
 		margin-block: 0;
