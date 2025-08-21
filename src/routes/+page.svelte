@@ -9,6 +9,7 @@
     import Intro from "./chapters/Intro.svelte";
     import SafeAreas from "./chapters/SafeAreas.svelte";
     import Sizes from "./chapters/Sizes.svelte";
+	import Timing from "./chapters/Timing.svelte";
 </script>
 
 <svelte:head>
@@ -23,7 +24,8 @@
 	"#fonts": "Font Sizes and Styles",
 	"#aspectratios": "Aspect Ratios",
 	"#safeareas": "Display Safe-Areas",
-	"#sizes": "Containers and Spacing Sizes"
+	"#sizes": "Containers and Spacing Sizes",
+	"#timing": "Animation Timing and Easing"
 }} />
 
 <Intro />
@@ -34,3 +36,4 @@
 <AspectRatios />
 <SafeAreas />
 <Sizes />
+<Timing />
