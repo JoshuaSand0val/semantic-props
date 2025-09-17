@@ -92,6 +92,7 @@
 		align-content: start;
 		gap: 0 var(--x-small);
 		inline-size: var(--smallest-container);
+		line-height: var(--short-line);
 		background-color: var(--prop);
 		padding-inline: var(--x-small);
 		padding-block: var(--2x-small);
