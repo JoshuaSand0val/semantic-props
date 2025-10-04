@@ -1,0 +1,29 @@
+:root {
+	display: block;
+	font-family: var(--body-family);
+	font-weight: var(--regular-weight);
+	line-height: var(--normal-line);
+	word-spacing: var(--normal-word);
+	letter-spacing: var(--normal-letter);
+	scroll-behavior: smooth;
+	background-color: var(--background-color);
+	color: var(--high-contrast-color);
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+:root, body, .App {
+	min-block-size: 100vh;
+	min-block-size: 100dvb;
+}
+
+.App {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: start;
+	align-items: stretch;
+	.content {
+		display: block;
+		flex: 1 0 auto;
+	}
+}

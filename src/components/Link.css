@@ -1,0 +1,15 @@
+.Link {
+	color: var(--accent-500);
+	&:active {
+		color: var(--accent-550);
+	}
+	&:not(:hover, :focus) {
+		text-decoration: none;
+	}
+	@media (--dark) {
+		color: var(--accent-300);
+		&:active {
+			color: var(--accent-350);
+		}
+	}
+}

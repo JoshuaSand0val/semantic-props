@@ -1,0 +1,17 @@
+.Footer {
+	display: block;
+	border-block-start: 1px var(--border-style) var(--middleground-color);
+	padding-inline: var(--margin-size);
+	padding-block: var(--medium);
+	.wrapper {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: start;
+		justify-content: space-between;
+		font-size: var(--small);
+		color: var(--low-contrast-color);
+		gap: var(--3x-small) 1ch;
+		margin-inline: auto;
+		overflow: hidden;
+	}
+}
