@@ -1,6 +1,7 @@
 .Footer {
 	display: block;
-	border-block-start: 1px var(--border-style) var(--middleground-color);
+	background-color: var(--background-color);
+	border-block-start: 1px var(--border-style) var(--foreground-color);
 	padding-inline: var(--margin-size);
 	padding-block: var(--medium);
 	.wrapper {
