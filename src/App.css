@@ -27,3 +27,33 @@
 		flex: 1 0 auto;
 	}
 }
+
+.App {
+	position: relative;
+	overflow: clip;
+	&::after {
+		content: "";
+		position: absolute;
+		z-index: var(--z-bottom);
+		inset: 0;
+		display: block;
+		inline-size: 100%;
+		block-size: var(--medium-container);
+		background-image: linear-gradient(
+			var(--red-500),
+			var(--orange-500),
+			var(--yellow-500),
+			var(--green-500),
+			var(--blue-500),
+			var(--indigo-500),
+			var(--violet-500)
+		);
+		transform: rotate(13deg) translateY(-50%) translate(-16px);
+		transform-origin: top left;
+		opacity: var(--lower-opacity);
+		filter: var(--heaviest-blur);
+		@media (--dark) {
+			opacity: var(--lowest-opacity);
+		}
+	}
+}
