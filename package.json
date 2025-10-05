@@ -16,6 +16,7 @@
     "semantic-props": "github:joshuasand0val/semantic-props#v2.0.0"
   },
   "devDependencies": {
+    "@csstools/postcss-global-data": "^3.1.0",
     "@eslint/js": "^9.36.0",
     "@types/node": "^24.6.0",
     "@types/react": "^19.1.16",

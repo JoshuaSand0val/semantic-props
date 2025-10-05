@@ -1,0 +1,42 @@
+
+.Header {
+	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: var(--z-sticky);
+	display: block;
+	font-family: var(--display-family);
+	text-shadow: 0 1px 3px var(--background-color);
+	color: var(--high-contrast-color);
+	padding-inline: var(--margin-size);
+	padding-block: var(--medium);
+	h4, h6 {
+		margin: 0;
+	}
+	h6 {
+		font-size: var(--x-small);
+		font-weight: var(--thin-weight);
+		color: var(--low-contrast-color);
+	}
+	h4 {
+		font-size: var(--large);
+		strong {
+			font-weight: var(--regular-weight);
+		}
+		em {
+			font-style: normal;
+			font-weight: var(--light-weight);
+			color: var(--medium-contrast-color);
+		}
+	}
+	&::before {
+		position: absolute;
+		inset: 0;
+		z-index: -1;
+		content: "";
+		mask-mode: alpha;
+		mask-image: linear-gradient(to bottom, black 80%, transparent);
+		mask-size: 100% 100%;
+		backdrop-filter: var(--light-blur);
+	}
+}
