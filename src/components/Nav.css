@@ -2,31 +2,49 @@
 	display: block;
 	color: var(--medium-contrast-color);
 
-	.control {
-		display: block;
-		font-size: var(--x-large);
-		padding: var(--2x-small);
-		line-height: 0;
-		cursor: pointer;
+	&, .links {
 		float: right;
 	}
 
+	.control {
+		display: block;
+		font-size: var(--x-large);
+		border: 1px var(--border-style) var(--foreground-color);
+		border-radius: var(--largest-radius);
+		background-color: var(--background-color);
+		padding: var(--x-small);
+		line-height: 0;
+		box-shadow: var(--lightest-box-shadow);
+		transition: all var(--fast-time) var(--ease-in-out);
+		cursor: pointer;
+		&:focus, &:has(+ .navigation:focus-within) {
+			border-color: var(--gray-300);
+			background-color: var(--middleground-color);
+			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
+			@media (--dark) {
+				border-color: var(--gray-700);
+			}
+		}
+	}
+
 	.links {
-		position: fixed;
-		z-index: var(--z-fixed);
-		inset: auto 0 0 50%;
-		transform: translateX(-50%);
-		inline-size: min(100%, var(--medium-container));
-		max-block-size: min(90vb, var(--larger-container));
+		position: relative;
+		z-index: var(--z-absolute);
+		inline-size: min(80vw, var(--small-container));
+		border-radius: var(--smaller-radius);
 		background-color: var(--background-color);
 		box-shadow: var(--lighter-box-shadow);
 		outline: 1px var(--border-style) var(--foreground-color);
 		font-family: var(--display-family);
-		padding-block-end: var(--medium);
-		overflow: auto;
+		padding-block-end: var(--x-small);
+		margin-inline-start: calc(-1 * var(--small-container));
+		margin-block-start: var(--x-small);
+		overflow: hidden;
+		transform-origin: top right;
 		transition: all var(--fast-time) var(--ease-out);
 		.control:not(:focus) + &:not(:focus-within) {
-			transform: translate(-50%, var(--large));
+			filter: var(--lighter-blur);
+			transform: translateY(calc(-1 * var(--x-small))) var(--small-scale-x) var(--smaller-scale-y);
 			visibility: hidden;
 			opacity: 0;
 		}
@@ -34,10 +52,9 @@
 
 	.backdrop {
 		position: fixed;
-		z-index: calc(var(--z-fixed) - 1);
+		z-index: calc(var(--z-absolute) - 1);
 		inset: 0;
 		transition: opacity var(--normal-time) var(--ease-out);
-		backdrop-filter: var(--lightest-blur) var(--low-brightness);
 		pointer-events: none;
 		opacity: 0;
 		.control:focus ~ &, .links:focus-within + & {
