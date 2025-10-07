@@ -17,7 +17,7 @@
 		box-shadow: var(--lightest-box-shadow);
 		transition: all var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
-		&:focus, &:has(+ .navigation:focus-within) {
+		&:focus, &:has(+ .links:focus-within) {
 			border-color: var(--gray-300);
 			background-color: var(--middleground-color);
 			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
