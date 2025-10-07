@@ -1,5 +1,6 @@
 .Nav {
 	display: block;
+	block-size: 0;
 	color: var(--medium-contrast-color);
 
 	&, .links {
@@ -7,6 +8,8 @@
 	}
 
 	.control {
+		position: relative;
+		z-index: var(--z-relative);
 		display: block;
 		font-size: var(--x-large);
 		border: 1px var(--border-style) var(--foreground-color);
