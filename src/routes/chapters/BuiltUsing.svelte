@@ -37,6 +37,10 @@
 			scroll-snap-align: center;
 			inline-size: min(100%, var(--smaller-container));
 			flex: 0 0 auto;
+			transition: inline-size var(--fast-time) var(--ease-in);
+			@media (--laptop) {
+				inline-size: min(100%, var(--small-container));
+			}
 		}
 	}
 </style>
