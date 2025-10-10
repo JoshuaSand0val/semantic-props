@@ -38,7 +38,7 @@
 		color: var(--low-contrast-color);
 		padding-block-end: var(--2x-small);
 		padding-inline-start: 1px;
-		margin-block: var(--x-large);
+		margin-block: var(--3x-large);
 		&::before {
 			content: "‹";
 			margin-inline: 1ch;
