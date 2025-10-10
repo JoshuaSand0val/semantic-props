@@ -56,6 +56,7 @@
 		transition-behavior: allow-discrete;
 		[data-open="true"] & {
 			display: block;
+			height: auto;
 			height: calc-size(auto, size);
 			@starting-style {
 				height: 0;
