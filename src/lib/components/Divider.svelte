@@ -1,31 +1,35 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
 
-	let { children, title, id, open = true }: {
-		children: Snippet,
+	let { title, children, open = true, id }: {
 		title: string,
-		id: string,
-		open?: boolean
+		children: Snippet,
+		open?: boolean,
+		id?: string
 	} = $props();
+
+	let opened: boolean = $state(open);
 </script>
 
-<details open={open} id={id}>
-	<summary>{title}</summary>
+<article class="container" data-open={opened} id={id}>
+	<button class="summary" onclick={() => (opened = !opened)}>
+		{title}
+	</button>
 	<div class="content">
 		{@render children()}
 	</div>
-</details>
+</article>
 
 <style>
-	details {
+	.container {
 		display: block;
-		margin-block: var(--3x-large) var(--4x-large);
+		overflow: clip;
 	}
 
-	summary {
-		display: flex;
-		flex-flow: row wrap;
-		gap: 0 1ch;
+	.summary {
+		all: unset;
+		display: block;
+		width: 100%;
 		font-size: var(--large);
 		font-family: var(--display-family);
 		font-weight: var(--light-weight);
@@ -34,22 +38,28 @@
 		color: var(--low-contrast-color);
 		padding-block-end: var(--2x-small);
 		padding-inline-start: 1px;
-		list-style: none;
-		&::marker,
-		&::-webkit-details-marker {
-			display: none;
-		}
-		&::after {
+		margin-block: var(--x-large);
+		&::before {
 			content: "‹";
 			margin-inline: 1ch;
-			margin-inline-start: auto;
+			float: right;
 		}
-		details[open] &::after {
+		[data-open="true"] &::before {
 			transform: rotate(-90deg);
 		}
 	}
 
 	.content {
-		margin-block: var(--medium) var(--large);
+		display: none;
+		height: 0;
+		transition: all var(--fast-time) var(--ease-in);
+		transition-behavior: allow-discrete;
+		[data-open="true"] & {
+			display: block;
+			height: calc-size(auto, size);
+			@starting-style {
+				height: 0;
+			}
+		}
 	}
 </style>
