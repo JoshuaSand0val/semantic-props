@@ -71,7 +71,7 @@
 		position: absolute;
 		z-index: var(--z-top);
 		bottom: calc(100% + var(--x-small));
-		inline-size: min(100%, var(--smaller-container));
+		inline-size: min(100%, var(--small-container));
 		max-block-size: min(60vb, var(--medium-container));
 		border-radius: var(--smaller-radius);
 		border: 1px var(--border-style) var(--foreground-color);
@@ -79,10 +79,12 @@
 		box-shadow: var(--lighter-box-shadow);
 		font-family: var(--display-family);
 		overflow: auto;
+		transform-origin: bottom right;
 		transition: all var(--fast-time) var(--ease-out);
 		transition-property: opacity, transform, visibility;
 		.button:not(:focus) + &:not(:focus-within) {
-			transform: translateY(var(--3x-small));
+			filter: var(--lighter-blur);
+			transform: translateY(var(--x-small)) var(--small-scale-x) var(--smaller-scale-y);
 			visibility: hidden;
 			opacity: 0;
 		}
