@@ -1,10 +1,10 @@
 <script lang="ts">
-    import Body from "$lib/components/Body.svelte";
+    import Content from "$lib/components/Content.svelte";
 	import Link from "$lib/components/Link.svelte";
 </script>
 
 <footer class="container">
-	<Body>
+	<Content>
 		<div class="wrapper">
 			<span class="copyright">
 				&copy; {new Date().getFullYear()}
@@ -18,7 +18,7 @@
 				<Link to="#top">Scroll to Top ↑</Link>
 			</span>
 		</div>
-	</Body>
+	</Content>
 </footer>
 
 <style>

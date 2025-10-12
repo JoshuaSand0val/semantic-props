@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Body from "$lib/components/Body.svelte";
+    import Content from "$lib/components/Content.svelte";
 
 	let { chapters }: {
 		chapters: Record<string, string>
@@ -7,7 +7,7 @@
 </script>
 
 <div class="container">
-	<Body>
+	<Content>
 		<aside class="wrapper">
 			<span tabindex="0" role="button" class="button" aria-label="Main Navigation Menu">
 				<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
@@ -21,7 +21,7 @@
 			</nav>
 			<div class="backdrop"></div>
 		</aside>
-	</Body>
+	</Content>
 </div>
 
 <style>

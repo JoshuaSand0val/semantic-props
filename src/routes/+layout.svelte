@@ -1,7 +1,7 @@
 <script>
 	import "../app.css";
 
-    import Body from "$lib/components/Body.svelte";
+    import Content from "$lib/components/Content.svelte";
     import Footer from "$lib/components/Footer.svelte";
 
 	let { children } = $props();
@@ -9,9 +9,9 @@
 
 <div class="container">
 	<main class="content">
-		<Body>
+		<Content>
 			{@render children()}
-		</Body>
+		</Content>
 	</main>
 	<Footer />
 </div>
@@ -19,11 +19,6 @@
 <style>
 	:global(:root) {
 		display: block;
-		font-family: var(--body-family);
-		font-weight: var(--regular-weight);
-		line-height: var(--normal-line);
-		word-spacing: var(--normal-word);
-		letter-spacing: var(--normal-letter);
 		scroll-behavior: smooth;
 		background-color: var(--background-color);
 		color: var(--high-contrast-color);
