@@ -17,7 +17,7 @@
 		{#each Object.entries(ratios) as [ratio, prop]}
 		<div class="item">
 			<span class="ratio" style:--prop={prop}>{ratio}</span>
-			<code class="prop">var({prop})</code>
+			<code class="prop">{prop}</code>
 		</div>
 		{/each}
 	</div>
