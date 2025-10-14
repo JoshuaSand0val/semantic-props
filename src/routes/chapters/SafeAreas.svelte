@@ -1,7 +1,6 @@
 <script>
     import Divider from "$lib/components/Divider.svelte";
     import Link from "$lib/components/Link.svelte";
-    import Paragraph from "$lib/components/Paragraph.svelte";
 
 	/** Safe-Area Semantic Props mapped to appropriate CSS `margin`. */
 	const safeAreas = {
@@ -49,11 +48,11 @@
 </script>
 
 <Divider title="Display Safe-Areas" id="safeareas">
-	<Paragraph>
+	<p>
 		Semantic Props provides CSS values for irregular display safe-areas.
 		<Link target="_blank" to="https://developer.mozilla.org/en-US/docs/Web/CSS/env#values">Learn More.</Link><br>
 		The following demo modifies the values for presentation purposes.
-	</Paragraph>
+	</p>
 	<div class="container">
 		{#each Object.entries(safeAreas) as [name, values]}
 		<article class="demo">

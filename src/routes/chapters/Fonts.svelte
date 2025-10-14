@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Divider from "$lib/components/Divider.svelte";
-    import Paragraph from "$lib/components/Paragraph.svelte";
 
 	const sizes: Record<string, string> = {
 		"Extra Large (9x)": "--9x-large",
@@ -68,9 +67,7 @@
 </script>
 
 <Divider title="Font Sizes and Styles" id="fonts">
-	<Paragraph>
-		Semantic Props provides various values for styling fonts.
-	</Paragraph>
+	<p>Semantic Props provides various values for styling fonts.</p>
 	<div class="container sizes">
 		{#each Object.entries(sizes) as [size, prop]}
 		<article>

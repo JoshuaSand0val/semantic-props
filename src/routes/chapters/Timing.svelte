@@ -1,9 +1,9 @@
 <script lang="ts">
+	import Code from "$lib/components/Code.svelte";
     import Divider from "$lib/components/Divider.svelte";
-    import Paragraph from "$lib/components/Paragraph.svelte";
 </script>
 
 <Divider title="Animation Timing and Easing" id="timing">
-	<Paragraph>Semantic Props provides CSS <code>animation</code> values for timing and easing.</Paragraph>
+	<p>Semantic Props provides CSS <Code lang="css" code="animation" /> values for timing and easing.</p>
 </Divider>
 

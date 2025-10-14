@@ -1,6 +1,5 @@
 <script lang="ts">
     import Divider from "$lib/components/Divider.svelte";
-	import Paragraph from "$lib/components/Paragraph.svelte";
 
 	const containers: Record<string, string>= {
 		"Smallest Container": "--smallest-container",
@@ -38,9 +37,7 @@
 </script>
 
 <Divider title="Containers and Spacing Sizes" id="sizes">
-	<Paragraph>
-		Semantic Props provides containers alongside sizes.
-	</Paragraph>
+	<p>Semantic Props provides containers alongside sizes.</p>
 	<div class="size-grid">
 		{#each Object.entries(sizes) as [size, prop]}
 		<span class="size" style:--prop={`var(${prop})`}>

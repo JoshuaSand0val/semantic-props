@@ -1,6 +1,5 @@
 <script lang="ts">
     import Divider from "$lib/components/Divider.svelte";
-    import Paragraph from "$lib/components/Paragraph.svelte";
 
 	/** Semantic Props color palettes. */
 	const palettes: Record<string, `var(${string})`>[] = [{
@@ -42,9 +41,7 @@
 </script>
 
 <Divider title="Color Palette" id="colors">
-	<Paragraph>
-		Semantic Props provides a simple but expansive color palette.
-	</Paragraph>
+	<p>Semantic Props provides a simple but expansive color palette.</p>
 	<div class="container">
 		{#each palettes as palette}
 		<dl class="palette">

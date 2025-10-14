@@ -1,6 +1,6 @@
 <script lang="ts">
+	import Code from "$lib/components/Code.svelte";
     import Divider from "$lib/components/Divider.svelte";
-    import Paragraph from "$lib/components/Paragraph.svelte";
 
 	const blur: Record<string, string> = {
 		"Lightest Blur": "--lightest-blur",
@@ -41,7 +41,7 @@
 </script>
 
 <Divider title="Filter Effects" id="filters">
-	<Paragraph>Semantic Props provides CSS <code>filter</code> values for various types of media.</Paragraph>
+	<p>Semantic Props provides CSS <Code lang="css" code="filter" /> values for various types of media.</p>
 	<div class="container">
 		{#each [blur, brightness, contrast, saturation] as filter}
 		<article class="wrapper">

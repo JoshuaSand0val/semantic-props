@@ -1,7 +1,6 @@
 <script lang="ts">
 	import Code from "$lib/components/Code.svelte";
     import Divider from "$lib/components/Divider.svelte";
-    import Paragraph from "$lib/components/Paragraph.svelte";
 
 	const ratios = {
 		"Square Ratio": "var(--square-ratio)",
@@ -13,7 +12,7 @@
 </script>
 
 <Divider title="Aspect Ratios" id="aspectratios">
-	<Paragraph>Semantic Props provides CSS <Code lang="CSS" code="aspect-ratio" /> values for various types of media.</Paragraph>
+	<p>Semantic Props provides CSS <Code lang="css" code="aspect-ratio" /> values for various types of media.</p>
 	<div class="container">
 		{#each Object.entries(ratios) as [ratio, prop]}
 		<div class="item">
