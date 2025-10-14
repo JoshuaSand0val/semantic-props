@@ -42,7 +42,7 @@
 
 	.container::after {
 		content: "";
-		position: absolute;
+		position: fixed;
 		z-index: var(--z-bottom);
 		inset: 0;
 		display: block;
