@@ -58,6 +58,7 @@
 		font-size: var(--medium);
 		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
+		background-color: var(--background-color);
 		border: var(--3x-small) solid var(--gray-300);
 		border-radius: var(--smallest-radius);
 		color: var(--low-contrast-color);
