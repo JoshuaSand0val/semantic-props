@@ -20,7 +20,7 @@
 	details {
 		display: block;
 		margin-block: var(--3x-large) var(--4x-large);
-		overflow: hidden;
+		overflow: clip;
 		&::details-content {
 			interpolate-size: allow-keywords;
 			transition-property: block-size, content-visibility;
