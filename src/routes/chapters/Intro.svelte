@@ -8,7 +8,15 @@
 	<Heading level={1}>
 		<span class="title">Semantic Props</span>
 	</Heading>
-	<Heading level={6}>Expertly crafted CSS Custom Properties (variables) for creating <strong>consistent components</strong> in any design.</Heading>
+	<Heading level={6}>
+		<span class="subtitle">
+			<span style:--phrase={1}>Expertly crafted CSS</span>
+			<span style:--phrase={2}>Custom Properties (variables)</span>
+			<span style:--phrase={3}>for creating</span>
+			<span style:--phrase={4}><strong>consistent components</strong></span>
+			<span style:--phrase={5}>in any design.</span>
+		</span>
+	</Heading>
 	<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
 </header>
 
@@ -30,6 +38,36 @@
 	}
 
 	.title {
-		filter: var(--lightest-shadow);
+		display: block;
+		text-shadow: var(--lightest-text-shadow);
+		@media not (prefers-reduced-motion: reduce) {
+			animation: title-scale-in var(--slower-time);
+			transform-origin: top left;
+		}
+	}
+
+	@keyframes title-scale-in {
+		from {
+			transform: var(--small-scale);
+		}
+	}
+
+	.subtitle span {
+		display: inline-block;
+		@media not (prefers-reduced-motion) {
+			animation-name: subtitle-fade-in;
+			animation-duration: var(--slower-time);
+			animation-delay: calc(var(--slow-time) * (var(--phrase) - 1));
+			animation-fill-mode: both;
+			transform-origin: bottom left;
+		}
+	}
+
+	@keyframes subtitle-fade-in {
+		from {
+			transform: var(--large-scale);
+			filter: var(--lightest-blur) var(--heaviest-shadow);
+			opacity: 0;
+		}
 	}
 </style>
