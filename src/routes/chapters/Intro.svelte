@@ -4,7 +4,9 @@
 </script>
 
 <header class="container" id="intro">
-	<Heading level={4}>Stylesheet values made simple.</Heading>
+	<Heading level={4}>
+		<span class="slogan">Stylesheet values made simple.</span>
+	</Heading>
 	<Heading level={1}>
 		<span class="title">Semantic Props</span>
 	</Heading>
@@ -34,6 +36,19 @@
 		}
 		@media (--tablet) {
 			margin-block-start: var(--6x-large);
+		}
+	}
+
+	.slogan {
+		display: block;
+		@media not (prefers-reduced-motion: reduce) {
+			animation: slogan-fade-in var(--slow-time) var(--slower-time) both;
+		}
+	}
+
+	@keyframes slogan-fade-in {
+		from {
+			opacity: 0;
 		}
 	}
 
