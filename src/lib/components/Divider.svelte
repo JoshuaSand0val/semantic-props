@@ -1,35 +1,43 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
 
-	let { title, children, open = true, id }: {
-		title: string,
+	let { children, title, id, open = false }: {
 		children: Snippet,
-		open?: boolean,
-		id?: string
+		title: string,
+		id: string,
+		open?: boolean
 	} = $props();
-
-	let opened: boolean = $state(open);
 </script>
 
-<article class="container" data-open={opened} id={id}>
-	<button class="summary" onclick={() => (opened = !opened)}>
-		{title}
-	</button>
+<details open={open} id={id}>
+	<summary>{title}</summary>
 	<div class="content">
 		{@render children()}
 	</div>
-</article>
+</details>
 
 <style>
-	.container {
+	details {
 		display: block;
-		overflow: clip;
+		margin-block: var(--3x-large) var(--4x-large);
+		overflow: hidden;
+		&::details-content {
+			interpolate-size: allow-keywords;
+			transition-property: block-size, content-visibility;
+			transition-duration: var(--fast-time);
+			transition-timing-function: var(--ease-out);
+			transition-behavior: allow-discrete;
+			block-size: 0;
+		}
+		&[open]::details-content {
+			block-size: auto;
+		}
 	}
 
-	.summary {
-		all: unset;
-		display: block;
-		width: 100%;
+	summary {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 0 1ch;
 		font-size: var(--large);
 		font-family: var(--display-family);
 		font-weight: var(--light-weight);
@@ -38,29 +46,22 @@
 		color: var(--low-contrast-color);
 		padding-block-end: var(--2x-small);
 		padding-inline-start: 1px;
-		margin-block: var(--3x-large) var(--x-large);
-		&::before {
+		list-style: none;
+		&::marker,
+		&::-webkit-details-marker {
+			display: none;
+		}
+		&::after {
 			content: "‹";
 			margin-inline: 1ch;
-			float: right;
+			margin-inline-start: auto;
 		}
-		[data-open="true"] &::before {
+		details[open] &::after {
 			transform: rotate(-90deg);
 		}
 	}
 
 	.content {
-		display: none;
-		height: 0;
-		transition: all var(--fast-time) var(--ease-in);
-		transition-behavior: allow-discrete;
-		[data-open="true"] & {
-			display: block;
-			height: auto;
-			height: calc-size(auto, size);
-			@starting-style {
-				height: 0;
-			}
-		}
+		margin-block: var(--medium) var(--large);
 	}
 </style>
