@@ -3,40 +3,40 @@
     import Divider from "$lib/components/Divider.svelte";
 
 	const blur: Record<string, string> = {
-		"Lightest Blur": "--lightest-blur",
-		"Lighter Blur": "--lighter-blur",
-		"Light Blur": "--light-blur",
-		"Medium Blur": "--medium-blur",
-		"Heavy Blur": "--heavy-blur",
-		"Heavier Blur": "--heavier-blur",
-		"Heaviest Blur": "--heaviest-blur",
+		"Lightest Blur": "var(--lightest-blur)",
+		"Lighter Blur": "var(--lighter-blur)",
+		"Light Blur": "var(--light-blur)",
+		"Medium Blur": "var(--medium-blur)",
+		"Heavy Blur": "var(--heavy-blur)",
+		"Heavier Blur": "var(--heavier-blur)",
+		"Heaviest Blur": "var(--heaviest-blur)",
 	};
 
 	const brightness: Record<string, string> = {
-		"Lowest Brightness": "--lowest-brightness",
-		"Lower Brightness": "--lower-brightness",
-		"Low Brightness": "--low-brightness",
-		"High Brightness": "--high-brightness",
-		"Higher Brightness": "--higher-brightness",
-		"Highest Brightness": "--highest-brightness"
+		"Lowest Brightness": "var(--lowest-brightness)",
+		"Lower Brightness": "var(--lower-brightness)",
+		"Low Brightness": "var(--low-brightness)",
+		"High Brightness": "var(--high-brightness)",
+		"Higher Brightness": "var(--higher-brightness)",
+		"Highest Brightness": "var(--highest-brightness)"
 	};
 
 	const contrast: Record<string, string> = {
-		"Lowest Contrast": "--lowest-contrast",
-		"Lower Contrast": "--lower-contrast",
-		"Low Contrast": "--low-contrast",
-		"High Contrast": "--high-contrast",
-		"Higher Contrast": "--higher-contrast",
-		"Highest Contrast": "--highest-contrast"
+		"Lowest Contrast": "var(--lowest-contrast)",
+		"Lower Contrast": "var(--lower-contrast)",
+		"Low Contrast": "var(--low-contrast)",
+		"High Contrast": "var(--high-contrast)",
+		"Higher Contrast": "var(--higher-contrast)",
+		"Highest Contrast": "var(--highest-contrast)"
 	};
 
 	const saturation: Record<string, string> = {
-		"Lowest Saturation": "--lowest-saturation",
-		"Lower Saturation": "--lower-saturation",
-		"Low Saturation": "--low-saturation",
-		"High Saturation": "--high-saturation",
-		"Higher Saturation": "--higher-saturation",
-		"Highest Saturation": "--highest-saturation"
+		"Lowest Saturation": "var(--lowest-saturation)",
+		"Lower Saturation": "var(--lower-saturation)",
+		"Low Saturation": "var(--low-saturation)",
+		"High Saturation": "var(--high-saturation)",
+		"Higher Saturation": "var(--higher-saturation)",
+		"Highest Saturation": "var(--highest-saturation)"
 	};
 </script>
 
@@ -47,11 +47,11 @@
 		<article class="wrapper">
 			{#each Object.entries(filter) as [title, prop]}			
 			<section class="content">
-				<span class="demo" style:--prop={`var(${prop})`}>
+				<span class="demo" style:--prop={prop}>
 					<img src="/blocks/Filters/demo.jpg" alt="" />
 				</span>
 				<h4 class="title">{title}</h4>
-				<code class="prop">var({prop})</code>
+				<code class="prop">{prop}</code>
 			</section>
 			{/each}
 		</article>
