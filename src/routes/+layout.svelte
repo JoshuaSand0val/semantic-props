@@ -49,13 +49,13 @@
 		inline-size: 100%;
 		block-size: var(--large-container);
 		background-image: linear-gradient(to right,
-			var(--red-300),
-			var(--orange-300),
-			var(--yellow-300),
-			var(--green-300),
-			var(--blue-300),
-			var(--indigo-300),
-			var(--violet-300)
+			var(--red-200),
+			var(--orange-200),
+			var(--yellow-200),
+			var(--green-200),
+			var(--blue-200),
+			var(--indigo-200),
+			var(--violet-200)
 		);
 		background-size: 100% 100%;
 		mask-mode: alpha;
