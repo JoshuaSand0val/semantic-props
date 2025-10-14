@@ -157,13 +157,14 @@
 		gap: var(--large) var(--3x-large);
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
-		@media (--tablet) {
+		@media (--phone) {
 			--column-width: var(--smaller-container);
 		}
 		@media (--desktop) {
 			--column-width: var(--small-container);
 		}
 		:global(& > *) {
+			transition: flex-basis var(--normal-time) var(--ease-out);
 			flex: 0 0 min(100%, var(--column-width));
 			scroll-snap-align: center;
 		}
