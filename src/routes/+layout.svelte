@@ -63,7 +63,7 @@
 		mask-size: 100% 100%;
 		transform: rotate(3deg) translateY(-50%);
 		transform-origin: top left;
-		opacity: var(--low-opacity);
+		opacity: var(--lower-opacity);
 		filter: var(--heaviest-blur);
 		@media (--dark) {
 			background-image: linear-gradient(to right,
@@ -104,6 +104,7 @@
 			animation-duration: var(--slowest-time);
 			animation-timing-function: linear;
 			animation-fill-mode: both;
+			opacity: var(--medium-opacity);
 		}
 		&::before {
 			margin-inline: auto;
