@@ -28,11 +28,11 @@
 	};
 
 	const weights: Record<string, string> = {
-		"Thin": "--thin-weight",
-		"Light": "--light-weight",
-		"Regular": "--regular-weight",
-		"Bold": "--bold-weight",
-		"Heavy": "--heavy-weight"
+		"Thin Weight": "--thin-weight",
+		"Light Weight": "--light-weight",
+		"Regular Weight": "--regular-weight",
+		"Bold Weight": "--bold-weight",
+		"Heavy Weight": "--heavy-weight"
 	};
 
 	const letterSpacing: Record<string, string> = {
@@ -215,6 +215,7 @@
 		font-size: var(--3x-large);
 		font-weight: var(--prop);
 		font-family: var(--display-family);
+		line-height: var(--shorter-line);
 		color: var(--high-contrast-color);
 	}
 
