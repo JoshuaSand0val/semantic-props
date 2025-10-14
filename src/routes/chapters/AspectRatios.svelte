@@ -1,22 +1,23 @@
 <script lang="ts">
+	import Code from "$lib/components/Code.svelte";
     import Divider from "$lib/components/Divider.svelte";
     import Paragraph from "$lib/components/Paragraph.svelte";
 
 	const ratios = {
-		"Square Ratio": "--square-ratio",
-		"Landscape Ratio": "--landscape-ratio",
-		"Portrait Ratio": "--portrait-ratio",
-		"Video Ratio": "--video-ratio",
-		"Wide Ratio": "--wide-ratio"
+		"Square Ratio": "var(--square-ratio)",
+		"Landscape Ratio": "var(--landscape-ratio)",
+		"Portrait Ratio": "var(--portrait-ratio)",
+		"Video Ratio": "var(--video-ratio)",
+		"Wide Ratio": "var(--wide-ratio)"
 	};
 </script>
 
 <Divider title="Aspect Ratios" id="aspectratios">
-	<Paragraph>Semantic Props provides CSS <code>aspect-ratio</code> values for various types of media.</Paragraph>
+	<Paragraph>Semantic Props provides CSS <Code lang="CSS" code="aspect-ratio" /> values for various types of media.</Paragraph>
 	<div class="container">
 		{#each Object.entries(ratios) as [ratio, prop]}
 		<div class="item">
-			<span class="ratio" style:--prop={`var(${prop})`}>{ratio}</span>
+			<span class="ratio" style:--prop={prop}>{ratio}</span>
 			<code class="prop">var({prop})</code>
 		</div>
 		{/each}
@@ -60,8 +61,6 @@
 		aspect-ratio: var(--prop, 1);
 		border: var(--3x-small) solid var(--gray-300);
 		border-radius: var(--smallest-radius);
-		background-color: var(--background-color);
-		background-clip: content-box;
 		color: var(--low-contrast-color);
 		padding: var(--medium);
 		margin-inline: auto;
