@@ -68,13 +68,13 @@
 		filter: var(--heaviest-blur);
 		@media (--dark) {
 			background-image: linear-gradient(to right,
-				var(--red-700),
-				var(--orange-700),
-				var(--yellow-700),
-				var(--green-700),
-				var(--blue-700),
-				var(--indigo-700),
-				var(--violet-700)
+				var(--red-800),
+				var(--orange-800),
+				var(--yellow-800),
+				var(--green-800),
+				var(--blue-800),
+				var(--indigo-800),
+				var(--violet-800)
 			);
 		}
 		@media not (prefers-reduced-motion) {
