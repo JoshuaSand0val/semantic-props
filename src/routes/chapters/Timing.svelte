@@ -48,7 +48,6 @@
 	.demo {
 		position: relative;
 		display: block;
-		white-space: nowrap;
 		background-color: var(--background-color);
 		padding: var(--small);
 		scroll-snap-align: center;
