@@ -65,6 +65,7 @@
 			block-size: var(--3x-small);
 			background-color: var(--accent-500);
 			transform-origin: bottom left;
+			opacity: 0;
 			animation-name: demo;
 			animation-iteration-count: infinite;
 			animation-duration: 3s;
