@@ -43,7 +43,7 @@
 
 	.container::after {
 		content: "";
-		position: fixed;
+		position: absolute;
 		z-index: var(--z-bottom);
 		inset: 0;
 		display: block;
@@ -62,7 +62,7 @@
 		mask-mode: alpha;
 		mask-image: radial-gradient(black, transparent 75%);
 		mask-size: 100% 100%;
-		transform: rotate(3deg) translateY(-50%);
+		transform: translateY(-50%);
 		transform-origin: top left;
 		opacity: var(--lower-opacity);
 		filter: var(--heaviest-blur);
