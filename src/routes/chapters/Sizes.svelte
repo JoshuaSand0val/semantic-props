@@ -103,6 +103,7 @@
 		display: block;
 		inline-size: var(--3x-small);
 		padding-block-end: var(--prop);
+		box-shadow: var(--lightest-box-shadow);
 		outline: 1px dotted var(--high-contrast-color);
 		margin: var(--3x-small);
 		flex: 0 0 auto;

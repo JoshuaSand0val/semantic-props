@@ -51,6 +51,7 @@
 		background-color: var(--background-color);
 		padding: var(--small);
 		scroll-snap-align: center;
+		box-shadow: var(--lightest-box-shadow);
 		border: 1px var(--border-style) var(--foreground-color);
 		overflow: hidden;
 		cursor: pointer;
