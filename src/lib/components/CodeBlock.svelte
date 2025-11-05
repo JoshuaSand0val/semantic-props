@@ -10,7 +10,7 @@
 
 <article class="container">
 	<h4 class="desc">{lang} &mdash; {description}</h4>
-	<pre class="dark"><Code lang={lang} code={code} /></pre>
+	<pre><Code lang={lang} code={code} /></pre>
 </article>
 
 <style>
