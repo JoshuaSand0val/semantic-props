@@ -62,7 +62,7 @@
 			display: block;
 			inline-size: 100%;
 			block-size: var(--3x-small);
-			background-color: var(--accent-500);
+			background-color: var(--high-contrast-color);
 			transform-origin: bottom left;
 			opacity: 0;
 			animation-name: demo;
