@@ -89,21 +89,21 @@
 		font-family: var(--display-family);
 		font-weight: var(--bold-weight);
 		color: var(--medium-contrast-color);
-		font-size: var(--small);
+		font-size: var(--medium);
 	}
 
 	.prop {
 		font-family: var(--mono-family);
 		font-weight: var(--regular-weight);
 		color: var(--low-contrast-color);
-		font-size: var(--x-small);
+		font-size: var(--small);
 	}
 
 	.size {
 		display: block;
 		inline-size: var(--3x-small);
 		padding-block-end: var(--prop);
-		outline: 1px dotted var(--medium-contrast-color);
+		outline: 1px dotted var(--high-contrast-color);
 		margin: var(--3x-small);
 		flex: 0 0 auto;
 	}
