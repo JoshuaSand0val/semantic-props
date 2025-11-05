@@ -84,7 +84,7 @@
 			transform: scaleX(1);
 			opacity: 0;
 		}
-		16% {
+		16%, 100% {
 			opacity: 1;
 		}
 		100% {
