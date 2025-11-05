@@ -39,26 +39,32 @@
 <Divider title="Containers and Spacing Sizes" id="sizes">
 	<p>Semantic Props provides containers alongside sizes.</p>
 	<div class="scroller">
-		{#each Object.entries({ ...sizes, ...containers }) as [title, prop]}
-		<div class="demo" style:--prop={prop}>
-			<span class="size"></span>
-			<span>
-				<strong class="title">{title}</strong>
-				<small class="prop">{prop}</small>
-			</span>
+		<div class="wrapper">
+			{#each Object.entries({ ...sizes, ...containers }) as [title, prop]}
+			<div class="demo" style:--prop={prop}>
+				<span class="size"></span>
+				<span>
+					<strong class="title">{title}</strong>
+					<small class="prop">{prop}</small>
+				</span>
+			</div>
+			{/each}
 		</div>
-		{/each}
 	</div>
 </Divider>
 
 <style>
 	.scroller {
 		display: block;
-		writing-mode: sideways-lr;
+		writing-mode: vertical-lr;
 		block-size: 100%;
 		margin-inline: var(--3x-large);
 		scroll-snap-type: block mandatory;
 		overflow: auto;
+	}
+
+	.wrapper {
+		transform: scaleY(-1);
 	}
 
 	.demo {
@@ -75,6 +81,7 @@
 		display: block;
 		white-space: nowrap;
 		flex: 0 1 auto;
+		transform: scaleX(-1);
 	}
 
 	.title {
@@ -97,7 +104,7 @@
 		inline-size: var(--3x-small);
 		padding-block-end: var(--prop);
 		outline: 1px dotted var(--medium-contrast-color);
-		margin-block: var(--4x-small);
+		margin: var(--3x-small);
 		flex: 0 0 auto;
 	}
 </style>
