@@ -36,7 +36,7 @@
 		color: var(--low-contrast-color);
 		gap: var(--3x-small) 1ch;
 		margin-inline: auto;
-		margin-bottom: var(--safe-bottom);
+		margin-bottom: max(var(--safe-bottom), var(--6x-large));
 		overflow: hidden;
 	}
 
