@@ -59,15 +59,12 @@
 		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
 		background-color: var(--background-color);
-		border: var(--3x-small) solid var(--gray-300);
+		border: var(--4x-small) solid var(--medium-contrast-color);
 		border-radius: var(--smallest-radius);
 		color: var(--low-contrast-color);
 		padding: var(--medium);
 		margin-inline: auto;
 		overflow: hidden;
-		@media (--dark) {
-			border-color: var(--gray-700);			
-		}
 		@media (--phone) {
 			font-size: var(--large);
 		}
