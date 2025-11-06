@@ -22,7 +22,7 @@
 	"#builtusing": "Built using Semantic Props",
 	"#borders": "Border Style and Radius",
 	"#colors": "Color Palette",
-	"#filters": "Filter Effects",
+	"#filters": "Filter and Opacity Effects",
 	"#fonts": "Font Sizes and Styles",
 	"#aspectratios": "Aspect Ratios",
 	"#safeareas": "Display Safe-Areas",

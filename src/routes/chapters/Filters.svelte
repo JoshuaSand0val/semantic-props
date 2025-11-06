@@ -38,12 +38,22 @@
 		"Higher Saturation": "var(--higher-saturation)",
 		"Highest Saturation": "var(--highest-saturation)"
 	};
+
+	const opacity: Record<string, string> = {
+		"Lowest Opacity": "var(--lowest-opacity)",
+		"Lower Opacity": "var(--lower-opacity)",
+		"Low Opacity": "var(--low-opacity)",
+		"Medium Opacity": "var(--medium-opacity)",
+		"High Opacity": "var(--high-opacity)",
+		"Higher Opacity": "var(--higher-opacity)",
+		"Highest Opacity": "var(--highest-opacity)"
+	};
 </script>
 
-<Divider title="Filter Effects" id="filters">
-	<p>Semantic Props provides CSS <Code lang="css" code="filter" /> values for various types of media.</p>
+<Divider title="Filter and Opacity Effects" id="filters">
+	<p>Semantic Props provides CSS <Code lang="css" code="filter" /> and <Code lang="css" code="opacity" /> values for various types of media.</p>
 	<div class="container">
-		{#each [blur, brightness, contrast, saturation] as filter}
+		{#each [blur, brightness, contrast, saturation, opacity] as filter}
 		<article class="wrapper">
 			{#each Object.entries(filter) as [title, prop]}			
 			<section class="content">
@@ -94,6 +104,7 @@
 		inline-size: 100%;
 		aspect-ratio: var(--square-ratio);
 		border-radius: var(--smallest-radius);
+		background-color: var(--background-color);
 		box-shadow: var(--lightest-box-shadow);
 		margin-block-end: var(--2x-small);
 		overflow: hidden;
@@ -105,6 +116,7 @@
 			object-position: center;
 			transform: var(--large-scale);
 			filter: var(--prop);
+			opacity: var(--prop);
 		}
 	}
 
