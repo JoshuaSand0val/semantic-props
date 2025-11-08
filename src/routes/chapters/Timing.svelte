@@ -36,13 +36,17 @@
 
 <style>
 	.container {
+		--columns-size: var(--smallest-container);
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--smaller-container)), 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--columns-size)), 1fr));
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
 		gap: var(--small);
 		margin-inline: auto;
 		margin-block: var(--3x-large);
+		@media (--tablet) {
+			--columns-size: var(--smaller-container);
+		}
 	}
 
 	.demo {
