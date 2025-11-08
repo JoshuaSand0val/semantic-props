@@ -11,6 +11,7 @@
     import SafeAreas from "./chapters/SafeAreas.svelte";
     import Sizes from "./chapters/Sizes.svelte";
 	import Timing from "./chapters/Timing.svelte";
+    import Transforms from "./chapters/Transforms.svelte";
 </script>
 
 <svelte:head>
@@ -27,7 +28,8 @@
 	"#aspectratios": "Aspect Ratios",
 	"#safeareas": "Display Safe-Areas",
 	"#sizes": "Containers and Spacing Sizes",
-	"#timing": "Animation Timing and Easing"
+	"#timing": "Animation Timing and Easing",
+	"#transforms": "Transform Effects"
 }} />
 
 <Intro />
@@ -40,3 +42,4 @@
 <SafeAreas />
 <Sizes />
 <Timing />
+<Transforms />
