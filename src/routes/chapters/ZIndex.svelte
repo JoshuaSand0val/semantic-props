@@ -36,7 +36,7 @@
 		gap: var(--large);
 		padding-inline-end: calc(100% - var(--demo-inline-size));
 		margin-block: var(--3x-large);
-		scroll-snap-type: inline proximity;
+		scroll-snap-type: inline mandatory;
 		filter: var(--lightest-shadow);
 		overflow: auto;
 	}
