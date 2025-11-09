@@ -98,7 +98,7 @@
 		font-family: var(--display-family);
 		font-weight: var(--bold-weight);
 		color: var(--medium-contrast-color);
-		font-size: var(--medium);
+		font-size: var(--large);
 	}
 
 	.prop {
