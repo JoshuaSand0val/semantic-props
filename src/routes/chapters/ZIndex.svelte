@@ -64,7 +64,7 @@
 		display: block;
 		font-size: var(--large);
 		font-family: var(--display-family);
-		color: var(--low-contrast-color);
+		color: var(--medium-contrast-color);
 	}
 
 	.prop {
