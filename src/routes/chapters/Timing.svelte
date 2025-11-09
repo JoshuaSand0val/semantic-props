@@ -57,6 +57,7 @@
 		scroll-snap-align: center;
 		box-shadow: var(--lightest-box-shadow);
 		border: 1px var(--border-style) var(--foreground-color);
+		border-radius: var(--smallest-radius);
 		overflow: hidden;
 		cursor: pointer;
 		flex: 1 0 auto;
