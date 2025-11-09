@@ -12,6 +12,7 @@
     import Sizes from "./chapters/Sizes.svelte";
 	import Timing from "./chapters/Timing.svelte";
     import Transforms from "./chapters/Transforms.svelte";
+    import ZIndex from "./chapters/ZIndex.svelte";
 </script>
 
 <svelte:head>
@@ -29,7 +30,8 @@
 	"#safeareas": "Display Safe-Areas",
 	"#sizes": "Containers and Spacing Sizes",
 	"#timing": "Animation Timing and Easing",
-	"#transforms": "Transform Effects"
+	"#transforms": "Transform Effects",
+	"#zindex": "Z-Index Positions"
 }} />
 
 <Intro />
@@ -43,3 +45,4 @@
 <Sizes />
 <Timing />
 <Transforms />
+<ZIndex />
