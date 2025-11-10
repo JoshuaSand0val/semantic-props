@@ -124,4 +124,4 @@ A **breaking change** release that greatly improves browser compatibility, file 
 [0.2.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.0
 [0.2.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.1
 [1.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v1.0.0
-[2.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.0
+[v2.0.0-beta.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.0
