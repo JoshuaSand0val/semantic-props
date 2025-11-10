@@ -2,7 +2,7 @@
 
 All relevant changes to Semantic Props will be documented here.
 
-## [2.0.0] - 2025-MM-DD
+## [2.0.0-beta.0] - 2025-11-09
 
 A **breaking change** release that greatly improves browser compatibility, file size, features and syntax.
 
@@ -124,4 +124,4 @@ A **breaking change** release that greatly improves browser compatibility, file 
 [0.2.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.0
 [0.2.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.1
 [1.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v1.0.0
-[2.0.0]: https://github.com/JoshuaSand0val/semantic-props/compare/main...v2.0.0
+[2.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.0
