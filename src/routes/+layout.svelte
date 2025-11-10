@@ -64,7 +64,7 @@
 		mask-size: 100% 100%;
 		transform: translateY(-50%);
 		transform-origin: top left;
-		opacity: var(--lower-opacity);
+		opacity: var(--lowest-opacity);
 		filter: var(--heaviest-blur);
 		@media (--dark) {
 			background-image: linear-gradient(to right,
@@ -77,12 +77,13 @@
 				var(--violet-800)
 			);
 		}
-		@media not (prefers-reduced-motion) {
-			animation-name: fade-in-gradient;
-			animation-duration: var(--slow-time);
-			animation-timing-function: var(--ease-out);
-			animation-delay: var(--slowest-time);
-			animation-fill-mode: both;
+		animation-name: fade-in-gradient;
+		animation-duration: var(--slow-time);
+		animation-timing-function: var(--ease-out);
+		animation-delay: var(--slowest-time);
+		animation-fill-mode: both;
+		@media (prefers-reduced-motion) {
+			animation: none;
 		}
 	}
 
@@ -110,16 +111,18 @@
 		&::before {
 			margin-inline: auto;
 			background-size: 100% var(--2x-large);
-			@media not (prefers-reduced-motion) {
-				animation-name: blueprint-horizontal;
-				animation-delay: var(--faster-time);
+			animation-name: blueprint-horizontal;
+			animation-delay: var(--faster-time);
+			@media (prefers-reduced-motion) {
+				animation: none;
 			}
 		}
 		&::after {
 			background-size: var(--2x-large) 100%;
-			@media not (prefers-reduced-motion) {
-				animation-name: blueprint-vertical;
-				animation-delay: var(--fast-time);
+			animation-name: blueprint-vertical;
+			animation-delay: var(--fast-time);
+			@media (prefers-reduced-motion) {
+				animation: none;
 			}
 		}
 	}

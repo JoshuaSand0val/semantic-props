@@ -69,12 +69,13 @@
 
 	.subtitle span {
 		display: inline-block;
-		@media not (prefers-reduced-motion) {
-			animation-name: subtitle-fade-in;
-			animation-duration: var(--slower-time);
-			animation-delay: calc(var(--slow-time) * (var(--phrase) - 1));
-			animation-fill-mode: both;
-			transform-origin: bottom left;
+		animation-name: subtitle-fade-in;
+		animation-duration: var(--slower-time);
+		animation-delay: calc(var(--slow-time) * (var(--phrase) - 1));
+		animation-fill-mode: both;
+		transform-origin: bottom left;
+		@media (prefers-reduced-motion) {
+			animation: none;
 		}
 	}
 
