@@ -1,4 +1,4 @@
-# Easy, powerful and semantic CSS custom properties.
+# Expertly crafted CSS Custom Properties (variables) for creating consistent components in any design.
 
 **Add it to your project now via installation by NPM:**
 
