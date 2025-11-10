@@ -1,13 +1,39 @@
-/* Semantic Props for CSS box-shadow or drop-shadow filter value. */
+/* Semantic Props for CSS text-shadow, box-shadow and drop-shadow filter. */
 
-:where(.semantic) {
-	--3x-light-shadow: drop-shadow(0 1px 1px rgb(0 0 0 / 0.075));
-	--2x-light-shadow: drop-shadow(0 2px 2px rgb(0 0 0 / 0.075));
-	--x-light-shadow: drop-shadow(0 3px 3px rgb(0 0 0 / 0.075));
-	--light-shadow: drop-shadow(0 6px 4px rgb(0 0 0 / 0.1));
-	--medium-shadow: drop-shadow(0 8px 5px rgb(0 0 0 / 0.1));
-	--heavy-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.1));
-	--x-heavy-shadow: drop-shadow(0 16px 10px rgb(0 0 0 / 0.15));
-	--2x-heavy-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.15));
-	--3x-heavy-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+:root {
+	/* Text-Shadow: */
+	--lightest-text-shadow: 0 2px 3px rgb(0 0 0 / 0.15);
+	--lighter-text-shadow: 0 5px 4px rgb(0 0 0 / 0.15);
+	--light-text-shadow: 0 7px 5px rgb(0 0 0 / 0.15);
+	--medium-text-shadow: 0 8px 8px rgb(0 0 0 / 0.225);
+	--heavy-text-shadow: 0 8px 8px rgb(0 0 0 / 0.3);
+	--heavier-text-shadow: 0 9px 9px rgb(0 0 0 / 0.3);
+	--heaviest-text-shadow: 0 10px 10px rgb(0 0 0 / 0.3);
+
+	/* Box-Shadow: */
+	--lightest-box-shadow: 0 2px 3px rgb(0 0 0 / 0.1);
+	--lighter-box-shadow: 0 5px 4px rgb(0 0 0 / 0.1);
+	--light-box-shadow: 0 7px 5px rgb(0 0 0 / 0.1);
+	--medium-box-shadow: 0 8px 8px rgb(0 0 0 / 0.15);
+	--heavy-box-shadow: 0 8px 8px rgb(0 0 0 / 0.2);
+	--heavier-box-shadow: 0 9px 9px rgb(0 0 0 / 0.2);
+	--heaviest-box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+
+	/* Box-Shadow (Inset): */
+	--lightest-inset-shadow: inset 0 2px 3px rgb(0 0 0 / 0.1);
+	--lighter-inset-shadow: inset 0 5px 4px rgb(0 0 0 / 0.1);
+	--light-inset-shadow: inset 0 7px 5px rgb(0 0 0 / 0.1);
+	--medium-inset-shadow: inset 0 8px 8px rgb(0 0 0 / 0.15);
+	--heavy-inset-shadow: inset 0 8px 8px rgb(0 0 0 / 0.2);
+	--heavier-inset-shadow: inset 0 9px 9px rgb(0 0 0 / 0.2);
+	--heaviest-inset-shadow: inset 0 10px 10px rgb(0 0 0 / 0.2);
+
+	/* Drop-Shadow (Filter): */
+	--lightest-shadow: drop-shadow(0 2px 3px rgb(0 0 0 / 0.1));
+	--lighter-shadow: drop-shadow(0 5px 4px rgb(0 0 0 / 0.1));
+	--light-shadow: drop-shadow(0 7px 5px rgb(0 0 0 / 0.1));
+	--medium-shadow: drop-shadow(0 8px 8px rgb(0 0 0 / 0.15));
+	--heavy-shadow: drop-shadow(0 8px 8px rgb(0 0 0 / 0.2));
+	--heavier-shadow: drop-shadow(0 9px 9px rgb(0 0 0 / 0.2));
+	--heaviest-shadow: drop-shadow(0 10px 10px rgb(0 0 0 / 0.2));
 }

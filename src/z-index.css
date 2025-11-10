@@ -1,6 +1,6 @@
-/* Semantic Props for CSS z-index property. */
+/* Semantic Props for the CSS z-index property. */
 
-:where(.semantic) {
+:root {
 	--z-bottom: -1000;
 	--z-relative: 1000;
 	--z-absolute: 2000;

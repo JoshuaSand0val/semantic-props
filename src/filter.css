@@ -1,0 +1,36 @@
+/* Semantic Props for CSS filter values. */
+
+:root {
+	/* Blur: */
+	--lightest-blur: blur(2px);
+	--lighter-blur: blur(4px);
+	--light-blur: blur(6px);
+	--medium-blur: blur(8px);
+	--heavy-blur: blur(16px);
+	--heavier-blur: blur(24px);
+	--heaviest-blur: blur(32px);
+
+	/* Brightness: */
+	--lowest-brightness: brightness(0.5);
+	--lower-brightness: brightness(0.75);
+	--low-brightness: brightness(0.875);
+	--high-brightness: brightness(1.125);
+	--higher-brightness: brightness(1.25);
+	--highest-brightness: brightness(1.5);
+
+	/* Contrast: */
+	--lowest-contrast: contrast(0.25);
+	--lower-contrast: contrast(0.5);
+	--low-contrast: contrast(0.75);
+	--high-contrast: contrast(1.25);
+	--higher-contrast: contrast(1.5);
+	--highest-contrast: contrast(2);
+
+	/* Saturation: */
+	--lowest-saturation: saturate(0.25);
+	--lower-saturation: saturate(0.5);
+	--low-saturation: saturate(0.75);
+	--high-saturation: saturate(1.25);
+	--higher-saturation: saturate(1.5);
+	--highest-saturation: saturate(2);
+}

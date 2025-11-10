@@ -1,18 +1,36 @@
-/* Semantic Props for sizing padding, margin, ect. */
-/* https://utopia.fyi/space/calculator?c=180,16,1.067,1920,18,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,3xs-3xl&g=s,l,xl,12 */
+/* Semantic Props for sizing containers, fonts and space. */
 
-:where(.semantic) {
+:root {
+	/* Container Sizes: */
+	--smallest-container: 10rem; /* 160px */
+	--smaller-container: 15rem; /* 240px */
+	--small-container: 20rem; /* 320px */
+	--medium-container: 30rem; /* 480px */
+	--large-container: 40rem; /* 640px */
+	--larger-container: 64rem; /* 1024px */
+	--largest-container: 80rem; /* 1280px */
+
 	/* Base Sizes: */
-	--3x-small-size: clamp(0.25rem, 0.2435rem + 0.0575cqi, 0.3125rem);
-	--2x-small-size: clamp(0.5rem, 0.4935rem + 0.0575cqi, 0.5625rem);
-	--x-small-size: clamp(0.75rem, 0.7371rem + 0.1149cqi, 0.875rem);
-	--small-size: clamp(1rem, 0.9871rem + 0.1149cqi, 1.125rem);
-	--medium-size: clamp(1.5rem, 1.4806rem + 0.1724cqi, 1.6875rem);
-	--large-size: clamp(2rem, 1.9741rem + 0.2299cqi, 2.25rem);
-	--x-large-size: clamp(3rem, 2.9612rem + 0.3448cqi, 3.375rem);
-	--2x-large-size: clamp(4rem, 3.9483rem + 0.4598cqi, 4.5rem);
-	--3x-large-size: clamp(6rem, 5.9224rem + 0.6897cqi, 6.75rem);
+	--4x-small: 0.125rem; /* 2px */
+	--3x-small: 0.25rem; /* 4px */
+	--2x-small: 0.5rem; /* 8px */
+	--x-small: 0.75rem; /* 12px */
+	--small: 0.875rem; /* 14px */
+	--medium: 1rem; /* 16px */
+	--large: 1.125rem; /* 18px */
+	--x-large: 1.25rem; /* 20px */
+	--2x-large: 1.5rem; /* 24px */
+	--3x-large: 1.875rem; /* 30px */
+	--4x-large: 2.25rem; /* 36px */
+	--5x-large: 3rem; /* 48px */
+	--6x-large: 3.75rem; /* 60px */
+	--7x-large: 4.5rem; /* 72px */
+	--8x-large: 6rem; /* 96px */
+	--9x-large: 8rem; /* 128px */
 
-	/* Responsive Size (3x-small to 3x-large): */
-	--responsive-size: clamp(0.25rem, -0.4224rem + 5.977cqi, 6.75rem);
+	--smaller: 0.875em; /* 14/16px */
+	--larger: 1.125em; /* 18/16px */
+
+	/* Margin Size: */
+	--margin-size: 5%;
 }

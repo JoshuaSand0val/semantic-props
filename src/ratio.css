@@ -1,6 +1,6 @@
-/* Semantic Props for aspect ratios. */
+/* Semantic Props for CSS aspect-ratio property. */
 
-:where(.semantic) {
+:root {
 	--square-ratio: 1 / 1;
 	--landscape-ratio: 4 / 3;
 	--portrait-ratio: 3 / 4;

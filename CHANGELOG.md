@@ -2,6 +2,34 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [2.0.0-beta.0] - 2025-11-09
+
+A **breaking change** release that greatly improves browser compatibility, file size, features and syntax.
+
+### Added
+
+- Added new `-radius` props for applying `border-radius`.
+- Added new color palette using contextual colors and weights 100 to 900 by 50.
+- Added `text-shadow` and `box-shadow` variants of `shadow` props.
+- Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
+- Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
+
+### Changed
+
+- Changed use of `semantic` class to `:root` selector.
+- Changed syntax of all props to be descriptive versus namespaced.
+- Changed syntax of all props with upper/lower values from using `-x-` modifier and given limited values.
+- Changed prop values from using `px` to use `rem` units.
+- Changed font and spacing scales to be unified.
+- Changed scale props to use transform `scale()` function.
+
+### Removed
+
+- Removed `semantic` class.
+- Removed color palette relying on CSS relative colors and `light-dark` function.
+- Removed `--responsive-size` prop in favor of `--margin-size`.
+- Removed individual import distribution files. Use a PostCSS plugin (such as [PurgeCSS](https://purgecss.com/)) for optimizations instead.
+
 ## [1.0.0] - 2025-01-05
 
 ### Added
@@ -96,3 +124,4 @@ All relevant changes to Semantic Props will be documented here.
 [0.2.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.0
 [0.2.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.1
 [1.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v1.0.0
+[2.0.0-beta.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.0

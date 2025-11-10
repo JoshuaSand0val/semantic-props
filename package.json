@@ -1,7 +1,7 @@
 {
 	"name": "semantic-props",
-	"version": "1.0.0",
-	"description": "A collection of semantic CSS custom properties.",
+	"version": "2.0.0-beta.0",
+	"description": "Expertly crafted CSS Custom Properties (variables) for creating consistent components in any design.",
 	"keywords": [
 		"Semantic Props",
 		"CSS custom properties",
@@ -17,23 +17,32 @@
 		"LICENSE",
 		"README.md"
 	],
-	"main": "dist/import.css",
-	"style": "dist/import.css",
+	"exports": {
+		".": {
+			"default": "./dist/import.css"
+		}
+	},
 	"repository": {
 		"type": "git",
 		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
 	},
 	"type": "module",
 	"scripts": {
-		"build": "sass --no-source-map src:dist && postcss dist --replace",
+		"build": "postcss src/import.css -o dist/import.css",
 		"watch:build": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {
+		"@csstools/postcss-oklab-function": "^4.0.9",
+		"@csstools/postcss-relative-color-syntax": "^3.0.9",
+		"@csstools/postcss-trigonometric-functions": "^4.0.8",
+		"autoprefixer": "^10.4.21",
 		"cssnano": "^7.0.4",
 		"onchange": "^7.1.0",
-		"postcss": "^8.4.39",
-		"postcss-cli": "^11.0.0",
-		"postcss-preset-env": "^9.6.0",
-		"sass": "^1.82.0"
+		"postcss": "^8.5.5",
+		"postcss-advanced-variables": "^5.0.0",
+		"postcss-cli": "^11.0.1",
+		"postcss-custom-media": "^11.0.6",
+		"postcss-import": "^16.1.1",
+		"postcss-nesting": "^13.0.1"
 	}
 }

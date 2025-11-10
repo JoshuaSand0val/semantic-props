@@ -1,7 +1,15 @@
 /* Semantic Props for CSS border properties. */
 
-:where(.semantic) {
+:root {
+	/* Border-Style: */
 	--border-style: solid;
-	--border-collapse: separate;
-	--border-spacing: 0;
+
+	/* Border-Radius: */
+	--smallest-radius: 0.3125rem; /* 5px */
+	--smaller-radius: 0.5rem; /* 8px */
+	--small-radius: 0.75rem; /* 12px */
+	--medium-radius: 1rem; /* 16px */
+	--large-radius: 1.5rem; /* 24px */
+	--larger-radius: 1.875rem; /* 30px */
+	--largest-radius: 2.25rem; /* 36px */
 }
