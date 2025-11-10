@@ -9,6 +9,7 @@
     import Fonts from "./chapters/Fonts.svelte";
     import Intro from "./chapters/Intro.svelte";
     import SafeAreas from "./chapters/SafeAreas.svelte";
+    import Shadows from "./chapters/Shadows.svelte";
     import Sizes from "./chapters/Sizes.svelte";
 	import Timing from "./chapters/Timing.svelte";
     import Transforms from "./chapters/Transforms.svelte";
@@ -28,6 +29,7 @@
 	"#fonts": "Font Sizes and Styles",
 	"#aspectratios": "Aspect Ratios",
 	"#safeareas": "Display Safe-Areas",
+	"#shadows": "Shadow Effects",
 	"#sizes": "Containers and Spacing Sizes",
 	"#timing": "Animation Timing and Easing",
 	"#transforms": "Transform Effects",
@@ -42,6 +44,7 @@
 <Fonts />
 <AspectRatios />
 <SafeAreas />
+<Shadows />
 <Sizes />
 <Timing />
 <Transforms />
