@@ -3,7 +3,7 @@
 
     import AspectRatios from "./chapters/AspectRatios.svelte";
     import Borders from "./chapters/Borders.svelte";
-    import BuiltUsing from "./chapters/BuiltUsing.svelte";
+    // import BuiltUsing from "./chapters/BuiltUsing.svelte";
     import Colors from "./chapters/Colors.svelte";
     import Filters from "./chapters/Filters.svelte";
     import Fonts from "./chapters/Fonts.svelte";
@@ -22,7 +22,7 @@
 
 <Nav chapters={{
 	"#intro": "Introduction to Semantic Props",
-	"#builtusing": "Built using Semantic Props",
+	// "#builtusing": "Built using Semantic Props",
 	"#borders": "Border Style and Radius",
 	"#colors": "Color Palette",
 	"#filters": "Filter and Opacity Effects",
@@ -37,7 +37,7 @@
 }} />
 
 <Intro />
-<BuiltUsing />
+<!-- <BuiltUsing /> -->
 <Borders />
 <Colors />
 <Filters />
