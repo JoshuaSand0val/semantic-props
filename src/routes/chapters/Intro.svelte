@@ -19,7 +19,7 @@
 			<span style:--phrase={5}>in any design.</span>
 		</span>
 	</Heading>
-	<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
+	<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props@beta";' />
 </header>
 
 <style>
