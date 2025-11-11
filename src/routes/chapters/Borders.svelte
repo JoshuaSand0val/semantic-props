@@ -49,7 +49,7 @@
 		gap: var(--x-large);
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
-		margin-block: var(--5x-large);	
+		margin-block: var(--x-large);	
 	}
 
 	.styles {
