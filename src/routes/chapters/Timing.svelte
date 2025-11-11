@@ -42,6 +42,7 @@
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
 		gap: var(--small);
+		filter: var(--lightest-shadow);
 		margin-inline: auto;
 		margin-block: var(--3x-large);
 		@media (--tablet) {
@@ -55,7 +56,6 @@
 		background-color: var(--background-color);
 		padding: var(--small);
 		scroll-snap-align: center;
-		box-shadow: var(--lightest-box-shadow);
 		border: 1px var(--border-style) var(--foreground-color);
 		border-radius: var(--smallest-radius);
 		overflow: hidden;

@@ -53,6 +53,7 @@
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
 		margin-block: var(--3x-large);
+		filter: var(--lightest-shadow);
 	}
 
 	.demo {
@@ -64,7 +65,6 @@
 		background-color: var(--background-color);
 		border: 1px var(--border-style) var(--foreground-color);
 		border-radius: var(--smallest-radius);
-		box-shadow: var(--lightest-box-shadow);
 		flex: 0 0 auto;
 		scroll-snap-align: center;
 		@media (--laptop) {
