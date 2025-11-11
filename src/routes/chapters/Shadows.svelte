@@ -70,7 +70,7 @@
 		background-color: var(--background-color);
 		background: repeating-conic-gradient(var(--background-color) 0 25%, var(--middleground-color) 0 50%) 50% / var(--3x-large) var(--3x-large);
 		border-radius: var(--smallest-radius);
-		padding-block: var(--x-large);
+		padding-block: var(--small);
 		margin-block: var(--x-large);
 		overflow: hidden;
 		@media (--dark) {
@@ -86,7 +86,8 @@
 		justify-content: start;
 		align-items: stretch;
 		gap: var(--large);
-		padding: var(--large);
+		padding-inline: var(--small);
+		padding-block: var(--large);
 		margin-block: calc(-1 * var(--large));
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
