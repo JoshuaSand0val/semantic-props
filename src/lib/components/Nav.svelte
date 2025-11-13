@@ -16,7 +16,7 @@
 			</span>
 			<nav class="navigation">
 				{#each Object.entries(chapters) as [url, title]}
-				<a href={url}>{title}</a>
+				<a href={url} tabindex="0">{title}</a>
 				{/each}
 			</nav>
 			<div class="backdrop"></div>
