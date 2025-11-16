@@ -90,7 +90,7 @@
 		content: "";
 		display: block;
 		transform: var(--prop);
-		border: var(--4x-small) solid var(--high-contrast-color);
+		outline: var(--4x-small) solid var(--high-contrast-color);
 	}
 
 	.title {
