@@ -24,7 +24,7 @@
 
 	.content {
 		display: block;
-		inline-size: min(100%, var(--largest-container));
+		inline-size: 100%;
 		font-family: var(--body-family);
 		font-weight: var(--regular-weight);
 		line-height: var(--normal-line);
