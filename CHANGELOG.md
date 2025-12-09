@@ -4,9 +4,9 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [2.0.0-beta.1] - YYYY-MM-DD
 
-### Changed
+### Fixed
 
-- Changed dark color-scheme background colors.
+- Fixed color palette chroma scaling.
 
 ## [2.0.0-beta.0] - 2025-11-09
 

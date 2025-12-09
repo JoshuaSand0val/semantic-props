@@ -10,12 +10,12 @@
 
 	/* Color Weights: */
 	@for $weight from 50 to 950 by 50 {
-		/* Calculate Percentage of Weight: */
-		$percentage: calc((950 - $weight) / (950 - 50));
+		/* Calculate Percent of Weight: */
+		$percent: calc((950 - $weight) / (950 - 50));
 
 		/* Calculate Lightness and Chroma: */
-		$l: calc(0.15 + (0.95 - 0.15) * $percentage);
-		$c: calc(c * sin(pi * l));
+		$l: calc(0.15 + (0.95 - 0.15) * $percent);
+		$c: calc(c - (c / 2) * (1 - sin(pi * $percent)));
 
 		/* Colors + Gray: */
 		--accent-$(weight): var(--blue-$(weight));
@@ -46,9 +46,9 @@
 	--low-contrast-color: var(--gray-700);
 
 	@media (--dark) {
-		--background-color: var(--black);
-		--middleground-color: var(--gray-950);
-		--foreground-color: var(--gray-900);
+		--background-color: var(--gray-950);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-850);
 
 		--high-contrast-color: var(--gray-100);
 		--medium-contrast-color: var(--gray-200);
