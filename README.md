@@ -3,7 +3,7 @@
 **Add it to your project now via installation by NPM:**
 
 ```bash
-npm install semantic-props --save-dev
+npm install semantic-props@beta
 ```
 
 ---

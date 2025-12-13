@@ -2,6 +2,12 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [2.0.0-beta.1] - 2025-12-12
+
+### Fixed
+
+- Fixed color palette chroma scaling.
+
 ## [2.0.0-beta.0] - 2025-11-09
 
 A **breaking change** release that greatly improves browser compatibility, file size, features and syntax.
@@ -9,7 +15,7 @@ A **breaking change** release that greatly improves browser compatibility, file 
 ### Added
 
 - Added new `-radius` props for applying `border-radius`.
-- Added new color palette using contextual colors and weights 100 to 900 by 50.
+- Added new color palette using contextual colors and weights 50 to 950 by 50.
 - Added `text-shadow` and `box-shadow` variants of `shadow` props.
 - Added `--margin-size` prop as replacement for `--responsive-size`. Used for page margins.
 - Added new `scale-x` and `scale-y` props for scaling the X and Y axis.
@@ -125,3 +131,4 @@ A **breaking change** release that greatly improves browser compatibility, file 
 [0.2.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.1
 [1.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v1.0.0
 [2.0.0-beta.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.0
+[2.0.0-beta.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.1
