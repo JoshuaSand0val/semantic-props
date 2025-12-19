@@ -2,13 +2,13 @@
 
 :root {
 	/* Blur: */
-	--lightest-blur: blur(2px);
-	--lighter-blur: blur(4px);
-	--light-blur: blur(6px);
+	--lightest-blur: blur(1px);
+	--lighter-blur: blur(3px);
+	--light-blur: blur(5px);
 	--medium-blur: blur(8px);
-	--heavy-blur: blur(16px);
-	--heavier-blur: blur(24px);
-	--heaviest-blur: blur(32px);
+	--heavy-blur: blur(12px);
+	--heavier-blur: blur(16px);
+	--heaviest-blur: blur(24px);
 
 	/* Brightness: */
 	--lowest-brightness: brightness(0.5);

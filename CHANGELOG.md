@@ -2,6 +2,12 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [2.0.0-beta.2] - YYYY-MM-DD
+
+### Changed
+
+- Changed scale of blur filter props.
+
 ## [2.0.0-beta.1] - 2025-12-12
 
 ### Fixed
