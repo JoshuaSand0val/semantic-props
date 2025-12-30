@@ -4,6 +4,10 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [2.0.0-beta.2] - YYYY-MM-DD
 
+### Added
+
+- Added grayscale and sepia filter props.
+
 ### Changed
 
 - Changed scale of blur filter props.
