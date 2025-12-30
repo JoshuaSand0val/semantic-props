@@ -101,8 +101,9 @@
 
 	.size {
 		display: block;
-		inline-size: var(--3x-small);
-		padding-block-end: var(--prop);
+		writing-mode: horizontal-tb;
+		inline-size: var(--prop);
+		block-size: var(--3x-small);
 		box-shadow: var(--lightest-box-shadow);
 		outline: 1px dotted var(--high-contrast-color);
 		margin: var(--3x-small);
