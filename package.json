@@ -1,5 +1,4 @@
 {
-	"private": true,
 	"name": "semantic-props",
 	"version": "2.0.0-beta.2",
 	"description": "Expertly crafted CSS Custom Properties (variables) for creating consistent components in any design.",
