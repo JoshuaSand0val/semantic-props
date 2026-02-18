@@ -6,12 +6,11 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
-- Added grayscale and sepia filter props.
+- Added remaining filter props.
 
 ### Changed
 
 - Changed scale of blur filter props.
-- Changed yellow colors.
 
 ## [2.0.0-beta.1] - 2025-12-12
 
