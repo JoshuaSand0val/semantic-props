@@ -30,6 +30,6 @@
 		"highlight.js": "^11.11.1",
 		"prettier": "^3.5.3",
 		"sanitize.css": "^13.0.0",
-		"semantic-props": "^2.0.0-beta.1"
+		"semantic-props": "github:joshuasand0val/semantic-props#v2.0.0-beta.2"
 	}
 }

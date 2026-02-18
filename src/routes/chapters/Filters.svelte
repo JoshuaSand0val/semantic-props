@@ -30,13 +30,33 @@
 		"Highest Contrast": "var(--highest-contrast)"
 	};
 
-	const saturation: Record<string, string> = {
-		"Lowest Saturation": "var(--lowest-saturation)",
-		"Lower Saturation": "var(--lower-saturation)",
-		"Low Saturation": "var(--low-saturation)",
-		"High Saturation": "var(--high-saturation)",
-		"Higher Saturation": "var(--higher-saturation)",
-		"Highest Saturation": "var(--highest-saturation)"
+	const grayscale: Record<string, string> = {
+		"Weakest Grayscale": "var(--weakest-grayscale)",
+		"Weaker Grayscale": "var(--weaker-grayscale)",
+		"Weak Grayscale": "var(--weak-grayscale)",
+		"Medium Grayscale": "var(--medium-grayscale)",
+		"Strong Grayscale": "var(--strong-grayscale)",
+		"Stronger Grayscale": "var(--stronger-grayscale)",
+		"Strongest Grayscale": "var(--strongest-grayscale)"
+	};
+
+	const hueRotate: Record<string, string> = {
+		"Lowest Hue-Rotate": "var(--lowest-hue-rotate)",
+		"Lower Hue-Rotate": "var(--lower-hue-rotate)",
+		"Low Hue-Rotate": "var(--low-hue-rotate)",
+		"High Hue-Rotate": "var(--high-hue-rotate)",
+		"Higher Hue-Rotate": "var(--higher-hue-rotate)",
+		"Highest Hue-Rotate": "var(--highest-hue-rotate)"
+	};
+
+	const invert: Record<string, string> = {
+		"Weakest Invert": "var(--weakest-invert)",
+		"Weaker Invert": "var(--weaker-invert)",
+		"Weak Invert": "var(--weak-invert)",
+		"Medium Invert": "var(--medium-invert)",
+		"Strong Invert": "var(--strong-invert)",
+		"Stronger Invert": "var(--stronger-invert)",
+		"Strongest Invert": "var(--strongest-invert)"
 	};
 
 	const opacity: Record<string, string> = {
@@ -48,12 +68,31 @@
 		"Higher Opacity": "var(--higher-opacity)",
 		"Highest Opacity": "var(--highest-opacity)"
 	};
+
+	const saturation: Record<string, string> = {
+		"Lowest Saturation": "var(--lowest-saturation)",
+		"Lower Saturation": "var(--lower-saturation)",
+		"Low Saturation": "var(--low-saturation)",
+		"High Saturation": "var(--high-saturation)",
+		"Higher Saturation": "var(--higher-saturation)",
+		"Highest Saturation": "var(--highest-saturation)"
+	};
+
+	const sepia: Record<string, string> = {
+		"Weakest Sepia": "var(--weakest-sepia)",
+		"Weaker Sepia": "var(--weaker-sepia)",
+		"Weak Sepia": "var(--weak-sepia)",
+		"Medium Sepia": "var(--medium-sepia)",
+		"Strong Sepia": "var(--strong-sepia)",
+		"Stronger Sepia": "var(--stronger-sepia)",
+		"Strongest Sepia": "var(--strongest-sepia)"
+	};
 </script>
 
 <Divider title="Filter and Opacity Effects" id="filters">
 	<p>Semantic Props provides CSS <Code lang="css" code="filter" /> and <Code lang="css" code="opacity" /> values for various types of media.</p>
 	<div class="container">
-		{#each [blur, brightness, contrast, saturation, opacity] as filter}
+		{#each [blur, brightness, contrast, grayscale, hueRotate, invert, opacity, saturation, sepia] as filter}
 		<article class="wrapper">
 			{#each Object.entries(filter) as [title, prop]}			
 			<section class="content">

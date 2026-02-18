@@ -13,7 +13,7 @@
 			<span>
 				<ul class="about">
 					<li><Link to="https://github.com/JoshuaSand0val/semantic-props/">Github</Link></li>
-					<li class="version">v2.0.0-beta.1 (MIT)</li>
+					<li class="version">v2.0.0-beta.2 (MIT)</li>
 				</ul>
 				<Link to="#top">Scroll to Top ↑</Link>
 			</span>
