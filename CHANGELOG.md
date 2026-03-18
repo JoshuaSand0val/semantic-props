@@ -2,6 +2,16 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [2.0.0-beta.3] - YYYY-MM-DD
+
+### Added
+
+- Added `--medium-hue-rotate` filter prop.
+
+### Changed
+
+- Changed value scale of filter brightness, contrast, hue-rotate, invert, saturation and sepia props.
+
 ## [2.0.0-beta.2] - 2026-02-18
 
 ### Added

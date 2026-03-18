@@ -11,12 +11,12 @@
 	--heaviest-blur: blur(24px);
 
 	/* Brightness: */
-	--lowest-brightness: brightness(0.5);
-	--lower-brightness: brightness(0.75);
-	--low-brightness: brightness(0.875);
-	--high-brightness: brightness(1.125);
-	--higher-brightness: brightness(1.25);
-	--highest-brightness: brightness(1.5);
+	--lowest-brightness: brightness(0.25);
+	--lower-brightness: brightness(0.5);
+	--low-brightness: brightness(0.75);
+	--high-brightness: brightness(1.25);
+	--higher-brightness: brightness(1.5);
+	--highest-brightness: brightness(1.75);
 
 	/* Contrast: */
 	--lowest-contrast: contrast(0.25);
@@ -24,7 +24,7 @@
 	--low-contrast: contrast(0.75);
 	--high-contrast: contrast(1.25);
 	--higher-contrast: contrast(1.5);
-	--highest-contrast: contrast(2);
+	--highest-contrast: contrast(1.75);
 
 	/* Grayscale: */
 	--weakest-grayscale: grayscale(0.4);
@@ -36,18 +36,19 @@
 	--strongest-grayscale: grayscale(1);
 
 	/* Hue-Rotate: */
-	--lowest-hue-rotate: hue-rotate(30deg);
-	--lower-hue-rotate: hue-rotate(60deg);
-	--low-hue-rotate: hue-rotate(120deg);
-	--high-hue-rotate: hue-rotate(180deg);
-	--higher-hue-rotate: hue-rotate(240deg);
-	--highest-hue-rotate: hue-rotate(300deg);
+	--lowest-hue-rotate: hue-rotate(45deg);
+	--lower-hue-rotate: hue-rotate(90deg);
+	--low-hue-rotate: hue-rotate(135deg);
+	--medium-hue-rotate: hue-rotate(180deg);
+	--high-hue-rotate: hue-rotate(225deg);
+	--higher-hue-rotate: hue-rotate(270deg);
+	--highest-hue-rotate: hue-rotate(315deg);
 
 	/* Invert: */
-	--weakest-invert: invert(0.66);
-	--weaker-invert: invert(0.72);
-	--weak-invert: invert(0.78);
-	--medium-invert: invert(0.84);
+	--weakest-invert: invert(0.7);
+	--weaker-invert: invert(0.75);
+	--weak-invert: invert(0.8);
+	--medium-invert: invert(0.85);
 	--strong-invert: invert(0.9);
 	--stronger-invert: invert(0.95);
 	--strongest-invert: invert(1);
@@ -58,14 +59,14 @@
 	--low-saturation: saturate(0.75);
 	--high-saturation: saturate(1.25);
 	--higher-saturation: saturate(1.5);
-	--highest-saturation: saturate(2);
+	--highest-saturation: saturate(1.75);
 
 	/* Sepia: */
-	--weakest-sepia: sepia(0.15);
-	--weaker-sepia: sepia(0.3);
-	--weak-sepia: sepia(0.45);
-	--medium-sepia: sepia(0.6);
-	--strong-sepia: sepia(0.75);
+	--weakest-sepia: sepia(0.4);
+	--weaker-sepia: sepia(0.5);
+	--weak-sepia: sepia(0.6);
+	--medium-sepia: sepia(0.7);
+	--strong-sepia: sepia(0.8);
 	--stronger-sepia: sepia(0.9);
 	--strongest-sepia: sepia(1);
 }
