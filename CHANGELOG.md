@@ -11,6 +11,7 @@ All relevant changes to Semantic Props will be documented here.
 ### Changed
 
 - Changed value scale of filter brightness, contrast, hue-rotate, invert, saturation and sepia props.
+- Changed value scale of transform `scale()` props.
 
 ## [2.0.0-beta.2] - 2026-02-18
 
