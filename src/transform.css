@@ -1,6 +1,15 @@
 /* Semantic Props for CSS transform property values. */
 
 :root {
+	/* Perspective: */
+	--closest-perspective: perspective(100px);
+	--closer-perspective: perspective(300px);
+	--close-perspective: perspective(500px);
+	--medium-perspective: perspective(800px);
+	--far-perspective: perspective(1200px);
+	--farther-perspective: perspective(1600px);
+	--farthest-perspective: perspective(2000px);
+
 	/* Scale (X-axis): */
 	--smallest-scale-x: scaleX(0.85);
 	--smaller-scale-x: scaleX(0.9);

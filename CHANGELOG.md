@@ -7,6 +7,7 @@ All relevant changes to Semantic Props will be documented here.
 ### Added
 
 - Added `--medium-hue-rotate` filter prop.
+- Added transform `perspective()` props.
 
 ### Changed
 
