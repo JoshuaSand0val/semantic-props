@@ -35,10 +35,14 @@
 	{#each [scaleX, scaleY, scale] as transform}
 	<div class="container">
 		{#each Object.entries(transform) as [title, prop]}
-		<span class="demo" style:--prop={prop}>
+		<span class="card" style:--prop={prop}>
 			<span class="title">{title}</span>
 			<code class="prop">{prop}</code>
-			<div class="transform"></div>
+			<div class="demo">
+				<div class="transform">
+					<div class="box"></div>
+				</div>
+			</div>
 		</span>
 		{/each}
 	</div>
@@ -56,7 +60,7 @@
 		filter: var(--lightest-shadow);
 	}
 
-	.demo {
+	.card {
 		--inline-size: var(--smaller-container);
 		display: block;
 		inline-size: min(100%, var(--inline-size));
@@ -70,27 +74,6 @@
 		@media (--laptop) {
 			--inline-size: var(--small-container);
 		}
-	}
-
-	.transform, .transform::before {
-		display: block;
-		aspect-ratio: 1;
-	}
-
-	.transform {
-		border: var(--4x-small) dashed var(--low-contrast-color);
-		transform: scale(0.75);
-		transform-origin: center;
-		margin-inline: var(--2x-large);
-		margin-block: var(--5x-large);
-		filter: var(--light-shadow);
-	}
-
-	.transform::before {
-		content: "";
-		display: block;
-		transform: var(--prop);
-		outline: var(--4x-small) solid var(--high-contrast-color);
 	}
 
 	.title {
@@ -108,5 +91,31 @@
 		font-weight: var(--regular-weight);
 		color: var(--low-contrast-color);
 		font-size: var(--small);
+	}
+
+	.demo, .transform, .box {
+		display: block;
+		aspect-ratio: 1;
+	}
+
+	.demo {
+		position: relative;
+		border: var(--4x-small) dashed var(--low-contrast-color);
+		margin-inline: var(--2x-large);
+		margin-block: var(--5x-large);
+		filter: var(--light-shadow);
+	}
+
+	.transform {
+		transform: var(--prop);
+		transform-origin: center;
+		transform-style: preserve-3d;
+	}
+
+	.box {
+		position: absolute;
+		inset: 0;
+		transform: translateZ(calc(var(--smallest-container) * -1));
+		outline: var(--4x-small) solid var(--high-contrast-color);
 	}
 </style>
