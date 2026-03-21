@@ -101,8 +101,7 @@
 	.demo {
 		position: relative;
 		border: var(--4x-small) dashed var(--low-contrast-color);
-		margin-inline: var(--2x-large);
-		margin-block: var(--5x-large);
+		margin: var(--5x-large);
 		filter: var(--light-shadow);
 	}
 
