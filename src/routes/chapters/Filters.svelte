@@ -97,7 +97,7 @@
 			{#each Object.entries(filter) as [title, prop]}			
 			<section class="content">
 				<span class="demo" style:--prop={prop}>
-					<img src="/blocks/Filters/demo.jpg" alt="" />
+					<img src="/blocks/Filters/demo.webp" alt="" />
 				</span>
 				<h4 class="title">{title}</h4>
 				<code class="prop">{prop}</code>

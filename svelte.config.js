@@ -1,9 +1,8 @@
-import { mdsvex } from 'mdsvex';
 import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 const config = {
-	preprocess: [vitePreprocess(), mdsvex()],
+	preprocess: [vitePreprocess()],
 	kit: {
 		adapter: adapter({
 			pages: 'docs',
