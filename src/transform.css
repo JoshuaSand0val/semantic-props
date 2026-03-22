@@ -10,6 +10,86 @@
 	--farther-perspective: perspective(1600px);
 	--farthest-perspective: perspective(2000px);
 
+	/* Rotate (X+Y-axis): */
+	--lowest-rotate: rotate(45deg);
+	--lower-rotate: rotate(90deg);
+	--low-rotate: rotate(135deg);
+	--medium-rotate: rotate(180deg);
+	--high-rotate: rotate(225deg);
+	--higher-rotate: rotate(270deg);
+	--highest-rotate: rotate(315deg);
+
+	/* Rotate (X-axis): */
+	--lowest-rotate-x: rotateX(45deg);
+	--lower-rotate-x: rotateX(90deg);
+	--low-rotate-x: rotateX(135deg);
+	--medium-rotate-x: rotateX(180deg);
+	--high-rotate-x: rotateX(225deg);
+	--higher-rotate-x: rotateX(270deg);
+	--highest-rotate-x: rotateX(315deg);
+
+	/* Rotate (Y-axis): */
+	--lowest-rotate-y: rotateY(45deg);
+	--lower-rotate-y: rotateY(90deg);
+	--low-rotate-y: rotateY(135deg);
+	--medium-rotate-y: rotateY(180deg);
+	--high-rotate-y: rotateY(225deg);
+	--higher-rotate-y: rotateY(270deg);
+	--highest-rotate-y: rotateY(315deg);
+
+	/* Rotate (Z-axis): */
+	--lowest-rotate-z: rotateZ(45deg);
+	--lower-rotate-z: rotateZ(90deg);
+	--low-rotate-z: rotateZ(135deg);
+	--medium-rotate-z: rotateZ(180deg);
+	--high-rotate-z: rotateZ(225deg);
+	--higher-rotate-z: rotateZ(270deg);
+	--highest-rotate-z: rotateZ(315deg);
+
+	/* Translate (X+Y-axis): */
+	--smallest-translate: translate(5%, 5%);
+	--smaller-translate: translate(10%, 10%);
+	--small-translate: translate(15%, 15%);
+	--medium-translate: translate(20%, 20%);
+	--large-translate: translate(25%, 25%);
+	--larger-translate: translate(30%, 30%);
+	--largest-translate: translate(35%, 35%);
+
+	/* Translate (X-axis): */
+	--smallest-translate-x: translateX(5%);
+	--smaller-translate-x: translateX(10%);
+	--small-translate-x: translateX(15%);
+	--medium-translate-x: translateX(20%);
+	--large-translate-x: translateX(25%);
+	--larger-translate-x: translateX(30%);
+	--largest-translate-x: translateX(35%);
+
+	/* Translate (Y-axis): */
+	--smallest-translate-y: translateY(5%);
+	--smaller-translate-y: translateY(10%);
+	--small-translate-y: translateY(15%);
+	--medium-translate-y: translateY(20%);
+	--large-translate-y: translateY(25%);
+	--larger-translate-y: translateY(30%);
+	--largest-translate-y: translateY(35%);
+
+	/* Translate (Z-axis): */
+	--smallest-translate-z: translateZ(5%);
+	--smaller-translate-z: translateZ(10%);
+	--small-translate-z: translateZ(15%);
+	--medium-translate-z: translateZ(20%);
+	--large-translate-z: translateZ(25%);
+	--larger-translate-z: translateZ(30%);
+	--largest-translate-z: translateZ(35%);
+
+	/* Scale (X+Y-axis): */
+	--smallest-scale: scale(0.85);
+	--smaller-scale: scale(0.9);
+	--small-scale: scale(0.95);
+	--large-scale: scale(1.05);
+	--larger-scale: scale(1.1);
+	--largest-scale: scale(1.15);
+
 	/* Scale (X-axis): */
 	--smallest-scale-x: scaleX(0.85);
 	--smaller-scale-x: scaleX(0.9);
@@ -26,11 +106,38 @@
 	--larger-scale-y: scaleY(1.1);
 	--largest-scale-y: scaleY(1.15);
 
-	/* Scale (X+Y-axis): */
-	--smallest-scale: scale(0.85);
-	--smaller-scale: scale(0.9);
-	--small-scale: scale(0.95);
-	--large-scale: scale(1.05);
-	--larger-scale: scale(1.1);
-	--largest-scale: scale(1.15);
+	/* Scale (Z-axis): */
+	--smallest-scale-z: scaleZ(0.85);
+	--smaller-scale-z: scaleZ(0.9);
+	--small-scale-z: scaleZ(0.95);
+	--large-scale-z: scaleZ(1.05);
+	--larger-scale-z: scaleZ(1.1);
+	--largest-scale-z: scaleZ(1.15);
+
+	/* Skew (X+Y-axis): */
+	--lowest-skew: skew(3deg, 3deg);
+	--lower-skew: skew(6deg, 6deg);
+	--low-skew: skew(9deg, 9deg);
+	--medium-skew: skew(12deg, 12deg);
+	--high-skew: skew(15deg, 15deg);
+	--higher-skew: skew(18deg, 18deg);
+	--highest-skew: skew(21deg, 21deg);
+
+	/* Skew (X-axis): */
+	--lowest-skew-x: skewX(3deg);
+	--lower-skew-x: skewX(6deg);
+	--low-skew-x: skewX(9deg);
+	--medium-skew-x: skewX(12deg);
+	--high-skew-x: skewX(15deg);
+	--higher-skew-x: skewX(18deg);
+	--highest-skew-x: skewX(21deg);
+
+	/* Skew (Y-axis): */
+	--lowest-skew-y: skewY(3deg);
+	--lower-skew-y: skewY(6deg);
+	--low-skew-y: skewY(9deg);
+	--medium-skew-y: skewY(12deg);
+	--high-skew-y: skewY(15deg);
+	--higher-skew-y: skewY(18deg);
+	--highest-skew-y: skewY(21deg);
 }
