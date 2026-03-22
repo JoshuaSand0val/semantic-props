@@ -14,7 +14,7 @@
 		$percent: calc((950 - $weight) / (950 - 50));
 
 		/* Calculate Lightness and Chroma: */
-		$l: calc(0.15 + (0.95 - 0.15) * $percent);
+		$l: calc(0.2 + (0.95 - 0.2) * $percent);
 		$c: calc(c * sin(pi * $l));
 
 		/* Colors + Gray: */
