@@ -1,57 +1,36 @@
 /* Semantic Props for color. */
 
-@custom-media --light (prefers-color-scheme: light);
-@custom-media --dark (prefers-color-scheme: dark);
-
 :root {
-	/* White/Black: */
+	/* Origin Colors: */
+	--primary-color: light-dark(oklch(1 0.02 240), oklch(0.2 0.02 240));
+	--secondary-color: light-dark(oklch(0.1 0.02 240), oklch(0.95 0.02 240));
+	--accent-color: oklch(0.6 0.15 240);
+
+	/* Color Weights: */
 	--white: white;
 	--black: black;
 
-	/* Color Weights: */
 	@for $weight from 50 to 950 by 50 {
-		/* Calculate Percent of Weight: */
-		$percent: calc((950 - $weight) / (950 - 50));
+		/* Calculate percentage of weight: */
+		$percentage: calc((950 - $weight) / (950 - 50));
 
-		/* Calculate Lightness and Chroma: */
-		$l: calc(0.2 + (0.95 - 0.2) * $percent);
+		/* Calculate lightness and chroma: */
+		$l: calc(0.15 + (0.95 - 0.15) * $percentage);
 		$c: calc(c * sin(pi * $l));
 
-		/* Colors + Gray: */
-		--accent-$(weight): var(--blue-$(weight));
-
-		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l $c h);
-		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $l $c h);
-		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $l $c h);
-		--cyan-$(weight): oklch(from oklch(0.7 0.15 180) $l $c h);
-		--gray-$(weight): oklch(from oklch(0.5 0.01 260) $l $c h);
-		--green-$(weight): oklch(from oklch(0.6 0.2 150) $l $c h);
-		--indigo-$(weight): oklch(from oklch(0.4 0.2 270) $l $c h);
-		--lime-$(weight): oklch(from oklch(0.7 0.15 120) $l $c h);
-		--magenta-$(weight): oklch(from oklch(0.6 0.2 330) $l $c h);
-		--orange-$(weight): oklch(from oklch(0.6 0.15 50) $l $c h);
-		--pink-$(weight): oklch(from oklch(0.8 0.1 10) $l $c h);
-		--red-$(weight): oklch(from oklch(0.5 0.2 30) $l $c h);
-		--violet-$(weight): oklch(from oklch(0.4 0.15 290) $l $c h);
-		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l $c h);
+		/* Declare weights: */
+		--primary-$(weight): oklch(from var(--primary-color) $l $c h);
+		--secondary-$(weight): oklch(from var(--secondary-color) $l $c h);
+		--accent-$(weight): oklch(from var(--accent-color) $l $c h);
 	}
 
-	/* Contextual Colors: */
-	--background-color: var(--white);
-	--middleground-color: var(--gray-50);
-	--foreground-color: var(--gray-100);
+	/* Background Colors: */
+	--background-color: light-dark(var(--white), var(--black));
+	--middleground-color: light-dark(var(--primary-100), var(--primary-900));
+	--foreground-color: light-dark(var(--primary-200), var(--primary-800));
 
-	--high-contrast-color: var(--gray-900);
-	--medium-contrast-color: var(--gray-800);
-	--low-contrast-color: var(--gray-700);
-
-	@media (--dark) {
-		--background-color: var(--black);
-		--middleground-color: var(--gray-950);
-		--foreground-color: var(--gray-900);
-
-		--high-contrast-color: var(--gray-100);
-		--medium-contrast-color: var(--gray-200);
-		--low-contrast-color: var(--gray-300);
-	}
+	/* Contrast Colors: */
+	--high-contrast-color: light-dark(var(--secondary-900), var(--secondary-100));
+	--medium-contrast-color: light-dark(var(--secondary-800), var(--secondary-200));
+	--low-contrast-color: light-dark(var(--secondary-700), var(--secondary-300));
 }
