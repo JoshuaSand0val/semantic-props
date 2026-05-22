@@ -17,6 +17,7 @@ All relevant changes to Semantic Props will be documented here.
 - Changed dark color-scheme background-colors to start at `var(--black)`.
 - Changed accent colors to use relative colors.
 - Changed colors to use `light-dark()` CSS function.
+- Changed `--accent-family` prop naming to `--brand-family`.
 
 ### Removed
 
