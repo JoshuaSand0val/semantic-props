@@ -8,20 +8,18 @@ All relevant changes to Semantic Props will be documented here.
 
 - Added `--medium-hue-rotate` filter prop.
 - Added remaining transform props.
-- Added primary and secondary (alongside accent) color weights using CSS relative colors.
+- Added primary and secondary (alongside accent) relative color weights via named origins.
 
 ### Changed
 
 - Changed value scale of filter brightness, contrast, hue-rotate, invert, saturation and sepia props.
 - Changed value scale of transform `scale()` props.
-- Changed dark color-scheme background-colors to start at `var(--black)`.
 - Changed accent colors to use relative colors.
-- Changed colors to use `light-dark()` CSS function.
 - Changed `--accent-family` prop naming to `--brand-family`.
 
 ### Removed
 
-- Removed hued color weights (in favour of primary, secondary and accent).
+- Removed light/dark colors, and hued weights (in favour of primary, secondary and accent).
 
 ## [2.0.0-beta.2] - 2026-02-18
 
