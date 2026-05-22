@@ -26,8 +26,8 @@
 
 	/* Background Colors: */
 	--background-color: light-dark(var(--white), var(--black));
-	--middleground-color: light-dark(var(--primary-100), var(--primary-900));
-	--foreground-color: light-dark(var(--primary-200), var(--primary-800));
+	--middleground-color: light-dark(var(--primary-50), var(--primary-950));
+	--foreground-color: light-dark(var(--primary-100), var(--primary-900));
 
 	/* Contrast Colors: */
 	--high-contrast-color: light-dark(var(--secondary-900), var(--secondary-100));
