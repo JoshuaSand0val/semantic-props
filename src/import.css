@@ -1,13 +1,196 @@
-/* Import: All files imported. */
-@import "border.css";
-@import "color.css";
-@import "filter.css";
-@import "font.css";
-@import "opacity.css";
-@import "ratio.css";
-@import "safe-area.css";
-@import "shadow.css";
-@import "size.css";
-@import "timing.css";
-@import "transform.css";
-@import "z-index.css";
+/* Semantic Props: Expertly crafted CSS Custom Properties. */
+
+:where(.semantic) {
+	/* Border-Style: */
+	--border-style: solid;
+
+	/* Border-Radius: */
+	--small-radius: 0.75rem; /* 12px */
+	--medium-radius: 1rem; /* 16px */
+	--large-radius: 1.5rem; /* 24px */
+
+	/* Color Origin: */
+	--color: gray;
+
+	/* Color Weight: */
+	--white: white;
+	--black: black;
+
+	@for $weight from 50 to 950 by 50 {
+		/* Calculate percentage of weight: */
+		$percentage: calc((950 - $weight) / (950 - 50));
+
+		/* Calculate lightness and chroma: */
+		$l: calc(0.15 + (0.95 - 0.15) * $percentage);
+		$c: calc(c * sin(pi * $l));
+
+		/* Declare weights: */
+		--color-$(weight): oklch(from var(--color) $l $c h);
+	}
+
+	/* Blur: */
+	--light-blur: blur(6px);
+	--medium-blur: blur(8px);
+	--heavy-blur: blur(12px);
+
+	/* Brightness: */
+	--low-brightness: brightness(0.75);
+	--high-brightness: brightness(1.25);
+
+	/* Contrast: */
+	--low-contrast: contrast(0.75);
+	--high-contrast: contrast(1.25);
+
+	/* Grayscale: */
+	--weak-grayscale: grayscale(0.6);
+	--medium-grayscale: grayscale(0.7);
+	--strong-grayscale: grayscale(0.8);
+
+	/* Hue-Rotate: */
+	--low-hue-rotate: hue-rotate(135deg);
+	--medium-hue-rotate: hue-rotate(180deg);
+	--high-hue-rotate: hue-rotate(225deg);
+
+	/* Invert: */
+	--weak-invert: invert(0.8);
+	--medium-invert: invert(0.85);
+	--strong-invert: invert(0.9);
+
+	/* Saturation: */
+	--low-saturation: saturate(0.75);
+	--high-saturation: saturate(1.25);
+
+	/* Sepia: */
+	--weak-sepia: sepia(0.6);
+	--medium-sepia: sepia(0.7);
+	--strong-sepia: sepia(0.8);
+
+	/* Font-Family: */
+	--body-family: system-ui, sans-serif;
+	--display-family: var(--body-family);
+	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+	--brand-family: var(--body-family);
+
+	/* Font-Weight: */
+	--thin-weight: 200;
+	--light-weight: 300;
+	--regular-weight: 500;
+	--bold-weight: 700;
+	--heavy-weight: 900;
+
+	/* Letter-Spacing: */
+	--tight-letter: -0.05em;
+	--normal-letter: normal;
+	--wide-letter: 0.1em;
+
+	/* Line-Height: */
+	--short-line: 1.25;
+	--normal-line: 1.6;
+	--tall-line: 2;
+
+	/* Word-Spacing: */
+	--tight-word: -0.1em;
+	--normal-word: normal;
+	--wide-word: 0.1em;
+
+	/* Opacity: */
+	--low-opacity: 0.33;
+	--medium-opacity: 0.5;
+	--high-opacity: 0.66;
+
+	/* Aspect-Ratio: */
+	--square-ratio: 1 / 1;
+	--landscape-ratio: 4 / 3;
+	--portrait-ratio: 3 / 4;
+	--video-ratio: 16 / 9;
+	--wide-ratio: 21 / 9;
+
+	/* Display Safe-Area: */
+	--safe-top: 0;
+	--safe-right: 0;
+	--safe-bottom: 0;
+	--safe-left: 0;
+
+	@supports (top: env(safe-area-inset-top)) {
+		--safe-top: env(safe-area-inset-top);
+		--safe-right: env(safe-area-inset-right);
+		--safe-bottom: env(safe-area-inset-bottom);
+		--safe-left: env(safe-area-inset-left);
+	}
+
+	--safe: var(--safe-top) var(--safe-right) var(--safe-bottom) var(--safe-left);
+	--safe-x: 0 var(--safe-right) 0 var(--safe-left);
+	--safe-y: var(--safe-top) 0 var(--safe-bottom) 0;
+
+	--safe-header: var(--safe-top) var(--safe-right) 0 var(--safe-left);
+	--safe-body: var(--safe-x);
+	--safe-footer: 0 var(--safe-right) var(--safe-bottom) var(--safe-left);
+
+	/* Text-Shadow: */
+	--light-text-shadow: 0 7px 5px rgb(0 0 0 / 0.15);
+	--medium-text-shadow: 0 8px 8px rgb(0 0 0 / 0.225);
+	--heavy-text-shadow: 0 8px 8px rgb(0 0 0 / 0.3);
+
+	/* Box-Shadow: */
+	--light-box-shadow: 0 7px 5px rgb(0 0 0 / 0.1);
+	--medium-box-shadow: 0 8px 8px rgb(0 0 0 / 0.15);
+	--heavy-box-shadow: 0 8px 8px rgb(0 0 0 / 0.2);
+
+	/* Box-Shadow (Inset): */
+	--light-inset-shadow: inset 0 7px 5px rgb(0 0 0 / 0.1);
+	--medium-inset-shadow: inset 0 8px 8px rgb(0 0 0 / 0.15);
+	--heavy-inset-shadow: inset 0 8px 8px rgb(0 0 0 / 0.2);
+
+	/* Drop-Shadow (Filter): */
+	--light-shadow: drop-shadow(0 7px 5px rgb(0 0 0 / 0.1));
+	--medium-shadow: drop-shadow(0 8px 8px rgb(0 0 0 / 0.15));
+	--heavy-shadow: drop-shadow(0 8px 8px rgb(0 0 0 / 0.2));
+
+	/* Container Sizes: */
+	--small-container: 20rem; /* 320px */
+	--medium-container: 30rem; /* 480px */
+	--large-container: 40rem; /* 640px */
+
+	/* Base Sizes: */
+	--4x-small: 0.125rem; /* 2px */
+	--3x-small: 0.25rem; /* 4px */
+	--2x-small: 0.5rem; /* 8px */
+	--x-small: 0.75rem; /* 12px */
+	--small: 0.875rem; /* 14px */
+	--medium: 1rem; /* 16px */
+	--large: 1.125rem; /* 18px */
+	--x-large: 1.25rem; /* 20px */
+	--2x-large: 1.5rem; /* 24px */
+	--3x-large: 1.875rem; /* 30px */
+	--4x-large: 2.25rem; /* 36px */
+	--5x-large: 3rem; /* 48px */
+	--6x-large: 3.75rem; /* 60px */
+	--7x-large: 4.5rem; /* 72px */
+	--8x-large: 6rem; /* 96px */
+	--9x-large: 8rem; /* 128px */
+
+	--smaller: 0.875em; /* 14/16px */
+	--larger: 1.125em; /* 18/16px */
+
+	/* Margin Size: */
+	--margin-size: 5%;
+
+	/* Easing Values: */
+	--ease: ease;
+	--ease-in: ease-in;
+	--ease-out: ease-out;
+	--ease-in-out: ease-in-out;
+
+	/* Time Values: */
+	--fast-time: 150ms;
+	--normal-time: 300ms;
+	--slow-time: 500ms;
+
+	/* Z-Index: */
+	--z-bottom: -1000;
+	--z-relative: 1000;
+	--z-absolute: 2000;
+	--z-sticky: 3000;
+	--z-fixed: 4000;
+	--z-top: 5000;
+}
