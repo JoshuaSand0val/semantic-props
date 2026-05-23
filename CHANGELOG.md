@@ -12,6 +12,8 @@ All relevant changes to Semantic Props will be documented here.
 
 - Changed selector from `:root` to `:where(.semantic)`.
 - Changed `--accent-family` prop naming to `--brand-family`.
+- Changed scale for unique props.
+- Changed names for size props.
 
 ### Removed
 
