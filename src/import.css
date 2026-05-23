@@ -70,6 +70,16 @@
 	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 	--brand-family: var(--body-family);
 
+	/* Font-Size: */
+	--x-small-font: 0.75rem; /* 12px */
+	--small-font: 0.875rem; /* 14px */
+	--medium-font: 1rem; /* 16px */
+	--large-font: 1.25rem; /* 20px */
+	--x-large-font: 1.5rem; /* 24px */
+	--xx-large-font: 1.75rem; /* 28px */
+	--xxx-large-font: 2rem; /* 32px */
+	--xxxx-large-font: 2.25rem; /* 36px */
+
 	/* Font-Weight: */
 	--thin-weight: 200;
 	--light-weight: 300;
@@ -145,7 +155,7 @@
 	--medium-shadow: drop-shadow(0 6px 6px rgb(0 0 0 / 0.2));
 	--heavy-shadow: drop-shadow(0 8px 8px rgb(0 0 0 / 0.3));
 
-	/* Container Sizes: */
+	/* Container Size: */
 	--xxx-small-container: 8rem; /* 128px */
 	--xx-small-container: 10rem; /* 160px */
 	--x-small-container: 15rem; /* 240px */
@@ -156,7 +166,7 @@
 	--xx-large-container: 90rem; /* 1440px */
 	--xxx-large-container: 120rem; /* 1920px */
 
-	/* Sizes: */
+	/* Size: */
 	--xxx-small: 0.125rem; /* 2px */
 	--xx-small: 0.25rem; /* 4px */
 	--x-small: 0.5rem; /* 8px */
@@ -179,7 +189,7 @@
 	--ease-out: ease-out;
 	--ease-in-out: ease-in-out;
 
-	/* Time Values: */
+	/* Time Value: */
 	--fast-time: 150ms;
 	--normal-time: 300ms;
 	--slow-time: 500ms;
