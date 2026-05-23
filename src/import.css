@@ -146,7 +146,7 @@
 	--heavy-shadow: drop-shadow(0 8px 8px rgb(0 0 0 / 0.3));
 
 	/* Container Sizes: */
-	--xxx-small-container: 6rem; /* 96px */
+	--xxx-small-container: 8rem; /* 128px */
 	--xx-small-container: 10rem; /* 160px */
 	--x-small-container: 15rem; /* 240px */
 	--small-container: 20rem; /* 320px */
