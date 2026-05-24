@@ -10,7 +10,7 @@
 	--large-radius: 2rem; /* 32px */
 
 	/* Color Origin: */
-	--color: gray;
+	--color: oklch(0.5 0.02 240);
 
 	/* Color Weight: */
 	--white: white;
