@@ -70,16 +70,6 @@
 	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
 	--brand-family: var(--body-family);
 
-	/* Font-Size: */
-	--x-small-font: 0.75rem; /* 12px */
-	--small-font: 0.875rem; /* 14px */
-	--medium-font: 1rem; /* 16px */
-	--large-font: 1.25rem; /* 20px */
-	--x-large-font: 1.5rem; /* 24px */
-	--xx-large-font: 1.75rem; /* 28px */
-	--xxx-large-font: 2rem; /* 32px */
-	--xxxx-large-font: 2.25rem; /* 36px */
-
 	/* Font-Weight: */
 	--thin-weight: 200;
 	--light-weight: 300;
@@ -156,26 +146,32 @@
 	--heavy-shadow: drop-shadow(0 8px 16px rgb(0 0 0 / 0.3));
 
 	/* Container Size: */
-	--xxx-small-container: 8rem; /* 128px */
-	--xx-small-container: 10rem; /* 160px */
+	--3x-small-container: 8rem; /* 128px */
+	--2x-small-container: 10rem; /* 160px */
 	--x-small-container: 15rem; /* 240px */
 	--small-container: 20rem; /* 320px */
 	--medium-container: 30rem; /* 480px */
 	--large-container: 48rem; /* 768px */
 	--x-large-container: 64rem; /* 1024px */
-	--xx-large-container: 90rem; /* 1440px */
-	--xxx-large-container: 120rem; /* 1920px */
+	--2x-large-container: 90rem; /* 1440px */
+	--3x-large-container: 120rem; /* 1920px */
 
 	/* Size: */
-	--xxx-small: 0.125rem; /* 2px */
-	--xx-small: 0.25rem; /* 4px */
-	--x-small: 0.5rem; /* 8px */
-	--small: 0.75rem; /* 12px */
+	--3x-small: 0.25rem; /* 4px */
+	--2x-small: 0.5rem; /* 8px */
+	--x-small: 0.75rem; /* 12px */
+	--small: 0.875rem; /* 14px */
 	--medium: 1rem; /* 16px */
-	--large: 1.5rem; /* 24px */
-	--x-large: 2rem; /* 32px */
-	--xx-large: 3rem; /* 48px */
-	--xxx-large: 4rem; /* 64px */
+	--large: 1.125rem; /* 18px */
+	--x-large: 1.25rem; /* 20px */
+	--2x-large: 1.5rem; /* 24px */
+	--3x-large: 1.875rem; /* 30px */
+	--4x-large: 2.25rem; /* 36px */
+	--5x-large: 3rem; /* 48px */
+	--6x-large: 3.75rem; /* 60px */
+	--7x-large: 4.5rem; /* 72px */
+	--8x-large: 6rem; /* 96px */
+	--9x-large: 8rem; /* 128px */
 
 	--smaller: 0.875em; /* 14/16px */
 	--larger: 1.125em; /* 18/16px */
