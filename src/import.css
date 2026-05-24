@@ -33,9 +33,9 @@
 	--secondary-color: light-dark(var(--color-50), var(--color-950));
 	--tertiary-color: light-dark(var(--color-100), var(--color-900));
 
-	--high-contrast-color: light-dark(var(--color-950), var(--color-100));
-	--medium-contrast-color: light-dark(var(--color-850), var(--color-200));
-	--low-contrast-color: light-dark(var(--color-750), var(--color-300));
+	--high-contrast-color: light-dark(var(--color-900), var(--color-100));
+	--medium-contrast-color: light-dark(var(--color-600), var(--color-400));
+	--low-contrast-color: light-dark(var(--color-400), var(--color-600));
 
 	/* Blur: */
 	--light-blur: blur(4px);
