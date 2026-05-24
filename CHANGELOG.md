@@ -7,6 +7,7 @@ All relevant changes to Semantic Props will be documented here.
 ### Added
 
 - Added color weights via relative `--color` origin.
+- Added new `light-dark()` colors.
 
 ### Changed
 
