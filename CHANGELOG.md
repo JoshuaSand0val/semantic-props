@@ -6,12 +6,10 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
-- Added color weights via relative `--color` origin.
-- Added new `light-dark()` colors.
+- Added color system of `--primary-`, `--secondary-` and `--accent-`.
 
 ### Changed
 
-- Changed selector from `:root` to `:where(.semantic)`.
 - Changed `--accent-family` prop naming to `--brand-family`.
 - Changed scale for unique props.
 - Changed names for container size props.

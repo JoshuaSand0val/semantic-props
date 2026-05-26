@@ -1,6 +1,9 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-:where(.semantic) {
+@custom-media --light (prefers-color-scheme: light);
+@custom-media --dark (prefers-color-scheme: dark);
+
+:root {
 	/* Border-Style: */
 	--border-style: solid;
 
@@ -8,9 +11,6 @@
 	--small-radius: 0.5rem; /* 8px */
 	--medium-radius: 1rem; /* 16px */
 	--large-radius: 2rem; /* 32px */
-
-	/* Color Origin: */
-	--color: oklch(0.5 0.02 240);
 
 	/* Color Weight: */
 	--white: white;
@@ -25,17 +25,21 @@
 		$c: calc(c * sin(pi * $l));
 
 		/* Declare weights: */
-		--color-$(weight): oklch(from var(--color) $l $c h);
+		--primary-$(weight): oklch(from oklch(0.5 0.02 260) $l $c h);
+		--secondary-$(weight): oklch(from oklch(0.5 0.04 260) $l $c h);
+		--accent-$(weight): oklch(from oklch(0.5 0.15 240) $l $c h);
 	}
 
-	/* Light-Dark Colors: */
-	--primary-color: light-dark(var(--white), var(--black));
-	--secondary-color: light-dark(var(--color-50), var(--color-950));
-	--tertiary-color: light-dark(var(--color-100), var(--color-900));
+	/* Color Palette: */
+	--primary-color: var(--white);
+	--secondary-color: var(--secondary-900);
+	--accent-color: var(--accent-600);
 
-	--high-contrast-color: light-dark(var(--color-900), var(--color-100));
-	--medium-contrast-color: light-dark(var(--color-600), var(--color-400));
-	--low-contrast-color: light-dark(var(--color-400), var(--color-600));
+	@media (--dark) {
+		--primary-color: var(--black);
+		--secondary-color: var(--secondary-100);
+		--accent-color: var(--accent-500);
+	}
 
 	/* Blur: */
 	--light-blur: blur(4px);
