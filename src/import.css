@@ -3,15 +3,33 @@
 @custom-media --light (prefers-color-scheme: light);
 @custom-media --dark (prefers-color-scheme: dark);
 
-:root {
+:where(.semantic) {
 	/* Border-Radius: */
 	--small-radius: 0.5rem; /* 8px */
 	--medium-radius: 1rem; /* 16px */
 	--large-radius: 2rem; /* 32px */
 
+	/* Color Origin: */
+	--accent: var(--blue);
+	--blue: oklch(0.6 0.15 240);
+	--brown: oklch(0.6 0.05 50);
+	--coral: oklch(0.7 0.2 40);
+	--cyan: oklch(0.7 0.15 180);
+	--gray: oklch(0.5 0.01 260);
+	--green: oklch(0.6 0.2 150);
+	--indigo: oklch(0.4 0.2 270);
+	--lime: oklch(0.7 0.15 120);
+	--magenta: oklch(0.6 0.2 330);
+	--orange: oklch(0.6 0.15 50);
+	--pink: oklch(0.8 0.1 10);
+	--red: oklch(0.5 0.2 30);
+	--violet: oklch(0.4 0.15 290);
+	--yellow: oklch(0.8 0.15 90);
+
 	/* Color Weight: */
 	--white: white;
 	--black: black;
+	--color: var(--gray);
 
 	@for $weight from 100 to 900 by 100 {
 		/* Calculate percentage of weight: */
@@ -22,20 +40,26 @@
 		$c: calc(c * sin(pi * $l));
 
 		/* Declare weights: */
-		--primary-$(weight): oklch(from oklch(0.5 0.02 260) $l $c h);
-		--secondary-$(weight): oklch(from oklch(0.5 0.04 260) $l $c h);
-		--accent-$(weight): oklch(from oklch(0.5 0.15 240) $l $c h);
+		--color-$(weight): oklch(from var(--color) $l $c h);
 	}
 
 	/* Color Palette: */
-	--primary-color: var(--white);
-	--secondary-color: var(--secondary-900);
-	--accent-color: var(--accent-600);
+	--background-color: var(--white);
+	--middleground-color: var(--color-100);
+	--foreground-color: var(--color-200);
+
+	--low-contrast-color: var(--color-400);
+	--medium-contrast-color: var(--color-600);
+	--high-contrast-color: var(--black);
 
 	@media (--dark) {
-		--primary-color: var(--black);
-		--secondary-color: var(--secondary-100);
-		--accent-color: var(--accent-500);
+		--background-color: var(--black);
+		--middleground-color: var(--color-900);
+		--foreground-color: var(--color-800);
+
+		--low-contrast-color: var(--color-600);
+		--medium-contrast-color: var(--color-400);
+		--high-contrast-color: var(--white);
 	}
 
 	/* Blur: */
