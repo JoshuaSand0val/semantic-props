@@ -42,8 +42,8 @@
 
 	/* Color Palette: */
 	--background-color: light-dark(var(--white), var(--black));
-	--middleground-color: light-dark(var(--color-100), var(--color-900));
-	--foreground-color: light-dark(var(--color-200), var(--color-800));
+	--middleground-color: light-dark(var(--color-50), var(--color-950));
+	--foreground-color: light-dark(var(--color-100), var(--color-900));
 
 	--low-contrast-color: light-dark(var(--color-400), var(--color-600));
 	--medium-contrast-color: light-dark(var(--color-600), var(--color-400));
