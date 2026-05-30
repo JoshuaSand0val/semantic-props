@@ -4,9 +4,6 @@
 @custom-media --dark (prefers-color-scheme: dark);
 
 :root {
-	/* Border-Style: */
-	--border-style: solid;
-
 	/* Border-Radius: */
 	--small-radius: 0.5rem; /* 8px */
 	--medium-radius: 1rem; /* 16px */
@@ -16,9 +13,9 @@
 	--white: white;
 	--black: black;
 
-	@for $weight from 50 to 950 by 50 {
+	@for $weight from 100 to 900 by 100 {
 		/* Calculate percentage of weight: */
-		$percentage: calc((950 - $weight) / (950 - 50));
+		$percentage: calc((900 - $weight) / (900 - 100));
 
 		/* Calculate lightness and chroma: */
 		$l: calc(0.15 + (0.95 - 0.15) * $percentage);
@@ -84,9 +81,9 @@
 	--brand-family: var(--body-family);
 
 	/* Font-Weight: */
-	--thin-weight: 200;
+	--thin-weight: 100;
 	--light-weight: 300;
-	--regular-weight: 500;
+	--regular-weight: 400;
 	--bold-weight: 700;
 	--heavy-weight: 900;
 

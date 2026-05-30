@@ -13,12 +13,14 @@ All relevant changes to Semantic Props will be documented here.
 - Changed `--accent-family` prop naming to `--brand-family`.
 - Changed scale for unique props.
 - Changed names for container size props.
+- Changed values for `font-weight` props.
 
 ### Removed
 
 - Removed existing colors (minus `--white` and `--black`).
 - Removed non-uniquely named props.
 - Removed transform props.
+- Removed `--border-style` prop.
 
 ## [2.0.0-beta.2] - 2026-02-18
 
