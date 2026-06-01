@@ -216,7 +216,7 @@
 	--z-top: 5000;
 }
 
-:any-link {
+.accent {
 	/* Color Palette: */
 	--background-color: var(--accent-100);
 	--middleground-color: var(--accent-200);
