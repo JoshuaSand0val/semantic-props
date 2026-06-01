@@ -215,3 +215,24 @@
 	--z-fixed: 4000;
 	--z-top: 5000;
 }
+
+:any-link {
+	/* Color Palette: */
+	--background-color: var(--accent-100);
+	--middleground-color: var(--accent-200);
+	--foreground-color: var(--accent-300);
+
+	--low-contrast-color: var(--accent-500);
+	--medium-contrast-color: var(--accent-700);
+	--high-contrast-color: var(--accent-900);
+
+	@media (--dark) {
+		--background-color: var(--accent-900);
+		--middleground-color: var(--accent-800);
+		--foreground-color: var(--accent-700);
+
+		--low-contrast-color: var(--accent-500);
+		--medium-contrast-color: var(--accent-300);
+		--high-contrast-color: var(--accent-100);
+	}
+}

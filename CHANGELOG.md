@@ -7,6 +7,7 @@ All relevant changes to Semantic Props will be documented here.
 ### Added
 
 - Added color system of `--primary-`, `--secondary-` and `--accent-`
+- Added altered color palette for `:any-link` selector.
 
 ### Changed
 
