@@ -6,7 +6,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
-- Added color system of `--neutral-` and `--accent-`, alongside scheme colors.
+- Added neutral color alongside additional scheme colors.
 
 ### Changed
 
@@ -17,7 +17,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Removed
 
-- Removed existing color weights.
+- Removed 50 tier color weights.
 - Removed non-uniquely named props.
 - Removed transform props.
 - Removed `--border-style` prop.
