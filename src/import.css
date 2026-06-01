@@ -231,7 +231,6 @@
 		--middleground-color: var(--accent-800);
 		--foreground-color: var(--accent-700);
 
-		--low-contrast-color: var(--accent-500);
 		--medium-contrast-color: var(--accent-300);
 		--high-contrast-color: var(--accent-100);
 	}
