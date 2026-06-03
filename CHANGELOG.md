@@ -4,12 +4,9 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [2.0.0] - YYYY-MM-DD
 
-### Added
-
-- Added neutral color alongside additional scheme colors.
-
 ### Changed
 
+- Changed background color naming to primary, secondary, tertiary.
 - Changed `--accent-family` prop naming to `--brand-family`.
 - Changed scale for unique props.
 - Changed names for container size props.
@@ -17,6 +14,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Removed
 
+- Removed accent colors.
 - Removed 50 tier color weights.
 - Removed non-uniquely named props.
 - Removed transform props.

@@ -22,9 +22,6 @@
 		$c: calc(c * sin(pi * $l));
 
 		/* Declare weights: */
-		--neutral-$(weight): var(--gray-$(weight));
-		--accent-$(weight): var(--blue-$(weight));
-
 		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l $c h);
 		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $l $c h);
 		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $l $c h);
@@ -41,30 +38,22 @@
 		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l $c h);
 	}
 
-	--background-color: var(--white);
-	--middleground-color: var(--neutral-100);
-	--foreground-color: var(--neutral-200);
+	--primary-color: var(--white);
+	--secondary-color: var(--gray-100);
+	--tertiary-color: var(--gray-200);
 
-	--low-contrast-color: var(--neutral-400);
-	--medium-contrast-color: var(--neutral-600);
+	--low-contrast-color: var(--gray-400);
+	--medium-contrast-color: var(--gray-600);
 	--high-contrast-color: var(--black);
 
-	--primary-color: var(--accent-500);
-	--secondary-color: var(--accent-600);
-	--tertiary-color: var(--accent-700);
-
 	@media (--dark) {
-		--background-color: var(--black);
-		--middleground-color: var(--neutral-900);
-		--foreground-color: var(--neutral-800);
+		--primary-color: var(--black);
+		--secondary-color: var(--gray-900);
+		--tertiary-color: var(--gray-800);
 
-		--low-contrast-color: var(--neutral-600);
-		--medium-contrast-color: var(--neutral-400);
+		--low-contrast-color: var(--gray-600);
+		--medium-contrast-color: var(--gray-400);
 		--high-contrast-color: var(--white);
-
-		--primary-color: var(--accent-400);
-		--secondary-color: var(--accent-300);
-		--tertiary-color: var(--accent-200);
 	}
 
 	/* Blur: */
