@@ -4,6 +4,9 @@
 @custom-media --dark (prefers-color-scheme: dark);
 
 :root {
+	/* Line-Style: */
+	--line: solid;
+
 	/* Border-Radius: */
 	--small-radius: 0.5rem; /* 8px */
 	--medium-radius: 1rem; /* 16px */

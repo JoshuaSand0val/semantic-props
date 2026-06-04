@@ -6,6 +6,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Changed
 
+- Changed `--border-style` prop naming to `--line`.
 - Changed background color naming to primary, secondary, tertiary.
 - Changed `--accent-family` prop naming to `--brand-family`.
 - Changed scale for unique props.
@@ -18,7 +19,6 @@ All relevant changes to Semantic Props will be documented here.
 - Removed 50 tier color weights.
 - Removed non-uniquely named props.
 - Removed transform props.
-- Removed `--border-style` prop.
 
 ## [2.0.0-beta.2] - 2026-02-18
 
