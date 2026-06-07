@@ -41,18 +41,18 @@
 		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l $c h);
 	}
 
-	--primary-color: var(--white);
-	--secondary-color: var(--gray-100);
-	--tertiary-color: var(--gray-200);
+	--background-color: var(--white);
+	--middleground-color: var(--gray-100);
+	--foreground-color: var(--gray-200);
 
 	--low-contrast-color: var(--gray-400);
 	--medium-contrast-color: var(--gray-600);
 	--high-contrast-color: var(--black);
 
 	@media (--dark) {
-		--primary-color: var(--black);
-		--secondary-color: var(--gray-900);
-		--tertiary-color: var(--gray-800);
+		--background-color: var(--black);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-800);
 
 		--low-contrast-color: var(--gray-600);
 		--medium-contrast-color: var(--gray-400);
