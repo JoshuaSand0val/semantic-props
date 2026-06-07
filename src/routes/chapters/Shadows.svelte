@@ -3,43 +3,27 @@
     import Divider from "$lib/components/Divider.svelte";
 
 	const textShadow: Record<string, string> = {
-		"Lightest Text Shadow": "var(--lightest-text-shadow)",
-		"Lighter Text Shadow": "var(--lighter-text-shadow)",
 		"Light Text Shadow": "var(--light-text-shadow)",
 		"Medium Text Shadow": "var(--medium-text-shadow)",
-		"Heavy Text Shadow": "var(--heavy-text-shadow)",
-		"Heavier Text Shadow": "var(--heavier-text-shadow)",
-		"Heaviest Text Shadow": "var(--heaviest-text-shadow)"
+		"Heavy Text Shadow": "var(--heavy-text-shadow)"
 	};
 
 	const boxShadow: Record<string, string> = {
-		"Lightest Box Shadow": "var(--lightest-box-shadow)",
-		"Lighter Box Shadow": "var(--lighter-box-shadow)",
 		"Light Box Shadow": "var(--light-box-shadow)",
 		"Medium Box Shadow": "var(--medium-box-shadow)",
-		"Heavy Box Shadow": "var(--heavy-box-shadow)",
-		"Heavier Box Shadow": "var(--heavier-box-shadow)",
-		"Heaviest Box Shadow": "var(--heaviest-box-shadow)"
+		"Heavy Box Shadow": "var(--heavy-box-shadow)"
 	};
 
 	const insetShadow: Record<string, string> = {
-		"Lightest Inset Shadow": "var(--lightest-inset-shadow)",
-		"Lighter Inset Shadow": "var(--lighter-inset-shadow)",
 		"Light Inset Shadow": "var(--light-inset-shadow)",
 		"Medium Inset Shadow": "var(--medium-inset-shadow)",
-		"Heavy Inset Shadow": "var(--heavy-inset-shadow)",
-		"Heavier Inset Shadow": "var(--heavier-inset-shadow)",
-		"Heaviest Inset Shadow": "var(--heaviest-inset-shadow)"
+		"Heavy Inset Shadow": "var(--heavy-inset-shadow)"
 	};
 
 	const shadow: Record<string, string> = {
-		"Lightest Shadow": "var(--lightest-shadow)",
-		"Lighter Shadow": "var(--lighter-shadow)",
 		"Light Shadow": "var(--light-shadow)",
 		"Medium Shadow": "var(--medium-shadow)",
-		"Heavy Shadow": "var(--heavy-shadow)",
-		"Heavier Shadow": "var(--heavier-shadow)",
-		"Heaviest Shadow": "var(--heaviest-shadow)"
+		"Heavy Shadow": "var(--heavy-shadow)"
 	};
 </script>
 
@@ -68,15 +52,14 @@
 	.container { 
 		display: block;
 		background-color: var(--background-color);
-		background: repeating-conic-gradient(var(--background-color) 0 25%, var(--middleground-color) 0 50%) 50% / var(--3x-large) var(--3x-large);
-		border-radius: var(--smallest-radius);
+		border-radius: var(--small-radius);
 		padding-block: var(--small);
 		margin-block: var(--x-large);
 		overflow: hidden;
 		@media (--dark) {
-			--background-color: var(--gray-850);
-			--middleground-color: var(--gray-800);
-			--foreground-color: var(--gray-750);
+			--background-color: var(--gray-800);
+			--middleground-color: var(--gray-700);
+			--foreground-color: var(--gray-600);
 		}
 	}
 
@@ -102,7 +85,7 @@
 		scroll-snap-align: start;
 		background-color: var(--background-color);
 		border: 1px dashed var(--low-contrast-color);
-		border-radius: var(--smallest-radius);
+		border-radius: var(--small-radius);
 		padding: var(--medium);
 		scroll-snap-align: center;
 		flex: 1 0 auto;
@@ -133,7 +116,7 @@
 		display: block;
 		font-size: var(--x-small);
 		font-family: var(--mono-family);
-		line-height: var(--shorter-line);
+		line-height: var(--short-line);
 		text-align: end;
 		color: var(--low-contrast-color);
 		text-shadow: none;

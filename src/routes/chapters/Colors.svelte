@@ -32,7 +32,7 @@
 	}).forEach(([color, prefix]) => {
 		const weights: Record<string, `var(${string})`> = {};
 
-		for (let weight = 50; weight <= 950; weight += 50) {
+		for (let weight = 100; weight <= 900; weight += 100) {
 			weights[`${color} ${weight}`] = `var(--${prefix}-${weight})`;
 		}
 
@@ -69,10 +69,10 @@
 
 	.palette {
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: column nowrap;
 		inline-size: min(100%, var(--small-container));
-		border: 1px solid var(--gray-150);
-		border-radius: var(--smallest-radius);
+		border: 1px solid var(--foreground-color);
+		border-radius: var(--small-radius);
 		margin-block: 0;
 		scroll-snap-align: center;
 		overflow: hidden;
@@ -88,11 +88,10 @@
 		justify-content: space-between;
 		align-content: start;
 		gap: 0 var(--x-small);
-		inline-size: var(--smallest-container);
 		line-height: var(--short-line);
 		background-color: var(--prop);
 		padding-inline: var(--x-small);
-		padding-block: var(--2x-small);
+		padding-block: var(--x-small) var(--large);
 		flex: 1 0 auto;
 	}
 

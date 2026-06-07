@@ -10,13 +10,9 @@
 	};
 
 	const timing: Record<string, string> = {
-		"Fastest Time": "var(--fastest-time)",
-		"Faster Time": "var(--faster-time)",
 		"Fast Time": "var(--fast-time)",
 		"Normal Time": "var(--normal-time)",
-		"Slow Time": "var(--slow-time)",
-		"Slower Time": "var(--slower-time)",
-		"Slowest Time": "var(--slowest-time)"
+		"Slow Time": "var(--slow-time)"
 	};
 </script>
 
@@ -36,17 +32,17 @@
 
 <style>
 	.container {
-		--columns-size: var(--smallest-container);
+		--columns-size: var(--2x-small-container);
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--columns-size)), 1fr));
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
 		gap: var(--small);
-		filter: var(--lightest-shadow);
+		filter: var(--light-shadow);
 		margin-inline: auto;
 		margin-block: var(--3x-large);
 		@media (--tablet) {
-			--columns-size: var(--smaller-container);
+			--columns-size: var(--x-small-container);
 		}
 	}
 
@@ -56,8 +52,8 @@
 		background-color: var(--background-color);
 		padding: var(--small);
 		scroll-snap-align: center;
-		border: 1px var(--border-style) var(--foreground-color);
-		border-radius: var(--smallest-radius);
+		border: 1px var(--line) var(--foreground-color);
+		border-radius: var(--small-radius);
 		overflow: hidden;
 		cursor: pointer;
 		flex: 1 0 auto;
@@ -99,7 +95,7 @@
 
 	.title {
 		display: block;
-		line-height: var(--shorter-line);
+		line-height: var(--short-line);
 		font-family: var(--display-family);
 		font-weight: var(--bold-weight);
 		color: var(--medium-contrast-color);

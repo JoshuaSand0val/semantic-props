@@ -102,11 +102,11 @@
 		position: relative;
 		display: block;
 		aspect-ratio: var(--portrait-ratio);
-		inline-size: min(100%, var(--smaller-container));
-		block-size: var(--smallest-container);
+		inline-size: min(100%, var(--x-small-container));
+		block-size: var(--2x-small-container);
 		transition: block-size var(--normal-time) var(--ease-out);
-		box-shadow: var(--lightest-box-shadow);
-		border: var(--4x-small) solid var(--low-contrast-color);
+		box-shadow: var(--light-box-shadow);
+		border: var(--3x-small) solid var(--low-contrast-color);
 		border-radius: var(--large-radius);
 		background-image: repeating-linear-gradient(-45deg,
 			var(--border-color) 0 var(--border-size),
@@ -117,7 +117,7 @@
 			--border-color: var(--gray-600);
 		}
 		@media (--phone) {
-			block-size: var(--smaller-container);
+			block-size: var(--x-small-container);
 		}
 		@media (--tablet) {
 			block-size: var(--small-container);
@@ -134,7 +134,7 @@
 		font-size: var(--medium);
 		font-family: var(--display-family);
 		font-weight: var(--regular-weight);
-		border-radius: var(--smallest-radius);
+		border-radius: var(--small-radius);
 		background-color: var(--background-color);
 		color: var(--low-contrast-color);
 		padding: var(--x-small);

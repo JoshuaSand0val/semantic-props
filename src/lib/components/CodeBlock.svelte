@@ -35,7 +35,7 @@
 		color: var(--low-contrast-color);
 		line-height: var(--normal-line);
 		margin-block: 0 var(--3x-small);
-		margin-inline: var(--smallest-radius);
+		margin-inline: var(--small-radius);
 	}
 
 	pre {
@@ -43,9 +43,9 @@
 		tab-size: 4;
 		white-space: pre;
 		font: var(--small)/var(--short-line) var(--mono-family);
-		border-radius: var(--smallest-radius);
-		border: 1px var(--border-style) var(--foreground-color);
-		box-shadow: var(--lightest-box-shadow);
+		border-radius: var(--small-radius);
+		border: 1px var(--line) var(--foreground-color);
+		box-shadow: var(--light-box-shadow);
 		background-color: var(--background-color);
 		color: var(--medium-contrast-color);
 		padding-block: var(--small) var(--x-small);

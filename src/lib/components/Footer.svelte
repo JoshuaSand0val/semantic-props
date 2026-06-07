@@ -8,12 +8,12 @@
 		<div class="wrapper">
 			<span class="copyright">
 				&copy; {new Date().getFullYear()}
-				<Link to="https://heyjes.dev/">Joshua Elijah Sandoval.</Link>
+				<Link to="https://heyjes.dev/">Jess Sandoval.</Link>
 			</span>
 			<span>
 				<ul class="about">
 					<li><Link to="https://github.com/JoshuaSand0val/semantic-props/">Github</Link></li>
-					<li class="version">v2.0.0-beta.2 (MIT)</li>
+					<li class="version">v2.0.0 (MIT)</li>
 				</ul>
 				<Link to="#top">Scroll to Top ↑</Link>
 			</span>
@@ -24,7 +24,7 @@
 <style>
 	.container {
 		display: block;
-		border-block-start: 1px var(--border-style) var(--middleground-color);
+		border-block-start: 1px var(--line) var(--middleground-color);
 	}
 
 	.wrapper {

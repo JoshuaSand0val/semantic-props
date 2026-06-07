@@ -49,18 +49,18 @@
 		z-index: var(--z-top);
 		display: block;
 		font-size: var(--x-large);
-		border: 1px var(--border-style) var(--foreground-color);
-		border-radius: var(--largest-radius);
+		border: 1px var(--line) var(--foreground-color);
+		border-radius: var(--large-radius);
 		background-color: var(--background-color);
 		padding: var(--x-small);
 		line-height: 0;
-		box-shadow: var(--lightest-box-shadow);
+		box-shadow: var(--light-box-shadow);
 		transition: all var(--fast-time) var(--ease-in-out);
 		cursor: pointer;
 		&:focus, &:has(+ .navigation:focus-within) {
 			border-color: var(--gray-300);
 			background-color: var(--middleground-color);
-			box-shadow: var(--lightest-inset-shadow), var(--lightest-box-shadow);
+			box-shadow: var(--light-inset-shadow), var(--light-box-shadow);
 			@media (--dark) {
 				border-color: var(--gray-700);
 			}
@@ -73,18 +73,19 @@
 		bottom: calc(100% + var(--x-small));
 		inline-size: min(100%, var(--small-container));
 		max-block-size: min(60vb, var(--medium-container));
-		border-radius: var(--smaller-radius);
-		border: 1px var(--border-style) var(--foreground-color);
+		border-radius: var(--small-radius);
+		border: 1px var(--line) var(--middleground-color);
 		background-color: var(--background-color);
-		box-shadow: var(--lighter-box-shadow);
+		box-shadow: var(--light-box-shadow);
 		font-family: var(--display-family);
 		overflow: auto;
 		transform-origin: bottom right;
 		transition: all var(--fast-time) var(--ease-out);
 		transition-property: opacity, transform, visibility;
 		.button:not(:focus) + &:not(:focus-within) {
-			filter: var(--lighter-blur);
-			transform: translateY(var(--x-small)) var(--small-scale-x) var(--smaller-scale-y);
+			filter: var(--light-blur);
+			transform: translateY(var(--x-small));
+			scale: var(--small-scale);
 			visibility: hidden;
 			opacity: 0;
 		}
@@ -95,7 +96,7 @@
 		z-index: var(--z-bottom);
 		inset: 0;
 		transition: opacity var(--normal-time) var(--ease-out);
-		backdrop-filter: var(--lighter-blur) var(--low-brightness);
+		backdrop-filter: var(--light-blur) var(--low-brightness);
 		pointer-events: none;
 		opacity: 0;
 		.button:focus ~ &, .navigation:focus-within + & {
@@ -106,7 +107,7 @@
 
 	a[href] {
 		display: block;
-		border-block-end: 1px var(--border-style) var(--middleground-color);
+		border-block-end: 1px var(--line) var(--middleground-color);
 		font-size: var(--small);
 		text-decoration: none;
 		color: inherit;
@@ -127,8 +128,8 @@
 			background-color: var(--middleground-color);
 		}
 		&:active {
-			background-color: var(--accent-50);
-			color: var(--accent-400);
+			background-color: var(--accent-100);
+			color: var(--accent-500);
 			@media (--dark) {
 				background-color: var(--accent-900);
 			}

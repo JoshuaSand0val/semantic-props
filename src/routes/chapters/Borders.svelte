@@ -3,17 +3,13 @@
     import Divider from "$lib/components/Divider.svelte";
 
 	const styles: Record<string, string> = {
-		"Border Style": "var(--border-style)"
+		"Line (Border Style)": "var(--line)"
 	};
 
 	const radius: Record<string, string> = {
-		"Smallest Radius": "var(--smallest-radius)",
-		"Smaller Radius": "var(--smaller-radius)",
 		"Small Radius": "var(--small-radius)",
 		"Medium Radius": "var(--medium-radius)",
-		"Large Radius": "var(--large-radius)",
-		"Larger Radius": "var(--larger-radius)",
-		"Largest Radius": "var(--largest-radius)"
+		"Large Radius": "var(--large-radius)"
 	};
 </script>
 
@@ -63,28 +59,25 @@
 	}
 
 	.radius {
-		--inline-size: var(--smallest-container);
+		--inline-size: var(--x-small-container);
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: end;
 		inline-size: min(100%, var(--inline-size));
 		aspect-ratio: 1;
 		background-color: var(--background-color);
-		box-shadow: var(--lighter-box-shadow);
-		border: var(--4x-small) var(--border-style) var(--high-contrast-color);
+		box-shadow: var(--light-box-shadow);
+		border: 1px var(--line) var(--high-contrast-color);
 		border-radius: var(--prop);
-		padding: var(--medium);
+		padding: var(--large);
 		scroll-snap-align: center;
 		flex: 0 0 auto;
 		transition: inline-size var(--normal-time) var(--ease-out);
-		@media (--laptop) {
-			--inline-size: var(--smaller-container);
-		}
 	}
 
 	.title {
 		display: block;
-		line-height: var(--shortest-line);
+		line-height: var(--short-line);
 		font-family: var(--display-family);
 		font-weight: var(--bold-weight);
 		color: var(--medium-contrast-color);

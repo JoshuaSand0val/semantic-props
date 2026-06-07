@@ -19,7 +19,7 @@
 			<span style:--phrase={5}>in any design.</span>
 		</span>
 	</Heading>
-	<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props@beta";' />
+	<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
 </header>
 
 <style>
@@ -29,7 +29,7 @@
 
 	.container {
 		display: block;
-		transition: margin-block-start var(--faster-time) var(--ease-in);
+		transition: margin-block-start var(--fast-time) var(--ease-in);
 		margin-block-start: var(--4x-large);
 		@media (--phone) {
 			margin-block-start: var(--5x-large);
@@ -42,7 +42,7 @@
 	.slogan {
 		display: block;
 		@media not (prefers-reduced-motion: reduce) {
-			animation: slogan-fade-in var(--slow-time) var(--slower-time) both;
+			animation: slogan-fade-in var(--slow-time) var(--slow-time) both;
 		}
 	}
 
@@ -54,23 +54,23 @@
 
 	.title {
 		display: block;
-		text-shadow: var(--lightest-text-shadow);
+		text-shadow: var(--light-text-shadow);
 		@media not (prefers-reduced-motion: reduce) {
-			animation: title-scale-in var(--slower-time);
+			animation: title-scale-in var(--slow-time);
 			transform-origin: top left;
 		}
 	}
 
 	@keyframes title-scale-in {
 		from {
-			transform: var(--small-scale);
+			scale: var(--small-scale);
 		}
 	}
 
 	.subtitle span {
 		display: inline-block;
 		animation-name: subtitle-fade-in;
-		animation-duration: var(--slower-time);
+		animation-duration: var(--slow-time);
 		animation-delay: calc(var(--slow-time) * (var(--phrase) - 1));
 		animation-fill-mode: both;
 		transform-origin: bottom left;
@@ -81,8 +81,8 @@
 
 	@keyframes subtitle-fade-in {
 		from {
-			transform: var(--large-scale);
-			filter: var(--lightest-blur) var(--heaviest-shadow);
+			scale: var(--large-scale);
+			filter: var(--light-blur) var(--heavy-shadow);
 			opacity: 0;
 		}
 	}

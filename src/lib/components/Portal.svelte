@@ -51,14 +51,14 @@
 			display: block;
 			aspect-ratio: 3 / 2;
 			border-radius: var(--medium-radius);
-			border: 1px var(--border-style) var(--foreground-color);
+			border: 1px var(--line) var(--foreground-color);
 			background-color: var(--middleground-color);
-			box-shadow: var(--lightest-box-shadow);
+			box-shadow: var(--light-box-shadow);
 			overflow: hidden;
 			order: -1;
-			transition: all var(--faster-time) var(--ease-out);
+			transition: all var(--fast-time) var(--ease-out);
 			&:hover, &:focus {
-				animation: pulse var(--slowest-time) var(--ease-in-out) infinite alternate;
+				animation: pulse var(--slow-time) var(--ease-in-out) infinite alternate;
 			}
 			img {
 				display: block;
