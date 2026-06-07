@@ -43,7 +43,7 @@
 		font-weight: var(--light-weight);
 		line-height: var(--short-line);
 		border-block-end: 1px var(--line) var(--foreground-color);
-		color: var(--low-contrast-color);
+		color: var(--medium-contrast-color);
 		padding-block-end: var(--2x-small);
 		padding-inline-start: 1px;
 		list-style: none;

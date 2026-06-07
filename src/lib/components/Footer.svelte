@@ -33,7 +33,7 @@
 		align-items: start;
 		justify-content: space-between;
 		font-size: var(--small);
-		color: var(--low-contrast-color);
+		color: var(--medium-contrast-color);
 		gap: var(--3x-small) 1ch;
 		margin-inline: auto;
 		margin-bottom: max(var(--safe-bottom), var(--6x-large));

@@ -32,7 +32,7 @@
 		font-family: var(--display-family);
 		font-size: var(--x-small);
 		text-transform: uppercase;
-		color: var(--low-contrast-color);
+		color: var(--medium-contrast-color);
 		line-height: var(--normal-line);
 		margin-block: 0 var(--3x-small);
 		margin-inline: var(--small-radius);
