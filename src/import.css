@@ -100,7 +100,7 @@
 	--body-family: system-ui, sans-serif;
 	--display-family: var(--body-family);
 	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-	--brand-family: var(--body-family);
+	--accent-family: var(--body-family);
 
 	/* Font-Weight: */
 	--thin-weight: 100;

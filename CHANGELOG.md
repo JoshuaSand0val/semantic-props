@@ -7,7 +7,6 @@ All relevant changes to Semantic Props will be documented here.
 ### Changed
 
 - Changed `--border-style` prop naming to `--line`.
-- Changed `--accent-family` prop naming to `--brand-family`.
 - Changed scale for unique props.
 - Changed names for container size props.
 - Changed values for `font-weight` props.
