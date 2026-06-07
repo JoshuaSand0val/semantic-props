@@ -107,7 +107,7 @@
 			animation-delay: var(--fast-time);
 			animation-timing-function: linear;
 			animation-fill-mode: both;
-			opacity: var(--low-opacity);
+			opacity: 0.2;
 		}
 		&::before {
 			margin-inline: auto;
