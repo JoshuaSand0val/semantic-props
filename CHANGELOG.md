@@ -11,6 +11,7 @@ All relevant changes to Semantic Props will be documented here.
 - Changed scale for unique props.
 - Changed names for container size props.
 - Changed values for `font-weight` props.
+- Changed yellow colors.
 
 ### Removed
 
