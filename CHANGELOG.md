@@ -14,7 +14,6 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Removed
 
-- Removed accent colors.
 - Removed 50 tier color weights.
 - Removed non-uniquely named props.
 - Removed transform props.
