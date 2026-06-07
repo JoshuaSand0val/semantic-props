@@ -222,6 +222,10 @@
 	--normal-time: 300ms;
 	--slow-time: 500ms;
 
+	/* Scale: */
+	--small-scale: 0.95;
+	--large-scale: 1.05;
+
 	/* Z-Index: */
 	--z-bottom: -1000;
 	--z-relative: 1000;

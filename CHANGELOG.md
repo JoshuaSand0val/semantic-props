@@ -11,12 +11,12 @@ All relevant changes to Semantic Props will be documented here.
 - Changed names for container size props.
 - Changed values for `font-weight` props.
 - Changed yellow colors.
+- Changed `scale()` transform props to utilize `scale` CSS property.
 
 ### Removed
 
 - Removed 50 tier color weights.
 - Removed non-uniquely named props.
-- Removed transform props.
 
 ## [2.0.0-beta.2] - 2026-02-18
 
