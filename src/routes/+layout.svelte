@@ -41,59 +41,6 @@
 		align-items: stretch;
 	}
 
-	.container::after {
-		content: "";
-		position: absolute;
-		z-index: var(--z-bottom);
-		inset: 0;
-		display: block;
-		inline-size: 100%;
-		block-size: var(--large-container);
-		background-image: linear-gradient(to right,
-			var(--red-200),
-			var(--orange-200),
-			var(--yellow-200),
-			var(--green-200),
-			var(--blue-200),
-			var(--indigo-200),
-			var(--violet-200)
-		);
-		background-size: 100% 100%;
-		mask-mode: alpha;
-		mask-image: radial-gradient(black, transparent 75%);
-		mask-size: 100% 100%;
-		transform: translateY(-50%);
-		transform-origin: top left;
-		opacity: var(--low-opacity);
-		filter: var(--heavy-blur);
-		@media (--dark) {
-			background-image: linear-gradient(to right,
-				var(--red-800),
-				var(--orange-800),
-				var(--yellow-800),
-				var(--green-800),
-				var(--blue-800),
-				var(--indigo-800),
-				var(--violet-800)
-			);
-		}
-		animation-name: fade-in-gradient;
-		animation-duration: var(--slow-time);
-		animation-timing-function: var(--ease-out);
-		animation-delay: var(--slow-time);
-		animation-fill-mode: both;
-		@media (prefers-reduced-motion) {
-			animation: none;
-		}
-	}
-
-	@keyframes fade-in-gradient {
-		from {
-			inline-size: 75%;
-			block-size: 0;
-		}
-	}
-
 	.content {
 		display: block;
 		flex: 1 0 auto;
