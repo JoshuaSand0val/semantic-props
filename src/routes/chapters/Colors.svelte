@@ -58,8 +58,10 @@
 
 <style>
 	.container {
-		display: flex;
-		flex-flow: row nowrap;
+		display: grid;
+		grid-template-rows: repeat(1, 1fr); 
+		grid-auto-flow: column; 
+		grid-auto-columns: min(100%, var(--small-container));
 		justify-content: start;
 		align-items: stretch;
 		gap: var(--2x-small);
@@ -70,7 +72,6 @@
 	.palette {
 		display: flex;
 		flex-flow: column nowrap;
-		inline-size: min(100%, var(--small-container));
 		border: 1px solid var(--foreground-color);
 		border-radius: var(--small-radius);
 		margin-block: 0;
@@ -86,12 +87,12 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		align-content: start;
-		gap: 0 var(--x-small);
+		align-content: center;
+		gap: 0 var(--x-large);
 		line-height: var(--short-line);
 		background-color: var(--prop);
-		padding-inline: var(--x-small);
-		padding-block: var(--x-small) var(--large);
+		padding-inline: var(--small);
+		padding-block: var(--x-small);
 		flex: 1 0 auto;
 	}
 
@@ -109,6 +110,6 @@
 
 	.prop {
 		font-family: var(--mono-family);
-		opacity: var(--high-opacity);
+		opacity: var(--medium-opacity);
 	}
 </style>

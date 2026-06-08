@@ -59,7 +59,7 @@
 	}
 
 	.radius {
-		--inline-size: var(--x-small-container);
+		--inline-size: var(--2x-small-container);
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: end;
@@ -73,6 +73,9 @@
 		scroll-snap-align: center;
 		flex: 0 0 auto;
 		transition: inline-size var(--normal-time) var(--ease-out);
+		@media (--tablet) {
+			--inline-size: var(--x-small-container);
+		}
 	}
 
 	.title {

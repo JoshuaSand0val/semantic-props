@@ -82,12 +82,15 @@
 	}
 
 	.content {
-		--inline-size: var(--x-small-container);
+		--inline-size: var(--2x-small-container);
 		display: block;
 		inline-size: min(100%, var(--inline-size));
 		transition: inline-size var(--normal-time) var(--ease-out);
 		scroll-snap-align: center;
 		flex: 0 0 auto;
+		@media (--tablet) {
+			--inline-size: var(--x-small-container);
+		}
 	}
 
 	.demo {

@@ -57,9 +57,9 @@
 		margin-block: var(--x-large);
 		overflow: hidden;
 		@media (--dark) {
-			--background-color: var(--gray-800);
-			--middleground-color: var(--gray-700);
-			--foreground-color: var(--gray-600);
+			--background-color: var(--gray-900);
+			--middleground-color: var(--gray-800);
+			--foreground-color: var(--gray-700);
 		}
 	}
 
