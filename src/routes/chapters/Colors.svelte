@@ -98,6 +98,10 @@
 		filter: invert(1) saturate(0) contrast(9999);
 		color: var(--prop);
 		margin: 0;
+		@supports (color: contrast-color(white)) {
+			color: contrast-color(var(--prop));
+			filter: none;
+		}
 	}
 
 	.name {
