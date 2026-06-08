@@ -78,21 +78,17 @@
 		scroll-snap-align: center;
 		overflow: hidden;
 		flex: 1 0 auto;
-		@media (--dark) {
-			border-color: var(--gray-800);
-		}
 	}
 
 	.color {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		align-content: center;
+		align-content: start;
 		gap: 0 var(--x-large);
-		line-height: var(--short-line);
 		background-color: var(--prop);
 		padding-inline: var(--small);
-		padding-block: var(--x-small);
+		padding-block: var(--x-small) var(--small);
 		flex: 1 0 auto;
 	}
 
@@ -105,11 +101,15 @@
 	}
 
 	.name {
+		line-height: var(--normal-line);
 		font-family: var(--display-family);
+		font-weight: var(--bold-weight);
 	}
 
 	.prop {
+		line-height: var(--short-line);
 		font-family: var(--mono-family);
+		font-weight: var(--light-weight);
 		opacity: var(--medium-opacity);
 	}
 </style>
