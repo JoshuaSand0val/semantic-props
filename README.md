@@ -3,7 +3,7 @@
 **Add it to your project now via installation by NPM:**
 
 ```bash
-npm install semantic-props@beta
+npm install semantic-props
 ```
 
 ---
@@ -15,7 +15,7 @@ Semantic Props is a collection of semantic CSS custom properties.
 Documentation is available at https://semantic-props.style/
 
 ## Acknowledgment
-Semantic Props was built by Joshua Elijah Sandoval.
+Semantic Props was built by Jess Sandoval.
 
 ## License
 Semantic Props is distributed under the [MIT](https://choosealicense.com/licenses/mit/) License.

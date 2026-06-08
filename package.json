@@ -1,6 +1,6 @@
 {
 	"name": "semantic-props",
-	"version": "2.0.0-beta.2",
+	"version": "2.0.0",
 	"description": "Expertly crafted CSS Custom Properties (variables) for creating consistent components in any design.",
 	"keywords": [
 		"Semantic Props",
@@ -10,7 +10,7 @@
 	],
 	"homepage": "https://semantic-props.style/",
 	"license": "MIT",
-	"author": "Joshua Elijah Sandoval",
+	"author": "Jess Sandoval",
 	"files": [
 		"dist",
 		"CHANGELOG.md",
