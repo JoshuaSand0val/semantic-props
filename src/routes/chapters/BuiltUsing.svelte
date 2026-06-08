@@ -35,7 +35,7 @@
 		overflow-y: hidden;
 		:global(& > *) {
 			scroll-snap-align: center;
-			inline-size: min(100%, var(--smaller-container));
+			inline-size: min(100%, var(--x-small-container));
 			flex: 0 0 auto;
 			transition: inline-size var(--fast-time) var(--ease-in);
 			@media (--laptop) {

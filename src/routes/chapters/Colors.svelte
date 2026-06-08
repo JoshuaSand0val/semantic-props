@@ -32,7 +32,7 @@
 	}).forEach(([color, prefix]) => {
 		const weights: Record<string, `var(${string})`> = {};
 
-		for (let weight = 50; weight <= 950; weight += 50) {
+		for (let weight = 100; weight <= 900; weight += 100) {
 			weights[`${color} ${weight}`] = `var(--${prefix}-${weight})`;
 		}
 
@@ -58,8 +58,10 @@
 
 <style>
 	.container {
-		display: flex;
-		flex-flow: row nowrap;
+		display: grid;
+		grid-template-rows: repeat(1, 1fr); 
+		grid-auto-flow: column; 
+		grid-auto-columns: min(100%, var(--small-container));
 		justify-content: start;
 		align-items: stretch;
 		gap: var(--2x-small);
@@ -69,10 +71,9 @@
 
 	.palette {
 		display: flex;
-		flex-flow: row wrap;
-		inline-size: min(100%, var(--small-container));
-		border: 1px solid var(--gray-150);
-		border-radius: var(--smallest-radius);
+		flex-flow: column nowrap;
+		border: 1px solid var(--foreground-color);
+		border-radius: var(--small-radius);
 		margin-block: 0;
 		scroll-snap-align: center;
 		overflow: hidden;
@@ -86,13 +87,12 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		align-content: start;
-		gap: 0 var(--x-small);
-		inline-size: var(--smallest-container);
+		align-content: center;
+		gap: 0 var(--x-large);
 		line-height: var(--short-line);
 		background-color: var(--prop);
-		padding-inline: var(--x-small);
-		padding-block: var(--2x-small);
+		padding-inline: var(--small);
+		padding-block: var(--x-small);
 		flex: 1 0 auto;
 	}
 
@@ -110,6 +110,6 @@
 
 	.prop {
 		font-family: var(--mono-family);
-		opacity: var(--high-opacity);
+		opacity: var(--medium-opacity);
 	}
 </style>

@@ -64,8 +64,8 @@
 		mask-size: 100% 100%;
 		transform: translateY(-50%);
 		transform-origin: top left;
-		opacity: var(--lowest-opacity);
-		filter: var(--heaviest-blur);
+		opacity: var(--low-opacity);
+		filter: var(--heavy-blur);
 		@media (--dark) {
 			background-image: linear-gradient(to right,
 				var(--red-800),
@@ -80,7 +80,7 @@
 		animation-name: fade-in-gradient;
 		animation-duration: var(--slow-time);
 		animation-timing-function: var(--ease-out);
-		animation-delay: var(--slowest-time);
+		animation-delay: var(--slow-time);
 		animation-fill-mode: both;
 		@media (prefers-reduced-motion) {
 			animation: none;
@@ -103,16 +103,16 @@
 			z-index: var(--z-bottom);
 			inset: 0;
 			background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--middleground-color) 0);
-			animation-duration: var(--slowest-time);
+			animation-duration: var(--slow-time);
+			animation-delay: var(--fast-time);
 			animation-timing-function: linear;
 			animation-fill-mode: both;
-			opacity: var(--low-opacity);
+			opacity: 0.2;
 		}
 		&::before {
 			margin-inline: auto;
 			background-size: 100% var(--2x-large);
 			animation-name: blueprint-horizontal;
-			animation-delay: var(--faster-time);
 			@media (prefers-reduced-motion) {
 				animation: none;
 			}
@@ -120,7 +120,6 @@
 		&::after {
 			background-size: var(--2x-large) 100%;
 			animation-name: blueprint-vertical;
-			animation-delay: var(--fast-time);
 			@media (prefers-reduced-motion) {
 				animation: none;
 			}

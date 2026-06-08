@@ -36,33 +36,21 @@
 	};
 
 	const letterSpacing: Record<string, string> = {
-		"Tightest Letter Spacing": "--tightest-letter",
-		"Tighter Letter Spacing": "--tighter-letter",
 		"Tight Letter Spacing": "--tight-letter",
 		"Normal Letter Spacing": "--normal-letter",
-		"Wide Letter Spacing": "--wide-letter",
-		"Wider Letter Spacing": "--wider-letter",
-		"Widest Letter Spacing": "--widest-letter"
+		"Wide Letter Spacing": "--wide-letter"
 	};
 
 	const lineHeight: Record<string, string> = {
-		"Shortest Line Height": "--shortest-line",
-		"Shorter Line Height": "--shorter-line",
 		"Short Line Height": "--short-line",
 		"Normal Line Height": "--normal-line",
-		"Tall Line Height": "--tall-line",
-		"Taller Line Height": "--taller-line",
-		"Tallest Line Height": "--tallest-line"	
+		"Tall Line Height": "--tall-line"
 	};
 
 	const wordSpacing: Record<string, string> = {
-		"Tightest Word Spacing": "--tightest-word",
-		"Tighter Word Spacing": "--tighter-word",
 		"Tight Word Spacing": "--tight-word",
 		"Normal Word Spacing": "--normal-word",
-		"Wide Word Spacing": "--wide-word",
-		"Wider Word Spacing": "--wider-word",
-		"Widest Word Spacing": "--widest-word"
+		"Wide Word Spacing": "--wide-word"
 	};
 </script>
 
@@ -151,14 +139,14 @@
 	}
 
 	.container:is(.families, .weights, .letter-spacing, .line-height, .word-spacing) {
-		--column-width: var(--smallest-container);
+		--column-width: var(--2x-small-container);
 		display: flex;
 		flex-flow: row nowrap;
 		gap: var(--large) var(--3x-large);
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
 		@media (--phone) {
-			--column-width: var(--smaller-container);
+			--column-width: var(--x-small-container);
 		}
 		@media (--desktop) {
 			--column-width: var(--small-container);
@@ -189,7 +177,7 @@
 		display: block;
 		white-space: nowrap;
 		text-overflow: ellipsis;
-		line-height: var(--shortest-line);
+		line-height: var(--short-line);
 		font-family: var(--display-family);
 		font-size: var(--prop);
 		font-weight: var(--regular-weight);
@@ -216,7 +204,7 @@
 		font-size: var(--3x-large);
 		font-weight: var(--prop);
 		font-family: var(--display-family);
-		line-height: var(--shorter-line);
+		line-height: var(--short-line);
 		color: var(--high-contrast-color);
 	}
 

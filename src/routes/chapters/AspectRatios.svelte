@@ -59,9 +59,9 @@
 		font-family: var(--display-family);
 		aspect-ratio: var(--prop, 1);
 		background-color: var(--background-color);
-		border: var(--4x-small) solid var(--medium-contrast-color);
-		border-radius: var(--smallest-radius);
-		color: var(--low-contrast-color);
+		border: var(--3x-small) solid var(--low-contrast-color);
+		border-radius: var(--small-radius);
+		color: var(--medium-contrast-color);
 		padding: var(--medium);
 		margin-inline: auto;
 		overflow: hidden;

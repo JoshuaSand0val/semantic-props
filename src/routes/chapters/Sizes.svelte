@@ -2,17 +2,18 @@
     import Divider from "$lib/components/Divider.svelte";
 
 	const containers: Record<string, string>= {
-		"Smallest Container": "var(--smallest-container)",
-		"Smaller Container": "var(--smaller-container)",
+		"Extra Small (3x) Container": "var(--3x-small-container)",
+		"Extra Small (2x) Container": "var(--2x-small-container)",
+		"Extra Small Container": "var(--x-small-container)",
 		"Small Container": "var(--small-container)",
 		"Medium Container": "var(--medium-container)",
 		"Large Container": "var(--large-container)",
-		"Larger Container": "var(--larger-container)",
-		"Largest Container": "var(--largest-container)"
+		"Extra Large Container": "var(--x-large-container)",
+		"Extra Large (2x) Container": "var(--2x-large-container)",
+		"Extra Large (3x) Container": "var(--3x-large-container)",
 	};
 
 	const sizes: Record<string, string> = {
-		"Extra Small (4x)": "var(--4x-small)",
 		"Extra Small (3x)": "var(--3x-small)",
 		"Extra Small (2x)": "var(--2x-small)",
 		"Extra Small": "var(--x-small)",
@@ -85,7 +86,7 @@
 	}
 
 	.title {
-		line-height: var(--shorter-line);
+		line-height: var(--short-line);
 		font-family: var(--display-family);
 		font-weight: var(--bold-weight);
 		color: var(--medium-contrast-color);
@@ -104,7 +105,7 @@
 		writing-mode: horizontal-tb;
 		inline-size: var(--prop);
 		block-size: var(--3x-small);
-		box-shadow: var(--lightest-box-shadow);
+		box-shadow: var(--light-box-shadow);
 		outline: 1px dotted var(--high-contrast-color);
 		margin: var(--3x-small);
 		flex: 0 0 auto;

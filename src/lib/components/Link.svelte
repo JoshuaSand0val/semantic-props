@@ -24,9 +24,9 @@
 	}
 
 	.container:active {
-		color: var(--accent-550);
+		color: var(--accent-600);
 		@media (--dark) {
-			color: var(--accent-350);
+			color: var(--accent-400);
 		}
 	}
 </style>
