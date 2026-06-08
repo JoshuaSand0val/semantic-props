@@ -9,7 +9,7 @@
 
 	/* Border-Radius: */
 	--small-radius: 0.5rem; /* 8px */
-	--medium-radius: 1rem; /* 16px */
+	--medium-radius: 1.25rem; /* 20px */
 	--large-radius: 2rem; /* 32px */
 
 	/* Color Palette: */
@@ -121,7 +121,7 @@
 	/* Word-Spacing: */
 	--tight-word: -0.1em;
 	--normal-word: normal;
-	--wide-word: 0.1em;
+	--wide-word: 0.2em;
 
 	/* Opacity: */
 	--low-opacity: 0.4;
