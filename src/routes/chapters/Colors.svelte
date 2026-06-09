@@ -59,9 +59,9 @@
 <style>
 	.container {
 		display: grid;
-		grid-template-rows: repeat(1, 1fr); 
+		grid-template-rows: repeat(2, 1fr); 
 		grid-auto-flow: column; 
-		grid-auto-columns: min(100%, var(--small-container));
+		grid-auto-columns: min(100%, var(--medium-container));
 		justify-content: start;
 		align-items: stretch;
 		gap: var(--2x-small);
@@ -77,23 +77,23 @@
 		margin-block: 0;
 		scroll-snap-align: center;
 		overflow: hidden;
-		flex: 1 0 auto;
 	}
 
 	.color {
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		align-content: start;
-		gap: 0 var(--x-large);
+		align-items: start;
+		gap: 0 var(--small);
 		background-color: var(--prop);
-		padding-inline: var(--small);
-		padding-block: var(--x-small) var(--small);
+		padding-inline: var(--x-small);
+		padding-block: var(--2x-small) var(--3x-small);
 		flex: 1 0 auto;
 	}
 
 	.name, .prop {
 		display: block;
+		line-height: var(--normal-line);
 		font-size: var(--small);
 		filter: invert(1) saturate(0) contrast(9999);
 		color: var(--prop);
@@ -105,13 +105,11 @@
 	}
 
 	.name {
-		line-height: var(--normal-line);
 		font-family: var(--display-family);
 		font-weight: var(--bold-weight);
 	}
 
 	.prop {
-		line-height: var(--short-line);
 		font-family: var(--mono-family);
 		font-weight: var(--light-weight);
 		opacity: var(--medium-opacity);
