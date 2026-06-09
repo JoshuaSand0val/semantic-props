@@ -51,15 +51,15 @@
 			inset: 0;
 			background: conic-gradient(from 90deg at 1px 1px, #0000 90deg, var(--middleground-color) 0);
 			animation-duration: var(--slow-time);
-			animation-delay: var(--fast-time);
 			animation-timing-function: linear;
 			animation-fill-mode: both;
-			opacity: 0.2;
+			opacity: var(--low-opacity);
 		}
 		&::before {
 			margin-inline: auto;
 			background-size: 100% var(--2x-large);
 			animation-name: blueprint-horizontal;
+			animation-delay: var(--slow-time);
 			@media (prefers-reduced-motion) {
 				animation: none;
 			}
