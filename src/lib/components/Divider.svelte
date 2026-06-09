@@ -20,7 +20,6 @@
 	details {
 		display: block;
 		margin-block: var(--3x-large) var(--4x-large);
-		overflow: clip;
 		&::details-content {
 			interpolate-size: allow-keywords;
 			transition-property: block-size, content-visibility;
@@ -28,9 +27,11 @@
 			transition-timing-function: var(--ease-out);
 			transition-behavior: allow-discrete;
 			block-size: 0;
+			overflow: clip;
 		}
 		&[open]::details-content {
 			block-size: auto;
+			overflow: visible;
 		}
 	}
 

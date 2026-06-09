@@ -36,7 +36,8 @@
 <style>
 	.container {
 		display: block;
-		margin-block: var(--3x-large);	
+		margin-block: var(--3x-large);
+		filter: var(--light-shadow);
 	}
 
 	.scroller {
@@ -45,7 +46,7 @@
 		gap: var(--x-large);
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
-		margin-block: var(--x-large);	
+		margin-block: var(--x-large);
 	}
 
 	.styles {
@@ -66,7 +67,6 @@
 		inline-size: min(100%, var(--inline-size));
 		aspect-ratio: 1;
 		background-color: var(--background-color);
-		box-shadow: var(--light-box-shadow);
 		border: 1px var(--line) var(--high-contrast-color);
 		border-radius: var(--prop);
 		padding: var(--large);

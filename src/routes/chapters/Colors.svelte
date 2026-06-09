@@ -67,6 +67,7 @@
 		gap: var(--2x-small);
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
+		filter: var(--light-shadow);
 	}
 
 	.palette {

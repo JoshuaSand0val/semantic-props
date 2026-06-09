@@ -47,6 +47,7 @@
 		break-inside: avoid;
 		text-align: center;
 		margin-block-end: var(--3x-large);
+		filter: var(--light-shadow);
 	}
 
 	.ratio {

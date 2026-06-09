@@ -52,8 +52,9 @@
 	.container { 
 		display: block;
 		background-color: var(--background-color);
+		border: 1px var(--line) var(--foreground-color);
 		border-radius: var(--small-radius);
-		padding-block: var(--small);
+		padding-block: var(--large);
 		margin-block: var(--x-large);
 		overflow: hidden;
 		@media (--dark) {
@@ -69,7 +70,7 @@
 		justify-content: start;
 		align-items: stretch;
 		gap: var(--large);
-		padding-inline: var(--small);
+		padding-inline: var(--medium);
 		padding-block: var(--large);
 		margin-block: calc(-1 * var(--large));
 		scroll-snap-type: inline mandatory;
@@ -104,7 +105,7 @@
 		display: block;
 		font-size: var(--2x-large);
 		font-family: var(--display-family);
-		line-height: var(--shorter-line);
+		line-height: var(--short-line);
 		color: var(--medium-contrast-color);
 		margin-block-start: var(--3x-small);
 		@media (--phone) {
