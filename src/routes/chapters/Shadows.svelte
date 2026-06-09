@@ -51,13 +51,12 @@
 <style>
 	.container { 
 		display: block;
-		background-color: var(--white);
+		background-color: var(--background-color);
 		border-radius: var(--small-radius);
 		padding-block: var(--small);
 		margin-block: var(--x-large);
 		overflow: hidden;
 		@media (--dark) {
-			background-color: var(--gray-600);
 			--background-color: var(--gray-900);
 			--middleground-color: var(--gray-800);
 			--foreground-color: var(--gray-700);

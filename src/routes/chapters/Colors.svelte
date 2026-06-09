@@ -83,17 +83,16 @@
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: space-between;
-		align-items: start;
+		align-items: center;
 		gap: 0 var(--small);
 		background-color: var(--prop);
-		padding-inline: var(--x-small);
-		padding-block: var(--2x-small) var(--3x-small);
+		padding: var(--x-small);
 		flex: 1 0 auto;
 	}
 
 	.name, .prop {
 		display: block;
-		line-height: var(--normal-line);
+		line-height: var(--short-line);
 		font-size: var(--small);
 		filter: invert(1) saturate(0) contrast(9999);
 		color: var(--prop);
