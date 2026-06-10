@@ -136,7 +136,7 @@
 		font-weight: var(--regular-weight);
 		border-radius: var(--small-radius);
 		background-color: var(--background-color);
-		color: var(--low-contrast-color);
+		color: var(--medium-contrast-color);
 		padding: var(--x-small);
 		margin: var(--demo, 0);
 		@media (--phone) {
@@ -148,7 +148,7 @@
 		display: block;
 		font-family: var(--mono-family);
 		margin-block: var(--x-small);
-		color: var(--medium-contrast-color);
+		color: var(--low-contrast-color);
 		@media (--watch) {
 			font-size: var(--small);
 		}
