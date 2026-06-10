@@ -13,18 +13,18 @@
 }
 
 :root {
-	/* Small Viewport (320x240px): */
-	@media (width >= 20rem) and (height >= 15rem) {
+	/* Small Viewport (320px): */
+	@media (width >= 20rem) {
 		--small-viewport: true;
 	}
 
-	/* Medium Viewport (768x480px): */
-	@media (width >= 48rem) and (height >= 30rem) {
+	/* Medium Viewport (768px): */
+	@media (width >= 48rem) {
 		--medium-viewport: true;
 	}
 
-	/* Large Viewport (1280x640px): */
-	@media (width >= 80rem) and (height >= 40rem) {
+	/* Large Viewport (1280px): */
+	@media (width >= 80rem) {
 		--large-viewport: true;
 	}
 
