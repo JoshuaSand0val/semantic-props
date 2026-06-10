@@ -13,18 +13,18 @@
 }
 
 :root {
-	/* Small Viewport (320x480px): */
-	@media (width >= 20rem) and (height >= 30rem) {
+	/* Small Viewport (320x240px): */
+	@media (width >= 20rem) and (height >= 15rem) {
 		--small-viewport: true;
 	}
 
-	/* Medium Viewport (768x1024px): */
-	@media (width >= 48rem) and (height >= 64rem) {
+	/* Medium Viewport (768x480px): */
+	@media (width >= 48rem) and (height >= 30rem) {
 		--medium-viewport: true;
 	}
 
-	/* Large Viewport (1280x1440px): */
-	@media (width >= 80rem) and (height >= 90rem) {
+	/* Large Viewport (1280x640px): */
+	@media (width >= 80rem) and (height >= 40rem) {
 		--large-viewport: true;
 	}
 
