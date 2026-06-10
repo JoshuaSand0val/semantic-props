@@ -25,28 +25,26 @@
 
 <style>
 	.container {
-		display: block;
-		column-count: 1;
-		column-gap: var(--large);
-		column-fill: balance;
+		display: grid;
+		display: grid-lanes;
+		grid-template-columns: repeat(1, 1fr);
+		gap: var(--large);
 		padding-block: var(--3x-small);
 		margin-block: var(--2x-large);
 		@media (--phone) {
-			column-count: 2;
+			grid-template-columns: repeat(2, 1fr);
 		}
 		@media (--tablet) {
-			column-count: 3;
+			grid-template-columns: repeat(3, 1fr);
 		}
 		@media (--desktop) {
-			column-count: 4;
+			grid-template-columns: repeat(4, 1fr);
 		}
 	}
 
 	.item {
 		display: block;
-		break-inside: avoid;
 		text-align: center;
-		margin-block-end: var(--3x-large);
 		filter: var(--light-shadow);
 	}
 
