@@ -147,7 +147,7 @@
 	.prop {
 		display: block;
 		font-family: var(--mono-family);
-		margin-block: var(--3x-small);
+		margin-block: var(--x-small);
 		color: var(--medium-contrast-color);
 		@media (--watch) {
 			font-size: var(--small);
