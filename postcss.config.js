@@ -1,6 +1,7 @@
 export default {
 	plugins: {
 		"postcss-import": {},
+		"@csstools/postcss-media-minmax": {},
 		"postcss-custom-media": {
 			preserve: false
 		},

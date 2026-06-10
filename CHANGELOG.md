@@ -2,6 +2,12 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [2.1.0] - YYYY-MM-DD
+
+### Added
+
+- Added viewport booleans for `@container` style queries.
+
 ## [2.0.0] - 2026-06-07
 
 ### Changed
