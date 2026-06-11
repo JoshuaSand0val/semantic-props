@@ -188,15 +188,15 @@
 	--heavy-shadow: drop-shadow(0 8px 16px rgb(0 0 0 / 0.3));
 
 	/* Viewport Queries: */
-	@media (width >= 20rem) {
+	@media (width >= 20rem) /* 320px */ {
 		--small-viewport: true;
 	}
 
-	@media (width >= 48rem) {
+	@media (width >= 48rem) /* 768px */ {
 		--medium-viewport: true;
 	}
 
-	@media (width >= 80rem) {
+	@media (width >= 80rem) /* 1280px */ {
 		--large-viewport: true;
 	}
 
