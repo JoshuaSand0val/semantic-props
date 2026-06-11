@@ -1,8 +1,5 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-@custom-media --light (prefers-color-scheme: light);
-@custom-media --dark (prefers-color-scheme: dark);
-
 /* Boolean Properties: */
 @mixin boolean($name) {
 	@property $(name) {
@@ -12,27 +9,12 @@
 	}
 }
 
-/* Viewport Properties: */
+/* Viewport Booleans: */
 @include boolean(--small-viewport);
 @include boolean(--medium-viewport);
 @include boolean(--large-viewport);
 
 :root {
-	/* Small Viewport (320px): */
-	@media (width >= 20rem) {
-		--small-viewport: true;
-	}
-
-	/* Medium Viewport (768px): */
-	@media (width >= 48rem) {
-		--medium-viewport: true;
-	}
-
-	/* Large Viewport (1280px): */
-	@media (width >= 80rem) {
-		--large-viewport: true;
-	}
-
 	/* Line-Style: */
 	--line: solid;
 
@@ -79,7 +61,7 @@
 	--medium-contrast-color: var(--gray-700);
 	--high-contrast-color: var(--black);
 
-	@media (--dark) {
+	@media (prefers-color-scheme: dark) {
 		--background-color: var(--black);
 		--middleground-color: var(--gray-900);
 		--foreground-color: var(--gray-800);
@@ -204,6 +186,19 @@
 	--light-shadow: drop-shadow(0 4px 8px rgb(0 0 0 / 0.1));
 	--medium-shadow: drop-shadow(0 6px 12px rgb(0 0 0 / 0.2));
 	--heavy-shadow: drop-shadow(0 8px 16px rgb(0 0 0 / 0.3));
+
+	/* Viewport Queries: */
+	@media (width >= 20rem) {
+		--small-viewport: true;
+	}
+
+	@media (width >= 48rem) {
+		--medium-viewport: true;
+	}
+
+	@media (width >= 80rem) {
+		--large-viewport: true;
+	}
 
 	/* Container Size: */
 	--3x-small-container: 8rem; /* 128px */
