@@ -3,14 +3,19 @@
 @custom-media --light (prefers-color-scheme: light);
 @custom-media --dark (prefers-color-scheme: dark);
 
-/* Viewport Booleans: */
-@each $size in (small, medium, large) {
-	@property --$(size)-viewport {
+/* Boolean Properties: */
+@mixin boolean($name) {
+	@property $(name) {
 		syntax: "true | false";
 		inherits: true;
 		initial-value: false;
 	}
 }
+
+/* Viewport Properties: */
+@include boolean(--small-viewport);
+@include boolean(--medium-viewport);
+@include boolean(--large-viewport);
 
 :root {
 	/* Small Viewport (320px): */
