@@ -6,7 +6,7 @@ All relevant changes to Semantic Props will be documented here.
 
 ### Added
 
-- Added `--min-viewport` and `--max-viewport` booleans for `@container` style queries.
+- Added viewport booleans for `@container` style queries.
 
 ## [2.0.0] - 2026-06-07
 
