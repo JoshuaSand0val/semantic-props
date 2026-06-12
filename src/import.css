@@ -1,19 +1,5 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-/* Boolean Properties: */
-@mixin boolean($name) {
-	@property $(name) {
-		syntax: "true | false";
-		inherits: true;
-		initial-value: false;
-	}
-}
-
-/* Viewport Booleans: */
-@include boolean(--small-viewport);
-@include boolean(--medium-viewport);
-@include boolean(--large-viewport);
-
 :root {
 	/* Line-Style: */
 	--line: solid;
@@ -188,16 +174,21 @@
 	--heavy-shadow: drop-shadow(0 8px 16px rgb(0 0 0 / 0.3));
 
 	/* Viewport Queries: */
-	@media (width >= 20rem) /* 320px */ {
-		--small-viewport: true;
+	--viewport: none;
+
+	/* Small Viewport (320px to 480px): */
+	@media (20rem <= width <= 30rem) {
+		--viewport: small;
 	}
 
-	@media (width >= 48rem) /* 768px */ {
-		--medium-viewport: true;
+	/* Medium Viewport (480px to 1024px): */
+	@media (30rem <= width <= 64rem) {
+		--viewport: medium;
 	}
 
-	@media (width >= 80rem) /* 1280px */ {
-		--large-viewport: true;
+	/* Large Viewport (1024px+): */
+	@media (width >= 64rem) {
+		--viewport: large;
 	}
 
 	/* Container Size: */
