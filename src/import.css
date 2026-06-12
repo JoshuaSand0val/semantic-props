@@ -14,6 +14,13 @@
 @include boolean(--medium-viewport);
 @include boolean(--large-viewport);
 
+/* Colorway Identifier: */
+@property --colorway {
+	syntax: "<custom-ident>";
+	inherits: true;
+	initial-value: none;
+}
+
 :root {
 	/* Line-Style: */
 	--line: solid;
