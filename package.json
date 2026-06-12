@@ -17,6 +17,8 @@
 		"LICENSE",
 		"README.md"
 	],
+	"main": "./dist/import.css",
+	"style": "./dist/import.css",
 	"exports": {
 		".": {
 			"default": "./dist/import.css"
