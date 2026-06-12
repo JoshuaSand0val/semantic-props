@@ -174,21 +174,31 @@
 	--heavy-shadow: drop-shadow(0 8px 16px rgb(0 0 0 / 0.3));
 
 	/* Viewport Queries: */
-	--viewport: none;
+	--min-viewport: none;
+	--max-viewport: none;
 
 	/* Small Viewport (320px to 480px): */
-	@media (20rem <= width <= 30rem) {
-		--viewport: small;
+	@media (width >= 20rem) {
+		--min-viewport: small;
+	}
+
+	@media (width <= 30rem) {
+		--max-viewport: small;
 	}
 
 	/* Medium Viewport (480px to 1024px): */
-	@media (30rem <= width <= 64rem) {
-		--viewport: medium;
+	@media (width >= 30rem) {
+		--min-viewport: medium;
+	}
+
+	@media (width <= 64rem) {
+		--max-viewport: medium;
 	}
 
 	/* Large Viewport (1024px+): */
 	@media (width >= 64rem) {
-		--viewport: large;
+		--min-viewport: large;
+		--max-viewport: large;
 	}
 
 	/* Container Size: */
