@@ -1,18 +1,17 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-/* Boolean Properties: */
-@mixin boolean($name) {
-	@property $(name) {
+/* Viewport Booleans: */
+@mixin viewport($name) {
+	@property --$(name)-viewport {
 		syntax: "true | false";
 		inherits: true;
 		initial-value: false;
 	}
 }
 
-/* Viewport Booleans: */
-@include boolean(--small-viewport);
-@include boolean(--medium-viewport);
-@include boolean(--large-viewport);
+@include viewport(small);
+@include viewport(medium);
+@include viewport(large);
 
 /* Colorway Identifier: */
 @property --colorway {
