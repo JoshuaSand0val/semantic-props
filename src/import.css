@@ -214,8 +214,8 @@
 	--medium-container: 30rem; /* 480px */
 	--large-container: 48rem; /* 768px */
 	--x-large-container: 64rem; /* 1024px */
-	--2x-large-container: 90rem; /* 1440px */
-	--3x-large-container: 120rem; /* 1920px */
+	--2x-large-container: 80rem; /* 1280px */
+	--3x-large-container: 90rem; /* 1440px */
 
 	/* Size: */
 	--3x-small: 0.25rem; /* 4px */

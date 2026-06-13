@@ -9,6 +9,10 @@ All relevant changes to Semantic Props will be documented here.
 - Added viewport booleans for `@container` style queries.
 - Added `--colorway` prop for `@container` style queries.
 
+### Changed
+
+- Changed container size props scaling.
+
 ## [2.0.0] - 2026-06-07
 
 ### Changed
