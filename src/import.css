@@ -8,7 +8,7 @@
 }
 
 /* Viewport Booleans: */
-@each $name in phone tablet laptop desktop {
+@each $name in small medium large {
 	@property --$(name)-viewport {
 		syntax: "true | false";
 		inherits: true;
@@ -19,19 +19,15 @@
 :root {
 	/* Viewport Queries: */
 	@media (width >= 20rem) /* 320px */ {
-		--phone-viewport: true;
+		--small-viewport: true;
 	}
 
 	@media (width >= 48rem) /* 768px */ {
-		--tablet-viewport: true;
+		--medium-viewport: true;
 	}
 
 	@media (width >= 80rem) /* 1280px */ {
-		--laptop-viewport: true;
-	}
-
-	@media (width >= 90rem) /* 1440px */ {
-		--desktop-viewport: true;
+		--large-viewport: true;
 	}
 
 	/* Line-Style: */
