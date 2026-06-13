@@ -31,13 +31,13 @@
 		gap: var(--large);
 		padding-block: var(--3x-small);
 		margin-block: var(--2x-large);
-		@media (--phone) {
+		@container style(--small-viewport) {
 			grid-template-columns: repeat(2, 1fr);
 		}
-		@media (--tablet) {
+		@container style(--medium-viewport) {
 			grid-template-columns: repeat(3, 1fr);
 		}
-		@media (--desktop) {
+		@container style(--large-viewport) {
 			grid-template-columns: repeat(4, 1fr);
 		}
 	}
@@ -64,10 +64,10 @@
 		padding: var(--medium);
 		margin-inline: auto;
 		overflow: hidden;
-		@media (--phone) {
+		@container style(--small-viewport) {
 			font-size: var(--large);
 		}
-		@media (--tablet) {
+		@container style(--medium-viewport) {
 			font-size: var(--x-large);
 		}
 	}
@@ -78,7 +78,7 @@
 		font-size: var(--small);
 		color: var(--low-contrast-color);
 		margin-block: var(--x-small);
-		@media (--phone) {
+		@container style(--small-viewport) {
 			font-size: var(--medium);
 		}
 	}

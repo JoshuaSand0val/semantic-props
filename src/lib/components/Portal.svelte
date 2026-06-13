@@ -37,7 +37,7 @@
 			line-height: var(--short-line);
 			margin-inline: var(--3x-small);
 			margin-block: var(--small) 0;
-			@media (--tablet) {
+			@container style(--medium-viewport) {
 				font-size: var(--medium);
 			}
 			.title, .description {
@@ -68,12 +68,12 @@
 					filter: var(--low-brightness);
 					transform: none;
 				}
-				@media (--light) {
+				@container style(--colorway: light) {
 					&.dark {
 						display: none;
 					}
 				}
-				@media (--dark) { 
+				@container style(--colorway: dark) { 
 					&.light {
 						display: none;
 					}

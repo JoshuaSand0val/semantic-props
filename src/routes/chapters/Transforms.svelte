@@ -49,7 +49,7 @@
 		border-radius: var(--small-radius);
 		flex: 0 0 auto;
 		scroll-snap-align: center;
-		@media (--laptop) {
+		@container style(--medium-viewport) {
 			--inline-size: var(--small-container);
 		}
 	}

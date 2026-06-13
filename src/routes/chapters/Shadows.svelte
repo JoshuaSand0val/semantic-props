@@ -57,7 +57,7 @@
 		padding-block: var(--large);
 		margin-block: var(--x-large);
 		overflow: hidden;
-		@media (--dark) {
+		@container style(--colorway: dark) {
 			--background-color: var(--gray-900);
 			--middleground-color: var(--gray-800);
 			--foreground-color: var(--gray-700);
@@ -108,7 +108,7 @@
 		line-height: var(--short-line);
 		color: var(--medium-contrast-color);
 		margin-block-start: var(--3x-small);
-		@media (--phone) {
+		@container style(--small-viewport) {
 			font-size: var(--3x-large);
 		}
 	}

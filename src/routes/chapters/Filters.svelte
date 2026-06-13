@@ -88,7 +88,7 @@
 		transition: inline-size var(--normal-time) var(--ease-out);
 		scroll-snap-align: center;
 		flex: 0 0 auto;
-		@media (--tablet) {
+		@container style(--medium-viewport) {
 			--inline-size: var(--x-small-container);
 		}
 	}

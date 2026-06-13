@@ -38,7 +38,7 @@
 			inline-size: min(100%, var(--x-small-container));
 			flex: 0 0 auto;
 			transition: inline-size var(--fast-time) var(--ease-in);
-			@media (--laptop) {
+			@container style(--medium-viewport) {
 				inline-size: min(100%, var(--small-container));
 			}
 		}

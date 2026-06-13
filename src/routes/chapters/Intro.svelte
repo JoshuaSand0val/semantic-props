@@ -31,10 +31,10 @@
 		display: block;
 		transition: margin-block-start var(--fast-time) var(--ease-in);
 		margin-block-start: var(--4x-large);
-		@media (--phone) {
+		@container style(--small-viewport) {
 			margin-block-start: var(--5x-large);
 		}
-		@media (--tablet) {
+		@container style(--medium-viewport) {
 			margin-block-start: var(--6x-large);
 		}
 	}

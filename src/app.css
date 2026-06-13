@@ -4,17 +4,37 @@
 @import '@fontsource-variable/open-sans';
 @import "@fontsource/ibm-plex-mono";
 
-@custom-media --watch (max-width: 20rem);
-@custom-media --phone (min-width: 20rem);
-@custom-media --tablet (min-width: 40rem);
-@custom-media --laptop (min-width: 64rem);
-@custom-media --desktop (min-width: 80rem);
-
-@custom-media --light (prefers-color-scheme: light);
-@custom-media --dark (prefers-color-scheme: dark);
-
 :root {
 	--display-family: "Ubuntu Sans Variable", sans-serif;
 	--body-family: "Open Sans Variable", sans-serif;
 	--mono-family: "IBM Plex Mono", monospace;
+
+	@media (prefers-color-scheme: light) {
+		--colorway: light;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		--colorway: dark;
+	}
+}
+
+body {
+	@container style(--colorway: light) {
+		--background-color: var(--white);
+		--middleground-color: var(--gray-100);
+		--foreground-color: var(--gray-200);
+
+		--low-contrast-color: var(--gray-500);
+		--medium-contrast-color: var(--gray-700);
+		--high-contrast-color: var(--black);
+	}
+	@container style(--colorway: dark) {
+		--background-color: var(--black);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-800);
+
+		--low-contrast-color: var(--gray-500);
+		--medium-contrast-color: var(--gray-300);
+		--high-contrast-color: var(--white);
+	}
 }

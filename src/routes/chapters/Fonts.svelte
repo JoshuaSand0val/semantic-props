@@ -145,10 +145,10 @@
 		gap: var(--large) var(--3x-large);
 		scroll-snap-type: inline mandatory;
 		overflow: auto;
-		@media (--phone) {
+		@container style(--small-viewport) {
 			--column-width: var(--x-small-container);
 		}
-		@media (--desktop) {
+		@container style(--large-viewport) {
 			--column-width: var(--small-container);
 		}
 		:global(& > *) {
