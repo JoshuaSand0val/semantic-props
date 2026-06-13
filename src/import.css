@@ -8,7 +8,7 @@
 }
 
 /* Viewport Booleans: */
-@mixin viewport($name) {
+@each $name in phone tablet laptop desktop {
 	@property --$(name)-viewport {
 		syntax: "true | false";
 		inherits: true;
@@ -16,11 +16,24 @@
 	}
 }
 
-@include viewport(small);
-@include viewport(medium);
-@include viewport(large);
-
 :root {
+	/* Viewport Queries: */
+	@media (width >= 20rem) /* 320px */ {
+		--phone-viewport: true;
+	}
+
+	@media (width >= 48rem) /* 768px */ {
+		--tablet-viewport: true;
+	}
+
+	@media (width >= 80rem) /* 1280px */ {
+		--laptop-viewport: true;
+	}
+
+	@media (width >= 90rem) /* 1440px */ {
+		--desktop-viewport: true;
+	}
+
 	/* Line-Style: */
 	--line: solid;
 
@@ -192,19 +205,6 @@
 	--light-shadow: drop-shadow(0 4px 8px rgb(0 0 0 / 0.1));
 	--medium-shadow: drop-shadow(0 6px 12px rgb(0 0 0 / 0.2));
 	--heavy-shadow: drop-shadow(0 8px 16px rgb(0 0 0 / 0.3));
-
-	/* Viewport Queries: */
-	@media (width >= 20rem) /* 320px */ {
-		--small-viewport: true;
-	}
-
-	@media (width >= 48rem) /* 768px */ {
-		--medium-viewport: true;
-	}
-
-	@media (width >= 80rem) /* 1280px */ {
-		--large-viewport: true;
-	}
 
 	/* Container Size: */
 	--3x-small-container: 8rem; /* 128px */
