@@ -57,7 +57,7 @@
 		padding-block: var(--large);
 		margin-block: var(--x-large);
 		overflow: hidden;
-		@container style(--colorway: dark) {
+		@container style(--theme: dark) {
 			--background-color: var(--gray-900);
 			--middleground-color: var(--gray-800);
 			--foreground-color: var(--gray-700);

@@ -113,7 +113,7 @@
 			var(--background-color) 0 calc(var(--border-size) * 2)
 		);
 		overflow: hidden;
-		@container style(--colorway: dark) {
+		@container style(--theme: dark) {
 			--border-color: var(--gray-600);
 		}
 		@container style(--small-viewport) {

@@ -18,14 +18,14 @@
 		&:not(:hover, :focus) {
 			text-decoration: none;
 		}
-		@container style(--colorway: dark) {
+		@container style(--theme: dark) {
 			color: var(--accent-300);
 		}
 	}
 
 	.container:active {
 		color: var(--accent-600);
-		@container style(--colorway: dark) {
+		@container style(--theme: dark) {
 			color: var(--accent-400);
 		}
 	}

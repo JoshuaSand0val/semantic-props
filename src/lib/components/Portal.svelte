@@ -68,12 +68,12 @@
 					filter: var(--low-brightness);
 					transform: none;
 				}
-				@container style(--colorway: light) {
+				@container style(--theme: light) {
 					&.dark {
 						display: none;
 					}
 				}
-				@container style(--colorway: dark) { 
+				@container style(--theme: dark) { 
 					&.light {
 						display: none;
 					}
