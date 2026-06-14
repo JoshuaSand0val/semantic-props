@@ -10,11 +10,11 @@
 	--mono-family: "IBM Plex Mono", monospace;
 
 	@media (prefers-color-scheme: light) {
-		--colorway: light;
+		--theme: light;
 	}
 
 	@media (prefers-color-scheme: dark) {
-		--colorway: dark;
+		--theme: dark;
 	}
 }
 
