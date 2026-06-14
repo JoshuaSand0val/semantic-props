@@ -7,7 +7,7 @@ All relevant changes to Semantic Props will be documented here.
 ### Added
 
 - Added viewport booleans for `@container` style queries.
-- Added `--colorway` prop for `@container` style queries.
+- Added `--theme` prop for `@container` style queries.
 
 ### Changed
 
