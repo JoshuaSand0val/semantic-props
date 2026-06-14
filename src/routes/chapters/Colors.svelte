@@ -1,5 +1,7 @@
 <script lang="ts">
+    import Code from "$lib/components/Code.svelte";
     import Divider from "$lib/components/Divider.svelte";
+    import ThemeToggle from "$lib/components/ThemeToggle.svelte";
 
 	/** Semantic Props color palettes. */
 	const palettes: Record<string, `var(${string})`>[] = [{
@@ -41,7 +43,8 @@
 </script>
 
 <Divider title="Color Palette" id="colors">
-	<p>Semantic Props provides a simple but expansive color palette.</p>
+	<p>Semantic Props provides a simple but expansive <Code lang="CSS" code="color" /> palette.</p>
+	<ThemeToggle />
 	<div class="container">
 		{#each palettes as palette}
 		<dl class="palette">

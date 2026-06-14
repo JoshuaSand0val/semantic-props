@@ -4,6 +4,24 @@
 @import '@fontsource-variable/open-sans';
 @import "@fontsource/ibm-plex-mono";
 
+@property --background-color {
+	syntax: "<color>";
+	inherits: true;
+	initial-value: transparent;
+}
+
+@property --middleground-color {
+	syntax: "<color>";
+	inherits: true;
+	initial-value: transparent;
+}
+
+@property --foreground-color {
+	syntax: "<color>";
+	inherits: true;
+	initial-value: transparent;
+}
+
 :root {
 	--display-family: "Ubuntu Sans Variable", sans-serif;
 	--body-family: "Open Sans Variable", sans-serif;
@@ -19,6 +37,10 @@
 }
 
 body {
+	transition-property: --background-color, --middleground-color, --foreground-color;
+	transition-duration: var(--fast-time);
+	transition-timing-function: var(--ease-out);
+
 	@container style(--theme: light) {
 		--background-color: var(--white);
 		--middleground-color: var(--gray-100);
