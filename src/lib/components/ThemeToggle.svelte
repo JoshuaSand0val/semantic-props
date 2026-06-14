@@ -72,6 +72,16 @@
 			background-color: var(--middleground-color);
 			scale: var(--small-scale);
 		}
+		&:has(:checked) {
+			@container style(--theme: light) {
+				background-color: var(--green-100);
+				border-color: var(--green-600);
+			}
+			@container style(--theme: dark) {
+				background-color: var(--green-900);
+				border-color: var(--green-400);
+			}
+		}
 		&[type="reset"] {
 			border-radius: var(--small-radius);
 			border-width: 1px;
