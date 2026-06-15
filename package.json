@@ -22,6 +22,7 @@
 	"style": "./dist/import.css",
 	"exports": {
 		".": {
+			"style": "./dist/import.css",
 			"default": "./dist/import.css"
 		}
 	},
