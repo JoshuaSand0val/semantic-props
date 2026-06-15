@@ -8,7 +8,7 @@
 }
 
 /* Viewport Booleans: */
-@each $name in small medium large {
+@each $name in (small, medium, large) {
 	@property --$(name)-viewport {
 		syntax: "true | false";
 		inherits: true;
