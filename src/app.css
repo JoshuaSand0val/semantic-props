@@ -50,6 +50,7 @@ body {
 		--medium-contrast-color: var(--gray-700);
 		--high-contrast-color: var(--black);
 	}
+
 	@container style(--theme: dark) {
 		--background-color: var(--black);
 		--middleground-color: var(--gray-900);
