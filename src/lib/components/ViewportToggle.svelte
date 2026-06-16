@@ -184,7 +184,7 @@
 		outline: 1px solid var(--low-contrast-color);
 		box-shadow: var(--light-box-shadow);
 		inline-size: min(var(--medium-container), 100%);
-		block-size: var(--small-container);
+		aspect-ratio: var(--landscape-ratio);
 		overflow: hidden;
 		flex: 0 0 auto;
 		transform: scale(0.8);
