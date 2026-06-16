@@ -75,13 +75,12 @@
 		inline-size: min(var(--x-small-container), 100%);
 		align-items: center;
 		font-family: var(--display-family);
-		line-height: var(--normal-line);
 		background-color: var(--background-color);
 		box-shadow: var(--light-box-shadow);
 		border-radius: var(--small-radius);
 		border: 1px var(--line) var(--low-contrast-color);
 		padding-inline: var(--small);
-		padding-block: var(--2x-small);
+		padding-block: var(--x-small);
 		appearance: none;
 		overflow: hidden;
 		cursor: pointer;
@@ -134,12 +133,12 @@
 
 	.title, .prop {
 		display: block;
+		line-height: var(--short-line);
 	}
 
 	.title {
 		text-transform: capitalize;
 		font-size: var(--medium);
-		line-height: var(--normal-line);
 		font-weight: var(--bold-weight);
 		color: var(--high-contrast-color);
 	}
@@ -147,7 +146,6 @@
 	.prop {
 		font-size: var(--small);
 		font-family: var(--mono-family);
-		line-height: var(--short-line);
 		color: var(--medium-contrast-color);
 	}
 
