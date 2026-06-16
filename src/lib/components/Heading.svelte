@@ -40,63 +40,63 @@
 
 	[aria-level="1"] {
 		font-size: var(--3x-large);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--5x-large);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			font-size: var(--7x-large);
 		}
-		@container style(--large-viewport) {
+		@container style(--large-viewport: true) {
 			font-size: var(--8x-large);
 		}
 	}
 
 	[aria-level="2"] {
 		font-size: var(--2x-large);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--4x-large);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			font-size: var(--5x-large);
 		}
 	}
 
 	[aria-level="3"] {
 		font-size: var(--x-large);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--3x-large);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			font-size: var(--4x-large);
 		}
 	}
 
 	[aria-level="4"] {
 		font-size: var(--large);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--2x-large);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			font-size: var(--3x-large);
 		}
 	}
 
 	[aria-level="5"] {
 		font-size: var(--medium);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--x-large);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			font-size: var(--2x-large);
 		}
 	}
 
 	[aria-level="6"] {
 		font-size: var(--small);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--large);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			font-size: var(--x-large);
 		}
 	}

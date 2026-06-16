@@ -108,7 +108,7 @@
 		line-height: var(--short-line);
 		color: var(--medium-contrast-color);
 		margin-block-start: var(--3x-small);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--3x-large);
 		}
 	}

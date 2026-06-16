@@ -37,7 +37,7 @@
 			line-height: var(--short-line);
 			margin-inline: var(--3x-small);
 			margin-block: var(--small) 0;
-			@container style(--medium-viewport) {
+			@container style(--medium-viewport: true) {
 				font-size: var(--medium);
 			}
 			.title, .description {

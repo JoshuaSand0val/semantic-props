@@ -153,17 +153,17 @@
 		&::before {
 			content: "false";
 		}
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			.label.small &::before {
 				content: "true";
 			}
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			.label.medium &::before {
 				content: "true";
 			}
 		}
-		@container style(--large-viewport) {
+		@container style(--large-viewport: true) {
 			.label.large &::before {
 				content: "true";
 			}
@@ -188,10 +188,10 @@
 		overflow: hidden;
 		flex: 0 0 auto;
 		transform: scale(0.8);
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			font-size: var(--small);
 		}
-		@container style(--large-viewport) {
+		@container style(--large-viewport: true) {
 			font-size: var(--x-small);
 		}
 		.titlebar, .grid, .footer {
@@ -206,12 +206,12 @@
 			padding: var(--x-small);
 			overflow: auto;
 			flex: 0 0 auto;
-			@container style(--medium-viewport) {
+			@container style(--medium-viewport: true) {
 				line-height: var(--short-line);
 			}
 		}
 		.footer {
-			@container style(--large-viewport) {
+			@container style(--large-viewport: true) {
 				align-self: center;
 				border-radius: var(--large-radius);
 				padding-inline: var(--x-large);
@@ -227,15 +227,15 @@
 			align-items: stretch;
 			outline: none;
 			flex: 1 1 auto;
-			@container style(--small-viewport) {
+			@container style(--small-viewport: true) {
 				grid-template-columns: repeat(2, 1fr);
 				grid-template-rows: repeat(2, 1fr);
 			}
-			@container style(--medium-viewport) {
+			@container style(--medium-viewport: true) {
 				grid-template-columns: repeat(3, 1fr);
 				grid-template-rows: repeat(2, 1fr);
 			}
-			@container style(--large-viewport) {
+			@container style(--large-viewport: true) {
 				grid-template-columns: repeat(4, 1fr);
 				grid-template-rows: repeat(3, 1fr);
 			}

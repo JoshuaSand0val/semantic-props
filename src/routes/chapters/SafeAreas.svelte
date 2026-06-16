@@ -116,10 +116,10 @@
 		@container style(--theme: dark) {
 			--border-color: var(--gray-600);
 		}
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			block-size: var(--x-small-container);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			block-size: var(--small-container);
 		}
 	}
@@ -139,7 +139,7 @@
 		color: var(--medium-contrast-color);
 		padding: var(--x-small);
 		margin: var(--demo, 0);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--large);
 		}
 	}

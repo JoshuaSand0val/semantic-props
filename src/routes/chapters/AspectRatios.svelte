@@ -31,13 +31,13 @@
 		gap: var(--large);
 		padding-block: var(--3x-small);
 		margin-block: var(--2x-large);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			grid-template-columns: repeat(2, 1fr);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			grid-template-columns: repeat(3, 1fr);
 		}
-		@container style(--large-viewport) {
+		@container style(--large-viewport: true) {
 			grid-template-columns: repeat(4, 1fr);
 		}
 	}
@@ -64,10 +64,10 @@
 		padding: var(--medium);
 		margin-inline: auto;
 		overflow: hidden;
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--large);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			font-size: var(--x-large);
 		}
 	}
@@ -78,7 +78,7 @@
 		font-size: var(--small);
 		color: var(--low-contrast-color);
 		margin-block: var(--x-small);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			font-size: var(--medium);
 		}
 	}

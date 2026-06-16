@@ -32,10 +32,10 @@
 		display: block;
 		transition: margin-block-start var(--fast-time) var(--ease-in);
 		margin-block-start: var(--4x-large);
-		@container style(--small-viewport) {
+		@container style(--small-viewport: true) {
 			margin-block-start: var(--5x-large);
 		}
-		@container style(--medium-viewport) {
+		@container style(--medium-viewport: true) {
 			margin-block-start: var(--6x-large);
 		}
 	}
