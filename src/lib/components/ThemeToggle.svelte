@@ -8,7 +8,7 @@
 	</p>
 	<form class="form">
 		{#each ["light", "dark"] as theme}	
-		<label class={`label ${theme}`}>
+		<label class="label">
 			<input class="radio" type="radio" name="theme" value={theme} />
 			<strong class="title">{theme}</strong>
 			<code class="prop">--theme: {theme};</code>
@@ -38,7 +38,7 @@
 		font-weight: var(--light-weight);
 		line-height: var(--short-line);
 		color: var(--medium-contrast-color);
-		margin-block: var(--2x-small);
+		margin-block: var(--x-small);
 	}
 
 	.label {
@@ -99,16 +99,17 @@
 
 	.title, .prop {
 		display: block;
-		font-size: var(--small);
 	}
 
 	.title {
 		text-transform: capitalize;
+		font-size: var(--medium);
 		font-weight: var(--bold-weight);
 		color: var(--high-contrast-color);
 	}
 
 	.prop {
+		font-size: var(--small);
 		font-family: var(--mono-family);
 		line-height: var(--short-line);
 		color: var(--medium-contrast-color);

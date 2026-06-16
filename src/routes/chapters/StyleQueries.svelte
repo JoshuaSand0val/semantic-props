@@ -3,6 +3,7 @@
 	import Divider from "$lib/components/Divider.svelte";
     import Link from "$lib/components/Link.svelte";
     import ThemeToggle from "$lib/components/ThemeToggle.svelte";
+    import ViewportToggle from "$lib/components/ViewportToggle.svelte";
 </script>
 
 <Divider title="Style Queries" id="stylequeries">
@@ -13,4 +14,5 @@
 		</Link>
 	</p>
 	<ThemeToggle />
+	<ViewportToggle />
 </Divider>
