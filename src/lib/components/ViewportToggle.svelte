@@ -44,7 +44,7 @@
 	.wrapper {
 		display: flex;
 		flex-flow: row wrap;
-		justify-content: space-between;
+		justify-content: space-around;
 		align-items: start;
 		gap: var(--large);
 	}
