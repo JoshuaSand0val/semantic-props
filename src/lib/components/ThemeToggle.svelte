@@ -28,7 +28,7 @@
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
-		gap: var(--3x-small) var(--2x-small);
+		gap: var(--2x-small) var(--x-small);
 	}
 
 	.caption {
