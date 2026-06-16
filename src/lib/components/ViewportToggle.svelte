@@ -19,7 +19,7 @@
 			<button class="label" type="reset">Reset</button>
 		</form>
 		<article class="mockup">
-			<div class="titlebar">Example Layout</div>
+			<div class="titlebar">Our Website</div>
 			<div class="grid">
 				<span class="item"></span>
 				<span class="item"></span>
