@@ -1,9 +1,11 @@
 <script>
     import Code from "./Code.svelte";
-    import Link from "./Link.svelte";
 </script>
 
 <article class="container">
+	<p class="caption">
+		Theme style query values are for demonstration purposes only. Initial value is <Code lang="CSS" code="none" />.
+	</p>
 	<form class="form">
 		{#each ["light", "dark"] as theme}	
 		<label class={`label ${theme}`}>
@@ -14,12 +16,6 @@
 		{/each}
 		<button class="label" type="reset">Reset</button>
 	</form>
-	<p class="caption">
-		Themes use CSS <Code lang="CSS" code="@container" /> style queries. Initial value is <Code lang="CSS" code="none" />.
-		<Link target="_blank" to="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries">
-			Learn More.
-		</Link>
-	</p>
 </article>
 
 <style>
