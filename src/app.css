@@ -4,6 +4,10 @@
 @import '@fontsource-variable/open-sans';
 @import "@fontsource/ibm-plex-mono";
 
+@custom-media --small-viewport (min-width: 20rem);
+@custom-media --medium-viewport (min-width: 48rem);
+@custom-media --large-viewport (min-width: 80rem);
+
 @property --background-color {
 	syntax: "<color>";
 	inherits: true;

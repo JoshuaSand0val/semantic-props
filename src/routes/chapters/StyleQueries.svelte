@@ -7,6 +7,7 @@
 </script>
 
 <Divider title="Style Queries" id="stylequeries">
+	<p class="disclaimer">This feature is unsupported on your browser.</p>
 	<p>
 		Semantic Props provides customizable theme alongside select viewport <Code lang="CSS" code="style()" /> queries.
 		<Link target="_blank" to="https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Containment/Container_size_and_style_queries#container_style_queries">
@@ -16,3 +17,13 @@
 	<ThemeToggle />
 	<ViewportToggle />
 </Divider>
+
+<style>
+	.disclaimer {
+		display: block;
+		color: var(--red-500);
+		@container style(--theme) {
+			display: none;
+		}
+	}
+</style>

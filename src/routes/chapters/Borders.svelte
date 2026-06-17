@@ -73,7 +73,7 @@
 		scroll-snap-align: center;
 		flex: 0 0 auto;
 		transition: inline-size var(--normal-time) var(--ease-out);
-		@container style(--medium-viewport: true) {
+		@media (--medium-viewport) {
 			--inline-size: var(--x-small-container);
 		}
 	}
