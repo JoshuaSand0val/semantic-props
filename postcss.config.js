@@ -1,9 +1,7 @@
 export default {
 	plugins: {
 		"postcss-import": {},
-		"postcss-custom-media": {
-			preserve: false
-		},
+		"@csstools/postcss-media-minmax": {},
 		"postcss-nesting": {},
 		"postcss-advanced-variables": {},
 		"@csstools/postcss-trigonometric-functions": {},

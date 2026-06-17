@@ -1,6 +1,6 @@
 {
 	"name": "semantic-props",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "Expertly crafted CSS Custom Properties (variables) for creating consistent components in any design.",
 	"keywords": [
 		"Semantic Props",
@@ -17,8 +17,11 @@
 		"LICENSE",
 		"README.md"
 	],
+	"main": "./dist/import.css",
+	"style": "./dist/import.css",
 	"exports": {
 		".": {
+			"style": "./dist/import.css",
 			"default": "./dist/import.css"
 		}
 	},
@@ -32,6 +35,7 @@
 		"watch:build": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {
+		"@csstools/postcss-media-minmax": "^3.0.3",
 		"@csstools/postcss-oklab-function": "^4.0.12",
 		"@csstools/postcss-relative-color-syntax": "^3.0.12",
 		"@csstools/postcss-trigonometric-functions": "^4.0.9",
@@ -40,7 +44,6 @@
 		"postcss": "^8.5.6",
 		"postcss-advanced-variables": "^5.0.0",
 		"postcss-cli": "^11.0.1",
-		"postcss-custom-media": "^11.0.6",
 		"postcss-import": "^16.1.1",
 		"postcss-nesting": "^13.0.2"
 	}

@@ -1,9 +1,35 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-@custom-media --light (prefers-color-scheme: light);
-@custom-media --dark (prefers-color-scheme: dark);
+/* Theme Identifier: */
+@property --theme {
+	syntax: "<custom-ident>";
+	inherits: true;
+	initial-value: none;
+}
+
+/* Viewport Booleans: */
+@each $name in (small, medium, large) {
+	@property --$(name)-viewport {
+		syntax: "true | false";
+		inherits: true;
+		initial-value: false;
+	}
+}
 
 :root {
+	/* Viewport Queries: */
+	@media (width >= 20rem) /* 320px */ {
+		--small-viewport: true;
+	}
+
+	@media (width >= 48rem) /* 768px */ {
+		--medium-viewport: true;
+	}
+
+	@media (width >= 80rem) /* 1280px */ {
+		--large-viewport: true;
+	}
+
 	/* Line-Style: */
 	--line: solid;
 
@@ -50,7 +76,7 @@
 	--medium-contrast-color: var(--gray-700);
 	--high-contrast-color: var(--black);
 
-	@media (--dark) {
+	@media (prefers-color-scheme: dark) {
 		--background-color: var(--black);
 		--middleground-color: var(--gray-900);
 		--foreground-color: var(--gray-800);
@@ -184,8 +210,8 @@
 	--medium-container: 30rem; /* 480px */
 	--large-container: 48rem; /* 768px */
 	--x-large-container: 64rem; /* 1024px */
-	--2x-large-container: 90rem; /* 1440px */
-	--3x-large-container: 120rem; /* 1920px */
+	--2x-large-container: 80rem; /* 1280px */
+	--3x-large-container: 90rem; /* 1440px */
 
 	/* Size: */
 	--3x-small: 0.25rem; /* 4px */

@@ -2,6 +2,17 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [2.1.0] - 2026-06-16
+
+### Added
+
+- Added viewport booleans for `@container` style queries.
+- Added `--theme` prop for `@container` style queries.
+
+### Changed
+
+- Changed container size props scaling.
+
 ## [2.0.0] - 2026-06-07
 
 ### Changed
@@ -159,3 +170,4 @@ A **breaking change** release that greatly improves browser compatibility, file 
 [2.0.0-beta.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.1
 [2.0.0-beta.2]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.2
 [2.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0
+[2.1.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.1.0
