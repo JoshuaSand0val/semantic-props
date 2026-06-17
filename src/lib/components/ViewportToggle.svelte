@@ -24,6 +24,15 @@
 				<span class="item"></span>
 				<span class="item"></span>
 				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
+				<span class="item"></span>
 			</div>
 			<div class="footer">
 				<span>Home</span>
@@ -173,6 +182,7 @@
 
 	.mockup {
 		position: relative;
+		isolation: isolate;
 		display: flex;
 		flex-flow: column nowrap;
 		justify-content: start;
@@ -188,27 +198,33 @@
 		aspect-ratio: var(--landscape-ratio);
 		overflow: hidden;
 		flex: 0 0 auto;
-		transform: scale(0.8);
 		@container style(--medium-viewport: true) {
 			font-size: var(--small);
-		}
-		@container style(--large-viewport: true) {
-			font-size: var(--x-small);
 		}
 		.titlebar, .grid, .footer {
 			display: flex;
 			flex-flow: row nowrap;
 			justify-content: space-around;
 			align-items: center;
+			background-color: inherit;
 			white-space: nowrap;
 			gap: var(--x-small) var(--small);
 			line-height: var(--normal-line);
 			outline: inherit;
 			padding: var(--medium);
-			overflow: auto;
+			overflow: hidden;
 			flex: 0 0 auto;
 			@container style(--medium-viewport: true) {
 				line-height: var(--short-line);
+			}
+		}
+		.titlebar, .footer {
+			z-index: var(--z-top);
+		}
+		.titlebar {
+			@container style(--large-viewport: true) {
+				padding-block: var(--x-small) 0;
+				outline: none;
 			}
 		}
 		.footer {
@@ -218,31 +234,29 @@
 				padding-inline: var(--x-large);
 				padding-block: var(--2x-small);
 				margin: var(--small);
+				margin-block-start: 0;
 			}
 		}
 		.grid {
 			display: grid;
-			grid-template-columns: repeat(1, 1fr);
-			grid-template-rows: repeat(3, 1fr);
+			grid-template-columns: repeat(4, 1fr); 
+			grid-template-rows: 1fr;
+			grid-auto-flow: column; 
 			justify-content: start;
 			align-items: stretch;
+			gap: var(--x-small);
 			outline: none;
 			flex: 1 1 auto;
-			@container style(--small-viewport: true) {
-				grid-template-columns: repeat(2, 1fr);
-				grid-template-rows: repeat(2, 1fr);
-			}
 			@container style(--medium-viewport: true) {
-				grid-template-columns: repeat(3, 1fr);
-				grid-template-rows: repeat(2, 1fr);
+				grid-template-rows: repeat(2, 1fr); 
 			}
 			@container style(--large-viewport: true) {
-				grid-template-columns: repeat(4, 1fr);
 				grid-template-rows: repeat(3, 1fr);
 			}
 		}
 		.item {
 			border: 1px solid var(--low-contrast-color);
+			aspect-ratio: var(--video-ratio);
 		}
 	}
 </style>
