@@ -47,6 +47,7 @@
 		justify-content: space-around;
 		align-items: start;
 		gap: var(--large);
+		inline-size: min(var(--3x-large-container), 100%);
 	}
 
 	.form {
@@ -203,7 +204,7 @@
 			gap: var(--x-small) var(--small);
 			line-height: var(--normal-line);
 			outline: inherit;
-			padding: var(--x-small);
+			padding: var(--medium);
 			overflow: auto;
 			flex: 0 0 auto;
 			@container style(--medium-viewport: true) {
