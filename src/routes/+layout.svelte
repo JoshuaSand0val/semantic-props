@@ -19,16 +19,22 @@
 <style>
 	:global(:root) {
 		position: relative;
-		display: block;
 		scroll-behavior: smooth;
-		color-scheme: light dark;
-		overflow-x: hidden;
-		overflow-y: auto;
 	}
 
 	:global(body) {
+		display: block;
 		background-color: var(--background-color);
 		color: var(--high-contrast-color);
+		color-scheme: light dark;
+		overflow-x: hidden;
+		overflow-y: auto;
+		@container style(--theme: light) {
+			color-scheme: light;
+		}
+		@container style(--theme: dark) {
+			color-scheme: dark;
+		}
 	}
 
 	:global(:root, body),
