@@ -11,6 +11,7 @@
     import SafeAreas from "./chapters/SafeAreas.svelte";
     import Shadows from "./chapters/Shadows.svelte";
     import Sizes from "./chapters/Sizes.svelte";
+    import StyleQueries from "./chapters/StyleQueries.svelte";
 	import Timing from "./chapters/Timing.svelte";
     import Transforms from "./chapters/Transforms.svelte";
     import ZIndex from "./chapters/ZIndex.svelte";
@@ -23,6 +24,7 @@
 <Nav chapters={{
 	"#intro": "Introduction to Semantic Props",
 	// "#builtusing": "Built using Semantic Props",
+	"#stylequeries": "Style Queries",
 	"#borders": "Border Style and Radius",
 	"#colors": "Color Palette",
 	"#filters": "Filter and Opacity Effects",
@@ -38,6 +40,7 @@
 
 <Intro />
 <!-- <BuiltUsing /> -->
+ <StyleQueries />
 <Borders />
 <Colors />
 <Filters />

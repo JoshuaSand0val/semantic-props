@@ -61,7 +61,7 @@
 			border-color: var(--gray-300);
 			background-color: var(--middleground-color);
 			box-shadow: var(--light-inset-shadow), var(--light-box-shadow);
-			@media (--dark) {
+			@container style(--theme: dark) {
 				border-color: var(--gray-700);
 			}
 		}
@@ -130,7 +130,7 @@
 		&:active {
 			background-color: var(--accent-100);
 			color: var(--accent-500);
-			@media (--dark) {
+			@container style(--theme: dark) {
 				background-color: var(--accent-900);
 			}
 		}

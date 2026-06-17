@@ -19,7 +19,8 @@
 			<span style:--phrase={5}>in any design.</span>
 		</span>
 	</Heading>
-	<CodeBlock description="Import At-Rule" lang="css" code='@import "https://unpkg.com/semantic-props";' />
+	<CodeBlock description="Import At-Rule" lang="css" code='@import "https://cdn.jsdelivr.net/npm/semantic-props@2.1.0";' />
+	<CodeBlock description="NPM Install Command" lang="shell" code='npm install semantic-props' />
 </header>
 
 <style>
@@ -31,10 +32,10 @@
 		display: block;
 		transition: margin-block-start var(--fast-time) var(--ease-in);
 		margin-block-start: var(--4x-large);
-		@media (--phone) {
+		@media (--small-viewport) {
 			margin-block-start: var(--5x-large);
 		}
-		@media (--tablet) {
+		@media (--medium-viewport) {
 			margin-block-start: var(--6x-large);
 		}
 	}

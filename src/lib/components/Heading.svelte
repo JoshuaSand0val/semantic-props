@@ -40,66 +40,63 @@
 
 	[aria-level="1"] {
 		font-size: var(--3x-large);
-		@media (--phone) {
+		@media (--small-viewport) {
 			font-size: var(--5x-large);
 		}
-		@media (--tablet) {
-			font-size: var(--6x-large);
-		}
-		@media (--laptop) {
+		@media (--medium-viewport) {
 			font-size: var(--7x-large);
 		}
-		@media (--desktop) {
+		@media (--large-viewport) {
 			font-size: var(--8x-large);
 		}
 	}
 
 	[aria-level="2"] {
 		font-size: var(--2x-large);
-		@media (--phone) {
+		@media (--small-viewport) {
 			font-size: var(--4x-large);
 		}
-		@media (--tablet) {
+		@media (--medium-viewport) {
 			font-size: var(--5x-large);
 		}
 	}
 
 	[aria-level="3"] {
 		font-size: var(--x-large);
-		@media (--phone) {
+		@media (--small-viewport) {
 			font-size: var(--3x-large);
 		}
-		@media (--tablet) {
+		@media (--medium-viewport) {
 			font-size: var(--4x-large);
 		}
 	}
 
 	[aria-level="4"] {
 		font-size: var(--large);
-		@media (--phone) {
+		@media (--small-viewport) {
 			font-size: var(--2x-large);
 		}
-		@media (--tablet) {
+		@media (--medium-viewport) {
 			font-size: var(--3x-large);
 		}
 	}
 
 	[aria-level="5"] {
 		font-size: var(--medium);
-		@media (--phone) {
+		@media (--small-viewport) {
 			font-size: var(--x-large);
 		}
-		@media (--tablet) {
+		@media (--medium-viewport) {
 			font-size: var(--2x-large);
 		}
 	}
 
 	[aria-level="6"] {
 		font-size: var(--small);
-		@media (--phone) {
+		@media (--small-viewport) {
 			font-size: var(--large);
 		}
-		@media (--tablet) {
+		@media (--medium-viewport) {
 			font-size: var(--x-large);
 		}
 	}

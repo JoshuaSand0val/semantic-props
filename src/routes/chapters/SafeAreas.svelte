@@ -113,13 +113,13 @@
 			var(--background-color) 0 calc(var(--border-size) * 2)
 		);
 		overflow: hidden;
-		@media (--dark) {
+		@container style(--theme: dark) {
 			--border-color: var(--gray-600);
 		}
-		@media (--phone) {
+		@media (--small-viewport) {
 			block-size: var(--x-small-container);
 		}
-		@media (--tablet) {
+		@media (--medium-viewport) {
 			block-size: var(--small-container);
 		}
 	}
@@ -139,7 +139,7 @@
 		color: var(--medium-contrast-color);
 		padding: var(--x-small);
 		margin: var(--demo, 0);
-		@media (--phone) {
+		@media (--small-viewport) {
 			font-size: var(--large);
 		}
 	}
@@ -149,7 +149,7 @@
 		font-family: var(--mono-family);
 		margin-block: var(--x-small);
 		color: var(--low-contrast-color);
-		@media (--watch) {
+		@container not style(--small-viewport) {
 			font-size: var(--small);
 		}
 	}

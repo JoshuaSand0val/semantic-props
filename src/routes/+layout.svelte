@@ -22,10 +22,13 @@
 		display: block;
 		scroll-behavior: smooth;
 		color-scheme: light dark;
-		background-color: var(--background-color);
-		color: var(--high-contrast-color);
 		overflow-x: hidden;
 		overflow-y: auto;
+	}
+
+	:global(body) {
+		background-color: var(--background-color);
+		color: var(--high-contrast-color);
 	}
 
 	:global(:root, body),

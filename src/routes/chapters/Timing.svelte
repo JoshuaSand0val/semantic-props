@@ -41,7 +41,7 @@
 		filter: var(--light-shadow);
 		margin-inline: auto;
 		margin-block: var(--3x-large);
-		@media (--tablet) {
+		@media (--medium-viewport) {
 			--columns-size: var(--x-small-container);
 		}
 	}
