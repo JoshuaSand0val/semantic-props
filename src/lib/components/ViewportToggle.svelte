@@ -201,6 +201,9 @@
 		@container style(--medium-viewport: true) {
 			font-size: var(--small);
 		}
+		@container style(--large-viewport: true) {
+			font-size: var(--x-small);
+		}
 		.titlebar, .grid, .footer {
 			display: flex;
 			flex-flow: row nowrap;
