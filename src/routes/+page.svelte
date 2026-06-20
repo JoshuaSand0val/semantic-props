@@ -18,7 +18,7 @@
 </script>
 
 <svelte:head>
-	<title>Semantic Props: Stylesheet values made simple.</title>
+	<title>Semantic Props: CSS that respects the platform—not run from it.</title>
 </svelte:head>
 
 <Nav chapters={{

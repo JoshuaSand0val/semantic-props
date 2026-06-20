@@ -5,7 +5,7 @@
 
 <header class="container" id="intro">
 	<Heading level={4}>
-		<span class="slogan">Stylesheet values made simple.</span>
+		<span class="slogan">CSS that respects the platform—not run from it.</span>
 	</Heading>
 	<Heading level={1}>
 		<span class="title">Semantic Props</span>
