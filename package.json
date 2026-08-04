@@ -1,0 +1,17 @@
+{
+	"private": true,
+	"name": "bun-site-template",
+	"type": "module",
+	"scripts": {
+		"build": "bun build.ts",
+		"build:watch": "chokidar \"src/**/*\" -c \"bun run build.ts\""
+	},
+	"devDependencies": {
+		"@minify-html/node": "^0.18.1",
+		"@types/bun": "latest",
+		"chokidar-cli": "^3.0.0"
+	},
+	"peerDependencies": {
+		"typescript": "^5"
+	}
+}
