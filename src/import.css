@@ -230,5 +230,7 @@
 	--z-top: 5000;
 
 	/* --- Miscellaneous --- */
+
+	/* Line Style: */
 	--line: solid;
 }
