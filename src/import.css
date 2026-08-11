@@ -23,7 +23,7 @@
 		--large-breakpoint: true;
 	}
 
-	/* --- Size --- */
+	/* --- Sizes --- */
 
 	/* Radius: */
 	--small-radius: 0.5rem; /* 8px */
@@ -65,7 +65,7 @@
 	/* Margin: */
 	--margin: 5%;
 
-	/* -- Color --- */
+	/* --- Colors --- */
 	--primary-color: white;
 	--secondary-color: black;
 	--accent-color: oklch(0.5 0.15 240);
@@ -119,7 +119,7 @@
 	--normal-word: normal;
 	--wide-word: 0.2em;
 
-	/* -- Filter --- */
+	/* --- Filters --- */
 
 	/* Blur: */
 	--light-blur: blur(4px);
@@ -179,14 +179,14 @@
 	--medium-sepia: sepia(0.75);
 	--strong-sepia: sepia(1);
 
-	/* --- Aspect Ratio --- */
+	/* --- Aspect Ratios --- */
 	--square-ratio: 1 / 1;
 	--landscape-ratio: 4 / 3;
 	--portrait-ratio: 3 / 4;
 	--video-ratio: 16 / 9;
 	--wide-ratio: 21 / 9;
 
-	/* --- Safe Area --- */
+	/* --- Safe Areas --- */
 	--safe-top: 0;
 	--safe-right: 0;
 	--safe-bottom: 0;
@@ -207,7 +207,7 @@
 	--safe-body: var(--safe-x);
 	--safe-footer: 0 var(--safe-right) var(--safe-bottom) var(--safe-left);
 
-	/* --- Animation --- */
+	/* --- Animations --- */
 
 	/* Timing: */
 	--fast-time: 150ms;
@@ -226,7 +226,7 @@
 	--small-scale: 0.95;
 	--large-scale: 1.05;
 
-	/* --- Position --- */
+	/* --- Positions --- */
 
 	/* Z-Index: */
 	--z-bottom: -1000;
