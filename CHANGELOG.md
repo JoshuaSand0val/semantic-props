@@ -4,6 +4,8 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [3.0.0] - YYYY-MM-DD
 
+Major forward-thinking **breaking change** release that greatly improves file-size by dropping bloat.
+
 ### Added
 
 - Added "primary", "secondary" and "accent" relative color weights.
