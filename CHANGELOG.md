@@ -2,6 +2,25 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [3.0.0] - YYYY-MM-DD
+
+### Added
+
+- Added "primary", "secondary" and "accent" relative color weights.
+- Added `--medium-weight` font weight.
+
+### Changed
+
+- Changed "viewport" style-query naming to "breakpoint".
+- Changed `--margin-size` to `--margin`.
+- Changed `--mono-family` value to be simpler.
+
+### Removed
+
+- Removed use of property at-rules.
+- Removed named color weights.
+- Removed `--thin-weight`, `--regular-weight`, and `--heavy-weight`.
+
 ## [2.1.0] - 2026-06-16
 
 ### Added
@@ -162,12 +181,13 @@ A **breaking change** release that greatly improves browser compatibility, file 
 
 - Added breakpoint, color, font, safe-area, size, timing, and z-index custom properties.
 
-[0.1.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.1.0
-[0.2.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.0
-[0.2.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.1
-[1.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v1.0.0
-[2.0.0-beta.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.0
-[2.0.0-beta.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.1
-[2.0.0-beta.2]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.2
-[2.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0
-[2.1.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.1.0
+[0.1.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v0.1.0
+[0.2.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v0.2.0
+[0.2.1]: https://github.com/heyjesdev/semantic-props/releases/tag/v0.2.1
+[1.0.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v1.0.0
+[2.0.0-beta.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.0.0-beta.0
+[2.0.0-beta.1]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.0.0-beta.1
+[2.0.0-beta.2]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.0.0-beta.2
+[2.0.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.0.0
+[2.1.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.1.0
+[3.0.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v3.0.0

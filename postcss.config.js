@@ -8,7 +8,9 @@ export default {
 		"@csstools/postcss-relative-color-syntax": {},
 		"@csstools/postcss-oklab-function": {},
 		"cssnano": {
-			preset: "default"
+			preset: ["default", {
+				calc: false
+			}]
 		}
 	}
 }

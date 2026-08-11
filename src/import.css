@@ -1,89 +1,125 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
-/* Theme Identifier: */
-@property --theme {
-	syntax: "<custom-ident>";
-	inherits: true;
-	initial-value: none;
-}
-
-/* Viewport Booleans: */
-@each $name in (small, medium, large) {
-	@property --$(name)-viewport {
-		syntax: "true | false";
-		inherits: true;
-		initial-value: false;
-	}
-}
-
 :root {
-	/* Viewport Queries: */
+	/* --- Queries --- */
+
+	/* Theme: */
+	--theme: initial;
+
+	/* Breakpoint: */
+	--small-breakpoint: initial;
+	--medium-breakpoint: initial;
+	--large-breakpoint: initial;
+
 	@media (width >= 20rem) /* 320px */ {
-		--small-viewport: true;
+		--small-breakpoint: true;
 	}
 
 	@media (width >= 48rem) /* 768px */ {
-		--medium-viewport: true;
+		--medium-breakpoint: true;
 	}
 
 	@media (width >= 80rem) /* 1280px */ {
-		--large-viewport: true;
+		--large-breakpoint: true;
 	}
 
-	/* Line-Style: */
-	--line: solid;
+	/* --- Size --- */
 
-	/* Border-Radius: */
+	/* Radius: */
 	--small-radius: 0.5rem; /* 8px */
 	--medium-radius: 1.25rem; /* 20px */
 	--large-radius: 2rem; /* 32px */
 
-	/* Color Palette: */
-	--white: white;
-	--black: black;
+	/* Container: */
+	--3x-small-container: 8rem; /* 128px */
+	--2x-small-container: 10rem; /* 160px */
+	--x-small-container: 15rem; /* 240px */
+	--small-container: 20rem; /* 320px */
+	--medium-container: 30rem; /* 480px */
+	--large-container: 48rem; /* 768px */
+	--x-large-container: 64rem; /* 1024px */
+	--2x-large-container: 80rem; /* 1280px */
+	--3x-large-container: 90rem; /* 1440px */
 
-	@for $weight from 100 to 900 by 100 {
-		/* Calculate percentage of weight: */
-		$percentage: calc((900 - $weight) / (900 - 100));
+	/* Absolute: */
+	--3x-small: 0.25rem; /* 4px */
+	--2x-small: 0.5rem; /* 8px */
+	--x-small: 0.75rem; /* 12px */
+	--small: 0.875rem; /* 14px */
+	--medium: 1rem; /* 16px */
+	--large: 1.125rem; /* 18px */
+	--x-large: 1.25rem; /* 20px */
+	--2x-large: 1.5rem; /* 24px */
+	--3x-large: 1.875rem; /* 30px */
+	--4x-large: 2.25rem; /* 36px */
+	--5x-large: 3rem; /* 48px */
+	--6x-large: 3.75rem; /* 60px */
+	--7x-large: 4.5rem; /* 72px */
+	--8x-large: 6rem; /* 96px */
+	--9x-large: 8rem; /* 128px */
 
-		/* Calculate lightness and chroma: */
-		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
-		$c: calc(c * sin(pi * $l));
+	/* Relative: */
+	--smaller: 0.875em; /* 14/16px */
+	--larger: 1.125em; /* 18/16px */
 
-		/* Declare weights: */
-		--accent-$(weight): var(--blue-$(weight));
-		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $l $c h);
-		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $l $c h);
-		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $l $c h);
-		--cyan-$(weight): oklch(from oklch(0.7 0.15 180) $l $c h);
-		--gray-$(weight): oklch(from oklch(0.5 0.01 260) $l $c h);
-		--green-$(weight): oklch(from oklch(0.6 0.2 150) $l $c h);
-		--indigo-$(weight): oklch(from oklch(0.4 0.2 270) $l $c h);
-		--lime-$(weight): oklch(from oklch(0.7 0.15 120) $l $c h);
-		--magenta-$(weight): oklch(from oklch(0.6 0.2 330) $l $c h);
-		--orange-$(weight): oklch(from oklch(0.6 0.15 50) $l $c h);
-		--pink-$(weight): oklch(from oklch(0.8 0.1 10) $l $c h);
-		--red-$(weight): oklch(from oklch(0.5 0.2 30) $l $c h);
-		--violet-$(weight): oklch(from oklch(0.4 0.15 290) $l $c h);
-		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $l $c h);
-	}
+	/* Margin: */
+	--margin: 5%;
 
-	--background-color: var(--white);
-	--middleground-color: var(--gray-100);
-	--foreground-color: var(--gray-200);
-
-	--low-contrast-color: var(--gray-500);
-	--medium-contrast-color: var(--gray-700);
-	--high-contrast-color: var(--black);
+	/* -- Color --- */
+	--primary-color: white;
+	--secondary-color: black;
+	--accent-color: oklch(0.5 0.15 240);
 
 	@media (prefers-color-scheme: dark) {
-		--background-color: var(--black);
-		--middleground-color: var(--gray-900);
-		--foreground-color: var(--gray-800);
-
-		--medium-contrast-color: var(--gray-300);
-		--high-contrast-color: var(--white);
+		--primary-color: black;
+		--secondary-color: white;
+		--accent-color: oklch(0.6 0.15 240);	
 	}
+
+	@for $weight from 100 to 900 by 100 {
+		/* Calculate Percentage from Weight: */
+		$percentage: calc((900 - $weight) / (900 - 100));
+
+		/* Calculate OKLCH channels: */
+		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
+		$c: calc(c * sin(pi * $l));
+		$lch: $l $c h;
+
+		/* Declare Weights: */
+		--primary-$(weight): oklch(from var(--primary-color) $lch);
+		--secondary-$(weight): oklch(from var(--secondary-color) $lch);
+		--accent-$(weight): oklch(from var(--accent-color) $lch);
+	}
+
+	/* --- Typography --- */
+
+	/* Font Family: */
+	--body-family: system-ui, sans-serif;
+	--display-family: var(--body-family);
+	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
+	--accent-family: var(--body-family);
+
+	/* Font Weight: */
+	--light-weight: 300;
+	--medium-weight: 500;
+	--bold-weight: 700;
+
+	/* Letter Spacing: */
+	--tight-letter: -0.05em;
+	--normal-letter: normal;
+	--wide-letter: 0.1em;
+
+	/* Line Height: */
+	--short-line: 1.2;
+	--normal-line: 1.6;
+	--tall-line: 2;
+
+	/* Word Spacing: */
+	--tight-word: -0.1em;
+	--normal-word: normal;
+	--wide-word: 0.2em;
+
+	/* -- Filter --- */
 
 	/* Blur: */
 	--light-blur: blur(4px);
@@ -98,12 +134,29 @@
 	--low-contrast: contrast(0.75);
 	--high-contrast: contrast(1.25);
 
+	/* Shadow: */
+	--light-shadow: drop-shadow(0 4px 8px rgb(0 0 0 / 0.1));
+	--medium-shadow: drop-shadow(0 6px 12px rgb(0 0 0 / 0.2));
+	--heavy-shadow: drop-shadow(0 8px 16px rgb(0 0 0 / 0.3));
+
+	--light-box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+	--medium-box-shadow: 0 6px 12px rgb(0 0 0 / 0.2);
+	--heavy-box-shadow: 0 8px 16px rgb(0 0 0 / 0.3);
+
+	--light-inset-shadow: inset 0 4px 8px rgb(0 0 0 / 0.1);
+	--medium-inset-shadow: inset 0 6px 12px rgb(0 0 0 / 0.2);
+	--heavy-inset-shadow: inset 0 8px 16px rgb(0 0 0 / 0.3);
+
+	--light-text-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+	--medium-text-shadow: 0 6px 12px rgb(0 0 0 / 0.2);
+	--heavy-text-shadow: 0 8px 16px rgb(0 0 0 / 0.3);
+
 	/* Grayscale: */
 	--weak-grayscale: grayscale(0.5);
 	--medium-grayscale: grayscale(0.75);
 	--strong-grayscale: grayscale(1);
 
-	/* Hue-Rotate: */
+	/* Hue Rotate: */
 	--low-hue-rotate: hue-rotate(30deg);
 	--high-hue-rotate: hue-rotate(300deg);
 
@@ -111,6 +164,11 @@
 	--weak-invert: invert(0.6);
 	--medium-invert: invert(0.8);
 	--strong-invert: invert(1);
+
+	/* Opacity: */
+	--low-opacity: 0.4;
+	--medium-opacity: 0.6;
+	--high-opacity: 0.8;
 
 	/* Saturation: */
 	--low-saturation: saturate(0.75);
@@ -121,47 +179,14 @@
 	--medium-sepia: sepia(0.75);
 	--strong-sepia: sepia(1);
 
-	/* Font-Family: */
-	--body-family: system-ui, sans-serif;
-	--display-family: var(--body-family);
-	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-	--accent-family: var(--body-family);
-
-	/* Font-Weight: */
-	--thin-weight: 100;
-	--light-weight: 300;
-	--regular-weight: 400;
-	--bold-weight: 700;
-	--heavy-weight: 900;
-
-	/* Letter-Spacing: */
-	--tight-letter: -0.05em;
-	--normal-letter: normal;
-	--wide-letter: 0.1em;
-
-	/* Line-Height: */
-	--short-line: 1.2;
-	--normal-line: 1.6;
-	--tall-line: 2;
-
-	/* Word-Spacing: */
-	--tight-word: -0.1em;
-	--normal-word: normal;
-	--wide-word: 0.2em;
-
-	/* Opacity: */
-	--low-opacity: 0.4;
-	--medium-opacity: 0.6;
-	--high-opacity: 0.8;
-
-	/* Aspect-Ratio: */
+	/* --- Aspect Ratio --- */
 	--square-ratio: 1 / 1;
 	--landscape-ratio: 4 / 3;
 	--portrait-ratio: 3 / 4;
 	--video-ratio: 16 / 9;
 	--wide-ratio: 21 / 9;
 
-	/* Display Safe-Area: */
+	/* --- Safe Area --- */
 	--safe-top: 0;
 	--safe-right: 0;
 	--safe-bottom: 0;
@@ -182,74 +207,26 @@
 	--safe-body: var(--safe-x);
 	--safe-footer: 0 var(--safe-right) var(--safe-bottom) var(--safe-left);
 
-	/* Text-Shadow: */
-	--light-text-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-	--medium-text-shadow: 0 6px 12px rgb(0 0 0 / 0.2);
-	--heavy-text-shadow: 0 8px 16px rgb(0 0 0 / 0.3);
+	/* --- Animation --- */
 
-	/* Box-Shadow: */
-	--light-box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
-	--medium-box-shadow: 0 6px 12px rgb(0 0 0 / 0.2);
-	--heavy-box-shadow: 0 8px 16px rgb(0 0 0 / 0.3);
+	/* Timing: */
+	--fast-time: 150ms;
+	--normal-time: 300ms;
+	--slow-time: 500ms;
 
-	/* Box-Shadow (Inset): */
-	--light-inset-shadow: inset 0 4px 8px rgb(0 0 0 / 0.1);
-	--medium-inset-shadow: inset 0 6px 12px rgb(0 0 0 / 0.2);
-	--heavy-inset-shadow: inset 0 8px 16px rgb(0 0 0 / 0.3);
-
-	/* Drop-Shadow (Filter): */
-	--light-shadow: drop-shadow(0 4px 8px rgb(0 0 0 / 0.1));
-	--medium-shadow: drop-shadow(0 6px 12px rgb(0 0 0 / 0.2));
-	--heavy-shadow: drop-shadow(0 8px 16px rgb(0 0 0 / 0.3));
-
-	/* Container Size: */
-	--3x-small-container: 8rem; /* 128px */
-	--2x-small-container: 10rem; /* 160px */
-	--x-small-container: 15rem; /* 240px */
-	--small-container: 20rem; /* 320px */
-	--medium-container: 30rem; /* 480px */
-	--large-container: 48rem; /* 768px */
-	--x-large-container: 64rem; /* 1024px */
-	--2x-large-container: 80rem; /* 1280px */
-	--3x-large-container: 90rem; /* 1440px */
-
-	/* Size: */
-	--3x-small: 0.25rem; /* 4px */
-	--2x-small: 0.5rem; /* 8px */
-	--x-small: 0.75rem; /* 12px */
-	--small: 0.875rem; /* 14px */
-	--medium: 1rem; /* 16px */
-	--large: 1.125rem; /* 18px */
-	--x-large: 1.25rem; /* 20px */
-	--2x-large: 1.5rem; /* 24px */
-	--3x-large: 1.875rem; /* 30px */
-	--4x-large: 2.25rem; /* 36px */
-	--5x-large: 3rem; /* 48px */
-	--6x-large: 3.75rem; /* 60px */
-	--7x-large: 4.5rem; /* 72px */
-	--8x-large: 6rem; /* 96px */
-	--9x-large: 8rem; /* 128px */
-
-	--smaller: 0.875em; /* 14/16px */
-	--larger: 1.125em; /* 18/16px */
-
-	/* Margin Size: */
-	--margin-size: 5%;
-
-	/* Easing Values: */
+	/* Easing: */
 	--ease: ease;
 	--ease-in: ease-in;
 	--ease-out: ease-out;
 	--ease-in-out: ease-in-out;
 
-	/* Time Value: */
-	--fast-time: 150ms;
-	--normal-time: 300ms;
-	--slow-time: 500ms;
+	/* --- Transforms --- */
 
 	/* Scale: */
 	--small-scale: 0.95;
 	--large-scale: 1.05;
+
+	/* --- Position --- */
 
 	/* Z-Index: */
 	--z-bottom: -1000;
@@ -258,4 +235,7 @@
 	--z-sticky: 3000;
 	--z-fixed: 4000;
 	--z-top: 5000;
+
+	/* --- Miscellaneous --- */
+	--line: solid;
 }
