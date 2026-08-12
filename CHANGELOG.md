@@ -4,24 +4,16 @@ All relevant changes to Semantic Props will be documented here.
 
 ## [3.0.0] - YYYY-MM-DD
 
-Major forward-thinking **breaking change** release that greatly improves file-size by dropping bloat.
-
-### Added
-
-- Added `--medium-weight` font weight.
+Major release that greatly improves file-size by dropping color bloat.
 
 ### Changed
 
-- Changed "viewport" style-query naming to "breakpoint".
-- Changed `--margin-size` to `--margin`.
-- Changed `--mono-family` value to be simpler.
-- Changed `--accent-family` to `--brand-family`.
+- Changed `--mono-family` value to be reduced while keeping functionality.
+- Changed use of `@property` in favor of `initial`.
 
 ### Removed
 
-- Removed use of property at-rules.
 - Removed named color weights.
-- Removed `--thin-weight`, `--regular-weight`, and `--heavy-weight`.
 
 ## [2.1.0] - 2026-06-16
 

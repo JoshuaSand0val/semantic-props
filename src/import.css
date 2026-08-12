@@ -6,21 +6,21 @@
 	/* Theme: */
 	--theme: initial;
 
-	/* Breakpoint: */
-	--small-breakpoint: initial;
-	--medium-breakpoint: initial;
-	--large-breakpoint: initial;
+	/* Viewport: */
+	--small-viewport: initial;
+	--medium-viewport: initial;
+	--large-viewport: initial;
 
 	@media (width >= 20rem) /* 320px */ {
-		--small-breakpoint: true;
+		--small-viewport: true;
 	}
 
 	@media (width >= 48rem) /* 768px */ {
-		--medium-breakpoint: true;
+		--medium-viewport: true;
 	}
 
 	@media (width >= 80rem) /* 1280px */ {
-		--large-breakpoint: true;
+		--large-viewport: true;
 	}
 
 	/* --- Sizes --- */
@@ -63,7 +63,7 @@
 	--larger: 1.125em; /* 18/16px */
 
 	/* Margin: */
-	--margin: 5%;
+	--margin-size: 5%;
 
 	/* --- Colors --- */
 	--background-color: white;
@@ -90,12 +90,14 @@
 	--body-family: system-ui, sans-serif;
 	--display-family: var(--body-family);
 	--mono-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', monospace;
-	--brand-family: var(--body-family);
+	--accent-family: var(--body-family);
 
 	/* Font Weight: */
+	--thin-weight: 100;
 	--light-weight: 300;
-	--medium-weight: 500;
+	--regular-weight: 400;
 	--bold-weight: 700;
+	--heavy-weight: 900;
 
 	/* Letter Spacing: */
 	--tight-letter: -0.05em;
