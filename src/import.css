@@ -1,16 +1,32 @@
 /* Semantic Props: Expertly crafted CSS Custom Properties. */
 
+/* --- Queries --- */
+
+@property --theme {
+	syntax: "<custom-ident>";
+	inherits: true;
+	initial-value: none;
+}
+
+@property --small-viewport {
+	syntax: "true | false";
+	inherits: true;
+	initial-value: false;
+}
+
+@property --medium-viewport {
+	syntax: "true | false";
+	inherits: true;
+	initial-value: false;
+}
+
+@property --large-viewport {
+	syntax: "true | false";
+	inherits: true;
+	initial-value: false;
+}
+
 :root {
-	/* --- Queries --- */
-
-	/* Theme: */
-	--theme: initial;
-
-	/* Viewport: */
-	--small-viewport: initial;
-	--medium-viewport: initial;
-	--large-viewport: initial;
-
 	@media (width >= 20rem) /* 320px */ {
 		--small-viewport: true;
 	}

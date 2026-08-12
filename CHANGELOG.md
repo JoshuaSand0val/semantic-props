@@ -9,7 +9,6 @@ Major release that greatly improves file-size by dropping color bloat.
 ### Changed
 
 - Changed `--mono-family` value to be reduced while keeping functionality.
-- Changed use of `@property` in favor of `initial`.
 
 ### Removed
 
