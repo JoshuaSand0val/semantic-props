@@ -15,6 +15,7 @@ Major forward-thinking **breaking change** release that greatly improves file-si
 - Changed "viewport" style-query naming to "breakpoint".
 - Changed `--margin-size` to `--margin`.
 - Changed `--mono-family` value to be simpler.
+- Changed `--accent-family` to `--brand-family`.
 
 ### Removed
 
