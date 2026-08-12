@@ -2,7 +2,7 @@
 
 All relevant changes to Semantic Props will be documented here.
 
-## [2.1.1] - YYYY-MM-DD
+## [2.1.1] - 2026-08-12
 
 ### Changed
 
