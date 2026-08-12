@@ -1,6 +1,6 @@
 {
 	"name": "semantic-props",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "Expertly crafted CSS Custom Properties (variables) for creating consistent components in any design.",
 	"keywords": [
 		"Semantic Props",
@@ -17,21 +17,21 @@
 		"LICENSE",
 		"README.md"
 	],
-	"main": "./dist/import.css",
-	"style": "./dist/import.css",
+	"main": "./dist/import.min.css",
+	"style": "./dist/import.min.css",
 	"exports": {
 		".": {
-			"style": "./dist/import.css",
-			"default": "./dist/import.css"
+			"style": "./dist/import.min.css",
+			"default": "./dist/import.min.css"
 		}
 	},
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/JoshuaSand0val/semantic-props.git"
+		"url": "git://github.com/heyjesdev/semantic-props.git"
 	},
 	"type": "module",
 	"scripts": {
-		"build": "postcss src/import.css -o dist/import.css",
+		"build": "postcss src/import.css -o dist/import.min.css",
 		"watch:build": "onchange 'src/**/*' -- npm run build"
 	},
 	"devDependencies": {

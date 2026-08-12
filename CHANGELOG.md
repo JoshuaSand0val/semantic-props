@@ -2,6 +2,12 @@
 
 All relevant changes to Semantic Props will be documented here.
 
+## [2.1.1] - 2026-08-12
+
+### Changed
+
+- Changed `--mono-family` value to be reduced while keeping functionality.
+
 ## [2.1.0] - 2026-06-16
 
 ### Added
@@ -162,12 +168,13 @@ A **breaking change** release that greatly improves browser compatibility, file 
 
 - Added breakpoint, color, font, safe-area, size, timing, and z-index custom properties.
 
-[0.1.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.1.0
-[0.2.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.0
-[0.2.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v0.2.1
-[1.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v1.0.0
-[2.0.0-beta.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.0
-[2.0.0-beta.1]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.1
-[2.0.0-beta.2]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0-beta.2
-[2.0.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.0.0
-[2.1.0]: https://github.com/JoshuaSand0val/semantic-props/releases/tag/v2.1.0
+[0.1.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v0.1.0
+[0.2.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v0.2.0
+[0.2.1]: https://github.com/heyjesdev/semantic-props/releases/tag/v0.2.1
+[1.0.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v1.0.0
+[2.0.0-beta.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.0.0-beta.0
+[2.0.0-beta.1]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.0.0-beta.1
+[2.0.0-beta.2]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.0.0-beta.2
+[2.0.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.0.0
+[2.1.0]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.1.0
+[2.1.1]: https://github.com/heyjesdev/semantic-props/releases/tag/v2.1.1
