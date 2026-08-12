@@ -19,7 +19,7 @@
 			<span style:--phrase={5}>in any design.</span>
 		</span>
 	</Heading>
-	<CodeBlock description="Import At-Rule" lang="css" code='@import "https://cdn.jsdelivr.net/npm/semantic-props@2.1.0";' />
+	<CodeBlock description="Import At-Rule" lang="css" code='@import "https://cdn.jsdelivr.net/npm/semantic-props@2.1.1";' />
 	<CodeBlock description="NPM Install Command" lang="shell" code='npm install semantic-props' />
 </header>
 
