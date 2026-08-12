@@ -82,22 +82,51 @@
 	--margin-size: 5%;
 
 	/* --- Colors --- */
-	--background-color: white;
-	--middleground-color: oklch(0.9 0 0);
-	--foreground-color: oklch(0.8 0 0);
+	--white: white;
+	--black: black;
 
-	--low-contrast-color: oklch(0.5 0 0);
-	--medium-contrast-color: oklch(0.3 0 0);
-	--high-contrast-color: black;
+	@for $weight from 100 to 900 by 100 {
+		/* Calculate Percentage from Weight: */
+		$percentage: calc((900 - $weight) / (900 - 100));
+
+		/* Calculate OKLCH Channels: */
+		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
+		$c: calc(c * sin(pi * $l));
+		$lch: $l $c h;
+
+		/* Declare Color Weights: */
+		--accent-$(weight): var(--blue-$(weight));
+		--blue-$(weight): oklch(from oklch(0.6 0.15 240) $lch);
+		--brown-$(weight): oklch(from oklch(0.6 0.05 50) $lch);
+		--coral-$(weight): oklch(from oklch(0.7 0.2 40) $lch);
+		--cyan-$(weight): oklch(from oklch(0.7 0.15 180) $lch);
+		--gray-$(weight): oklch(from oklch(0.5 0.01 260) $lch);
+		--green-$(weight): oklch(from oklch(0.6 0.2 150) $lch);
+		--indigo-$(weight): oklch(from oklch(0.4 0.2 270) $lch);
+		--lime-$(weight): oklch(from oklch(0.7 0.15 120) $lch);
+		--magenta-$(weight): oklch(from oklch(0.6 0.2 330) $lch);
+		--orange-$(weight): oklch(from oklch(0.6 0.15 50) $lch);
+		--pink-$(weight): oklch(from oklch(0.8 0.1 10) $lch);
+		--red-$(weight): oklch(from oklch(0.5 0.2 30) $lch);
+		--violet-$(weight): oklch(from oklch(0.4 0.15 290) $lch);
+		--yellow-$(weight): oklch(from oklch(0.8 0.15 90) $lch);
+	}
+
+	--background-color: var(--white);
+	--middleground-color: var(--gray-100);
+	--foreground-color: var(--gray-200);
+
+	--low-contrast-color: var(--gray-500);
+	--medium-contrast-color: var(--gray-700);
+	--high-contrast-color: var(--black);
 
 	@media (prefers-color-scheme: dark) {
-		--background-color: black;
-		--middleground-color: oklch(0.1 0 0);
-		--foreground-color: oklch(0.2 0 0);
+		--background-color: var(--black);
+		--middleground-color: var(--gray-900);
+		--foreground-color: var(--gray-800);
 
-		--low-contrast-color: oklch(0.6 0 0);
-		--medium-contrast-color: oklch(0.8 0 0);
-		--high-contrast-color: white;
+		--medium-contrast-color: var(--gray-300);
+		--high-contrast-color: var(--white);
 	}
 
 	/* --- Typography --- */
