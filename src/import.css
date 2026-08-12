@@ -66,29 +66,22 @@
 	--margin: 5%;
 
 	/* --- Colors --- */
-	--primary-color: white;
-	--secondary-color: black;
-	--accent-color: oklch(0.5 0.15 240);
+	--background-color: white;
+	--middleground-color: oklch(0.9 0 0);
+	--foreground-color: oklch(0.8 0 0);
+
+	--low-contrast-color: oklch(0.5 0 0);
+	--medium-contrast-color: oklch(0.3 0 0);
+	--high-contrast-color: black;
 
 	@media (prefers-color-scheme: dark) {
-		--primary-color: black;
-		--secondary-color: white;
-		--accent-color: oklch(0.6 0.15 240);	
-	}
+		--background-color: black;
+		--middleground-color: oklch(0.1 0 0);
+		--foreground-color: oklch(0.2 0 0);
 
-	@for $weight from 100 to 900 by 100 {
-		/* Calculate Percentage from Weight: */
-		$percentage: calc((900 - $weight) / (900 - 100));
-
-		/* Calculate OKLCH channels: */
-		$l: calc(0.2 + (0.95 - 0.2) * $percentage);
-		$c: calc(c * sin(pi * $l));
-		$lch: $l $c h;
-
-		/* Declare Weights: */
-		--primary-$(weight): oklch(from var(--primary-color) $lch);
-		--secondary-$(weight): oklch(from var(--secondary-color) $lch);
-		--accent-$(weight): oklch(from var(--accent-color) $lch);
+		--low-contrast-color: oklch(0.6 0 0);
+		--medium-contrast-color: oklch(0.8 0 0);
+		--high-contrast-color: white;
 	}
 
 	/* --- Typography --- */

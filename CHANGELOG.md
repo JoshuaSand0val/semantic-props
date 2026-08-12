@@ -8,7 +8,6 @@ Major forward-thinking **breaking change** release that greatly improves file-si
 
 ### Added
 
-- Added "primary", "secondary" and "accent" relative color weights.
 - Added `--medium-weight` font weight.
 
 ### Changed
